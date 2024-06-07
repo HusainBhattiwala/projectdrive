@@ -1,0 +1,10 @@
+<svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="luggage">
+<path id="Vector" d="M7.66667 3H2.33333C1.59695 3 1 3.59695 1 4.33333V11C1 11.7364 1.59695 12.3333 2.33333 12.3333H7.66667C8.40305 12.3333 9 11.7364 9 11V4.33333C9 3.59695 8.40305 3 7.66667 3Z" stroke="#FF4E00" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M3 3V2.33333C3 1.97971 3.14048 1.64057 3.39052 1.39052C3.64057 1.14048 3.97971 1 4.33333 1H5.66667C6.02029 1 6.35943 1.14048 6.60948 1.39052C6.85952 1.64057 7 1.97971 7 2.33333V3" stroke="#FF4E00" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M1 5.66699H9" stroke="#FF4E00" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M1 9.66699H9" stroke="#FF4E00" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M3 12.333V12.9997" stroke="#FF4E00" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M7 12.333V12.9997" stroke="#FF4E00" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

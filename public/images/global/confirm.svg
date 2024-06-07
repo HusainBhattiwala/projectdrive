@@ -1,0 +1,24 @@
+<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="17" height="17" fill="#E5E5E5"/>
+<g id="Add new booking - via" clip-path="url(#clip0_0_1)">
+<rect width="1536" height="886" transform="translate(-377 -356)" fill="#FEF8F4"/>
+<path id="Rectangle 22304" d="M-73 -183H1116C1121.52 -183 1126 -178.523 1126 -173V378H-73V-183Z" fill="white"/>
+<path id="Rectangle 229" d="M-43.4 -106C-43.4 -108.982 -40.9823 -111.4 -38 -111.4H1090C1092.98 -111.4 1095.4 -108.982 1095.4 -106V99C1095.4 101.982 1092.98 104.4 1090 104.4H-38C-40.9823 104.4 -43.4 101.982 -43.4 99V-106Z" fill="white" stroke="#D9D9D9" stroke-width="1.2"/>
+<g id="Group 522">
+<g id="Group 521">
+<g id="Group 520">
+<rect id="Rectangle 29" x="-19" y="-8" width="142" height="32" rx="2" fill="#D3FDDA"/>
+<g id="confirm">
+<path id="Vector" d="M1 8.5C1 9.48491 1.19399 10.4602 1.5709 11.3701C1.94781 12.2801 2.50026 13.1069 3.1967 13.8033C3.89314 14.4997 4.71993 15.0522 5.62987 15.4291C6.53982 15.806 7.51509 16 8.5 16C9.48491 16 10.4602 15.806 11.3701 15.4291C12.2801 15.0522 13.1069 14.4997 13.8033 13.8033C14.4997 13.1069 15.0522 12.2801 15.4291 11.3701C15.806 10.4602 16 9.48491 16 8.5C16 7.51509 15.806 6.53982 15.4291 5.62987C15.0522 4.71993 14.4997 3.89314 13.8033 3.1967C13.1069 2.50026 12.2801 1.94781 11.3701 1.5709C10.4602 1.19399 9.48491 1 8.5 1C7.51509 1 6.53982 1.19399 5.62987 1.5709C4.71993 1.94781 3.89314 2.50026 3.1967 3.1967C2.50026 3.89314 1.94781 4.71993 1.5709 5.62987C1.19399 6.53982 1 7.51509 1 8.5Z" stroke="#1FAC39" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M6 8.49998L7.66667 10.1666L11 6.83331" stroke="#1FAC39" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1536" height="886" fill="white" transform="translate(-377 -356)"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,8 @@
+.react-tel-input .form-control {
+  padding: 32.5px 14px 20.5px 58px !important;
+  @apply !border-x-0 !border-t-0 !border-b !border-[#8A8A8A] !rounded-none left-[52px] focus:!shadow-none focus:!border-pry-500 !bg-transparent;
+}
+
+.react-tel-input .special-label {
+  @apply !top-[2px] !left-[53px] !bg-[#F2F2F2];
+}
