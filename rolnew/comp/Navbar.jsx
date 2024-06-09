@@ -24,7 +24,17 @@ const navLinks = [
     label: "Fleet",
   },
   { route: "/rolnew/business-solution", label: "Business Solutions" },
-  { route: "/rolnew/cities", label: "Cities" },
+  {
+    route: "/rolnew/cities",
+    label: "Cities",
+    subLinks: [
+      { route: "/rolnew/cites/dubai", label: "Dubai" },
+      { route: "/rolnew/cites/london", label: "London" },
+      { route: "/rolnew/cites/newyork", label: "New-York" },
+      { route: "/rolnew/cites/paris", label: "Paris" },
+      { route: "/rolnew/cites/tokyo", label: "Tokyo" },
+    ],
+  },
   { route: "/rolnew/airport-transfers", label: "Airport Transfers" },
 ];
 
