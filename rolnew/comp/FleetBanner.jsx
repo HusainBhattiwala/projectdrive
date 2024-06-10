@@ -79,7 +79,7 @@ function FleetBanner({ mainTitle }) {
           </div>
         </div>
       </div>
-      <div className='bg-[#223544] w-[933px] p-[16px] border-[0.4px] border-gray-700 mx-auto mt-20 rounded-2xl flex justify-around shadow-md'>
+      <div className='bg-[#223544] w-[933px] p-[16px] border-[0.4px] border-gray-700 mx-auto mt-20 rounded-2xl flex justify-around shadow-[1px_1px_9px_-2px_rgba(0,0,0,0.75)]'>
         <Link
           href={"#"}
           className='px-[24px] py-[4px] bg-[#FEF8F4] rounded-md text-pry-500 border border-pry-500 text-base font-medium'
