@@ -69,12 +69,12 @@ function FleetBanner({ mainTitle }) {
               alt='services logo'
             />
             <h3 className='font-medium text-xl leading-[26px] text-[#FFFFFF] break-words whitespace-pre-wrap'>
-              Elevate Your Business Image
+              Elevate Your <br /> Business Image
             </h3>
             <p className='font-normal text-sm left-5 text-[#B2B2B2]'>
               For success in business, a commanding presence is vital. Making an
-              impact starts with your appearance. Arrive at meetings impeccably
-              groomed to leave a lasting impression.
+              impact starts with your appearance. Arrive at meetings <br />{" "}
+              impeccably groomed to leave a lasting impression.
             </p>
           </div>
           <div className='text-center p-[18px] w-[336px] flex flex-col gap-4 items-center'>
@@ -84,7 +84,7 @@ function FleetBanner({ mainTitle }) {
               alt='services logo'
             />
             <h3 className='font-medium text-xl leading-[26px] text-[#FFFFFF]'>
-              Comfort, Luxury, and Safety in Transportation
+              Comfort, Luxury, and <br /> Safety in Transportation
             </h3>
             <p className='font-normal text-sm left-5 text-[#B2B2B2]'>
               The comfort & luxury of a business class chauffeur service,
@@ -100,7 +100,7 @@ function FleetBanner({ mainTitle }) {
               alt='services logo'
             />
             <h3 className='font-medium text-xl leading-[26px] text-[#FFFFFF]'>
-              Efficiency and Cost-Effectiveness
+              Efficiency and <br /> Cost-Effectiveness
             </h3>
             <p className='font-normal text-sm left-5 text-[#B2B2B2]'>
               The convenience of having the driver navigate traffic allows for a
