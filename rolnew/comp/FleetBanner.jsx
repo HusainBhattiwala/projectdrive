@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Category from "./Category";
 
 function FleetBanner({ mainTitle }) {
   const [width, setWidth] = useState();
@@ -18,6 +19,38 @@ function FleetBanner({ mainTitle }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const carCategoryList = [
+    {
+      id: "carcat1",
+      category: "Business Class",
+    },
+    {
+      id: "carcat2",
+      category: "First Class",
+    },
+    {
+      id: "carcat3",
+      category: "Luxury Class",
+    },
+    {
+      id: "carcat4",
+      category: "Electric",
+    },
+    {
+      id: "carcat5",
+      category: "SUV",
+    },
+    {
+      id: "carcat6",
+      category: "MVP",
+    },
+    {
+      id: "carcat7",
+      category: "Sprinter",
+    },
+  ];
+
   return (
     <div className='relative mt-16 flex flex-col w-full 2xl:min-h-[650px] xl:min-h-[560px] md:min-h-[500px] min-h-[500px] max-h-[1000px] bg-[#223544]'>
       <div className='service-home-banner absolute sm:top-0 -top-6 left-0 right-0 h-auto sm:min-h-[328px] min-h-[328px]' />
@@ -79,51 +112,9 @@ function FleetBanner({ mainTitle }) {
           </div>
         </div>
       </div>
-      <div className='bg-[#223544] w-[933px] p-[16px] border-[0.4px] border-gray-700 mx-auto mt-20 rounded-2xl flex justify-around shadow-[1px_1px_9px_-2px_rgba(0,0,0,0.75)]'>
-        <Link
-          href={"#"}
-          className='px-[24px] py-[4px] bg-[#FEF8F4] rounded-md text-pry-500 border border-pry-500 text-base font-medium'
-        >
-          Buisness Class
-        </Link>
-        <Link
-          href={"#"}
-          className='px-[24px] py-[4px] bg-slate-600/80 text-white hover:bg-[#FEF8F4] rounded-md hover:text-pry-500 border border-transparent hover:border-pry-500 text-base font-medium transition ease-in delay-75'
-        >
-          First Class
-        </Link>
-        <Link
-          href={"#"}
-          className='px-[24px] py-[4px] bg-slate-600/80 text-white hover:bg-[#FEF8F4] rounded-md hover:text-pry-500 border border-transparent hover:border-pry-500 text-base font-medium transition ease-in delay-75'
-        >
-          Luxury Class
-        </Link>
-        <Link
-          href={"#"}
-          className='px-[24px] py-[4px] bg-slate-600/80 text-white hover:bg-[#FEF8F4] rounded-md hover:text-pry-500 border border-transparent hover:border-pry-500 text-base font-medium transition ease-in delay-75'
-        >
-          Electric
-        </Link>
-        <Link
-          href={"#"}
-          className='px-[24px] py-[4px] bg-slate-600/80 text-white hover:bg-[#FEF8F4] rounded-md hover:text-px-[24px] py-[4px] bg-slate-600/80 text-white hover:bg-[#FEF8F4] rounded-md hover:text-pry-500 border border-transparent hover:border-pry-500 text-base font-medium transition ease-in delay-75'
-        >
-          SUV
-        </Link>
-        <Link
-          href={"#"}
-          className='px-[24px] py-[4px] bg-slate-600/80 text-white hover:bg-[#FEF8F4] rounded-md hover:text-pry-500 border border-transparent hover:border-pry-500 text-base font-medium transition ease-in delay-75'
-        >
-          MVP
-        </Link>
-        <Link
-          href={"#"}
-          className='px-[24px] py-[4px] bg-slate-600/80 text-white hover:bg-[#FEF8F4] rounded-md hover:text-pry-500 border border-transparent hover:border-pry-500 text-base font-medium transition ease-in delay-75'
-        >
-          Sprinter
-        </Link>
+      <div>
+        <Category categorys={carCategoryList} />
       </div>
-
       <div className='sm:w-[74px] sm:h-[74px] w-12 h-12 absolute sm:-bottom-[36px] -bottom-6 left-2/4 -translate-x-2/4 z-10 bg-[#2F4456] flex items-center justify-center flex-col p-4 border border-[#FFFFFF] border-opacity-20 rounded-lg cursor-pointer'>
         <div className='animate-bounce'>
           <img
