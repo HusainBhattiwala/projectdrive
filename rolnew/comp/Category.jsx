@@ -17,7 +17,7 @@ function Category({ categorys = [] }) {
             type='button'
             className={`flex-none border border-transparent rounded-md px-6 py-1 group ${
               i === activeCat
-                ? "bg-[#FFFFFF] text-pry-500 border-primary"
+                ? "bg-[#FFFFFF] text-pry-500 border border-pry-500"
                 : "bg-slate-600/80 hover:text-pry-500 hover:bg-[#FFFFFF] hover:border-primary"
             }`}
             onClick={() => {
