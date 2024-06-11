@@ -16,32 +16,34 @@ function Category({ categorys = [], setCarData }) {
 
   return (
     <div className='sm:py-[44px]'>
-      <div className='flex flex-nowrap gap-2 sm:gap-3 sm:bg-[#223544] sm:max-w-[70%] md:w-[933px] sm:border border-gray-700 p-4 rounded-2xl overflow-x-auto mx-auto sm:justify-between justify-between items-center scroll no-scroll sm:shadow-[1px_1px_9px_-2px_rgba(0,0,0,0.75)]'>
-        {uniqueCategories.map((category, i) => (
-          <button
-            type='button'
-            className={`flex-none rounded-md px-6 py-1 group ${
-              i === activeCat
-                ? "bg-[#FFFFFF] text-pry-500 border border-pry-500"
-                : "bg-slate-600/80 hover:text-pry-500 hover:bg-[#FFFFFF] hover:border-primary"
-            }`}
-            onClick={() => {
-              setActiveTab(i);
-              setCarData(category);
-            }}
-            key={category.id}
-          >
-            <span
-              className={`text-base font-medium leading-7 ${
+      <div className='sm:bg-[#223544] w-[933px] sm:border border-gray-700 sm:p-4 sm:rounded-2xl overflow-x-auto mx-auto sm:shadow-[1px_1px_9px_-2px_rgba(0,0,0,0.75)]'>
+        <div className='flex flex-nowrap gap-2 sm:gap-3 w-full overflow-x-auto mx-auto sm:justify-between justify-between items-center scroll no-scroll'>
+          {uniqueCategories.map((category, i) => (
+            <button
+              type='button'
+              className={`flex-none rounded-md px-6 py-1 group ${
                 i === activeCat
-                  ? "text-pry-500"
-                  : "text-[#FFFFFF] group-hover:text-pry-500"
+                  ? "bg-[#FFFFFF] text-pry-500 border border-pry-500"
+                  : "bg-slate-600/80 hover:text-pry-500 hover:bg-[#FFFFFF] hover:border-primary"
               }`}
+              onClick={() => {
+                setActiveTab(i);
+                setCarData(category);
+              }}
+              key={category.id}
             >
-              {category?.vehCatName}
-            </span>
-          </button>
-        ))}
+              <span
+                className={`text-base font-medium leading-7 ${
+                  i === activeCat
+                    ? "text-pry-500"
+                    : "text-[#FFFFFF] group-hover:text-pry-500"
+                }`}
+              >
+                {category?.vehCatName}
+              </span>
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
