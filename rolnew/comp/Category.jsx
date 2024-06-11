@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-function Category({ categorys = [] }) {
+function Category({ categorys = [], setCarData }) {
   const [activeCat, setActiveTab] = useState(0);
 
   useEffect(() => {
@@ -22,6 +22,7 @@ function Category({ categorys = [] }) {
             }`}
             onClick={() => {
               setActiveTab(i);
+              setCarData(category);
             }}
             key={category.id}
           >
@@ -32,7 +33,7 @@ function Category({ categorys = [] }) {
                   : "text-[#FFFFFF] group-hover:text-pry-500"
               }`}
             >
-              {category?.category}
+              {category?.vehCatName}
             </span>
           </button>
         ))}
