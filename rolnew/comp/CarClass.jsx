@@ -968,7 +968,7 @@ const vehicleCategories = [
   },
 ];
 
-function CarClass() {
+function CarClass({ hideArrow }) {
   const [carData, setCarData] = useState();
 
   // useEffect(() => {
@@ -1005,7 +1005,9 @@ function CarClass() {
       </Container> */}
 
       <div className='bg-[#11202D] pt-4 sm:pt-[10px] text-center xs:pt-16 xl:!px-[70px] lg:px-[45px] md:px-[32px] sm:px-[20px] px-4'>
-        <Category categorys={vehicleCategories} setCarData={setCarData} />
+        {hideArrow && (
+          <Category categorys={vehicleCategories} setCarData={setCarData} />
+        )}
         <div className='bg-[#11202D] xs:pt-12 sm:px-12 md:px-16 pb-6'>
           <div className='flex flex-col gap-y-16 2xl:container mx-auto pb-4'>
             <div className='flex md:flex-row xs:flex-col sm:flex-col'>
