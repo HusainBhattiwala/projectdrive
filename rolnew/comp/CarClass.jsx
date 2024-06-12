@@ -374,7 +374,7 @@ function CarClass({ hideArrow }) {
               </div>
             </div>
 
-            <div className='flex gap-4 max-w-[912px] h-[130px] sm:grid sm:grid-cols-4 lg:ml-[260px] md:ml-[130px] sm:ml-[30px] sm:mr-8 sm:gap-16 mb-6 overflow-scroll scroll no-scroll'>
+            <div className='flex gap-4 w-full sm:max-w-[912px] h-[130px] sm:grid sm:grid-cols-4 lg:ml-[260px] md:ml-[130px] sm:ml-[30px] sm:mr-8 sm:gap-16 mb-6 overflow-x-auto scroll no-scroll'>
               <div className='w-[190px] h-[130px]'>
                 <Pic
                   alt='trust'
