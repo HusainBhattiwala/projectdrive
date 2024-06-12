@@ -49,6 +49,10 @@ function ContactDetails() {
           email: "",
         });
       }
+      setFormData({
+        name: "",
+        email: "",
+      });
     } catch (error) {
       console.error("Error occurred while sending form data:", error);
     }
@@ -122,16 +126,18 @@ function ContactDetails() {
         <div className='flex flex-col gap-y-3'>
           <Input
             name='name'
-            label='name'
+            label='Name'
             placeholder='Enter first name'
             labelClass='!text-xs !text-[#B2B2B2]'
+            value={formData.name}
             onChange={handleChange}
           />
           <Input
             name='email'
-            label='email'
+            label='Email'
             placeholder='Enter email address'
             labelClass='!text-xs !text-[#B2B2B2]'
+            value={formData.email}
             onChange={handleChange}
           />
         </div>
@@ -151,17 +157,19 @@ function ContactDetails() {
       <div className='col-span-1'>
         <div className='flex flex-col gap-y-3'>
           <Input
-            name='name'
+            name='Name'
             label='name'
             placeholder='Enter first name'
             labelClass='!text-xs !text-[#B2B2B2]'
+            value={formData.name}
             onChange={handleChange}
           />
           <Input
-            name='email'
+            name='Email'
             label='email'
             placeholder='Enter email address'
             labelClass='!text-xs !text-[#B2B2B2]'
+            value={formData.email}
             onChange={handleChange}
           />
         </div>
