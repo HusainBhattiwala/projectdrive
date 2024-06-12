@@ -2,14 +2,16 @@
 
 import { useEffect, useState } from "react";
 
-function Category({ categorys = [] }) {
+function FleetFaqCat({ categorys = [], setFaqCat }) {
   const [activeCat, setActiveTab] = useState(0);
   useEffect(() => {
     setActiveTab(0);
+    setFaqCat(categorys[0]?.category);
   }, []);
 
   const handleCategoryClick = (index) => {
     setActiveTab(index);
+    setFaqCat(categorys[index]?.category);
   };
 
   return (
@@ -35,4 +37,4 @@ function Category({ categorys = [] }) {
   );
 }
 
-export default Category;
+export default FleetFaqCat;

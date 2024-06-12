@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 
-function Category({ categorys = [], setCarData, type }) {
+function Category({ categorys = [], setCarData }) {
   const [activeCat, setActiveTab] = useState(0);
 
-  const uniqueCategories = categorys.filter(
+  const uniqueCategories = categorys?.filter(
     (category, index, self) =>
-      index === self.findIndex((c) => c.vehCatName === category.vehCatName)
+      index === self?.findIndex((c) => c.vehCatName === category.vehCatName)
   );
 
   useEffect(() => {

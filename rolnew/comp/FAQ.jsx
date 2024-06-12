@@ -5,7 +5,7 @@ import Container from "rolnew/comp/Container";
 import Title from "rolnew/section/home/Title";
 import Collaspe from "./Collaspe";
 import api from "components/utils/api";
-import Category from "rolnew/section/home/Category";
+import FleetFaqCat from "./FleetFaqCat";
 
 function FAQ() {
   const [faq, setFaq] = useState();
@@ -34,7 +34,7 @@ function FAQ() {
   return (
     <Container className='bg-[#081017] sm:py-[60px] py-[32px] text-center'>
       <Title subTile='Have queries?' mainTitle='Frequent Asked Questions' />
-      <Category categorys={faq} setFaqCat={setFaqCat} />
+      <FleetFaqCat categorys={faq} setFaqCat={setFaqCat} />
       {selectedCat && selectedCat.length > 0 && <Collaspe list={selectedCat} />}
     </Container>
   );
