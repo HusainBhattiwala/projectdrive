@@ -4,6 +4,7 @@ import Pic from "rolnew/util/Pic";
 import Button from "rolnew/ui/Button";
 import Category from "./Category";
 import { useEffect, useState } from "react";
+import api from "components/utils/api";
 
 // const carCategoryList = [
 //   {
@@ -264,13 +265,8 @@ function CarClass({ hideArrow }) {
   useEffect(() => {
     const fetchCarsDetails = async () => {
       try {
-        const response = await fetch(
-          "https://api-dev.roldrive.com/api/v1/vehicle-categories/allDetails"
-        );
-
-        const data = await response.json();
-        setCarData(JSON.parse(data));
-        console.log("data from use effect", data);
+        const response = await api.get(`/vehicle-categories/allDetails`);
+        console.log(response?.data);
       } catch (error) {
         console.error("Error fetching car details:", error);
       }
@@ -296,7 +292,11 @@ function CarClass({ hideArrow }) {
 
       <div className='bg-[#11202D] pt-4 sm:pt-[10px] text-center xs:pt-16 xl:!px-[70px] lg:px-[45px] md:px-[32px] sm:px-[20px] px-4'>
         {hideArrow && (
-          <Category categorys={vehicleCategories} setCarData={setCarData} />
+          <Category
+            categorys={vehicleCategories}
+            setCarData={setCarData}
+            type={"carCat"}
+          />
         )}
         <div className='bg-[#11202D] xs:pt-12 sm:px-12 md:px-16 pb-6'>
           <div className='flex flex-col gap-y-16 2xl:container mx-auto pb-4'>
