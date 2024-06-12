@@ -265,8 +265,7 @@ function CarClass({ hideArrow }) {
     const fetchCarsDetails = async () => {
       try {
         const response = await fetch(
-          "https://api-dev.roldrive.com/api/v1/vehicle-categories/allDetails",
-          { rejectUnauthorized: false }
+          "https://api-dev.roldrive.com/api/v1/vehicle-categories/allDetails"
         );
 
         const data = await response.json();
@@ -374,7 +373,7 @@ function CarClass({ hideArrow }) {
               </div>
             </div>
 
-            <div className='flex gap-4 w-full sm:max-w-[912px] h-[130px] sm:grid sm:grid-cols-4 lg:ml-[260px] md:ml-[130px] sm:ml-[30px] sm:mr-8 sm:gap-16 mb-6 overflow-x-auto scroll no-scroll'>
+            <div className='flex flex-nowrap gap-4 w-full sm:max-w-[912px] h-[130px] sm:grid sm:grid-cols-4 lg:ml-[260px] md:ml-[130px] sm:ml-[30px] sm:mr-8 sm:gap-16 mb-6 overflow-x-auto scroll no-scroll'>
               <div className='w-[190px] h-[130px]'>
                 <Pic
                   alt='trust'
