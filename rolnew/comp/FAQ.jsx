@@ -72,7 +72,7 @@ function FAQ() {
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
-        const response = await api("/faq");
+        const response = await api.get("/faq");
         console.log("faq res:", response?.data);
       } catch (error) {
         console.error("Error fetching FAQS:", error);
