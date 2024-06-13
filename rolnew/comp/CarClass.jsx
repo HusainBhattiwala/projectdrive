@@ -1,3 +1,4 @@
+"use client";
 import Pic from "rolnew/util/Pic";
 import Button from "rolnew/ui/Button";
 import Category from "./Category";
@@ -69,7 +70,7 @@ function CarClass({ hideArrow }) {
                     className='rounded-xl w-[495px]'
                     src={
                       carDetails?.vehCatImg !== null
-                        ? carData?.vehCatImg
+                        ? carDetails?.vehCatImg
                         : "/images/airports/car1.png"
                     }
                     objectFit='fit'
@@ -83,7 +84,7 @@ function CarClass({ hideArrow }) {
                     className='rounded-xl'
                     src={
                       carDetails?.vehCatImg !== null
-                        ? carData?.vehCatImg
+                        ? carDetails?.vehCatImg
                         : "/images/airports/car1.png"
                     }
                     objectFit='fit'
