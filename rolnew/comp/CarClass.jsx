@@ -111,51 +111,24 @@ function CarClass({ hideArrow }) {
               </div>
             </div>
 
-            <div className='flex flex-nowrap gap-4 w-full sm:w-[912px] h-[150px] sm:grid sm:grid-cols-4 mx-auto sm:gap-16 mb-6 overflow-x-auto overflow-y-hidden scroll no-scroll'>
-              <div className='w-[190px] h-[130px]'>
-                <Pic
-                  alt='trust'
-                  className='rounded-xl'
-                  src='/images/airports/car4.png'
-                  objectFit='fit'
-                />
-                <p className='w-full text-center text-base font-medium leading-6 text-[#FFFFFF]'>
-                  Mercedes Benz E class
-                </p>
-              </div>
-              <div className='w-[190px] h-[130px]'>
-                <Pic
-                  alt='trust'
-                  className='rounded-xl'
-                  src='/images/airports/car4.png'
-                  objectFit='fit'
-                />
-                <p className='w-full text-center text-base font-medium leading-6 text-[#FFFFFF]'>
-                  Mercedes Benz E class
-                </p>
-              </div>
-              <div className='w-[190px] h-[130px]'>
-                <Pic
-                  alt='trust'
-                  className='rounded-xl'
-                  src='/images/airports/car4.png'
-                  objectFit='fit'
-                />
-                <p className='w-full text-center text-base font-medium leading-6 text-[#FFFFFF]'>
-                  Mercedes Benz E class
-                </p>
-              </div>
-              <div className='w-[190px] h-[130px]'>
-                <Pic
-                  alt='trust'
-                  className='rounded-xl'
-                  src='/images/airports/car4.png'
-                  objectFit='fit'
-                />
-                <p className='w-full text-center text-base font-medium leading-6 text-[#FFFFFF]'>
-                  Mercedes Benz E class
-                </p>
-              </div>
+            <div className='flex flex-nowrap gap-4 w-full sm:w-[912px] h-[150px] justify-center mx-auto sm:gap-16 mb-6 overflow-x-auto overflow-y-hidden scroll no-scroll'>
+              {selectedCatCars?.map((car) => (
+                <div className='w-[190px] h-[130px] hover:cursor-pointer'>
+                  <Pic
+                    alt='trust'
+                    className='rounded-xl'
+                    src={
+                      car?.vehImgUrl !== null
+                        ? car?.vehImgUrl
+                        : "/images/airports/car4.png"
+                    }
+                    objectFit='fit'
+                  />
+                  <p className='w-full text-center text-base font-medium leading-6 text-[#FFFFFF]'>
+                    {car?.vehModel}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
