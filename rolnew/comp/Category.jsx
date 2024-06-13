@@ -31,7 +31,7 @@ function Category({ categorys = [], setCarData }) {
                 setActiveTab(i);
                 setCarData(category);
               }}
-              key={category?.id}
+              key={category?.vehCatId}
             >
               <span
                 className={`text-base font-medium leading-7 ${
