@@ -68,8 +68,8 @@ function CarClass({ hideArrow }) {
                     alt='trust'
                     className='rounded-xl w-[495px]'
                     src={
-                      carDetails?.vehImgUrl !== null
-                        ? carData?.vehImgUrl
+                      carDetails?.vehCatImg !== null
+                        ? carData?.vehCatImg
                         : "/images/airports/car1.png"
                     }
                     objectFit='fit'
@@ -82,8 +82,8 @@ function CarClass({ hideArrow }) {
                     alt='trust'
                     className='rounded-xl'
                     src={
-                      carDetails?.vehImgUrl !== null
-                        ? carData?.vehImgUrl
+                      carDetails?.vehCatImg !== null
+                        ? carData?.vehCatImg
                         : "/images/airports/car1.png"
                     }
                     objectFit='fit'
@@ -127,8 +127,8 @@ function CarClass({ hideArrow }) {
                     alt='trust'
                     className='rounded-xl'
                     src={
-                      car?.vehImgUrl !== null
-                        ? car?.vehImgUrl
+                      car?.vehCatImg !== null
+                        ? car?.vehCatImg
                         : "/images/airports/car4.png"
                     }
                     objectFit='fit'
