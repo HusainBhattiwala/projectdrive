@@ -1,10 +1,12 @@
 import Pic from "rolnew/util/Pic";
 import Button from "rolnew/ui/Button";
 import Category from "./Category";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FleetContext } from "context/FleetContext";
 
 function CarClass({ hideArrow }) {
+  const [carData, setCarData] = useState();
+
   const { carCatData, setCarDetails, carDetails } = useContext(FleetContext);
   console.log(carDetails);
 
@@ -40,7 +42,7 @@ function CarClass({ hideArrow }) {
                   <div className=''>
                     <div className='sm:mt-6 mt-2 text-[#B2B2B2] leading-5'>
                       <h2 className='sm:text-3xl leading-9 text-left font-medium text-[#FFFFFF]'>
-                        {carDetails?.vehModel} {carDetails?.vehMake}
+                        {carData?.vehModel} {carData?.vehMake}
                       </h2>
                       <p className='sm:text-base font-medium sm:leading-6 mt-4 text-left text-[#FFF8F3]'>
                         The Mercedes E-Class is a great option for business
@@ -65,7 +67,11 @@ function CarClass({ hideArrow }) {
                   <Pic
                     alt='trust'
                     className='rounded-xl w-[495px]'
-                    src='/images/airports/car1.png'
+                    src={
+                      carDetails?.vehImgUrl !== null
+                        ? carData?.vehImgUrl
+                        : "/images/airports/car1.png"
+                    }
                     objectFit='fit'
                   />
                 </div>
@@ -77,7 +83,7 @@ function CarClass({ hideArrow }) {
                     className='rounded-xl'
                     src={
                       carDetails?.vehImgUrl !== null
-                        ? carDetails?.vehImgUrl
+                        ? carData?.vehImgUrl
                         : "/images/airports/car1.png"
                     }
                     objectFit='fit'
@@ -89,7 +95,7 @@ function CarClass({ hideArrow }) {
                   <div className='min-w-[350px] max-w-[550px] mx-auto'>
                     <div className='mt-6 text-[#B2B2B2] leading-5'>
                       <h2 className='text-[20px] leading-7 text-left font-medium text-[#FFFFFF] my-6 mt-2'>
-                        Mercedes Benz E class
+                        {carData?.vehModel} {carData?.vehMake}
                       </h2>
                       <p className='text-sm font-normal leading-7 text-left text-[#FFF8F3] mt-4'>
                         The Mercedes E-Class is a great option for business
@@ -111,9 +117,12 @@ function CarClass({ hideArrow }) {
               </div>
             </div>
 
-            <div className='flex flex-nowrap gap-4 w-full sm:w-[912px] h-[150px] justify-center mx-auto sm:gap-16 mb-6 overflow-x-auto overflow-y-hidden scroll no-scroll'>
+            <div className='flex flex-nowrap gap-4 w-full sm:w-[912px] h-[165px] justify-center mx-auto sm:gap-16 mb-2 overflow-x-auto overflow-y-hidden scroll no-scroll'>
               {selectedCatCars?.map((car) => (
-                <div className='w-[190px] h-[130px] hover:cursor-pointer'>
+                <div
+                  className='w-[190px] h-[140px] hover:cursor-pointer hover:scale-105 transition ease-in duration-75'
+                  onClick={() => setCarData(car)}
+                >
                   <Pic
                     alt='trust'
                     className='rounded-xl'
