@@ -6,6 +6,9 @@ import BusinessForm from "rolnew/section/business/BusinessForm";
 import Contact from "rolnew/comp/Contact";
 import FAQ from "rolnew/comp/FAQ";
 import OurFeet from "rolnew/section/home/OurFeet";
+import OurPresence from "rolnew/section/home/OurPresence";
+import Services from "rolnew/section/home/Services";
+import BookingFlow from "rolnew/section/home/BookingFlow";
 
 function FullPage() {
   return (
@@ -18,7 +21,10 @@ function FullPage() {
         titleWidth='max-w-[533px]'
       />
       <ServiceComp />
+      <BookingFlow />
+      <Services />
       <OurFeet />
+      <OurPresence />
       <FAQ />
       <Contact />
     </>
