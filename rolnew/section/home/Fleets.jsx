@@ -98,7 +98,7 @@ import "./css/fleet.css";
 import Button from "rolnew/ui/Button";
 import Link from "next/link";
 
-export default function Fleets({ slideData, showBooking = false }) {
+export default function Fleets({ slideData, showBooking = true }) {
   const isSingleSlide = slideData?.length === 1;
 
   return (
