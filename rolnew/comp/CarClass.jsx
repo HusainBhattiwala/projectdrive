@@ -43,7 +43,7 @@ function CarClass({ hideArrow }) {
                   <div className=''>
                     <div className='sm:mt-6 mt-2 text-[#B2B2B2] leading-5'>
                       <h2 className='sm:text-3xl leading-9 text-left font-medium text-[#FFFFFF]'>
-                        {carData?.vehModel} {carData?.vehMake}
+                        {carDetails?.vehModel} {carDetails?.vehMake}
                       </h2>
                       <p className='sm:text-base font-medium sm:leading-6 mt-4 text-left text-[#FFF8F3]'>
                         The Mercedes E-Class is a great option for business
