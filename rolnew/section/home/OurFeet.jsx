@@ -97,6 +97,7 @@ function OurFeet({ showBooking }) {
   const filteredSlideData = carCategoryList?.filter(
     (cat) => cat?.vehCatId === selectedCategoryId
   );
+  console.log("selectedCatID", selectedCategoryId);
 
   return (
     <>
@@ -111,7 +112,10 @@ function OurFeet({ showBooking }) {
         />
       </Container>
       <div className='bg-[#11202D] sm:pt-[10px] text-center xl:!px-[70px] lg:px-[45px] md:px-[22px] sm:px-[10px] px-4'>
-        <Fleets slideData={filteredSlideData} showBooking={showBooking} />
+        <Fleets
+          slideData={selectedCategoryId ? filteredSlideData : carCategoryList}
+          showBooking={showBooking}
+        />
       </div>
     </>
   );
