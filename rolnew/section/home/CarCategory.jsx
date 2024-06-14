@@ -13,12 +13,14 @@ function CarCategory({ categorys = [], onSelectCategory }) {
   useEffect(() => {
     setActiveTab(0);
     onSelectCategory(categorys[0]?.vehCatId);
+    console.log("catgories", categorys);
+    console.log("catgories filtered", carCategories);
   }, []);
   console.log(activeCat);
 
   return (
     <div className='sm:py-[44px] py-4'>
-      <div className='w-full flex flex-nowrap max-w-[800px] overflow-x-auto mx-auto sm:justify-center justify-start items-center scroll no-scroll'>
+      <div className='w-full flex flex-nowrap max-w-[800px] overflow-x-auto mx-auto sm:justify-between justify-start items-center scroll no-scroll'>
         {carCategories?.map((category, i) => (
           <button
             key={category?.vehCatId}
