@@ -7,6 +7,7 @@ import Providers from "app/Providers";
 import { LoginProvider } from "context/LoginContext";
 import { UtilityProvider } from "context/UtilityContext";
 import { FleetProvider } from "context/FleetContext";
+import { ModalProvider } from "context/ModalContext";
 import TopWrapper from "./TopWrapper";
 
 export default function layout({ children }) {
@@ -21,7 +22,9 @@ export default function layout({ children }) {
           <LoginProvider>
             <UtilityProvider>
               <FleetProvider>
-                <div className='!overflow-x-hidden'>{children}</div>
+                <ModalProvider>
+                  <div className='!overflow-x-hidden'>{children}</div>
+                </ModalProvider>
               </FleetProvider>
             </UtilityProvider>
           </LoginProvider>
