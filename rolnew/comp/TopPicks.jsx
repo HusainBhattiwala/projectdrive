@@ -9,6 +9,7 @@ import Button from "rolnew/ui/Button";
 import Dropdown from "rolnew/ui/Dropdown";
 import { useContext } from "react";
 import { ModalContext } from "context/ModalContext";
+import BookModal from "./BookModal";
 
 const countryList = [
   {
@@ -128,6 +129,7 @@ function TopPicks({ scrollRef }) {
           Book Now
         </Button>
       </Container>
+      <BookModal />
     </>
   );
 }
