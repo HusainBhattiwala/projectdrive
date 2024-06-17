@@ -35,7 +35,39 @@ const navLinks = [
       { route: "/rolnew/cities/tokyo", label: "Tokyo" },
     ],
   },
-  { route: "/rolnew/airport-transfers", label: "Airport Transfers" },
+  {
+    route: "/rolnew/airport-transfers",
+    label: "Airport Transfers",
+    subLinks: [
+      {
+        route: "/rolnew/airport-transfers/london",
+        label: "Airport Transfer London",
+        subLinks: [
+          {
+            route: "/rolnew/airport-transfers/london/heathrow",
+            label: "Heathrow",
+          },
+          {
+            route: "/rolnew/airport-transfers/london/gatwick",
+            label: "Gatwick",
+          },
+          {
+            route: "/rolnew/airport-transfers/london/londoncity",
+            label: "London-City",
+          },
+          {
+            route: "/rolnew/airport-transfers/london/londonsouthend",
+            label: "London-Southend",
+          },
+          {
+            route: "/rolnew/airport-transfers/london/londonstansted",
+            label: "London-Stansted",
+          },
+          { route: "/rolnew/airport-transfers/london/luton", label: "Luton" },
+        ],
+      },
+    ],
+  },
 ];
 
 export default function Navbar() {
@@ -108,41 +140,60 @@ export default function Navbar() {
                 >
                   {item.subLinks ? (
                     <>
-                      <div
+                      <Link
+                        href={item.route}
                         tabIndex={index}
-                        role='button'
                         className={`text-white ${
                           pathname === item.route ? "font-normal" : ""
                         } text-sm hover:bg-[rgb(255,255,255)]/20 hover:rounded-md underline-offset-2 font-medium px-2 whitespace-nowrap`}
-                        onClick={() => toggleDropdown(index)}
                       >
                         {item.label}
-                      </div>
+                      </Link>
                       <ul
                         tabIndex={index}
-                        className={`dropdown-content z-[1] p-2 w-fit sub-menu ${
-                          openDropdownIndex === index ? "block" : "hidden"
-                        }`}
+                        className='dropdown-content z-[1] p-2 w-fit sub-menu hidden group-hover:block'
                       >
                         {item.subLinks.map((subLink) => (
-                          <li key={subLink.route}>
-                            <Link
-                              className='text-[#E1E1E1] hover:text-[#223544] w-[180px] px-3 py-3 text-sm font-bold leading-5 text-left flex items-center rounded-md hover:bg-[rgb(229,234,250)]/100'
-                              href={subLink.route}
-                              onClick={() => {
-                                toggleDropdown(index);
-                                setIsSidebarOpen(false);
-                              }}
-                            >
-                              {subLink.label}
-                            </Link>
+                          <li
+                            key={subLink.route}
+                            className='relative group hover:bg-gray-700'
+                          >
+                            {subLink.subLinks ? (
+                              <div className='relative'>
+                                <Link
+                                  href={subLink.route}
+                                  className='text-[#E1E1E1] hover:text-[#223544] w-[180px] px-3 py-3 text-sm font-bold leading-5 text-left flex items-center rounded-md hover:bg-[rgb(229,234,250)]/100'
+                                >
+                                  {subLink.label}
+                                </Link>
+                                <ul className='absolute left-full top-0 hidden group-hover:block z-[1] p-2 w-fit sub-menu'>
+                                  {subLink.subLinks.map((nestedSubLink) => (
+                                    <li key={nestedSubLink.route}>
+                                      <Link
+                                        className='text-[#E1E1E1] hover:text-[#223544] w-[180px] px-3 py-3 text-sm font-bold leading-5 text-left flex items-center rounded-md hover:bg-[rgb(229,234,250)]/100'
+                                        href={nestedSubLink.route}
+                                      >
+                                        {nestedSubLink.label}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ) : (
+                              <Link
+                                className='text-[#E1E1E1] hover:text-[#223544] w-[180px] px-3 py-3 text-sm font-bold leading-5 text-left flex items-center rounded-md hover:bg-[rgb(229,234,250)]/100'
+                                href={subLink.route}
+                              >
+                                {subLink.label}
+                              </Link>
+                            )}
                           </li>
                         ))}
                       </ul>
                     </>
                   ) : (
                     <Link
-                      href={item?.route}
+                      href={item.route}
                       className={`text-white ${
                         pathname === item.route ? "font-normal" : ""
                       } text-sm hover:bg-[rgb(255,255,255)]/20 hover:rounded-md underline-offset-2 font-medium px-2 whitespace-nowrap pop`}
@@ -173,15 +224,11 @@ export default function Navbar() {
               </Link>
             </div>
             <div className='sm:hidden absolute flex flex-row right-5 gap-4'>
-              <div className='flex items-center pop' type='button'>
-                <img
-                  src='/images/navbar/text.png'
-                  alt=''
-                  className='h-9 w-16'
-                />
+              <div className='flex gap-4 items-center pop' type='button'>
+                <img src='/images/navbar/icon.png' alt='' className='h-5 w-4' />
               </div>
               <Link href='/login'>
-                <Button className='!px-3 !py-[6px]' white>
+                <Button className='w-[120px]' white>
                   Sign In
                 </Button>
               </Link>
@@ -214,23 +261,7 @@ export default function Navbar() {
                 className='absolute right-0 hover:scale-110 active:scale-90 transition-[scale]'
                 type='button'
                 aria-label='close'
-              >
-                {/* <svg
-                  fill="none"
-                  className="text-red-500 h-8 w-8"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18 18 6M6 6l12 12"
-                  />
-                </svg> */}
-              </button>
+              ></button>
               <Link href='/' className='flex items-center'>
                 <img
                   className='h-10 w-[170px]'
@@ -253,7 +284,9 @@ export default function Navbar() {
                         : () => setIsSidebarOpen(false)
                     }
                   >
-                    {item.label}
+                    <Link href={item.route} className='block w-full h-full'>
+                      {item.label}
+                    </Link>
                   </div>
                   {item.subLinks && openDropdownIndex === index && (
                     <div className='ml-4 space-y-1 flex flex-col mt-2 p-2 rounded'>
@@ -296,9 +329,10 @@ export default function Navbar() {
 
               {["call", "email"].map((item) => (
                 <button
+                  key={item}
                   type='button'
                   aria-label={item}
-                  className=' pop flex flex-row justify-start mr-12 gap-2'
+                  className='pop flex flex-row justify-start mr-12 gap-2'
                 >
                   <img
                     src={`/rolnew/home/${item}.svg`}

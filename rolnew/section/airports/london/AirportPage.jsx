@@ -18,6 +18,7 @@ const airports = [
   "gatwick",
   "londoncity",
   "londonsouthend",
+  "londonstansted",
   "luton",
 ];
 
