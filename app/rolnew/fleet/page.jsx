@@ -10,7 +10,7 @@ import CarClass from 'rolnew/comp/CarClass';
 import FleetBanner from 'rolnew/comp/FleetBanner';
 import { useEffect, useRef, useState } from 'react';
 
-export default function page() {
+export default function Page() {
   const bannerData = {
     mainTitle: 'Our Luxurious Fleet',
   };

@@ -14,7 +14,7 @@ import CarClass from 'rolnew/comp/CarClass';
 import BookModal from 'rolnew/comp/BookModal';
 import { useEffect, useRef, useState } from 'react';
 
-export default function page() {
+export default function Page() {
   const [hideScrollDown, setHideScrollDown] = useState(false);
   const scrollRef = useRef(null);
 
