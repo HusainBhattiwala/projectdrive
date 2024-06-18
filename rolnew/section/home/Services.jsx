@@ -12,7 +12,10 @@ function Services() {
         </div>
       </Container> */}
       <Container className="bg-[#081017] sm:py-[80px] py-8 text-center">
-        <Title subTile="Our services" mainTitle="Hire A Chauffeur Service For Your Every Need" description="Indulge in an unparalleled chauffeured luxury car rental service with our customised hire a chauffeur service designed to meet your unique requirements. Whether you're in pursuit of seamless airport transfers, corporate travel, or special events; our hourly chauffeur services are crafted to upgrade your journey. Embark on a journey with a full day chauffeur hire service where every detail is tailored to perfection. Browse our services now and experience the RolDrive difference with our executive chauffeur services." descClass="sm:py-[44px] py-8" />
+        <Title subTile="Our services" 
+        mainTitle="Hire A Chauffeur Service For Your Every Need" 
+        description="Indulge in an unparalleled chauffeured luxury car rental service with our customised hire a chauffeur service designed to meet your unique requirements. Whether you're in pursuit of seamless airport transfers, corporate travel, or special events; our hourly chauffeur services are crafted to upgrade your journey. Embark on a journey with a full day chauffeur hire service where every detail is tailored to perfection. Browse our services now and experience the RolDrive difference with our executive chauffeur services." descClass="sm:py-[44px] py-8" />
+        
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 grid-cols-2 sm:justify-center sm:items-center gap-x-6 gap-y-6 sm:mt-0">
           <div className="col-span-1 h-full">
             <Card title="Airport Transfer" description="Our airport transfers are smooth and effortless. Whether you need to be picked up from your hotel and dropped off at the airport or vice versa, our friendly yet professional chauffeur service will ensure your journey is comfortable and stress-free." img="/rolnew/global/card/card-image1.jpg" />
