@@ -16,31 +16,31 @@ const countryList = [
     id: 1,
     image: "/rolnew/global/country/london.jpg",
     countryCode: "GB",
-    cityName: "Heathrow Airport",
+    cityName: "London",
   },
   {
     id: 2,
     image: "/rolnew/global/country/london.jpg",
     countryCode: "GB",
-    cityName: "Gatwick Airport",
+    cityName: "Paris",
   },
   {
     id: 3,
     image: "/rolnew/global/country/london.jpg",
     countryCode: "GB",
-    cityName: "Gatwick Airport",
+    cityName: "Dubai",
   },
   {
     id: 4,
     image: "/rolnew/global/country/london.jpg",
     countryCode: "GB",
-    cityName: "Gatwick Airport",
+    cityName: "New York",
   },
   {
     id: 5,
     image: "/rolnew/global/country/london.jpg",
     countryCode: "GB",
-    cityName: "Gatwick Airport",
+    cityName: "Tokyo",
   },
 ];
 
@@ -56,7 +56,7 @@ const items = [
   </a>,
 ];
 
-function TopPicks({ scrollRef }) {
+function TopPicks({ scrollRef, airportList }) {
   const { openModal } = useContext(ModalContext);
   return (
     <>
@@ -71,7 +71,6 @@ function TopPicks({ scrollRef }) {
             ref={scrollRef}
           >
             <div className='box w-full sm:w-full p-2'>
-              {" "}
               <Dropdown
                 label='Choose Your City'
                 className='rounded-xl'
@@ -80,7 +79,6 @@ function TopPicks({ scrollRef }) {
               />
             </div>
             <div className='box w-full sm:w-full p-2'>
-              {" "}
               <Dropdown
                 label='Choose Your Airport'
                 className='rounded-xl'
@@ -89,7 +87,6 @@ function TopPicks({ scrollRef }) {
               />
             </div>
             <div className='box w-full sm:w-[50%] p-2'>
-              {" "}
               <Button className='w-full' white>
                 Search
               </Button>
@@ -119,7 +116,7 @@ function TopPicks({ scrollRef }) {
           </div>
         </div> */}
 
-        <CountryList countryList={countryList} />
+        <CountryList countryList={airportList ? airportList : countryList} />
 
         <Button
           className='mt-14 w-full sm:w-[30%]'

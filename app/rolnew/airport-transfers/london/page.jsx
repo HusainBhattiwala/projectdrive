@@ -31,7 +31,7 @@ export default function page() {
   }, []);
 
   const bannerData = {
-    mainTitle: "Best Airport Transfers",
+    mainTitle: "Airport Transfers London",
     mainDescription:
       "Your exclusive and dependable chauffeur service indulgence",
     backgroundImage: "/rolnew/services/airport-transfer-banner.png",
@@ -40,12 +40,51 @@ export default function page() {
       "We offer customised bookings for any location, from bulk or intercity trips to monthly packages.",
   };
 
+  const airportList = [
+    {
+      id: 1,
+      image: "/rolnew/global/country/london.jpg",
+      countryCode: "GB",
+      cityName: "Heathrow Airport",
+    },
+    {
+      id: 2,
+      image: "/rolnew/global/country/london.jpg",
+      countryCode: "GB",
+      cityName: "Gatwick Airport",
+    },
+    {
+      id: 3,
+      image: "/rolnew/global/country/london.jpg",
+      countryCode: "GB",
+      cityName: "London City Airport",
+    },
+    {
+      id: 4,
+      image: "/rolnew/global/country/london.jpg",
+      countryCode: "GB",
+      cityName: "London Southend Airport",
+    },
+    {
+      id: 5,
+      image: "/rolnew/global/country/london.jpg",
+      countryCode: "GB",
+      cityName: "London Stansted Airport",
+    },
+    {
+      id: 6,
+      image: "/rolnew/global/country/london.jpg",
+      countryCode: "GB",
+      cityName: "Luton Airport",
+    },
+  ];
+
   return (
     <>
       {/* <BannerTitle mainTitle="Premium Chauffeur Service" description="Your exclusive and dependable chauffeur service indulgence." /> */}
       <ServicesBanner {...bannerData} hideScrollDown={hideScrollDown} />
 
-      <TopPicks scrollRef={scrollRef} />
+      <TopPicks airportList={airportList} scrollRef={scrollRef} />
 
       <TrustedPartners />
       <div style={{ backgroundColor: "#11202D", height: "100px" }} />

@@ -8,35 +8,35 @@ export const airportData = {
   },
   gatwick: {
     banner: {
-      title: "Healthrow Airport Transfer",
+      title: "Gatwick Airport Transfer",
       subTitle: "Arrive in style, stress free and rejuvenated",
       bannerImage: "/rolnew/airports/london/heathrow-banner.jpg",
     },
   },
   londoncity: {
     banner: {
-      title: "Healthrow Airport Transfer",
+      title: "London City Airport Transfer",
       subTitle: "Arrive in style, stress free and rejuvenated",
       bannerImage: "/rolnew/airports/london/heathrow-banner.jpg",
     },
   },
   londonsouthend: {
     banner: {
-      title: "Healthrow Airport Transfer",
+      title: "London Southend Airport Transfer",
       subTitle: "Arrive in style, stress free and rejuvenated",
       bannerImage: "/rolnew/airports/london/heathrow-banner.jpg",
     },
   },
   londonstansted: {
     banner: {
-      title: "Healthrow Airport Transfer",
+      title: "London Stansted Airport Transfer",
       subTitle: "Arrive in style, stress free and rejuvenated",
       bannerImage: "/rolnew/airports/london/heathrow-banner.jpg",
     },
   },
   luton: {
     banner: {
-      title: "Healthrow Airport Transfer",
+      title: "Luton Airport Transfer",
       subTitle: "Arrive in style, stress free and rejuvenated",
       bannerImage: "/rolnew/airports/london/heathrow-banner.jpg",
     },
