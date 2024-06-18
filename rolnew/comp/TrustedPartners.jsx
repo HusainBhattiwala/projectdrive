@@ -47,13 +47,14 @@ function TrustedPartners({
                 </div>
                 <div className='sm:mt-6 mt-2 text-[#B2B2B2] leading-5'>
                   <h4 className='sm:text-xl text-sm font-medium text-[#B2B2B2]'>
-                    Exceptional Chauffeur Service
+                    {showTitle
+                      ? 'Safe & Discreet'
+                      : 'Exceptional Chauffeur Service'}
                   </h4>
                   <p className='sm:text-sm sm:leading-5 text-[10px] leading-[14px] text-[#B2B2B2]'>
-                    RolDrive offers top-notch chauffeur services in London,
-                    ensuring comfort and convenience for executive airport
-                    transfers. Whether it's Heathrow or any other major airport,
-                    our experienced drivers guarantee a sm
+                    {showTitle
+                      ? 'RolDrive&apos;s chauffeurs are renowned for their safety and discretion, rigorously trained to maintain the highest standards of secure and private travel, ensuring clients&apos; journeys are not only comfortable but also confidential.'
+                      : "RolDrive offers top-notch chauffeur services in London, ensuring comfort and convenience for executive airport transfers. Whether it's Heathrow or any other major airport, our experienced drivers guarantee a sm"}
                   </p>
                 </div>
               </div>
