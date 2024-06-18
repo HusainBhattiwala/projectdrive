@@ -1,9 +1,9 @@
-"use client";
-import Pic from "rolnew/util/Pic";
-import Button from "rolnew/ui/Button";
-import Category from "./Category";
-import { useContext, useState } from "react";
-import { FleetContext } from "context/FleetContext";
+'use client';
+import Pic from 'rolnew/util/Pic';
+import Button from 'rolnew/ui/Button';
+import Category from './Category';
+import { useContext, useState } from 'react';
+import { FleetContext } from 'context/FleetContext';
 
 function CarClass({ hideArrow }) {
   const [carData, setCarData] = useState();
@@ -14,7 +14,7 @@ function CarClass({ hideArrow }) {
   const selectedCatCars = carCatData?.filter(
     (cat) => cat?.vehCatId === carDetails?.vehCatId
   );
-  console.log("slected cat cars:", selectedCatCars);
+  console.log('slected cat cars:', selectedCatCars);
 
   return (
     <>
@@ -32,7 +32,9 @@ function CarClass({ hideArrow }) {
       </Container> */}
 
       <div className='bg-[#11202D] pt-4 sm:pt-[10px] text-center xs:pt-16 xl:!px-[70px] lg:px-[45px] md:px-[32px] sm:px-[20px] px-4'>
-        {hideArrow && (
+        {hideArrow ? (
+          <Category categorys={carCatData} setCarData={setCarDetails} />
+        ) : (
           <Category categorys={carCatData} setCarData={setCarDetails} />
         )}
         <div className='bg-[#11202D] xs:pt-12 sm:px-12 md:px-16 pb-6'>
@@ -71,7 +73,7 @@ function CarClass({ hideArrow }) {
                     src={
                       carDetails?.vehCatImg !== null
                         ? carDetails?.vehCatImg
-                        : "/images/airports/car1.png"
+                        : '/images/airports/car1.png'
                     }
                     objectFit='fit'
                   />
@@ -85,7 +87,7 @@ function CarClass({ hideArrow }) {
                     src={
                       carDetails?.vehCatImg !== null
                         ? carDetails?.vehCatImg
-                        : "/images/airports/car1.png"
+                        : '/images/airports/car1.png'
                     }
                     objectFit='fit'
                   />
@@ -130,7 +132,7 @@ function CarClass({ hideArrow }) {
                     src={
                       car?.vehCatImg !== null
                         ? car?.vehCatImg
-                        : "/images/airports/car4.png"
+                        : '/images/airports/car4.png'
                     }
                     objectFit='fit'
                   />

@@ -55,7 +55,7 @@ const items = [
   </a>,
 ];
 
-function TopPicks({ scrollRef, airportList }) {
+function TopPicks({ scrollRef, airportList, topPicksData }) {
   const { openModal } = useContext(ModalContext);
   return (
     <>
@@ -63,7 +63,7 @@ function TopPicks({ scrollRef, airportList }) {
         <Pic src='/rolnew/global/hr.svg' alt='hr' objectFit='cover' />
       </div>
       <Container className='bg-[#11202D] sm:py-16 py-8 text-center'>
-        <Title subTile='Top Pics' mainTitle='Airport Transfers' />
+        <Title subTile='Top Pics' mainTitle={topPicksData?.title} />
         <div className='px-4 sm:px-24'>
           <div
             className='boxes p-[10px] bg-[#2F4456] mt-20 mb-10 w-full h-auto sm:h-20 flex flex-col sm:flex-row gap-1 justify-center items-center rounded-xl'
@@ -71,7 +71,7 @@ function TopPicks({ scrollRef, airportList }) {
           >
             <div className='box w-full sm:w-full p-2'>
               <Dropdown
-                label='Choose Your City'
+                label={topPicksData?.search?.dropdown1}
                 className='rounded-xl'
                 items={items}
                 full
@@ -79,7 +79,7 @@ function TopPicks({ scrollRef, airportList }) {
             </div>
             <div className='box w-full sm:w-full p-2'>
               <Dropdown
-                label='Choose Your Airport'
+                label={topPicksData?.search?.dropdown2}
                 className='rounded-xl'
                 items={items}
                 full
@@ -115,7 +115,7 @@ function TopPicks({ scrollRef, airportList }) {
           </div>
         </div> */}
 
-        <CountryList countryList={airportList ? airportList : countryList} />
+        <CountryList countryList={topPicksData?.list} />
 
         <Button
           className='mt-14 w-full sm:w-[30%]'
