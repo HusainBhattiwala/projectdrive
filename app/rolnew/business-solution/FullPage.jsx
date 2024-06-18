@@ -1,14 +1,15 @@
-"use client";
+'use client';
 
-import Hero from "rolnew/comp/Hero";
-import ServiceComp from "rolnew/comp/ServiceComp";
-import BusinessForm from "rolnew/section/business/BusinessForm";
-import Contact from "rolnew/comp/Contact";
-import FAQ from "rolnew/comp/FAQ";
-import OurFeet from "rolnew/section/home/OurFeet";
-import OurPresence from "rolnew/section/home/OurPresence";
-import Services from "rolnew/section/home/Services";
-import BookingFlow from "rolnew/section/home/BookingFlow";
+import Hero from 'rolnew/comp/Hero';
+import ServiceComp from 'rolnew/comp/ServiceComp';
+import BusinessForm from 'rolnew/section/business/BusinessForm';
+import Contact from 'rolnew/comp/Contact';
+import FAQ from 'rolnew/comp/FAQ';
+import OurFeet from 'rolnew/section/home/OurFeet';
+import OurPresence from 'rolnew/section/home/OurPresence';
+import Services from 'rolnew/section/home/Services';
+import BookingFlow from 'rolnew/section/home/BookingFlow';
+import TrustedPartners from 'rolnew/comp/TrustedPartners';
 
 function FullPage() {
   return (
@@ -24,6 +25,12 @@ function FullPage() {
       <BookingFlow />
       <Services />
       <OurFeet />
+      <div className='bg-[#11202D] py-12'>
+        <TrustedPartners
+          img='/rolnew/cities/trust-banner.svg'
+          showTitle={false}
+        />
+      </div>
       <OurPresence />
       <FAQ />
       <Contact />

@@ -1,46 +1,45 @@
-"use client";
+'use client';
 
-import React from "react";
-import Container from "rolnew/comp/Container";
-import Pic from "rolnew/util/Pic";
-import Title from "rolnew/section/home/Title";
-import CountryList from "rolnew/section/home/CountryList";
-import Button from "rolnew/ui/Button";
-import Dropdown from "rolnew/ui/Dropdown";
-import { useContext } from "react";
-import { ModalContext } from "context/ModalContext";
-import BookModal from "./BookModal";
+import Container from 'rolnew/comp/Container';
+import Pic from 'rolnew/util/Pic';
+import Title from 'rolnew/section/home/Title';
+import CountryList from 'rolnew/section/home/CountryList';
+import Button from 'rolnew/ui/Button';
+import Dropdown from 'rolnew/ui/Dropdown';
+import { useContext } from 'react';
+import { ModalContext } from 'context/ModalContext';
+import BookModal from './BookModal';
 
 const countryList = [
   {
     id: 1,
-    image: "/rolnew/global/country/london.jpg",
-    countryCode: "GB",
-    cityName: "London",
+    image: '/rolnew/global/country/london.jpg',
+    countryCode: 'GB',
+    cityName: 'London',
   },
   {
     id: 2,
-    image: "/rolnew/global/country/london.jpg",
-    countryCode: "GB",
-    cityName: "Paris",
+    image: '/rolnew/global/country/london.jpg',
+    countryCode: 'GB',
+    cityName: 'Paris',
   },
   {
     id: 3,
-    image: "/rolnew/global/country/london.jpg",
-    countryCode: "GB",
-    cityName: "Dubai",
+    image: '/rolnew/global/country/london.jpg',
+    countryCode: 'GB',
+    cityName: 'Dubai',
   },
   {
     id: 4,
-    image: "/rolnew/global/country/london.jpg",
-    countryCode: "GB",
-    cityName: "New York",
+    image: '/rolnew/global/country/london.jpg',
+    countryCode: 'GB',
+    cityName: 'New York',
   },
   {
     id: 5,
-    image: "/rolnew/global/country/london.jpg",
-    countryCode: "GB",
-    cityName: "Tokyo",
+    image: '/rolnew/global/country/london.jpg',
+    countryCode: 'GB',
+    cityName: 'Tokyo',
   },
 ];
 

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import Button from "rolnew/ui/Button";
+import { useEffect, useState } from 'react';
+import Button from 'rolnew/ui/Button';
 
 function Banner({ pageData }) {
   const [width, setWidth] = useState(1200);
@@ -12,11 +12,11 @@ function Banner({ pageData }) {
       setWidth(window.innerWidth);
       setHeight(window.innerHeight);
     }
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -40,7 +40,7 @@ function Banner({ pageData }) {
         </div>
         <div className='sm:pt-10 relative flex flex-col flex-grow sm:justify-start justify-end bg-cover'>
           <div
-            className='h-full w-full bg-contain z-[1] absolute top-0'
+            className='h-full w-full bg-contain z-[1] absolute top-0 bg-contain bg-no-repeat'
             style={{
               backgroundImage:
                 width <= 640 && `url(${pageData?.banner?.bannerImage})`,

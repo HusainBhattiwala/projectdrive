@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import TrustedPartners from "rolnew/comp/TrustedPartners";
-import DownloadOurApp from "rolnew/section/home/DownloadOurApp";
-import OurPresence from "rolnew/section/home/OurPresence";
-import Locations from "rolnew/comp/Locations";
-import Contact from "rolnew/comp/Contact";
-import FAQ from "rolnew/comp/FAQ";
-import CarClass from "rolnew/comp/CarClass";
-import FleetBanner from "rolnew/comp/FleetBanner";
-import { useEffect, useRef, useState } from "react";
+import TrustedPartners from 'rolnew/comp/TrustedPartners';
+import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
+import OurPresence from 'rolnew/section/home/OurPresence';
+import Locations from 'rolnew/comp/Locations';
+import Contact from 'rolnew/comp/Contact';
+import FAQ from 'rolnew/comp/FAQ';
+import CarClass from 'rolnew/comp/CarClass';
+import FleetBanner from 'rolnew/comp/FleetBanner';
+import { useEffect, useRef, useState } from 'react';
 
 export default function page() {
   const bannerData = {
-    mainTitle: "Our Luxurious Fleet",
+    mainTitle: 'Our Luxurious Fleet',
   };
 
   const [hideArrow, setHideArrow] = useState(false);
@@ -22,7 +22,7 @@ export default function page() {
   useEffect(() => {
     const timer = setTimeout(() => {
       if (carClassRef.current) {
-        carClassRef.current.scrollIntoView({ behavior: "smooth" });
+        carClassRef.current.scrollIntoView({ behavior: 'smooth' });
         setHideArrow(true);
       }
     }, 5000);

@@ -1,69 +1,69 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { isSidebarOpenAtom } from "rolnew/context/atoms";
-import { AnimatePresence, motion } from "framer-motion";
-import { useAtom } from "jotai";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import Button from "rolnew/ui/Button";
-import NewDropdown from "components/ui/NewDropdown";
+import { useState } from 'react';
+import { isSidebarOpenAtom } from 'rolnew/context/atoms';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useAtom } from 'jotai';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Button from 'rolnew/ui/Button';
+import NewDropdown from 'components/ui/NewDropdown';
 
 const navLinks = [
   {
-    route: "/rolnew",
-    label: "Services",
+    route: '/rolnew',
+    label: 'Services',
     subLinks: [
-      { route: "/rolnew/airport-transfers", label: "Airport Services" },
-      { route: "/rolnew/road-shows", label: "Road shows" },
-      { route: "/rolnew/intercity-transfers", label: "Intercity Transfers" },
+      { route: '/rolnew/airport-transfers', label: 'Airport Services' },
+      { route: '/rolnew/road-shows', label: 'Road shows' },
+      { route: '/rolnew/intercity-transfers', label: 'Intercity Transfers' },
     ],
   },
   {
-    route: "/rolnew/fleet",
-    label: "Fleet",
+    route: '/rolnew/fleet',
+    label: 'Fleet',
   },
-  { route: "/rolnew/business-solution", label: "Business Solutions" },
+  { route: '/rolnew/business-solution', label: 'Business Solutions' },
   {
-    route: "/rolnew/cities",
-    label: "Cities",
+    route: '/rolnew/cities',
+    label: 'Cities',
     subLinks: [
-      { route: "/rolnew/cities/dubai", label: "Dubai" },
-      { route: "/rolnew/cities/london", label: "London" },
-      { route: "/rolnew/cities/newyork", label: "New-York" },
-      { route: "/rolnew/cities/paris", label: "Paris" },
-      { route: "/rolnew/cities/tokyo", label: "Tokyo" },
+      { route: '/rolnew/cities/dubai', label: 'Dubai' },
+      { route: '/rolnew/cities/london', label: 'London' },
+      { route: '/rolnew/cities/newyork', label: 'New-York' },
+      { route: '/rolnew/cities/paris', label: 'Paris' },
+      { route: '/rolnew/cities/tokyo', label: 'Tokyo' },
     ],
   },
   {
-    route: "/rolnew/airport-transfers",
-    label: "Airport Transfers",
+    route: '/rolnew/airport-transfers',
+    label: 'Airport Transfers',
     subLinks: [
       {
-        route: "/rolnew/airport-transfers/london",
-        label: "Airport Transfer London",
+        route: '/rolnew/airport-transfers/london',
+        label: 'Airport Transfer London',
         subLinks: [
           {
-            route: "/rolnew/airport-transfers/london/heathrow",
-            label: "Heathrow",
+            route: '/rolnew/airport-transfers/london/heathrow',
+            label: 'Heathrow',
           },
           {
-            route: "/rolnew/airport-transfers/london/gatwick",
-            label: "Gatwick",
+            route: '/rolnew/airport-transfers/london/gatwick',
+            label: 'Gatwick',
           },
           {
-            route: "/rolnew/airport-transfers/london/londoncity",
-            label: "London-City",
+            route: '/rolnew/airport-transfers/london/londoncity',
+            label: 'London-City',
           },
           {
-            route: "/rolnew/airport-transfers/london/londonsouthend",
-            label: "London-Southend",
+            route: '/rolnew/airport-transfers/london/londonsouthend',
+            label: 'London-Southend',
           },
           {
-            route: "/rolnew/airport-transfers/london/londonstansted",
-            label: "London-Stansted",
+            route: '/rolnew/airport-transfers/london/londonstansted',
+            label: 'London-Stansted',
           },
-          { route: "/rolnew/airport-transfers/london/luton", label: "Luton" },
+          { route: '/rolnew/airport-transfers/london/luton', label: 'Luton' },
         ],
       },
     ],
@@ -135,7 +135,7 @@ export default function Navbar() {
                   key={item.route}
                   className={`relative h-full flex items-center justify-center ${
                     item.subLinks &&
-                    "dropdown dropdown-bottom dropdown-right md:dropdown-hover"
+                    'dropdown dropdown-bottom dropdown-right md:dropdown-hover'
                   } pop`}
                 >
                   {item.subLinks ? (
@@ -144,7 +144,7 @@ export default function Navbar() {
                         href={item.route}
                         tabIndex={index}
                         className={`text-white ${
-                          pathname === item.route ? "font-normal" : ""
+                          pathname === item.route ? 'font-normal' : ''
                         } text-sm hover:bg-[rgb(255,255,255)]/20 hover:rounded-md underline-offset-2 font-medium px-2 whitespace-nowrap`}
                       >
                         {item.label}
@@ -195,7 +195,7 @@ export default function Navbar() {
                     <Link
                       href={item.route}
                       className={`text-white ${
-                        pathname === item.route ? "font-normal" : ""
+                        pathname === item.route ? 'font-normal' : ''
                       } text-sm hover:bg-[rgb(255,255,255)]/20 hover:rounded-md underline-offset-2 font-medium px-2 whitespace-nowrap pop`}
                     >
                       {item.label}
@@ -241,17 +241,17 @@ export default function Navbar() {
         {isSidebarOpen && (
           <motion.div
             initial={{
-              x: "-100%",
+              x: '-100%',
             }}
             animate={{
               x: 0,
             }}
             transition={{
               duration: 0.2,
-              ease: "easeOut",
+              ease: 'easeOut',
             }}
             exit={{
-              x: "-100%",
+              x: '-100%',
             }}
             className='fixed top-0 left-0 h-screen overflow-y-auto z-50 w-[16rem] bg-[#223544] py-8 shadow-md px-8 lg:hidden'
           >
@@ -275,7 +275,7 @@ export default function Navbar() {
                 <div key={item.route}>
                   <div
                     className={`${
-                      pathname === item.route ? "font-bold" : ""
+                      pathname === item.route ? 'font-bold' : ''
                     } hover:bg-[rgb(255,255,255)]/20 hover:rounded-md px-3 py-2 text-[#E1E1E1] text-sm leading-5 cursor-pointer`}
                     role='button'
                     onClick={
@@ -327,7 +327,7 @@ export default function Navbar() {
                 <p className='font-medium'>Contact Us</p>
               </button>
 
-              {["call", "email"].map((item) => (
+              {['call', 'email'].map((item) => (
                 <button
                   key={item}
                   type='button'
