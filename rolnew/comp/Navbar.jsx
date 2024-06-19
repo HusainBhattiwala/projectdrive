@@ -14,7 +14,6 @@ const navLinks = [
     route: '/rolnew/all-services',
     label: 'Services',
     subLinks: [
-      { route: '/rolnew/airport-transfers', label: 'Airport Services' },
       { route: '/rolnew/road-shows', label: 'Road shows' },
       { route: '/rolnew/intercity-transfers', label: 'Intercity Transfers' },
       {
@@ -180,7 +179,7 @@ export default function Navbar() {
                                 >
                                   {subLink.label}
                                 </Link>
-                                <ul className='absolute left-full top-0 hidden group-hover:block z-[1] p-2 w-fit sub-menu'>
+                                <ul className='absolute left-full mt-5 top-0 hidden group-hover:block z-[1] p-2 w-fit sub-menu'>
                                   {subLink.subLinks.map((nestedSubLink) => (
                                     <li key={nestedSubLink.route}>
                                       <Link

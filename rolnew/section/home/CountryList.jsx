@@ -67,7 +67,7 @@ function EachSlide({ id, cityName, image, countryCode, address }) {
   );
 }
 
-function CountryList({ countryList }) {
+function CountryList({ countryList, bg }) {
   const [width, setWidth] = useState();
   useEffect(() => {
     function handleResize() {
@@ -122,7 +122,11 @@ function CountryList({ countryList }) {
             }}
             modules={[Autoplay, Navigation]}
           >
-            <div className='swiper-btn-prev absolute -left-14 top-2/4 -translate-y-2/4 z-10 w-[60px] h-[60px] bg-[#11202D] border border-[#223544] rounded-full flex items-center justify-center cursor-pointer'>
+            <div
+              className={`swiper-btn-prev absolute -left-14 top-2/4 -translate-y-2/4 z-10 w-[60px] h-[60px] ${bg} border ${
+                bg === 'bg-[#223544]' ? 'border-gray-600' : 'border-[#223544]'
+              } rounded-full flex items-center justify-center cursor-pointer`}
+            >
               <img
                 alt='go-prev'
                 src='/rolnew/global/icons/arrow-left-primary.svg'
@@ -133,7 +137,11 @@ function CountryList({ countryList }) {
                 <EachSlide {...item} />
               </SwiperSlide>
             ))}
-            <div className='swiper-btn-next absolute -right-14 top-2/4 -translate-y-2/4 z-10 w-[60px] h-[60px] bg-[#11202D] border border-[#223544] rounded-full flex items-center justify-center cursor-pointer'>
+            <div
+              className={`swiper-btn-next absolute -right-14 top-2/4 -translate-y-2/4 z-10 w-[60px] h-[60px] ${bg} border ${
+                bg === 'bg-[#223544]' ? 'border-gray-600' : 'border-[#223544]'
+              } rounded-full flex items-center justify-center cursor-pointer`}
+            >
               <img
                 alt='go-prev'
                 src='/rolnew/global/icons/arrow-right-primary.svg'
