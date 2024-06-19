@@ -11,12 +11,26 @@ import NewDropdown from 'components/ui/NewDropdown';
 
 const navLinks = [
   {
-    route: '/rolnew',
+    route: '/rolnew/all-services',
     label: 'Services',
     subLinks: [
       { route: '/rolnew/airport-transfers', label: 'Airport Services' },
       { route: '/rolnew/road-shows', label: 'Road shows' },
       { route: '/rolnew/intercity-transfers', label: 'Intercity Transfers' },
+      {
+        route: '/rolnew/event-transfers',
+        label: 'Event Transportation Services',
+      },
+      {
+        route: '/rolnew/intercity-transfers',
+        label: 'Wedding Chauffeur Service',
+      },
+      {
+        route: '/rolnew/intercity-transfers',
+        label: 'Corporate Chauffeur Service',
+      },
+      { route: '/rolnew/intercity-transfers', label: 'Cities Sightseeing' },
+      { route: '/rolnew/intercity-transfers', label: 'Private Jet Chauffeur' },
     ],
   },
   {

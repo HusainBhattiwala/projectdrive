@@ -3,7 +3,6 @@ import TopPicks from 'rolnew/comp/TopPicks';
 import TrustedPartners from 'rolnew/comp/TrustedPartners';
 import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import OurPresence from 'rolnew/section/home/OurPresence';
-import Services from 'rolnew/section/home/Services';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
 import FAQ from 'rolnew/comp/FAQ';
@@ -12,7 +11,7 @@ import CarClass from 'rolnew/comp/CarClass';
 
 export default function page() {
   const bannerData = {
-    mainTitle: 'Premium Chauffeur Service',
+    mainTitle: 'Roadshow Transfers',
     mainDescription:
       'Your exclusive and dependable chauffeur service indulgence.',
     backgroundImage: '/rolnew/services/road-shows-banner.jpg',
@@ -85,14 +84,36 @@ export default function page() {
     ],
   };
 
+  const trustedPartnersData = [
+    {
+      icon: '/rolnew/global/icons/shield-user-line.svg',
+      title: 'Scenic Journeys',
+      desc: "RolDrive's roadshow transfers enhance travel with scenic journeys, meticulously planning routes that showcase breathtaking landscapes and cityscapes, turning ordinary transfers into memorable experiences.",
+    },
+    {
+      icon: '/rolnew/global/icons/steering-wheel.svg',
+      title: 'Safe & Discreet',
+      desc: 'RolDrive ensures safe and discreet roadshow transfers with highly trained chauffeurs, secure vehicles, and strict confidentiality, ideal for individuals needing privacy and security.',
+    },
+    {
+      icon: '/rolnew/global/icons/service-line.svg',
+      title: 'Professional Chauffeurs',
+      desc: "RolDrive's professional chauffeurs consistently wear a suit and tie, ensuring they present a polished and respectful appearance, aligning with the company's commitment to high standards of service and professionalism.",
+    },
+    {
+      icon: '/rolnew/global/icons/car-line.svg',
+      title: 'A Great Fleet',
+      desc: 'RolDrives vast fleet includes an impressive array of luxury vehicles, ranging from sleek sedans and spacious SUVs to elegant limousines, all meticulously maintained for comfort and style.',
+    },
+  ];
+
   return (
     <>
       <ServicesBanner {...bannerData} />
       <LuxuriousServiceSearch LuxuriousServiceData={LuxuriousServiceData} />
       <TopPicks topPicksData={topPicksData} />
-      <TrustedPartners />
+      <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
-      <Services />
       <FAQ />
       <CarClass />
       <Contact />

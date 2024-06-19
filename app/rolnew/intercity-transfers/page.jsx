@@ -3,7 +3,6 @@ import TopPicks from 'rolnew/comp/TopPicks';
 import TrustedPartners from 'rolnew/comp/TrustedPartners';
 import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import OurPresence from 'rolnew/section/home/OurPresence';
-import Services from 'rolnew/section/home/Services';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
 import FAQ from 'rolnew/comp/FAQ';
@@ -12,7 +11,7 @@ import CarClass from 'rolnew/comp/CarClass';
 
 export default function page() {
   const bannerData = {
-    mainTitle: 'Premium Chauffeur Service',
+    mainTitle: 'Intercity Chauffeur Service',
     mainDescription:
       'Your exclusive and dependable chauffeur service indulgence.',
     backgroundImage: '/rolnew/services/intercity-transfers-banner.png',
@@ -85,14 +84,37 @@ export default function page() {
     ],
   };
 
+  const trustedPartnersData = [
+    {
+      icon: '/rolnew/global/icons/shield-user-line.svg',
+      title: 'Scenic Journeys',
+      desc: "RolDrive's scenic journeys offer travelers a unique opportunity to explore breathtaking landscapes with unparalleled comfort and style, making every trip memorable and enjoyable.",
+    },
+    {
+      icon: '/rolnew/global/icons/steering-wheel.svg',
+      title: 'Safe & Discreet',
+      desc: 'RolDrive ensures safe and discreet journeys, offering privacy and security for all passengers. Our professional chauffeurs are trained in defensive driving and confidentiality, ideal for high-profile clients seeking undisturbed travel.',
+    },
+    {
+      icon: '/rolnew/global/icons/service-line.svg',
+      title: 'Professional Chauffeurs',
+      desc: "RolDrive's professional chauffeurs are expertly trained, courteous, and dedicated to providing safe, timely, and discreet service, ensuring every journey is comfortable and stress-free. ",
+    },
+    {
+      icon: '/rolnew/global/icons/car-line.svg',
+      title: 'A Great Fleet',
+      desc: 'RolDrive boasts a diverse and extensive fleet, offering a variety of luxury vehicles to meet any preference or occasion, ensuring every journey is comfortable and stylish.',
+    },
+  ];
+
   return (
     <>
       <ServicesBanner {...bannerData} />
       <LuxuriousServiceSearch LuxuriousServiceData={LuxuriousServiceData} />
       <TopPicks topPicksData={topPicksData} />
-      <TrustedPartners />
+      <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
-      <Services />
+
       <FAQ />
       <CarClass />
       <Contact />

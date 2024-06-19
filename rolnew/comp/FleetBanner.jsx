@@ -1,28 +1,14 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import Category from "./Category";
-import api from "components/utils/api";
+import { useEffect, useRef, useState, useContext } from 'react';
+import Category from './Category';
+import { FleetContext } from 'context/FleetContext';
 
 function FleetBanner({ mainTitle, hideArrow }) {
   const [width, setWidth] = useState();
   const [height, setHeight] = useState(1000);
-  const [carData, setCarData] = useState();
 
-  useEffect(() => {
-    const fetchCarsDetails = async () => {
-      try {
-        const response = await api.get(`/vehicle-categories/allDetails`);
-        setCarData(response?.data);
-        console.log(response?.data);
-      } catch (error) {
-        console.error("Error fetching car details:", error);
-      }
-    };
-
-    fetchCarsDetails();
-  }, []);
+  const { carCatData, setCarDetails, carDetails } = useContext(FleetContext);
 
   const bannerRef = useRef(null);
 
@@ -31,11 +17,11 @@ function FleetBanner({ mainTitle, hideArrow }) {
       setWidth(window.innerWidth);
       setHeight(window.innerHeight);
     }
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
   return (
@@ -72,7 +58,7 @@ function FleetBanner({ mainTitle, hideArrow }) {
             </div>
             <p className='font-normal text-sm text-[#B2B2B2]'>
               For success in business, a commanding presence is vital. Making an
-              impact starts with your appearance. Arrive at meetings{" "}
+              impact starts with your appearance. Arrive at meetings{' '}
               <br className='hidden md:inline' />
               impeccably groomed to leave a lasting impression.
             </p>
@@ -154,7 +140,7 @@ function FleetBanner({ mainTitle, hideArrow }) {
 
       {!hideArrow && (
         <div>
-          <Category categorys={carData} setCarData={setCarData} />
+          <Category categorys={carCatData} setCarData={setCarDetails} />
         </div>
       )}
 

@@ -3,7 +3,6 @@ import TopPicks from 'rolnew/comp/TopPicks';
 import TrustedPartners from 'rolnew/comp/TrustedPartners';
 import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import OurPresence from 'rolnew/section/home/OurPresence';
-import Services from 'rolnew/section/home/Services';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
 import FAQ from 'rolnew/comp/FAQ';
@@ -12,7 +11,7 @@ import CarClass from 'rolnew/comp/CarClass';
 
 export default function page() {
   const bannerData = {
-    mainTitle: 'Premium Chauffeur Service',
+    mainTitle: 'Event Transportation',
     mainDescription:
       'Your exclusive and dependable chauffeur service indulgence.',
     backgroundImage: '/rolnew/services/intercity-transfers-banner.png',
@@ -23,20 +22,20 @@ export default function page() {
 
   const LuxuriousServiceData = [
     {
-      title: 'Fixed Price',
-      desc: 'Fixed price service, ensuring that clients know the cost of their chauffeur service upfront without any hidden fees or unexpected charges.',
+      title: 'Transparent Pricing',
+      desc: 'We offer transparent pricing for our services, ensuring no hidden fees and clear costs upfront for peace of mind.',
     },
     {
-      title: 'Comfort & Luxury',
-      desc: 'Our commitment to comfort and luxury ensures that every journey is not just a ride but a premium experience, characterised by top-tier vehicles and exceptional customer service.',
+      title: 'Bespoke Services',
+      desc: 'We offer bespoke services tailored to individual preferences and requirements, ensuring a personalised and luxurious travel experience.',
     },
     {
-      title: 'Safety First Priority',
-      desc: 'We place safety among our highest priorities, ensuring every journey is secure with handpicked chauffeurs trained in defensive driving.',
+      title: 'Dedicated Event Manager',
+      desc: 'We provide a dedicated Event Manager service, ensuring your events transportation needs are meticulously planned and executed with precision.',
     },
     {
-      title: 'Global Reach',
-      desc: 'We offer a global reach in chauffeur services, ensuring seamless transportation across various international locations.',
+      title: 'Pre-Scheduling',
+      desc: 'Our pre-scheduling service allows clients to book their chauffeur-driven journeys in advance, ensuring timely and reliable transportation tailored to their schedules and locations.',
     },
   ];
 
@@ -85,6 +84,29 @@ export default function page() {
     ],
   };
 
+  const trustedPartnersData = [
+    {
+      icon: '/rolnew/global/icons/shield-user-line.svg',
+      title: 'Punctual',
+      desc: 'RolDrive is renowned for its punctuality, ensuring clients arrive at their destinations on time. Our commitment to schedule adherence is supported by precise planning and real-time traffic monitoring.',
+    },
+    {
+      icon: '/rolnew/global/icons/steering-wheel.svg',
+      title: 'Safe & Discreet',
+      desc: 'RolDrive prioritises safety and discretion, employing only expertly trained chauffeurs and using secure, well-maintained vehicles to ensure privacy and reliability for all passengers.',
+    },
+    {
+      icon: '/rolnew/global/icons/service-line.svg',
+      title: 'Professional Chauffeurs',
+      desc: "RolDrive's professional chauffeurs always wear a suit and tie, ensuring a polished appearance for all occasions. This reflects our commitment to professionalism and high service standards.",
+    },
+    {
+      icon: '/rolnew/global/icons/car-line.svg',
+      title: 'A Great Fleet',
+      desc: 'RolDrives vast fleet features a diverse range of luxury vehicles, from elegant sedans and spacious SUVs to high-end limousines, all meticulously maintained to meet various travel preferences and needs.',
+    },
+  ];
+
   return (
     <>
       <ServicesBanner {...bannerData} />
@@ -92,7 +114,6 @@ export default function page() {
       <TopPicks topPicksData={topPicksData} />
       <TrustedPartners />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
-      <Services />
       <FAQ />
       <CarClass />
       <Contact />
