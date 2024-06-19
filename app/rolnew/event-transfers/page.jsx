@@ -87,23 +87,23 @@ export default function page() {
   const trustedPartnersData = [
     {
       icon: '/rolnew/global/icons/shield-user-line.svg',
-      title: 'Punctual',
-      desc: 'RolDrive is renowned for its punctuality, ensuring clients arrive at their destinations on time. Our commitment to schedule adherence is supported by precise planning and real-time traffic monitoring.',
+      title: 'Safe & Discreet',
+      desc: 'RolDrive ensures safe and discreet journeys, prioritising client privacy and security. Our experienced chauffeurs maintain professionalism, offering serene, secure travel tailored to your specific needs.',
     },
     {
       icon: '/rolnew/global/icons/steering-wheel.svg',
-      title: 'Safe & Discreet',
-      desc: 'RolDrive prioritises safety and discretion, employing only expertly trained chauffeurs and using secure, well-maintained vehicles to ensure privacy and reliability for all passengers.',
+      title: 'Professional Chauffeurs',
+      desc: 'RolDrives professional chauffeurs are expertly trained, courteous, and dedicated to providing exceptional service. They cater to all your travel needs with utmost discretion and professionalism.',
     },
     {
       icon: '/rolnew/global/icons/service-line.svg',
-      title: 'Professional Chauffeurs',
-      desc: "RolDrive's professional chauffeurs always wear a suit and tie, ensuring a polished appearance for all occasions. This reflects our commitment to professionalism and high service standards.",
+      title: 'Trust & Reliability ',
+      desc: 'RolDrive is renowned for its trust and reliability, ensuring every journey is secure and comfortable. We consistently provide timely, professional service, making us a trusted choice.',
     },
     {
       icon: '/rolnew/global/icons/car-line.svg',
       title: 'A Great Fleet',
-      desc: 'RolDrives vast fleet features a diverse range of luxury vehicles, from elegant sedans and spacious SUVs to high-end limousines, all meticulously maintained to meet various travel preferences and needs.',
+      desc: 'RolDrives fleet boasts a wide array of luxurious and well-maintained vehicles, offering everything from sleek sedans to spacious SUVs.',
     },
   ];
 
@@ -112,7 +112,7 @@ export default function page() {
       <ServicesBanner {...bannerData} />
       <LuxuriousServiceSearch LuxuriousServiceData={LuxuriousServiceData} />
       <TopPicks topPicksData={topPicksData} />
-      <TrustedPartners />
+      <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
       <FAQ />
       <CarClass />
