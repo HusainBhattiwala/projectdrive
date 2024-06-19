@@ -13,10 +13,16 @@ function Datepicker({
   // const hour = useRef('');
   function getHourlyDate(date) {
     const selectedDate = new Date(date);
-    if ((selectedDate).getDate() === new Date(minDate).getDate()) {
+    if (selectedDate.getDate() === new Date(minDate).getDate()) {
       setselectedDateTime({
-        hour: minDatetime.minHour > 9 ? minDatetime.minHour : `0${minDatetime.minHour}`,
-        minute: minDatetime.minMinute > 9 ? minDatetime.minMinute : `0${minDatetime.minMinute}`,
+        hour:
+          minDatetime.minHour > 9
+            ? minDatetime.minHour
+            : `0${minDatetime.minHour}`,
+        minute:
+          minDatetime.minMinute > 9
+            ? minDatetime.minMinute
+            : `0${minDatetime.minMinute}`,
         daytime: minDatetime.minDaytime,
       });
     }
@@ -28,31 +34,20 @@ function Datepicker({
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 rounded-t-xl sm:absolute z-[999999] !bg-[#223544] sm:-top-56 sm:left-auto sm:right-auto sm:rounded-md w-full min-w-[300px] md:max-w-[400px]">
-      <div className="relative shadow-lg shadow-[#223544D9] !font-manrope">
+    <div className='fixed bottom-0 left-0 right-0 rounded-t-xl sm:absolute z-[999999] !bg-[#223544] sm:-top-56 sm:left-auto sm:right-auto sm:rounded-md w-full min-w-[300px] md:max-w-[400px]'>
+      <div className='relative shadow-lg shadow-[#223544D9] !font-manrope'>
         <Calendar
-          className="w-full rounded-t-md !border-0 !border-b !border-[#223544D9]"
+          className='w-full rounded-t-md !border-0 !border-b !border-[#223544D9]'
           onChange={getHourlyDate}
           minDate={minDate}
           value={new Date(selectedDateTime.selectedDate)}
-          tileClassName="content"
+          tileClassName='content'
+          onClickDay={() => {
+            setDateTime();
+            onChange();
+          }}
         />
-        <div className="w-full px-4 !bg-[#223544D9] rounded-b-md">
-          <Button
-            type="button"
-            kind="primary"
-            className="w-full py-3 mt-3 mb-2 primary lg:px-12 md:px-4"
-            onClick={() => {
-              setDateTime();
-              onChange();
-            }}
-            disabled={false}
-          >
-            Confirm
-          </Button>
-        </div>
       </div>
-
     </div>
   );
 }
