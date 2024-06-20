@@ -18,18 +18,21 @@ const navLinks = [
       { route: '/rolnew/intercity-transfers', label: 'Intercity Transfers' },
       {
         route: '/rolnew/event-transfers',
-        label: 'Event Transportation Services',
+        label: 'Event Services',
       },
       {
-        route: '/rolnew/intercity-transfers',
-        label: 'Wedding Chauffeur Service',
+        route: '/rolnew/wedding-service',
+        label: 'Wedding Services',
       },
       {
-        route: '/rolnew/intercity-transfers',
-        label: 'Corporate Chauffeur Service',
+        route: '/rolnew/corporate-service',
+        label: 'Corporate Services',
       },
-      { route: '/rolnew/intercity-transfers', label: 'Cities Sightseeing' },
-      { route: '/rolnew/intercity-transfers', label: 'Private Jet Chauffeur' },
+      { route: '/rolnew/cities-sightseeing', label: 'Cities Sightseeing' },
+      {
+        route: '/rolnew/private-jet-chauffeur',
+        label: 'Private Jet Chauffeur',
+      },
     ],
   },
   {

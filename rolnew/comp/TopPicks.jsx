@@ -63,7 +63,7 @@ function TopPicks({ scrollRef, airportList, topPicksData }) {
         <Pic src='/rolnew/global/hr.svg' alt='hr' objectFit='cover' />
       </div>
       <Container className='bg-[#11202D] sm:py-16 py-8 text-center'>
-        <Title subTile='Top Pics' mainTitle={topPicksData?.title} />
+        <Title subTile='Top Picks' mainTitle={topPicksData?.title} />
         <div className='px-4 sm:px-24'>
           <div
             className='boxes p-[10px] bg-[#2F4456] mt-20 mb-10 w-full h-auto sm:h-20 flex flex-col sm:flex-row gap-1 justify-center items-center rounded-xl'
@@ -85,7 +85,7 @@ function TopPicks({ scrollRef, airportList, topPicksData }) {
               <Dropdown
                 label={
                   topPicksData
-                    ? topPicksData?.search?.dropdown1
+                    ? topPicksData?.search?.dropdown2
                     : 'Choose Your Destination'
                 }
                 className='rounded-xl'
