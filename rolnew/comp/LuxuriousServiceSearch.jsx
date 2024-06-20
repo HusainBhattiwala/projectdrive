@@ -1,11 +1,8 @@
 'use client';
 
 import Container from 'rolnew/comp/Container';
-import Pic from 'rolnew/util/Pic';
-import Title from 'rolnew/section/home/Title';
 import Button from 'rolnew/ui/Button';
 import Dropdown from 'rolnew/ui/Dropdown';
-import BookModal from './BookModal';
 
 const items = [
   <a key='1' href='/about'>
@@ -19,7 +16,7 @@ const items = [
   </a>,
 ];
 
-function LuxuriousServiceSearch({ LuxuriousServiceData }) {
+function LuxuriousServiceSearch({ luxuriousServiceData }) {
   return (
     <div className='pb-[100px] bg-[#223544] relative'>
       <Container className='bg-[#223544] sm:py-16 py-8 text-center'>
@@ -52,7 +49,7 @@ function LuxuriousServiceSearch({ LuxuriousServiceData }) {
           </div>
         </div>
         <div className='grid gap-6 grid-cols-6 sm:grid-cols-12 max-w-[1236px] min-h-[168px] mx-auto'>
-          {LuxuriousServiceData.map((item, index) => (
+          {luxuriousServiceData.map((item, index) => (
             <div
               className='flex flex-col items-center justify-center col-span-3'
               key={index}

@@ -9,7 +9,7 @@ import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
 
-export default function page() {
+export default function Page() {
   const bannerData = {
     mainTitle: 'Intercity Chauffeur Service',
     mainDescription:
@@ -20,7 +20,7 @@ export default function page() {
       'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
   };
 
-  const LuxuriousServiceData = [
+  const luxuriousServiceData = [
     {
       title: 'Fixed Price',
       desc: 'Fixed price service, ensuring that clients know the cost of their chauffeur service upfront without any hidden fees or unexpected charges.',
@@ -110,7 +110,7 @@ export default function page() {
   return (
     <>
       <ServicesBanner {...bannerData} />
-      <LuxuriousServiceSearch LuxuriousServiceData={LuxuriousServiceData} />
+      <LuxuriousServiceSearch luxuriousServiceData={luxuriousServiceData} />
       <TopPicks topPicksData={topPicksData} />
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />

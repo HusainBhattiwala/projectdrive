@@ -20,7 +20,7 @@ export default function page() {
       'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
   };
 
-  const LuxuriousServiceData = [
+  const luxuriousServiceData = [
     {
       title: 'Transparent Pricing',
       desc: 'We offer transparent pricing for our services, ensuring there are no hidden fees.',
@@ -110,7 +110,7 @@ export default function page() {
   return (
     <>
       <ServicesBanner {...bannerData} />
-      <LuxuriousServiceSearch LuxuriousServiceData={LuxuriousServiceData} />
+      <LuxuriousServiceSearch luxuriousServiceData={luxuriousServiceData} />
       <TopPicks topPicksData={topPicksData} />
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />

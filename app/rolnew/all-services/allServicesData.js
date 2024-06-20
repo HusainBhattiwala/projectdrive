@@ -235,3 +235,26 @@ export const findMoreData = [
     desc: "RolDrive's private jet transfer service through our luxury car hire is the ultimate in luxury and efficiency, offering a seamless connection between the sky and the ground. This premium service is designed for discerning travellers who value comfort, privacy, and convenience. With RolDrive's 24 hour chauffeur service, clients can enjoy round-the-clock accessibility, ensuring timely and stylish transportation to and from private airstrips or airports, any time of the day or night. The chauffeurs, skilled in discreet and professional service, are well-versed in the unique needs of private jet travellers, providing a personalised experience that complements the exclusivity of private flying. Whether arriving in a bustling metropolis or departing for exotic destinations, RolDrive's private jet transfer service guarantees a travel experience that is as smooth on the ground as it is in the air, making every journey an idea of luxury travel excellence.",
   },
 ];
+
+export const trustedPartnersData = [
+  {
+    icon: '/rolnew/global/icons/shield-user-line.svg',
+    title: 'Safe & Discreet',
+    desc: 'RolDrive ensures safe and discreet journeys, prioritising client privacy and security. Our experienced chauffeurs maintain professionalism, offering serene, secure travel tailored to your specific needs.',
+  },
+  {
+    icon: '/rolnew/global/icons/steering-wheel.svg',
+    title: 'Professional Chauffeurs',
+    desc: 'RolDrives professional chauffeurs are expertly trained, courteous, and dedicated to providing exceptional service. They cater to all your travel needs with utmost discretion and professionalism.',
+  },
+  {
+    icon: '/rolnew/global/icons/service-line.svg',
+    title: 'Trust & Reliability',
+    desc: 'RolDrive is renowned for its trust and reliability, ensuring every journey is secure and comfortable. We consistently provide timely, professional service, making us a trusted choice. ',
+  },
+  {
+    icon: '/rolnew/global/icons/car-line.svg',
+    title: 'A Great Fleet',
+    desc: 'RolDrives fleet boasts a wide array of luxurious and well-maintained vehicles, offering everything from sleek sedans to spacious SUVs.',
+  },
+];

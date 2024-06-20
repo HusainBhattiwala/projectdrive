@@ -71,7 +71,11 @@ function TopPicks({ scrollRef, airportList, topPicksData }) {
           >
             <div className='box w-full sm:w-full p-2'>
               <Dropdown
-                label={topPicksData?.search?.dropdown1}
+                label={
+                  topPicksData
+                    ? topPicksData?.search?.dropdown1
+                    : 'Choose Your City'
+                }
                 className='rounded-xl'
                 items={items}
                 full
@@ -79,7 +83,11 @@ function TopPicks({ scrollRef, airportList, topPicksData }) {
             </div>
             <div className='box w-full sm:w-full p-2'>
               <Dropdown
-                label={topPicksData?.search?.dropdown2}
+                label={
+                  topPicksData
+                    ? topPicksData?.search?.dropdown1
+                    : 'Choose Your Destination'
+                }
                 className='rounded-xl'
                 items={items}
                 full
@@ -115,7 +123,9 @@ function TopPicks({ scrollRef, airportList, topPicksData }) {
           </div>
         </div> */}
 
-        <CountryList countryList={topPicksData?.list} />
+        <CountryList
+          countryList={topPicksData ? topPicksData?.list : countryList}
+        />
 
         <Button
           className='mt-14 w-full sm:w-[30%]'
