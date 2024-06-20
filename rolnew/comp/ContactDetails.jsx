@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import api from "components/utils/api";
-import { useEffect, useState } from "react";
-import { FiPhone } from "react-icons/fi";
-import { MdOutlineMailOutline } from "react-icons/md";
-import Button from "rolnew/ui/Button";
-import Input from "rolnew/ui/Input";
-import Pic from "rolnew/util/Pic";
+import api from 'components/utils/api';
+import { useEffect, useState } from 'react';
+import { FiPhone } from 'react-icons/fi';
+import { MdOutlineMailOutline } from 'react-icons/md';
+import Button from 'rolnew/ui/Button';
+import Input from 'rolnew/ui/Input';
+import Pic from 'rolnew/util/Pic';
 
 function ContactDetails() {
   const [width, setWidth] = useState();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    name: '',
+    email: '',
   });
 
   useEffect(() => {
@@ -21,11 +21,11 @@ function ContactDetails() {
       setWidth(window.innerWidth);
     }
     // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     setWidth(window.innerWidth);
     // Remove event listener when component unmounts
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -41,20 +41,20 @@ function ContactDetails() {
     e.preventDefault();
     console.log(formData);
     try {
-      const res = await api.post("/contactus", formData);
+      const res = await api.post('/contactus', formData);
       console.log(res);
       if (res?.message?.data?.status === 1) {
         setFormData({
-          name: "",
-          email: "",
+          name: '',
+          email: '',
         });
       }
       setFormData({
-        name: "",
-        email: "",
+        name: '',
+        email: '',
       });
     } catch (error) {
-      console.error("Error occurred while sending form data:", error);
+      console.error('Error occurred while sending form data:', error);
     }
   };
   return width > 560 ? (
@@ -126,7 +126,7 @@ function ContactDetails() {
         <div className='flex flex-col gap-y-3'>
           <Input
             name='name'
-            label='Name'
+            label='First Name'
             placeholder='Enter first name'
             labelClass='!text-xs !text-[#B2B2B2]'
             value={formData.name}
@@ -158,7 +158,7 @@ function ContactDetails() {
         <div className='flex flex-col gap-y-3'>
           <Input
             name='Name'
-            label='name'
+            label='First Name'
             placeholder='Enter first name'
             labelClass='!text-xs !text-[#B2B2B2]'
             value={formData.name}
@@ -166,7 +166,7 @@ function ContactDetails() {
           />
           <Input
             name='Email'
-            label='email'
+            label='Email'
             placeholder='Enter email address'
             labelClass='!text-xs !text-[#B2B2B2]'
             value={formData.email}

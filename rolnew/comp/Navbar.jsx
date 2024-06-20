@@ -82,6 +82,14 @@ const navLinks = [
           { route: '/rolnew/airport-transfers/london/luton', label: 'Luton' },
         ],
       },
+      {
+        route: '/rolnew/airport-transfers/dubai',
+        label: 'Airport Transfer Dubai',
+      },
+      {
+        route: '/rolnew/airport-transfers/newyork',
+        label: 'Airport Transfer NewYork',
+      },
     ],
   },
 ];

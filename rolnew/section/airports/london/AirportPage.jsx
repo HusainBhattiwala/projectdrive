@@ -42,7 +42,7 @@ function AirportPage() {
       <Banner pageData={pageData} />
       <AirportBookingFlow pageData={pageData} />
       <OurFeet showBooking />
-      <Services />
+      <Services servicesData={pageData?.servicesData} />
       <Locations />
       <Contact />
       <FAQ />
