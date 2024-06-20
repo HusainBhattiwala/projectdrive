@@ -40,7 +40,7 @@ export default function Page() {
   ];
 
   const topPicksData = {
-    title: 'Event Transfers',
+    title: 'Private Jet Chauffeur',
     search: {
       dropdown1: 'Choose Your City',
       dropdown2: 'Enter Event Name',
