@@ -14,7 +14,7 @@ export default function Page() {
     mainTitle: 'City Sightseeing',
     mainDescription:
       'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/intercity-transfers-banner.png',
+    backgroundImage: '/rolnew/services/banners/cities-sightseeing.jpg',
     title: 'Do you want to customise your booking?',
     description:
       'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',

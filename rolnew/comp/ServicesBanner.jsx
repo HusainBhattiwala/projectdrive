@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 function ServicesBanner({
   mainTitle,
@@ -17,11 +17,11 @@ function ServicesBanner({
       setWidth(window.innerWidth);
       setHeight(window.innerHeight);
     }
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
   return (
@@ -30,9 +30,9 @@ function ServicesBanner({
         className='absolute w-full z-[5] flex flex-col justify-center items-center px-5 text-center'
         style={{
           // eslint-disable-next-line no-nested-ternary
-          bottom: height > 600 ? (width > 560 ? "58px" : "40px") : "80px",
-          left: width >= 1533 && "50%",
-          transform: width >= 1533 && "translateX(-50%)",
+          bottom: height > 600 ? (width > 560 ? '58px' : '40px') : '80px',
+          left: width >= 1533 && '50%',
+          transform: width >= 1533 && 'translateX(-50%)',
         }}
       >
         <h2 className='text-[#CED5E5] sm:text-xl text-base leading-tight'>
