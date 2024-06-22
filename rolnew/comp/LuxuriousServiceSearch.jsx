@@ -68,10 +68,10 @@ function LuxuriousServiceSearch({ luxuriousServiceData }) {
             </div>
           ))}
         </div> */}
-        <div className='grid gap-6 grid-cols-6 sm:grid-cols-12 max-w-[1236px] min-h-[168px] mx-auto'>
+        <div className='grid gap-7 grid-cols-6 sm:grid-cols-12 max-w-[1236px] min-h-[168px] mx-auto'>
           {luxuriousServiceData.map((item, index) => (
             <div
-              className='flex flex-col items-center justify-center col-span-3 sm:col-span-3'
+              className='flex flex-col items-center col-span-3 sm:col-span-3'
               key={index}
             >
               <div className='flex flex-col items-center h-full'>
