@@ -54,7 +54,7 @@ function TrustedPartner() {
                   <h4 className="sm:text-xl text-sm font-medium text-[#B2B2B2]">
                     Trust & Reliability
                   </h4>
-                  <p className="sm:text-sm sm:leading-5 text-[10px] leading-[14px] text-[#B2B2B2]">RolDrive&apos;s chauffeurs prioritize trust and reliability, embodying these values in every journey to ensure clients receive secure, dependable, and consistent high-quality service.</p>
+                  <p className="sm:text-sm sm:leading-5 text-[10px] leading-[14px] text-[#B2B2B2]">RolDrive&apos;s chauffeurs prioritise trust and reliability, embodying these values in every journey to ensure clients receive secure, dependable, and consistent high-quality service.</p>
                   <p className="sm:text-sm sm:leading-5 text-[10px] leading-[14px] text-[#B2B2B2] pt-2">Over 8,000 rides completed.</p>
                 </div>
               </div>

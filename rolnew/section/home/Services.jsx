@@ -55,7 +55,7 @@ function Services({ servicesData }) {
               <div className='col-span-1 h-full'>
                 <Card
                   title='Corporate Chauffeurs'
-                  description='With RolDrive, you’ll make a lasting impression from the moment you set out of our chauffeur driven vehicles. Let us help you make a statement and command te boardroom. Our corporate chauffeurs are dependable, efficient and dedicated to exceeding your expectations.'
+                  description='With RolDrive, you’ll make a lasting impression from the moment you set out of our chauffeur driven vehicles. Let us help you make a statement and command the boardroom. Our corporate chauffeurs are dependable, efficient and dedicated to exceeding your expectations.'
                   img='/rolnew/global/card/card-image2.jpg'
                   titleNoWrap
                 />
