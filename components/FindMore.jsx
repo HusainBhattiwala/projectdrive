@@ -52,9 +52,9 @@ export default function FindMoreComponent({ findMoreData }) {
           </h2>
           {findMoreData?.map((data, index) => (
             <div className="space-y-2" key={index}>
-              <h4 className="mt-5 sm:mt-10 sm:text-xl text-lg font-medium text-[#B2B2B2]">
+              <h3 className="mt-5 sm:mt-10 sm:text-xl text-lg font-medium text-[#B2B2B2]">
                 {data?.title}
-              </h4>
+              </h3>
               <p className="text-sm text-[#B2B2B2]">{data?.desc}</p>
             </div>
           ))}
