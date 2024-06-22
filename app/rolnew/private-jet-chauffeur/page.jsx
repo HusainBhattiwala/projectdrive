@@ -14,7 +14,7 @@ export default function Page() {
     mainTitle: 'Private Jet Chauffeur',
     mainDescription:
       'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/banners/Private Jet Transfer.jpg',
+    backgroundImage: '/rolnew/services/banners/private-jet-chauffeur.jpg',
     title: 'Do you want to customise your booking?',
     description:
       'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
