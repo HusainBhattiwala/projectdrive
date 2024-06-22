@@ -4,11 +4,11 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); */
 
-input[type="radio"] {
+input[type='radio'] {
   @apply accent-primary;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   @apply accent-primary;
 }
 
@@ -148,9 +148,9 @@ input[type="checkbox"] {
 }
 
 @layer base {
-  input[type="number"]::-webkit-outer-spin-button,
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"] {
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number'] {
     -webkit-appearance: none;
     -moz-appearance: textfield !important;
   }
@@ -188,7 +188,7 @@ input[type="checkbox"] {
   background-color: #dedede;
   width: 1px;
   height: 100%;
-  content: "";
+  content: '';
   position: absolute;
   right: 0;
   top: 0;
@@ -199,7 +199,7 @@ input[type="checkbox"] {
 }
 
 .address_booking::after {
-  content: "";
+  content: '';
   display: block;
   height: 50%;
   width: 1px;
@@ -410,7 +410,7 @@ input[type="checkbox"] {
 }
 
 .connecting-list li:not(.drop-location)::before {
-  content: "";
+  content: '';
   position: absolute;
   left: -1px;
   top: 12px;
@@ -418,7 +418,7 @@ input[type="checkbox"] {
   bottom: 0;
   width: 2px;
   /* border-left: 1px dotted #000; */
-  background-image: url("/images/corporate/global/border.svg");
+  background-image: url('/images/corporate/global/border.svg');
   z-index: 1;
 }
 
@@ -551,7 +551,7 @@ input[type="checkbox"] {
   @apply !border-r-0 !border-[#E1E1E140] !bg-[#223544D9] relative !rounded-lg;
 }
 .react-tel-input .flag-dropdown::after {
-  content: "";
+  content: '';
   position: absolute;
   right: 0;
   top: 50%;
@@ -595,7 +595,7 @@ input[type="checkbox"] {
   background: linear-gradient(
     183.44deg,
     #223544 46.36%,
-    rgba(35, 54, 69, 0) 90.58%
+    rgba(35, 54, 69, 0) 80.58%
   );
 }
 
@@ -633,5 +633,5 @@ input[type="checkbox"] {
     rgba(34, 53, 68, 0) -0.45%,
     rgba(17, 32, 45, 0.71) 8.36%,
     #11202d 17.18%
-  );  
+  );
 }

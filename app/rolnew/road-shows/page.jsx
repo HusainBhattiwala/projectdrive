@@ -14,7 +14,7 @@ export default function page() {
     mainTitle: 'Roadshow Transfers',
     mainDescription:
       'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/banners/Roadshow Transfer.jpg',
+    backgroundImage: '/rolnew/services/banners/Roadshow.jpg',
     title: 'Do you want to customise your booking?',
     description:
       'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
