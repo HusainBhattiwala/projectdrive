@@ -48,7 +48,7 @@ function LuxuriousServiceSearch({ luxuriousServiceData }) {
             </div>
           </div>
         </div>
-        <div className='grid gap-6 grid-cols-6 sm:grid-cols-12 max-w-[1236px] min-h-[168px] mx-auto'>
+        {/* <div className='grid gap-6 grid-cols-6 sm:grid-cols-12 max-w-[1236px] min-h-[168px] mx-auto'>
           {luxuriousServiceData.map((item, index) => (
             <div
               className='flex flex-col items-center justify-center col-span-3'
@@ -65,6 +65,28 @@ function LuxuriousServiceSearch({ luxuriousServiceData }) {
               <p className='text-center text-sm font-normal text-[#E5EAFA]'>
                 {item?.desc}
               </p>
+            </div>
+          ))}
+        </div> */}
+        <div className='grid gap-6 grid-cols-6 sm:grid-cols-12 max-w-[1236px] min-h-[168px] mx-auto'>
+          {luxuriousServiceData.map((item, index) => (
+            <div
+              className='flex flex-col items-center justify-center col-span-3 sm:col-span-3'
+              key={index}
+            >
+              <div className='flex flex-col items-center h-full'>
+                <img
+                  src='/rolnew/global/icons/meet.svg'
+                  alt='meet'
+                  className='mb-1 w-10 h-14'
+                />
+                <h3 className='text-[#FFFFFF] mb-2 font-medium text-base sm:text-xl'>
+                  {item?.title}
+                </h3>
+                <p className='text-center text-sm font-normal text-[#E5EAFA]'>
+                  {item?.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
