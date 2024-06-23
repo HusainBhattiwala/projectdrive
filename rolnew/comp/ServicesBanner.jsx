@@ -25,7 +25,7 @@ function ServicesBanner({
     };
   }, []);
   return (
-    <div className='relative mt-16 flex flex-col w-full 2xl:min-h-[85svh] xl:min-h-[560px] md:min-h-[500px] min-h-[500px] max-h-[700px]'>
+    <div className='relative mt-16 flex flex-col w-full 2xl:min-h-[90svh] xl:min-h-[560px] md:min-h-[500px] min-h-[500px] max-h-[700px]'>
       <div
         className='absolute w-full z-[5] flex flex-col justify-center items-center px-5 text-center'
         style={{
@@ -62,7 +62,7 @@ function ServicesBanner({
         </div>
       </div>
 
-      <div className='service-home-banner absolute sm:top-0 -top-6 left-0 right-0 h-auto sm:min-h-[328px] min-h-[328px] z-[2]' />
+      <div className='service-home-banner absolute sm:top-0 -top-6 left-0 right-0 h-auto sm:min-h-[240px] min-h-[328px] z-[2]' />
       <div className='sm:h-full h-full flex flex-col justify-center items-center sm:pt-[28px] pt-5'>
         <div className='relative z-[5] sm:text-center text-left px-5'>
           <h1 className='lg:text-5xl text-3xl leading-[1] font-semibold text-white drop-shadow-[25%]'>

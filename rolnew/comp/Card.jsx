@@ -25,7 +25,7 @@ function Card({ title, description, img, titleNoWrap, action }) {
         </p>
         <div className='card-actions flex gap-x-2 items-center cursor-pointer mt-1 sm:mb-6 mb-1 pop'>
           <button type='button' className='font-normal text-sm text-[#FDC65C]'>
-            {action}
+            {action ? action : ' Learn More'}
           </button>
           <div className='w-4 h-4'>
             <Pic

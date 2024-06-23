@@ -118,7 +118,7 @@ input[type='checkbox'] {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
   scrollbar-width: 0;
 }
 
@@ -593,7 +593,7 @@ input[type='checkbox'] {
 }
 .service-home-banner {
   background: linear-gradient(
-    183.44deg,
+    180.44deg,
     #223544 46.36%,
     rgba(35, 54, 69, 0) 80.58%
   );

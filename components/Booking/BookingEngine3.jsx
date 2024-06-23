@@ -53,11 +53,7 @@ function BookingEngine3({ setFocus, width, height }) {
     setNewDate,
     addHours,
   } = useContext(BookingContext);
-  const {
-    handleSubmit,
-    errors,
-    register,
-  } = useForm();
+  const { handleSubmit, errors, register } = useForm();
 
   const router = useRouter();
   const pathName = usePathname();
@@ -211,11 +207,7 @@ function BookingEngine3({ setFocus, width, height }) {
       setShowTimepicker(true);
     }
   };
-  const {
-    selectedDate,
-    hour,
-    minute,
-  } = selectedDateTime;
+  const { selectedDate, hour, minute } = selectedDateTime;
   const {
     selectedDate: returnSelectedDate,
     hour: returnHour,
@@ -338,7 +330,10 @@ function BookingEngine3({ setFocus, width, height }) {
   const goToFleetPage = async (distance) => {
     let payload;
     await getFleetObject(distance);
-    if (userPickupLocation?.zoneId?.length > 0 || userDropLocation?.zoneId?.length > 0) {
+    if (
+      userPickupLocation?.zoneId?.length > 0
+      || userDropLocation?.zoneId?.length > 0
+    ) {
       const distanceKM = distance ? distance?.distance.split(' ')[0] : '0';
       const distanceInNumber = parseFloat(distanceKM.replace(/,/g, ''));
       const factor = 0.621371;
@@ -401,27 +396,45 @@ function BookingEngine3({ setFocus, width, height }) {
   const onSubmit = async () => {
     if (userPickupLocation === null) {
       setShowPickupError(true);
-      addressPicker.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      addressPicker.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
     } else if (
       (!userDropLocation || !userDropLocation.address)
       && bookingType === 'transfers'
     ) {
       setShowDropError(true);
-      addressPicker.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      addressPicker.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
     } else if (rideDuration === null && bookingType !== 'transfers') {
       setshowDurationError(true);
     } else if (!selectedDateTime.dateChanged) {
       setShowDateError(true);
-      userDatePicker.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      userDatePicker.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
     } else if (!selectedDateTime.timeChanged) {
       setShowTimeError(true);
-      userTimePicker.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      userTimePicker.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
     } else if (showReturnDate && !selectedReturnDateTime.dateChanged) {
       setShowReturnDateError(true);
-      userTimePicker.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      userTimePicker.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
     } else if (showReturnDate && !selectedReturnDateTime.timeChanged) {
       setShowReturnTimeError(true);
-      userTimePicker.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      userTimePicker.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
     } else if (
       userDropLocation?.latLng === userPickupLocation.latLng
       && bookingType === 'transfers'
@@ -444,13 +457,10 @@ function BookingEngine3({ setFocus, width, height }) {
           if (distance?.distance) {
             goToFleetPage(distance);
           } else {
-            toast.error(
-              'Distance not found.',
-              {
-                autoClose: 3000,
-                theme: 'colored',
-              },
-            );
+            toast.error('Distance not found.', {
+              autoClose: 3000,
+              theme: 'colored',
+            });
             toast.clearWaitingQueue();
           }
         } else {
@@ -479,7 +489,9 @@ function BookingEngine3({ setFocus, width, height }) {
     const getUserCurrency = async (regionid) => {
       const response = await api.get(`/regions?region_id=${regionid}`);
       if (response?.data?.region_currency_text) {
-        let date = new Date().toLocaleString('en-US', { timeZone: response?.data?.region_time_zone || 'Europe/London' });
+        let date = new Date().toLocaleString('en-US', {
+          timeZone: response?.data?.region_time_zone || 'Europe/London',
+        });
         date = new Date(date);
         const newDate = addHours(date, 2);
         setNewDate(newDate);
@@ -492,7 +504,14 @@ function BookingEngine3({ setFocus, width, height }) {
   }, [addHours, setNewDate, userPickupLocation]);
 
   const pickUpInput = ({
-    inputIcon, leadingIcon, label, placeholder, onFocus, closeFocus, isFullScreen, ...rest
+    inputIcon,
+    leadingIcon,
+    label,
+    placeholder,
+    onFocus,
+    closeFocus,
+    isFullScreen,
+    ...rest
   }) => (
     <Input
       inputIcon="/rolnew/home/inputIcon.svg"
@@ -514,7 +533,14 @@ function BookingEngine3({ setFocus, width, height }) {
     />
   );
   const dropOffInput = ({
-    inputIcon, leadingIcon, label, placeholder, onFocus, closeFocus, isFullScreen, ...rest
+    inputIcon,
+    leadingIcon,
+    label,
+    placeholder,
+    onFocus,
+    closeFocus,
+    isFullScreen,
+    ...rest
   }) => (
     <Input
       inputIcon="/rolnew/home/inputIcon.svg"
@@ -545,13 +571,19 @@ function BookingEngine3({ setFocus, width, height }) {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto lg:container" autoComplete="off">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="mx-auto lg:container"
+      autoComplete="off"
+    >
       <div className="flex gap-2 sm:gap-3 items-center justify-between">
         {labels.map((item) => (
           <button
             type="button"
             className={`rounded-full bg-[#223544] py-[10px] border border-[#fff] pop w-1/2 font-medium ${
-              bookingType !== item.id ? 'opacity-40 border-opacity-30' : 'border-opacity-40'
+              bookingType !== item.id
+                ? 'opacity-40 border-opacity-30'
+                : 'border-opacity-40'
             }`}
             id={item.id}
             onClick={() => setBookingType(item.id)}
@@ -561,7 +593,12 @@ function BookingEngine3({ setFocus, width, height }) {
           </button>
         ))}
       </div>
-      <div className={`flex flex-col  z-[50] ${height > 600 ? 'pt-6 gap-y-6' : 'pt-4 gap-y-4'} `} ref={addressPicker}>
+      <div
+        className={`flex flex-col  z-[50] ${
+          height > 600 ? 'pt-6 gap-y-6' : 'pt-4 gap-y-4'
+        } `}
+        ref={addressPicker}
+      >
         <CountriesAutocomplete
           isFullScreen={fullScreen}
           setIsFullScreen={setIsFullScreen}
@@ -610,19 +647,25 @@ function BookingEngine3({ setFocus, width, height }) {
               className="cursor-pointer"
               readOnly
               showError={showDateError}
-              value={selectedDateTime?.dateChanged ? formatDateTime(selectedDateTime?.selectedDate) : ''}
-              onClick={() => { setShowDatepicker(true); }}
+              value={
+                selectedDateTime?.dateChanged
+                  ? formatDateTime(selectedDateTime?.selectedDate)
+                  : ''
+              }
+              onClick={() => {
+                setShowDatepicker(true);
+              }}
             />
             {showDatepicker && minDatetime && (
-            <Datepicker
-              minDate={minDatetime?.minDate}
-              selectedDateTime={selectedDateTime}
-              minDatetime={minDatetime}
-              compareWith={minDatetime?.minDate}
-              setselectedDateTime={setselectedDateTime}
-              setDateTime={setDateTime}
-              onChange={changeDate}
-            />
+              <Datepicker
+                minDate={minDatetime?.minDate}
+                selectedDateTime={selectedDateTime}
+                minDatetime={minDatetime}
+                compareWith={minDatetime?.minDate}
+                setselectedDateTime={setselectedDateTime}
+                setDateTime={setDateTime}
+                onChange={changeDate}
+              />
             )}
           </div>
           <div className="relative sm:w-2/4 w-full" ref={userTimePicker}>
@@ -633,141 +676,178 @@ function BookingEngine3({ setFocus, width, height }) {
               placeholder="Pick up time"
               className="cursor-pointer"
               readOnly
-              value={selectedDateTime?.timeChanged ? `${selectedDateTime?.hour}:${selectedDateTime?.minute}` : ''}
-              onClick={() => { setShowTimepicker(true); }}
+              value={
+                selectedDateTime?.timeChanged
+                  ? `${selectedDateTime?.hour}:${selectedDateTime?.minute}`
+                  : ''
+              }
+              onClick={() => {
+                setShowTimepicker(true);
+              }}
             />
             {showTimepicker && minDatetime && (
-            <TimePicker
-              minDate={minDatetime?.minDate}
-              selectedDateTime={selectedDateTime}
-              minDatetime={minDatetime}
-              compareWith={minDatetime?.minDate}
-              setselectedDateTime={setselectedDateTime}
-              setDateTime={setTimeChange}
-              onChange={changeDate}
-              showSelected={selectedDateTime?.timeChanged}
-            />
+              <TimePicker
+                minDate={minDatetime?.minDate}
+                selectedDateTime={selectedDateTime}
+                minDatetime={minDatetime}
+                compareWith={minDatetime?.minDate}
+                setselectedDateTime={setselectedDateTime}
+                setDateTime={setTimeChange}
+                onChange={changeDate}
+                showSelected={selectedDateTime?.timeChanged}
+              />
             )}
           </div>
         </div>
-        {
-          bookingType === 'transfers'
-        && (
-        <div className="border-t border-[#B2B2B2]">
-          <button type="button" className={`pop max-w-max ${height > 600 ? 'py-6' : 'py-3'}`} onClick={toggleShowReturnDate}>
-            <div className="flex gap-2 items-center">
-              <svg
-                className="h-5 w-5 text-[#FDC65C]"
-                fill="none"
-                strokeWidth={2}
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                />
-              </svg>
-              <p className="font-medium text-[#FDC65C]">
-                {showReturnDate || selectedReturnDateTime.dateChanged ? 'Remove' : 'Add' }
-                {' '}
-                Return Journey
-                {' '}
-              </p>
-              {
-                  showReturnDateLoader
-                && (
+        {bookingType === 'transfers' && (
+          <div className="border-t border-[#B2B2B2]">
+            <button
+              type="button"
+              className={`pop max-w-max ${height > 600 ? 'py-6' : 'py-3'}`}
+              onClick={toggleShowReturnDate}
+            >
+              <div className="flex gap-2 items-center">
+                <svg
+                  className="h-5 w-5 text-[#FDC65C]"
+                  fill="none"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+                <p className="font-medium text-[#FDC65C]">
+                  {showReturnDate || selectedReturnDateTime.dateChanged
+                    ? 'Remove'
+                    : 'Add'}
+                  {' '}
+                  Return Journey
+                  {' '}
+                </p>
+                {showReturnDateLoader && (
                   <div role="status">
-                    <svg aria-hidden="true" className="w-4 h-4 text-gray-200 animate-spin dark:text-gray-600 fill-primary" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor" />
-                      <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill" />
+                    <svg
+                      aria-hidden="true"
+                      className="w-4 h-4 text-gray-200 animate-spin dark:text-gray-600 fill-primary"
+                      viewBox="0 0 100 101"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                        fill="currentFill"
+                      />
                     </svg>
                     <span className="sr-only">Loading...</span>
                   </div>
-                )
-                }
-            </div>
-          </button>
-          {
-            (showReturnDate || selectedReturnDateTime.dateChanged)
-            && (
-            <div className={`flex gap-x-4 ${height > 600 ? 'pb-6' : 'pb-4'}`}>
-              <div className="relative sm:w-2/4 w-full" ref={userReturnDatePicker}>
-                <Input
-                  leadingIcon="/rolnew/home/gps.svg"
-                  label="Return Date"
-                  placeholder="Pick up date"
-                  className="cursor-pointer"
-                  readOnly
-                  showError={showReturnDateError}
-                  value={selectedReturnDateTime?.dateChanged ? formatDateTime(selectedReturnDateTime?.selectedDate) : ''}
-                  onClick={() => { setShowReturnDatepicker(true); }}
-                />
-                {showReturnDatepicker && minReturnDatetime && (
-                <Datepicker
-                  minDate={minReturnDatetime.minDate}
-                  selectedDateTime={selectedReturnDateTime}
-                  minDatetime={minReturnDatetime}
-                  compareWith={selectedDateTime.date}
-                  setselectedDateTime={setSelectedReturnDateTime}
-                  setDateTime={setReturnDateTime}
-                  onChange={() => {}}
-                />
                 )}
               </div>
-              <div className="relative sm:w-2/4 w-full" ref={userReturnTimePicker}>
-                <Input
-                  leadingIcon="/rolnew/home/gps.svg"
-                  label="Return Time"
-                  placeholder="Pick up time"
-                  className="cursor-pointer"
-                  readOnly
-                  showError={showReturnTimeError}
-                  value={selectedReturnDateTime?.timeChanged ? `${selectedReturnDateTime?.hour}:${selectedReturnDateTime?.minute}` : ''}
-                  onClick={() => { setShowReturnTimepicker(true); }}
-                />
-                {showReturnTimepicker && minReturnDatetime && (
-                <TimePicker
-                  minDate={minReturnDatetime.minDate}
-                  selectedDateTime={selectedReturnDateTime}
-                  minDatetime={minReturnDatetime}
-                  compareWith={selectedDateTime.date}
-                  setselectedDateTime={setSelectedReturnDateTime}
-                  setDateTime={setReturnTime}
-                  showSelected={selectedReturnDateTime?.timeChanged}
-                  onChange={() => { setShowReturnTimepicker(false); }}
-                />
-                )}
+            </button>
+            {(showReturnDate || selectedReturnDateTime.dateChanged) && (
+              <div className={`flex gap-x-4 ${height > 600 ? 'pb-6' : 'pb-4'}`}>
+                <div
+                  className="relative sm:w-2/4 w-full"
+                  ref={userReturnDatePicker}
+                >
+                  <Input
+                    leadingIcon="/rolnew/home/gps.svg"
+                    label="Return Date"
+                    placeholder="Pick up date"
+                    className="cursor-pointer"
+                    readOnly
+                    showError={showReturnDateError}
+                    value={
+                      selectedReturnDateTime?.dateChanged
+                        ? formatDateTime(selectedReturnDateTime?.selectedDate)
+                        : ''
+                    }
+                    onClick={() => {
+                      setShowReturnDatepicker(true);
+                    }}
+                  />
+                  {showReturnDatepicker && minReturnDatetime && (
+                    <Datepicker
+                      minDate={minReturnDatetime.minDate}
+                      selectedDateTime={selectedReturnDateTime}
+                      minDatetime={minReturnDatetime}
+                      compareWith={selectedDateTime.date}
+                      setselectedDateTime={setSelectedReturnDateTime}
+                      setDateTime={setReturnDateTime}
+                      onChange={() => {}}
+                    />
+                  )}
+                </div>
+                <div
+                  className="relative sm:w-2/4 w-full"
+                  ref={userReturnTimePicker}
+                >
+                  <Input
+                    leadingIcon="/rolnew/home/gps.svg"
+                    label="Return Time"
+                    placeholder="Pick up time"
+                    className="cursor-pointer"
+                    readOnly
+                    showError={showReturnTimeError}
+                    value={
+                      selectedReturnDateTime?.timeChanged
+                        ? `${selectedReturnDateTime?.hour}:${selectedReturnDateTime?.minute}`
+                        : ''
+                    }
+                    onClick={() => {
+                      setShowReturnTimepicker(true);
+                    }}
+                  />
+                  {showReturnTimepicker && minReturnDatetime && (
+                    <TimePicker
+                      minDate={minReturnDatetime.minDate}
+                      selectedDateTime={selectedReturnDateTime}
+                      minDatetime={minReturnDatetime}
+                      compareWith={selectedDateTime.date}
+                      setselectedDateTime={setSelectedReturnDateTime}
+                      setDateTime={setReturnTime}
+                      showSelected={selectedReturnDateTime?.timeChanged}
+                      onChange={() => {
+                        setShowReturnTimepicker(false);
+                      }}
+                    />
+                  )}
+                </div>
               </div>
-            </div>
-            )
-          }
-        </div>
-        )
-        }
+            )}
+          </div>
+        )}
         {bookingType === 'hourly' && (
-        <div className={`relative ${height > 600 ? 'pb-6' : 'pb-4'}`}>
-          <Select
-            leadingIcon="/rolnew/home/gps.svg"
-            label="Duration"
-            errors={errors}
-            register={register}
-            validationSchema={{
-              required: 'Required',
-            }}
-            name="duration"
-            options={bookingDuration}
-            onChange={onChange}
-            defaultValue={rideDuration}
-            className="w-full appearance-none select select-ghost focus:border-transparent focus:outline-0 focus:ring-transparent active:ring-transparent bg-[#223544D9] bg-opacity-85 border border-[#E1E1E140] overflow-ellipsis"
-          />
-        </div>
+          <div className={`relative ${height > 600 ? 'pb-6' : 'pb-4'}`}>
+            <Select
+              leadingIcon="/rolnew/home/gps.svg"
+              label="Duration"
+              errors={errors}
+              register={register}
+              validationSchema={{
+                required: 'Required',
+              }}
+              name="duration"
+              options={bookingDuration}
+              onChange={onChange}
+              defaultValue={rideDuration}
+              className="w-full appearance-none select focus:border-transparent focus:outline-0 focus:ring-transparent active:ring-transparent bg-[#223544D9] bg-opacity-85 border border-[#E1E1E140] overflow-ellipsis"
+            />
+          </div>
         )}
       </div>
-      <Button className="w-full" submit cta isLoading={showBtnLoading}>Search Ride</Button>
+      <Button className="w-full" submit cta isLoading={showBtnLoading}>
+        Search Ride
+      </Button>
     </form>
   );
 }

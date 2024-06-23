@@ -8,13 +8,14 @@ import Contact from 'rolnew/comp/Contact';
 import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
+import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
 
 export default function Page() {
   const bannerData = {
     mainTitle: 'City Sightseeing',
     mainDescription:
       'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/banners/cities-sightseeing.jpg',
+    backgroundImage: '/rolnew/services/banners/Sightseeing.jpg',
     title: 'Do you want to customise your booking?',
     description:
       'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
@@ -45,6 +46,7 @@ export default function Page() {
       dropdown1: 'Choose Your City',
       dropdown2: 'Enter Event Name',
     },
+    desc: 'Our city sightseeing service offers a tailored experience for exploring urban landscapes with ease and comfort. This service includes a luxury vehicle and a knowledgeable chauffeur who not only navigates through the city but also provides insights into iconic landmarks and hidden gems. Ideal for tourists and locals alike, we ensure a memorable and personalised sightseeing adventure, accommodating individual preferences and schedules.',
     list: [
       {
         id: 1,
@@ -107,6 +109,37 @@ export default function Page() {
     },
   ];
 
+  const servicesData = {
+    heading: {
+      mainTitle: 'About City Sightseeing',
+    },
+    data: [
+      {
+        title:
+          'What are RolDrive’s Sightseeing Chauffeur Service coverage zones?',
+        desc: 'RolDrive provides its sightseeing chauffeur service in the following locations. Our knowledgeable chauffeurs will show you the best sights in town along with a detailed tour across every attraction.',
+      },
+      {
+        title:
+          'RolDrive’s sightseeing chauffeur service covers the following locations:',
+        desc: 'London Sightseeing, Dubai Sightseeing, Paris Sightseeing, New York Sightseeing, Tokyo Sightseeing',
+      },
+      {
+        title: 'What is a city sightseeing chauffeur service?',
+        desc: 'A city sightseeing chauffeur service offers a luxurious and personalised way to explore the best sightseeing places in the world. With this service, travellers can enjoy the comfort of a private vehicle and the expertise of a professional chauffeur who knows the city well. This allows visitors to experience the most iconic landmarks, cultural sites, and hidden gems without the stress of navigating unfamiliar public transport systems or dealing with the hassle of renting a car. The service is tailored to the preferences and interests of the traveller, ensuring a flexible itinerary that maximises the enjoyment of each city’s unique attractions and experiences.',
+      },
+      {
+        title: 'Why hire a city sightseeing chauffeur service?',
+        desc: 'Hiring a city sightseeing chauffeur service offers a luxurious and personalized way to explore the best sightseeing places in the world. With a professional chauffeur at the helm, you can enjoy a stress-free journey through iconic landscapes and historical landmarks, without worrying about navigation or parking. Additionally, travelling in an elegant sedan not only enhances your comfort during the tour but also adds a touch of sophistication to your travel photos, making them look even more impressive. This service allows you to tailor your itinerary to suit your interests, ensuring that you dont miss any must-see attractions, all while experiencing the ultimate in convenience and style.',
+      },
+      {
+        title:
+          'What vehicles are offered for a city sightseeing chauffeur service?',
+        desc: 'For city sightseeing chauffeur services, particularly when visiting the best sightseeing places in the world, a range of vehicles is typically offered to match the diverse needs and preferences of travellers. These vehicles include luxury sedans, ideal for couples or small groups looking for a comfortable and intimate experience. SUVs are available for those needing a bit more space, perhaps for families or medium-sized groups. For larger groups, executive vans can be used, providing ample space without sacrificing comfort. Each vehicle is chosen for its ability to offer a clear view of the city’s landmarks, smooth ride, and comfort features that enhance the sightseeing experience, making every moment enjoyable as you explore some of the world’s most iconic locations.',
+      },
+    ],
+  };
+
   return (
     <>
       <ServicesBanner {...bannerData} />
@@ -120,6 +153,7 @@ export default function Page() {
       <OurPresence />
       <Locations />
       <DownloadOurApp />
+      <ServiceOfferings servicesData={servicesData} />
     </>
   );
 }

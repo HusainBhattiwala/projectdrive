@@ -8,13 +8,14 @@ import Contact from 'rolnew/comp/Contact';
 import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
+import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
 
 export default function page() {
   const bannerData = {
     mainTitle: 'Roadshow Transfers',
     mainDescription:
       'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/banners/Roadshow.jpg',
+    backgroundImage: '/rolnew/services/banners/roadshow (1).jpg',
     title: 'Do you want to customise your booking?',
     description:
       'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
@@ -45,6 +46,7 @@ export default function page() {
       dropdown1: 'Choose Your City',
       dropdown2: 'Choose Roadshows',
     },
+    desc: "RolDrive's roadshow transfers provide seamless transportation solutions tailored for corporate clients and professionals attending multi-stop events. This service guarantees punctuality and comfort, with luxury vehicles and experienced chauffeurs ensuring smooth transitions between various venues, critical for maintaining schedules and professional appearances during high-stakes roadshows.",
     list: [
       {
         id: 1,
@@ -107,6 +109,35 @@ export default function page() {
     },
   ];
 
+  const servicesData = {
+    heading: {
+      mainTitle: 'About Roadshow Transfers',
+    },
+    data: [
+      {
+        title: 'What are RolDrive’s roadshow transfer coverage zones?',
+        desc: 'RolDrive provides its roadshow chauffeur service in the following locations. Our professional and discreet chauffeurs will take you to your locations in absolute comfort and style.',
+      },
+      {
+        title:
+          'RolDrive’s roadshow chauffeur service covers the following locations:',
+        desc: 'Roadshow transfer from London, Roadshow transfer from Dubai, Roadshow transfer from Paris, Roadshow transfer from New York, Roadshow transfer from Tokyo',
+      },
+      {
+        title: 'What is a roadshow chauffeur service?',
+        desc: 'RolDrives roadshow chauffeur service caters to corporate clients needing precise, reliable transportation across multiple scheduled stops, typically for business meetings, presentations, or site visits. This service emphasises punctuality, consistency, and high-quality service, ensuring that these individuals can move efficiently and comfortably between venues without the stress of navigating or timing. Chauffeurs are experienced with complex itineraries and are trained to handle the dynamic nature of roadshows, adapting quickly to any schedule changes. RolDrives roadshow service offers a fleet of luxury vehicles, equipped to provide a mobile office environment, enabling productivity en route and maintaining a professional image throughout the journey. This service is ideal for clients who require flawless execution and a high degree of coordination. RolDrive even provides a dedicated event manager to oversee the process and ensure a smooth transition between venues.',
+      },
+      {
+        title: 'Why hire a roadshow chauffeur service?',
+        desc: 'Hiring a roadshow chauffeur service through RolDrive provides numerous advantages for businesses coordinating multi-stop events. RolDrive ensures precision in scheduling and routing, which is crucial for maintaining tight roadshow itineraries. Our experienced chauffeurs are professionally trained to handle the dynamics of corporate roadshows, offering a discreet and efficient service that aligns with corporate professionalism. RolDrives luxurious and diverse fleet can accommodate any group size or preference, enhancing the comfort and image of the travelling individuals. Furthermore, the reliability and high standards of service help to alleviate the stress of planning and executing complex itineraries, allowing business professionals to focus on their engagements rather than logistics. This seamless integration of transportation ensures that roadshows are conducted smoothly, bolstering the success of business operations.',
+      },
+      {
+        title: 'What vehicles are offered for a roadshow chauffeur service?',
+        desc: 'For roadshow chauffeur services, RolDrive offers a premium selection of vehicles tailored to meet the demands of corporate and executive travel. Our fleet includes luxury sedans such as the Mercedes Benz S Class, known for its comfort and sophistication, ideal for navigating city traffic and long distances. For larger groups or additional space, SUVs like the Range Rover provide luxury with more room. Executive MPVs such as the Mercedes V Class are available for groups needing a balance of comfort and functionality, perfect for teams moving together between venues. Each vehicle is chosen for its reliability, style, and ability to provide a conducive environment for productivity and relaxation on the move.',
+      },
+    ],
+  };
+
   return (
     <>
       <ServicesBanner {...bannerData} />
@@ -120,6 +151,7 @@ export default function page() {
       <OurPresence />
       <Locations />
       <DownloadOurApp />
+      <ServiceOfferings servicesData={servicesData} />
     </>
   );
 }

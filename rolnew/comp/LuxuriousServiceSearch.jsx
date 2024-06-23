@@ -3,6 +3,7 @@
 import Container from 'rolnew/comp/Container';
 import Button from 'rolnew/ui/Button';
 import Dropdown from 'rolnew/ui/Dropdown';
+import Pic from 'rolnew/util/Pic';
 
 const items = [
   <a key='1' href='/about'>
@@ -21,9 +22,16 @@ function LuxuriousServiceSearch({ luxuriousServiceData }) {
     <div className='pb-[100px] bg-[#223544] relative'>
       <Container className='bg-[#223544] sm:py-16 py-8 text-center'>
         <h2 className='sm:text-3xl text-2xl font-medium sm:leading-9 leading-tight text-[#CED5E5] capitalize'>
-          Our Luxurious Services
+          Our Services
         </h2>
-        <div className='px-4 sm:px-24'>
+        <div className='w-20 md:h-[2px] h-[1px] mx-auto mt-3'>
+          <Pic
+            src='/rolnew/global/underline.svg'
+            alt='underline'
+            objectFit='cover'
+          />
+        </div>
+        {/* <div className='px-4 sm:px-24'>
           <div className='boxes p-[10px] bg-[#2F4456] mt-20 mb-10 w-full h-auto sm:h-20 flex flex-col sm:flex-row gap-1 justify-center items-center rounded-xl'>
             <div className='box w-full sm:w-full p-2'>
               <Dropdown
@@ -47,8 +55,8 @@ function LuxuriousServiceSearch({ luxuriousServiceData }) {
               </Button>
             </div>
           </div>
-        </div>
-        <div className='grid gap-7 grid-cols-6 sm:grid-cols-12 max-w-[1236px] min-h-[168px] mx-auto'>
+        </div> */}
+        <div className='grid gap-7 grid-cols-6 sm:grid-cols-12 max-w-[1236px] min-h-[168px] mx-auto mt-14'>
           {luxuriousServiceData.map((item, index) => (
             <div
               className='flex flex-col items-center col-span-3 sm:col-span-3'

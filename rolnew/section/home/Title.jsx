@@ -1,4 +1,3 @@
-import React from 'react';
 import Pic from 'rolnew/util/Pic';
 
 function Title({ subTitle, mainTitle, description, descClass }) {

@@ -8,6 +8,7 @@ import Contact from 'rolnew/comp/Contact';
 import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
+import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
 
 export default function Page() {
   const bannerData = {
@@ -45,6 +46,7 @@ export default function Page() {
       dropdown1: 'Choose Your City',
       dropdown2: 'Enter Event Name',
     },
+    desc: 'Our private jet chauffeur Service offers seamless, luxurious ground transportation tailored for discerning travellers using private aviation. This exclusive service ensures timely arrivals and departures, with elegant vehicles and professional chauffeurs enhancing the comfort and sophistication of your travel experience to and from private airfields.',
     list: [
       {
         id: 1,
@@ -106,6 +108,34 @@ export default function Page() {
       desc: 'RolDrives vast fleet includes a wide array of luxurious vehicles, from sleek sedans and spacious SUVs to elegant limousines, tailored to meet any travel need or preference.',
     },
   ];
+  const servicesData = {
+    heading: {
+      mainTitle: 'About Private Jet Chauffeur',
+    },
+    data: [
+      {
+        title: 'What are RolDrive’s private jet chauffeur coverage zones?',
+        desc: 'RolDrive provides its private jet chauffeur service in the following locations. Our professional and discreet chauffeurs will take you to and from the tarmac in absolute comfort and style.',
+      },
+      {
+        title:
+          'RolDrive’s private jet chauffeur service covers the following locations:',
+        desc: 'Private jet transfer London, Private jet transfer Dubai, Private jet transfer Paris, Private jet transfer New York, Private jet transfer Tokyo',
+      },
+      {
+        title: 'What is a private jet chauffeur service?',
+        desc: 'A private jet chauffeur service is a specialised transportation option designed for travellers using private aviation. This service offers seamless private jet transfers, ensuring a smooth connection between the airport and the passengers final destination. Tailored for comfort and convenience, it includes luxury vehicles ready at the tarmac upon arrival and professional chauffeurs who are trained to handle discreet and efficient travel needs. The service is customisable, accommodating specific requests such as preferred routes or on-board amenities. This premium service is ideal for those seeking privacy, speed, and high levels of service in their ground transportation, matching the exclusivity of private jet travel.',
+      },
+      {
+        title: 'Why hire a private jet chauffeur service?',
+        desc: 'Hiring a private jet chauffeur service enhances the seamless luxury and efficiency of private air travel. This specialised service ensures that your ground transportation is as personalised and comfortable as your flight. With a private jet transfer, you avoid the hassles of navigating through public airports or waiting for taxis. Instead, you are greeted by a professional chauffeur who manages all logistics from doorstep to runway, providing privacy, security, and comfort. This level of service is particularly beneficial for those with tight schedules or those seeking an exclusive, stress-free travel experience, making transitions between appointments or destinations smooth and effortless.',
+      },
+      {
+        title: 'What vehicles are offered for a private jet chauffeur service?',
+        desc: 'For private jet transfer services, the vehicle options are curated to meet the highest standards of luxury and comfort. Clients can choose from a range of top-tier vehicles such as Rolls Royce, Bentley, and Mercedes Benz S Class, which are popular for their elegance and superior comfort features. These vehicles are equipped with plush interiors, climate control, and privacy features like tinted windows, making them perfect for high-profile travellers seeking discretion. Additionally, for groups, luxury SUVs like the Range Rover are available, offering spacious seating without compromising on sophistication or performance. And for even larger groups, clients can always choose the Mercedes Benz V Class. Each vehicle in the fleet is maintained meticulously to ensure safety, reliability, and a first-class experience during every journey.',
+      },
+    ],
+  };
 
   return (
     <>
@@ -120,6 +150,7 @@ export default function Page() {
       <OurPresence />
       <Locations />
       <DownloadOurApp />
+      <ServiceOfferings servicesData={servicesData} />
     </>
   );
 }
