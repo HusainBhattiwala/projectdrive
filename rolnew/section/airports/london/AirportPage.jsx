@@ -10,6 +10,7 @@ import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import FAQ from 'rolnew/comp/FAQ';
 import AirportBookingFlow from 'rolnew/comp/AirportBookingFlow';
 import Services from 'rolnew/section/home/Services';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
 
 import { airportData } from './airportData';
 
@@ -45,7 +46,7 @@ function AirportPage() {
       <Services servicesData={pageData?.servicesData} />
       <Locations />
       <Contact />
-      <FAQ />
+      <ServicesFaq faqData={pageData?.faqData} />
       <DownloadOurApp />
     </>
   );

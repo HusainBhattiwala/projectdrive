@@ -42,7 +42,66 @@ export const airportData = {
         },
       ],
     },
+    faqData : {
+      title: 'Frequently Asked Questions About Heathrow Airport Transfers:',
+      data: [
+        {
+          id: 0,
+          question: 'What does RolDrive offer for Heathrow airport chauffeur service?',
+          ans: 'RolDrive provides luxury Heathrow airport chauffeur service as its airport transfers, including meet-and-greet services, assistance with luggage, and direct transportation to your destination.',
+        },
+        {
+          id: 1,
+          question: 'How can I book a Heathrow airport chauffeur service transfer with RolDrive?',
+          ans: 'You can book a Heathrow airport chauffeur service transfer via our website, mobile app, or by contacting our customer service phone line.',
+        },
+        {
+          id: 2,
+          question:
+            'What types of vehicles are available for Heathrow airport pick-up?',
+          ans: 'RolDrive offers a range of executive vehicles including sedans, luxury cars, SUVs, and minivans to accommodate different group sizes and preferences.',
+        },
+        {
+          id: 3,
+          question:
+            'Are RolDrive’s Heathrow airport pick-up chauffeurs experienced and licensed?',
+          ans: 'Yes, all RolDrive chauffeurs are professionally trained, licensed, and have extensive experience in providing high-quality service.',
+        },
+        {
+          id: 4,
+          question: 'Can RolDrive’s Heathrow airport pick-up service accommodate last-minute bookings?',
+          ans: 'Yes, RolDrive can often accommodate last-minute bookings, but availability cannot be guaranteed without prior reservation.',
+        },
+        {
+          id: 5,
+          question: 'Is there a cancellation policy for Heathrow airport transfers bookings?',
+          ans: 'Yes, bookings can be cancelled up to 12 hours before the scheduled transfer time without a penalty.',
+        },
+        {
+          id: 6,
+          question: 'Are there additional charges for flight delays at Heathrow airport?',
+          ans: 'RolDrive monitors flight statuses and adjusts pickup times accordingly. RolDrive even offers a one hour free waiting time in case of flight delays.',
+        },
+        {
+          id: 7,
+          question:
+            'Can RolDrive provide child seats?',
+          ans: 'Yes, child seats can be requested during the booking process to ensure safety requirements are fulfilled.',
+        },
+        {
+          id: 8,
+          question: 'Does RolDrive offer services for corporate clients?',
+          ans: 'Yes, RolDrive offers tailored services for corporate clients, including account management and customisable billing options.',
+        },
+        {
+          id: 9,
+          question: 'How does RolDrive ensure passenger safety during COVID-19?',
+          ans: 'RolDrive adheres to strict health and safety protocols, including regular sanitisation of vehicles.',
+        },
+      ],
+    }
   },
+
   gatwick: {
     banner: {
       title: 'Gatwick Airport Transfer',
