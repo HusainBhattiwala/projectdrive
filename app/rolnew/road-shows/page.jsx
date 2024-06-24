@@ -9,6 +9,7 @@ import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
 
 export default function page() {
   const bannerData = {
@@ -138,6 +139,65 @@ export default function page() {
     ],
   };
 
+  const faqData = {
+    title: 'Frequently Asked Questions About Roadshow Transfers Service',
+    data: [
+      {
+        id: 0,
+        question: 'What are roadshow transfers?',
+        ans: 'Roadshow transfers involve coordinated transportation services for multi-location events, typically for corporate roadshows, ensuring timely and seamless travel between various venues.',
+      },
+      {
+        id: 1,
+        question: 'How far in advance should I book roadshow transfers?',
+        ans: 'It is recommended to book roadshow transfers at least a few weeks in advance to ensure vehicle availability and allow for detailed route and schedule planning.',
+      },
+      {
+        id: 2,
+        question:
+          'What types of vehicles are available for roadshow transfers?',
+        ans: 'RolDrive offers a range of vehicles for roadshow transfers, including luxury sedans, executive SUVs, and minibuses, catering to different group sizes and preferences.',
+      },
+      {
+        id: 3,
+        question:
+          'Can RolDrive handle roadshow transfers across different cities?',
+        ans: 'Yes, RolDrive is equipped to manage roadshow transfers across multiple cities, coordinating complex logistics to maintain a consistent, high-quality service.',
+      },
+      {
+        id: 4,
+        question: 'Are drivers trained specifically for roadshows?',
+        ans: 'Yes, RolDrive’s drivers are specifically trained for roadshows, possessing knowledge of the most efficient routes and professional courtesy to handle high-pressure, time-sensitive schedules.',
+      },
+      {
+        id: 5,
+        question: 'What happens if there is a change in the roadshow schedule?',
+        ans: 'RolDrive is flexible with schedule changes and can adapt the transportation plan accordingly thanks to a dedicated event manager, ensuring continuity and support throughout the event.',
+      },
+      {
+        id: 6,
+        question: 'Can I customise the vehicles for branding purposes?',
+        ans: 'Customisation for branding is often possible; RolDrive can assist in arranging branded signage or wraps to enhance corporate visibility during the roadshow.',
+      },
+      {
+        id: 7,
+        question:
+          'How does RolDrive ensure punctuality for roadshow transfers?',
+        ans: 'Using advanced GPS tracking and real-time traffic monitoring, RolDrive plans the best routes and departure times to ensure punctuality for all roadshow stops.',
+      },
+      {
+        id: 8,
+        question: 'What are the billing options for roadshow transfers?',
+        ans: 'RolDrive offers various billing options tailored to corporate needs, including flat rates, hourly rates, or package deals, depending on the complexity and duration of the roadshow.',
+      },
+      {
+        id: 9,
+        question: 'How can I track the progress of my roadshow transfers?',
+        ans: 'Clients can track their roadshow transfers through RolDrive’s client portal, which provides real-time updates on vehicle locations and estimated arrival times.',
+      },
+    ],
+  };
+
   return (
     <>
       <ServicesBanner {...bannerData} />
@@ -145,7 +205,7 @@ export default function page() {
       <TopPicks topPicksData={topPicksData} />
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
-      <FAQ />
+      <ServicesFaq faqData={faqData} />
       <CarClass />
       <Contact />
       <OurPresence />

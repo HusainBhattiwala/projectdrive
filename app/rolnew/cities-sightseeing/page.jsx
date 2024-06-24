@@ -9,6 +9,7 @@ import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
 
 export default function Page() {
   const bannerData = {
@@ -140,6 +141,67 @@ export default function Page() {
     ],
   };
 
+  const faqData = {
+    title:
+      'Frequently Asked Questions About City Sightseeing Chauffeur Service',
+    data: [
+      {
+        id: 0,
+        question:
+          "What cities are covered by RolDrive's city sightseeing service?",
+        ans: "RolDrive offers city sightseeing services in major cities worldwide such as London, Paris, New York, Dubai and Tokyo, focusing on providing comprehensive tours of each location's key attractions and hidden gems.",
+      },
+      {
+        id: 1,
+        question: 'Can I customise my city sightseeing itinerary?',
+        ans: 'Absolutely, RolDrive allows you to customise your itinerary based on your interests and preferred sights, ensuring a personalised experience.',
+      },
+      {
+        id: 2,
+        question: 'How long does a typical city sightseeing tour last?',
+        ans: 'Tours can vary, but typically range from half-day to full-day tours, depending on the city and the number of sites you wish to visit.',
+      },
+      {
+        id: 3,
+        question: 'What types of vehicles are used for city sightseeing tours?',
+        ans: 'RolDrive employs a variety of vehicles for city sightseeing, including luxury sedans, SUVs, and vans, all equipped to provide comfort and great viewing opportunities.',
+      },
+      {
+        id: 4,
+        question:
+          'Are RolDrives chauffeurs knowledgeable about local attractions?',
+        ans: 'Yes, RolDrives chauffeurs are well-informed about local history and attractions, enhancing your tour with insightful commentary.',
+      },
+      {
+        id: 5,
+        question:
+          'Is there a limit to the number of people who can join a city sightseeing tour?',
+        ans: 'The number of participants depends on the vehicle size, with options available for solo travellers up to larger groups.',
+      },
+      {
+        id: 6,
+        question: 'What is included in the cost of a city sightseeing tour?',
+        ans: 'The cost typically includes vehicle hire, a professional chauffeur, fuel, and refreshments, though admission fees to attractions are usually extra.',
+      },
+      {
+        id: 7,
+        question: 'Can I book a city sightseeing tour for a corporate event?',
+        ans: 'Yes, RolDrive provides city sightseeing services that are perfect for corporate groups looking to explore a city together.',
+      },
+      {
+        id: 8,
+        question: 'How can I book a city sightseeing tour with RolDrive?',
+        ans: 'Booking is easy via RolDrives website or customer service line, where you can specify your tour details and preferences.',
+      },
+      {
+        id: 9,
+        question:
+          'What safety measures does RolDrive implement during city sightseeing tours?',
+        ans: 'RolDrive ensures all vehicles are meticulously maintained and chauffeurs are trained to provide a safe, secure, and comfortable sightseeing experience.',
+      },
+    ],
+  };
+
   return (
     <>
       <ServicesBanner {...bannerData} />
@@ -147,7 +209,7 @@ export default function Page() {
       <TopPicks topPicksData={topPicksData} />
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
-      <FAQ />
+      <ServicesFaq faqData={faqData} />
       <CarClass />
       <Contact />
       <OurPresence />

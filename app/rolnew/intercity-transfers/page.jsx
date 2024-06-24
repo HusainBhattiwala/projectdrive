@@ -5,10 +5,10 @@ import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import OurPresence from 'rolnew/section/home/OurPresence';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
-import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
 
 export default function Page() {
   const bannerData = {
@@ -150,6 +150,66 @@ export default function Page() {
     ],
   };
 
+  const faqData = {
+    title: 'Frequently Asked Questions About Intercity Chauffeur Service',
+    data: [
+      {
+        id: 0,
+        question: 'What are intercity chauffeur services?',
+        ans: 'Intercity chauffeur services provide professional driving services between different cities, combining luxury, comfort, and convenience.',
+      },
+      {
+        id: 1,
+        question: 'How do I book intercity chauffeur services?',
+        ans: "Booking is typically done through the service provider's website or app, like RolDrive, where you can specify pick-up, drop-off locations, and travel dates.",
+      },
+      {
+        id: 2,
+        question:
+          'What types of vehicles are used for intercity chauffeur services?',
+        ans: 'Luxury sedans, SUVs, and limousines are commonly used, offering comfort for longer journeys.',
+      },
+      {
+        id: 3,
+        question: 'Are intercity chauffeur services available 24/7?',
+        ans: 'Many providers, including RolDrive, offer 24/7 services, accommodating various travel schedules.',
+      },
+      {
+        id: 4,
+        question:
+          'Can I request stops along the route with intercity chauffeur services?',
+        ans: 'Yes, many services including RolDrive allow you to customise the journey with specific stops en route.',
+      },
+      {
+        id: 5,
+        question: 'What is the cost of intercity chauffeur services?',
+        ans: 'Costs vary based on distance, vehicle type, and additional services. Check with providers like RolDrive for precise quotes.',
+      },
+      {
+        id: 6,
+        question: 'Are intercity chauffeur services safe?',
+        ans: 'Yes, reputable services such as RolDrive employ experienced, vetted drivers and maintain their fleet to high safety standards.',
+      },
+      {
+        id: 7,
+        question: 'Can I book intercity chauffeur services for group travel?',
+        ans: 'Yes, larger vehicles or multiple cars can be arranged to accommodate groups. Check RolDrive’s fleet section to choose a vehicle that meets your requirements.',
+      },
+      {
+        id: 8,
+        question:
+          'What amenities can I expect with intercity chauffeur services?',
+        ans: 'Amenities often include Wi-Fi, refreshments, climate control, and entertainment systems.',
+      },
+      {
+        id: 9,
+        question:
+          'How far in advance should I book intercity chauffeur services?',
+        ans: "It's advisable to book as early as possible, especially during peak travel times, to ensure availability.",
+      },
+    ],
+  };
+
   return (
     <>
       <ServicesBanner {...bannerData} />
@@ -158,7 +218,7 @@ export default function Page() {
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
 
-      <FAQ />
+      <ServicesFaq faqData={faqData} />
       <CarClass />
       <Contact />
       <OurPresence />

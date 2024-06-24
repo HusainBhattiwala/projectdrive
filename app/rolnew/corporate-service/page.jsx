@@ -5,10 +5,10 @@ import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import OurPresence from 'rolnew/section/home/OurPresence';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
-import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
 
 export default function Page() {
   const bannerData = {
@@ -142,6 +142,68 @@ export default function Page() {
     ],
   };
 
+  const faqData = {
+    title: 'Frequently Asked Questions About Corporate Chauffeur Service',
+    data: [
+      {
+        id: 0,
+        question:
+          "What services are included in RolDrive's corporate chauffeur hire?",
+        ans: 'RolDrive offers dedicated services like airport transfers, business meeting transport, company event shuttles, and daily commute programs tailored to corporate needs.',
+      },
+      {
+        id: 1,
+        question: 'How can I set up a corporate account with RolDrive?',
+        ans: 'Businesses can set up a corporate account directly on RolDrive’s website or by contacting our customer service to gain access to streamlined booking and tailored services.',
+      },
+      {
+        id: 2,
+        question:
+          'What types of vehicles are available for corporate chauffeur hire?',
+        ans: 'RolDrives fleet for corporate clients includes luxury sedans, executive SUVs, and minivans, all equipped with amenities conducive to a professional environment.',
+      },
+      {
+        id: 3,
+        question:
+          'Are RolDrives chauffeurs trained to handle corporate clients?',
+        ans: 'Yes, chauffeurs are professionally trained to provide discreet and efficient service, understanding the nuances of corporate etiquette and client privacy.',
+      },
+      {
+        id: 4,
+        question: 'What are the payment options for corporate clients?',
+        ans: 'RolDrive accepts various payment methods including corporate credit cards, bank transfers, and invoicing, offering flexible payment solutions for businesses.',
+      },
+      {
+        id: 5,
+        question: 'Can RolDrive accommodate corporate events of large scale?',
+        ans: 'Yes, RolDrive has extensive experience in managing transportation for large corporate events and can coordinate multiple vehicles for group transfers.',
+      },
+      {
+        id: 6,
+        question:
+          'Is there a minimum booking time for corporate chauffeur hire?',
+        ans: 'No, there is no minimum booking time for corporate chauffeur hire bookings. ',
+      },
+      {
+        id: 7,
+        question: 'How does RolDrive ensure reliability and punctuality?',
+        ans: 'RolDrive uses advanced scheduling technology and real-time monitoring to ensure chauffeurs arrive on time and routes are efficiently planned.',
+      },
+      {
+        id: 8,
+        question:
+          'Can the corporate chauffeur hire be customised according to specific business needs?',
+        ans: 'Absolutely, RolDrive prides itself on its ability to tailor services according to specific corporate requirements, including custom branding of vehicles for events.',
+      },
+      {
+        id: 8,
+        question:
+          'What measures does RolDrive take for safety and compliance in corporate services?',
+        ans: 'RolDrive adheres to strict safety protocols, regularly maintains its fleet, and ensures that all chauffeurs are vetted and trained in defensive driving and safety.',
+      },
+    ],
+  };
+
   return (
     <>
       <ServicesBanner {...bannerData} />
@@ -149,7 +211,7 @@ export default function Page() {
       <TopPicks topPicksData={topPicksData} />
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
-      <FAQ />
+      <ServicesFaq faqData={faqData} />
       <CarClass />
       <Contact />
       <OurPresence />

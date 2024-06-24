@@ -5,10 +5,10 @@ import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import OurPresence from 'rolnew/section/home/OurPresence';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
-import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
 
 export default function Page() {
   const bannerData = {
@@ -137,6 +137,70 @@ export default function Page() {
     ],
   };
 
+  const faqData = {
+    title: 'Frequently Asked Questions About Private Jet Chauffeur Service',
+    data: [
+      {
+        id: 0,
+        question: "What is RolDrive's private jet chauffeur service?",
+        ans: "RolDrive's private jet chauffeur service, such as a private jet at Heathrow Airport, provides personalised transportation to and from airports, offering seamless connections between your flight and ground destinations.",
+      },
+      {
+        id: 1,
+        question:
+          'How can I book a private jet chauffeur service with RolDrive?',
+        ans: "You can book the private jet chauffeur service directly through RolDrive's website or contact our customer service for assistance and personalised arrangements.",
+      },
+      {
+        id: 2,
+        question:
+          'What types of vehicles are available for the private jet chauffeur service?',
+        ans: 'RolDrive offers a variety of luxury vehicles for private jet services, including sedans, SUVs, and limousines, all equipped to meet the high standards of comfort and elegance expected by private jet travellers.',
+      },
+      {
+        id: 3,
+        question: 'Are RolDrive’s chauffeurs trained for private jet services?',
+        ans: 'Yes, chauffeurs dedicated to the private jet chauffeur service are specially trained to meet the unique needs of private aviation clients, focusing on discretion, punctuality, and professionalism.',
+      },
+      {
+        id: 4,
+        question:
+          'Can I request specific amenities for my private jet chauffeur ride?',
+        ans: 'Absolutely, RolDrive accommodates special requests such as specific beverages, newspapers, and onboard entertainment to enhance your travel experience.',
+      },
+      {
+        id: 5,
+        question:
+          'Is there a minimum notice period required for booking a private jet chauffeur service?',
+        ans: 'While RolDrive can often accommodate last-minute requests, it is advisable to book well in advance to guarantee the availability of specific vehicles and any customised amenities.',
+      },
+      {
+        id: 6,
+        question:
+          'How does RolDrive ensure timely service for private jet clients?',
+        ans: 'RolDrive uses advanced tracking and communication tools to monitor flight schedules and traffic conditions, ensuring chauffeurs are always on time for your arrival or departure.',
+      },
+      {
+        id: 7,
+        question:
+          'What safety measures does RolDrive implement for its private jet chauffeur service?',
+        ans: 'The safety of passengers is paramount; RolDrive’s vehicles are meticulously maintained, and chauffeurs are vetted and trained in defensive driving techniques.',
+      },
+      {
+        id: 8,
+        question:
+          'Can RolDrive handle group transportation for private jet clients?',
+        ans: 'Yes, RolDrive can arrange transportation for groups of any size, providing multiple vehicles if necessary to accommodate larger parties.',
+      },
+      {
+        id: 9,
+        question:
+          'Is the private jet chauffeur service available internationally?',
+        ans: 'RolDrive’s private jet chauffeur service is primarily available in major cities around the world where private jet facilities are located, facilitating global travel needs.',
+      },
+    ],
+  };
+
   return (
     <>
       <ServicesBanner {...bannerData} />
@@ -144,7 +208,7 @@ export default function Page() {
       <TopPicks topPicksData={topPicksData} />
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
-      <FAQ />
+      <ServicesFaq faqData={faqData} />
       <CarClass />
       <Contact />
       <OurPresence />

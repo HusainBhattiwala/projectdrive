@@ -5,10 +5,10 @@ import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import OurPresence from 'rolnew/section/home/OurPresence';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
-import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
 
 export default function Page() {
   const bannerData = {
@@ -138,6 +138,63 @@ export default function Page() {
     ],
   };
 
+  const faqData = {
+    title: 'Frequently Asked Questions About Event Transportation Service',
+    data: [
+      {
+        id: 0,
+        question:
+          'What types of events does RolDrive provide transportation for?',
+        ans: 'Event transportation services cover a wide range, including corporate events, weddings, conferences, galas, and sporting events.',
+      },
+      {
+        id: 1,
+        question: 'How far in advance should I book event transportation?',
+        ans: 'Its recommended to book as soon as you have your event details finalised, typically several months in advance, to ensure availability and better rates.',
+      },
+      {
+        id: 2,
+        question: 'Can I view the vehicles before booking?',
+        ans: 'Yes, most event transportation providers including RolDrive offer a pre-booking vehicle inspection upon request to ensure the selected vehicles meet your expectations.',
+      },
+      {
+        id: 3,
+        question: 'Are the drivers trained for event transportation?',
+        ans: 'Yes, RolDrive drivers are specially trained in customer service and safety to handle the specific requirements of event transportation, ensuring professionalism and reliability.',
+      },
+      {
+        id: 4,
+        question: 'What happens if we need to extend our event time?',
+        ans: 'RolDrives services are flexible with schedule changes; however, its best to discuss potential overages with your RolDrive dedicated event manager in advance as additional charges may apply.',
+      },
+      {
+        id: 5,
+        question: 'Can the vehicles be decorated for events like weddings?',
+        ans: 'Yes, RolDrive allows vehicle decoration so your vehicles can be customised to the theme of the wedding event.',
+      },
+      {
+        id: 6,
+        question: 'Do you offer transportation for large groups?',
+        ans: 'Yes, RolDrive’s event transportation can accommodate large groups with vehicles such as buses, coaches, or multiple cars depending on the size of the group. Please visit our fleet section to learn more about our fleet.',
+      },
+      {
+        id: 7,
+        question: 'Is there a minimum rental time for event transportation?',
+        ans: 'Typically, there is a minimum booking requirement, often starting from a few hours, which can vary based on the event type.',
+      },
+      {
+        id: 8,
+        question: 'How are rates for event transportation calculated?',
+        ans: 'Rates can be hourly, flat-rate based on the event, or customised depending on the number of vehicles, distance, and duration of the service.',
+      },
+      {
+        id: 9,
+        question: 'What is your cancellation policy?',
+        ans: 'Its important to understand the terms during booking, especially for events that might be subject to change. Please ensure to ask RolDrive about our cancellation policy for event transportation beforehand.',
+      },
+    ],
+  };
+
   return (
     <>
       <ServicesBanner {...bannerData} />
@@ -145,7 +202,7 @@ export default function Page() {
       <TopPicks topPicksData={topPicksData} />
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
-      <FAQ />
+      <ServicesFaq faqData={faqData} />
       <CarClass />
       <Contact />
       <OurPresence />

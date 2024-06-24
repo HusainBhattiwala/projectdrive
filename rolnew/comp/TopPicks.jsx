@@ -64,7 +64,7 @@ function TopPicks({ scrollRef, airportList, topPicksData }) {
       </div>
       <Container className='bg-[#11202D] sm:py-16 py-8 text-center'>
         <Title
-          subTile='Top Picks'
+          subTitle='Top Picks'
           mainTitle={topPicksData?.title}
           description={topPicksData?.desc}
         />

@@ -5,10 +5,10 @@ import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import OurPresence from 'rolnew/section/home/OurPresence';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
-import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
 
 export default function Page() {
   const bannerData = {
@@ -141,6 +141,69 @@ export default function Page() {
     ],
   };
 
+  const faqData = {
+    title: 'Frequently Asked Questions About Wedding Chauffeur Service',
+    data: [
+      {
+        id: 0,
+        question:
+          "What types of vehicles are available in RolDrive's wedding chauffeur service?",
+        ans: 'RolDrive offers a variety of luxury vehicles including elegant sedans and spacious SUVs for wedding events. We also offer high-end vehicles such as the Rolls Royce, Bentley, and Maybach to make your day one of a kind!',
+      },
+      {
+        id: 1,
+        question:
+          'How far in advance should I book the wedding chauffeur service?',
+        ans: 'It is recommended to book as early as possible, preferably several months in advance, to ensure the availability of your preferred vehicle during the wedding season.',
+      },
+      {
+        id: 2,
+        question:
+          'Can the wedding chauffeur service accommodate large wedding parties?',
+        ans: 'Yes, RolDrive offers multiple vehicle types and larger capacity vehicles to comfortably transport large wedding parties, such as the Mercedes V Class.',
+      },
+      {
+        id: 3,
+        question: 'Are decorations for the wedding cars provided by RolDrive?',
+        ans: 'RolDrive can arrange for vehicle decorations according to your wedding theme, though this may require advance notice and additional costs.',
+      },
+      {
+        id: 4,
+        question:
+          "What is included in RolDrive's wedding chauffeur service package?",
+        ans: 'The service typically includes a professional chauffeur, vehicle decoration options, a set number of hours, and complimentary amenities.',
+      },
+      {
+        id: 5,
+        question: 'How are the chauffeurs dressed for wedding services?',
+        ans: 'Chauffeurs are professionally dressed, always in formal attire, to match the elegance of your wedding event.',
+      },
+      {
+        id: 6,
+        question:
+          'Is there a minimum rental time required for the wedding chauffeur service?',
+        ans: 'Yes, there is typically a minimum rental period. It’s best to contact our customer support for further details depending on the specifics of your booking.',
+      },
+      {
+        id: 7,
+        question:
+          'Can we visit multiple locations with our wedding chauffeur service?',
+        ans: "Absolutely, RolDrive's wedding chauffeur service can include multiple stops, from the ceremony to the reception venue and any other locations for photo shoots.",
+      },
+      {
+        id: 8,
+        question:
+          'What happens if we exceed the booked time for our wedding chauffeur service?',
+        ans: 'If the service extends beyond the pre-booked duration, additional hours will be charged at a specified rate.',
+      },
+      {
+        id: 9,
+        question: 'How does RolDrive ensure reliability on the wedding day?',
+        ans: 'RolDrive ensures reliability by confirming all details in advance, providing highly experienced chauffeurs, and using well-maintained, dependable vehicles.',
+      },
+    ],
+  };
+
   return (
     <>
       <ServicesBanner {...bannerData} />
@@ -148,7 +211,7 @@ export default function Page() {
       <TopPicks topPicksData={topPicksData} />
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
-      <FAQ />
+      <ServicesFaq faqData={faqData} />
       <CarClass />
       <Contact />
       <OurPresence />

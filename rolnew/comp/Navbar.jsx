@@ -180,7 +180,7 @@ export default function Navbar() {
                         {item.subLinks.map((subLink) => (
                           <li
                             key={subLink.route}
-                            className='relative group hover:bg-gray-700'
+                            className='relative group hover:bg-gray-700 hover:rounded-md'
                           >
                             {subLink.subLinks ? (
                               <div className='relative'>
@@ -190,7 +190,7 @@ export default function Navbar() {
                                 >
                                   {subLink.label}
                                 </Link>
-                                <ul className='absolute left-full mt-5 top-0 hidden group-hover:block z-[1] p-2 w-fit sub-menu'>
+                                <ul className='absolute left-full mt-5 top-0 hidden z-[1] group-hover:block p-2 w-fit sub-menu backdrop-blur-xl'>
                                   {subLink.subLinks.map((nestedSubLink) => (
                                     <li key={nestedSubLink.route}>
                                       <Link
