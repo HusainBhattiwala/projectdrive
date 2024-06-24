@@ -140,36 +140,36 @@ export const airportData = {
     aboutData: {
       title: 'London Southend Airport',
       description:
-        'Heathrow Airport is the main international airport serving London, England. A crucial transportation hub for tourists visiting London and the UK, with four terminals serving numerous destination worldwide. One can also try the various services, including shops, restaurants, hotels, and transport connections to the city center.',
+        'London Southend Airport, originally established as a military airfield during World War I, transformed into a civilian airport in the 1930s. It played a significant role during World War II as a base for the Royal Air Force. Post-war, it became a key hub for holiday flights to Europe.',
     },
     servicesData: {
-      subTitle: 'More About Heathrow Airport',
+      subTitle: 'More About London Southend Airport',
       mainTitle: 'Tailored Chauffeur Services For Your Every Need',
-      desc: 'Heathrow Airport, one of the worlds busiest airports, serves as a pivotal hub for the thriving chauffeur business, offering luxurious, personalised transportation solutions.',
+      desc: 'London Southend Airport, located in Essex, offers convenient access to London and the surrounding areas. Known for its efficient service and short queues, it primarily serves European destinations. Southend Airport transfers ensure a smooth and comfortable journey to and from the airport.',
       cardData: [
         {
           img: '/rolnew/global/card/card-image1.jpg',
           title: 'Location',
           cardDesc:
-            'Heathrow is 14 miles west of Central London. It is located 3 miles west of Hounslow, 3 miles south of Hayes, and 3 miles north-east of Staines-upon-Thames.',
+            'The London Southend Airport is located between Southend-on-Sea and Rochford town and city centres, 1.7 miles north of Southend, in the county of Essex, 36 miles east of central London',
         },
         {
           img: '/rolnew/global/card/card-image2.jpg',
-          title: 'Facilities',
+          title: 'Operations',
           cardDesc:
-            'Heathrow Airport transfers is used by over 89 airlines flying to 214 destinations in 84 countries.',
+            'London Stansted Airport connects to locations throughout Europe, as well as some far-flung places. There are currently no long-haul flights departing from the airport. Currently, the options for airlines and flights include British Airways, EasyJet, Eurowings, Jet2 and Ryanair.',
         },
         {
           img: '/rolnew/global/card/card-image3.jpg',
           title: 'Terminals',
           cardDesc:
-            'Heathrow Airport transfers offer 4 terminals to its travellers. These terminals operate both domestic and international flights.',
+            'The London Southend Airport has twelve check-ins, two floors, ten departure gates and two baggage claims. There are also several amenities such as shops and places to eat and drink.',
         },
         {
           img: '/rolnew/global/card/card-image4.jpg',
           title: 'Security',
           cardDesc:
-            'Policing of the airport is the responsibility of the aviation security, a unit of the Metropolitan Police. And also sometimes by the British Army.',
+            'London Southend Airport has become the latest location in the country to be guarded by Project Servator-trained personnel. Servator is a nationwide project that detects, deters, and disrupts illegal activities.',
         },
       ],
     },
