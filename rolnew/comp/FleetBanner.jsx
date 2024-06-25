@@ -3,12 +3,14 @@
 import { useEffect, useRef, useState, useContext } from 'react';
 import Category from './Category';
 import { FleetContext } from 'context/FleetContext';
+import { fleetData } from 'static/fleetData';
 
 function FleetBanner({ mainTitle, hideArrow }) {
   const [width, setWidth] = useState();
   const [height, setHeight] = useState(1000);
 
-  const { carCatData, setCarDetails, carDetails } = useContext(FleetContext);
+  const { carDetails, setCarDetails, carCatData, setCarCatData } =
+    useContext(FleetContext);
 
   const bannerRef = useRef(null);
 
@@ -140,7 +142,7 @@ function FleetBanner({ mainTitle, hideArrow }) {
 
       {!hideArrow && (
         <div>
-          <Category categorys={carCatData} setCarData={setCarDetails} />
+          <Category categorys={fleetData} onCategoryChange={setCarCatData} />
         </div>
       )}
 

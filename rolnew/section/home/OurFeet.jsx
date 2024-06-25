@@ -1,11 +1,12 @@
-"use client";
+'use client';
 
-import Container from "rolnew/comp/Container";
-import Title from "./Title";
-import Fleets from "./Fleets";
-import CarCategory from "./CarCategory";
-import { useEffect, useState } from "react";
-import api from "components/utils/api";
+import { useEffect, useState, useContext } from 'react';
+import Container from 'rolnew/comp/Container';
+import { fleetData } from 'static/fleetData';
+import Title from './Title';
+import Fleets from './Fleets';
+import CarCategory from './CarCategory';
+import { FleetContext } from 'context/FleetContext';
 
 // const carCategoryList = [
 //   {
@@ -77,27 +78,18 @@ import api from "components/utils/api";
 // ];
 
 function OurFeet({ showBooking }) {
-  const [carCategoryList, setCarCategoryList] = useState();
-  const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+  const { carDetails, setCarDetails, carCatData, setCarCatData } =
+    useContext(FleetContext);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await api.get("/vehicle-categories/allDetails");
-        console.log("carCat:", res?.data);
-        setCarCategoryList(res?.data);
-        setSelectedCategoryId(res?.data[0]?.vehCatId);
-      } catch (error) {
-        console.log("error fetching car categories from home page", error);
-      }
-    };
-    fetchData();
+    setCarCatData(fleetData[0].options);
+    setCarDetails(fleetData[0].options[0]);
   }, []);
 
-  const filteredSlideData = carCategoryList?.filter(
-    (cat) => cat?.vehCatId === selectedCategoryId
-  );
-  console.log("selectedCatID", selectedCategoryId);
+  const handleCategoryChange = (category) => {
+    setCarCatData(category.options);
+    setCarDetails(category.options[0]);
+  };
 
   return (
     <>
@@ -107,15 +99,12 @@ function OurFeet({ showBooking }) {
           mainTitle='Introducing Our Best Chauffeur Service with Luxury Cars Handpicked For Your Comfort'
         />
         <CarCategory
-          categorys={carCategoryList}
-          onSelectCategory={setSelectedCategoryId}
+          categorys={fleetData}
+          onCategoryChange={handleCategoryChange}
         />
       </Container>
       <div className='bg-[#11202D] sm:pt-[10px] text-center xl:!px-[70px] lg:px-[45px] md:px-[22px] sm:px-[10px] px-4'>
-        <Fleets
-          slideData={selectedCategoryId ? filteredSlideData : carCategoryList}
-          showBooking={showBooking}
-        />
+        <Fleets slideData={carCatData} showBooking={showBooking} />
       </div>
     </>
   );
