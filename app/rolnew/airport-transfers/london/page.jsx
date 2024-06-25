@@ -11,7 +11,7 @@ const pageData = {
   banner: {
     title: 'Airport Transfers London',
     subTitle: 'Arrive in style, stress free and rejuvenated',
-    bannerImage: '/rolnew/airports/london/heathrow-banner.jpg',
+    bannerImage: '/rolnew/airports/airport-transfer-london.jpg',
   },
   aboutData: {
     title: 'Airport Transfers London',
@@ -77,7 +77,8 @@ const pageData = {
       },
       {
         id: 2,
-        question: 'What vehicle options are available from RolDrive’s airport transfer chauffeur services?',
+        question:
+          'What vehicle options are available from RolDrive’s airport transfer chauffeur services?',
         ans: 'RolDrive has a diverse fleet including luxury sedans, SUVs, and vans to accommodate different group sizes and luggage needs.',
       },
       {
@@ -92,7 +93,8 @@ const pageData = {
       },
       {
         id: 5,
-        question: 'What is the cancellation policy for RolDrive airport transfers?',
+        question:
+          'What is the cancellation policy for RolDrive airport transfers?',
         ans: 'Cancellations can be made up to 12 hours before the scheduled pickup without incurring charges.',
       },
       {
@@ -117,7 +119,6 @@ const pageData = {
       },
     ],
   },
-
 };
 
 function LondonAirportPage() {

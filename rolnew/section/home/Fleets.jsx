@@ -28,7 +28,7 @@ export default function Fleets({ slideData, showBooking = false }) {
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 60,
+            spaceBetween: 50,
           },
         }}
         centeredSlides

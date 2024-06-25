@@ -11,7 +11,7 @@ const pageData = {
   banner: {
     title: 'Dubai Airport Transfers',
     subTitle: 'Arrive in style, stress free and rejuvenated',
-    bannerImage: '/rolnew/airports/london/heathrow-banner.jpg',
+    bannerImage: '/rolnew/airports/airport-transfer-dubai.jpg',
   },
   aboutData: {
     title: 'Dubai Airport Transfers',
