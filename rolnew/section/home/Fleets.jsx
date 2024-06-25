@@ -28,7 +28,7 @@ export default function Fleets({ slideData, showBooking = false }) {
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 50,
+            spaceBetween: 60,
           },
         }}
         centeredSlides
@@ -46,7 +46,7 @@ export default function Fleets({ slideData, showBooking = false }) {
       >
         {slideData?.map((item) => (
           <SwiperSlide key={item.id} w>
-            <div className='w-full h-full'>
+            <div className='max-w-[574px] h-full'>
               <img src={item?.img} alt={item?.name} />
             </div>
             <p className='text-center text-[#E5EAFA] text-xl font-medium flex-none'>

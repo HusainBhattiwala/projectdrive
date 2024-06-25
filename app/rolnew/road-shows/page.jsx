@@ -13,7 +13,6 @@ import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import { roadShowData } from './roadShowData';
 
 export default function page() {
-
   return (
     <>
       <ServicesBanner {...roadShowData.bannerData} />
@@ -21,7 +20,7 @@ export default function page() {
       <TopPicks topPicksData={roadShowData.topPicksData} />
       <TrustedPartners trustedPartnersData={roadShowData.trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
-      <ServicesFaq faqData={roadShowData.faqData } />
+      <ServicesFaq faqData={roadShowData.faqData} />
       <CarClass />
       <Contact />
       <OurPresence />
