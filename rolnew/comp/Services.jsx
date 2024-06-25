@@ -22,7 +22,7 @@ function Services() {
         <div className='grid lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 grid-cols-2 sm:justify-center sm:items-center gap-x-6 gap-y-6 sm:mt-0 mb-4'>
           <div className='col-span-1'>
             <Card
-              title='Airport Transfers London'
+              title='London Airport Transfers'
               description="RolDrive's Airport Transfers London services cover all major airports in the city ensuring seamless, luxurious travel to and from the city's airports."
               img='/rolnew/global/card/card-image1.jpg'
             />
