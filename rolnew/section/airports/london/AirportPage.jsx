@@ -7,7 +7,6 @@ import OurFeet from 'rolnew/section/home/OurFeet';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
 import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
-import FAQ from 'rolnew/comp/FAQ';
 import AirportBookingFlow from 'rolnew/comp/AirportBookingFlow';
 import Services from 'rolnew/section/home/Services';
 import ServicesFaq from 'rolnew/comp/ServicesFaq';

@@ -42,7 +42,7 @@ function Collaspe({ list }) {
               slectedId === index ? "h-auto block sm:pt-6 pt-4" : "h-0 hidden"
             } transition-all delay-150`}
           >
-            <p className='text-xs font-normal text-[#B2B2B2]'>{faq.ans}</p>
+            <p className='text-sm font-normal text-[#B2B2B2]'>{faq.ans}</p>
           </div>
         </div>
       ))}

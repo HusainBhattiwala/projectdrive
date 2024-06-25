@@ -24,7 +24,7 @@ export const airportData = {
         },
         {
           img: '/rolnew/global/card/card-image2.jpg',
-          title: 'Facilities',
+          title: 'Operations',
           cardDesc:
             'Heathrow Airport transfers is used by over 89 airlines flying to 214 destinations in 84 countries.',
         },
@@ -104,7 +104,7 @@ export const airportData = {
 
   gatwick: {
     banner: {
-      title: 'Gatwick Airport Transfer',
+      title: 'Airport Transfer Gatwick',
       subTitle: 'Arrive in style, stress free and rejuvenated',
       bannerImage: '/rolnew/airports/london/heathrow-banner.jpg',
     },
@@ -127,7 +127,7 @@ export const airportData = {
         },
         {
           img: '/rolnew/global/card/card-image2.jpg',
-          title: 'Facilities',
+          title: 'Operations',
           cardDesc:
             'Gatwick is the secondary London hub for British Airways and the largest operating base for low-cost carrier easyJet.',
         },
@@ -145,6 +145,61 @@ export const airportData = {
         },
       ],
     },
+    faqData: {
+      title: 'Frequently Asked Questions About Gatwick Airport Transfers:',
+      data: [
+        {
+          id: 0,
+          question: 'What types of vehicles does RolDrive offer for airport transfers at Gatwick?',
+          ans: 'RolDrive provides a range of vehicles including luxury sedans, SUVs, and minivans to cater to different passenger needs and group sizes.'
+        },
+        {
+          id: 1,
+          question: 'How can I book a RolDrive chauffeur for an airport transfer at Gatwick?',
+          ans: 'Airport transfers Gatwick bookings can be made online through the RolDrive website, via our mobile app, or by calling our customer service hotline.'
+        },
+        {
+          id: 2,
+          question: 'Are RolDrive chauffeurs available 24/7 for airport transfers at Gatwick?',
+          ans: 'Yes, RolDrive offers 24/7 chauffeur services to ensure availability for early morning or late-night flights.'
+        },
+        {
+          id: 3,
+          question: 'What is the process for meeting my RolDrive chauffeur at Gatwick Airport?',
+          ans: 'Upon arrival, the chauffeur will wait at the designated meeting point in the terminal with a name sign for easy identification.'
+        },
+        {
+          id: 4,
+          question: 'Does RolDrive monitor flight arrivals for delays or early arrivals?',
+          ans: 'Yes, RolDrive tracks flight statuses in real time to adjust pickup times accordingly, ensuring timely service despite any changes.'
+        },
+        {
+          id: 5,
+          question: 'Are there additional charges for waiting times if my flight is suddenly delayed?',
+          ans: 'RolDrive typically includes a grace period of 1 hour in case of flight delays. Additional charges may apply if the wait exceeds this period.'
+        },
+        {
+          id: 6,
+          question: 'Can I request a child seat for my airport transfer with RolDrive?',
+          ans: 'Yes, RolDrive can provide child seats upon request to ensure the safety and comfort of young passengers.'
+        },
+        {
+          id: 7,
+          question: 'What measures does RolDrive take for passenger safety and hygiene?',
+          ans: 'RolDrive follows strict hygiene protocols, including regular sanitization of vehicles both before and after every transfer.'
+        },
+        {
+          id: 8,
+          question: 'How can I cancel or modify my booking with RolDrive?',
+          ans: 'Bookings can be modified or cancelled via the RolDrive website, app, or customer service. Policies on cancellations and changes vary, so it\'s best to check specific terms. Usually, a full refund is approved up to 12 hours before booking time.'
+        },
+        {
+          id: 9,
+          question: 'Are RolDrive\'s airport transfer services at Gatwick wheelchair accessible?',
+          ans: 'RolDrive offers wheelchair-accessible vehicles upon request to accommodate passengers with mobility needs.'
+        }
+      ]
+    }
   },
   londoncity: {
     banner: {
@@ -171,7 +226,7 @@ export const airportData = {
         },
         {
           img: '/rolnew/global/card/card-image2.jpg',
-          title: 'Facilities',
+          title: 'Operations',
           cardDesc:
             'London City Airport hosts several airline operators, including British Airways, KLM, Lufthansa, Alitalia, SWISS, and Aer Lingus. These airlines offer flights to various European destinations, providing convenient options for both business and leisure travellers',
         },
@@ -189,6 +244,61 @@ export const airportData = {
         },
       ],
     },
+    faqData: {
+      title: 'Frequently Asked Questions About London City Airport Transfers:',
+      data: [
+        {
+          id: 0,
+          question: 'What types of vehicles does RolDrive offer for airport transfer at London City Airport?',
+          ans: 'RolDrive provides a variety of vehicles including luxury executive sedans, SUVs, and minivans to accommodate different passenger needs and group sizes.'
+        },
+        {
+          id: 1,
+          question: 'How can I book a RolDrive chauffeur for an airport transfer at London City Airport?',
+          ans: 'Bookings can be made online through the RolDrive website, via our mobile app, or by contacting our customer service hotline.'
+        },
+        {
+          id: 2,
+          question: 'Are RolDrive chauffeurs available 24/7 at London City Airport?',
+          ans: 'Yes, RolDrive offers 24/7 chauffeur services to cater to passengers arriving or departing at any time of day.'
+        },
+        {
+          id: 3,
+          question: 'What is the process for meeting my RolDrive chauffeur at London City Airport?',
+          ans: 'Upon arrival, the chauffeur will wait at the designated meeting point inside the terminal with a name sign for easy identification.'
+        },
+        {
+          id: 4,
+          question: 'Does RolDrive monitor flight arrivals for delays or early arrivals at London City Airport?',
+          ans: 'Yes, RolDrive tracks flight statuses in real-time to adjust pickup times accordingly, ensuring prompt service regardless of flight changes.'
+        },
+        {
+          id: 5,
+          question: 'Are there additional charges for waiting times if my flight is delayed at London City Airport?',
+          ans: 'RolDrive typically includes a complimentary waiting period of 1 hour in case of sudden delays. Additional charges may apply if the wait exceeds this period.'
+        },
+        {
+          id: 6,
+          question: 'Can I request a child seat for my airport transfer with RolDrive?',
+          ans: 'Yes, RolDrive can provide child seats upon request to ensure the safety and comfort of young passengers.'
+        },
+        {
+          id: 7,
+          question: 'What measures does RolDrive take to ensure passenger safety and hygiene?',
+          ans: 'RolDrive follows strict hygiene protocols, including regular sanitisation of vehicles before and after usage.'
+        },
+        {
+          id: 8,
+          question: 'How can I cancel or modify my booking with RolDrive?',
+          ans: 'Bookings can be modified or cancelled via the RolDrive website, app, or customer service. Policies on cancellations and changes vary, so it\'s best to check specific terms. A full refund is offered upon cancellation 12 hours before booking time.'
+        },
+        {
+          id: 9,
+          question: 'Are RolDrive\'s airport transfer services at London City Airport wheelchair accessible?',
+          ans: 'RolDrive offers wheelchair-accessible vehicles upon request to accommodate passengers with mobility needs.'
+        }
+      ]
+    }
   },
   londonsouthend: {
     banner: {
@@ -216,7 +326,7 @@ export const airportData = {
           img: '/rolnew/global/card/card-image2.jpg',
           title: 'Operations',
           cardDesc:
-            'London Stansted Airport connects to locations throughout Europe, as well as some far-flung places. There are currently no long-haul flights departing from the airport. Currently, the options for airlines and flights include British Airways, EasyJet, Eurowings, Jet2 and Ryanair.',
+            'The London Southend Airport connects to locations throughout Europe, as well as some far-flung places. There are currently no long-haul flights departing from the airport. Currently, the options for airlines and flights include British Airways, EasyJet, Eurowings, Jet2 and Ryanair.',
         },
         {
           img: '/rolnew/global/card/card-image3.jpg',
@@ -232,7 +342,63 @@ export const airportData = {
         },
       ],
     },
+    faqData: {
+      title: 'Frequently Asked Questions About London Southend Airport Transfers:',
+      data: [
+        {
+          id: 0,
+          question: 'What types of vehicles does RolDrive offer for airport transfers at London Southend Airport?',
+          ans: 'RolDrive provides a range of vehicles including luxury sedans, SUVs, and minivans to cater to different passenger needs and group sizes.'
+        },
+        {
+          id: 1,
+          question: 'How can I book a RolDrive chauffeur for an airport transfer at London Southend Airport?',
+          ans: 'Bookings can be made online through the RolDrive website, via our mobile app, or by contacting our customer service hotline.'
+        },
+        {
+          id: 2,
+          question: 'Are RolDrive chauffeurs available 24/7 at London Southend Airport?',
+          ans: 'Yes, RolDrive offers 24/7 chauffeur services to ensure availability for early morning or late-night flights.'
+        },
+        {
+          id: 3,
+          question: 'What is the process for meeting my RolDrive chauffeur at London Southend Airport?',
+          ans: 'Upon arrival, the chauffeur will wait at the designated meeting point inside the terminal with a name sign for easy identification.'
+        },
+        {
+          id: 4,
+          question: 'Does RolDrive monitor flight arrivals for delays or early arrivals at London Southend Airport?',
+          ans: 'Yes, RolDrive tracks flight statuses in real time to adjust pickup times accordingly, ensuring prompt service despite any changes.'
+        },
+        {
+          id: 5,
+          question: 'Are there additional charges for waiting times if my flight is delayed at London Southend Airport?',
+          ans: 'RolDrive typically includes a grace period of one hour for airport transfers. Additional charges may apply if the wait exceeds this period.'
+        },
+        {
+          id: 6,
+          question: 'Can I request a child seat for my airport transfer with RolDrive?',
+          ans: 'Yes, RolDrive can provide child seats upon request to ensure the safety and comfort of young passengers.'
+        },
+        {
+          id: 7,
+          question: 'What measures does RolDrive take for passenger safety and hygiene?',
+          ans: 'RolDrive follows strict hygiene protocols, including regular sanitisation of vehicles before and after every use.'
+        },
+        {
+          id: 8,
+          question: 'How can I cancel or modify my booking with RolDrive?',
+          ans: 'Bookings can be modified or cancelled via the RolDrive website, app, or customer service. Policies on cancellations and changes vary, so it\'s best to check specific terms. A full refund is offered for cancellations 12 hours before booking time.'
+        },
+        {
+          id: 9,
+          question: 'Are RolDrive\'s airport transfer services at London Southend Airport wheelchair accessible?',
+          ans: 'RolDrive offers wheelchair-accessible vehicles upon request to accommodate passengers with mobility needs.'
+        }
+      ]
+    }
   },
+
   londonstansted: {
     banner: {
       title: 'London Stansted Airport Transfer',
@@ -241,40 +407,94 @@ export const airportData = {
     },
     aboutData: {
       title: 'London Stansted Airport',
-      description:
-        'Heathrow Airport is the main international airport serving London, England. A crucial transportation hub for tourists visiting London and the UK, with four terminals serving numerous destination worldwide. One can also try the various services, including shops, restaurants, hotels, and transport connections to the city center.',
+      description:'London Stansted Airport, located in Essex, began as a World War II airfield, opened in 1943 as RAF Stansted Mountfitchet. Initially serving as a base for the USAAF, it transitioned to civilian use in the 1960s. Over the decades, it expanded into a major international airport, catering to millions of passengers annually.',
     },
     servicesData: {
-      subTitle: 'More About Heathrow Airport',
+      subTitle: 'More About London Stansted Airport',
       mainTitle: 'Tailored Chauffeur Services For Your Every Need',
-      desc: 'Heathrow Airport, one of the worlds busiest airports, serves as a pivotal hub for the thriving chauffeur business, offering luxurious, personalised transportation solutions.',
+      desc: 'London Stansted Airport is the tertiary international airport serving London, the capital of England and the United Kingdom. It is located near Stansted Mountfitchet, Essex. London Stansted serves over 160 destinations across Europe, Asia and Africa. Stansted is a base for several European low-cost carriers.',
       cardData: [
         {
           img: '/rolnew/global/card/card-image1.jpg',
           title: 'Location',
           cardDesc:
-            'Heathrow is 14 miles west of Central London. It is located 3 miles west of Hounslow, 3 miles south of Hayes, and 3 miles north-east of Staines-upon-Thames.',
+            'London Stansted Airport is located near Stansted Mountfitchet, Essex, 42 miles northeast of Central London.',
         },
         {
           img: '/rolnew/global/card/card-image2.jpg',
-          title: 'Facilities',
+          title: 'Operations',
           cardDesc:
-            'Heathrow Airport transfers is used by over 89 airlines flying to 214 destinations in 84 countries.',
+            'Stansted is a base for many European low-cost carriers. This includes being the largest base for the low cost airline Ryanair, with over 100 destinations served by the airline. Stansted\'s runway is also used by private companies such as the Harrods Aviation, Titan Airways, and XJet',
         },
         {
           img: '/rolnew/global/card/card-image3.jpg',
           title: 'Terminals',
           cardDesc:
-            'Heathrow Airport transfers offer 4 terminals to its travellers. These terminals operate both domestic and international flights.',
+            'London Stansted Airport has one main passenger terminal. Three passenger satellites have departure gates; one is connected to the main terminal by an air bridge and the other two by the Stansted Airport Transit System people mover.',
         },
         {
           img: '/rolnew/global/card/card-image4.jpg',
           title: 'Security',
           cardDesc:
-            'Policing of the airport is the responsibility of the aviation security, a unit of the Metropolitan Police. And also sometimes by the British Army.',
+            'Security at London Stansted Airport is provided by a combination of airport security staff and the UK government\'s security agencies, including the Metropolitan Police and the British Transport Police. These agencies work together to ensure the safety and security of passengers, staff, and airport facilities.',
         },
       ],
     },
+    faqData: {
+      title: 'Frequently Asked Questions About London Stansted Airport Transfers:',
+      data: [
+        {
+          id: 0,
+          question: 'What types of vehicles does RolDrive offer for airport transfers at London Stansted Airport?',
+          ans: 'RolDrive provides a range of vehicles including luxury sedans, SUVs, and minivans to cater to different passenger needs and group sizes.'
+        },
+        {
+          id: 1,
+          question: 'How can I book a RolDrive chauffeur for an airport transfer at London Stansted Airport?',
+          ans: 'Bookings can be made online through the RolDrive website, via their mobile app, or by contacting their customer service hotline.'
+        },
+        {
+          id: 2,
+          question: 'Are RolDrive chauffeurs available 24/7 at London Stansted Airport?',
+          ans: 'Yes, RolDrive offers 24/7 chauffeur services to ensure availability for early morning or late-night flights.'
+        },
+        {
+          id: 3,
+          question: 'What is the process for meeting my RolDrive chauffeur at London Stansted Airport?',
+          ans: 'Upon arrival, the chauffeur will wait at the designated meeting point inside the terminal with a name sign for easy identification.'
+        },
+        {
+          id: 4,
+          question: 'Does RolDrive monitor flight arrivals for delays or early arrivals at London Stansted Airport?',
+          ans: 'Yes, RolDrive tracks flight statuses in real time to adjust pickup times accordingly, ensuring prompt service despite any changes.'
+        },
+        {
+          id: 5,
+          question: 'Are there additional charges for waiting times if my flight is delayed at London Stansted Airport?',
+          ans: 'RolDrive typically includes a grace period for waiting times. Additional charges may apply if the wait exceeds this period.'
+        },
+        {
+          id: 6,
+          question: 'Can I request a child seat for my airport transfer with RolDrive?',
+          ans: 'Yes, RolDrive can provide child seats upon request to ensure the safety and comfort of young passengers.'
+        },
+        {
+          id: 7,
+          question: 'What measures does RolDrive take for passenger safety and hygiene?',
+          ans: 'RolDrive follows strict hygiene protocols, including regular sanitization of vehicles and providing hand sanitizers for passengers.'
+        },
+        {
+          id: 8,
+          question: 'How can I cancel or modify my booking with RolDrive?',
+          ans: 'Bookings can be modified or cancelled via the RolDrive website, app, or customer service. Policies on cancellations and changes vary, so it\'s best to check specific terms.'
+        },
+        {
+          id: 9,
+          question: 'Are RolDrive\'s airport transfer services at London Stansted Airport wheelchair accessible?',
+          ans: 'RolDrive offers wheelchair-accessible vehicles upon request to accommodate passengers with mobility needs.'
+        }
+      ]
+    }    
   },
   luton: {
     banner: {
@@ -285,38 +505,94 @@ export const airportData = {
     aboutData: {
       title: 'Luton Airport',
       description:
-        'Heathrow Airport is the main international airport serving London, England. A crucial transportation hub for tourists visiting London and the UK, with four terminals serving numerous destination worldwide. One can also try the various services, including shops, restaurants, hotels, and transport connections to the city center.',
+        'Luton Airport, originally opened in 1938 as Luton Municipal Airport, was initially used by the Royal Air Force during World War II. Post-war, it transitioned to civilian use, becoming a key hub for charter airlines in the 1960s and 1970s. Today, it serves millions of passengers annually.',
     },
     servicesData: {
       subTitle: 'More About Heathrow Airport',
       mainTitle: 'Tailored Chauffeur Services For Your Every Need',
-      desc: 'Heathrow Airport, one of the worlds busiest airports, serves as a pivotal hub for the thriving chauffeur business, offering luxurious, personalised transportation solutions.',
+      desc: 'Luton Airport, one of London\'s major airports, primarily serves low-cost airlines and charter flights. It handles millions of passengers annually, connecting them to numerous European destinations. The airport features modern amenities, efficient transport links to central London, and plays a crucial role in both business and leisure travel.',
       cardData: [
         {
           img: '/rolnew/global/card/card-image1.jpg',
           title: 'Location',
           cardDesc:
-            'Heathrow is 14 miles west of Central London. It is located 3 miles west of Hounslow, 3 miles south of Hayes, and 3 miles north-east of Staines-upon-Thames.',
+            'London Luton Airport is located in Luton, Bedfordshire, England, situated 1.7 miles east of the town centre and 29 miles north of Central London.',
         },
         {
           img: '/rolnew/global/card/card-image2.jpg',
-          title: 'Facilities',
+          title: 'Operations',
           cardDesc:
-            'Heathrow Airport transfers is used by over 89 airlines flying to 214 destinations in 84 countries.',
+            'Luton Airport hosts airlines like EasyJet, Ryanair, and Wizz Air, offering numerous European routes. It also handles chartered flights, catering to seasonal and holiday destinations.',
         },
         {
           img: '/rolnew/global/card/card-image3.jpg',
           title: 'Terminals',
           cardDesc:
-            'Heathrow Airport transfers offer 4 terminals to its travellers. These terminals operate both domestic and international flights.',
+            'Luton Airport has a single terminal that efficiently handles all passenger flights, offering various amenities and services to accommodate millions of travellers annually.',
         },
         {
           img: '/rolnew/global/card/card-image4.jpg',
           title: 'Security',
           cardDesc:
-            'Policing of the airport is the responsibility of the aviation security, a unit of the Metropolitan Police. And also sometimes by the British Army.',
+            'Luton Airport\'s security services are provided by Securitas, ensuring passenger safety with advanced screening technologies, trained personnel, and stringent security protocols',
         },
       ],
     },
+    faqData: {
+      title: 'Frequently Asked Questions About Luton Airport Transfers:',
+      data: [
+        {
+          id: 0,
+          question: 'What types of vehicles does RolDrive offer for airport transfers at Luton Airport?',
+          ans: 'RolDrive offers a variety of vehicles, including luxury sedans, SUVs, and minivans, to accommodate different passenger needs and group sizes.'
+        },
+        {
+          id: 1,
+          question: 'How can I book a RolDrive chauffeur for an airport transfer at Luton Airport?',
+          ans: 'Bookings can be made online through the RolDrive website, via their mobile app, or by contacting their customer service hotline.'
+        },
+        {
+          id: 2,
+          question: 'Are RolDrive chauffeurs available 24/7 at Luton Airport?',
+          ans: 'Yes, RolDrive provides 24/7 chauffeur services to ensure availability for early morning or late-night flights.'
+        },
+        {
+          id: 3,
+          question: 'What is the process for meeting my RolDrive chauffeur at Luton Airport?',
+          ans: 'Upon arrival, the chauffeur will wait at the designated meeting point in the terminal with a name sign for easy identification.'
+        },
+        {
+          id: 4,
+          question: 'Does RolDrive monitor flight arrivals for delays or early arrivals at Luton Airport?',
+          ans: 'Yes, RolDrive tracks flight statuses in real time to adjust pickup times accordingly, ensuring prompt service regardless of flight changes.'
+        },
+        {
+          id: 5,
+          question: 'Are there additional charges for waiting times if my flight is delayed at Luton Airport?',
+          ans: 'RolDrive includes a grace period for waiting times. Additional charges may apply if the wait exceeds this period.'
+        },
+        {
+          id: 6,
+          question: 'Can I request a child seat for my airport transfer with RolDrive?',
+          ans: 'Yes, RolDrive can provide child seats upon request to ensure the safety and comfort of young passengers.'
+        },
+        {
+          id: 7,
+          question: 'What measures does RolDrive take for passenger safety and hygiene?',
+          ans: 'RolDrive follows strict hygiene protocols, including regular vehicle sanitization before and after usage.'
+        },
+        {
+          id: 8,
+          question: 'How can I cancel or modify my booking with RolDrive?',
+          ans: 'Bookings can be modified or cancelled via the RolDrive website, app, or customer service. Policies on cancellations and changes vary, so it\'s best to check specific terms. A full refund is offered when a booking is cancelled up to 12 hours before booking time.'
+        },
+        {
+          id: 9,
+          question: 'Are RolDrive\'s airport transfer services at Luton Airport wheelchair accessible?',
+          ans: 'RolDrive offers wheelchair-accessible vehicles upon request to accommodate passengers with mobility needs.'
+        }
+      ]
+    }
+    
   },
 };
