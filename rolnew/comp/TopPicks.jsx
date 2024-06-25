@@ -43,17 +43,19 @@ const countryList = [
   },
 ];
 
-const items = [
-  <a key='1' href='/about'>
-    About
-  </a>,
-  <a key='2' href='/services'>
-    Services
-  </a>,
-  <a key='3' href='/contact'>
-    Contact
-  </a>,
-];
+// const items = [
+//   <a key='1' href='/about'>
+//     About
+//   </a>,
+//   <a key='2' href='/services'>
+//     Services
+//   </a>,
+//   <a key='3' href='/contact'>
+//     Contact
+//   </a>,
+// ];
+
+const items = ['about', 'services'];
 
 function TopPicks({ scrollRef, airportList, topPicksData }) {
   const { openModal } = useContext(ModalContext);
@@ -81,7 +83,11 @@ function TopPicks({ scrollRef, airportList, topPicksData }) {
                     : 'Choose Your City'
                 }
                 className='rounded-xl'
-                items={items}
+                items={
+                  topPicksData?.dropdownOneData
+                    ? topPicksData?.dropdownOneData
+                    : items
+                }
                 full
               />
             </div>
@@ -93,7 +99,11 @@ function TopPicks({ scrollRef, airportList, topPicksData }) {
                     : 'Choose Your Destination'
                 }
                 className='rounded-xl'
-                items={items}
+                items={
+                  topPicksData?.dropdownTwoData
+                    ? topPicksData?.dropdownTwoData
+                    : items
+                }
                 full
               />
             </div>

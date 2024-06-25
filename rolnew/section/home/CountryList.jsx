@@ -16,7 +16,7 @@ function EachSlide({ id, cityName, image, countryCode, address }) {
       key={id}
     >
       <div className='relative w-[200px] h-[200px]'>
-        {/* <div className="bg-[#11202D] bg-opacity-25 absolute w-full h-full z-10 grayscale-[15%] group-hover:bg-transparent group-hover:grayscale-0" /> */}
+        {/* <div className='bg-[#11202D] bg-opacity-25 absolute w-full h-full z-10 grayscale-[15%] group-hover:bg-transparent group-hover:grayscale-0' /> */}
         <Pic
           className='rounded-xl'
           alt={cityName}
@@ -24,10 +24,10 @@ function EachSlide({ id, cityName, image, countryCode, address }) {
           objectFit='cover'
         />
       </div>
-      <div className='flex gap-x-2 mt-3 items-center'>
+      <div className='flex gap-x-2 mt-3 shrink-0'>
         <div className='w-6 h-6'>
           <Pic
-            className='rounded-full'
+            className='rounded-full shrink-0'
             alt={countryCode}
             src={`${process.env.NEXT_PUBLIC_COUNTRY_FLAG_URL}/${countryCode}.svg`}
             objectFit='cover'

@@ -68,56 +68,56 @@ const pageData = {
       {
         id: 0,
         question: 'What airport transfers in London does RolDrive service?',
-        ans: 'RolDrive offers transfers to and from all major London airports, including Heathrow, Gatwick, Stansted, Luton, Southend, and London City Airport.'
+        ans: 'RolDrive offers transfers to and from all major London airports, including Heathrow, Gatwick, Stansted, Luton, Southend, and London City Airport.',
       },
       {
         id: 1,
         question: 'How can I book a RolDrive airport transfer?',
-        ans: 'RolDrive’s airport transfer chauffeur bookings can be made through RolDrive’s website, mobile app, or by calling our customer service number.'
+        ans: 'RolDrive’s airport transfer chauffeur bookings can be made through RolDrive’s website, mobile app, or by calling our customer service number.',
       },
       {
         id: 2,
         question: 'What vehicle options are available from RolDrive’s airport transfer chauffeur services?',
-        ans: 'RolDrive has a diverse fleet including luxury sedans, SUVs, and vans to accommodate different group sizes and luggage needs.'
+        ans: 'RolDrive has a diverse fleet including luxury sedans, SUVs, and vans to accommodate different group sizes and luggage needs.',
       },
       {
         id: 3,
         question: 'Do RolDrive chauffeurs help with luggage?',
-        ans: 'Yes, RolDrive chauffeurs assist passengers with their luggage for a hassle-free experience.'
+        ans: 'Yes, RolDrive chauffeurs assist passengers with their luggage for a hassle-free experience.',
       },
       {
         id: 4,
         question: 'Can I request a child seat with my RolDrive transfer?',
-        ans: 'Child seats are available upon request during the booking process to ensure safety for younger passengers.'
+        ans: 'Child seats are available upon request during the booking process to ensure safety for younger passengers.',
       },
       {
         id: 5,
         question: 'What is the cancellation policy for RolDrive airport transfers?',
-        ans: 'Cancellations can be made up to 12 hours before the scheduled pickup without incurring charges.'
+        ans: 'Cancellations can be made up to 12 hours before the scheduled pickup without incurring charges.',
       },
       {
         id: 6,
         question: 'How does RolDrive handle flight delays?',
-        ans: 'RolDrive monitors flights and adjusts pickup times accordingly, providing flexibility and ensuring the chauffeur is there when you arrive.'
+        ans: 'RolDrive monitors flights and adjusts pickup times accordingly, providing flexibility and ensuring the chauffeur is there when you arrive.',
       },
       {
         id: 7,
         question: 'Are RolDrive’s chauffeurs experienced?',
-        ans: 'All chauffeurs are professionally trained, licensed, and have extensive local knowledge, ensuring a safe and efficient journey.'
+        ans: 'All chauffeurs are professionally trained, licensed, and have extensive local knowledge, ensuring a safe and efficient journey.',
       },
       {
         id: 8,
         question: 'Does RolDrive offer meet-and-greet services at the airport?',
-        ans: 'Yes, chauffeurs can meet passengers at arrivals with a name sign for ease of contact and peace of mind. All free of charge.'
+        ans: 'Yes, chauffeurs can meet passengers at arrivals with a name sign for ease of contact and peace of mind. All free of charge.',
       },
       {
         id: 9,
         question: 'What measures has RolDrive implemented for COVID-19?',
-        ans: 'RolDrive follows strict hygiene protocols, including vehicle sanitization to ensure passenger safety.'
-      }
-    ]
-  }
-  
+        ans: 'RolDrive follows strict hygiene protocols, including vehicle sanitization to ensure passenger safety.',
+      },
+    ],
+  },
+
 };
 
 function LondonAirportPage() {
