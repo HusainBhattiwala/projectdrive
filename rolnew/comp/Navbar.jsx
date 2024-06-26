@@ -41,7 +41,7 @@ const navLinks = [
   },
   { route: '/rolnew/business-solution', label: 'Business Solutions' },
   {
-    route: '/rolnew/cities',
+    route: '#',
     label: 'Cities',
     subLinks: [
       { route: '/rolnew/cities/london', label: 'London' },
