@@ -51,28 +51,28 @@ export default function Page() {
       {
         id: 1,
         image: '/rolnew/global/country/london.jpg',
-        cityName: 'London To Bicester Village Car Hire',
+        cityName: 'London To Bicester Village',
         countryCode: 'GB',
         address: 'London',
       },
       {
         id: 2,
         image: '/rolnew/global/country/london.jpg',
-        cityName: 'Wimbledon Chauffeur Service',
+        cityName: 'Wimbledon',
         countryCode: 'GB',
         address: 'London',
       },
       {
         id: 3,
         image: '/rolnew/global/country/london.jpg',
-        cityName: 'Goodwood Event Chauffeur Service',
+        cityName: 'Goodwood Event',
         countryCode: 'GB',
         address: 'London',
       },
       {
         id: 4,
         image: '/rolnew/global/country/london.jpg',
-        cityName: 'Twickenham Stadium Car Hire',
+        cityName: 'Twickenham Stadium',
         countryCode: 'GB',
         address: 'London',
       },
@@ -86,35 +86,35 @@ export default function Page() {
       {
         id: 6,
         image: '/rolnew/global/country/london.jpg',
-        cityName: 'Cheltenham Festival Chauffeur Service',
+        cityName: 'Cheltenham Festival',
         countryCode: 'GB',
         address: 'London',
       },
       {
         id: 7,
         image: '/rolnew/global/country/london.jpg',
-        cityName: 'Royal Windsor Horse Show Car Hire',
+        cityName: 'Royal Windsor Horse Show',
         countryCode: 'GB',
         address: 'London',
       },
       {
         id: 8,
         image: '/rolnew/global/country/london.jpg',
-        cityName: 'Wembley Stadium Chauffeur Services',
+        cityName: 'Wembley Stadium',
         countryCode: 'GB',
         address: 'London',
       },
       {
         id: 9,
         image: '/rolnew/global/country/london.jpg',
-        cityName: 'Royal Sscot Full Day Chauffeur Service',
+        cityName: 'Royal Sscot Full Day',
         countryCode: 'GB',
         address: 'London',
       },
       {
         id: 9,
         image: '/rolnew/global/country/london.jpg',
-        cityName: 'Farnborough Airshow Chauffeur Service',
+        cityName: 'Farnborough Airshow',
         countryCode: 'GB',
         address: 'London',
       },
@@ -248,7 +248,7 @@ export default function Page() {
     <>
       <ServicesBanner {...bannerData} />
       <LuxuriousServiceSearch luxuriousServiceData={luxuriousServiceData} />
-      <TopPicks topPicksData={topPicksData} />
+      <TopPicks topPicksData={topPicksData} show={true} />
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
       <ServicesFaq faqData={faqData} />

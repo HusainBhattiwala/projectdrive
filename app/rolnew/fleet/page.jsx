@@ -5,14 +5,25 @@ import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import OurPresence from 'rolnew/section/home/OurPresence';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
-import FAQ from 'rolnew/comp/FAQ';
 import CarClass from 'rolnew/comp/CarClass';
 import FleetBanner from 'rolnew/comp/FleetBanner';
 import { useEffect, useRef, useState } from 'react';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
 
 export default function Page() {
   const bannerData = {
     mainTitle: 'Our Luxurious Fleet',
+  };
+
+  const faqData = {
+    title: 'Frequently Asked Questions Fleets:',
+    data: [
+      {
+        id: 0,
+        question: 'What is an airport transfer?',
+        ans: 'An airport transfer is a service that transports passengers from an airport to their destination or vice versa, typically using vehicles such as cars, shuttles, or limousines.',
+      },
+    ],
   };
 
   const [hideArrow, setHideArrow] = useState(false);
@@ -41,7 +52,7 @@ export default function Page() {
       <TrustedPartners />
       <OurPresence />
       <Locations />
-      <FAQ />
+      <ServicesFaq faqData={faqData} />
       <Contact />
       <DownloadOurApp />
     </>

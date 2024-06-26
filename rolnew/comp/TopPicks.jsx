@@ -57,7 +57,7 @@ const countryList = [
 
 const items = ['about', 'services'];
 
-function TopPicks({ scrollRef, airportList, topPicksData }) {
+function TopPicks({ scrollRef, airportList, topPicksData, show=false }) {
   const { openModal } = useContext(ModalContext);
   return (
     <>
@@ -70,50 +70,54 @@ function TopPicks({ scrollRef, airportList, topPicksData }) {
           mainTitle={topPicksData?.title}
           description={topPicksData?.desc}
         />
-        <div className='px-4 sm:px-24'>
-          <div
-            className='boxes p-[10px] bg-[#2F4456] mt-20 mb-10 w-full h-auto sm:h-20 flex flex-col sm:flex-row gap-1 justify-center items-center rounded-xl'
-            ref={scrollRef}
-          >
-            <div className='box w-full sm:w-full p-2'>
-              <Dropdown
-                label={
-                  topPicksData
-                    ? topPicksData?.search?.dropdown1
-                    : 'Choose Your City'
-                }
-                className='rounded-xl'
-                items={
-                  topPicksData?.dropdownOneData
-                    ? topPicksData?.dropdownOneData
-                    : items
-                }
-                full
-              />
-            </div>
-            <div className='box w-full sm:w-full p-2'>
-              <Dropdown
-                label={
-                  topPicksData
-                    ? topPicksData?.search?.dropdown2
-                    : 'Choose Your Destination'
-                }
-                className='rounded-xl'
-                items={
-                  topPicksData?.dropdownTwoData
-                    ? topPicksData?.dropdownTwoData
-                    : items
-                }
-                full
-              />
-            </div>
-            <div className='box w-full sm:w-[50%] p-2'>
-              <Button className='w-full' white>
-                Search
-              </Button>
+
+        {show &&
+          <div className='px-4 sm:px-24'>
+            <div
+              className='boxes p-[10px] bg-[#2F4456] mt-20 mb-10 w-full h-auto sm:h-20 flex flex-col sm:flex-row gap-1 justify-center items-center rounded-xl'
+              ref={scrollRef}
+            >
+              <div className='box w-full sm:w-full p-2'>
+                <Dropdown
+                  label={
+                    topPicksData
+                      ? topPicksData?.search?.dropdown1
+                      : 'Choose Your City'
+                  }
+                  className='rounded-xl'
+                  items={
+                    topPicksData?.dropdownOneData
+                      ? topPicksData?.dropdownOneData
+                      : items
+                  }
+                  full
+                />
+              </div>
+              <div className='box w-full sm:w-full p-2'>
+                <Dropdown
+                  label={
+                    topPicksData
+                      ? topPicksData?.search?.dropdown2
+                      : 'Choose Your Destination'
+                  }
+                  className='rounded-xl'
+                  items={
+                    topPicksData?.dropdownTwoData
+                      ? topPicksData?.dropdownTwoData
+                      : items
+                  }
+                  full
+                />
+              </div>
+              <div className='box w-full sm:w-[50%] p-2'>
+                <Button className='w-full' white>
+                  Search
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
+        }
+
         {/* <div className="grid gap-4 sm:grid-cols-12">
           <div className="flex flex-col items-center justify-center sm:col-span-3">
             <img src="/rolnew/global/icons/meet.svg" alt="meet" className="mb-1 w-10 h-14" />
