@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <Container className="bg-[#223544] sm:py-8 py-6 text-center mt-16">
         <h1 className="text-4xl leading-10 sm:block hidden">
-          Enjoy Our Service,
+          Enjoy Our Luxury Chauffeur Services
           <br />
           From Anywhere to Everywhere
         </h1>
