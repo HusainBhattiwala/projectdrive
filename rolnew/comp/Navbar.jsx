@@ -44,8 +44,8 @@ const navLinks = [
     route: '/rolnew/cities',
     label: 'Cities',
     subLinks: [
-      { route: '/rolnew/cities/dubai', label: 'Dubai' },
       { route: '/rolnew/cities/london', label: 'London' },
+      { route: '/rolnew/cities/dubai', label: 'Dubai' },
       { route: '/rolnew/cities/newyork', label: 'New-York' },
       { route: '/rolnew/cities/paris', label: 'Paris' },
       { route: '/rolnew/cities/tokyo', label: 'Tokyo' },
@@ -57,7 +57,7 @@ const navLinks = [
     subLinks: [
       {
         route: '/rolnew/airport-transfers/london',
-        label: 'Airport Transfer London',
+        label: 'London',
         subLinks: [
           {
             route: '/rolnew/airport-transfers/london/heathrow',
@@ -69,26 +69,34 @@ const navLinks = [
           },
           {
             route: '/rolnew/airport-transfers/london/londoncity',
-            label: 'London-City',
+            label: 'London City',
           },
           {
             route: '/rolnew/airport-transfers/london/londonsouthend',
-            label: 'London-Southend',
+            label: 'London Southend',
           },
           {
             route: '/rolnew/airport-transfers/london/londonstansted',
-            label: 'London-Stansted',
+            label: 'London Stansted',
           },
           { route: '/rolnew/airport-transfers/london/luton', label: 'Luton' },
         ],
       },
       {
         route: '/rolnew/airport-transfers/dubai',
-        label: 'Airport Transfer Dubai',
+        label: 'Dubai',
       },
       {
         route: '/rolnew/airport-transfers/newyork',
-        label: 'Airport Transfer NewYork',
+        label: 'New York',
+      },
+      {
+        route: '/rolnew/airport-transfers/paris',
+        label: 'Paris',
+      },
+      {
+        route: '/rolnew/airport-transfers/tokyo',
+        label: 'Tokyo',
       },
     ],
   },
