@@ -48,14 +48,14 @@ function Services({ servicesData }) {
                 <Card
                   title='Airport Transfer'
                   description='Our airport transfers are smooth and effortless. Whether you need to be picked up from your hotel and dropped off at the airport or vice versa, our friendly yet professional chauffeur service will ensure your journey is comfortable and stress-free.'
-                  img='/rolnew/global/card/card-image1.jpg'
+                  img='/rolnew/global/card/home/Airport Transfer Home.jpg'
                 />
               </div>
 
               <div className='col-span-1 h-full'>
                 <Card
                   title='Corporate Chauffeurs'
-                  description='With RolDrive, you’ll make a lasting impression from the moment you set out of our chauffeur driven vehicles. Let us help you make a statement and command the boardroom. Our corporate chauffeurs are dependable, efficient and dedicated to exceeding your expectations.'
+                  description='With RolDrive, you’ll make a lasting impression from the moment you step out of our chauffeur driven vehicles. Let us help you make a statement and command the boardroom. We provide customised corporate packages whether you are booking for yourself or a colleague.'
                   img='/rolnew/global/card/card-image2.jpg'
                   titleNoWrap
                 />
@@ -65,7 +65,7 @@ function Services({ servicesData }) {
                 <Card
                   title='Wedding Transfers'
                   description='We understand the importance of making your special day flawless, which is why we offer a range of chauffeur driven vehicles to choose from, including luxury brands such as Rolls Royce, Maybach and Bentley. Our chauffeur service adds an extra touch of elegance to your celebration.'
-                  img='/rolnew/global/card/card-image3.jpg'
+                  img='/rolnew/global/card/home/Wedding Transfer Home.jpg'
                   titleNoWrap
                 />
               </div>
@@ -74,7 +74,7 @@ function Services({ servicesData }) {
                 <Card
                   title='Private Jet Transfers'
                   description='Our experienced private chauffeur service will safely transport you from the tarmac of your private helicopter or airliner to your hotel or business meeting. Our fleet is equipped with complimentary packages to ensure a comfortable and enjoyable experience.'
-                  img='/rolnew/global/card/card-image4.jpg'
+                  img='/rolnew/global/card/home/Private Jet Transfer Home.jpg'
                   titleNoWrap
                 />
               </div>
@@ -82,8 +82,8 @@ function Services({ servicesData }) {
               <div className='col-span-1 h-full'>
                 <Card
                   title='Event Transfers'
-                  description="We provide transportation services for all types of social, cultural, and sports events in and around the city. Whether you're attending a private party or a large-scale gathering, our event transfer cars are stylish, sophisticated, and comfortable, ensuring a safe and special experience."
-                  img='/rolnew/global/card/card-image5.jpg'
+                  description="We provide transportation services for all types of social, cultural, and sports events in and around the city. Whether you're attending a private party or a large-scale gathering, our event transfer cars are stylish, sophisticated, and comfortable, ensuring a safe and memorable experience."
+                  img='/rolnew/global/card/home/Event Transfer Home.jpg'
                   titleNoWrap
                 />
               </div>
@@ -91,8 +91,8 @@ function Services({ servicesData }) {
               <div className='col-span-1 h-full'>
                 <Card
                   title='Sightseeing Tours'
-                  description='With our hourly chauffeur service you can select from our extensive and diverse fleet of vehicles to ensure that your journey is comfortable and memorable. Experience the luxurious and stress-free transportation solutions of RolDrive as our skilled chauffeurs act as your guide on your trips.'
-                  img='/rolnew/global/card/card-image6.jpg'
+                  description='With our hourly chauffeur service you can select from our extensive and diverse fleet of vehicles to ensure that your journey is comfortable and memorable. Experience the luxurious and stress-free transportation solutions provided by us as our skilled chauffeurs act as your guide on your trips.'
+                  img='/rolnew/global/card/home/Sightseeing Tours Home.jpg'
                   titleNoWrap
                 />
               </div>

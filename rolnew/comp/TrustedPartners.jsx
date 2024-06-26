@@ -29,7 +29,7 @@ function TrustedPartners({
                   <h2 className='sm:text-3xl text-2xl font-medium sm:leading-9 leading-tight text-[#B2B2B2]'>
                     RolDrive - Your trusted travel partner
                   </h2>
-                  <p className='text-[#B2B2B2] leading-5 font-medium text-xs'>
+                  <p className='text-[#B2B2B2] leading-5 font-medium text-sm'>
                     Embark on a journey of luxury and convenience with our
                     global chauffeured car hire service.
                   </p>

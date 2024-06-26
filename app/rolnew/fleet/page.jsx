@@ -9,22 +9,10 @@ import CarClass from 'rolnew/comp/CarClass';
 import FleetBanner from 'rolnew/comp/FleetBanner';
 import { useEffect, useRef, useState } from 'react';
 import ServicesFaq from 'rolnew/comp/ServicesFaq';
+import { fleetData } from './fleetData';
 
 export default function Page() {
-  const bannerData = {
-    mainTitle: 'Our Luxurious Fleet',
-  };
 
-  const faqData = {
-    title: 'Frequently Asked Questions Fleets:',
-    data: [
-      {
-        id: 0,
-        question: 'What is an airport transfer?',
-        ans: 'An airport transfer is a service that transports passengers from an airport to their destination or vice versa, typically using vehicles such as cars, shuttles, or limousines.',
-      },
-    ],
-  };
 
   const [hideArrow, setHideArrow] = useState(false);
 
@@ -45,14 +33,14 @@ export default function Page() {
   return (
     <>
       {/* <BannerTitle mainTitle="Premium Chauffeur Service" description="Your exclusive and dependable chauffeur service indulgence." /> */}
-      <FleetBanner {...bannerData} hideArrow={hideArrow} />
+      <FleetBanner {...fleetData.bannerData} hideArrow={hideArrow} />
       <div ref={carClassRef}>
         <CarClass hideArrow={hideArrow} />
       </div>
-      <TrustedPartners />
+      <TrustedPartners trustedPartnersData={fleetData.trustedPartnersData}/>
       <OurPresence />
       <Locations />
-      <ServicesFaq faqData={faqData} />
+      <ServicesFaq faqData={fleetData.faqData} />
       <Contact />
       <DownloadOurApp />
     </>
