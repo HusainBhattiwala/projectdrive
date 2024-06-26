@@ -109,7 +109,7 @@ export const airportData = {
 
   gatwick: {
     banner: {
-      title: 'Airport Transfer Gatwick',
+      title: 'Gatwick Airport Transfer',
       subTitle: 'Arrive in style, stress free and rejuvenated',
       bannerImage: '/rolnew/airports/london/gatwick-banner.jpg',
     },
