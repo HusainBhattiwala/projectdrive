@@ -8,7 +8,7 @@ export const airportData = {
     aboutData: {
       title: 'Healthrow Airport',
       description:
-        'Heathrow Airport is the main international airport serving London, England. A crucial transportation hub for tourists visiting London and the UK, with four terminals serving numerous destination worldwide. One can also try the various services, including shops, restaurants, hotels, and transport connections to the city center.',
+        'Heathrow Airport, called London Airport until 1966 and now known as London Heathrow, is the main international airport serving London, England. It is the largest of the six international airports in the London airport system.',
     },
     servicesData: {
       subTitle: 'More About Heathrow Airport',
@@ -116,7 +116,7 @@ export const airportData = {
     aboutData: {
       title: 'Gatwick Airport',
       description:
-        'Gatwick Airport, located near Crawley in West Sussex, England, is the UKs second-largest airport by total passenger traffic. It has two terminals, North and South, and serves over 200 destinations worldwide. Known for its efficiency, Gatwick is a key hub for both international and domestic flights.',
+        'Gatwick Airport, located near Crawley in West Sussex, England, is the UK\'s second-largest airport by total passenger traffic. Serving over 200 destinations worldwide and known for its efficiency, Gatwick is a key hub for both international and domestic flights.',
     },
     servicesData: {
       subTitle: 'More About Gatwick Airport',
@@ -224,7 +224,7 @@ export const airportData = {
     aboutData: {
       title: 'London City Airport',
       description:
-        'London City Airport is an international airport in London, the capital of England and the United Kingdom. It is located in the Royal Docks in the Borough of Newham. The airport was developed by the engineering company Mowlem in 1986–87. In 2016 it was bought by a Canadian-led consortium of Alberta Investment Management Corporation (AIMCo), OMERS, the Ontario Teachers Pension Plan and Wren House Infrastructure Management of the Kuwait Investment Authority.',
+        'London City Airport, opened in 1987, was developed to serve the growing demand for convenient business travel to and from London’s financial districts. Constructed on a former docklands site in East London, it aims to provide swift and efficient access to central London, revolutionising air travel for the city\'s business community.',
     },
     servicesData: {
       subTitle: 'More About London City Airport',
@@ -332,7 +332,7 @@ export const airportData = {
     aboutData: {
       title: 'London Southend Airport',
       description:
-        'London Southend Airport, originally established as a military airfield during World War I, transformed into a civilian airport in the 1930s. It played a significant role during World War II as a base for the Royal Air Force. Post-war, it became a key hub for holiday flights to Europe.',
+        'London Southend Airport, originally established as a military airfield during World War I, transformed into a civilian airport in the 1930s. It played a significant role during World War II as a base for the Royal Air Force. Post-war, it has now become a key hub for holiday flights to Europe.',
     },
     servicesData: {
       subTitle: 'More About London Southend Airport',
@@ -441,7 +441,7 @@ export const airportData = {
     aboutData: {
       title: 'London Stansted Airport',
       description:
-        'London Stansted Airport, located in Essex, began as a World War II airfield, opened in 1943 as RAF Stansted Mountfitchet. Initially serving as a base for the USAAF, it transitioned to civilian use in the 1960s. Over the decades, it expanded into a major international airport, catering to millions of passengers annually.',
+        'London Stansted Airport, located in Essex, began as a World War II airfield, opened in 1943 as RAF Stansted Mountfitchet. Initially serving as a base for the USAAF, it transitioned to civilian use in the 1960s. Over the decades, it has expanded into a major international airport.',
     },
     servicesData: {
       subTitle: 'More About London Stansted Airport',
@@ -549,7 +549,7 @@ export const airportData = {
     aboutData: {
       title: 'Luton Airport',
       description:
-        'Luton Airport, originally opened in 1938 as Luton Municipal Airport, was initially used by the Royal Air Force during World War II. Post-war, it transitioned to civilian use, becoming a key hub for charter airlines in the 1960s and 1970s. Today, it serves millions of passengers annually.',
+        'Luton Airport, originally opened in 1938 as Luton Municipal Airport, was initially used by the Royal Air Force during World War II. Post-war, it transitioned to civilian use, becoming a key hub for charter airlines in the 1960s and 1970s. Today, it is a major UK airport, handling millions of passengers annually with flights to over 70 destinations.',
     },
     servicesData: {
       subTitle: 'More About Heathrow Airport',
