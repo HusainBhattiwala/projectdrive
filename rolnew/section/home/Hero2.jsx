@@ -64,7 +64,7 @@ export default function Hero2() {
       <div className="sm:h-full h-full flex flex-col sm:gap-y-0 gap-y-8 justify-center sm:pt-[28px] pt-[24px] z-[10]">
         <div className="relative z-[5] text-left xl:px-[130px] md:px-[60px] 2xl:px-[130px] px-4 2xl:container 2xl:mx-auto flex lg:flex-row flex-col md:justify-between justify-center items-center md:items-start gap-y-6">
           <div className="md:w-[350px] lg:w-[450px] xl:w-full w-full">
-            <h1 className="lg:text-5xl text-3xl font-semibold text-white drop-shadow-lg">Premium Chauffeur Service</h1>
+            <h1 className="lg:text-5xl text-3xl font-semibold text-white drop-shadow-lg">Luxury Chauffeur Service</h1>
             <p className="sm:text-lg text-base font-medium text-[#E5EAFA] sm:mt-1 sm:leading-normal leading-tight">Your exclusive and dependable chauffeur service indulgence</p>
           </div>
           <div className={`sm:w-[450px] w-full h-fit md:absolute relative 2xl:top-8 md:top-1 md:left-[48%] lg:left-[53%] xl:left-[60%] booking-background rounded-3xl z-50 ${height > 600 ? 'py-6 sm:px-6 px-4' : 'py-4 sm:px-4 px-4'}`}>

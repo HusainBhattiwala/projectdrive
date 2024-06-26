@@ -6,7 +6,7 @@ import Title from './Title';
 function BookingFlow() {
   return (
     <Container className="bg-[#081017] sm:py-[100px] py-8 text-center">
-      <Title subTile="How it Works" mainTitle="Book Your Chauffeur Experience in Three Simple Steps" />
+      <Title subTile="How it Works" mainTitle="Book Your Luxury Chauffeur Service Experience In Three Simple Steps" />
       <div className="grid lg:grid-cols-5 sm:grid-cols-11 grid-cols-1 sm:justify-center sm:items-center pt-10 gap-y-4">
         <div className="lg:col-span-1 sm:col-span-3 col-span-1 flex sm:flex-col flex-row sm:justify-center items-center sm:gap-x-0 gap-x-2">
           <div className="bg-[#11202D] sm:w-20 sm:h-20 w-14 h-14 rounded-lg flex justify-center items-center flex-none">
