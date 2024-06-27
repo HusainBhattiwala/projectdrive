@@ -32,8 +32,9 @@ export default function Fleets({ slideData, showBooking = false }) {
           },
         }}
         centeredSlides
-        loop
+        centerInsufficientSlides
         autoplay
+        loop
         pagination={{
           el: '.swiper-pagination',
         }}
@@ -46,15 +47,15 @@ export default function Fleets({ slideData, showBooking = false }) {
       >
         {slideData?.map((item) => (
           <SwiperSlide key={item.id} w>
-            <div className='max-w-[574px] h-full'>
+            <div className='max-w-[574px]'>
               <img src={item?.img} alt={item?.name} />
             </div>
-            <p className='text-center text-[#E5EAFA] text-xl font-medium flex-none'>
+            <p className='text-center text-[#E5EAFA] text-xl font-medium flex-none mb-2'>
               {item.name}
             </p>
           </SwiperSlide>
         ))}
-        <div className={`sm:py-[42px] py-6 ${showBooking && 'mt-6'}`}>
+        <div className={`sm:py-[42px] py-5 ${showBooking && 'mt-6'}`}>
           {showBooking && (
             <Button className='flex-1 !px-14'>
               <Link href='/rolnew'>Book Now</Link>

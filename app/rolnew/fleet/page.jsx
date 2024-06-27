@@ -12,8 +12,6 @@ import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import { fleetData } from './fleetData';
 
 export default function Page() {
-
-
   const [hideArrow, setHideArrow] = useState(false);
 
   const carClassRef = useRef(null);
@@ -37,7 +35,7 @@ export default function Page() {
       <div ref={carClassRef}>
         <CarClass hideArrow={hideArrow} />
       </div>
-      <TrustedPartners trustedPartnersData={fleetData.trustedPartnersData}/>
+      <TrustedPartners trustedPartnersData={fleetData.trustedPartnersData} />
       <OurPresence />
       <Locations />
       <ServicesFaq faqData={fleetData.faqData} />

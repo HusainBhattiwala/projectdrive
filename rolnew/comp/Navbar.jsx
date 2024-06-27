@@ -105,6 +105,14 @@ export default function Navbar() {
     setOpenSubDropdownIndex(null);
   };
 
+  const toggleDropdown = (index) => {
+    if (openDropdownIndex === index) {
+      setOpenDropdownIndex(null);
+    } else {
+      setOpenDropdownIndex(index);
+    }
+  };
+
   const closeAll = () => {
     setIsSidebarOpen(false);
     setOpenDropdownIndex(null);
