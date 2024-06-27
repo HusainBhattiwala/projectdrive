@@ -171,7 +171,7 @@ export default function Navbar() {
                         href={item.route}
                         className={`text-white ${
                           pathname === item.route ? 'font-normal' : ''
-                        } text-sm font-medium px-2 whitespace-nowrap`}
+                        } text-sm font-medium px-2 whitespace-nowrap hover:bg-[rgba(255,255,255,0.2)] hover:rounded-md`}
                         onClick={closeAll}
                       >
                         {item.label}
@@ -229,7 +229,7 @@ export default function Navbar() {
                       href={item.route}
                       className={`text-white ${
                         pathname === item.route ? 'font-normal' : ''
-                      } text-sm font-medium px-2 whitespace-nowrap`}
+                      } text-sm hover:bg-[rgb(255,255,255)]/20 hover:rounded-md underline-offset-2 font-medium px-2 whitespace-nowrap pop`}
                       onClick={closeAll}
                     >
                       {item.label}
