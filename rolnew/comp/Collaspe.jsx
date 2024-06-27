@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Pic from "rolnew/util/Pic";
+import { useState } from 'react';
+import Pic from 'rolnew/util/Pic';
 
 function Collaspe({ list }) {
   const [slectedId, setSelectedId] = useState(0);
@@ -12,15 +12,15 @@ function Collaspe({ list }) {
         <div
           className={`rounded-xl text-left sm:p-6 p-4 ${
             slectedId === index
-              ? "bg-[#E5EAFA] bg-opacity-10"
-              : "border border-[#1E222C]"
+              ? 'bg-[#E5EAFA] bg-opacity-10'
+              : 'border border-[#1E222C]'
           }`}
           key={faq.id}
         >
           <div
             className='cursor-pointer flex justify-between items-center'
             onClick={() => {
-              setSelectedId(slectedId !== index ? index : "");
+              setSelectedId(slectedId !== index ? index : '');
             }}
           >
             <h3 className='text-[#B2B2B2] sm:text-xl text-base'>
@@ -29,7 +29,7 @@ function Collaspe({ list }) {
             <div className='w-6 h-6'>
               <Pic
                 className={`${
-                  slectedId === index ? "rotate-[270deg]" : "rotate-90"
+                  slectedId === index ? 'rotate-[270deg]' : 'rotate-90'
                 }`}
                 src='/rolnew/global/icons/small_arrow.svg'
                 alt='small_arrow'
@@ -39,10 +39,10 @@ function Collaspe({ list }) {
           </div>
           <div
             className={`${
-              slectedId === index ? "h-auto block sm:pt-6 pt-4" : "h-0 hidden"
+              slectedId === index ? 'h-auto block sm:pt-6 pt-4' : 'h-0 hidden'
             } transition-all delay-150`}
           >
-            <p className='text-sm font-normal text-[#B2B2B2]'>{faq.ans}</p>
+            <p className='text-sm font-normal text-[#B2B2B2]'>{faq.answer}</p>
           </div>
         </div>
       ))}
