@@ -78,8 +78,7 @@ import { FleetContext } from 'context/FleetContext';
 // ];
 
 function OurFeet({ showBooking }) {
-  const { carDetails, setCarDetails, carCatData, setCarCatData } =
-    useContext(FleetContext);
+  const { setCarDetails, carCatData, setCarCatData } = useContext(FleetContext);
 
   useEffect(() => {
     setCarCatData(fleetData[0].options);

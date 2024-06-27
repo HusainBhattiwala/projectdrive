@@ -248,7 +248,7 @@ export default function Page() {
     <>
       <ServicesBanner {...bannerData} />
       <LuxuriousServiceSearch luxuriousServiceData={luxuriousServiceData} />
-      <TopPicks topPicksData={topPicksData} show={true} />
+      <TopPicks topPicksData={topPicksData} show />
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
       <ServicesFaq faqData={faqData} />
