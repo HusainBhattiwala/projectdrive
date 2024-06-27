@@ -92,8 +92,17 @@ export default function Navbar() {
     setOpenSubDropdownIndex(null);
   };
 
+  const handleMouseLeave = () => {
+    setOpenDropdownIndex(null);
+    setOpenSubDropdownIndex(null);
+  };
+
   const handleSubMouseEnter = (subIndex) => {
     setOpenSubDropdownIndex(subIndex);
+  };
+
+  const handleSubMouseLeave = () => {
+    setOpenSubDropdownIndex(null);
   };
 
   const closeAll = () => {
@@ -154,6 +163,7 @@ export default function Navbar() {
                   key={item.route}
                   className='relative h-full flex items-center justify-center'
                   onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
                 >
                   {item.subLinks ? (
                     <>
@@ -167,12 +177,13 @@ export default function Navbar() {
                         {item.label}
                       </Link>
                       {openDropdownIndex === index && (
-                        <ul className='absolute top-14 left-3 z-[1] p-2 w-fit sub-menu'>
+                        <ul className='absolute top-12 left-4 mt-1 z-[10] p-2 w-fit sub-menu'>
                           {item.subLinks.map((subLink, subIndex) => (
                             <li
                               key={subLink.route}
                               className='relative'
                               onMouseEnter={() => handleSubMouseEnter(subIndex)}
+                              onMouseLeave={handleSubMouseLeave}
                             >
                               {subLink.subLinks ? (
                                 <div className='relative'>
@@ -184,7 +195,7 @@ export default function Navbar() {
                                     {subLink.label}
                                   </Link>
                                   {openSubDropdownIndex === subIndex && (
-                                    <ul className='absolute left-full top-0 mt-1 z-[1] p-2 w-fit sub-menu backdrop-blur-xl'>
+                                    <ul className='absolute left-full top-0 mt-1 z-[10] p-2 w-fit sub-menu'>
                                       {subLink.subLinks.map((nestedSubLink) => (
                                         <li key={nestedSubLink.route}>
                                           <Link
