@@ -127,7 +127,7 @@ export default function FareSummary({
               alt=""
               className="w-5 h-5"
             />
-            <P>{item}</P>
+            <P className="text-gray-600">{item}</P>
           </div>
         ))}
       </div>

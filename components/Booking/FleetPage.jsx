@@ -377,7 +377,7 @@ function FleetPage() {
   useEffect(() => {
     async function getToken() {
       const token = sessionStorage.getItem('token');
-      if (token && token !== 'null') {
+      if (token && token !== 'null' && token != "undefined") {
         setShowAuth(true);
       }
     }
@@ -799,7 +799,7 @@ function FleetPage() {
     return async () => {
       const token = sessionStorage.getItem('token');
       const carsExists = sessionStorage.getItem('selectedfleet');
-      if (token && token !== 'null' && !bookingRef && carsExists) {
+      if (token && token !== 'null' && token != "undefined" && !bookingRef && carsExists) {
         await sendAnalyticsData();
       }
     };

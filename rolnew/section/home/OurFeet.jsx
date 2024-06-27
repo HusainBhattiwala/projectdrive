@@ -95,7 +95,7 @@ function OurFeet({ showBooking }) {
     <>
       <Container className='bg-[#11202D] sm:pt-[60px] py-8 text-center'>
         <Title
-          subTile='Our Fleet'
+          subTitle='Our Fleet'
           mainTitle='Introducing Our Luxury Chauffeur Hire Service Handpicked For Your Comfort'
         />
         <CarCategory
