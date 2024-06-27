@@ -167,7 +167,7 @@ export default function Navbar() {
                         {item.label}
                       </Link>
                       {openDropdownIndex === index && (
-                        <ul className='absolute top-full left-0 mt-1 z-[1] p-2 w-fit sub-menu'>
+                        <ul className='absolute top-14 left-3 z-[1] p-2 w-fit sub-menu'>
                           {item.subLinks.map((subLink, subIndex) => (
                             <li
                               key={subLink.route}
