@@ -84,15 +84,22 @@ const navLinks = [
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useAtom(isSidebarOpenAtom);
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
+  const [openSubDropdownIndex, setOpenSubDropdownIndex] = useState(null);
   const pathname = usePathname();
 
   const handleMouseEnter = (index) => {
     setOpenDropdownIndex(index);
+    setOpenSubDropdownIndex(null);
+  };
+
+  const handleSubMouseEnter = (subIndex) => {
+    setOpenSubDropdownIndex(subIndex);
   };
 
   const closeAll = () => {
     setIsSidebarOpen(false);
     setOpenDropdownIndex(null);
+    setOpenSubDropdownIndex(null);
   };
 
   return (
@@ -161,8 +168,12 @@ export default function Navbar() {
                       </Link>
                       {openDropdownIndex === index && (
                         <ul className='absolute top-full left-0 mt-1 z-[1] p-2 w-fit sub-menu'>
-                          {item.subLinks.map((subLink) => (
-                            <li key={subLink.route} className='relative'>
+                          {item.subLinks.map((subLink, subIndex) => (
+                            <li
+                              key={subLink.route}
+                              className='relative'
+                              onMouseEnter={() => handleSubMouseEnter(subIndex)}
+                            >
                               {subLink.subLinks ? (
                                 <div className='relative'>
                                   <Link
@@ -172,19 +183,21 @@ export default function Navbar() {
                                   >
                                     {subLink.label}
                                   </Link>
-                                  <ul className='absolute left-full top-0 mt-1 z-[1] p-2 w-fit sub-menu backdrop-blur-xl'>
-                                    {subLink.subLinks.map((nestedSubLink) => (
-                                      <li key={nestedSubLink.route}>
-                                        <Link
-                                          className='text-[#E1E1E1] hover:text-[#223544] w-[180px] px-3 py-3 text-sm font-bold leading-5 text-left flex items-center rounded-md hover:bg-[rgb(229,234,250)]/100'
-                                          href={nestedSubLink.route}
-                                          onClick={closeAll}
-                                        >
-                                          {nestedSubLink.label}
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
+                                  {openSubDropdownIndex === subIndex && (
+                                    <ul className='absolute left-full top-0 mt-1 z-[1] p-2 w-fit sub-menu backdrop-blur-xl'>
+                                      {subLink.subLinks.map((nestedSubLink) => (
+                                        <li key={nestedSubLink.route}>
+                                          <Link
+                                            className='text-[#E1E1E1] hover:text-[#223544] w-[180px] px-3 py-3 text-sm font-bold leading-5 text-left flex items-center rounded-md hover:bg-[rgb(229,234,250)]/100'
+                                            href={nestedSubLink.route}
+                                            onClick={closeAll}
+                                          >
+                                            {nestedSubLink.label}
+                                          </Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
                                 </div>
                               ) : (
                                 <Link
