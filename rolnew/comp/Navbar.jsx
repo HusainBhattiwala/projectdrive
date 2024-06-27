@@ -16,18 +16,9 @@ const navLinks = [
     subLinks: [
       { route: '/rolnew/road-shows', label: 'Road shows' },
       { route: '/rolnew/intercity-transfers', label: 'Intercity Transfers' },
-      {
-        route: '/rolnew/event-transfers',
-        label: 'Event Services',
-      },
-      {
-        route: '/rolnew/wedding-service',
-        label: 'Wedding Services',
-      },
-      {
-        route: '/rolnew/corporate-service',
-        label: 'Corporate Services',
-      },
+      { route: '/rolnew/event-transfers', label: 'Event Services' },
+      { route: '/rolnew/wedding-service', label: 'Wedding Services' },
+      { route: '/rolnew/corporate-service', label: 'Corporate Services' },
       { route: '/rolnew/cities-sightseeing', label: 'Cities Sightseeing' },
       {
         route: '/rolnew/private-jet-chauffeur',
@@ -82,22 +73,10 @@ const navLinks = [
           { route: '/rolnew/airport-transfers/london/luton', label: 'Luton' },
         ],
       },
-      {
-        route: '/rolnew/airport-transfers/dubai',
-        label: 'Dubai',
-      },
-      {
-        route: '/rolnew/airport-transfers/newyork',
-        label: 'New York',
-      },
-      {
-        route: '/rolnew/airport-transfers/paris',
-        label: 'Paris',
-      },
-      {
-        route: '/rolnew/airport-transfers/tokyo',
-        label: 'Tokyo',
-      },
+      { route: '/rolnew/airport-transfers/dubai', label: 'Dubai' },
+      { route: '/rolnew/airport-transfers/newyork', label: 'New York' },
+      { route: '/rolnew/airport-transfers/paris', label: 'Paris' },
+      { route: '/rolnew/airport-transfers/tokyo', label: 'Tokyo' },
     ],
   },
 ];
@@ -107,12 +86,13 @@ export default function Navbar() {
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
   const pathname = usePathname();
 
-  const toggleDropdown = (index) => {
-    if (openDropdownIndex === index) {
-      setOpenDropdownIndex(null);
-    } else {
-      setOpenDropdownIndex(index);
-    }
+  const handleMouseEnter = (index) => {
+    setOpenDropdownIndex(index);
+  };
+
+  const closeAll = () => {
+    setIsSidebarOpen(false);
+    setOpenDropdownIndex(null);
   };
 
   return (
@@ -165,70 +145,68 @@ export default function Navbar() {
               {navLinks.map((item, index) => (
                 <div
                   key={item.route}
-                  className={`relative h-full flex items-center justify-center ${
-                    item.subLinks &&
-                    'dropdown dropdown-bottom dropdown-right md:dropdown-hover'
-                  } pop`}
+                  className='relative h-full flex items-center justify-center'
+                  onMouseEnter={() => handleMouseEnter(index)}
                 >
                   {item.subLinks ? (
                     <>
                       <Link
                         href={item.route}
-                        tabIndex={index}
                         className={`text-white ${
                           pathname === item.route ? 'font-normal' : ''
-                        } text-sm hover:bg-[rgb(255,255,255)]/20 hover:rounded-md underline-offset-2 font-medium px-2 whitespace-nowrap`}
+                        } text-sm font-medium px-2 whitespace-nowrap`}
+                        onClick={closeAll}
                       >
                         {item.label}
                       </Link>
-                      <ul
-                        tabIndex={index}
-                        className='dropdown-content z-[1] p-2 w-fit sub-menu hidden group-hover:block'
-                      >
-                        {item.subLinks.map((subLink) => (
-                          <li
-                            key={subLink.route}
-                            className='relative group hover:bg-gray-700 hover:rounded-md'
-                          >
-                            {subLink.subLinks ? (
-                              <div className='relative'>
+                      {openDropdownIndex === index && (
+                        <ul className='absolute top-full left-0 mt-1 z-[1] p-2 w-fit sub-menu'>
+                          {item.subLinks.map((subLink) => (
+                            <li key={subLink.route} className='relative'>
+                              {subLink.subLinks ? (
+                                <div className='relative'>
+                                  <Link
+                                    href={subLink.route}
+                                    className='text-[#E1E1E1] hover:text-[#223544] w-[180px] px-3 py-3 text-sm font-bold leading-5 text-left flex items-center rounded-md hover:bg-[rgb(229,234,250)]/100'
+                                    onClick={closeAll}
+                                  >
+                                    {subLink.label}
+                                  </Link>
+                                  <ul className='absolute left-full top-0 mt-1 z-[1] p-2 w-fit sub-menu backdrop-blur-xl'>
+                                    {subLink.subLinks.map((nestedSubLink) => (
+                                      <li key={nestedSubLink.route}>
+                                        <Link
+                                          className='text-[#E1E1E1] hover:text-[#223544] w-[180px] px-3 py-3 text-sm font-bold leading-5 text-left flex items-center rounded-md hover:bg-[rgb(229,234,250)]/100'
+                                          href={nestedSubLink.route}
+                                          onClick={closeAll}
+                                        >
+                                          {nestedSubLink.label}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ) : (
                                 <Link
-                                  href={subLink.route}
                                   className='text-[#E1E1E1] hover:text-[#223544] w-[180px] px-3 py-3 text-sm font-bold leading-5 text-left flex items-center rounded-md hover:bg-[rgb(229,234,250)]/100'
+                                  href={subLink.route}
+                                  onClick={closeAll}
                                 >
                                   {subLink.label}
                                 </Link>
-                                <ul className='absolute left-full mt-5 top-0 hidden z-[1] group-hover:block p-2 w-fit sub-menu backdrop-blur-xl'>
-                                  {subLink.subLinks.map((nestedSubLink) => (
-                                    <li key={nestedSubLink.route}>
-                                      <Link
-                                        className='text-[#E1E1E1] hover:text-[#223544] w-[180px] px-3 py-3 text-sm font-bold leading-5 text-left flex items-center rounded-md hover:bg-[rgb(229,234,250)]/100'
-                                        href={nestedSubLink.route}
-                                      >
-                                        {nestedSubLink.label}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ) : (
-                              <Link
-                                className='text-[#E1E1E1] hover:text-[#223544] w-[180px] px-3 py-3 text-sm font-bold leading-5 text-left flex items-center rounded-md hover:bg-[rgb(229,234,250)]/100'
-                                href={subLink.route}
-                              >
-                                {subLink.label}
-                              </Link>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </>
                   ) : (
                     <Link
                       href={item.route}
                       className={`text-white ${
                         pathname === item.route ? 'font-normal' : ''
-                      } text-sm hover:bg-[rgb(255,255,255)]/20 hover:rounded-md underline-offset-2 font-medium px-2 whitespace-nowrap pop`}
+                      } text-sm font-medium px-2 whitespace-nowrap`}
+                      onClick={closeAll}
                     >
                       {item.label}
                     </Link>
