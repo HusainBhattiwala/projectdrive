@@ -10,6 +10,7 @@ import OurFeet from 'rolnew/section/home/OurFeet';
 import OurPresence from 'rolnew/section/home/OurPresence';
 import Services from 'rolnew/section/home/Services';
 import TrustedPartner from 'rolnew/section/home/TrustedPartner';
+import { homePageFaq } from 'static/faq';
 import BookingBanner from './BookingBanner';
 
 export const metadata = {
@@ -76,7 +77,7 @@ export default function page() {
       <TrustedPartner />
       <ClientTestimonial />
       <Destinations />
-      <FAQ />
+      <FAQ faq={homePageFaq} />
       <Contact />
     </>
   );
