@@ -38,27 +38,27 @@ export default function Home() {
           <div className="grid gap-y-2">
             <img
               className="h-full w-full"
-              src="/rolnew/services/allservices/1.svg"
+              src="/rolnew/services/allservices/1.jpg"
               alt=""
             />
             <img
               className="h-full w-full"
-              src="/rolnew/services/allservices/7.svg"
+              src="/rolnew/services/allservices/7.jpg"
               alt=""
             />
           </div>
-          <div className="grid">
+          <div className="grid gap-y-2">
             <div className="relative">
               <img
                 className="h-full w-full"
-                src="/rolnew/services/allservices/2.svg"
+                src="/rolnew/services/allservices/2.jpg"
                 alt=""
               />
             </div>
             <div>
               <img
                 className="h-full w-full"
-                src="/rolnew/services/allservices/8.svg"
+                src="/rolnew/services/allservices/8.jpg"
                 alt=""
               />
             </div>
@@ -67,14 +67,14 @@ export default function Home() {
             <div className="sm:mt-[50px]">
               <img
                 className="h-full w-full"
-                src="/rolnew/services/allservices/3.svg"
+                src="/rolnew/services/allservices/3.jpg"
                 alt=""
               />
             </div>
             <div>
               <img
                 className="h-full w-full"
-                src="/rolnew/services/allservices/9.svg"
+                src="/rolnew/services/allservices/9.jpg"
                 alt=""
               />
             </div>
@@ -83,30 +83,14 @@ export default function Home() {
             <div className="sm:mt-[50px]">
               <img
                 className="h-full w-full"
-                src="/rolnew/services/allservices/3.svg"
+                src="/rolnew/services/allservices/4.jpg"
                 alt=""
               />
             </div>
             <div>
               <img
                 className="h-full w-full"
-                src="/rolnew/services/allservices/10.png"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="grid">
-            <div>
-              <img
-                className="h-full w-full"
-                src="/rolnew/services/allservices/2.svg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-full w-full"
-                src="/rolnew/services/allservices/11.svg"
+                src="/rolnew/services/allservices/10.jpg"
                 alt=""
               />
             </div>
@@ -115,14 +99,30 @@ export default function Home() {
             <div>
               <img
                 className="h-full w-full"
-                src="/rolnew/services/allservices/1.svg"
+                src="/rolnew/services/allservices/5.jpg"
                 alt=""
               />
             </div>
             <div>
               <img
                 className="h-full w-full"
-                src="/rolnew/services/allservices/7.svg"
+                src="/rolnew/services/allservices/11.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="grid gap-y-2">
+            <div>
+              <img
+                className="h-full w-full"
+                src="/rolnew/services/allservices/6.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="h-full w-full"
+                src="/rolnew/services/allservices/12.jpg"
                 alt=""
               />
             </div>
