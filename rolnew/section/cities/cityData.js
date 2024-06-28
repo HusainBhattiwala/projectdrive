@@ -6,10 +6,10 @@ export const cityData = {
       bannerImage: '/rolnew/cities/london.png',
     },
     title1: {
-      subTile: 'Tailored Chauffeur Services',
+      subTile: 'Tailored Luxury Chauffeur Services',
       mainTitle: 'London Landmarks',
       description:
-        'These attractions can be busy and difficult to navigate, especially during peak tourist season. By hiring a chauffeur service such as a Mercedes Sprinter hire in London, tourists can sit back and relax while their experienced driver navigates through the busy city streets, making their way to each attraction without the added stress of finding a parking spot or figuring out public transportation.',
+        'London’s attractions can be busy and difficult to navigate; especially during peak tourist season. By hiring a London chauffeur service such as RolDrive, tourists can sit back and relax while your experienced driver not only navigates through the busy city streets but also acts as your guide throughout the journey',
     },
     trustedPartnersData: {
       img: '/rolnew/cities/trust-banner.svg',
@@ -36,21 +36,21 @@ export const cityData = {
         },
       ]
     },
-    
+
     landMarks: [
       {
         id: 'land1',
         src: '/images/city/london/buckingham.png',
         title: 'Buckingham Palace',
         description:
-          'The London residence and administrative headquarters of the monarch of the United Kingdom. It has 775 rooms, including the famous balcony.',
+          'The London residence and administrative headquarters of the monarch of the United Kingdom. Renowned for its rich history, opulent staterooms, and royal ceremonies.',
       },
       {
         id: 'land2',
         src: '/images/city/london/parliament.png',
         title: 'The Houses of Parliament',
         description:
-          'Also known as the Palace of Westminster, is the home of the UK&apos;s legislative body and iconic landmark on the River Thames.',
+          'Also known as the Palace of Westminster, is the home of the UK’s legislative body and iconic landmark on the River Thames.',
       },
       {
         id: 'land3',
@@ -69,14 +69,14 @@ export const cityData = {
           src: '/images/city/london/tourist.png',
           title: 'The neighbourhoods of Notting Hill',
           description:
-            'A vibrant and affluent neighborhood in West London, known for its colourful houses, Portobello Road Market, and annual carnival.',
+            'A vibrant and affluent neighbourhood in West London, known for its colourful houses, Portobello Road Market, and annual carnival',
         },
         {
           id: 'touristAttraction2',
           src: '/images/city/london/tourist.png',
           title: 'Greenwich',
           description:
-            'Where you can enjoy the stunning views from the Royal Observatory and take a walk in Greenwich Park.',
+            'Greenwich in London is renowned for its maritime history, the Prime Meridian, the Royal Observatory from where you can enjoy stunning views and the beautiful Greenwich Park',
         },
         {
           id: 'touristAttraction3',
@@ -90,24 +90,38 @@ export const cityData = {
           src: '/images/city/london/tourist.png',
           title: 'Selfridges',
           description:
-            'A high-end department store in Oxford Street, London, known for its luxury fashion, cosmetics, and iconic window displays.',
+            'A high-end department store in Oxford Street, London, known for its luxury fashion, cosmetics and iconic window displays.',
         },
         {
           id: 'touristAttraction5',
           src: '/images/city/london/tourist.png',
           title: 'Fortnum & Mason',
           description:
-            'A luxury department store in Piccadilly, London, known for its exquisite food hall, fine teas, and hampers.',
+            'A luxury department store in Piccadilly, London, known for its exquisite food hall, fine teas and hampers.',
         },
         {
           id: 'touristAttraction6',
           src: '/images/city/london/tourist.png',
-          title: 'Buckingham Palace',
+          title: 'Little Venice',
           description:
-            'The London residence and administrative headquarters of the monarch of the United Kingdom. It has 775 rooms, including the famous balcony.',
+            'A picturesque canal area near Paddington with charming houseboats, waterside cafes, and tranquil boat trips',
         },
       ],
     },
+    destinationData: {
+      hotel: {
+        title: 'Explore Top Class Restaurants',
+        subTile: 'Popular Trips',
+        isFromTo : false,
+        data: [
+          { from: "The Ledbury" },
+          { from: "The Ledbury" }
+        ]
+      },
+
+    },
+
+
     ChauffeurServiceDescription: [
       {
         p: 'By hiring a chauffeur service, tourists can easily visit these stores and enjoy a shopping experience without the added stress of carrying around their purchases.',

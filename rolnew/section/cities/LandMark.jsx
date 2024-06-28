@@ -10,7 +10,7 @@ export default function Landmark({ pageData }) {
       pageData
         && (
           <Container className="bg-[#223544] text-white py-[80px] text-center">
-            <Title subTile={pageData?.title1?.subTile} mainTitle="London Landmarks" description="These attractions can be busy and difficult to navigate, especially during peak tourist season. By hiring a chauffeur service such as a Mercedes Sprinter hire in London, tourists can sit back and relax while their experienced driver navigates through the busy city streets, making their way to each attraction without the added stress of finding a parking spot or figuring out public transportation." descClass="text-center py-11" />
+            <Title subTile={pageData?.title1?.subTile} mainTitle={pageData?.title1?.mainTitle} description={pageData?.title1?.description} descClass="text-center py-11" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-x-4">
               {

@@ -45,7 +45,7 @@ function CityPage() {
       <TopPicks />
       <Locations showPadding />
       <Contact />
-      <Destinations />
+      <Destinations destinationData={pageData.destinationData} />
       <DownloadOurApp />
       <CategoriesComponent />
       <FAQ />
