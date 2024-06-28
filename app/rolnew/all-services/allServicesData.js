@@ -66,7 +66,7 @@ export const destinationsData = {
       {
         id: 4,
         image: '/rolnew/global/country/london.jpg',
-        cityName: 'Cathédrale Notre-Dame de Paris',
+        cityName: 'Cathédrale Notre-Dame',
         countryCode: 'FR',
         address: 'Paris',
       },
@@ -146,7 +146,7 @@ export const destinationsData = {
       {
         id: 4,
         image: '/rolnew/global/country/london.jpg',
-        cityName: 'Dubai Aquarium & Underwater Zoo',
+        cityName: 'Dubai Aquarium',
         countryCode: 'AE',
         address: 'Dubai',
       },

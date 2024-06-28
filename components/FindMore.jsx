@@ -5,7 +5,7 @@ export default function FindMoreComponent({ findMoreData }) {
   return (
     <div className="bg-[#11202D] text-black py-12">
       <div className="container mx-auto px-6">
-        <h2 className="text-center text-3xl font-bold mb-8">Find More</h2>
+        {/* <h2 className="text-center text-3xl font-bold mb-8">Find More</h2>
         <div className="grid grid-cols-4 gap-4 border-b pb-10">
           {items.map((item, index) => (
             <div key={index} className="text-center">
@@ -44,10 +44,10 @@ export default function FindMoreComponent({ findMoreData }) {
               <p className="text-lg">{item}</p>
             </div>
           ))}
-        </div>
+        </div> */}
 
-        <article className="sm:mt-20 sm:mx-10 sm:px-4 sm:text-left">
-          <h2 className="my-10 sm:text-center sm:my-20 text-lg font-bold sm:text-3xl text-[#FFFFFF]">
+        <article className="sm:mt-4 sm:mx-10 sm:px-4 sm:text-left">
+          <h2 className="sm:text-center sm:my-10 text-lg font-bold sm:text-3xl text-[#FFFFFF]">
             More about RolDrive’s Luxury Personal Chauffeur Services
           </h2>
           {findMoreData?.map((data, index) => (
