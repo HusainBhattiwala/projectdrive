@@ -8,7 +8,6 @@ import OurPresence from 'rolnew/section/home/OurPresence';
 import Services from 'rolnew/comp/Services';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
-import MegaContent from 'rolnew/comp/MegaContent';
 import CarClass from 'rolnew/comp/CarClass';
 import BookModal from 'rolnew/comp/BookModal';
 import { useEffect, useRef, useState } from 'react';

@@ -5,7 +5,6 @@ import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import OurPresence from 'rolnew/section/home/OurPresence';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
-import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';

@@ -10,7 +10,7 @@ import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
 import Destinations from 'rolnew/section/home/Destinations';
 import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
-import CategoriesComponent from 'components/AllCategories';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import FAQ from 'rolnew/comp/FAQ';
 import Landmark from 'rolnew/section/cities/LandMark';
 import ChauffeurServiceDescription from 'rolnew/comp/ChauffeurServiceDescription';
@@ -38,17 +38,21 @@ function CityPage() {
     <>
       <Banner pageData={pageData} />
       <div className='bg-[#11202D] py-12'>
-        <TrustedPartners img={pageData?.trustedPartnersData?.img} trustedPartnersData={pageData?.trustedPartnersData?.data} showTitle={false} />
+        <TrustedPartners
+          img={pageData?.trustedPartnersData?.img}
+          trustedPartnersData={pageData?.trustedPartnersData?.data}
+          showTitle={false}
+        />
       </div>
       <OurFeet showBooking />
       <Landmark pageData={pageData} />
       <TopPicks />
       <Locations showPadding />
       <Contact />
-      <Destinations destinationData={pageData.destinationData} />
+      <Destinations destinationData={pageData.destinationData?.restaurants} />
       <DownloadOurApp />
-      <CategoriesComponent />
-      <FAQ />
+      <Destinations destinationData={pageData.destinationData?.hotel} />
+      <ServicesFaq faqData={pageData?.faqData} />
       <ChauffeurServiceDescription
         ChauffeurServiceDescription={pageData.ChauffeurServiceDescription}
       />

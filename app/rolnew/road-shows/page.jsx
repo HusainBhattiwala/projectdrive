@@ -5,7 +5,6 @@ import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import OurPresence from 'rolnew/section/home/OurPresence';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
-import FAQ from 'rolnew/comp/FAQ';
 import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
@@ -16,7 +15,9 @@ export default function page() {
   return (
     <>
       <ServicesBanner {...roadShowData.bannerData} />
-      <LuxuriousServiceSearch luxuriousServiceData={roadShowData.luxuriousServiceData} />
+      <LuxuriousServiceSearch
+        luxuriousServiceData={roadShowData.luxuriousServiceData}
+      />
       <TopPicks topPicksData={roadShowData.topPicksData} />
       <TrustedPartners trustedPartnersData={roadShowData.trustedPartnersData} />
       <div style={{ backgroundColor: '#11202D', height: '100px' }} />
