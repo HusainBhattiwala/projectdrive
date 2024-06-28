@@ -3,10 +3,7 @@
 
 'use client';
 
-import {
-  Suspense,
-  useContext, useEffect, useRef, useState,
-} from 'react';
+import { Suspense, useContext, useEffect, useRef, useState } from 'react';
 import { FaDotCircle, FaAngleUp, FaAngleDown } from 'react-icons/fa';
 import { FiCheck, FiPhone } from 'react-icons/fi';
 import { toast, ToastContainer } from 'react-toastify';
@@ -34,12 +31,7 @@ import Container from 'rolnew/comp/Container';
 import Modal from '../ui/Modal';
 import 'react-toastify/dist/ReactToastify.css';
 
-const allCards = [
-  'visa',
-  'mastercard',
-  'maestro',
-  'amex',
-];
+const allCards = ['visa', 'mastercard', 'maestro', 'amex'];
 
 function getMobileNumber(phone, country) {
   const newPhone = phone?.replace('+', '');
@@ -49,7 +41,11 @@ function getMobileNumber(phone, country) {
 }
 
 function TempBookingComponent({
-  setBookingRef, setShowAuth, setShowModal, setShowBtnLoading, setShowPayment,
+  setBookingRef,
+  setShowAuth,
+  setShowModal,
+  setShowBtnLoading,
+  setShowPayment,
 }) {
   const searchParams = useSearchParams();
   const tempBookingId = searchParams.get('temp_booking_id');
@@ -72,7 +68,7 @@ function TempBookingComponent({
                 useremailid: user.booker_email,
                 usermobileno: user.booker_mobile_no,
                 usercountrycode: user.booker_country_code,
-              }),
+              })
             );
           }
           sessionStorage.removeItem('isCarSelected');
@@ -105,7 +101,7 @@ function TempBookingComponent({
       setShowPayment(false);
       setShowBtnLoading(false);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tempBookingId]);
   return <div />;
 }
@@ -386,10 +382,10 @@ function FleetPage() {
 
   const onPassengerSubmit = async (data) => {
     if (
-      !passengerMobileError
-      && !bookerMobileError
-      && !bookerEmailExists
-      && passengers.adult > 0
+      !passengerMobileError &&
+      !bookerMobileError &&
+      !bookerEmailExists &&
+      passengers.adult > 0
     ) {
       setPassengersDetails(data);
       const payload = {
@@ -404,7 +400,7 @@ function FleetPage() {
         payload.passenger_country_code = `+${data.countrycode}`;
         payload.passenger_mobile_no = getMobileNumber(
           data.mobileno,
-          data.countrycode,
+          data.countrycode
         );
         payload.passenger_email = data.email;
         payload.booker_fname = data.bookerfname;
@@ -412,7 +408,7 @@ function FleetPage() {
         payload.booker_country_code = `+${data.bookercountrycode}`;
         payload.booker_mobile_no = getMobileNumber(
           data.bookermobileno,
-          data.bookercountrycode,
+          data.bookercountrycode
         );
         payload.booker_email = data.bookeremail;
         // Set user
@@ -422,7 +418,7 @@ function FleetPage() {
         user.usercountrycode = `+${data.bookercountrycode}`;
         user.usermobileno = getMobileNumber(
           data.bookermobileno,
-          data.bookercountrycode,
+          data.bookercountrycode
         );
       } else {
         payload.passenger_fname = '';
@@ -435,7 +431,7 @@ function FleetPage() {
         payload.booker_country_code = `+${data.countrycode}`;
         payload.booker_mobile_no = getMobileNumber(
           data.mobileno,
-          data.countrycode,
+          data.countrycode
         );
         payload.booker_email = data.email;
 
@@ -444,10 +440,7 @@ function FleetPage() {
         user.userlname = data.lname;
         user.useremailid = data.email;
         user.usercountrycode = `+${data.countrycode}`;
-        user.usermobileno = getMobileNumber(
-          data.mobileno,
-          data.countrycode,
-        );
+        user.usermobileno = getMobileNumber(data.mobileno, data.countrycode);
       }
       console.log(isNewUser, session?.user);
       if (isNewUser || session?.user?.isNewUser) {
@@ -528,7 +521,7 @@ function FleetPage() {
       passenger_infant_cnt: Number(passengers.infant),
       tariff_conv_rate: Number(filterFleetList[0].conv_rate) || 0,
       user_tariff: Number(
-        Math.round(selectedCarDetails.tariff * filterFleetList[0].conv_rate),
+        Math.round(selectedCarDetails.tariff * filterFleetList[0].conv_rate)
       ),
       duration: Number(duration),
       distance: Number(distance || 0),
@@ -558,7 +551,8 @@ function FleetPage() {
 
     // New tariff details for stripe payment
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+    const currentUrl =
+      typeof window !== 'undefined' ? window.location.href : '';
     const distanceInNumber = parseFloat(distance || 0);
     const factor = 0.621371;
     const distanceInMiles = Math.round(distanceInNumber * factor);
@@ -597,7 +591,7 @@ function FleetPage() {
       payload.passenger_country_code = `+${passengersDetails.countrycode}`;
       payload.passenger_mobile_no = getMobileNumber(
         passengersDetails.mobileno,
-        passengersDetails.countrycode,
+        passengersDetails.countrycode
       );
       payload.passenger_email = passengersDetails.email;
       payload.booker_fname = passengersDetails.bookerfname;
@@ -605,7 +599,7 @@ function FleetPage() {
       payload.booker_country_code = `+${passengersDetails.bookercountrycode}`;
       payload.booker_mobile_no = getMobileNumber(
         passengersDetails.bookermobileno,
-        passengersDetails.bookercountrycode,
+        passengersDetails.bookercountrycode
       );
       payload.booker_email = passengersDetails.bookeremail;
     } else {
@@ -614,7 +608,7 @@ function FleetPage() {
       payload.passenger_country_code = `+${passengersDetails.countrycode}`;
       payload.passenger_mobile_no = getMobileNumber(
         passengersDetails.mobileno,
-        passengersDetails.countrycode,
+        passengersDetails.countrycode
       );
       payload.passenger_email = passengersDetails.email;
 
@@ -623,7 +617,7 @@ function FleetPage() {
       payload.booker_country_code = `+${passengersDetails.countrycode}`;
       payload.booker_mobile_no = getMobileNumber(
         passengersDetails.mobileno,
-        passengersDetails.countrycode,
+        passengersDetails.countrycode
       );
       payload.booker_email = passengersDetails.email;
     }
@@ -644,22 +638,24 @@ function FleetPage() {
 
     if (bookingtype === 'hourly') {
       payload.booking_duration = Number(rideduration.split(' ')[0]);
-      const extraHour = Number(rideduration.split(' ')[0])
-        - Number(selectedCarDetails.min_hour);
-      const extraMile = extraHour * Number(selectedCarDetails.addl_miles_hourly);
+      const extraHour =
+        Number(rideduration.split(' ')[0]) -
+        Number(selectedCarDetails.min_hour);
+      const extraMile =
+        extraHour * Number(selectedCarDetails.addl_miles_hourly);
       const totalMile = Number(selectedCarDetails.miles_included) + extraMile;
       payload.booking_mileage = totalMile;
       payload.job_hour = Number(rideduration.split(' ')[0]);
       payload.min_booking_hour = Number(selectedCarDetails.min_hour);
       payload.booking_hourly_rate = Number(selectedCarDetails.hrly_rate);
       payload.booking_miles_included = Number(
-        selectedCarDetails.miles_included,
+        selectedCarDetails.miles_included
       );
       payload.addl_hour_rate = Number(selectedCarDetails.addl_hour_rate);
       payload.addl_hour_rate = Number(selectedCarDetails.addl_hour_rate);
       payload.addl_miles_hour = Number(selectedCarDetails.addl_miles_hourly);
       payload.extra_mileage_charge = Number(
-        selectedCarDetails.extra_mile_charge,
+        selectedCarDetails.extra_mile_charge
       );
     }
 
@@ -714,12 +710,12 @@ function FleetPage() {
     if (filter === 'hightolow') {
       setSelectedFilter('hightolow');
       sortFleet = filterFleetList.sort(
-        (a, b) => Number(b.tariff) - Number(a.tariff),
+        (a, b) => Number(b.tariff) - Number(a.tariff)
       );
     } else if (filter === 'lowtohigh') {
       setSelectedFilter('lowtohigh');
       sortFleet = filterFleetList.sort(
-        (a, b) => Number(a.tariff) - Number(b.tariff),
+        (a, b) => Number(a.tariff) - Number(b.tariff)
       );
     }
     setFilterFleetList([...sortFleet]);
@@ -787,7 +783,47 @@ function FleetPage() {
 
   useEffect(() => {
     const sendAnalyticsData = async () => {
-      const response = await api.get('/users/reminder');
+      const userInfo = JSON.parse(sessionStorage.getItem('user'));
+      const userJourneyDetails = JSON.parse(
+        sessionStorage.getItem('storesearchdata')
+      );
+      // console.log('user journey', userJourneyDetails);
+      // console.log('user info:', userInfo);
+
+      const {
+        pickupdate,
+        pickuptime,
+        pickupaddress,
+        dropaddress,
+        distance,
+        duration,
+      } = userJourneyDetails;
+      const { useremailid, usermobileno, usercountrycode } = userInfo;
+
+      let journey = null;
+
+      if (returndate && bookingtype === 'transfers') journey = 'Round Trip';
+      if (!returndate && bookingtype !== 'hourly') journey = 'one-way journey';
+      if (bookingtype === 'hourly') journey = 'Hourly trip;';
+
+      const payloadData = {
+        journey,
+        data: pickupdate,
+        time: pickuptime,
+        pickup: pickupaddress,
+        dropOff: dropaddress,
+        distance,
+        duration,
+      };
+
+      const queryParams = `?email=${useremailid ? useremailid : null}&phoneNo=${
+        usermobileno ? usermobileno : null
+      }&countryCode=${usercountrycode ? usercountrycode : null}`;
+
+      const response = await api.post(
+        `/users/reminder${queryParams}`,
+        payloadData
+      );
       sessionStorage.removeItem('passengerDetails');
       console.log('reminder', response);
     };
@@ -799,7 +835,13 @@ function FleetPage() {
     return async () => {
       const token = sessionStorage.getItem('token');
       const carsExists = sessionStorage.getItem('selectedfleet');
-      if (token && token !== 'null' && token != 'undefined' && !bookingRef && carsExists) {
+      if (
+        token &&
+        token !== 'null' &&
+        token !== 'undefined' &&
+        !bookingRef &&
+        carsExists
+      ) {
         await sendAnalyticsData();
       }
     };
@@ -808,12 +850,18 @@ function FleetPage() {
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
-        <TempBookingComponent setBookingRef={setBookingRef} setShowAuth={setShowAuth} setShowModal={setShowModal} setShowBtnLoading={setShowBtnLoading} setShowPayment={setShowPayment} />
+        <TempBookingComponent
+          setBookingRef={setBookingRef}
+          setShowAuth={setShowAuth}
+          setShowModal={setShowModal}
+          setShowBtnLoading={setShowBtnLoading}
+          setShowPayment={setShowPayment}
+        />
       </Suspense>
-      <div className="relative" ref={pageRef}>
+      <div className='relative' ref={pageRef}>
         <ToastContainer
           limit={1}
-          position="top-right"
+          position='top-right'
           hideProgressBar
           autoClose={3000}
           newestOnTop={false}
@@ -824,501 +872,542 @@ function FleetPage() {
           pauseOnHover
         />
         {showModal && (
-        // eslint-disable-next-line react/jsx-no-bind
-        <Modal>
-          <div className="relative flex flex-col items-center justify-center py-10 modal-bg rounded-lg shadow">
-            <div className="max-h-[60px] max-w-[60px]">
-              <Pic
-                src="/images/icons/confirm.png"
-                className="object-contain"
-                alt="confirm_icon"
-              />
-            </div>
-            <div>
-              <div className="py-4 text-center">
-                <H2 className="font-bold text-3xl text-white">Payment Successful!</H2>
-                <P className="text-[#B2B2B2]">
-                  Your booking has been confirmed.
-                </P>
-                <P className="text-[#B2B2B2]">
-                  Your booking reference no is
-                  {' '}
-                  <span className="text-base font-normal text-white">
-                    #
-                    {bookingRef}
-                  </span>
-                </P>
+          // eslint-disable-next-line react/jsx-no-bind
+          <Modal>
+            <div className='relative flex flex-col items-center justify-center py-10 modal-bg rounded-lg shadow'>
+              <div className='max-h-[60px] max-w-[60px]'>
+                <Pic
+                  src='/images/icons/confirm.png'
+                  className='object-contain'
+                  alt='confirm_icon'
+                />
+              </div>
+              <div>
+                <div className='py-4 text-center'>
+                  <H2 className='font-bold text-3xl text-white'>
+                    Payment Successful!
+                  </H2>
+                  <P className='text-[#B2B2B2]'>
+                    Your booking has been confirmed.
+                  </P>
+                  <P className='text-[#B2B2B2]'>
+                    Your booking reference no is{' '}
+                    <span className='text-base font-normal text-white'>
+                      #{bookingRef}
+                    </span>
+                  </P>
+                </div>
+              </div>
+              <div className='py-4 text-center'>
+                <button
+                  type='button'
+                  className='btn btn-primary !py-[10px] !px-4 !text-white'
+                  onClick={() => {
+                    goToConfromBooking();
+                  }}
+                >
+                  Go to Bookings
+                </button>
               </div>
             </div>
-            <div className="py-4 text-center">
-              <button
-                type="button"
-                className="btn btn-primary !py-[10px] !px-4 !text-white"
-                onClick={() => {
-                  goToConfromBooking();
-                }}
-              >
-                Go to Bookings
-              </button>
-            </div>
-          </div>
-        </Modal>
+          </Modal>
         )}
         {sessionExpires && (
-        // eslint-disable-next-line react/jsx-no-bind
-        <Modal>
-          <div className="relative flex flex-col items-center justify-center py-10 modal-bg rounded-lg shadow">
-            <div className="max-h-[60px] max-w-[60px]">
-              <Pic
-                src="/images/icons/confirm.png"
-                className="object-contain"
-                alt="confirm_icon"
-              />
-            </div>
-            <div>
-              <div className="py-4 text-center">
-                <H2 className="font-bold text-3xl text-white ">
-                  Your search result has expired.
-                </H2>
-                <P className="text-[#B2B2B2]">Please go back and continue.</P>
+          // eslint-disable-next-line react/jsx-no-bind
+          <Modal>
+            <div className='relative flex flex-col items-center justify-center py-10 modal-bg rounded-lg shadow'>
+              <div className='max-h-[60px] max-w-[60px]'>
+                <Pic
+                  src='/images/icons/confirm.png'
+                  className='object-contain'
+                  alt='confirm_icon'
+                />
+              </div>
+              <div>
+                <div className='py-4 text-center'>
+                  <H2 className='font-bold text-3xl text-white '>
+                    Your search result has expired.
+                  </H2>
+                  <P className='text-[#B2B2B2]'>Please go back and continue.</P>
+                </div>
+              </div>
+              <div className='py-4 text-center'>
+                <a
+                  type='button'
+                  className='btn btn-primary !text-white'
+                  href='/'
+                >
+                  Back
+                </a>
               </div>
             </div>
-            <div className="py-4 text-center">
-              <a type="button" className="btn btn-primary !text-white" href="/">
-                Back
-              </a>
-            </div>
-          </div>
-        </Modal>
+          </Modal>
         )}
         {searchData && (
-        <Container
-          className={`bg-[#223544] mt-[72px]
+          <Container
+            className={`bg-[#223544] mt-[72px]
       ${showTransfer ? ' h-full overflow-hidden' : ''}
     `}
-        >
-          <div className="xl:container mx-auto py-12">
-            <div
-              className={`mx-auto lg:container sm:flex items-center ${
-                !isCarSelected && ' justify-between'
-              }`}
-            >
+          >
+            <div className='xl:container mx-auto py-12'>
               <div
-                className="flex items-center text-primary text-sm font-bold cursor-pointer mb-2 sm:mb-0 2xl:basis-[35%] lg:basis-[387px]"
-                onClick={() => {
-                  goingBack();
-                }}
-              >
-                <img src="/rolnew/global/icons/arrow-sm-left.svg" alt="go back" />
-              </div>
-              {!isCarSelected && (
-                <FleetFilter
-                  filterFleet={filterFleet}
-                  isActive={selectedFilter}
-                  removeFilter={clearFilter}
-                />
-              )}
-              {isCarSelected && (
-                <div className="w-full ml-3">
-                  <div className="flex items-center overflow-x-auto">
-                    <div
-                      className="relative flex flex-col items-center text-black cursor-pointer sm:flex-row"
-                      onClick={() => {
-                        setCarSelected(!isCarSelected);
-                      }}
-                    >
-                      <div className="flex items-center justify-center sm:w-10 sm:h-10 w-8 h-8 text-xl font-extrabold transition duration-500 ease-in-out rounded-full bg-success bg-opacity-90 border border-[#fff] border-opacity-20">
-                        <FiCheck className="font-black text-[#96fe96] sm:text-sm text-xs" />
-                      </div>
-                      <div className="px-1 lg:px-3 w-24 sm:w-auto">
-                        <P className="font-semibold uppercase text-success sm:text-sm !text-xs pt-1 text-center">
-                          SELECT VEHICLE
-                        </P>
-                      </div>
-                    </div>
-                    <div className="flex-auto sm:mr-3 mr-0 transition duration-500 ease-in-out border-t border-[#fff] border-opacity-20" />
-                    <div
-                      className="relative flex flex-col items-center cursor-pointer sm:flex-row text-primary"
-                      onClick={() => {
-                        setShowPayment(false);
-                      }}
-                    >
-                      <div
-                        className={`rounded-full transition duration-500 ease-in-out sm:w-10 sm:h-10 w-8 h-8 flex items-center justify-center font-semibold ${
-                          showPayment
-                            ? 'bg-success bg-opacity-90 text-success text-xl'
-                            : 'bg-[#223544] text-primary border border-[#fff] border-opacity-40'
-                        }`}
-                      >
-                        {showPayment && (
-                          <FiCheck className="text-[#96fe96] sm:text-sm text-xs" />
-                        )}
-
-                        {!showPayment && <P>2</P>}
-                      </div>
-                      <div className="sm:px-3 px-1 w-24 sm:w-auto text-center">
-                        <P
-                          className={`font-semibold uppercase sm:text-sm !text-xs text-center pt-1 ${
-                            showPayment ? 'text-success' : ' text-[#F7BC3A]'
-                          }`}
-                        >
-                          Passenger Details
-                        </P>
-                      </div>
-                    </div>
-                    <div className="flex-auto sm:mr-3 transition duration-500 ease-in-out border-t border-[#fff] border-opacity-20" />
-                    <div className="relative flex flex-col items-center text-gray-500 sm:flex-row">
-                      <div className="flex items-center justify-center sm:w-10 sm:h-10 w-8 h-8 font-semibold transition duration-500 ease-in-out bg-[#223544] rounded-full border border-[#fff] border-opacity-40">
-                        <P className={` ${showPayment ? 'text-primary' : ''}`}>
-                          3
-                        </P>
-                      </div>
-                      <div className="sm:px-3 px-1 w-24 sm:w-auto">
-                        <P
-                          className={`font-semibold uppercase sm:text-sm !text-xs text-center pt-1 ${
-                            showPayment ? ' text-[#F7BC3A]' : ''
-                          }`}
-                        >
-                          PAYMENT
-                        </P>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-            <div className="flex flex-col mt-10 lg:flex-row">
-              <div
-                className={`2xl:basis-[45%] lg:basis-[400px] lg:sticky fixed h-5/6  md:h-[85%] left-0 right-0 lg:top-24 lg:mt-0 lg:order-1 order-2 lg:z-auto z-50 transition-transform duration-150 ease-in-out delay-500 lg:bg-[#223544] bg-[#11202D] lg:px-0 px-4 lg:py-0 py-2 ${
-                  showTransfer
-                    ? 'top-auto bottom-0 mt-0 overflow-y-auto bg-[#223544]'
-                    : 'top-full -mt-12'
+                className={`mx-auto lg:container sm:flex items-center ${
+                  !isCarSelected && ' justify-between'
                 }`}
               >
-                <div className="relative text-left">
-                  <div
-                    onClick={() => {
-                      setShowTransfer(!showTransfer);
-                    }}
-                    className="relative"
-                  >
-                    <div className="absolute z-[50] block px-2 py-2 border-t-2 rounded-full cursor-pointer lg:hidden -top-2 left-2/4 lg:bg-[#223544] bg-[#11202D]">
-                      {!showTransfer && <FaAngleUp className="bg-[#11202D]" />}
-                      {showTransfer && <FaAngleDown className="bg-[#11202D]" />}
-                    </div>
-                    <div className="pb-2 border-b border-gray-200 lg:text-center">
-                      <H2 className="font-bold !text-2xl !text-[#CED5E5] !leading-1">
-                        Your transfer
-                      </H2>
+                <div
+                  className='flex items-center text-primary text-sm font-bold cursor-pointer mb-2 sm:mb-0 2xl:basis-[35%] lg:basis-[387px]'
+                  onClick={() => {
+                    goingBack();
+                  }}
+                >
+                  <img
+                    src='/rolnew/global/icons/arrow-sm-left.svg'
+                    alt='go back'
+                  />
+                </div>
+                {!isCarSelected && (
+                  <FleetFilter
+                    filterFleet={filterFleet}
+                    isActive={selectedFilter}
+                    removeFilter={clearFilter}
+                  />
+                )}
+                {isCarSelected && (
+                  <div className='w-full ml-3'>
+                    <div className='flex items-center overflow-x-auto'>
+                      <div
+                        className='relative flex flex-col items-center text-black cursor-pointer sm:flex-row'
+                        onClick={() => {
+                          setCarSelected(!isCarSelected);
+                        }}
+                      >
+                        <div className='flex items-center justify-center sm:w-10 sm:h-10 w-8 h-8 text-xl font-extrabold transition duration-500 ease-in-out rounded-full bg-success bg-opacity-90 border border-[#fff] border-opacity-20'>
+                          <FiCheck className='font-black text-[#96fe96] sm:text-sm text-xs' />
+                        </div>
+                        <div className='px-1 lg:px-3 w-24 sm:w-auto'>
+                          <P className='font-semibold uppercase text-success sm:text-sm !text-xs pt-1 text-center'>
+                            SELECT VEHICLE
+                          </P>
+                        </div>
+                      </div>
+                      <div className='flex-auto sm:mr-3 mr-0 transition duration-500 ease-in-out border-t border-[#fff] border-opacity-20' />
+                      <div
+                        className='relative flex flex-col items-center cursor-pointer sm:flex-row text-primary'
+                        onClick={() => {
+                          setShowPayment(false);
+                        }}
+                      >
+                        <div
+                          className={`rounded-full transition duration-500 ease-in-out sm:w-10 sm:h-10 w-8 h-8 flex items-center justify-center font-semibold ${
+                            showPayment
+                              ? 'bg-success bg-opacity-90 text-success text-xl'
+                              : 'bg-[#223544] text-primary border border-[#fff] border-opacity-40'
+                          }`}
+                        >
+                          {showPayment && (
+                            <FiCheck className='text-[#96fe96] sm:text-sm text-xs' />
+                          )}
+
+                          {!showPayment && <P>2</P>}
+                        </div>
+                        <div className='sm:px-3 px-1 w-24 sm:w-auto text-center'>
+                          <P
+                            className={`font-semibold uppercase sm:text-sm !text-xs text-center pt-1 ${
+                              showPayment ? 'text-success' : ' text-[#F7BC3A]'
+                            }`}
+                          >
+                            Passenger Details
+                          </P>
+                        </div>
+                      </div>
+                      <div className='flex-auto sm:mr-3 transition duration-500 ease-in-out border-t border-[#fff] border-opacity-20' />
+                      <div className='relative flex flex-col items-center text-gray-500 sm:flex-row'>
+                        <div className='flex items-center justify-center sm:w-10 sm:h-10 w-8 h-8 font-semibold transition duration-500 ease-in-out bg-[#223544] rounded-full border border-[#fff] border-opacity-40'>
+                          <P
+                            className={` ${showPayment ? 'text-primary' : ''}`}
+                          >
+                            3
+                          </P>
+                        </div>
+                        <div className='sm:px-3 px-1 w-24 sm:w-auto'>
+                          <P
+                            className={`font-semibold uppercase sm:text-sm !text-xs text-center pt-1 ${
+                              showPayment ? ' text-[#F7BC3A]' : ''
+                            }`}
+                          >
+                            PAYMENT
+                          </P>
+                        </div>
+                      </div>
                     </div>
                   </div>
-
-                  <div className="mt-4 mb-2 border-b border-gray-200 !text-[#CED5E5]">
-                    <div className="flex items-center mb-5">
-                      <FaDotCircle className="ml-1 text-md" />
-                      {returndate && bookingtype === 'transfers' && (
-                        <H4 className="pl-3 font-semibold !text-[#CED5E5]">Round Trip</H4>
-                      )}
-                      {!returndate && bookingtype !== 'hourly' && (
-                        <H4 className="pl-3 font-semibold !text-[#CED5E5]">One-Way journey</H4>
-                      )}
-                      {bookingtype === 'hourly' && (
-                        <H4 className="pl-3 font-semibold !text-[#CED5E5]">Hourly trip</H4>
-                      )}
-                    </div>
-                    <div className="flex flex-col">
-                      <div className="relative h-fit pb-6">
-                        <div className="flex">
-                          <div className="w-5 h-7 flex-none">
-                            <Pic
-                              src="/rolnew/global/icons/location-marker.svg"
-                              alt="location"
-                            />
-                          </div>
-                          <P className="pl-4 font-normal !text-[#CED5E5]">{pickupaddress}</P>
-                        </div>
-                        {
-                          dropaddress
-                        && <div className="border-r w-1 border-[#FDC65C] min-h-[10px] h-4/6 absolute left-1.5 -bottom-0" />
-                        }
+                )}
+              </div>
+              <div className='flex flex-col mt-10 lg:flex-row'>
+                <div
+                  className={`2xl:basis-[45%] lg:basis-[400px] lg:sticky fixed h-5/6  md:h-[85%] left-0 right-0 lg:top-24 lg:mt-0 lg:order-1 order-2 lg:z-auto z-50 transition-transform duration-150 ease-in-out delay-500 lg:bg-[#223544] bg-[#11202D] lg:px-0 px-4 lg:py-0 py-2 ${
+                    showTransfer
+                      ? 'top-auto bottom-0 mt-0 overflow-y-auto bg-[#223544]'
+                      : 'top-full -mt-12'
+                  }`}
+                >
+                  <div className='relative text-left'>
+                    <div
+                      onClick={() => {
+                        setShowTransfer(!showTransfer);
+                      }}
+                      className='relative'
+                    >
+                      <div className='absolute z-[50] block px-2 py-2 border-t-2 rounded-full cursor-pointer lg:hidden -top-2 left-2/4 lg:bg-[#223544] bg-[#11202D]'>
+                        {!showTransfer && (
+                          <FaAngleUp className='bg-[#11202D]' />
+                        )}
+                        {showTransfer && (
+                          <FaAngleDown className='bg-[#11202D]' />
+                        )}
                       </div>
-                      {
-                        dropaddress
-                      && (
-                      <div className="flex">
-                        <div className="w-5 h-7 flex-none">
-                          <Pic
-                            src="/rolnew/global/icons/location-marker.svg"
-                            alt="location"
-                          />
-                        </div>
-                        <P className="pl-4 font-normal !text-[#CED5E5]">{dropaddress}</P>
-                      </div>
-                      )
-                      }
-                    </div>
-                    {returndate && (
-                      <div className="flex items-center mt-6 mb-2 gap-x-2">
-                        <FaDotCircle className="text-md" />
-                        <P className="font-semibold !text-[#CED5E5]">Pickup Date</P>
-                      </div>
-                    )}
-
-                    <div className="flex items-center my-4 gap-x-4">
-                      <div
-                        className="flex items-center gap-x-2"
-                      >
-                        <div className="w-5 h-5">
-                          <Pic
-                            src="/rolnew/global/icons/calendar.svg"
-                            alt="calendar"
-                          />
-                        </div>
-                        <P className="font-normal !text-[#CED5E5]">
-                          {pickupdate?.replace('/', ' ')}
-                        </P>
-                      </div>
-
-                      <div className="flex items-center gap-x-2">
-                        <div className="w-5 h-5">
-                          <Pic src="/rolnew/global/icons/clock.svg" alt="clock" />
-                        </div>
-                        <P className="font-normal !text-[#CED5E5]">{pickuptime}</P>
+                      <div className='pb-2 border-b border-gray-200 lg:text-center'>
+                        <H2 className='font-bold !text-2xl !text-[#CED5E5] !leading-1'>
+                          Your transfer
+                        </H2>
                       </div>
                     </div>
 
-                    {returndate && bookingtype === 'transfers' && (
-                      <>
-                        <div className="flex items-center mt-6 mb-3">
-                          <FaDotCircle className="ml-1 text-md" />
-                          <P className="pl-3 font-semibold !text-[#CED5E5]">Return Date</P>
-                        </div>
-                        <div className="flex items-center my-4 gap-x-4">
-                          <div
-                            className="flex items-center gap-x-2"
-                          >
-                            <div className="w-5 h-5">
+                    <div className='mt-4 mb-2 border-b border-gray-200 !text-[#CED5E5]'>
+                      <div className='flex items-center mb-5'>
+                        <FaDotCircle className='ml-1 text-md' />
+                        {returndate && bookingtype === 'transfers' && (
+                          <H4 className='pl-3 font-semibold !text-[#CED5E5]'>
+                            Round Trip
+                          </H4>
+                        )}
+                        {!returndate && bookingtype !== 'hourly' && (
+                          <H4 className='pl-3 font-semibold !text-[#CED5E5]'>
+                            One-Way journey
+                          </H4>
+                        )}
+                        {bookingtype === 'hourly' && (
+                          <H4 className='pl-3 font-semibold !text-[#CED5E5]'>
+                            Hourly trip
+                          </H4>
+                        )}
+                      </div>
+                      <div className='flex flex-col'>
+                        <div className='relative h-fit pb-6'>
+                          <div className='flex'>
+                            <div className='w-5 h-7 flex-none'>
                               <Pic
-                                src="/rolnew/global/icons/calendar.svg"
-                                alt="calendar"
+                                src='/rolnew/global/icons/location-marker.svg'
+                                alt='location'
                               />
                             </div>
-                            <P className="font-normal !text-[#CED5E5]">
-                              {returndate?.replace('/', ' ')}
+                            <P className='pl-4 font-normal !text-[#CED5E5]'>
+                              {pickupaddress}
                             </P>
                           </div>
-                          <div className="flex items-center gap-x-2">
-                            <div className="w-5 h-5">
-                              <Pic src="/rolnew/global/icons/clock.svg" alt="clock" />
-                            </div>
-                            <P className="font-normal !text-[#CED5E5]">{returntime}</P>
-                          </div>
+                          {dropaddress && (
+                            <div className='border-r w-1 border-[#FDC65C] min-h-[10px] h-4/6 absolute left-1.5 -bottom-0' />
+                          )}
                         </div>
-                      </>
-                    )}
-                  </div>
-                  <div className="mt-4">
-                    {passengersDetails && (
-                      <>
-                        <div className="flex items-center justify-start mb-4">
-                          <div className="w-6 h-5">
-                            <Pic src="/rolnew/global/icons/users-white.svg" alt="location" />
+                        {dropaddress && (
+                          <div className='flex'>
+                            <div className='w-5 h-7 flex-none'>
+                              <Pic
+                                src='/rolnew/global/icons/location-marker.svg'
+                                alt='location'
+                              />
+                            </div>
+                            <P className='pl-4 font-normal !text-[#CED5E5]'>
+                              {dropaddress}
+                            </P>
                           </div>
-                          <P className="font-normal capitalize pl-3 !text-[#CED5E5]">
-                            {`${passengersDetails.fname} ${passengersDetails.lname}`}
+                        )}
+                      </div>
+                      {returndate && (
+                        <div className='flex items-center mt-6 mb-2 gap-x-2'>
+                          <FaDotCircle className='text-md' />
+                          <P className='font-semibold !text-[#CED5E5]'>
+                            Pickup Date
                           </P>
                         </div>
-                        <div className="flex items-center justify-start mb-4">
-                          {/* <Pic src="/images/icons/email.svg" alt="location" /> */}
-                          <MdOutlineEmail className="text-[24px]" />
-                          <P className="font-normal pl-3 !text-[#CED5E5]">
-                            {`${passengersDetails.email}`}
+                      )}
+
+                      <div className='flex items-center my-4 gap-x-4'>
+                        <div className='flex items-center gap-x-2'>
+                          <div className='w-5 h-5'>
+                            <Pic
+                              src='/rolnew/global/icons/calendar.svg'
+                              alt='calendar'
+                            />
+                          </div>
+                          <P className='font-normal !text-[#CED5E5]'>
+                            {pickupdate?.replace('/', ' ')}
                           </P>
                         </div>
 
-                        <div className="flex items-center justify-start mb-4">
-                          <FiPhone className="text-[20px]" />
-                          <P className="font-normal pl-3 !text-[#CED5E5]">
-                            {`${passengersDetails.mobileno}`}
+                        <div className='flex items-center gap-x-2'>
+                          <div className='w-5 h-5'>
+                            <Pic
+                              src='/rolnew/global/icons/clock.svg'
+                              alt='clock'
+                            />
+                          </div>
+                          <P className='font-normal !text-[#CED5E5]'>
+                            {pickuptime}
                           </P>
                         </div>
-                      </>
-                    )}
-                    <div className="flex flex-nowrap gap-x-2">
-                      {distance && (
-                      <div className="flex items-center gap-x-1">
-                        <div className="w-5 h-5">
-                          <Pic
-                            src="/rolnew/global/icons/path.svg"
-                            alt="location"
-                          />
-                        </div>
-                        <P className="font-normal !text-[#CED5E5]">
-                          {distance}
-                          {' '}
-                          km /
-                          {' '}
-                          {convertKmToMile(distance)}
-                          {' '}
-                          miles
-                        </P>
                       </div>
+
+                      {returndate && bookingtype === 'transfers' && (
+                        <>
+                          <div className='flex items-center mt-6 mb-3'>
+                            <FaDotCircle className='ml-1 text-md' />
+                            <P className='pl-3 font-semibold !text-[#CED5E5]'>
+                              Return Date
+                            </P>
+                          </div>
+                          <div className='flex items-center my-4 gap-x-4'>
+                            <div className='flex items-center gap-x-2'>
+                              <div className='w-5 h-5'>
+                                <Pic
+                                  src='/rolnew/global/icons/calendar.svg'
+                                  alt='calendar'
+                                />
+                              </div>
+                              <P className='font-normal !text-[#CED5E5]'>
+                                {returndate?.replace('/', ' ')}
+                              </P>
+                            </div>
+                            <div className='flex items-center gap-x-2'>
+                              <div className='w-5 h-5'>
+                                <Pic
+                                  src='/rolnew/global/icons/clock.svg'
+                                  alt='clock'
+                                />
+                              </div>
+                              <P className='font-normal !text-[#CED5E5]'>
+                                {returntime}
+                              </P>
+                            </div>
+                          </div>
+                        </>
                       )}
-                      <div className="flex items-center gap-x-1">
-                        <div className="w-4 h-4">
-                          <Pic
-                            src="/rolnew/global/icons/clock.svg"
-                            alt="clock"
-                          />
+                    </div>
+                    <div className='mt-4'>
+                      {passengersDetails && (
+                        <>
+                          <div className='flex items-center justify-start mb-4'>
+                            <div className='w-6 h-5'>
+                              <Pic
+                                src='/rolnew/global/icons/users-white.svg'
+                                alt='location'
+                              />
+                            </div>
+                            <P className='font-normal capitalize pl-3 !text-[#CED5E5]'>
+                              {`${passengersDetails.fname} ${passengersDetails.lname}`}
+                            </P>
+                          </div>
+                          <div className='flex items-center justify-start mb-4'>
+                            {/* <Pic src="/images/icons/email.svg" alt="location" /> */}
+                            <MdOutlineEmail className='text-[24px]' />
+                            <P className='font-normal pl-3 !text-[#CED5E5]'>
+                              {`${passengersDetails.email}`}
+                            </P>
+                          </div>
+
+                          <div className='flex items-center justify-start mb-4'>
+                            <FiPhone className='text-[20px]' />
+                            <P className='font-normal pl-3 !text-[#CED5E5]'>
+                              {`${passengersDetails.mobileno}`}
+                            </P>
+                          </div>
+                        </>
+                      )}
+                      <div className='flex flex-nowrap gap-x-2'>
+                        {distance && (
+                          <div className='flex items-center gap-x-1'>
+                            <div className='w-5 h-5'>
+                              <Pic
+                                src='/rolnew/global/icons/path.svg'
+                                alt='location'
+                              />
+                            </div>
+                            <P className='font-normal !text-[#CED5E5]'>
+                              {distance} km / {convertKmToMile(distance)} miles
+                            </P>
+                          </div>
+                        )}
+                        <div className='flex items-center gap-x-1'>
+                          <div className='w-4 h-4'>
+                            <Pic
+                              src='/rolnew/global/icons/clock.svg'
+                              alt='clock'
+                            />
+                          </div>
+                          <P className='font-normal !text-[#CED5E5]'>
+                            {duration
+                              ? getDurationInHour(duration)
+                              : rideduration}
+                          </P>
                         </div>
-                        <P className="font-normal !text-[#CED5E5]">
-                          {duration ? getDurationInHour(duration) : rideduration}
-                        </P>
                       </div>
+                    </div>
+                  </div>
+                  <div className='text-left mt-3'>
+                    <div className='flex items-start gap-x-2'>
+                      <div className='w-5 h-5'>
+                        <Pic
+                          src='/rolnew/global/icons/mdi-thunder.svg'
+                          alt='clock'
+                        />
+                      </div>
+                      <P className='pl-1 font-medium text-[#F7BC3A]'>
+                        Instant confirmation
+                      </P>
+                    </div>
+                    <div className='flex items-start mt-4 gap-x-2'>
+                      <div className='w-5 h-5'>
+                        <Pic
+                          src='/rolnew/global/icons/check-circle.svg'
+                          alt='clock'
+                        />
+                      </div>
+                      <P className='pl-1 font-medium text-[#F7BC3A]'>
+                        FREE Cancellation Upto 24 hours
+                      </P>
+                    </div>
+                    <div className='flex items-start mt-4 gap-x-2'>
+                      <div className='w-5 h-5'>
+                        <Pic
+                          src='/rolnew/global/icons/shield-check.svg'
+                          alt='clock'
+                        />
+                      </div>
+                      <P className='pl-1 font-medium text-[#F7BC3A]'>
+                        No hidden costs
+                      </P>
+                    </div>
+
+                    <div className='flex items-start mt-4 w-full gap-x-2'>
+                      <div className='w-5 h-5'>
+                        <FiCheck className='text-xl' />
+                      </div>
+                      <P className='font-medium grow'>All-inclusive pricing</P>
+                    </div>
+
+                    <div className='flex items-start mt-4 w-full gap-x-2'>
+                      <div className='w-5 h-5'>
+                        <FiCheck className='text-xl' />
+                      </div>
+                      <P className='font-medium grow'>
+                        Secure Payment by credit card, debit card
+                      </P>
+                    </div>
+                    <div className='h-12 mx-auto mt-4 lg:w-full flex gap-x-2 items-start'>
+                      {/* <Pic src="/images/icons/payments.png" alt="location" /> */}
+                      {allCards.map((item) => (
+                        <img
+                          key={item}
+                          src={`/images/trip-details/cards/${item}.svg`}
+                          alt={item}
+                          className='w-12 h-10'
+                        />
+                      ))}
                     </div>
                   </div>
                 </div>
-                <div className="text-left mt-3">
-                  <div className="flex items-start gap-x-2">
-                    <div className="w-5 h-5">
-                      <Pic src="/rolnew/global/icons/mdi-thunder.svg" alt="clock" />
-                    </div>
-                    <P className="pl-1 font-medium text-[#F7BC3A]">Instant confirmation</P>
-                  </div>
-                  <div className="flex items-start mt-4 gap-x-2">
-                    <div className="w-5 h-5">
-                      <Pic src="/rolnew/global/icons/check-circle.svg" alt="clock" />
-                    </div>
-                    <P className="pl-1 font-medium text-[#F7BC3A]">FREE Cancellation Upto 24 hours</P>
-                  </div>
-                  <div className="flex items-start mt-4 gap-x-2">
-                    <div className="w-5 h-5">
-                      <Pic src="/rolnew/global/icons/shield-check.svg" alt="clock" />
-                    </div>
-                    <P className="pl-1 font-medium text-[#F7BC3A]">No hidden costs</P>
-                  </div>
-
-                  <div className="flex items-start mt-4 w-full gap-x-2">
-                    <div className="w-5 h-5">
-                      <FiCheck className="text-xl" />
-                    </div>
-                    <P className="font-medium grow">All-inclusive pricing</P>
-                  </div>
-
-                  <div className="flex items-start mt-4 w-full gap-x-2">
-                    <div className="w-5 h-5">
-                      <FiCheck className="text-xl" />
-                    </div>
-                    <P className="font-medium grow">
-                      Secure Payment by credit card, debit card
-                    </P>
-                  </div>
-                  <div className="h-12 mx-auto mt-4 lg:w-full flex gap-x-2 items-start">
-                    {/* <Pic src="/images/icons/payments.png" alt="location" /> */}
-                    {allCards.map((item) => (
-                      <img
-                        key={item}
-                        src={`/images/trip-details/cards/${item}.svg`}
-                        alt={item}
-                        className="w-12 h-10"
+                <div className='relative order-1 w-full max-w-full lg:ml-5 lg:order-2 grow'>
+                  {showLoader && <Loader />}
+                  {!isCarSelected &&
+                    filterFleetList &&
+                    filterFleetList.map((fleet) => (
+                      // eslint-disable-next-line max-len, react/jsx-no-bind
+                      <CarsCard
+                        key={fleet.vehicle_cat_name}
+                        showBookBtn
+                        fleetDetails={fleet}
+                        selectCar={selectCar}
+                        isSelected={selectedCarDetails?.vehicle_cat_id}
                       />
                     ))}
-                  </div>
-                </div>
-              </div>
-              <div className="relative order-1 w-full max-w-full lg:ml-5 lg:order-2 grow">
-                {showLoader && <Loader />}
-                {!isCarSelected
-                  && filterFleetList
-                  && filterFleetList.map((fleet) => (
-                    // eslint-disable-next-line max-len, react/jsx-no-bind
-                    <CarsCard
-                      key={fleet.vehicle_cat_name}
-                      showBookBtn
-                      fleetDetails={fleet}
-                      selectCar={selectCar}
-                      isSelected={selectedCarDetails?.vehicle_cat_id}
-                    />
-                  ))}
 
-                {!fleetList && !showLoader && (
-                  <div className="flex items-center justify-center h-4/6">
-                    <H1 className="font-semibold leading-5 text-red-500 capitalize -mt-2/3">
-                      Sorry!
-                      {' '}
-                      <br />
-                      No fleet available
-                    </H1>
-                  </div>
-                )}
+                  {!fleetList && !showLoader && (
+                    <div className='flex items-center justify-center h-4/6'>
+                      <H1 className='font-semibold leading-5 text-red-500 capitalize -mt-2/3'>
+                        Sorry! <br />
+                        No fleet available
+                      </H1>
+                    </div>
+                  )}
 
-                {isCarSelected && !showPayment && (
-                  <div ref={carsRef}>
-                    <CarsCard
-                      showBookBtn={false}
-                      fleetDetails={selectedCarDetails}
-                      isActive
-                    />
-                  </div>
-                )}
+                  {isCarSelected && !showPayment && (
+                    <div ref={carsRef}>
+                      <CarsCard
+                        showBookBtn={false}
+                        fleetDetails={selectedCarDetails}
+                        isActive
+                      />
+                    </div>
+                  )}
 
-                {isCarSelected && showPayment && (
-                  <div ref={carsRef}>
-                    {/* <CarsCardWithUserDetails
+                  {isCarSelected && showPayment && (
+                    <div ref={carsRef}>
+                      {/* <CarsCardWithUserDetails
                     showBookBtn={false}
                     fleetDetails={selectedCarDetails}
                     userDetails={passengersDetails}
                     showBooker={showBooker}
                     showFlight={showFlight}
                   /> */}
-                    <CarsCard
-                      showBookBtn={false}
-                      fleetDetails={selectedCarDetails}
-                      isActive
-                    />
-                  </div>
-                )}
-
-                {showAuth && isCarSelected && (
-                  <div className="relative" ref={paymentsRef}>
-                    <form
-                      onSubmit={handleSubmit(onPassengerSubmit)}
-                      className={`${showPayment && 'hidden'}`}
-                      ref={formRef}
-                    >
-                      <PassengerDetails
-                        details={passengersDetails}
-                        setDetails={setPassengersDetails}
-                        showFlight={showFlight}
-                        setBooker={setShowBooker}
-                        showBooker={showBooker}
-                        register={register}
-                        formState={formState}
-                        setError={setError}
-                        clearErrors={clearErrors}
-                        userDetails={userDetails}
-                        setValue={setValue}
-                        setUserDetails={setUserDetails}
-                        checkMobileNumber={checkPassengerMobileNumber}
-                        mobileError={passengerMobileError}
-                        checkBookerMobileError={checkBookerMobileNumber}
-                        bookerMobileError={bookerMobileError}
-                        checkBookerEmailError={checkBookerEmailError}
-                        checkEmailexists={checkEmailexists}
-                        passengerLoader={passengerLoader}
-                        setPassenger={addPassengers}
-                        passengers={passengers}
-                        decrement={decrement}
-                        increment={increment}
-                        setShowAuth={setShowAuth}
-                        showPassengerError={showPassengerError}
-                        getMobileNumber={getMobileNumber}
-                        setPassengers={setPassengers}
-                        getValues={getValues}
+                      <CarsCard
+                        showBookBtn={false}
+                        fleetDetails={selectedCarDetails}
+                        isActive
                       />
-                    </form>
-                    <div className={`${!showPayment && 'hidden'}`}>
-                      {/* <PaymentDetails
+                    </div>
+                  )}
+
+                  {showAuth && isCarSelected && (
+                    <div className='relative' ref={paymentsRef}>
+                      <form
+                        onSubmit={handleSubmit(onPassengerSubmit)}
+                        className={`${showPayment && 'hidden'}`}
+                        ref={formRef}
+                      >
+                        <PassengerDetails
+                          details={passengersDetails}
+                          setDetails={setPassengersDetails}
+                          showFlight={showFlight}
+                          setBooker={setShowBooker}
+                          showBooker={showBooker}
+                          register={register}
+                          formState={formState}
+                          setError={setError}
+                          clearErrors={clearErrors}
+                          userDetails={userDetails}
+                          setValue={setValue}
+                          setUserDetails={setUserDetails}
+                          checkMobileNumber={checkPassengerMobileNumber}
+                          mobileError={passengerMobileError}
+                          checkBookerMobileError={checkBookerMobileNumber}
+                          bookerMobileError={bookerMobileError}
+                          checkBookerEmailError={checkBookerEmailError}
+                          checkEmailexists={checkEmailexists}
+                          passengerLoader={passengerLoader}
+                          setPassenger={addPassengers}
+                          passengers={passengers}
+                          decrement={decrement}
+                          increment={increment}
+                          setShowAuth={setShowAuth}
+                          showPassengerError={showPassengerError}
+                          getMobileNumber={getMobileNumber}
+                          setPassengers={setPassengers}
+                          getValues={getValues}
+                        />
+                      </form>
+                      <div className={`${!showPayment && 'hidden'}`}>
+                        {/* <PaymentDetails
                         showBilling={showBilling}
                         setShowBilling={setShowBilling}
                         callBooking={callBooking}
@@ -1326,40 +1415,43 @@ function FleetPage() {
                         setShowToken={setShowToken}
                         showToken={showToken}
                       /> */}
-                      <PayWithStripe
-                        showLoading={showBtnLoading}
-                        setShowBilling={setShowBilling}
-                        setShowToken={setShowToken}
-                        callBooking={callBooking}
-                        showToken={showToken}
-                      />
+                        <PayWithStripe
+                          showLoading={showBtnLoading}
+                          setShowBilling={setShowBilling}
+                          setShowToken={setShowToken}
+                          callBooking={callBooking}
+                          showToken={showToken}
+                        />
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
-                {!showAuth && isCarSelected && (
-                  <div className="py-8 text-left bg-[#384957] border-[#FFFFFF33] border-0.4 border-opacity-20 rounded-xl" ref={loginRef}>
-                    <div className="max-w-[550px] mx-auto">
-                      <EmailLogin
-                        isEmailLogin={showEmailLogin}
-                        handelClick={setshowEmailLogin}
-                        _callbackUrl="/fleet-availability"
-                      />
+                  {!showAuth && isCarSelected && (
+                    <div
+                      className='py-8 text-left bg-[#384957] border-[#FFFFFF33] border-0.4 border-opacity-20 rounded-xl'
+                      ref={loginRef}
+                    >
+                      <div className='max-w-[550px] mx-auto'>
+                        <EmailLogin
+                          isEmailLogin={showEmailLogin}
+                          handelClick={setshowEmailLogin}
+                          _callbackUrl='/fleet-availability'
+                        />
 
-                      <Login
-                        showOTP={showEmailLogin}
-                        isLoggedIn={setShowAuth}
-                        getBookerPassword={setBookerPassword}
-                        passwordExists={setPasswordExists}
-                        getAuthType={setAuthType}
-                      />
+                        <Login
+                          showOTP={showEmailLogin}
+                          isLoggedIn={setShowAuth}
+                          getBookerPassword={setBookerPassword}
+                          passwordExists={setPasswordExists}
+                          getAuthType={setAuthType}
+                        />
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        </Container>
+          </Container>
         )}
       </div>
     </>
