@@ -44,35 +44,35 @@ export const destinationsData = {
     list: [
       {
         id: 1,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-paris/Louvre Museum (1).jpg',
         cityName: 'Louvre Museum',
         countryCode: 'FR',
         address: 'Paris',
       },
       {
         id: 2,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-paris/Eiffel Tower (1).jpg',
         cityName: 'Eiffel Tower',
         countryCode: 'FR',
         address: 'Paris',
       },
       {
         id: 3,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-paris/Arc of Triumph.jpg',
         cityName: 'Arc de Triomphe',
         countryCode: 'FR',
         address: 'Paris',
       },
       {
         id: 4,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-paris/Montmartre.jpg',
         cityName: 'Cathédrale Notre-Dame',
         countryCode: 'FR',
         address: 'Paris',
       },
       {
         id: 5,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-paris/Louvre Museum (1).jpg',
         cityName: 'Sainte-Chapelle',
         countryCode: 'FR',
         address: 'Paris',
@@ -84,35 +84,35 @@ export const destinationsData = {
     list: [
       {
         id: 1,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-newyork/Montauk.jpg',
         cityName: 'Central Park',
         countryCode: 'US',
         address: 'New York',
       },
       {
         id: 2,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-newyork/Statue of Liberty (1).jpg',
         cityName: 'Statue of Liberty',
         countryCode: 'US',
         address: 'New York',
       },
       {
         id: 3,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-newyork/Times Square (1).jpg',
         cityName: 'Times Square',
         countryCode: 'US',
         address: 'New York',
       },
       {
         id: 4,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-newyork/Empire State Building.jpg',
         cityName: 'Empire State Building',
         countryCode: 'US',
         address: 'New York',
       },
       {
         id: 5,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-newyork/Brooklyn Bridge.jpg',
         cityName: 'Brooklyn Bridge',
         countryCode: 'US',
         address: 'New York',
@@ -124,28 +124,28 @@ export const destinationsData = {
     list: [
       {
         id: 1,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-dubai/Burj Khalifa (1).jpg',
         cityName: 'Burj Khalifa',
         countryCode: 'AE',
         address: 'Dubai',
       },
       {
         id: 2,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-dubai/Louvre Museum (1).jpg',
         cityName: 'Dubai Frame',
         countryCode: 'AE',
         address: 'Dubai',
       },
       {
         id: 3,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-dubai/Louvre Museum (1).jpg',
         cityName: 'Museum of The Future',
         countryCode: 'AE',
         address: 'Dubai',
       },
       {
         id: 4,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/best-spot-dubai/Louvre Museum (1).jpg',
         cityName: 'Dubai Aquarium',
         countryCode: 'AE',
         address: 'Dubai',
@@ -245,7 +245,7 @@ export const trustedPartnersData = [
   {
     icon: '/rolnew/global/icons/steering-wheel.svg',
     title: 'Professional Chauffeurs',
-    desc: 'RolDrive\'s professional chauffeurs are expertly trained, courteous, and dedicated to providing exceptional service. They cater to all your travel needs with utmost discretion and professionalism..',
+    desc: "RolDrive's professional chauffeurs are expertly trained, courteous, and dedicated to providing exceptional service. They cater to all your travel needs with utmost discretion and professionalism..",
   },
   {
     icon: '/rolnew/global/icons/service-line.svg',
@@ -255,6 +255,6 @@ export const trustedPartnersData = [
   {
     icon: '/rolnew/global/icons/car-line.svg',
     title: 'A Great Fleet',
-    desc: 'RolDrive\'s fleet boasts a wide array of luxurious and well-maintained vehicles, offering everything from sleek sedans to spacious SUVs',
+    desc: "RolDrive's fleet boasts a wide array of luxurious and well-maintained vehicles, offering everything from sleek sedans to spacious SUVs",
   },
 ];
