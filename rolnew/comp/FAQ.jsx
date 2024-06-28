@@ -9,7 +9,7 @@ import FleetFaqCat from './FleetFaqCat';
 function FAQ({ faq }) {
   const [faqCat, setFaqCat] = useState('General');
 
-  const selectedCat = faq.find((item) => item.faqCat === faqCat)?.faqData || [];
+  const selectedCat = faq?.find((item) => item.faqCat === faqCat)?.faqData || [];
 
   return (
     <Container className='bg-[#081017] sm:py-[60px] py-[32px] text-center'>

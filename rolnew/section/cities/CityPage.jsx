@@ -38,7 +38,7 @@ function CityPage() {
     <>
       <Banner pageData={pageData} />
       <div className='bg-[#11202D] py-12'>
-        <TrustedPartners img={pageData?.servicesData?.img} showTitle={false} />
+        <TrustedPartners img={pageData?.trustedPartnersData?.img} trustedPartnersData={pageData?.trustedPartnersData?.data} showTitle={false} />
       </div>
       <OurFeet showBooking />
       <Landmark pageData={pageData} />

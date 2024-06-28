@@ -5,15 +5,38 @@ export const cityData = {
       subTitle: 'Your exclusive and dependable chauffeur service indulgence',
       bannerImage: '/rolnew/cities/london.png',
     },
-    servicesData: {
-      img: '/rolnew/cities/trust-banner.svg',
-    },
     title1: {
       subTile: 'Tailored Chauffeur Services',
       mainTitle: 'London Landmarks',
       description:
         'These attractions can be busy and difficult to navigate, especially during peak tourist season. By hiring a chauffeur service such as a Mercedes Sprinter hire in London, tourists can sit back and relax while their experienced driver navigates through the busy city streets, making their way to each attraction without the added stress of finding a parking spot or figuring out public transportation.',
     },
+    trustedPartnersData: {
+      img: '/rolnew/cities/trust-banner.svg',
+      data: [
+        {
+          icon: '/rolnew/global/icons/shield-user-line.svg',
+          title: 'Exceptional Chauffeur Service',
+          desc: 'RolDrive offers exceptional chauffeur service in London, providing luxurious, reliable transportation with professional drivers. Perfect for airport transfers, business trips, and special events, RolDrive ensures a seamless and comfortable journey, prioritising customer satisfaction and convenience.',
+        },
+        {
+          icon: '/rolnew/global/icons/steering-wheel.svg',
+          title: 'Comprehensive Airport Coverage',
+          desc: 'RolDrive\'s comprehensive airport coverage offers top-tier chauffeur service in London, ensuring seamless transfers to and from all major airports. With luxury vehicles and professional drivers, RolDrive guarantees comfort, reliability, and a stress-free travel experience for every journey.',
+        },
+        {
+          icon: '/rolnew/global/icons/service-line.svg',
+          title: 'Flexible and Reliable',
+          desc: 'RolDrive offers a flexible and reliable chauffeur service in London, ensuring punctual and comfortable travel. Require a change of plans? No problem, RolDrive caters to various needs, providing a seamless experience for business and leisure travellers alike.',
+        },
+        {
+          icon: '/rolnew/global/icons/car-line.svg',
+          title: 'Professionalism and Trust',
+          desc: 'RolDrive\'s chauffeur service in London exemplifies professionalism and trust, offering punctual, reliable, and luxurious transportation. With well-trained chauffeurs and a fleet of high-end vehicles, RolDrive ensures a seamless and comfortable journey for all passengers, prioritising your safety and satisfaction.',
+        },
+      ]
+    },
+    
     landMarks: [
       {
         id: 'land1',
