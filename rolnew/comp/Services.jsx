@@ -13,7 +13,7 @@ function Services() {
       </Container> */}
       <Container className='bg-[#081017] sm:py-[80px] py-8 text-center'>
         <Title
-          subTile='Our services'
+          subTitle='Our services'
           mainTitle='Hire A Chauffeur Service For Your Every Need'
           description="Indulge in an unparalleled chauffeured luxury car rental service with our customised hire a chauffeur service designed to meet your unique requirements. Whether you're in pursuit of seamless airport transfers, corporate travel, or special events; our hourly chauffeur services are crafted to upgrade your journey. Embark on a journey with a full day chauffeur hire service where every detail is tailored to perfection. Browse our services now and experience the RolDrive difference with our executive chauffeur services."
           descClass='sm:py-[44px] py-8'

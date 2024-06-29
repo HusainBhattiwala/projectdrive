@@ -50,12 +50,14 @@ const collapseFaq = [
   },
   {
     id: 'faq3',
-    title: 'Is advance booking required for RolDrive’s luxury chauffeur service?',
+    title:
+      'Is advance booking required for RolDrive’s luxury chauffeur service?',
     desc: "Advance booking for RolDrive's luxury chauffeur service is highly recommended to ensure that you secure a vehicle that suits your specific needs and preferences. Early reservation allows for a more personalized service, giving RolDrive ample time to understand and prepare for any special requests you may have, whether it's a preference for a particular type of vehicle, the need for child seats, or accommodating extra luggage. It also ensures availability, particularly during peak periods or special events when demand for luxury chauffeur services spikes. ",
   },
   {
     id: 'faq4',
-    title: 'What information do I need to provide when booking a ride with RolDrive?',
+    title:
+      'What information do I need to provide when booking a ride with RolDrive?',
     desc: 'When booking a chauffeur service with RolDrive, it’s important to provide comprehensive information to ensure the service is tailored to your specific needs. This includes your pickup and drop-off locations to plan the route accurately, the desired date and time of the service to schedule your journey, and the number of passengers to select an appropriately sized vehicle. Additionally, specifying any special requirements, such as child seats for young travellers or extra luggage space for those carrying more items, helps RolDrive customize the experience. Providing detailed information during booking enables RolDrive to offer a personalized, efficient, and comfortable chauffeur service, aligning with our commitment to excellence in customer satisfaction.',
   },
   {
@@ -65,17 +67,20 @@ const collapseFaq = [
   },
   {
     id: 'faq6',
-    title: 'How many hours in advance do I need to cancel RolDrive’s chauffeur service in order to receive a full refund?',
+    title:
+      'How many hours in advance do I need to cancel RolDrive’s chauffeur service in order to receive a full refund?',
     desc: 'To receive a full refund, please cancel your RolDrive chauffeur service booking at least 12 hours before booking time.',
   },
   {
     id: 'faq7',
-    title: 'Are all vehicles from RolDrive’s luxury chauffeur service fleet available in all locations of service?',
+    title:
+      'Are all vehicles from RolDrive’s luxury chauffeur service fleet available in all locations of service?',
     desc: 'No. Not all vehicles in RolDrive`s luxury chauffeur service fleet are available at every location.To ascertain the availability of specific vehicles in your desired area, initiate a booking through RolDrive`s platform. During this process, enter your location details, and the system will display the vehicles available in that region. This approach ensures you can select from the options that are actually accessible for your journey, allowing for a tailored and satisfactory service experience. This method facilitates a streamlined and efficient booking process, aligning with RolDrive’s commitment to providing bespoke and luxury transportation solutions.',
   },
   {
     id: 'faq8',
-    title: 'Does RolDrive’s luxury chauffeur service offer premium and rare vehicles?',
+    title:
+      'Does RolDrive’s luxury chauffeur service offer premium and rare vehicles?',
     desc: 'Yes, RolDrive`s luxury chauffeur service stands out for its inclusion of premium and rare vehicles, catering to clients who seek the utmost in luxury and exclusivity.With prestigious options like Rolls Royce, Maybach, and Bentley in our fleet, RolDrive ensures that clients can experience the pinnacle of automotive luxury and sophistication. These vehicles are synonymous with opulence, offering unparalleled comfort, state-of-the-art technology, and a ride experience that is both smooth and memorable. For those looking to make a grand entrance or simply indulge in the luxury of high-end transportation, RolDrive provides the perfect solution with its selection of elite vehicles.',
   },
   {
@@ -100,7 +105,8 @@ const collapseFaq = [
   },
   {
     id: 'faq13',
-    title: 'What are the payment options available for me to book a RolDrive chauffeur service?',
+    title:
+      'What are the payment options available for me to book a RolDrive chauffeur service?',
     desc: 'We accept all major credit and debit cards for payments. Contact our finance department for direct bank transfer at booking@roldrive.com',
   },
   {
@@ -125,7 +131,8 @@ const collapseFaq = [
   },
   {
     id: 'faq18',
-    title: 'I`m flying from the United Kingdom. How many hours should I arrive at the airport before my flight?',
+    title:
+      'I`m flying from the United Kingdom. How many hours should I arrive at the airport before my flight?',
     desc: 'Most airlines recommend arriving three hours before an international flight and two hours before a domestic flight. If you checked in online, the latest arrival times for international flights are 2 hours and 1.5 hours prior for domestic flights.',
   },
   {
@@ -150,15 +157,16 @@ const collapseFaq = [
   },
   {
     id: 'faq23',
-    title: 'My flight will be arriving early. Will my RolDrive chauffeur be there for me?',
+    title:
+      'My flight will be arriving early. Will my RolDrive chauffeur be there for me?',
     desc: 'Yes, your RolDrive chauffeur will monitor your flight and make certain that your chauffeur is in the arrivals hall before you leave customs.',
   },
 ];
 
 function FAQ() {
   return (
-    <Container className="bg-[#081017] sm:py-[60px] py-[32px] text-center">
-      <Title subTile="Have queries?" mainTitle="Frequent Asked Questions" />
+    <Container className='bg-[#081017] sm:py-[60px] py-[32px] text-center'>
+      <Title subTitle='Have queries?' mainTitle='Frequent Asked Questions' />
       <Category categorys={faqCategoryList} />
       <Collaspe list={collapseFaq} />
     </Container>

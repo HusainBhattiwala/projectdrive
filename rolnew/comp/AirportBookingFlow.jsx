@@ -27,7 +27,7 @@ function AirportBookingFlow({ pageData }) {
 
       <Container className='bg-[#081017] sm:pb-[100px] pb-8 text-center mx-auto'>
         <Title
-          subTile='How it Works'
+          subTitle='How it Works'
           mainTitle='Book Your Chauffeur Experience in Three Simple Steps'
         />
         <div className='grid lg:grid-cols-5 sm:grid-cols-11 grid-cols-1 sm:justify-center sm:items-center pt-10 gap-y-4'>

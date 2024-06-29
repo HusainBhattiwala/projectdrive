@@ -32,7 +32,7 @@ export const cityData = {
     },
 
     title1: {
-      subTile: 'Tailored Luxury Chauffeur Services',
+      subTitle: 'Tailored Luxury Chauffeur Services',
       mainTitle: 'London Landmarks',
       description:
         'London’s attractions can be busy and difficult to navigate; especially during peak tourist season. By hiring a London chauffeur service such as RolDrive, tourists can sit back and relax while your experienced driver not only navigates through the busy city streets but also acts as your guide throughout the journey',
@@ -63,7 +63,7 @@ export const cityData = {
     ],
     touristAttraction: {
       title: 'Tourist Attraction',
-      subTile: 'Hidden Gems',
+      subTitle: 'Hidden Gems',
       list: [
         {
           id: 'touristAttraction1',
@@ -112,7 +112,7 @@ export const cityData = {
     destinationData: {
       restaurants: {
         title: 'Explore Top Class Restaurants',
-        subTile: 'Popular Trips',
+        subTitle: 'Popular Trips',
         isFromTo: false,
         data: [
           { from: 'The Ledbury' },
@@ -127,7 +127,7 @@ export const cityData = {
       },
       hotel: {
         title: 'Explore Top Class Hotels',
-        subTile: 'Popular Trips',
+        subTitle: 'Popular Trips',
         isFromTo: false,
         data: [
           { from: 'The Ritz London' },
@@ -239,7 +239,7 @@ export const cityData = {
       img: '/rolnew/cities/trust-banner2.jpg',
     },
     title1: {
-      subTile: 'Tailored Chauffeur Services',
+      subTitle: 'Tailored Chauffeur Services',
       mainTitle: 'Paris Landmarks',
       description:
         'Discover the iconic landmarks of Paris with our chauffeur service. Avoid the hassle of navigating through the city and let our experienced drivers take you to the must-see attractions in comfort and style.',
@@ -269,7 +269,7 @@ export const cityData = {
     ],
     touristAttraction: {
       title: 'Tourist Attraction',
-      subTile: 'Hidden Gems',
+      subTitle: 'Hidden Gems',
       list: [
         {
           id: 'touristAttraction1',
@@ -372,7 +372,7 @@ export const cityData = {
       ],
     },
     title1: {
-      subTile: 'Tailored Luxury Chauffeur Services',
+      subTitle: 'Tailored Luxury Chauffeur Services',
       mainTitle: 'Dubai Landmarks',
       description:
         'Dubais attractions can be bustling and challenging to navigate, particularly during peak tourist seasons. By hiring a luxury chauffeur service in Dubai like RolDrive, tourists can sit back and relax while an experienced driver expertly navigates the busy city streets, providing guidance and ensuring a smooth and enjoyable journey.',
@@ -402,7 +402,7 @@ export const cityData = {
     ],
     touristAttraction: {
       title: 'Tourist Attraction',
-      subTile: 'Hidden Gems',
+      subTitle: 'Hidden Gems',
       list: [
         {
           id: 'touristAttraction1',
@@ -451,7 +451,7 @@ export const cityData = {
     destinationData: {
       restaurants: {
         title: 'Explore Top Class Restaurants',
-        subTile: 'Popular Trips',
+        subTitle: 'Popular Trips',
         isFromTo: false,
         data: [
           { from: 'Zuma' },
@@ -466,7 +466,7 @@ export const cityData = {
       },
       hotel: {
         title: 'Explore Top Class Hotels',
-        subTile: 'Popular Trips',
+        subTitle: 'Popular Trips',
         isFromTo: false,
         data: [
           { from: 'Burj Al Arab Jumeirah' },
@@ -577,7 +577,7 @@ export const cityData = {
       img: '/rolnew/cities/trust-banner.svg',
     },
     title1: {
-      subTile: 'Tailored Chauffeur Services',
+      subTitle: 'Tailored Chauffeur Services',
       mainTitle: 'London Landmarks',
       description:
         'These attractions can be busy and difficult to navigate, especially during peak tourist season. By hiring a chauffeur service such as a Mercedes Sprinter hire in London, tourists can sit back and relax while their experienced driver navigates through the busy city streets, making their way to each attraction without the added stress of finding a parking spot or figuring out public transportation.',
@@ -607,7 +607,7 @@ export const cityData = {
     ],
     touristAttraction: {
       title: 'Tourist Attraction',
-      subTile: 'Hidden Gems',
+      subTitle: 'Hidden Gems',
       list: [
         {
           id: 'touristAttraction1',
@@ -684,7 +684,7 @@ export const cityData = {
       img: '/rolnew/cities/trust-banner.svg',
     },
     title1: {
-      subTile: 'Tailored Chauffeur Services',
+      subTitle: 'Tailored Chauffeur Services',
       mainTitle: 'London Landmarks',
       description:
         'These attractions can be busy and difficult to navigate, especially during peak tourist season. By hiring a chauffeur service such as a Mercedes Sprinter hire in London, tourists can sit back and relax while their experienced driver navigates through the busy city streets, making their way to each attraction without the added stress of finding a parking spot or figuring out public transportation.',
@@ -714,7 +714,7 @@ export const cityData = {
     ],
     touristAttraction: {
       title: 'Tourist Attraction',
-      subTile: 'Hidden Gems',
+      subTitle: 'Hidden Gems',
       list: [
         {
           id: 'touristAttraction1',

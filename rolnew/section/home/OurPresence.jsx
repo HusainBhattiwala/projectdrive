@@ -40,11 +40,11 @@ const countryList = [
 function OurPresence() {
   return (
     <>
-      <div className="w-full h-[1px] mx-auto">
-        <Pic src="/rolnew/global/hr.svg" alt="hr" objectFit="cover" />
+      <div className='w-full h-[1px] mx-auto'>
+        <Pic src='/rolnew/global/hr.svg' alt='hr' objectFit='cover' />
       </div>
-      <Container className="bg-[#223544] sm:pt-[110px] pb-6 py-8 text-center">
-        <Title subTile="Our Presence" mainTitle="Locations we serve" />
+      <Container className='bg-[#223544] sm:pt-[110px] pb-6 py-8 text-center'>
+        <Title subTitle='Our Presence' mainTitle='Locations we serve' />
         <CountryList countryList={countryList} />
       </Container>
     </>
