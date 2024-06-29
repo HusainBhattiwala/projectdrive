@@ -375,7 +375,7 @@ function FleetPage() {
   useEffect(() => {
     async function getToken() {
       const token = sessionStorage.getItem('token');
-      if (token && token !== 'null' && token != 'undefined') {
+      if (token && token !== 'null' && token !== 'undefined') {
         setShowAuth(true);
       }
     }
@@ -783,20 +783,9 @@ function FleetPage() {
   useEffect(() => {
     const sendAnalyticsData = async () => {
       const userInfo = JSON.parse(sessionStorage.getItem('user'));
-      const userJourneyDetails = JSON.parse(
-        sessionStorage.getItem('storesearchdata'),
-      );
       // console.log('user journey', userJourneyDetails);
       // console.log('user info:', userInfo);
 
-      const {
-        pickupdate,
-        pickuptime,
-        pickupaddress,
-        dropaddress,
-        distance,
-        duration,
-      } = userJourneyDetails;
       const { useremailid, usermobileno, usercountrycode } = userInfo;
 
       let journey = null;
@@ -844,7 +833,17 @@ function FleetPage() {
         await sendAnalyticsData();
       }
     };
-  }, [bookingRef]);
+  }, [
+    bookingRef,
+    bookingtype,
+    distance,
+    dropaddress,
+    duration,
+    pickuptime,
+    pickupdate,
+    pickupaddress,
+    returndate,
+  ]);
 
   return (
     <>
