@@ -177,9 +177,8 @@ export default function Navbar() {
                     <>
                       <Link
                         href={item.route}
-                        className={`text-white ${
-                          pathname === item.route ? 'font-normal' : ''
-                        } text-sm font-medium px-2 whitespace-nowrap hover:bg-[rgba(255,255,255,0.2)] hover:rounded-md`}
+                        className={`text-white ${pathname === item.route ? 'font-normal' : ''
+                          } text-sm font-medium px-2 whitespace-nowrap hover:bg-[rgba(255,255,255,0.2)] hover:rounded-md`}
                         onClick={closeAll}
                       >
                         {item.label}
@@ -235,9 +234,8 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={item.route}
-                      className={`text-white ${
-                        pathname === item.route ? 'font-normal' : ''
-                      } text-sm hover:bg-[rgb(255,255,255)]/20 hover:rounded-md underline-offset-2 font-medium px-2 whitespace-nowrap pop`}
+                      className={`text-white ${pathname === item.route ? 'font-normal' : ''
+                        } text-sm hover:bg-[rgb(255,255,255)]/20 hover:rounded-md underline-offset-2 font-medium px-2 whitespace-nowrap pop`}
                       onClick={closeAll}
                     >
                       {item.label}
@@ -251,14 +249,22 @@ export default function Navbar() {
               <div className='flex gap-4 items-center pop mr-2' type='button'>
                 <img src='/images/navbar/icon.png' alt='' className='h-5 w-4' />
               </div>
-              <button className='flex gap-2 items-center pop' type='button'>
-                <img
-                  src='/rolnew/nav/whatsapp.svg'
-                  alt=''
-                  className='h-5 w-5'
-                />
-                <p className='font-medium'>Contact Us</p>
-              </button>
+
+              <a
+                href="https://wa.me/442045920966 "
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open WhatsApp Chat"
+              >
+                <button className='flex gap-2 items-center pop' type='button'>
+                  <img
+                    src='/rolnew/nav/whatsapp.svg'
+                    alt=''
+                    className='h-5 w-5'
+                  />
+                  <p className='font-medium'>Contact Us</p>
+                </button>
+              </a>
               <Link href='/login'>
                 <Button className='w-[120px]' white>
                   Sign In
@@ -316,9 +322,8 @@ export default function Navbar() {
               {navLinks.map((item, index) => (
                 <div key={item.route}>
                   <div
-                    className={`${
-                      pathname === item.route ? 'font-bold' : ''
-                    } hover:bg-[rgb(255,255,255)]/20 hover:rounded-md px-3 py-2 text-[#E1E1E1] text-sm leading-5 cursor-pointer`}
+                    className={`${pathname === item.route ? 'font-bold' : ''
+                      } hover:bg-[rgb(255,255,255)]/20 hover:rounded-md px-3 py-2 text-[#E1E1E1] text-sm leading-5 cursor-pointer`}
                     role='button'
                     onClick={
                       item.subLinks
@@ -357,17 +362,25 @@ export default function Navbar() {
                 className='w-full border-[1px] rounded-lg border-[#828282] bg-[#223544] text-white'
                 label='Eng'
               />
-              <button
-                className='flex gap-2 items-center pop mt-2'
-                type='button'
+
+              <a
+                href="https://wa.me/442045920966 "
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open WhatsApp Chat"
               >
-                <img
-                  src='/rolnew/nav/whatsapp.svg'
-                  alt=''
-                  className='h-5 w-5'
-                />
-                <p className='font-medium'>Contact Us</p>
-              </button>
+                <button
+                  className='flex gap-2 items-center pop mt-2'
+                  type='button'
+                >
+                  <img
+                    src='/rolnew/nav/whatsapp.svg'
+                    alt=''
+                    className='h-5 w-5'
+                  />
+                  <p className='font-medium'>Contact Us</p>
+                </button>
+              </a>
 
               {['call', 'email'].map((item) => (
                 <button

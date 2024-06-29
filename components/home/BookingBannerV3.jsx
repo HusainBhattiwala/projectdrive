@@ -139,7 +139,7 @@ export default function BookingBannerV3({
                     <Pic src="/images/icons/whatsapp-icon.svg" />
                   </div>
                   <P className="text-[#ff7e24] !text-base pl-1.5">
-                    +442071128101
+                    +442045920966
                   </P>
                 </div>
               </a>

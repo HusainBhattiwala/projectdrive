@@ -440,7 +440,7 @@ function Header() {
                   <div className="h-[28px] w-[28px]">
                     <a
                       target="_blank"
-                      href="https://wa.me/442071128101"
+                      href="https://wa.me/442045920966"
                       rel="noreferrer"
                       aria-label="Open WhatsApp Chat"
                     >
@@ -678,7 +678,7 @@ function Header() {
                   }`}
                 >
                   <a
-                    href="https://wa.me/442071128101"
+                    href="https://wa.me/442045920966"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Open WhatsApp Chat"
