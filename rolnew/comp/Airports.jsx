@@ -219,9 +219,8 @@ function Airports({ scrollRef, airportsData, show = false }) {
     if (selectedAirport) {
       const formattedCity = selectedCity.toLowerCase().replace(/\s+/g, '-');
       const formattedAirport = selectedAirport
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace('-airport', '');
+        .replace(' Airport', '')
+        .toLowerCase();
       router.push(
         `/rolnew/airport-transfers/${formattedCity}/${formattedAirport}`
       );
