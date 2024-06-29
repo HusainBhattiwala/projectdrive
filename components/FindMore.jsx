@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 export default function FindMoreComponent({ findMoreData }) {
-  const items = new Array(24).fill('Name');
+  //const items = new Array(24).fill('Name');
 
   return (
     <div className="bg-[#11202D] text-black py-12">
