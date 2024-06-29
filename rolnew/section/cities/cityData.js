@@ -228,7 +228,75 @@ export const cityData = {
         },
       ],
     },
+
+    airportsData: {
+      title: 'London Airports',
+      desc: '',
+      search: {
+        dropdown1: 'Choose Your City',
+        dropdown2: 'Choose Your Airport',
+      },
+      dropdownOneData: ['London'],
+      dropdownTwoData: [
+        'Heathrow Airport',
+        'Gatwick Airport',
+        'London City Airport',
+        'London Southend Airport',
+        'London Stansted Airport',
+        'luton Airport',
+      ],
+      list: [
+        {
+          id: 1,
+          image: '/rolnew/global/country/london.jpg',
+          countryCode: 'GB',
+          cityName: 'Heathrow Airport',
+          route:
+            'http://localhost:3000/rolnew/airport-transfers/london/heathrow',
+        },
+        {
+          id: 2,
+          image: '/rolnew/global/country/london.jpg',
+          countryCode: 'GB',
+          cityName: 'Gatwick Airport',
+          route:
+            'http://localhost:3000/rolnew/airport-transfers/london/gatwick',
+        },
+        {
+          id: 3,
+          image: '/rolnew/global/country/london.jpg',
+          countryCode: 'GB',
+          cityName: 'London City Airport',
+          route:
+            'http://localhost:3000/rolnew/airport-transfers/london/londoncity',
+        },
+        {
+          id: 4,
+          image: '/rolnew/global/country/london.jpg',
+          countryCode: 'GB',
+          cityName: 'London Southend Airport',
+          route:
+            'http://localhost:3000/rolnew/airport-transfers/london/londonsouthend',
+        },
+        {
+          id: 5,
+          image: '/rolnew/global/country/london.jpg',
+          countryCode: 'GB',
+          cityName: 'London Stansted Airport',
+          route:
+            'http://localhost:3000/rolnew/airport-transfers/london/londonstansted',
+        },
+        {
+          id: 6,
+          image: '/rolnew/global/country/london.jpg',
+          countryCode: 'GB',
+          cityName: 'Luton Airport',
+          route: 'http://localhost:3000/rolnew/airport-transfers/london/luton',
+        },
+      ],
+    },
   },
+
   paris: {
     banner: {
       title: 'Paris Chauffeur Service',

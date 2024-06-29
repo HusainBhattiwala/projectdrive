@@ -57,7 +57,7 @@ const countryList = [
 
 const items = ['about', 'services'];
 
-function TopPicks({ scrollRef, airportList, topPicksData, show=false }) {
+function TopPicks({ scrollRef, airportList, topPicksData, show = false }) {
   const { openModal } = useContext(ModalContext);
   return (
     <>
@@ -71,7 +71,7 @@ function TopPicks({ scrollRef, airportList, topPicksData, show=false }) {
           description={topPicksData?.desc}
         />
 
-        {show &&
+        {show && (
           <div className='px-4 sm:px-24'>
             <div
               className='boxes p-[10px] bg-[#2F4456] mt-20 mb-10 w-full h-auto sm:h-20 flex flex-col sm:flex-row gap-1 justify-center items-center rounded-xl'
@@ -116,7 +116,7 @@ function TopPicks({ scrollRef, airportList, topPicksData, show=false }) {
               </div>
             </div>
           </div>
-        }
+        )}
 
         {/* <div className="grid gap-4 sm:grid-cols-12">
           <div className="flex flex-col items-center justify-center sm:col-span-3">

@@ -5,21 +5,21 @@ export default function CategoriesComponent({ categoriesData }) {
   const categories = ['Restaurants', 'Museums', 'Hotels', 'Intercity'];
 
   return (
-    <Container className='bg-[#223544] sm:py-8 py-6 text-center'>
+    <Container className="bg-[#223544] sm:py-8 py-6 text-center">
       <Title
         subTitle={categoriesData?.subTitle ? categoriesData?.subTitle : ''}
         mainTitle={
           categoriesData?.title ? categoriesData?.title : 'All Categories'
         }
-        description=''
+        description=""
       />
-      <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 mx-6 px-14 mt-7'>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 mx-6 px-14 mt-7">
         {categoriesData ? (
           <>
             {' '}
             {categoriesData?.categories.map((category) => (
-              <div key={category} className='text-center'>
-                <p className='text-lg mb-3'>{category}</p>
+              <div key={category} className="text-center">
+                <p className="text-lg mb-3">{category}</p>
               </div>
             ))}
           </>
@@ -27,11 +27,11 @@ export default function CategoriesComponent({ categoriesData }) {
           <>
             {' '}
             {categories.map((category) => (
-              <div key={category} className='text-center'>
-                <p className='text-lg mb-3'>{category}</p>
-                <p className='text-lg mb-3'>{category}</p>
-                <p className='text-lg mb-3'>{category}</p>
-                <p className='text-lg mb-3'>{category}</p>
+              <div key={category} className="text-center">
+                <p className="text-lg mb-3">{category}</p>
+                <p className="text-lg mb-3">{category}</p>
+                <p className="text-lg mb-3">{category}</p>
+                <p className="text-lg mb-3">{category}</p>
               </div>
             ))}
           </>

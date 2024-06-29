@@ -16,6 +16,7 @@ import Landmark from 'rolnew/section/cities/LandMark';
 import ChauffeurServiceDescription from 'rolnew/comp/ChauffeurServiceDescription';
 
 import { cityData } from './cityData';
+import Airports from 'rolnew/comp/Airports';
 
 const cities = ['london', 'dubai', 'newyork', 'paris', 'tokyo'];
 
@@ -46,7 +47,7 @@ function CityPage() {
       </div>
       <OurFeet showBooking />
       <Landmark pageData={pageData} />
-      <TopPicks />
+      <Airports show airportsData={pageData?.airportsData} />
       <Locations showPadding />
       <Contact />
       <Destinations destinationData={pageData.destinationData?.restaurants} />

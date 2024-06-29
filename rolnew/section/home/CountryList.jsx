@@ -8,8 +8,9 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './css/fleet.css';
+import Link from 'next/link';
 
-function EachSlide({ id, cityName, image, countryCode, address }) {
+function EachSlide({ id, cityName, image, countryCode, address, route }) {
   return (
     <div
       className='w-full mx-6 h-full group transition ease-in-out delay-150'
@@ -17,12 +18,14 @@ function EachSlide({ id, cityName, image, countryCode, address }) {
     >
       <div className='relative w-[200px] h-[200px]'>
         {/* <div className='bg-[#11202D] bg-opacity-25 absolute w-full h-full z-10 grayscale-[15%] group-hover:bg-transparent group-hover:grayscale-0' /> */}
-        <Pic
-          className='rounded-xl'
-          alt={cityName}
-          src={`${image}`}
-          objectFit='cover'
-        />
+        <Link href={route} className='hover:cursor-pointer'>
+          <Pic
+            className='rounded-xl'
+            alt={cityName}
+            src={`${image}`}
+            objectFit='cover'
+          />
+        </Link>
       </div>
       <div className='flex gap-x-2 mt-3 shrink-0'>
         <div className='w-6 h-6'>
