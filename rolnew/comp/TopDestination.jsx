@@ -62,7 +62,7 @@ function TopDestination({ data, bg }) {
         <Pic src='/rolnew/global/hr.svg' alt='hr' objectFit='cover' />
       </div>
       <Container className={`${bg} sm:py-16 py-8 text-center`}>
-        <Title subTile='Top Destinations' mainTitle={data?.title} />
+        <Title subTitle='Top Destinations' mainTitle={data?.title} />
         <CountryList countryList={data?.list} bg={bg} />
 
         <Button
