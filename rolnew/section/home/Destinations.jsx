@@ -40,10 +40,15 @@ function Destinations({ destinationData }) {
                   />
                 </div>
               </div>
-              <div className='flex gap-x-0.5'>
+              <div className='flex gap-x-0.5 w-full overflow-hidden'>
                 <p className='text-[#B2B2B2] font-normal text-base text-left'>
                   {destination.from}
                 </p>
+
+                {/* truncate */}
+                {/* <p className='text-[#B2B2B2] font-normal text-base truncate'>
+                  {destination.from}
+                </p> */}
                 {destination.to && (
                   <>
                     <div className='w-4 h-4'>
