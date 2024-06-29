@@ -212,14 +212,18 @@ function Airports({ scrollRef, airportsData, show = false }) {
   const { openModal } = useContext(ModalContext);
   const router = useRouter();
 
-  const [selectedCity, setSelectedCity] = useState('');
+  const [selectedCity, setSelectedCity] = useState(
+    airportsData?.dropdownOneData[0]
+  );
   const [selectedAirport, setSelectedAirport] = useState(null);
 
   const handleSearch = () => {
     if (selectedAirport) {
-      const formattedCity = selectedCity.toLowerCase().replace(/\s+/g, '-');
+      //   console.log(selectedCity);
+      const formattedCity = selectedCity.toLowerCase();
       const formattedAirport = selectedAirport
         .replace(' Airport', '')
+        .replace(/\s+/g, '')
         .toLowerCase();
       router.push(
         `/rolnew/airport-transfers/${formattedCity}/${formattedAirport}`
@@ -259,7 +263,7 @@ function Airports({ scrollRef, airportsData, show = false }) {
                       : items
                   }
                   full
-                  initialSelection='London'
+                  initialSelection={airportsData?.city}
                   onSelect={setSelectedCity}
                 />
               </div>

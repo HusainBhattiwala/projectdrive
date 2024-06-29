@@ -18,7 +18,7 @@ function EachSlide({ id, cityName, image, countryCode, address, route }) {
     >
       <div className='relative w-[200px] h-[200px]'>
         {/* <div className='bg-[#11202D] bg-opacity-25 absolute w-full h-full z-10 grayscale-[15%] group-hover:bg-transparent group-hover:grayscale-0' /> */}
-        <Link href={route} className='hover:cursor-pointer'>
+        <Link href={route ? route : '#'} className='hover:cursor-pointer'>
           <Pic
             className='rounded-xl'
             alt={cityName}

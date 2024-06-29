@@ -2,7 +2,6 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import TopPicks from 'rolnew/comp/TopPicks';
 import Banner from 'rolnew/section/cities/Banner';
 import TrustedPartners from 'rolnew/comp/TrustedPartners';
 import OurFeet from 'rolnew/section/home/OurFeet';
@@ -11,7 +10,6 @@ import Contact from 'rolnew/comp/Contact';
 import Destinations from 'rolnew/section/home/Destinations';
 import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import ServicesFaq from 'rolnew/comp/ServicesFaq';
-import FAQ from 'rolnew/comp/FAQ';
 import Landmark from 'rolnew/section/cities/LandMark';
 import ChauffeurServiceDescription from 'rolnew/comp/ChauffeurServiceDescription';
 
