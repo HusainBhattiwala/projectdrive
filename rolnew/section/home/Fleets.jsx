@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import './css/fleet.css';
-import Button from 'rolnew/ui/Button';
-import Link from 'next/link';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "./css/fleet.css";
+import Button from "rolnew/ui/Button";
+import Link from "next/link";
 
 export default function Fleets({ slideData, showBooking = false }) {
   return (
@@ -32,21 +32,21 @@ export default function Fleets({ slideData, showBooking = false }) {
           },
         }}
         centeredSlides
-        centerInsufficientSlides
-        autoplay
-        loop
+        // centerInsufficientSlides
+        // autoplay
+        // loop
         pagination={{
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
         }}
         speed={1000}
         navigation={{
-          nextEl: '.swiper-btn-next',
-          prevEl: '.swiper-btn-prev',
+          nextEl: ".swiper-btn-next",
+          prevEl: ".swiper-btn-prev",
         }}
         modules={[Autoplay, Pagination, Navigation]}
       >
         {slideData?.map((item) => (
-          <SwiperSlide key={item.id} w>
+          <SwiperSlide key={item.id}>
             <div className='max-w-[574px]'>
               <img src={item?.img} alt={item?.name} />
             </div>
@@ -55,7 +55,7 @@ export default function Fleets({ slideData, showBooking = false }) {
             </p>
           </SwiperSlide>
         ))}
-        <div className={`sm:py-[42px] py-5 ${showBooking && 'mt-6'}`}>
+        <div className={`sm:py-[42px] py-5 ${showBooking && "mt-6"}`}>
           {showBooking && (
             <Button className='flex-1 !px-14'>
               <Link href='/rolnew'>Book Now</Link>
