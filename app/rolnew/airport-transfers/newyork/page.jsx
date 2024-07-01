@@ -3,15 +3,15 @@ import OurFeet from 'rolnew/section/home/OurFeet';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
 import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
-import FAQ from 'rolnew/comp/FAQ';
 import AirportBookingFlow from 'rolnew/comp/AirportBookingFlow';
 import Services from 'rolnew/section/home/Services';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
 
 const pageData = {
   banner: {
     title: 'Airport Transfer New York',
     subTitle: 'Arrive in style, stress free and rejuvenated',
-    bannerImage: '/rolnew/airports/london/heathrow-banner.jpg',
+    bannerImage: '/rolnew/airports/airport-transfer-newyork.jpg',
   },
   aboutData: {
     title: 'Airport Transfer New York',
@@ -50,6 +50,68 @@ const pageData = {
       },
     ],
   },
+  faqData: {
+    title: 'Frequently Asked Questions About Airport Transfer New York:',
+    data: [
+      {
+        id: 0,
+        question:
+          'What airports does RolDrive’s New York airport transfer service?',
+        ans: 'RolDrive offers transfers to JFK, LaGuardia, Newark, and Buffalo Niagara airports, covering all major entry points into New York City.',
+      },
+      {
+        id: 1,
+        question: 'How can I book a transfer with RolDrive in New York?',
+        ans: "Bookings can be made through RolDrive's website, mobile app, or by calling our customer service number directly.",
+      },
+      {
+        id: 2,
+        question:
+          'What vehicle options does RolDrive offer for airport transfers in New York?',
+        ans: 'The RolDrive fleet includes luxury sedans, SUVs, and vans, catering to all individual preferences and group sizes.',
+      },
+      {
+        id: 3,
+        question:
+          'Are RolDrive’s chauffeurs familiar with New York City traffic and routes?',
+        ans: "Yes, all chauffeurs are highly experienced with New York City's traffic patterns and optimal routes.",
+      },
+      {
+        id: 4,
+        question: 'Can I request a child car seat?',
+        ans: 'Child car seats are available upon request at the time of booking, ensuring safety for younger passengers.',
+      },
+      {
+        id: 5,
+        question:
+          "What is RolDrive's cancellation policy for New York airport transfers?",
+        ans: 'Transfers can be cancelled up to 12 hours in advance without incurring any charges.',
+      },
+      {
+        id: 6,
+        question: 'How does RolDrive handle flight delays?',
+        ans: 'RolDrive tracks your flight status to adjust pickup times accordingly, accommodating delays at no extra charge.',
+      },
+      {
+        id: 7,
+        question:
+          'Does RolDrive provide meet-and-greet services at New York airports?',
+        ans: 'Yes, chauffeurs can meet passengers at baggage claim or customs exits, holding a sign for easy identification.',
+      },
+      {
+        id: 8,
+        question:
+          'What are the rates for RolDrive’s airport transfer services in New York?',
+        ans: 'Rates vary based on the distance, vehicle type, and specific services requested. Pricing details are available on the website. Feel free to contact us for a customized quote.',
+      },
+      {
+        id: 9,
+        question:
+          'How does RolDrive ensure customer safety during transfers, especially post-COVID-19?',
+        ans: 'RolDrive follows rigorous health protocols, including vehicle sanitization, ensuring passenger safety throughout the transfer.',
+      },
+    ],
+  },
 };
 
 function NewyorkAirportPage() {
@@ -61,7 +123,7 @@ function NewyorkAirportPage() {
       <Services servicesData={pageData?.servicesData} />
       <Locations />
       <Contact />
-      <FAQ />
+      <ServicesFaq faqData={pageData?.faqData} />
       <DownloadOurApp />
     </>
   );
