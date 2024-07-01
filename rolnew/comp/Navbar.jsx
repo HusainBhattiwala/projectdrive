@@ -14,23 +14,20 @@ const navLinks = [
     route: '/rolnew/all-services',
     label: 'Services',
     subLinks: [
-      { route: '/rolnew/road-shows', label: 'Road shows' },
+      { route: '/rolnew/road-shows', label: 'Roadshows Transfers' },
       { route: '/rolnew/intercity-transfers', label: 'Intercity Transfers' },
-      { route: '/rolnew/event-transfers', label: 'Event Services' },
-      { route: '/rolnew/wedding-service', label: 'Wedding Services' },
-      { route: '/rolnew/corporate-service', label: 'Corporate Services' },
+      { route: '/rolnew/event-transfers', label: 'Event Transfers' },
+      { route: '/rolnew/wedding-service', label: 'Wedding Transfers' },
+      { route: '/rolnew/corporate-service', label: 'Corporate Transfers' },
       { route: '/rolnew/cities-sightseeing', label: 'Cities Sightseeing' },
-      {
-        route: '/rolnew/private-jet-chauffeur',
-        label: 'Private Jet Chauffeur',
-      },
+      { route: '/rolnew/private-jet-chauffeur', label: 'Private Jet Chauffeur',},
     ],
   },
   {
     route: '/rolnew/fleet',
     label: 'Fleet',
   },
-  { route: '/rolnew/business-solution', label: 'Business Solutions' },
+  // { route: '/rolnew/business-solution', label: 'Business Solutions' },
   {
     route: '#',
     label: 'Cities',
@@ -48,7 +45,7 @@ const navLinks = [
     subLinks: [
       {
         route: '/rolnew/airport-transfers/london',
-        label: 'London',
+        label: 'London Airport',
         subLinks: [
           {
             route: '/rolnew/airport-transfers/london/heathrow',
@@ -73,10 +70,10 @@ const navLinks = [
           { route: '/rolnew/airport-transfers/london/luton', label: 'Luton' },
         ],
       },
-      { route: '/rolnew/airport-transfers/dubai', label: 'Dubai' },
-      { route: '/rolnew/airport-transfers/newyork', label: 'New York' },
-      { route: '/rolnew/airport-transfers/paris', label: 'Paris' },
-      { route: '/rolnew/airport-transfers/tokyo', label: 'Tokyo' },
+      { route: '/rolnew/airport-transfers/dubai', label: 'Dubai Airport' },
+      { route: '/rolnew/airport-transfers/newyork', label: 'New York Airport' },
+      { route: '/rolnew/airport-transfers/paris', label: 'Paris Airport' },
+      { route: '/rolnew/airport-transfers/tokyo', label: 'Tokyo Airport' },
     ],
   },
 ];
