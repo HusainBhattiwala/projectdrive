@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 // import { signIn, useSession } from 'next-auth/react';
-import { useSession } from "next-auth/react";
-import P from "components/typography/P";
-import Login from "components/auth/Login";
-import Banner from "components/auth/Banner";
-import Registation from "components/auth/Registation";
-import H1 from "components/typography/H1";
-import EmailLogin from "components/auth/ShowEmailLogin";
-import BusinessRegistation from "components/auth/BusinessRegistation";
-import CorporateLogin from "components/auth/CorporateLogin";
-import CorporateLoginToggle from "components/auth/CorporateLoginToggle";
+import { useSession } from 'next-auth/react';
+import P from 'components/typography/P';
+import Login from 'components/auth/Login';
+import Banner from 'components/auth/Banner';
+import Registation from 'components/auth/Registation';
+import H1 from 'components/typography/H1';
+import EmailLogin from 'components/auth/ShowEmailLogin';
+import BusinessRegistation from 'components/auth/BusinessRegistation';
+import CorporateLogin from 'components/auth/CorporateLogin';
+import CorporateLoginToggle from 'components/auth/CorporateLoginToggle';
 // import { Pic } from 'components/ui/Pic';
 
 function Page() {
@@ -28,13 +28,13 @@ function Page() {
   const [showEmailLogin, setshowEmailLogin] = useState(true);
   const [isLoginPage, setIsLoginPage] = useState(false);
   const [isLoaded, setIsIsLoaded] = useState(false);
-  const [selectedAccountType, setSelectedAccountType] = useState("personal");
+  const [selectedAccountType, setSelectedAccountType] = useState('personal');
   // const [selectedLoginAccountType, setSelectedLoginAccountType] = useState('personal');
 
   const loginRef = useRef();
 
   useEffect(() => {
-    if (pathName === "/rolnew/login") {
+    if (pathName === '/rolnew/login') {
       setIsLoginPage(true);
       setIsIsLoaded(true);
     }
@@ -42,9 +42,9 @@ function Page() {
 
   useEffect(() => {
     loginRef?.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "start",
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'start',
     });
   }, [showEmailLogin]);
 
@@ -54,11 +54,11 @@ function Page() {
 
   let registrationComponent;
 
-  if (selectedAccountType === "personal") {
+  if (selectedAccountType === 'personal') {
     registrationComponent = (
       <Registation isLogin={setShowLogin} loginPage={isLoginPage} />
     );
-  } else if (selectedAccountType === "business") {
+  } else if (selectedAccountType === 'business') {
     registrationComponent = (
       <BusinessRegistation isLogin={setShowLogin} loginPage={isLoginPage} />
     );
@@ -69,7 +69,7 @@ function Page() {
   }
 
   let loginComponent;
-  if (selectedAccountType === "personal") {
+  if (selectedAccountType === 'personal') {
     loginComponent = (
       <>
         {!showOTP && (
@@ -89,7 +89,7 @@ function Page() {
         />
       </>
     );
-  } else if (selectedAccountType === "business") {
+  } else if (selectedAccountType === 'business') {
     loginComponent = (
       <>
         <CorporateLoginToggle
@@ -160,8 +160,8 @@ function Page() {
                           type="radio"
                           name="accountType"
                           value="personal"
-                          checked={selectedAccountType === "personal"}
-                          onChange={() => setSelectedAccountType("personal")}
+                          checked={selectedAccountType === 'personal'}
+                          onChange={() => setSelectedAccountType('personal')}
                         />
                       </div>
                       <div className="h-6 flex flex-row-reverse gap-x-2 flex-wrap justify-evenly items-center">
@@ -173,8 +173,8 @@ function Page() {
                           type="radio"
                           name="accountType"
                           value="business"
-                          checked={selectedAccountType === "business"}
-                          onChange={() => setSelectedAccountType("business")}
+                          checked={selectedAccountType === 'business'}
+                          onChange={() => setSelectedAccountType('business')}
                         />
                       </div>
                     </div>
@@ -212,8 +212,9 @@ function Page() {
                           </Link>
                         </span>
                         <span className="text-zinc-400 text-sm font-normal leading-tight">
-                          {" "}
-                          and{" "}
+                          {' '}
+                          and
+                          {' '}
                         </span>
                         <span className="text-zinc-400 text-sm font-normal underline leading-tight">
                           <Link href="/privacy-policy">Privacy Policy</Link>
@@ -222,14 +223,15 @@ function Page() {
                     </P>
                   </div>
                   <P className="mt-6 text-center text-[#CED5E5] text-lg not-italic font-medium leading-6">
-                    Don’t have an account?{" "}
+                    Don’t have an account?
+                    {' '}
                     <span
                       className="cursor-pointer text-[#FDE8E1] text-md not-italic font-medium leading-6"
                       onClick={() => {
                         setShowLogin(false);
                       }}
                     >
-                      {" "}
+                      {' '}
                       Sign Up
                     </span>
                   </P>
@@ -248,8 +250,8 @@ function Page() {
                           type="radio"
                           name="accountType"
                           value="personal"
-                          checked={selectedAccountType === "personal"}
-                          onChange={() => setSelectedAccountType("personal")}
+                          checked={selectedAccountType === 'personal'}
+                          onChange={() => setSelectedAccountType('personal')}
                         />
                       </div>
                       <div className="gap-x-2 h-6 flex flex-row-reverse flex-wrap justify-evenly items-center">
@@ -261,8 +263,8 @@ function Page() {
                           type="radio"
                           name="accountType"
                           value="business"
-                          checked={selectedAccountType === "business"}
-                          onChange={() => setSelectedAccountType("business")}
+                          checked={selectedAccountType === 'business'}
+                          onChange={() => setSelectedAccountType('business')}
                         />
                       </div>
                     </div>
@@ -279,8 +281,9 @@ function Page() {
                           </Link>
                         </span>
                         <span className="text-zinc-400 text-sm font-normal leading-none">
-                          {" "}
-                          and{" "}
+                          {' '}
+                          and
+                          {' '}
                         </span>
                         <span className="text-zinc-400 text-sm font-normal underline leading-none">
                           <Link href="/privacy-policy">Privacy Policy</Link>
@@ -289,7 +292,8 @@ function Page() {
                     </P>
                   </div>
                   <P className="mt-6 text-center text-[#CED5E5] text-lg not-italic font-medium leading-6">
-                    Already have an account?{" "}
+                    Already have an account?
+                    {' '}
                     <span
                       className="cursor-pointer text-[#FDE8E1] text-md not-italic font-medium leading-6"
                       onClick={() => {
@@ -297,7 +301,7 @@ function Page() {
                         setShowOTP(true);
                       }}
                     >
-                      {" "}
+                      {' '}
                       Sign in
                     </span>
                   </P>
