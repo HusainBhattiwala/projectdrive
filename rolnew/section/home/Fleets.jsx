@@ -33,8 +33,9 @@ export default function Fleets({ slideData, showBooking = false }) {
         }}
         centeredSlides
         // centerInsufficientSlides
-        // autoplay
-        // loop
+        autoplay
+        loop
+        centeredSlidesBounds
         pagination={{
           el: ".swiper-pagination",
         }}
