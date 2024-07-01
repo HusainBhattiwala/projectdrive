@@ -63,11 +63,18 @@ function LuxuriousServiceSearch({ luxuriousServiceData }) {
               key={index}
             >
               <div className='flex flex-col items-center h-full'>
-                <img
-                  src='/rolnew/global/icons/meet.svg'
-                  alt='meet'
-                  className='mb-1 w-10 h-14'
-                />
+                {item?.img ?
+                  <img
+                    src={item?.img}
+                    alt={item?.title}
+                    className='mb-1 w-10 h-10'
+                  /> :
+                  <img
+                    src='/rolnew/global/icons/meet.svg'
+                    alt={item?.title}
+                    className='mb-1 w-10 h-10'
+                  />
+                }
                 <h3 className='text-[#FFFFFF] mb-2 font-medium text-base sm:text-xl'>
                   {item?.title}
                 </h3>
