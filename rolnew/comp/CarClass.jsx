@@ -199,7 +199,7 @@ function CarClass({ hideArrow = true }) {
                         {carDetails?.name}
                       </h2>
                       <p className='sm:text-base font-medium sm:leading-6 mt-4 text-left text-[#FFF8F3]'>
-                        {defaultDescription}
+                        {carDetails?.desc}
                       </p>
                       <Button className='w-[260px] h-[50px] text-xl mt-4 mb-4 mr-[100px]'>
                         Book Now
