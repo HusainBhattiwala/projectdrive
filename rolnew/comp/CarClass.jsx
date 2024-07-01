@@ -140,13 +140,13 @@
 
 // export default CarClass;
 
-'use client';
-import { useState, useEffect, useContext } from 'react';
-import Pic from 'rolnew/util/Pic';
-import Button from 'rolnew/ui/Button';
-import { FleetContext } from 'context/FleetContext';
-import { fleetData } from 'static/fleetData';
-import Category from './Category';
+"use client";
+import { useState, useEffect, useContext } from "react";
+import Pic from "rolnew/util/Pic";
+import Button from "rolnew/ui/Button";
+import { FleetContext } from "context/FleetContext";
+import { fleetData } from "static/fleetData";
+import Category from "./Category";
 
 const defaultDescription = `The Mercedes E-Class is a great option for business
 because of its balance of luxury, performance, and technology. Mercedes Benz is known for their brilliant
@@ -174,14 +174,14 @@ function CarClass({ hideArrow = true }) {
     setCarDetails(category.options[0]);
   };
 
-  console.log('car class car details: ', carDetails);
+  console.log("car class car details: ", carDetails);
   // console.log('car class selected category:', selectedCatCars);
 
   return (
     <>
       <div className='bg-[#11202D] pt-4 sm:pt-[10px] text-center xs:pt-16 xl:!px-[70px] lg:px-[45px] md:px-[32px] sm:px-[20px] px-4'>
         {!hideArrow ? (
-          ''
+          ""
         ) : (
           <Category
             categorys={fleetData}
@@ -213,7 +213,7 @@ function CarClass({ hideArrow = true }) {
                   <Pic
                     alt='trust'
                     className='rounded-xl w-[495px] transform scale-x-[-1]'
-                    src={carDetails?.img || '/images/airports/car1.png'}
+                    src={carDetails?.img || "/images/airports/car1.png"}
                     objectFit='fit'
                   />
                 </div>
@@ -223,7 +223,7 @@ function CarClass({ hideArrow = true }) {
                   <Pic
                     alt='trust'
                     className='rounded-xl transform scale-x-[-1]'
-                    src={carDetails?.img || '/images/airports/car1.png'}
+                    src={carDetails?.img || "/images/airports/car1.png"}
                     objectFit='fit'
                   />
                 </div>
@@ -247,7 +247,7 @@ function CarClass({ hideArrow = true }) {
               </div>
             </div>
 
-            <div className='flex flex-nowrap gap-4 w-full sm:w-[912px] h-[165px] justify-center mx-auto sm:gap-16 mb-2 overflow-x-auto overflow-y-hidden scroll no-scroll'>
+            <div className='flex flex-nowrap gap-4 w-full sm:w-[1100px] h-[165px] justify-center mx-auto sm:gap-4 mb-2 overflow-x-auto overflow-y-hidden scroll no-scroll'>
               {carCatData?.map((car, index) => (
                 <div
                   className='w-[190px] h-[140px] hover:cursor-pointer hover:scale-105 transition ease-in duration-75'
@@ -257,7 +257,7 @@ function CarClass({ hideArrow = true }) {
                   <Pic
                     alt='trust'
                     className='rounded-xl transform scale-x-[-1]'
-                    src={car?.img || '/images/airports/car4.png'}
+                    src={car?.img || "/images/airports/car4.png"}
                     objectFit='fit'
                   />
                   <p className='w-full text-center text-base font-medium leading-6 text-[#FFFFFF]'>

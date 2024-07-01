@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 function CarCategory({ categorys = [], onCategoryChange }) {
   const [activeCat, setActiveTab] = useState(0);
@@ -19,9 +19,9 @@ function CarCategory({ categorys = [], onCategoryChange }) {
             type='button'
             className={`flex-none border-b-2 hover:bg-[#FFFFFF0D] delay-75 duration-500 ${
               i === activeCat
-                ? 'border-primary bg-[#FFFFFF0D]'
-                : 'border-[#B2B2B2] bg-transparent'
-            } ${i === 0 || i === category?.length - 1 ? 'px-0' : 'px-3'} `}
+                ? "border-primary bg-[#FFFFFF0D]"
+                : "border-[#B2B2B2] bg-transparent"
+            } ${i === 0 || i === category?.length - 1 ? "px-0" : "px-8"} `}
             onClick={() => {
               setActiveTab(i);
               onCategoryChange(category);
