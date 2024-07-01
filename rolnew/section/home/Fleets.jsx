@@ -75,7 +75,7 @@ export default function Fleets({ slideData = [], showBooking = false }) {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className={`${showBooking && "pb-20"} z-50`}>
+      <div className={`${showBooking && "pb-20"} z-50 pb-10`}>
         {showBooking && (
           <Button className='flex-1 !px-14'>
             <Link href='/rolnew'>Book Now</Link>

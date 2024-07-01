@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState, useContext } from 'react';
-import Category from './Category';
-import { FleetContext } from 'context/FleetContext';
-import { fleetData } from 'static/fleetData';
+import { useEffect, useRef, useState, useContext } from "react";
+import Category from "./Category";
+import { FleetContext } from "context/FleetContext";
+import { fleetData } from "static/fleetData";
 
 function FleetBanner({ mainTitle, hideArrow }) {
   const [width, setWidth] = useState();
@@ -19,16 +19,18 @@ function FleetBanner({ mainTitle, hideArrow }) {
       setWidth(window.innerWidth);
       setHeight(window.innerHeight);
     }
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
     <div
-      className='relative mt-16 flex flex-col w-full 2xl:min-h-[85svh] xl:min-h-[560px] md:min-h-[500px] min-h-[500px] max-h-[1000px] bg-[#223544]'
+      className={`relative mt-16 flex flex-col w-full xl:min-h-[560px] md:min-h-[500px] min-h-[500px] max-h-[1000px] bg-[#223544] ${
+        !hideArrow ? "2xl:min-h-[80svh]" : "2xl:min-h-[75svh]"
+      }`}
       ref={bannerRef}
     >
       <div className='service-home-banner absolute sm:top-0 -top-6 left-0 right-0 h-auto sm:min-h-[328px] min-h-[328px]' />
@@ -59,7 +61,9 @@ function FleetBanner({ mainTitle, hideArrow }) {
               </h3>
             </div>
             <p className='font-normal text-sm text-[#B2B2B2]'>
-              A commanding presence is vital for success. Making this impact starts with your appearance. Arrive at your venue impeccably groomed to leave a lasting impression
+              A commanding presence is vital for success. Making this impact
+              starts with your appearance. Arrive at your venue impeccably
+              groomed to leave a lasting impression
             </p>
           </div>
           <div className='sm:text-center w-full md:w-[336px] p-[18px] flex flex-col gap-1 sm:gap-4 sm:items-center'>
@@ -85,7 +89,10 @@ function FleetBanner({ mainTitle, hideArrow }) {
               </h3>
             </div>
             <p className='font-normal text-sm text-[#B2B2B2]'>
-              The comfort, luxury and safety offered by our chauffeur driven cars equipped with all amenities means a more pleasant and relaxing journey. Safety and security are paramount too through our experienced and vetted drivers at the helm
+              The comfort, luxury and safety offered by our chauffeur driven
+              cars equipped with all amenities means a more pleasant and
+              relaxing journey. Safety and security are paramount too through
+              our experienced and vetted drivers at the helm
             </p>
           </div>
           <div className='sm:text-center w-full md:w-[336px] p-[18px] flex flex-col gap-1 sm:gap-4 sm:items-center'>
@@ -117,19 +124,22 @@ function FleetBanner({ mainTitle, hideArrow }) {
               </svg>
 
               <h3 className='font-medium text-sm sm:text-xl leading-[26px] text-[#FFFFFF]'>
-              Efficiency and Cost Effectiveness
+                Efficiency and Cost Effectiveness
               </h3>
             </div>
 
             <p className='font-normal text-sm text-[#B2B2B2]'>
-            Through our chauffeur driven cars, having a driver navigate traffic allows for a stress free journey allowing you to focus on the task at hand. Hiring a business class chauffeur service can also save on costs for those requiring regular transportation.
+              Through our chauffeur driven cars, having a driver navigate
+              traffic allows for a stress free journey allowing you to focus on
+              the task at hand. Hiring a business class chauffeur service can
+              also save on costs for those requiring regular transportation.
             </p>
           </div>
         </div>
       </div>
 
       {!hideArrow && (
-        <div>
+        <div className='mt-20'>
           <Category categorys={fleetData} onCategoryChange={setCarCatData} />
         </div>
       )}

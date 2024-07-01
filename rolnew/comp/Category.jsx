@@ -51,9 +51,9 @@
 // }
 
 // export default Category;
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 function Category({ categorys = [], onCategoryChange }) {
   const [activeCat, setActiveTab] = useState(0);
@@ -70,10 +70,10 @@ function Category({ categorys = [], onCategoryChange }) {
           {categorys.map((category, i) => (
             <button
               type='button'
-              className={`flex-none rounded-md px-6 py-1 group ${
+              className={`flex-none rounded-md px-9 py-1 group ${
                 i === activeCat
-                  ? 'bg-[#FFFFFF] text-pry-500 border border-pry-500'
-                  : 'bg-slate-600/80 hover:text-pry-500 hover:bg-[#FFFFFF] hover:border-primary'
+                  ? "bg-[#FFFFFF] text-pry-500 border border-pry-500"
+                  : "bg-slate-600/80 hover:text-pry-500 hover:bg-[#FFFFFF] hover:border-primary"
               }`}
               onClick={() => {
                 setActiveTab(i);
@@ -84,8 +84,8 @@ function Category({ categorys = [], onCategoryChange }) {
               <span
                 className={`text-base font-medium leading-7 ${
                   i === activeCat
-                    ? 'text-pry-500'
-                    : 'text-[#FFFFFF] group-hover:text-pry-500'
+                    ? "text-pry-500"
+                    : "text-[#FFFFFF] group-hover:text-pry-500"
                 }`}
               >
                 {category.catName}
