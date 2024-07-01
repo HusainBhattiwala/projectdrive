@@ -72,15 +72,12 @@ function Page() {
   if (selectedAccountType === 'personal') {
     loginComponent = (
       <>
-        {
-        !showOTP
-        && (
-        <EmailLogin
-          isEmailLogin={showEmailLogin}
-          handelClick={setshowEmailLogin}
-        />
-        )
-      }
+        {!showOTP && (
+          <EmailLogin
+            isEmailLogin={showEmailLogin}
+            handelClick={setshowEmailLogin}
+          />
+        )}
         <Login
           isLogin={setShowLogin}
           showOTP={showEmailLogin}
@@ -104,8 +101,8 @@ function Page() {
           showOTP={showEmailLogin}
           isLoggedIn={setShowAuth}
           loginPage={isLoginPage}
-          getBookerPassword={() => { }}
-          passwordExists={() => { }}
+          getBookerPassword={() => {}}
+          passwordExists={() => {}}
           accountType={selectedAccountType}
         />
       </>
@@ -131,172 +128,184 @@ function Page() {
       {isLoaded && (
         <>
           <div className="col-span-5 w-full h-full">
-            <Banner title="Premium Chauffeur Service" description="Your exclusive and dependable chauffeur service indulgence" />
+            <Banner
+              title="Premium Chauffeur Service"
+              description="Your exclusive and dependable chauffeur service indulgence"
+            />
           </div>
           <div className="md:col-span-4 col-span-5">
             <div className="sm:mb-[90px] sm:mt-[122px] my-8 md:max-w-[480px] 2xl:max-w-[600px] mx-auto lg:px-0 px-4">
               {showLogin && (
-              <div className="flex flex-col sm:gap-y-8 gap-y-4">
-                <Link href="/" className="">
-                  <img
-                    className="h-10 w-40 flex justify-center mx-auto"
-                    src="/rolnew/global/logo.svg"
-                    alt="logo"
-                  />
-                </Link>
-                {
-                  !showOTP
-                    && <H1 className="text-[#CED5E5] text-center text-3xl not-italic font-bold">Sign in</H1>
-                }
-                {
-                  !showOTP
-                && (
-                <div className="py-2 flex flex-wrap justify-center gap-6">
-                  <div className="h-6 flex flex-row-reverse gap-x-2 flex-wrap justify-evenly items-center">
-                    <div className="text-white text-base not-italic font-normal leading-6">Personal</div>
-                    <input
-                      className="box-border border-[1px] border-solid w-4 h-4 rounded-full bg-pink-500"
-                      type="radio"
-                      name="accountType"
-                      value="personal"
-                      checked={selectedAccountType === 'personal'}
-                      onChange={() => setSelectedAccountType('personal')}
+                <div className="flex flex-col sm:gap-y-8 gap-y-4">
+                  <Link href="/" className="">
+                    <img
+                      className="h-10 w-40 flex justify-center mx-auto"
+                      src="/rolnew/global/logo.svg"
+                      alt="logo"
                     />
-                  </div>
-                  <div className="h-6 flex flex-row-reverse gap-x-2 flex-wrap justify-evenly items-center">
-                    <div className="text-white text-base not-italic font-normal leading-6">Business</div>
-                    <input
-                      className="box-border border-[1px] border-solid w-4 h-4 rounded-full bg-pink-500"
-                      type="radio"
-                      name="accountType"
-                      value="business"
-                      checked={selectedAccountType === 'business'}
-                      onChange={() => setSelectedAccountType('business')}
-                    />
-                  </div>
+                  </Link>
+                  {!showOTP && (
+                    <H1 className="text-[#CED5E5] text-center text-3xl not-italic font-bold">
+                      Sign in
+                    </H1>
+                  )}
+                  {!showOTP && (
+                    <div className="py-2 flex flex-wrap justify-center gap-6">
+                      <div className="h-6 flex flex-row-reverse gap-x-2 flex-wrap justify-evenly items-center">
+                        <div className="text-white text-base not-italic font-normal leading-6">
+                          Personal
+                        </div>
+                        <input
+                          className="box-border border-[1px] border-solid w-4 h-4 rounded-full bg-pink-500"
+                          type="radio"
+                          name="accountType"
+                          value="personal"
+                          checked={selectedAccountType === 'personal'}
+                          onChange={() => setSelectedAccountType('personal')}
+                        />
+                      </div>
+                      <div className="h-6 flex flex-row-reverse gap-x-2 flex-wrap justify-evenly items-center">
+                        <div className="text-white text-base not-italic font-normal leading-6">
+                          Business
+                        </div>
+                        <input
+                          className="box-border border-[1px] border-solid w-4 h-4 rounded-full bg-pink-500"
+                          type="radio"
+                          name="accountType"
+                          value="business"
+                          checked={selectedAccountType === 'business'}
+                          onChange={() => setSelectedAccountType('business')}
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
-                )
-                }
-              </div>
               )}
               {!showLogin && (
-              <>
-                <Link href="/" className="">
-                  <img
-                    className="h-10 w-40 flex justify-center mx-auto mb-[15px]"
-                    src="/rolnew/global/logo.svg"
-                    alt="logo"
-                  />
-                </Link>
-                <H1 className="text-[#CED5E5] text-center text-3xl not-italic font-bold mb-[15px]">Create An Account</H1>
-                {/* <P className="mt-2 mb-8 text-center">
+                <>
+                  <Link href="/" className="">
+                    <img
+                      className="h-10 w-40 flex justify-center mx-auto mb-[15px]"
+                      src="/rolnew/global/logo.svg"
+                      alt="logo"
+                    />
+                  </Link>
+                  <H1 className="text-[#CED5E5] text-center text-3xl not-italic font-bold mb-[15px]">
+                    Create An Account
+                  </H1>
+                  {/* <P className="mt-2 mb-8 text-center">
                   Sign up to create a new business account
                 </P> */}
-              </>
+                </>
               )}
               {showLogin && !showAuth && (
-              <>
-                {loginComponent}
-                <div className="mt-6">
-                  <P className="w-full flex justify-center text-center">
-                    <span className="text-zinc-400 text-sm font-normal font-['Helvetica Neue'] leading-tight">
-                      By continuing, you agree to RolDrive Company’s
-                      <br />
-                      <span className="text-zinc-400 text-sm font-normal underline leading-tight">
-                        <Link href="/terms-and-conditions">
-                          Terms of Conditions
-                        </Link>
+                <>
+                  {loginComponent}
+                  <div className="mt-6">
+                    <P className="w-full flex justify-center text-center">
+                      <span className="text-zinc-400 text-sm font-normal font-['Helvetica Neue'] leading-tight">
+                        By continuing, you agree to RolDrive Company’s
+                        <br />
+                        <span className="text-zinc-400 text-sm font-normal underline leading-tight">
+                          <Link href="/terms-and-conditions">
+                            Terms of Conditions
+                          </Link>
+                        </span>
+                        <span className="text-zinc-400 text-sm font-normal leading-tight">
+                          {' '}
+                          and
+                          {' '}
+                        </span>
+                        <span className="text-zinc-400 text-sm font-normal underline leading-tight">
+                          <Link href="/privacy-policy">Privacy Policy</Link>
+                        </span>
                       </span>
-                      <span className="text-zinc-400 text-sm font-normal leading-tight"> and </span>
-                      <span className="text-zinc-400 text-sm font-normal underline leading-tight">
-                        <Link href="/privacy-policy">
-                          Privacy Policy
-                        </Link>
-                      </span>
+                    </P>
+                  </div>
+                  <P className="mt-6 text-center text-[#CED5E5] text-lg not-italic font-medium leading-6">
+                    Don’t have an account?
+                    {' '}
+                    <span
+                      className="cursor-pointer text-[#FDE8E1] text-md not-italic font-medium leading-6"
+                      onClick={() => {
+                        setShowLogin(false);
+                      }}
+                    >
+                      {' '}
+                      Sign Up
                     </span>
                   </P>
-                </div>
-                <P className="mt-6 text-center text-[#CED5E5] text-lg not-italic font-medium leading-6">
-                  Don’t have an account?
-                  {' '}
-                  <span
-                    className="cursor-pointer text-[#FDE8E1] text-md not-italic font-medium leading-6"
-                    onClick={() => {
-                      setShowLogin(false);
-                    }}
-                  >
-                    {' '}
-                    Sign Up
-                  </span>
-                </P>
-              </>
+                </>
               )}
               {!showLogin && (
-              <>
-                {
-                !showOTP
-                && (
-                <div className="py-2 flex flex-wrap justify-center gap-6 mb-[38px]">
-                  <div className="gap-x-2 h-6 flex flex-row-reverse flex-wrap justify-evenly items-center">
-                    <div className="text-white text-base not-italic font-normal leading-6">Personal</div>
-                    <input
-                      className="box-border border-[1px] border-solid w-4 h-4 rounded-full bg-red-500"
-                      type="radio"
-                      name="accountType"
-                      value="personal"
-                      checked={selectedAccountType === 'personal'}
-                      onChange={() => setSelectedAccountType('personal')}
-                    />
-                  </div>
-                  <div className="gap-x-2 h-6 flex flex-row-reverse flex-wrap justify-evenly items-center">
-                    <div className="text-white text-base not-italic font-normal leading-6">Business</div>
-                    <input
-                      className="box-border border-[1px] border-solid w-4 h-4 rounded-full bg-red-500"
-                      type="radio"
-                      name="accountType"
-                      value="business"
-                      checked={selectedAccountType === 'business'}
-                      onChange={() => setSelectedAccountType('business')}
-                    />
-                  </div>
-                </div>
-                )
-              }
-                {registrationComponent}
-                <div className="mt-6">
-                  <P className="w-full flex justify-center text-center">
-                    <span className="text-zinc-400 text-sm font-normal font-['Helvetica Neue'] leading-none">
-                      By continuing, you agree to RolDrive Company’s
-                      <br />
-                      <span className="text-zinc-400 text-sm font-normal underline leading-none">
-                        <Link href="/terms-and-conditions">
-                          Terms of Conditions
-                        </Link>
+                <>
+                  {!showOTP && (
+                    <div className="py-2 flex flex-wrap justify-center gap-6 mb-[38px]">
+                      <div className="gap-x-2 h-6 flex flex-row-reverse flex-wrap justify-evenly items-center">
+                        <div className="text-white text-base not-italic font-normal leading-6">
+                          Personal
+                        </div>
+                        <input
+                          className="box-border border-[1px] border-solid w-4 h-4 rounded-full bg-red-500"
+                          type="radio"
+                          name="accountType"
+                          value="personal"
+                          checked={selectedAccountType === 'personal'}
+                          onChange={() => setSelectedAccountType('personal')}
+                        />
+                      </div>
+                      <div className="gap-x-2 h-6 flex flex-row-reverse flex-wrap justify-evenly items-center">
+                        <div className="text-white text-base not-italic font-normal leading-6">
+                          Business
+                        </div>
+                        <input
+                          className="box-border border-[1px] border-solid w-4 h-4 rounded-full bg-red-500"
+                          type="radio"
+                          name="accountType"
+                          value="business"
+                          checked={selectedAccountType === 'business'}
+                          onChange={() => setSelectedAccountType('business')}
+                        />
+                      </div>
+                    </div>
+                  )}
+                  {registrationComponent}
+                  <div className="mt-6">
+                    <P className="w-full flex justify-center text-center">
+                      <span className="text-zinc-400 text-sm font-normal font-['Helvetica Neue'] leading-none">
+                        By continuing, you agree to RolDrive Company’s
+                        <br />
+                        <span className="text-zinc-400 text-sm font-normal underline leading-none">
+                          <Link href="/terms-and-conditions">
+                            Terms of Conditions
+                          </Link>
+                        </span>
+                        <span className="text-zinc-400 text-sm font-normal leading-none">
+                          {' '}
+                          and
+                          {' '}
+                        </span>
+                        <span className="text-zinc-400 text-sm font-normal underline leading-none">
+                          <Link href="/privacy-policy">Privacy Policy</Link>
+                        </span>
                       </span>
-                      <span className="text-zinc-400 text-sm font-normal leading-none"> and </span>
-                      <span className="text-zinc-400 text-sm font-normal underline leading-none">
-                        <Link href="/privacy-policy">
-                          Privacy Policy
-                        </Link>
-                      </span>
+                    </P>
+                  </div>
+                  <P className="mt-6 text-center text-[#CED5E5] text-lg not-italic font-medium leading-6">
+                    Already have an account?
+                    {' '}
+                    <span
+                      className="cursor-pointer text-[#FDE8E1] text-md not-italic font-medium leading-6"
+                      onClick={() => {
+                        setShowLogin(true);
+                        setShowOTP(true);
+                      }}
+                    >
+                      {' '}
+                      Sign in
                     </span>
                   </P>
-                </div>
-                <P className="mt-6 text-center text-[#CED5E5] text-lg not-italic font-medium leading-6">
-                  Already have an account?
-                  {' '}
-                  <span
-                    className="cursor-pointer text-[#FDE8E1] text-md not-italic font-medium leading-6"
-                    onClick={() => {
-                      setShowLogin(true);
-                      setShowOTP(true);
-                    }}
-                  >
-                    {' '}
-                    Sign in
-                  </span>
-                </P>
-              </>
+                </>
               )}
             </div>
           </div>

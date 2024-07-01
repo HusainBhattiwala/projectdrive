@@ -27,15 +27,16 @@ function getMobileNumber(phone, country) {
 }
 
 function OTP({
-  isOtpVerified, loginPage, setAuthType = () => {}, accountType = 'personal',
+  isOtpVerified,
+  loginPage,
+  setAuthType = () => {},
+  accountType = 'personal',
   setShowOTP = () => {},
 }) {
   const { setShowLogin, setUserName, setIsNewUser } = useContext(LoginContext);
 
   const router = useRouter();
-  const {
-    handleSubmit,
-  } = useForm();
+  const { handleSubmit } = useForm();
 
   const [otpError, setotpError] = useState(true);
   const [inputs, setInputs] = useState(['', '', '', '']);
@@ -145,16 +146,23 @@ function OTP({
             }
             const {
               // eslint-disable-next-line max-len
-              user_fname: userfname, user_lname: userlname, useremailid, usermobileno, usercountrycode,
-            } = response.data;
-            sessionStorage.setItem('token', response.data.Authorization);
-            sessionStorage.setItem('user', JSON.stringify({
-              userfname,
-              userlname,
+              user_fname: userfname,
+              user_lname: userlname,
               useremailid,
               usermobileno,
               usercountrycode,
-            }));
+            } = response.data;
+            sessionStorage.setItem('token', response.data.Authorization);
+            sessionStorage.setItem(
+              'user',
+              JSON.stringify({
+                userfname,
+                userlname,
+                useremailid,
+                usermobileno,
+                usercountrycode,
+              }),
+            );
             isOtpVerified(true);
             setShowLogin(true);
             setUserName(userfname);
@@ -162,7 +170,8 @@ function OTP({
             Cookies.set('authtype', 'OTP');
             router.refresh();
             if (loginPage) {
-              if (accountType === 'personal') router.push('/booking-management'); else router.push('/corporate/booking-summary');
+              if (accountType === 'personal') router.push('/booking-management');
+              else router.push('/corporate/booking-summary');
             }
           } else if (!response.data.Authorization && loginPage) {
             toast.error(
@@ -174,10 +183,13 @@ function OTP({
             );
             toast.clearWaitingQueue();
           } else {
-            sessionStorage.setItem('user', JSON.stringify({
-              usercountrycode: `${userCountryCode}`,
-              usermobileno: mobileNo,
-            }));
+            sessionStorage.setItem(
+              'user',
+              JSON.stringify({
+                usercountrycode: `${userCountryCode}`,
+                usermobileno: mobileNo,
+              }),
+            );
             isOtpVerified(true);
             setAuthType('OTP');
             Cookies.set('authtype', 'OTP');
@@ -185,13 +197,10 @@ function OTP({
           }
         } else {
           // setShowError(true);
-          toast.error(
-            'OTP is not valid',
-            {
-              autoClose: 3000,
-              theme: 'colored',
-            },
-          );
+          toast.error('OTP is not valid', {
+            autoClose: 3000,
+            theme: 'colored',
+          });
           toast.clearWaitingQueue();
         }
         setShowLoader(false);
@@ -219,13 +228,10 @@ function OTP({
           const phoneExists = await api.post('/auth/check', obj);
           if (!phoneExists.data.exists) {
             setShowLoader(false);
-            toast.error(
-              'Phone number does not exist. Please sign-up',
-              {
-                autoClose: 3000,
-                theme: 'colored',
-              },
-            );
+            toast.error('Phone number does not exist. Please sign-up', {
+              autoClose: 3000,
+              theme: 'colored',
+            });
             toast.clearWaitingQueue();
             return;
           }
@@ -278,16 +284,27 @@ function OTP({
   console.log(loginPage);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={`text-left ${!loginPage && 'relative'}`}>
-      {
-        showInputs
-      && (
-      <button type="button" className={`absolute ${loginPage ? 'top-5' : 'top-1'} z-[1] text-white flex items-center font-semibold`} onClick={() => { setShowInputs(false); setUserMobile(''); setUserCountryCode(''); setShowOTP(false); }}>
-        <img src="/rolnew/global/icons/arrow-white.svg" alt="arrow-white" />
-        Back
-      </button>
-      )
-      }
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className={`text-left ${!loginPage && 'relative'}`}
+    >
+      {showInputs && (
+        <button
+          type="button"
+          className={`absolute ${
+            loginPage ? 'top-5' : 'top-1'
+          } z-[1] text-white flex items-center font-semibold`}
+          onClick={() => {
+            setShowInputs(false);
+            setUserMobile('');
+            setUserCountryCode('');
+            setShowOTP(false);
+          }}
+        >
+          <img src="/rolnew/global/icons/arrow-white.svg" alt="arrow-white" />
+          Back
+        </button>
+      )}
       <div className="relative sm:mb-10 mb-5">
         <ToastContainer
           limit={1}
@@ -308,51 +325,66 @@ function OTP({
             showError={showMobileError}
           />
         )}
-        {
-          !showInputs
-        && (
-        <div className="flex items-end gap-x-4">
-          <div className="grow">
-            <P className="mb-1 font-normal text-xs text-white">Mobile Number</P>
-            <PhoneInput
-              enableSearch
-              autoFormat={false}
-              enableAreaCodes
-              inputProps={{
-                name: 'mobileno',
-                required: true,
-                autoFocus: true,
-                autoComplete: 'off',
-              }}
-              countryCodeEditable={false}
-              country="gb"
-              onChange={(_, country, event) => {
-                setUserCountryCode(country.dialCode);
-                setUserMobile(event.target.value);
-                checkMobileNumber(event.target.value, country);
-              }}
-              onCountryChange={() => { setUserMobile(); }}
-              inputClass="!bg-[#223544D9] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
-            />
-            {isValidMobileNumber && <P className=" text-red-500 !text-x"> Not a valid mobile number</P>}
-            {
-            showOTPError && <P className=" text-red-500 !text-x">OTP not send</P>
-          }
-          </div>
+        {!showInputs && (
+          <div className="flex items-end gap-x-4">
+            <div className="grow">
+              <P className="mb-1 font-normal text-xs text-white">
+                Mobile Number
+              </P>
+              <PhoneInput
+                enableSearch
+                autoFormat={false}
+                enableAreaCodes
+                inputProps={{
+                  name: 'mobileno',
+                  required: true,
+                  autoFocus: true,
+                  autoComplete: 'off',
+                }}
+                countryCodeEditable={false}
+                country="gb"
+                onChange={(_, country, event) => {
+                  setUserCountryCode(country.dialCode);
+                  setUserMobile(event.target.value);
+                  checkMobileNumber(event.target.value, country);
+                }}
+                onCountryChange={() => {
+                  setUserMobile();
+                }}
+                inputClass="!bg-[#FFFFFF0A] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
+              />
+              {isValidMobileNumber && (
+                <P className=" text-red-500 !text-x">
+                  {' '}
+                  Not a valid mobile number
+                </P>
+              )}
+              {showOTPError && (
+                <P className=" text-red-500 !text-x">OTP not send</P>
+              )}
+            </div>
 
-          <Button type="submit" kind="primary" isLoading={showLoader} className={`w-auto !text-white !text-opacity-100 !capitalize !text-xl ${showLoader && ''}`}>
-            Get OTP
-          </Button>
-        </div>
-        )
-        }
-        {
-          showInputs
-          && (
+            <Button
+              type="submit"
+              kind="primary"
+              isLoading={showLoader}
+              className={`w-auto !text-white !text-opacity-100 !capitalize !text-xl ${
+                showLoader && ''
+              }`}
+            >
+              Get OTP
+            </Button>
+          </div>
+        )}
+        {showInputs && (
           <div className="relative">
             <div className="text-center my-8">
-              <h1 className="text-[#CED5E5] text-center text-3xl not-italic font-bold">One-Time-Password</h1>
-              <p className="text-[#B2B2B2] font-medium text-sm">Your OTP has been sent on your registered mobile number</p>
+              <h1 className="text-[#CED5E5] text-center text-3xl not-italic font-bold">
+                One-Time-Password
+              </h1>
+              <p className="text-[#B2B2B2] font-medium text-sm">
+                Your OTP has been sent on your registered mobile number
+              </p>
               <p className="text-white">
                 {' '}
                 [
@@ -368,7 +400,7 @@ function OTP({
               <div>
                 {inputs.map((input, index) => (
                   <input
-                            // eslint-disable-next-line react/no-array-index-key
+                    // eslint-disable-next-line react/no-array-index-key
                     key={index}
                     type="text"
                     value={input}
@@ -376,41 +408,45 @@ function OTP({
                     onChange={(e) => handleInputChange(e, index)}
                     onKeyUp={(e) => handleKeyUp(e, index)}
                     ref={inputRefs.current[index]}
-                    className={`w-12 h-12 text-lg bg-[#223544D9] bg-opacity-85 !text-[#B2B2B2] border !border-[#E1E1E140] text-center font-bold rounded-md overflow-ellipsis autofill:!bg-[#223544D9] focus:border-primary focus:outline-none rounded-xs mr-4 ${inputs[index] === '' && !otpError ? ' border-red-500 border-2' : ''}`}
+                    className={`w-12 h-12 text-lg bg-[#FFFFFF0A] bg-opacity-85 !text-[#B2B2B2] border !border-[#E1E1E140] text-center font-bold rounded-md overflow-ellipsis autofill:!bg-[#223544D9] focus:border-primary focus:outline-none rounded-xs mr-4 ${
+                      inputs[index] === '' && !otpError
+                        ? ' border-red-500 border-2'
+                        : ''
+                    }`}
                   />
                 ))}
               </div>
             </div>
-            <Button type="submit" kind="primary" isLoading={showLoader} className={`w-full mt-4 ${showLoader && ''}`}>
+            <Button
+              type="submit"
+              kind="primary"
+              isLoading={showLoader}
+              className={`w-full mt-4 ${showLoader && ''}`}
+            >
               Proceed
             </Button>
 
             <div className="text-white mt-8 text-center">
-              {
-                seconds > 0
-                && (
-                <P>
-                  {seconds}
-                  {' '}
-                  Seconds remaining
-                </P>
-                )
-              }
-              {
-                !seconds
-                && (
+              {seconds > 0 && (
+              <P>
+                {seconds}
+                {' '}
+                Seconds remaining
+              </P>
+              )}
+              {!seconds && (
                 <div onClick={resendOTP}>
                   <P className="font-medium text-[#CED5E5] text-lg text-center">
                     Didn’t receive OTP?
-                    <span className="cursor-pointer text-[#FDE8E1]">Resend</span>
+                    <span className="cursor-pointer text-[#FDE8E1]">
+                      Resend
+                    </span>
                   </P>
                 </div>
-                )
-              }
+              )}
             </div>
           </div>
-          )
-        }
+        )}
       </div>
     </form>
   );

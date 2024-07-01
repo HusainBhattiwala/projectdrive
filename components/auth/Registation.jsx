@@ -65,12 +65,12 @@ function Registation() {
   const onSubmit = async (data) => {
     if (
       passwordTracker.eightCharsOrGreater
-        && passwordTracker.lowercase
-        && passwordTracker.number
-        && passwordTracker.specialChar
-        && passwordTracker.uppercase
-        && userMobile
-        && !isValidMobileNumber
+      && passwordTracker.lowercase
+      && passwordTracker.number
+      && passwordTracker.specialChar
+      && passwordTracker.uppercase
+      && userMobile
+      && !isValidMobileNumber
     ) {
       setShowLoader(true);
       const countryCode = userCountryCode;
@@ -143,7 +143,10 @@ function Registation() {
       {!otpVerified ? (
         <OTP isOtpVerified={setOtpVerified} />
       ) : (
-        <form onSubmit={handleSubmit(onSubmit)} className="text-left relative flex flex-col gap-y-4">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="text-left relative flex flex-col gap-y-4"
+        >
           <div className="flex sm:gap-x-4 gap-x-2 items-center">
             <div className="w-full">
               <Input
@@ -162,9 +165,9 @@ function Registation() {
               />
 
               {errors && errors.fname && (
-              <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.fname.message}
-              </P>
+                <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.fname.message}
+                </P>
               )}
             </div>
             <div className="w-full">
@@ -232,147 +235,151 @@ function Registation() {
                 autoComplete: 'off',
               })}
               onFocus={() => setMeter(true)}
-              onChange={(e) => { setPassword(e.target.value); setValue('password', e.target.value); clearErrors('password'); }}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                setValue('password', e.target.value);
+                clearErrors('password');
+              }}
               type={showPassword ? 'text' : 'password'}
               leadingIcon="/rolnew/global/icons/lock-open.svg"
               label="Password"
               placeholder="Enter password"
             />
             {!showPassword && (
-            <FaEyeSlash
-              className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
-              onClick={() => {
-                setShowPassord(true);
-              }}
-            />
+              <FaEyeSlash
+                className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
+                onClick={() => {
+                  setShowPassord(true);
+                }}
+              />
             )}
             {showPassword && (
-            <FaEye
-              className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
-              onClick={() => {
-                setShowPassord(false);
-              }}
-            />
+              <FaEye
+                className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
+                onClick={() => {
+                  setShowPassord(false);
+                }}
+              />
             )}
           </div>
 
           {errors && errors.password && !meter && (
-          <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-            {errors.password.message}
-          </P>
+            <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+              {errors.password.message}
+            </P>
           )}
 
           {meter && (
-          <div className="flex sm:flex-row flex-col justify-between">
-            <div className="mt-3">
-              <div
-                className={`!text-xs font-semibold flex items-center ${
-                  passwordTracker.uppercase ? 'text-success' : 'text-red-500'
-                }`}
-              >
-                {passwordTracker.uppercase ? (
-                  <div className="w-3 h-3 mr-1">
-                    <Pic
-                      src="/images/icons/green-tick.png"
-                      className="object-contain"
-                      alt="green-tick"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-3 h-3 mr-1">
-                    <FaCircle className="text-[9px]" />
-                  </div>
-                )}
-                Atleast one-uppercase.
+            <div className="flex sm:flex-row flex-col justify-between">
+              <div className="mt-3">
+                <div
+                  className={`!text-xs font-semibold flex items-center ${
+                    passwordTracker.uppercase ? 'text-success' : 'text-red-500'
+                  }`}
+                >
+                  {passwordTracker.uppercase ? (
+                    <div className="w-3 h-3 mr-1">
+                      <Pic
+                        src="/images/icons/green-tick.png"
+                        className="object-contain"
+                        alt="green-tick"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-3 h-3 mr-1">
+                      <FaCircle className="text-[9px]" />
+                    </div>
+                  )}
+                  Atleast one-uppercase.
+                </div>
+                <div
+                  className={`!text-xs font-semibold flex items-center ${
+                    passwordTracker.lowercase ? 'text-success' : 'text-red-500'
+                  }`}
+                >
+                  {passwordTracker.lowercase ? (
+                    <div className="w-3 h-3 mr-1">
+                      <Pic
+                        src="/images/icons/green-tick.png"
+                        className="object-contain"
+                        alt="green-tick"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-3 h-3 mr-1">
+                      <FaCircle className="text-[9px]" />
+                    </div>
+                  )}
+                  Atleast one-lowercase.
+                </div>
+                <div
+                  className={`!text-xs font-semibold flex items-center ${
+                    passwordTracker.specialChar
+                      ? 'text-success'
+                      : 'text-red-500'
+                  }`}
+                >
+                  {passwordTracker.specialChar ? (
+                    <div className="w-3 h-3 mr-1">
+                      <Pic
+                        src="/images/icons/green-tick.png"
+                        className="object-contain"
+                        alt="green-tick"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-3 h-3 mr-1">
+                      <FaCircle className="text-[9px]" />
+                    </div>
+                  )}
+                  Atleast one special character.
+                </div>
               </div>
-              <div
-                className={`!text-xs font-semibold flex items-center ${
-                  passwordTracker.lowercase ? 'text-success' : 'text-red-500'
-                }`}
-              >
-                {passwordTracker.lowercase ? (
-                  <div className="w-3 h-3 mr-1">
-                    <Pic
-                      src="/images/icons/green-tick.png"
-                      className="object-contain"
-                      alt="green-tick"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-3 h-3 mr-1">
-                    <FaCircle className="text-[9px]" />
-                  </div>
-                )}
-                Atleast one-lowercase.
-              </div>
-              <div
-                className={`!text-xs font-semibold flex items-center ${
-                  passwordTracker.specialChar
-                    ? 'text-success'
-                    : 'text-red-500'
-                }`}
-              >
-                {passwordTracker.specialChar ? (
-                  <div className="w-3 h-3 mr-1">
-                    <Pic
-                      src="/images/icons/green-tick.png"
-                      className="object-contain"
-                      alt="green-tick"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-3 h-3 mr-1">
-                    <FaCircle className="text-[9px]" />
-                  </div>
-                )}
-                Atleast one special character.
+              <div className="sm:pt-3">
+                <div
+                  className={`!text-xs font-semibold flex items-center ${
+                    passwordTracker.number ? 'text-success' : 'text-red-500'
+                  }`}
+                >
+                  {passwordTracker.number ? (
+                    <div className="w-3 h-3 mr-1">
+                      <Pic
+                        src="/images/icons/green-tick.png"
+                        className="object-contain"
+                        alt="green-tick"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-3 h-3 mr-1">
+                      <FaCircle className="text-[9px]" />
+                    </div>
+                  )}
+                  Atleast one number.
+                </div>
+                <div
+                  className={`!text-xs font-semibold flex items-center ${
+                    passwordTracker.eightCharsOrGreater
+                      ? 'text-success'
+                      : 'text-red-500'
+                  }`}
+                >
+                  {passwordTracker.eightCharsOrGreater ? (
+                    <div className="w-3 h-3 mr-1">
+                      <Pic
+                        src="/images/icons/green-tick.png"
+                        className="object-contain"
+                        alt="green-tick"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-3 h-3 mr-1">
+                      <FaCircle className="text-[9px]" />
+                    </div>
+                  )}
+                  Atleast eight characters or more.
+                </div>
               </div>
             </div>
-            <div className="sm:pt-3">
-              <div
-                className={`!text-xs font-semibold flex items-center ${
-                  passwordTracker.number ? 'text-success' : 'text-red-500'
-                }`}
-              >
-                {passwordTracker.number ? (
-                  <div className="w-3 h-3 mr-1">
-                    <Pic
-                      src="/images/icons/green-tick.png"
-                      className="object-contain"
-                      alt="green-tick"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-3 h-3 mr-1">
-                    <FaCircle className="text-[9px]" />
-                  </div>
-                )}
-                Atleast one number.
-              </div>
-              <div
-                className={`!text-xs font-semibold flex items-center ${
-                  passwordTracker.eightCharsOrGreater
-                    ? 'text-success'
-                    : 'text-red-500'
-                }`}
-              >
-                {passwordTracker.eightCharsOrGreater ? (
-                  <div className="w-3 h-3 mr-1">
-                    <Pic
-                      src="/images/icons/green-tick.png"
-                      className="object-contain"
-                      alt="green-tick"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-3 h-3 mr-1">
-                    <FaCircle className="text-[9px]" />
-                  </div>
-                )}
-                Atleast eight characters or more.
-              </div>
-            </div>
-          </div>
           )}
 
           <div className="relative block ">
@@ -390,36 +397,41 @@ function Registation() {
                 required: 'Confirm password is required',
                 validate: (value) => value === getValues().password || 'Passwords do not match',
               })}
-              onChange={(e) => { setValue('rePassword', e.target.value); clearErrors('rePassword'); }}
+              onChange={(e) => {
+                setValue('rePassword', e.target.value);
+                clearErrors('rePassword');
+              }}
               type={showRePassword ? 'text' : 'password'}
               leadingIcon="/rolnew/global/icons/lock-open.svg"
               label="Confirm Password"
               placeholder="Enter confirm password"
             />
             {!showRePassword && (
-            <FaEyeSlash
-              className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
-              onClick={() => {
-                setShowRePassord(true);
-              }}
-            />
+              <FaEyeSlash
+                className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
+                onClick={() => {
+                  setShowRePassord(true);
+                }}
+              />
             )}
             {showRePassword && (
-            <FaEye
-              className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
-              onClick={() => {
-                setShowRePassord(false);
-              }}
-            />
+              <FaEye
+                className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
+                onClick={() => {
+                  setShowRePassord(false);
+                }}
+              />
             )}
           </div>
           {errors && errors.rePassword && (
-          <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-            {errors.rePassword?.message}
-          </P>
+            <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+              {errors.rePassword?.message}
+            </P>
           )}
           <div>
-            <p className="text-white text-sm mb-[2px] text-left}">Mobile Number</p>
+            <p className="text-white text-sm mb-[2px] text-left}">
+              Mobile Number
+            </p>
             <PhoneInput
               {...register('companymobileno', {
                 required: 'Mobile number is required',
@@ -428,8 +440,8 @@ function Registation() {
               country="gb"
               autoFormat={false}
               countryCodeEditable={false}
-                    // value={userMobile}
-                    // onChange={(phone, country) => { setUserMobile(phone); checkMobileNumber(phone, country); }}
+              // value={userMobile}
+              // onChange={(phone, country) => { setUserMobile(phone); checkMobileNumber(phone, country); }}
               onChange={(_, country, event) => {
                 setUserCountryCode(country.dialCode);
                 setUserMobile(event.target.value);
@@ -440,17 +452,17 @@ function Registation() {
               onCountryChange={() => {
                 setUserMobile();
               }}
-              inputClass="!bg-[#223544D9] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
+              inputClass="!bg-[#FFFFFF0A] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
             />
             {errors.companymobileno && (
-            <P className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
-              {errors.companymobileno.message}
-            </P>
+              <P className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                {errors.companymobileno.message}
+              </P>
             )}
             {isValidMobileNumber && (
-            <P className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
-              Phone number is not valid
-            </P>
+              <P className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                Phone number is not valid
+              </P>
             )}
           </div>
           <Button
