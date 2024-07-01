@@ -14,7 +14,7 @@ const navLinks = [
     route: "/rolnew/all-services",
     label: "Services",
     subLinks: [
-      { route: "/rolnew/road-shows", label: "Roadshows Transfers" },
+      { route: "/rolnew/road-shows", label: "Roadshow Transfers" },
       { route: "/rolnew/intercity-transfers", label: "Intercity Transfers" },
       { route: "/rolnew/event-transfers", label: "Event Transfers" },
       { route: "/rolnew/wedding-service", label: "Wedding Transfers" },

@@ -55,7 +55,7 @@ export default function FindMoreComponent({ findMoreData }) {
               <h3 className="mt-5 sm:mt-10 sm:text-xl text-lg font-medium text-[#B2B2B2]">
                 {data?.title}
               </h3>
-              <p className="text-sm text-[#B2B2B2]">{data?.desc}</p>
+              <p className="text-lg text-[#B2B2B2]">{data?.desc}</p>
             </div>
           ))}
         </article>

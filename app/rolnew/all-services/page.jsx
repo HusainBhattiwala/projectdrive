@@ -132,7 +132,7 @@ export default function Home() {
       <OurFeet />
       <TrustedPartners trustedPartnersData={trustedPartnersData} />
       <ClientTestimonial />
-      <CategoriesComponent />
+      {/* <CategoriesComponent /> */}
       <TopDestination data={destinationsData?.london} bg="bg-[#11202D]" />
       <TopDestination data={destinationsData?.paris} bg="bg-[#223544]" />
       <Contact />
