@@ -1,17 +1,17 @@
-import React from 'react';
-import Container from 'rolnew/comp/Container';
-import Pic from 'rolnew/util/Pic';
-import Title from './Title';
+import React from "react";
+import Container from "rolnew/comp/Container";
+import Pic from "rolnew/util/Pic";
+import Title from "./Title";
 
 const cityPairs = [
-  { from: 'London', to: 'Manchester' },
-  { from: 'London', to: 'Nottingham' },
-  { from: 'London', to: 'Aberdeen' },
-  { from: 'London', to: 'Birmingham' },
-  { from: 'London', to: 'Glasgow' },
-  { from: 'London', to: 'Liverpool' },
-  { from: 'London', to: 'Cambridge' },
-  { from: 'London', to: 'Oxford' },
+  { from: "London", to: "Manchester" },
+  { from: "London", to: "Nottingham" },
+  { from: "London", to: "Aberdeen" },
+  { from: "London", to: "Birmingham" },
+  { from: "London", to: "Glasgow" },
+  { from: "London", to: "Liverpool" },
+  { from: "London", to: "Cambridge" },
+  { from: "London", to: "Oxford" },
 ];
 
 function Destinations({ destinationData }) {
@@ -21,9 +21,9 @@ function Destinations({ destinationData }) {
   return (
     <Container className='bg-[#223544] py-20 text-center'>
       <Title
-        subTitle={destinationData?.subTitle || 'Popular trips'}
+        subTitle={destinationData?.subTitle || "Popular trips"}
         mainTitle={
-          destinationData?.title || 'Explore Our Most Sought-After Destinations'
+          destinationData?.title || "Explore Our Most Sought-After Destinations"
         }
       />
 
@@ -40,7 +40,7 @@ function Destinations({ destinationData }) {
                   />
                 </div>
               </div>
-              <div className='flex gap-x-0.5 w-full overflow-hidden'>
+              <div className='flex items-center gap-x-0.5 w-full overflow-hidden'>
                 <p className='text-[#B2B2B2] font-normal text-base text-left'>
                   {destination.from}
                 </p>
