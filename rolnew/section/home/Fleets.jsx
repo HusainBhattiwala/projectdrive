@@ -8,7 +8,10 @@ import "./css/fleet.css";
 import Button from "rolnew/ui/Button";
 import Link from "next/link";
 
-export default function Fleets({ slideData, showBooking = false }) {
+export default function Fleets({ slideData = [], showBooking = false }) {
+  const slidesToShow =
+    slideData.length <= 3 ? [...slideData, ...slideData] : slideData;
+
   return (
     <div className='w-full relative fleet-page max-w-[1440px] mx-auto'>
       <Swiper
@@ -32,7 +35,6 @@ export default function Fleets({ slideData, showBooking = false }) {
           },
         }}
         centeredSlides
-        // centerInsufficientSlides
         autoplay
         loop
         centeredSlidesBounds
@@ -46,8 +48,8 @@ export default function Fleets({ slideData, showBooking = false }) {
         }}
         modules={[Autoplay, Pagination, Navigation]}
       >
-        {slideData?.map((item) => (
-          <SwiperSlide key={item.id}>
+        {slidesToShow.map((item, index) => (
+          <SwiperSlide key={`${item.id}-${index}`}>
             <div className='max-w-[574px]'>
               <img src={item?.img} alt={item?.name} />
             </div>
@@ -56,29 +58,29 @@ export default function Fleets({ slideData, showBooking = false }) {
             </p>
           </SwiperSlide>
         ))}
-        <div className={`sm:py-[42px] py-5 ${showBooking && "mt-6"}`}>
-          {showBooking && (
-            <Button className='flex-1 !px-14'>
-              <Link href='/rolnew'>Book Now</Link>
-            </Button>
-          )}
-          <div className='flex justify-center items-center gap-x-3 sm:mt-10 relative'>
-            <div className='swiper-btn-prev pop w-12 h-12 bg-[#11202D] border border-[#223544] rounded-full flex items-center justify-center cursor-pointer'>
-              <img
-                alt='go-prev'
-                src='/rolnew/global/icons/arrow-left-primary.svg'
-              />
-            </div>
-            <div className='swiper-pagination !relative !w-auto sm:mx-[30px] mx-2' />
-            <div className='swiper-btn-next pop w-12 h-12 bg-[#11202D] border border-[#223544] rounded-full flex items-center justify-center cursor-pointer'>
-              <img
-                alt='go-prev'
-                src='/rolnew/global/icons/arrow-right-primary.svg'
-              />
-            </div>
+      </Swiper>
+      <div className={`sm:py-[42px] py-5 ${showBooking && "mt-6"}`}>
+        {showBooking && (
+          <Button className='flex-1 !px-14'>
+            <Link href='/rolnew'>Book Now</Link>
+          </Button>
+        )}
+        <div className='flex justify-center items-center gap-x-3 sm:mt-10 relative'>
+          <div className='swiper-btn-prev pop w-12 h-12 bg-[#11202D] border border-[#223544] rounded-full flex items-center justify-center cursor-pointer'>
+            <img
+              alt='go-prev'
+              src='/rolnew/global/icons/arrow-left-primary.svg'
+            />
+          </div>
+          <div className='swiper-pagination !relative !w-auto sm:mx-[30px] mx-2' />
+          <div className='swiper-btn-next pop w-12 h-12 bg-[#11202D] border border-[#223544] rounded-full flex items-center justify-center cursor-pointer'>
+            <img
+              alt='go-next'
+              src='/rolnew/global/icons/arrow-right-primary.svg'
+            />
           </div>
         </div>
-      </Swiper>
+      </div>
     </div>
   );
 }
