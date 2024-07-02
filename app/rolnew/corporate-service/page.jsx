@@ -12,7 +12,6 @@ import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import { corporateData } from './corporateData';
 
 export default function Page() {
-
   return (
     <>
       <ServicesBanner {...corporateData.bannerData} />

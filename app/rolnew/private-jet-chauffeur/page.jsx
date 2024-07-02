@@ -12,8 +12,6 @@ import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import { jetData } from './jetData';
 
 export default function Page() {
-  
-
   return (
     <>
       <ServicesBanner {...jetData.bannerData} />

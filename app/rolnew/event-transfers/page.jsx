@@ -12,8 +12,6 @@ import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import { eventData } from './eventData';
 
 export default function Page() {
-  
-
   return (
     <>
       <ServicesBanner {...eventData.bannerData} />

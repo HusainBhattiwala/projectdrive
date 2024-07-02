@@ -12,7 +12,6 @@ import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import { sightseeingData } from './sightseingData';
 
 export default function Page() {
-
   return (
     <>
       <ServicesBanner {...sightseeingData.bannerData} />

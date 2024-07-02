@@ -12,8 +12,6 @@ import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import { intercityData } from './intercityData';
 
 export default function Page() {
-  
-
   return (
     <>
       <ServicesBanner {...intercityData.bannerData} />

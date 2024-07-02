@@ -1,4 +1,4 @@
-import CategoriesComponent from 'components/AllCategories';
+// import CategoriesComponent from 'components/AllCategories';
 import FindMoreComponent from 'components/FindMore';
 import Container from 'rolnew/comp/Container';
 import TopDestination from 'rolnew/comp/TopDestination';
