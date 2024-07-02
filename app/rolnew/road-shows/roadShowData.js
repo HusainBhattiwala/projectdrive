@@ -11,22 +11,22 @@ export const roadShowData = {
 
   luxuriousServiceData: [
     {
-      img: '/rolnew/global/icons/Transparent Pricing.png',
+      img: '/rolnew/global/icons/roadshows/Transparent Pricing.png',
       title: 'Transparent Pricing',
       desc: 'We offer transparent pricing for our services, ensuring there are no hidden fees.',
     },
     {
-      img: '/rolnew/global/icons/Bespoke Services.png',
+      img: '/rolnew/global/icons/roadshows/Bespoke Services.png',
       title: 'Bespoke Services',
       desc: 'Our bespoke services are tailored to meet your specific needs, ensuring a personalised and exclusive experience.',
     },
     {
-      img: '/rolnew/global/icons/Dedicated Event Manager.png',
+      img: '/rolnew/global/icons/roadshows/Dedicated Event Manager.png',
       title: 'Dedicated Event Manager',
       desc: 'We provide a dedicated Event Manager service to ensure your event transportation is flawless. This professional oversees all logistics related to your travel needs',
     },
     {
-      img: '/rolnew/global/icons/Pre-Scheduling.png',
+      img: '/rolnew/global/icons/roadshows/Pre-Scheduling.png',
       title: 'Pre-Scheduling',
       desc: 'We offer a convenient pre-scheduling service, allowing you to arrange your transportation needs in advance for a seamless experience. This service is ideal for ensuring timely and reliable travel',
     },

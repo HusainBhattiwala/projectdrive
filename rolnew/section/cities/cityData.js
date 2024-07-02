@@ -35,7 +35,7 @@ export const cityData = {
       subTitle: "Tailored Luxury Chauffeur Services",
       mainTitle: "London Landmarks",
       description:
-        "London’s attractions can be busy and difficult to navigate; especially during peak tourist season. By hiring a London chauffeur service such as RolDrive, tourists can sit back and relax while your experienced driver not only navigates through the busy city streets but also acts as your guide throughout the journey",
+        "London’s attractions can be busy and difficult to navigate; especially during peak tourist season. By hiring a London chauffeur service such as RolDrive, clients can sit back and relax while your experienced driver not only navigates through the busy city streets but also acts as your guide throughout the journey.",
     },
 
     landMarks: [
@@ -132,7 +132,7 @@ export const cityData = {
         data: [
           { from: "The Ritz London" },
           { from: "The Savoy" },
-          { from: "Claridges" },
+          { from: "Claridge's" },
           { from: "The Langham, London" },
           { from: "Shangri-La Hotel at The Shard" },
           { from: "The Connaught" },
@@ -307,10 +307,10 @@ export const cityData = {
       img: "/rolnew/cities/trust-banner2.jpg",
     },
     title1: {
-      subTitle: "Tailored Chauffeur Services",
+      subTitle: "Tailored Luxury Chauffeur Services",
       mainTitle: "Paris Landmarks",
       description:
-        "Discover the iconic landmarks of Paris with our chauffeur service. Avoid the hassle of navigating through the city and let our experienced drivers take you to the must-see attractions in comfort and style.",
+        "Paris’ attractions can be bustling and challenging to navigate, especially during peak tourist season. By hiring a Paris chauffeur service like RolDrive, clients can sit back and relax while an experienced driver expertly navigates the busy city streets and serves as a knowledgeable guide throughout the journey.",
     },
     landMarks: [
       {
@@ -443,7 +443,7 @@ export const cityData = {
       subTitle: "Tailored Luxury Chauffeur Services",
       mainTitle: "Dubai Landmarks",
       description:
-        "Dubais attractions can be bustling and challenging to navigate, particularly during peak tourist seasons. By hiring a luxury chauffeur service in Dubai like RolDrive, tourists can sit back and relax while an experienced driver expertly navigates the busy city streets, providing guidance and ensuring a smooth and enjoyable journey.",
+        "Dubai's attractions can be bustling and challenging to navigate, particularly during peak tourist seasons. By hiring a luxury chauffeur service in Dubai like RolDrive, clients can sit back and relax while an experienced driver expertly navigates the busy city streets, providing guidance and ensuring a smooth and enjoyable journey.",
     },
     landMarks: [
       {
@@ -737,7 +737,7 @@ export const cityData = {
       img: "/rolnew/cities/trust-banner.svg",
     },
     title1: {
-      subTitle: "Tailored Chauffeur Services",
+      subTitle: "Tailored Luxury Chauffeur Services",
       mainTitle: "New York Landmarks",
       description:
         "New York's attractions can be bustling and challenging to navigate, especially during peak tourist seasons. By hiring a luxury chauffeur service in New York like RolDrive, clients can sit back and relax while an experienced driver expertly navigates the busy city streets and serves as a knowledgeable guide throughout the journey.",
@@ -1010,10 +1010,10 @@ export const cityData = {
       img: "/rolnew/cities/trust-banner.svg",
     },
     title1: {
-      subTitle: "Tailored Chauffeur Services",
-      mainTitle: "London Landmarks",
+      subTitle: "Tailored Luxury Chauffeur Services",
+      mainTitle: "Tokyo Landmarks",
       description:
-        "These attractions can be busy and difficult to navigate, especially during peak tourist season. By hiring a chauffeur service such as a Mercedes Sprinter hire in London, tourists can sit back and relax while their experienced driver navigates through the busy city streets, making their way to each attraction without the added stress of finding a parking spot or figuring out public transportation.",
+        "Tokyo’s attractions can be bustling and challenging to navigate, especially during peak tourist season. By hiring a Tokyo chauffeur service like RolDrive, clients can sit back and relax while an experienced driver expertly navigates the busy city streets and serves as a knowledgeable guide throughout the journey.",
     },
     landMarks: [
       {
