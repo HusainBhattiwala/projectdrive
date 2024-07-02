@@ -13,9 +13,9 @@ const countryList = [
   },
   {
     id: 'process2',
-    image: '/rolnew/global/country/paris.jpg',
-    countryCode: 'FR',
-    cityName: 'Paris',
+    image: '/rolnew/global/country/dubai.jpg',
+    countryCode: 'AE',
+    cityName: 'Dubai',
   },
   {
     id: 'process3',
@@ -25,9 +25,9 @@ const countryList = [
   },
   {
     id: 'process4',
-    image: '/rolnew/global/country/dubai.jpg',
-    countryCode: 'AE',
-    cityName: 'Dubai',
+    image: '/rolnew/global/country/paris.jpg',
+    countryCode: 'FR',
+    cityName: 'Paris',
   },
   {
     id: 'process5',
