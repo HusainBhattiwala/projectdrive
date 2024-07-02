@@ -11,10 +11,9 @@ import Destinations from 'rolnew/section/home/Destinations';
 import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import Landmark from 'rolnew/section/cities/LandMark';
-import ChauffeurServiceDescription from 'rolnew/comp/ChauffeurServiceDescription';
-
+// import ChauffeurServiceDescription from 'rolnew/comp/ChauffeurServiceDescription';
+// import Airports from 'rolnew/comp/Airports';
 import { cityData } from './cityData';
-import Airports from 'rolnew/comp/Airports';
 
 const cities = ['london', 'dubai', 'newyork', 'paris', 'tokyo'];
 
@@ -45,16 +44,16 @@ function CityPage() {
       </div>
       <OurFeet showBooking />
       <Landmark pageData={pageData} />
-      <Airports show airportsData={pageData?.airportsData} />
+      {/* <Airports airportsData={pageData?.airportsData} show={pageData?.airportsData?.show}/> */}
       <Locations showPadding />
       <Contact />
       <Destinations destinationData={pageData.destinationData?.restaurants} />
       <DownloadOurApp />
       <Destinations destinationData={pageData.destinationData?.hotel} />
       <ServicesFaq faqData={pageData?.faqData} />
-      <ChauffeurServiceDescription
+      {/* <ChauffeurServiceDescription
         ChauffeurServiceDescription={pageData.ChauffeurServiceDescription}
-      />
+      /> */}
     </>
   );
 }

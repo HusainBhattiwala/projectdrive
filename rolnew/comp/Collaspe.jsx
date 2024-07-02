@@ -7,7 +7,7 @@ function Collaspe({ list }) {
   const [slectedId, setSelectedId] = useState(0);
 
   return (
-    <div className='flex flex-col gap-y-6 sm:my-0 my-4'>
+    <div className='flex flex-col gap-y-6 sm:my-0 my-4 pt-6'>
       {list?.map((faq, index) => (
         <div
           className={`rounded-xl text-left sm:p-6 p-4 ${
@@ -26,7 +26,7 @@ function Collaspe({ list }) {
             <h3 className='text-[#B2B2B2] sm:text-xl text-base'>
               {faq.question}
             </h3>
-            <div className='w-6 h-6'>
+            <div className='w-6 h-6 ml-2'>
               <Pic
                 className={`${
                   slectedId === index ? 'rotate-[270deg]' : 'rotate-90'

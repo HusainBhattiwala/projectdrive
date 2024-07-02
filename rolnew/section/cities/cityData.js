@@ -231,6 +231,7 @@ export const cityData = {
 
     airportsData: {
       title: "London Airports",
+      show: true,
       desc: "",
       search: {
         dropdown1: "Choose Your City",
@@ -297,113 +298,6 @@ export const cityData = {
     },
   },
 
-  paris: {
-    banner: {
-      title: "Paris Chauffeur Service",
-      subTitle: "Your exclusive and dependable chauffeur service indulgence",
-      bannerImage: "/rolnew/cities/paris-banner.jpg",
-    },
-    servicesData: {
-      img: "/rolnew/cities/trust-banner2.jpg",
-    },
-    title1: {
-      subTitle: "Tailored Luxury Chauffeur Services",
-      mainTitle: "Paris Landmarks",
-      description:
-        "Paris’ attractions can be bustling and challenging to navigate, especially during peak tourist season. By hiring a Paris chauffeur service like RolDrive, clients can sit back and relax while an experienced driver expertly navigates the busy city streets and serves as a knowledgeable guide throughout the journey.",
-    },
-    landMarks: [
-      {
-        id: "land1",
-        src: "/images/city/paris/eiffel_tower.png",
-        title: "Eiffel Tower",
-        description:
-          "One of the most famous landmarks in the world, offering breathtaking views of Paris from its observation decks.",
-      },
-      {
-        id: "land2",
-        src: "/images/city/paris/louvre.png",
-        title: "The Louvre Museum",
-        description:
-          "Home to thousands of works of art, including the Mona Lisa and the Venus de Milo, the Louvre is the largest art museum in the world.",
-      },
-      {
-        id: "land3",
-        src: "/images/city/paris/notre_dame.png",
-        title: "Notre-Dame Cathedral",
-        description:
-          "A masterpiece of French Gothic architecture, Notre-Dame Cathedral is a symbol of Paris and a UNESCO World Heritage Site.",
-      },
-    ],
-    touristAttraction: {
-      title: "Tourist Attraction",
-      subTitle: "Hidden Gems",
-      list: [
-        {
-          id: "touristAttraction1",
-          src: "/images/city/london/tourist.pn",
-          title: "The neighbourhoods of Notting Hill",
-          description:
-            "A vibrant and affluent neighborhood in West London, known for its colourful houses, Portobello Road Market, and annual carnival.",
-        },
-        {
-          id: "touristAttraction2",
-          src: "/images/city/london/tourist.png",
-          title: "Greenwich",
-          description:
-            "Where you can enjoy the stunning views from the Royal Observatory and take a walk in Greenwich Park.",
-        },
-        {
-          id: "touristAttraction3",
-          src: "/images/city/london/tourist.png",
-          title: "Harrods",
-          description:
-            "A luxury department store in Knightsbridge, London, known for its opulent interior, high-end fashion, and exquisite food hall.",
-        },
-        {
-          id: "touristAttraction4",
-          src: "/images/city/london/tourist.png",
-          title: "Selfridges",
-          description:
-            "A high-end department store in Oxford Street, London, known for its luxury fashion, cosmetics, and iconic window displays.",
-        },
-        {
-          id: "touristAttraction5",
-          src: "/images/city/london/tourist.png",
-          title: "Fortnum & Mason",
-          description:
-            "A luxury department store in Piccadilly, London, known for its exquisite food hall, fine teas, and hampers.",
-        },
-        {
-          id: "touristAttraction6",
-          src: "/images/city/london/tourist.png",
-          title: "Buckingham Palace",
-          description:
-            "The London residence and administrative headquarters of the monarch of the United Kingdom. It has 775 rooms, including the famous balcony.",
-        },
-      ],
-    },
-    ChauffeurServiceDescription: [
-      {
-        p: "By hiring a chauffeur service, tourists can easily visit these stores and enjoy a shopping experience without the added stress of carrying around their purchases.",
-      },
-      {
-        p: "Of course, no trip to London would be complete without experiencing its nightlife. From its numerous bars and pubs to its world-famous clubs, there is no shortage of entertainment in London after dark. However, no one wants to wait for a taxi after a few drinks down, especially those who are unfamiliar with the area. By hiring a chauffeur service, tourists can easily navigate the city's nightlife, with the added benefit of a safe and reliable ride back to their hotel or residence.",
-      },
-      {
-        p: "In addition to the convenience and comfort of using a chauffeur service in London, there are also practical benefits. London is a large city, and public transportation can be time-consuming and confusing for visitors trying to get to meetings. By hiring a chauffeur service, one can save time and avoid the hassle of figuring out complicated transportation systems.",
-      },
-      {
-        p: "Furthermore, London is known for its traffic congestion. With over eight million people going about their busy schedules, by searching for ‘Luxury car hire with chauffeur near me’ and making use of RolDrive’s chauffeur service, visitors can avoid the stress of driving in busy traffic and instead sit back and relax in the comfort of a luxury vehicle. Additionally, RolDrive's chauffeurs are experienced in navigating the city's traffic patterns and finding the most efficient routes to ensure that tourists arrive at their destination on time.",
-      },
-      {
-        p: "Our hourly chauffeur service and private chauffeur service in London offer a unique blend of luxury, reliability, and affordability. We take pride in delivering a personalized experience for our clients, ensuring that every detail of their journey is tailored to their needs. Our fleet of vehicles includes a range of high-end models such as Mercedes-Benz, BMW, Audi, Tesla, Range Rover, Rolls Royce and Bentley and more. All our cars are maintained to the highest standards, ensuring a smooth and comfortable ride for our clients.",
-      },
-      {
-        p: "In conclusion, London is a city with endless possibilities for tourists and visitors, and using a chauffeur service like RolDrive can make the experience even more enjoyable. From exploring the city's famous landmarks to discovering its hidden gems, shopping, and experiencing the nightlife, a chauffeur service can provide a comfortable and stress-free way to explore the city. With the added benefits of time-saving, avoiding traffic congestion, and convenience, hiring a chauffeur service in London is a must for any tourist looking for a wonderful experience. Simply type ‘RolDrive’ or search ‘chauffeur service near me.",
-      },
-    ],
-  },
   dubai: {
     banner: {
       title: "Dubai Chauffeur Service",
@@ -571,68 +465,36 @@ export const cityData = {
 
     airportsData: {
       title: "Dubai Airports",
+      show: false,
       desc: "",
       search: {
         dropdown1: "Choose Your City",
         dropdown2: "Choose Your Airport",
       },
-      dropdownOneData: ["London"],
+      dropdownOneData: ["Dubai"],
       dropdownTwoData: [
-        "Heathrow Airport",
-        "Gatwick Airport",
-        "London City Airport",
-        "London Southend Airport",
-        "London Stansted Airport",
-        "luton Airport",
+        "Dubai International Airport",
+        "AI Maktoum International Airport",
+
       ],
       list: [
         {
           id: 1,
           image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "Heathrow Airport",
+          countryCode: "AE",
+          cityName: "Dubai International Airport",
           route:
             "http://localhost:3000/rolnew/airport-transfers/london/heathrow",
         },
         {
           id: 2,
           image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "Gatwick Airport",
+          countryCode: "AE",
+          cityName: "AI Maktoum International Airport",
           route:
             "http://localhost:3000/rolnew/airport-transfers/london/gatwick",
         },
-        {
-          id: 3,
-          image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "London City Airport",
-          route:
-            "http://localhost:3000/rolnew/airport-transfers/london/londoncity",
-        },
-        {
-          id: 4,
-          image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "London Southend Airport",
-          route:
-            "http://localhost:3000/rolnew/airport-transfers/london/londonsouthend",
-        },
-        {
-          id: 5,
-          image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "London Stansted Airport",
-          route:
-            "http://localhost:3000/rolnew/airport-transfers/london/londonstansted",
-        },
-        {
-          id: 6,
-          image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "Luton Airport",
-          route: "http://localhost:3000/rolnew/airport-transfers/london/luton",
-        },
+        
       ],
     },
 
@@ -702,6 +564,7 @@ export const cityData = {
       ],
     },
   },
+
   newyork: {
     banner: {
       title: "New York Chauffeur Service",
@@ -869,67 +732,51 @@ export const cityData = {
 
     airportsData: {
       title: "New York Airports",
+      show:false,
       desc: "",
       search: {
         dropdown1: "Choose Your City",
         dropdown2: "Choose Your Airport",
       },
-      dropdownOneData: ["London"],
+      dropdownOneData: ["NewYork"],
       dropdownTwoData: [
-        "Heathrow Airport",
-        "Gatwick Airport",
-        "London City Airport",
-        "London Southend Airport",
-        "London Stansted Airport",
-        "luton Airport",
+        "Buffalo Niagara International Airport",
+        "LaGuardi Airport",
+        "John F.Kennedy International Airport",
+        "Newark Liberty International Airport",
       ],
       list: [
         {
           id: 1,
           image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "Heathrow Airport",
+          countryCode: "US",
+          cityName: "Buffalo Niagara International Airport",
           route:
             "http://localhost:3000/rolnew/airport-transfers/london/heathrow",
         },
         {
           id: 2,
           image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "Gatwick Airport",
+          countryCode: "US",
+          cityName: "LaGuardi Airport",
           route:
             "http://localhost:3000/rolnew/airport-transfers/london/gatwick",
         },
         {
           id: 3,
           image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "London City Airport",
+          countryCode: "US",
+          cityName: "John F.Kennedy International Airport",
           route:
             "http://localhost:3000/rolnew/airport-transfers/london/londoncity",
         },
         {
           id: 4,
           image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "London Southend Airport",
+          countryCode: "US",
+          cityName: "Newark Liberty International Airport",
           route:
             "http://localhost:3000/rolnew/airport-transfers/london/londonsouthend",
-        },
-        {
-          id: 5,
-          image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "London Stansted Airport",
-          route:
-            "http://localhost:3000/rolnew/airport-transfers/london/londonstansted",
-        },
-        {
-          id: 6,
-          image: "/rolnew/global/country/london.jpg",
-          countryCode: "GB",
-          cityName: "Luton Airport",
-          route: "http://localhost:3000/rolnew/airport-transfers/london/luton",
         },
       ],
     },
@@ -1000,11 +847,314 @@ export const cityData = {
       ],
     },
   },
+
+  paris: {
+    banner: {
+      title: "Paris Chauffeur Service",
+      subTitle: "Your exclusive and dependable chauffeur service indulgence",
+      bannerImage: "/rolnew/cities/paris-banner.jpg",
+    },
+
+    trustedPartnersData: {
+      img: "/rolnew/cities/trust-banner.svg",
+      data: [
+        {
+          icon: "/rolnew/global/icons/shield-user-line.svg",
+          title: "Exceptional Chauffeur Service",
+          desc: "RolDrive provides exceptional chauffeur service in Paris, delivering luxurious and reliable transportation with professional drivers. Ideal for airport transfers, business trips, and special events, RolDrive ensures a seamless and comfortable journey, prioritising customer satisfaction and convenience.",
+        },
+        {
+          icon: "/rolnew/global/icons/steering-wheel.svg",
+          title: "Comprehensive Airport Coverage",
+          desc: "RolDrive provides comprehensive airport coverage with top-tier chauffeur service in Paris, ensuring smooth transfers to and from all major airports. With luxury vehicles and professional drivers, RolDrive guarantees comfort, reliability, and a stress-free travel experience for every journey.",
+        },
+        {
+          icon: "/rolnew/global/icons/service-line.svg",
+          title: "Flexible and Reliable",
+          desc: "RolDrive provides comprehensive airport coverage with top-tier chauffeur service in Paris, ensuring smooth transfers to and from all major airports. With luxury vehicles and professional drivers, RolDrive guarantees comfort, reliability, and a stress-free travel experience for every journey",
+        },
+        {
+          icon: "/rolnew/global/icons/car-line.svg",
+          title: "Professionalism and Trust",
+          desc: "RolDrive's chauffeur service in Paris epitomises professionalism and trust, providing punctual, reliable, and luxurious transportation. With highly trained chauffeurs and a fleet of premium vehicles, RolDrive guarantees a seamless and comfortable journey for all passengers, prioritising your safety and satisfaction above all else.",
+        },
+      ],
+    },
+
+    servicesData: {
+      img: "/rolnew/cities/trust-banner2.jpg",
+    },
+    title1: {
+      subTitle: "Tailored Luxury Chauffeur Services",
+      mainTitle: "Paris Landmarks",
+      description:
+        "Paris’ attractions can be bustling and challenging to navigate, especially during peak tourist season. By hiring a Paris chauffeur service like RolDrive, clients can sit back and relax while an experienced driver expertly navigates the busy city streets and serves as a knowledgeable guide throughout the journey.",
+    },
+    landMarks: [
+      {
+        id: "land1",
+        src: "/images/city/paris/eiffel_tower.png",
+        title: "Eiffel Tower",
+        description:
+          "An iconic symbol of Paris, offering breathtaking city views from its observation decks and a stunning light display at night",
+      },
+      {
+        id: "land2",
+        src: "/images/city/paris/louvre.png",
+        title: "Louvre Museum",
+        description:
+          "Home to the famous Mona Lisa, this world-renowned museum houses an extensive collection of art and historical artefacts.",
+      },
+      {
+        id: "land3",
+        src: "/images/city/paris/notre_dame.png",
+        title: "Notre-Dame Cathedral",
+        description:
+          "A masterpiece of Gothic architecture, featuring stunning stained glass windows and offering a climb to the towers for panoramic views",
+      },
+    ],
+
+    touristAttraction: {
+      title: "Tourist Attraction",
+      subTitle: "Hidden Gems",
+      list: [
+        {
+          id: "touristAttraction1",
+          src: "/images/city/london/tourist.png",
+          title: "Musée de l'Orangerie",
+          description:
+            "This museum features Monet’s Water Lilies and other Impressionist and Post-Impressionist masterpieces in a serene, intimate setting.",
+        },
+        {
+          id: "touristAttraction2",
+          src: "/images/city/london/tourist.png",
+          title: "Parc des Buttes-Chaumont",
+          description:
+            "A picturesque park with dramatic cliffs, waterfalls, and a lake, offering a peaceful escape from the city's hustle and bustle.",
+        },
+        {
+          id: "touristAttraction3",
+          src: "/images/city/london/tourist.png",
+          title: "Musée Rodin",
+          description:
+            "Dedicated to the works of sculptor Auguste Rodin, this museum features beautiful sculptures in both indoor galleries and a lush garden.",
+        },
+        {
+          id: "touristAttraction4",
+          src: "/images/city/london/tourist.png",
+          title: "Promenade Plantée",
+          description:
+            "An elevated park built on a former railway line, offering scenic walks with lush greenery and unique perspectives of Paris.",
+        },
+        {
+          id: "touristAttraction5",
+          src: "/images/city/london/tourist.png",
+          title: "La Pagode",
+          description:
+            "A historic, beautifully restored Asian-style cinema that offers a unique cultural experience with its intricate architecture and curated film selections.",
+        },
+        {
+          id: "touristAttraction6",
+          src: "/images/city/london/tourist.png",
+          title: "Musée de Montmartre",
+          description:
+            "Located in a historic building in Montmartre, this museum explores the area's artistic history and offers lovely gardens with city views.",
+        },
+      ],
+    },
+
+    destinationData: {
+      restaurants: {
+        title: "Explore Top Class Restaurants",
+        subTitle: "Popular Trips",
+        isFromTo: false,
+        data: [
+          { from: "Le Jules Verne" },
+          { from: "L'Ambroisie" },
+          { from: "Le Meurice Alain Ducasse" },
+          { from: "Guy Savoy" },
+          { from: "Epicure" },
+          { from: "Arpège" },
+          { from: "Pierre Gagnaire" },
+          { from: "L'Astrance" },
+        ],
+      },
+      hotel: {
+        title: "Explore Top Class Hotels",
+        subTitle: "Popular Trips",
+        isFromTo: false,
+        data: [
+          { from: "The Ritz Paris" },
+          { from: "Le Meurice" },
+          { from: "Four Seasons Hotel George V" },
+          { from: "Hôtel Plaza Athénée" },
+          { from: "Shangri-La Hotel Paris" },
+          { from: "Hôtel de Crillon" },
+          { from: "Mandarin Oriental, Paris" },
+          { from: "Le Bristol Paris" },
+        ],
+      },
+    },
+
+    airportsData: {
+      title: "Paris Airports",
+      show:false,
+      desc: "",
+      search: {
+        dropdown1: "Choose Your City",
+        dropdown2: "Choose Your Airport",
+      },
+      dropdownOneData: ["Paris"],
+      dropdownTwoData: [
+        "Charles De Gaulle Airport",
+        "Orly Airport",
+        "Beauvais-Tille Airport",
+        "Le Bourget Airport",
+      ],
+      list: [
+        {
+          id: 1,
+          image: "/rolnew/global/country/london.jpg",
+          countryCode: "US",
+          cityName: "Charles De Gaulle Airport",
+          route:
+            "http://localhost:3000/rolnew/airport-transfers/london/heathrow",
+        },
+        {
+          id: 2,
+          image: "/rolnew/global/country/london.jpg",
+          countryCode: "US",
+          cityName: "Orly Airport",
+          route:
+            "http://localhost:3000/rolnew/airport-transfers/london/gatwick",
+        },
+        {
+          id: 3,
+          image: "/rolnew/global/country/london.jpg",
+          countryCode: "US",
+          cityName: "Beauvais-Tille Airport",
+          route:
+            "http://localhost:3000/rolnew/airport-transfers/london/londoncity",
+        },
+        {
+          id: 4,
+          image: "/rolnew/global/country/london.jpg",
+          countryCode: "US",
+          cityName: "Le Bourget Airport",
+          route:
+            "http://localhost:3000/rolnew/airport-transfers/london/londonsouthend",
+        },
+      ],
+    },
+
+    faqData : {
+      title: "Frequently Asked Questions",
+      data: [
+        {
+          id: 0,
+          question: "Recommend some top-rated hotels in Paris that are centrally located and offer a great view of landmarks like the Eiffel Tower or Notre Dame.",
+          ans: "Some centrally located top-rated hotels in Paris with great views include Shangri-La Hotel Paris and The Peninsula Paris, offering stunning Eiffel Tower vistas. For views of Notre Dame, consider Hotel La Clef Tour Eiffel or Hotel Saint James Albany Paris Hotel Spa. RolDrive's luxury chauffeur service Paris recommends these hotels, ensuring seamless and stylish transportation to and from these iconic landmarks, making your visit both convenient and memorable."
+        },
+        {
+          id: 1,
+          question: "What are the best areas or neighbourhoods to stay in Paris for easy access to major attractions and charming local experiences?",
+          ans: "RolDrive’s luxury chauffeur service Paris recommends the 1st (Louvre), 4th (Marais), and 7th (Eiffel Tower) arrondissements for easy access to major attractions and local charm. Enjoy iconic landmarks and authentic experiences through our guided chauffeur service in Paris."
+        },
+        {
+          id: 2,
+          question: "Are there any boutique or luxury hotels in Paris that provide a unique and memorable stay?",
+          ans: "Paris boasts boutique and luxury hotels like Le Pavillon de la Reine in Marais, blending historic charm with modern comfort, and Le Cinq Codet in the 7th arrondissement, known for its contemporary art and Eiffel Tower views. For a seamless experience, RolDrive's luxury chauffeur service Paris recommends these hotels for an unforgettable stay."
+        },
+        {
+          id: 3,
+          question: "Which restaurants in Paris serve the best traditional French cuisine, and does RolDrive have any specific dish recommendations?",
+          ans: "Paris offers exceptional restaurants for traditional French cuisine. Le Grand Véfour near the Palais Royal is renowned for classic dishes like escargots and foie gras. Au Pied de Cochon in Les Halles serves delicious onion soup and escargots. For fine dining, Guy Savoy offers exquisite French dishes near the Louvre. RolDrive's luxury chauffeur service Paris recommends trying coq au vin at Le Grand Véfour, boeuf bourguignon at Au Pied de Cochon, and soufflé at Guy Savoy for an authentic French culinary experience paired with our comfortable and stylish transportation."
+        },
+        {
+          id: 4,
+          question: "Are there any highly-rated international restaurants in Paris that RolDrive recommends for a diverse culinary experience?",
+          ans: "Paris offers highly-rated international restaurants like Le Cinq for French haute cuisine, L'Atelier de Joël Robuchon for innovative French dishes, and Le Grand Restaurant by Jean-François Piège for modern French fare. Enjoy these culinary delights hassle-free with RolDrive's private car service in Paris."
+        },
+        {
+          id: 5,
+          question: "Can RolDrive suggest local cafes or patisseries where I can try famous French pastries and desserts?",
+          ans: "RolDrive recommends experiencing famous French pastries at Ladurée for exquisite macarons, Pierre Hermé for innovative flavours, and Angelina for their renowned hot chocolate and Mont Blanc pastry. Enjoy these culinary delights hassle-free with RolDrive's private car service in Paris, ensuring comfortable and stylish transportation between each delightful stop."
+        },
+        {
+          id: 6,
+          question: "What are the must-see historical and cultural sites in Paris that should be on every visitor's itinerary?",
+          ans: "Must-see historical and cultural sites in Paris include the Louvre Museum for iconic artworks like the Mona Lisa, Notre-Dame Cathedral for its Gothic architecture, and the Eiffel Tower for panoramic views. Enjoy these landmarks hassle-free with RolDrive's private car service in Paris, ensuring comfort and convenience throughout your visit."
+        },
+        {
+          id: 7,
+          question: "Are there any popular sightseeing tours or guided experiences RolDrive recommends for exploring Paris's famous attractions and hidden gems?",
+          ans: "RolDrive recommends popular sightseeing tours in Paris such as Seine River cruises for iconic views, guided tours of the Louvre for art enthusiasts, and Montmartre walking tours for hidden gems. Enjoy these experiences with RolDrive's private car service in Paris and knowledgeable chauffeurs, ensuring a personalized and informative journey."
+        },
+        {
+          id: 8,
+          question: "What are the best ways to get around Paris using taxi alternatives?",
+          ans : "Navigating Paris without relying solely on traditional taxis is best achieved with taxi alternatives like booking private chauffeur services. RolDrive's best car service in Paris offers a superior option with luxury vehicles and professional drivers, ensuring punctuality, comfort, and personalized travel experiences without the hassle of hailing taxis repeatedly. Our courteous and knowledgeable drivers will be happy to help you with your luggage and show you around the city of light at your own pace."
+        },
+        {
+          id: 9,
+          question: "What are some family-friendly attractions or activities in Paris that are suitable for children and enjoyable for the whole family?",
+          ans : "Family-friendly attractions in Paris include Disneyland Paris for magical theme park adventures, the Paris Aquarium for marine life exploration, and the Jardin d'Acclimatation for rides and activities. Enjoy these outings with ease using RolDrive's best car service in Paris, ensuring a fun filled day for the entire family. For more locations to visit, feel free to ask our chauffeurs and they’ll be happy to take you."
+        },
+      ]
+    },
+
+    ChauffeurServiceDescription: [
+      {
+        p: "By hiring a chauffeur service, tourists can easily visit these stores and enjoy a shopping experience without the added stress of carrying around their purchases.",
+      },
+      {
+        p: "Of course, no trip to London would be complete without experiencing its nightlife. From its numerous bars and pubs to its world-famous clubs, there is no shortage of entertainment in London after dark. However, no one wants to wait for a taxi after a few drinks down, especially those who are unfamiliar with the area. By hiring a chauffeur service, tourists can easily navigate the city's nightlife, with the added benefit of a safe and reliable ride back to their hotel or residence.",
+      },
+      {
+        p: "In addition to the convenience and comfort of using a chauffeur service in London, there are also practical benefits. London is a large city, and public transportation can be time-consuming and confusing for visitors trying to get to meetings. By hiring a chauffeur service, one can save time and avoid the hassle of figuring out complicated transportation systems.",
+      },
+      {
+        p: "Furthermore, London is known for its traffic congestion. With over eight million people going about their busy schedules, by searching for ‘Luxury car hire with chauffeur near me’ and making use of RolDrive’s chauffeur service, visitors can avoid the stress of driving in busy traffic and instead sit back and relax in the comfort of a luxury vehicle. Additionally, RolDrive's chauffeurs are experienced in navigating the city's traffic patterns and finding the most efficient routes to ensure that tourists arrive at their destination on time.",
+      },
+      {
+        p: "Our hourly chauffeur service and private chauffeur service in London offer a unique blend of luxury, reliability, and affordability. We take pride in delivering a personalized experience for our clients, ensuring that every detail of their journey is tailored to their needs. Our fleet of vehicles includes a range of high-end models such as Mercedes-Benz, BMW, Audi, Tesla, Range Rover, Rolls Royce and Bentley and more. All our cars are maintained to the highest standards, ensuring a smooth and comfortable ride for our clients.",
+      },
+      {
+        p: "In conclusion, London is a city with endless possibilities for tourists and visitors, and using a chauffeur service like RolDrive can make the experience even more enjoyable. From exploring the city's famous landmarks to discovering its hidden gems, shopping, and experiencing the nightlife, a chauffeur service can provide a comfortable and stress-free way to explore the city. With the added benefits of time-saving, avoiding traffic congestion, and convenience, hiring a chauffeur service in London is a must for any tourist looking for a wonderful experience. Simply type ‘RolDrive’ or search ‘chauffeur service near me.",
+      },
+    ],
+  },
+
   tokyo: {
     banner: {
-      title: "London Chauffeur Service",
+      title: "Tokyo Chauffeur Service",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
       bannerImage: "/rolnew/cities/london.png",
+    },
+    trustedPartnersData: {
+      img: "/rolnew/cities/trust-banner.svg",
+      data: [
+        {
+          icon: "/rolnew/global/icons/shield-user-line.svg",
+          title: "Exceptional Chauffeur Service",
+          desc: "RolDrive provides exceptional chauffeur service in Tokyo, offering luxurious and reliable transportation with professional drivers. Ideal for airport transfers, business trips, and special events, RolDrive ensures a seamless and comfortable journey, prioritising customer satisfaction and convenience.",
+        },
+        {
+          icon: "/rolnew/global/icons/steering-wheel.svg",
+          title: "Comprehensive Airport Coverage",
+          desc: "RolDrive offers top-tier chauffeur service in Tokyo with comprehensive airport coverage, ensuring seamless transfers to and from all major airports. With luxury vehicles and professional drivers, RolDrive guarantees comfort, reliability, and a stress-free travel experience for every journey.",
+        },
+        {
+          icon: "/rolnew/global/icons/service-line.svg",
+          title: "Flexible and Reliable",
+          desc: "RolDrive provides a flexible and reliable chauffeur service in Tokyo, ensuring punctual and comfortable travel. Need to change plans? No problem. RolDrive caters to various needs, delivering a seamless experience for both business and leisure travellers.",
+        },
+        {
+          icon: "/rolnew/global/icons/car-line.svg",
+          title: "Professionalism and Trust",
+          desc: "RolDrive's chauffeur service in Tokyo epitomises professionalism and trust, providing punctual, reliable, and luxurious transportation. With highly trained chauffeurs and a fleet of premium vehicles, RolDrive guarantees a seamless and comfortable journey for all passengers, prioritising safety and satisfaction above all else.",
+        },
+      ],
     },
     servicesData: {
       img: "/rolnew/cities/trust-banner.svg",
@@ -1019,23 +1169,23 @@ export const cityData = {
       {
         id: "land1",
         src: "/images/city/london/buckingham.png",
-        title: "Buckingham Palace",
+        title: "Tokyo Tower",
         description:
-          "The London residence and administrative headquarters of the monarch of the United Kingdom. It has 775 rooms, including the famous balcony.",
+          "An iconic symbol of Japan, offering panoramic views of Tokyo from its observation decks and vibrant illumination at night.",
       },
       {
         id: "land2",
         src: "/images/city/london/parliament.png",
-        title: "The Houses of Parliament",
+        title: "Senso-ji Temple",
         description:
-          "Also known as the Palace of Westminster, is the home of the UK&apos;s legislative body and iconic landmark on the River Thames.",
+          "Tokyo’s oldest and most significant temple, featuring stunning architecture, a bustling marketplace, and cultural ceremonies in the Asakusa district.",
       },
       {
         id: "land3",
         src: "/images/city/london/landmarks/tower-of-london.jpg",
-        title: "Tower of London",
+        title: "Shibuya Crossing",
         description:
-          "A historic castle located in central London, known for its dark past, crown jewels, and royal menagerie.",
+          "Famous for its bustling pedestrian scramble, Shibuya Crossing is a vibrant and iconic intersection embodying Tokyo's dynamic urban energy.",
       },
     ],
     touristAttraction: {
@@ -1045,47 +1195,173 @@ export const cityData = {
         {
           id: "touristAttraction1",
           src: "/images/city/london/tourist.png",
-          title: "The neighbourhoods of Notting Hill",
+          title: "Yanaka Ginza",
           description:
-            "A vibrant and affluent neighborhood in West London, known for its colourful houses, Portobello Road Market, and annual carnival.",
+            "A charming shopping street in an old Tokyo neighbourhood, offering traditional shops, eateries, and a nostalgic atmosphere.",
         },
         {
           id: "touristAttraction2",
           src: "/images/city/london/tourist.png",
-          title: "Greenwich",
+          title: "Nezu Shrine",
           description:
-            "Where you can enjoy the stunning views from the Royal Observatory and take a walk in Greenwich Park.",
+            "A tranquil and historic Shinto shrine known for its beautiful azalea garden and vibrant torii gates.",
         },
         {
           id: "touristAttraction3",
           src: "/images/city/london/tourist.png",
-          title: "Harrods",
+          title: "Kiyosumi Teien",
           description:
-            "A luxury department store in Knightsbridge, London, known for its opulent interior, high-end fashion, and exquisite food hall.",
+            "A traditional Japanese garden featuring serene ponds, carefully manicured landscapes, and picturesque stone bridges.",
         },
         {
           id: "touristAttraction4",
           src: "/images/city/london/tourist.png",
-          title: "Selfridges",
+          title: "Tokyo Daibutsu",
           description:
-            "A high-end department store in Oxford Street, London, known for its luxury fashion, cosmetics, and iconic window displays.",
+            "A large bronze Buddha statue located in Jorenji Temple, offering a peaceful retreat and spiritual ambience",
         },
         {
           id: "touristAttraction5",
           src: "/images/city/london/tourist.png",
-          title: "Fortnum & Mason",
+          title: "Koishikawa Korakuen",
           description:
-            "A luxury department store in Piccadilly, London, known for its exquisite food hall, fine teas, and hampers.",
+            "One of Tokyo's oldest and most beautiful gardens, showcasing traditional Japanese landscape design and seasonal flora.",
         },
         {
           id: "touristAttraction6",
           src: "/images/city/london/tourist.png",
-          title: "Buckingham Palace",
+          title: "Nakamise Shopping Street",
           description:
-            "The London residence and administrative headquarters of the monarch of the United Kingdom. It has 775 rooms, including the famous balcony.",
+            "A historic shopping street leading to Senso-ji Temple, lined with stalls selling traditional snacks, souvenirs, and crafts.",
         },
       ],
     },
+
+    destinationData: {
+      restaurants: {
+        title: "Explore Top Class Restaurants",
+        subTitle: "Popular Trips",
+        isFromTo: false,
+        data: [
+          { from: "Sukiyabashi Jiro" },
+          { from: "Narisawa" },
+          { from: "Sushi Saito" },
+          { from: "Den" },
+          { from: "Ryugin" },
+          { from: "Ishikawa" },
+          { from: "Kagurazaka Ishikawa" },
+          { from: "Quintessence" },
+        ],
+      },
+      hotel: {
+        title: "Explore Top Class Hotels",
+        subTitle: "Popular Trips",
+        isFromTo: false,
+        data: [
+          { from: "The Ritz-Carlton, Tokyo" },
+          { from: "Aman Tokyo" },
+          { from: "Park Hyatt Tokyo" },
+          { from: "Mandarin Oriental, Tokyo" },
+          { from: "The Peninsula Tokyo" },
+          { from: "Four Seasons Hotel Tokyo at Marunouchi" },
+          { from: "Conrad Tokyo" },
+          { from: "Andaz Tokyo Toranomon Hills" },
+        ],
+      },
+    },
+
+    airportsData: {
+      title: "Tokyo Airports",
+      show:false,
+      desc: "",
+      search: {
+        dropdown1: "Choose Your City",
+        dropdown2: "Choose Your Airport",
+      },
+      dropdownOneData: ["Tokyo"],
+      dropdownTwoData: [
+        "Charles De Gaulle Airport",
+        "Orly Airport",
+        "Beauvais-Tille Airport",
+        "Le Bourget Airport",
+      ],
+      list: [
+        {
+          id: 1,
+          image: "/rolnew/global/country/london.jpg",
+          countryCode: "US",
+          cityName: "Charles De Gaulle Airport",
+          route:
+            "http://localhost:3000/rolnew/airport-transfers/london/heathrow",
+        },
+        {
+          id: 2,
+          image: "/rolnew/global/country/london.jpg",
+          countryCode: "US",
+          cityName: "Orly Airport",
+          route:
+            "http://localhost:3000/rolnew/airport-transfers/london/gatwick",
+        },
+        
+      ],
+    },
+
+    faqData: {
+      title: "Frequently Asked Questions",
+      data: [
+        {
+          id: 0,
+          question: "Can RolDrive recommend some top-rated hotels in Tokyo that offer great views of iconic landmarks like Tokyo Tower or the Tokyo Skytree?",
+          ans: "RolDrive recommends several top-rated hotels in Tokyo that offer stunning views of iconic landmarks like Tokyo Tower and the Tokyo Skytree. The Ritz-Carlton, Tokyo, and Park Hotel Tokyo provide breathtaking views of Tokyo Tower from their luxurious rooms. For panoramic views of Tokyo Skytree, consider staying at the Asakusa View Hotel or the Tobu Hotel Levant Tokyo. These hotels combine comfort and elegance with remarkable vistas. Enhance your stay by utilizing RolDrive's best chauffeur car service in Tokyo, ensuring convenient and luxurious transportation to and from these exceptional accommodations."
+        },
+        {
+          id: 1,
+          question: "What are the best areas or neighbourhoods to stay in Tokyo for easy access to major attractions and vibrant local experiences?",
+          ans: "The best areas to stay in Tokyo for easy access to major attractions and vibrant local experiences include Shibuya for its bustling nightlife and shopping, Shinjuku for skyscrapers and entertainment, and Ginza for upscale shopping and dining. Enhance your stay with RolDrive's best chauffeur car service in Tokyo, ensuring seamless transportation to iconic sites like Tokyo Tower, Senso-ji Temple, and the Tsukiji Fish Market, while experiencing the city's diverse culture and dynamic atmosphere firsthand."
+        },
+        {
+          id: 2,
+          question: "Are there any boutique or luxury hotels in Tokyo that provide a unique and memorable stay?",
+          ans: "Tokyo offers boutique and luxury hotels like Hoshinoya Tokyo for its serene ryokan-style accommodations, and The Capitol Hotel Tokyu for its blend of modern elegance and Japanese aesthetics. Experience these unique stays with ease using RolDrive's best chauffeur car service in Tokyo, thus ensuring comfort throughout your journey."
+        },
+        {
+          id: 3,
+          question: "Which restaurants in Tokyo serve the best traditional Japanese cuisine, and does RolDrive have any specific dish recommendations?",
+          ans: "Tokyo boasts exceptional restaurants for traditional Japanese cuisine. Restaurants like Sukiyabashi Jiro in Ginza offer world-renowned sushi omakase experiences. For tempura, Tempura Kondo in Ginza serves exquisite dishes using fresh ingredients. RolDrive's best car service in Tokyo ensures seamless travel to these culinary delights, making your dining experience stress-free. Whether you're exploring the elegance of kaiseki at Ishikawa in Kagurazaka or indulging in teppanyaki at Ukai-tei Omotesando, RolDrive guarantees comfort and convenience. Enjoy authentic Japanese flavours while our knowledgeable chauffeur navigates Tokyo's bustling streets, ensuring a memorable culinary journey through the city's gastronomic treasures."
+        },
+        {
+          id: 4,
+          question: "Are there any highly-rated international restaurants in Tokyo that RolDrive would recommend for a diverse culinary experience?",
+          ans: "For a diverse culinary experience in Tokyo, RolDrive recommends highly-rated international restaurants like L'Effervescence for French cuisine, Sukiyabashi Jiro for sushi perfection, and Florilege for innovative French-Japanese fusion. Enjoy these gastronomic adventures with ease using RolDrive's best car service in Tokyo, ensuring comfort and convenience throughout your culinary journey."
+        },
+        {
+          id: 5,
+          question: "Can RolDrive suggest any local cafes or dessert shops where I can try popular Japanese sweets and pastries?",
+          ans: "For delicious Japanese sweets and pastries, visit Nanaya for matcha-flavored treats, Dominique Ansel Bakery for unique desserts, and Kagurazaka Saryo for traditional wagashi. Enjoy these culinary delights with ease using RolDrive's private car service in Tokyo, ensuring comfortable and convenient transportation between these delightful spots."
+        },
+        {
+          id: 6,
+          question: "What are the must-see historical and cultural sites in Tokyo that should be on every visitor's itinerary?",
+          ans: "Must-see historical and cultural sites in Tokyo include the Meiji Shrine, offering tranquil Shinto surroundings amidst a lush forest, and the Imperial Palace East Gardens for a glimpse into Japan's imperial history. Visit the Senso-ji Temple in Asakusa for its vibrant atmosphere and Nakamise-dori for traditional souvenirs. Explore the Tokyo National Museum for extensive collections of Japanese art and artefacts. Enhance your journey with RolDrive's private car service in Tokyo, ensuring comfort and efficiency as you navigate between these iconic landmarks and cultural treasures."
+        },
+        {
+          id: 7,
+          question: "Are there any popular sightseeing tours or guided experiences that RolDrive recommends for exploring Tokyo's famous attractions and hidden gems?",
+          ans: "Explore Tokyo's attractions and hidden gems with guided tours like Tsukiji Fish Market, Meiji Shrine, and Asakusa Temple. Enhance your experience with RolDrive's chauffeur service in Tokyo, ensuring comfortable travel between sites, personalized itineraries, and knowledgeable local drivers who act as your guide for a seamless exploration of the city's diverse culture and history!"
+        },
+        {
+          id: 8,
+          question: "Can RolDrive provide information on the best ways to get around Tokyo?",
+          ans: "Navigating Tokyo efficiently involves using the extensive subway and train networks for fast travel across the city. However, for personalized convenience and comfort, RolDrive's chauffeur service in Tokyo offers a superior alternative. With knowledgeable local drivers, you can seamlessly navigate Tokyo's bustling streets and hidden gems, without the hassle of hailing taxis throughout the day. Whether for airport transfers, city tours, or business meetings, RolDrive ensures punctuality and a stress-free experience, allowing you to focus on enjoying Tokyo's sights and culture without transportation worries acting as the perfect taxi alternative."
+        },
+        {
+          id: 9,
+          question: "What are some family-friendly attractions or activities in Tokyo that are suitable for children and enjoyable for the whole family?",
+          ans: "Tokyo offers numerous family-friendly attractions for an enjoyable experience. Visit Tokyo Disneyland or DisneySea for magical adventures with themed rides and shows. Ueno Zoo features giant pandas and diverse wildlife. The Ghibli Museum showcases the works of Studio Ghibli in interactive exhibits. Tokyo Skytree offers panoramic city views, and Odaiba boasts entertainment complexes like TeamLab Borderless and Legoland Discovery Center. Enhance your family trip with RolDrive's chauffeur service in Tokyo, ensuring comfortable and convenient travel between these attractions, allowing you to focus on making lasting memories with your loved ones."
+        }
+      ]
+    },
+
     ChauffeurServiceDescription: [
       {
         p: "By hiring a chauffeur service, tourists can easily visit these stores and enjoy a shopping experience without the added stress of carrying around their purchases.",

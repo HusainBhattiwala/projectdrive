@@ -44,7 +44,7 @@ const countryList = [
   },
 ];
 
-const items = ['about', 'services'];
+const items = [];
 
 function Airports({ scrollRef, airportsData, show = false }) {
   const { openModal } = useContext(ModalContext);
