@@ -63,7 +63,11 @@ function PassengerDetails({
       const user = JSON.parse(sessionStorage.getItem('passengerDetails'));
       setShowAuth(true);
       setPassengers((prev) => ({
-        ...prev, adult: user?.adult, children: user?.children, infant: user?.infant, luggage: user?.luggage,
+        ...prev,
+        adult: user?.adult,
+        children: user?.children,
+        infant: user?.infant,
+        luggage: user?.luggage,
       }));
       setBooker(user?.showBooker);
       setTimeout(() => {
@@ -101,7 +105,15 @@ function PassengerDetails({
       }
     }
     setIsLoaded(true);
-  }, [getValues, setBooker, setDetails, setPassengers, setShowAuth, setUserDetails, setValue]);
+  }, [
+    getValues,
+    setBooker,
+    setDetails,
+    setPassengers,
+    setShowAuth,
+    setUserDetails,
+    setValue,
+  ]);
 
   function getPhoneNumber() {
     const userExists = !!sessionStorage.getItem('passengerDetails');
@@ -197,30 +209,40 @@ function PassengerDetails({
   };
 
   return (
-    <div className="px-4 py-8 text-left bg-[#384957] lg:px-6 border-[#FFFFFF33] border-0.4 border-opacity-20 rounded-xl" ref={passengerRef}>
+    <div
+      className="px-4 py-8 text-left bg-[#384957] lg:px-6 border-[#FFFFFF33] border-0.4 border-opacity-20 rounded-xl"
+      ref={passengerRef}
+    >
       {isLoaded && (
         <div className="w-full">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {showBooker && (
-            <BookerDetails
-              register={register}
-              formState={formState}
-              userDetails={userDetails}
-              showBooker={showBooker}
-              setBooker={setBooker}
-              setValue={setValue}
-              checkBookerMobileError={checkBookerMobileError}
-              bookerMobileError={bookerMobileError}
-              checkBookerEmailError={checkBookerEmailError}
-              handleInputChange={handleInputChange}
-            />
+              <BookerDetails
+                register={register}
+                formState={formState}
+                userDetails={userDetails}
+                showBooker={showBooker}
+                setBooker={setBooker}
+                setValue={setValue}
+                checkBookerMobileError={checkBookerMobileError}
+                bookerMobileError={bookerMobileError}
+                checkBookerEmailError={checkBookerEmailError}
+                handleInputChange={handleInputChange}
+              />
             )}
-            <div className={`${showBooker ? 'col-span-2' : 'col-span-2 sm:col-span-1'} mb-1`}>
+            <div
+              className={`${
+                showBooker ? 'col-span-2' : 'col-span-2 sm:col-span-1'
+              } mb-1`}
+            >
               <P className="font-bold text-xl">Passenger Details</P>
             </div>
-            {
-              !showBooker && (
-              <div className={` ${showBooker ? 'col-span-2' : 'col-span-2 sm:col-span-1'} mb-1 text-right`}>
+            {!showBooker && (
+              <div
+                className={` ${
+                  showBooker ? 'col-span-2' : 'col-span-2 sm:col-span-1'
+                } mb-1 text-right`}
+              >
                 <label
                   className="flex items-center cursor-pointer sm:justify-end"
                   htmlFor="checkbox"
@@ -234,21 +256,29 @@ function PassengerDetails({
                       setBooker(!showBooker);
                     }}
                   />
-                  <P className="ml-2 label-text text-[#B2B2B2]">Booking for someone else?</P>
+                  <P className="ml-2 label-text text-[#B2B2B2]">
+                    Booking for someone else?
+                  </P>
                 </label>
               </div>
-              )
-            }
+            )}
 
             <div className="col-span-2 md:md:col-span-1">
               <input
-                {...register('fname', { required: 'First name is required', autoComplete: 'off' })}
+                {...register('fname', {
+                  required: 'First name is required',
+                  autoComplete: 'off',
+                })}
                 autoComplete="new-password"
                 type="text"
                 placeholder="First name"
                 className="w-full input focus:outline-none bg-[#223544D9]  text-[#b2b2b2] border border-[#828282]"
                 onChange={inputCharacterOnly}
-                defaultValue={!showBooker ? (session?.user.name.split(' ')[0] || userDetails?.userfname) : ''}
+                defaultValue={
+                  !showBooker
+                    ? session?.user.name.split(' ')[0] || userDetails?.userfname
+                    : ''
+                }
               />
               {errors.fname && (
                 <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
@@ -259,13 +289,20 @@ function PassengerDetails({
 
             <div className="col-span-2 md:col-span-1">
               <input
-                {...register('lname', { required: 'Last name is required', autoComplete: 'off' })}
+                {...register('lname', {
+                  required: 'Last name is required',
+                  autoComplete: 'off',
+                })}
                 autoComplete="new-password"
                 type="text"
                 placeholder="Last name"
                 className="w-full input focus:outline-none bg-[#223544D9] text-[#B2B2B2] border border-[#828282]"
                 onChange={inputCharacterOnly}
-                defaultValue={!showBooker ? (session?.user.name.split(' ')[1] || userDetails?.userlname) : ''}
+                defaultValue={
+                  !showBooker
+                    ? session?.user.name.split(' ')[1] || userDetails?.userlname
+                    : ''
+                }
               />
               {errors.lname && (
                 <P className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
@@ -296,15 +333,19 @@ function PassengerDetails({
                   setValue('mobileno', event.target.value);
                   checkMobileNumber(event.target.value, country);
                 }}
-                onCountryChange={() => { setValue('mobileno', ''); }}
-                inputClass="!bg-[#223544D9] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
+                onCountryChange={() => {
+                  setValue('mobileno', '');
+                }}
+                inputClass="!bg-[#FFFFFF0A] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
               />
               {(errors.mobileno || mobileError) && (
                 <P className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                  {errors.mobileno ? errors.mobileno.message : 'Phone number is not valid'}
+                  {errors.mobileno
+                    ? errors.mobileno.message
+                    : 'Phone number is not valid'}
                 </P>
               )}
-              {(errors.mobilenoerror) && (
+              {errors.mobilenoerror && (
                 <P className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
                   {errors.mobilenoerror.message}
                 </P>
@@ -316,13 +357,24 @@ function PassengerDetails({
                   <img src="/rolnew/global/icons/mail.svg" alt="mail" />
                 </div>
                 <input
-                  {...register('email', { required: 'Email is required', autoComplete: 'off' })}
+                  {...register('email', {
+                    required: 'Email is required',
+                    autoComplete: 'off',
+                  })}
                   autoComplete="new-password"
                   type="email"
                   placeholder="Email address"
-                  className={`w-full pl-12 input bg-[#223544D9]  text-[#B2B2B2] border border-[#828282] focus:outline-none ${userDetails?.useremailid && !showBooker && 'pointer-events-none'}`}
+                  className={`w-full pl-12 input bg-[#223544D9]  text-[#B2B2B2] border border-[#828282] focus:outline-none ${
+                    userDetails?.useremailid
+                    && !showBooker
+                    && 'pointer-events-none'
+                  }`}
                   readOnly={userDetails?.useremailid && !showBooker}
-                  defaultValue={!showBooker ? (session?.user.email || userDetails?.useremailid) : ''}
+                  defaultValue={
+                    !showBooker
+                      ? session?.user.email || userDetails?.useremailid
+                      : ''
+                  }
                   onBlur={(e) => {
                     checkEmailexists(e.target.value);
                   }}
@@ -352,13 +404,11 @@ function PassengerDetails({
                     decrement={decrement}
                     passengers={passengers}
                   />
-                  {
-                showPassengerError && (
-                  <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                    Please select atleast 1 adult
-                  </P>
-                )
-              }
+                  {showPassengerError && (
+                    <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                      Please select atleast 1 adult
+                    </P>
+                  )}
                 </div>
               </div>
             </div>

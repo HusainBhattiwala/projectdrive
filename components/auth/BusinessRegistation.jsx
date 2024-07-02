@@ -69,12 +69,12 @@ function BusinessRegistation({ loginPage }) {
   const onSubmit = async (data) => {
     if (
       passwordTracker.eightCharsOrGreater
-        && passwordTracker.lowercase
-        && passwordTracker.number
-        && passwordTracker.specialChar
-        && passwordTracker.uppercase
-        && userPhone
-        && !isValidMobileNumber
+      && passwordTracker.lowercase
+      && passwordTracker.number
+      && passwordTracker.specialChar
+      && passwordTracker.uppercase
+      && userPhone
+      && !isValidMobileNumber
     ) {
       // setShowLoader(true);
       const countryCode = userCountryCode;
@@ -97,7 +97,8 @@ function BusinessRegistation({ loginPage }) {
       };
       const response = await api.post('/auth/corporate/signup', payload);
       if (response.data.Authorization) {
-        toast.success('Signed up successfully', { // Show a success toast
+        toast.success('Signed up successfully', {
+          // Show a success toast
           autoClose: 3000,
           theme: 'colored',
         });
@@ -167,11 +168,16 @@ function BusinessRegistation({ loginPage }) {
             <div className=" w-full">
               <Input
                 {...register('userFname', {
-                  required: { value: true, message: 'Your first name required' },
+                  required: {
+                    value: true,
+                    message: 'Your first name required',
+                  },
                   autoComplete: 'off',
                 })}
                 onChange={(e) => {
-                  setValue('userFname', e.target.value, { shouldValidate: true });
+                  setValue('userFname', e.target.value, {
+                    shouldValidate: true,
+                  });
                   clearErrors('userFname');
                 }}
                 // leadingIcon="/rolnew/global/icons/mail.svg"
@@ -181,9 +187,9 @@ function BusinessRegistation({ loginPage }) {
               />
 
               {errors && errors.userFname && (
-              <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.userFname.message}
-              </P>
+                <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.userFname.message}
+                </P>
               )}
             </div>
             <div className=" w-full">
@@ -193,7 +199,9 @@ function BusinessRegistation({ loginPage }) {
                   autoComplete: 'off',
                 })}
                 onChange={(e) => {
-                  setValue('userLname', e.target.value, { shouldValidate: true });
+                  setValue('userLname', e.target.value, {
+                    shouldValidate: true,
+                  });
                   clearErrors('userLname');
                 }}
                 // leadingIcon="/rolnew/global/icons/mail.svg"
@@ -269,15 +277,15 @@ function BusinessRegistation({ loginPage }) {
                 setValue('orgName', e.target.value, { shouldValidate: true });
                 clearErrors('orgName');
               }}
-                // leadingIcon="/rolnew/global/icons/mail.svg"
+              // leadingIcon="/rolnew/global/icons/mail.svg"
               label="Company name"
               placeholder="Enter company name"
               readOnly={showLoader}
             />
             {errors && errors.orgName && (
-            <p className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-              {errors.orgName.message}
-            </p>
+              <p className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                {errors.orgName.message}
+              </p>
             )}
           </div>
 
@@ -304,7 +312,9 @@ function BusinessRegistation({ loginPage }) {
                   autoComplete: 'off',
                 })}
                 onChange={(e) => {
-                  setValue('userEmailId', e.target.value, { shouldValidate: true });
+                  setValue('userEmailId', e.target.value, {
+                    shouldValidate: true,
+                  });
                   clearErrors('userEmailId');
                 }}
                 leadingIcon="/rolnew/global/icons/mail.svg"
@@ -313,15 +323,17 @@ function BusinessRegistation({ loginPage }) {
                 type="email"
               />
               {errors && errors.userEmailId && (
-              <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.userEmailId.message}
-              </P>
+                <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.userEmailId.message}
+                </P>
               )}
             </div>
             <div className="box w-full">
               <p className="text-sm text-white mb-1">Mobile Number</p>
               <PhoneInput
-                {...register('companymobileno', { required: 'Mobile number is required' })}
+                {...register('companymobileno', {
+                  required: 'Mobile number is required',
+                })}
                 enableSearch
                 country="gb"
                 autoFormat={false}
@@ -336,23 +348,22 @@ function BusinessRegistation({ loginPage }) {
                 onCountryChange={() => {
                   setUserPhone();
                 }}
-                inputClass="w-full text-sm rounded-lg h-12 input  !input-bordered focus:border-primary focus:outline-none !border-opacity-80 !border-[#c3c1c1] "
+                inputClass="!bg-[#FFFFFF0A] w-full text-sm rounded-lg h-12 input  !input-bordered focus:border-primary focus:outline-none !border-opacity-80 !border-[#c3c1c1] "
                 inputStyle={{
-                  backgroundColor: 'transparent',
                   borderRadius: '0.5rem',
                   borderStyle: 'solid',
                   borderColor: 'rgba(225,225,225,0.25)',
                 }}
               />
               {errors.companymobileno && (
-              <p className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.companymobileno.message}
-              </p>
+                <p className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.companymobileno.message}
+                </p>
               )}
               {isValidMobileNumber && (
-              <p className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                Phone number is not valid
-              </p>
+                <p className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  Phone number is not valid
+                </p>
               )}
             </div>
           </div>
@@ -360,22 +371,27 @@ function BusinessRegistation({ loginPage }) {
           <div className="">
             <Input
               {...register('orgAddrLine1', {
-                required: { value: true, message: 'Billing address is required' },
+                required: {
+                  value: true,
+                  message: 'Billing address is required',
+                },
                 autoComplete: 'off',
               })}
               onChange={(e) => {
-                setValue('orgAddrLine1', e.target.value, { shouldValidate: true });
+                setValue('orgAddrLine1', e.target.value, {
+                  shouldValidate: true,
+                });
                 clearErrors('orgAddrLine1');
               }}
-                // leadingIcon="/rolnew/global/icons/mail.svg"
+              // leadingIcon="/rolnew/global/icons/mail.svg"
               label="Billing Address Line 1"
               placeholder="Enter billing address line 1"
               readOnly={showLoader}
             />
             {errors && errors.orgAddrLine1 && (
-            <p className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
-              {errors.orgAddrLine1.message}
-            </p>
+              <p className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                {errors.orgAddrLine1.message}
+              </p>
             )}
           </div>
 
@@ -384,10 +400,12 @@ function BusinessRegistation({ loginPage }) {
               autoComplete: 'off',
             })}
             onChange={(e) => {
-              setValue('orgAddrLine2', e.target.value, { shouldValidate: true });
+              setValue('orgAddrLine2', e.target.value, {
+                shouldValidate: true,
+              });
               clearErrors('orgAddrLine2');
             }}
-                // leadingIcon="/rolnew/global/icons/mail.svg"
+            // leadingIcon="/rolnew/global/icons/mail.svg"
             label="Billing Address Line 2"
             placeholder="Enter billing address line 2"
             readOnly={showLoader}
@@ -414,9 +432,9 @@ function BusinessRegistation({ loginPage }) {
                 readOnly={showLoader}
               />
               {errors && errors.orgCity && (
-              <p className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.orgCity.message}
-              </p>
+                <p className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.orgCity.message}
+                </p>
               )}
             </div>
             <div className="col-span-1">
@@ -425,7 +443,9 @@ function BusinessRegistation({ loginPage }) {
                   autoComplete: 'off',
                 })}
                 onChange={(e) => {
-                  setValue('orgPostalCode', e.target.value, { shouldValidate: true });
+                  setValue('orgPostalCode', e.target.value, {
+                    shouldValidate: true,
+                  });
                   clearErrors('orgPostalCode');
                 }}
                 // leadingIcon="/rolnew/global/icons/mail.svg"
@@ -434,9 +454,9 @@ function BusinessRegistation({ loginPage }) {
                 readOnly={showLoader}
               />
               {errors && errors.orgPostalCode && (
-              <p className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.orgPostalCode.message}
-              </p>
+                <p className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.orgPostalCode.message}
+                </p>
               )}
             </div>
             <div className="col-span-1">
@@ -445,7 +465,9 @@ function BusinessRegistation({ loginPage }) {
                   autoComplete: 'off',
                 })}
                 onChange={(e) => {
-                  setValue('orgCountry', e.target.value, { shouldValidate: true });
+                  setValue('orgCountry', e.target.value, {
+                    shouldValidate: true,
+                  });
                   clearErrors('orgCountry');
                 }}
                 // leadingIcon="/rolnew/global/icons/mail.svg"
@@ -454,9 +476,9 @@ function BusinessRegistation({ loginPage }) {
                 readOnly={showLoader}
               />
               {errors && errors.orgCountry && (
-              <p className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.orgCountry.message}
-              </p>
+                <p className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.orgCountry.message}
+                </p>
               )}
             </div>
           </div>
@@ -464,40 +486,43 @@ function BusinessRegistation({ loginPage }) {
           <div className="password-container flex sm:flex-row flex-col justify-evenly gap-3">
             <div className="w-full">
               <div className="relative">
-
                 <Input
                   {...register('password', {
                     required: { value: true, message: 'Password is required' },
                     autoComplete: 'off',
                   })}
                   onFocus={() => setMeter(true)}
-                  onChange={(e) => { setPassword(e.target.value); setValue('password', e.target.value); clearErrors('password'); }}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                    setValue('password', e.target.value);
+                    clearErrors('password');
+                  }}
                   type={showPassword ? 'text' : 'password'}
                   leadingIcon="/rolnew/global/icons/lock-open.svg"
                   label="Password"
                   placeholder="Enter password"
                 />
                 {!showPassword && (
-                <FaEyeSlash
-                  className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
-                  onClick={() => {
-                    setShowPassord(true);
-                  }}
-                />
+                  <FaEyeSlash
+                    className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
+                    onClick={() => {
+                      setShowPassord(true);
+                    }}
+                  />
                 )}
                 {showPassword && (
-                <FaEye
-                  className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
-                  onClick={() => {
-                    setShowPassord(false);
-                  }}
-                />
+                  <FaEye
+                    className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
+                    onClick={() => {
+                      setShowPassord(false);
+                    }}
+                  />
                 )}
               </div>
               {errors && errors.password && !meter && (
-              <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.password.message}
-              </P>
+                <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.password.message}
+                </P>
               )}
             </div>
 
@@ -506,128 +531,154 @@ function BusinessRegistation({ loginPage }) {
                 <Input
                   {...register('rePassword', {
                     required: 'Confirm password is required',
-                    validate: (value) => value === getValues().password || 'Passwords do not match',
+                    validate: (value) => value === getValues().password
+                      || 'Passwords do not match',
                   })}
-                  onChange={(e) => { setValue('rePassword', e.target.value); clearErrors('rePassword'); }}
+                  onChange={(e) => {
+                    setValue('rePassword', e.target.value);
+                    clearErrors('rePassword');
+                  }}
                   type={showRePassword ? 'text' : 'password'}
                   leadingIcon="/rolnew/global/icons/lock-open.svg"
                   label="Confirm Password"
                   placeholder="Enter confirm password"
                 />
                 {!showRePassword && (
-                <FaEyeSlash
-                  className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
-                  onClick={() => {
-                    setShowRePassord(true);
-                  }}
-                />
+                  <FaEyeSlash
+                    className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
+                    onClick={() => {
+                      setShowRePassord(true);
+                    }}
+                  />
                 )}
                 {showRePassword && (
-                <FaEye
-                  className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
-                  onClick={() => {
-                    setShowRePassord(false);
-                  }}
-                />
+                  <FaEye
+                    className="absolute w-4 h-4 transform top-10 cursor-pointer text-[#B2B2B2] right-2"
+                    onClick={() => {
+                      setShowRePassord(false);
+                    }}
+                  />
                 )}
               </div>
               {errors && errors.rePassword && (
-              <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.rePassword?.message}
-              </P>
+                <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.rePassword?.message}
+                </P>
               )}
             </div>
           </div>
 
           {meter && (
-          <div className="flex sm:flex-row flex-col mb-2 w-full justify-start gap-x-3 mt-1">
-            <div className="">
-              <div className={`!text-xs font-semibold flex items-center ${passwordTracker.uppercase ? 'text-success' : 'text-red-500'}`}>
-                {
-                          passwordTracker.uppercase
-                            ? (
-                              <div className="w-3 h-3 mr-1">
-                                <Pic src="/images/icons/green-tick.png" className="object-contain" alt="green-tick" />
-                              </div>
-                            )
-                            : (
-                              <div className="w-3 h-3 mr-1">
-                                <FaCircle className="text-[9px]" />
-                              </div>
-                            )
-
-                        }
-                Atleast one-uppercase.
+            <div className="flex sm:flex-row flex-col mb-2 w-full justify-start gap-x-3 mt-1">
+              <div className="">
+                <div
+                  className={`!text-xs font-semibold flex items-center ${
+                    passwordTracker.uppercase ? 'text-success' : 'text-red-500'
+                  }`}
+                >
+                  {passwordTracker.uppercase ? (
+                    <div className="w-3 h-3 mr-1">
+                      <Pic
+                        src="/images/icons/green-tick.png"
+                        className="object-contain"
+                        alt="green-tick"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-3 h-3 mr-1">
+                      <FaCircle className="text-[9px]" />
+                    </div>
+                  )}
+                  Atleast one-uppercase.
+                </div>
+                <div
+                  className={`!text-xs font-semibold flex items-center ${
+                    passwordTracker.lowercase ? 'text-success' : 'text-red-500'
+                  }`}
+                >
+                  {passwordTracker.lowercase ? (
+                    <div className="w-3 h-3 mr-1">
+                      <Pic
+                        src="/images/icons/green-tick.png"
+                        className="object-contain"
+                        alt="green-tick"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-3 h-3 mr-1">
+                      <FaCircle className="text-[9px]" />
+                    </div>
+                  )}
+                  Atleast one-lowercase.
+                </div>
+                <div
+                  className={`!text-xs font-semibold flex items-center ${
+                    passwordTracker.specialChar
+                      ? 'text-success'
+                      : 'text-red-500'
+                  }`}
+                >
+                  {passwordTracker.specialChar ? (
+                    <div className="w-3 h-3 mr-1">
+                      <Pic
+                        src="/images/icons/green-tick.png"
+                        className="object-contain"
+                        alt="green-tick"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-3 h-3 mr-1">
+                      <FaCircle className="text-[9px]" />
+                    </div>
+                  )}
+                  Atleast one special character.
+                </div>
               </div>
-              <div className={`!text-xs font-semibold flex items-center ${passwordTracker.lowercase ? 'text-success' : 'text-red-500'}`}>
-                {
-                          passwordTracker.lowercase
-                            ? (
-                              <div className="w-3 h-3 mr-1">
-                                <Pic src="/images/icons/green-tick.png" className="object-contain" alt="green-tick" />
-                              </div>
-                            )
-                            : (
-                              <div className="w-3 h-3 mr-1">
-                                <FaCircle className="text-[9px]" />
-                              </div>
-                            )
-                        }
-                Atleast one-lowercase.
-              </div>
-              <div className={`!text-xs font-semibold flex items-center ${passwordTracker.specialChar ? 'text-success' : 'text-red-500'}`}>
-                {
-                          passwordTracker.specialChar
-                            ? (
-                              <div className="w-3 h-3 mr-1">
-                                <Pic src="/images/icons/green-tick.png" className="object-contain" alt="green-tick" />
-                              </div>
-                            )
-                            : (
-                              <div className="w-3 h-3 mr-1">
-                                <FaCircle className="text-[9px]" />
-                              </div>
-                            )
-                        }
-                Atleast one special character.
+              <div className="">
+                <div
+                  className={`!text-xs font-semibold flex items-center ${
+                    passwordTracker.number ? 'text-success' : 'text-red-500'
+                  }`}
+                >
+                  {passwordTracker.number ? (
+                    <div className="w-3 h-3 mr-1">
+                      <Pic
+                        src="/images/icons/green-tick.png"
+                        className="object-contain"
+                        alt="green-tick"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-3 h-3 mr-1">
+                      <FaCircle className="text-[9px]" />
+                    </div>
+                  )}
+                  Atleast one number.
+                </div>
+                <div
+                  className={`!text-xs font-semibold flex items-center ${
+                    passwordTracker.eightCharsOrGreater
+                      ? 'text-success'
+                      : 'text-red-500'
+                  }`}
+                >
+                  {passwordTracker.eightCharsOrGreater ? (
+                    <div className="w-3 h-3 mr-1">
+                      <Pic
+                        src="/images/icons/green-tick.png"
+                        className="object-contain"
+                        alt="green-tick"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-3 h-3 mr-1">
+                      <FaCircle className="text-[9px]" />
+                    </div>
+                  )}
+                  Atleast eight characters or more.
+                </div>
               </div>
             </div>
-            <div className="">
-              <div className={`!text-xs font-semibold flex items-center ${passwordTracker.number ? 'text-success' : 'text-red-500'}`}>
-                {
-                          passwordTracker.number
-                            ? (
-                              <div className="w-3 h-3 mr-1">
-                                <Pic src="/images/icons/green-tick.png" className="object-contain" alt="green-tick" />
-                              </div>
-                            )
-                            : (
-                              <div className="w-3 h-3 mr-1">
-                                <FaCircle className="text-[9px]" />
-                              </div>
-                            )
-                        }
-                Atleast one number.
-              </div>
-              <div className={`!text-xs font-semibold flex items-center ${passwordTracker.eightCharsOrGreater ? 'text-success' : 'text-red-500'}`}>
-                {
-                          passwordTracker.eightCharsOrGreater
-                            ? (
-                              <div className="w-3 h-3 mr-1">
-                                <Pic src="/images/icons/green-tick.png" className="object-contain" alt="green-tick" />
-                              </div>
-                            )
-                            : (
-                              <div className="w-3 h-3 mr-1">
-                                <FaCircle className="text-[9px]" />
-                              </div>
-                            )
-                        }
-                Atleast eight characters or more.
-              </div>
-            </div>
-
-          </div>
           )}
           <Button
             type="submit"
