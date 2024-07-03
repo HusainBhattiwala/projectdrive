@@ -3,7 +3,11 @@ export const cityData = {
     banner: {
       title: "London Chauffeur Service",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
+<<<<<<< HEAD
       bannerImage: "/images/city/london/banner/london_city.png",
+=======
+      bannerImage: "/rolnew/cities/london_city.png",
+>>>>>>> husain
     },
     trustedPartnersData: {
       img: "/rolnew/cities/trust-banner.svg",
@@ -475,7 +479,6 @@ export const cityData = {
       dropdownTwoData: [
         "Dubai International Airport",
         "AI Maktoum International Airport",
-
       ],
       list: [
         {
@@ -494,7 +497,6 @@ export const cityData = {
           route:
             "http://localhost:3000/rolnew/airport-transfers/london/gatwick",
         },
-        
       ],
     },
 
@@ -732,7 +734,7 @@ export const cityData = {
 
     airportsData: {
       title: "New York Airports",
-      show:false,
+      show: false,
       desc: "",
       search: {
         dropdown1: "Choose Your City",
@@ -998,7 +1000,7 @@ export const cityData = {
 
     airportsData: {
       title: "Paris Airports",
-      show:false,
+      show: false,
       desc: "",
       search: {
         dropdown1: "Choose Your City",
@@ -1047,60 +1049,70 @@ export const cityData = {
       ],
     },
 
-    faqData : {
+    faqData: {
       title: "Frequently Asked Questions",
       data: [
         {
           id: 0,
-          question: "Recommend some top-rated hotels in Paris that are centrally located and offer a great view of landmarks like the Eiffel Tower or Notre Dame.",
-          ans: "Some centrally located top-rated hotels in Paris with great views include Shangri-La Hotel Paris and The Peninsula Paris, offering stunning Eiffel Tower vistas. For views of Notre Dame, consider Hotel La Clef Tour Eiffel or Hotel Saint James Albany Paris Hotel Spa. RolDrive's luxury chauffeur service Paris recommends these hotels, ensuring seamless and stylish transportation to and from these iconic landmarks, making your visit both convenient and memorable."
+          question:
+            "Recommend some top-rated hotels in Paris that are centrally located and offer a great view of landmarks like the Eiffel Tower or Notre Dame.",
+          ans: "Some centrally located top-rated hotels in Paris with great views include Shangri-La Hotel Paris and The Peninsula Paris, offering stunning Eiffel Tower vistas. For views of Notre Dame, consider Hotel La Clef Tour Eiffel or Hotel Saint James Albany Paris Hotel Spa. RolDrive's luxury chauffeur service Paris recommends these hotels, ensuring seamless and stylish transportation to and from these iconic landmarks, making your visit both convenient and memorable.",
         },
         {
           id: 1,
-          question: "What are the best areas or neighbourhoods to stay in Paris for easy access to major attractions and charming local experiences?",
-          ans: "RolDrive’s luxury chauffeur service Paris recommends the 1st (Louvre), 4th (Marais), and 7th (Eiffel Tower) arrondissements for easy access to major attractions and local charm. Enjoy iconic landmarks and authentic experiences through our guided chauffeur service in Paris."
+          question:
+            "What are the best areas or neighbourhoods to stay in Paris for easy access to major attractions and charming local experiences?",
+          ans: "RolDrive’s luxury chauffeur service Paris recommends the 1st (Louvre), 4th (Marais), and 7th (Eiffel Tower) arrondissements for easy access to major attractions and local charm. Enjoy iconic landmarks and authentic experiences through our guided chauffeur service in Paris.",
         },
         {
           id: 2,
-          question: "Are there any boutique or luxury hotels in Paris that provide a unique and memorable stay?",
-          ans: "Paris boasts boutique and luxury hotels like Le Pavillon de la Reine in Marais, blending historic charm with modern comfort, and Le Cinq Codet in the 7th arrondissement, known for its contemporary art and Eiffel Tower views. For a seamless experience, RolDrive's luxury chauffeur service Paris recommends these hotels for an unforgettable stay."
+          question:
+            "Are there any boutique or luxury hotels in Paris that provide a unique and memorable stay?",
+          ans: "Paris boasts boutique and luxury hotels like Le Pavillon de la Reine in Marais, blending historic charm with modern comfort, and Le Cinq Codet in the 7th arrondissement, known for its contemporary art and Eiffel Tower views. For a seamless experience, RolDrive's luxury chauffeur service Paris recommends these hotels for an unforgettable stay.",
         },
         {
           id: 3,
-          question: "Which restaurants in Paris serve the best traditional French cuisine, and does RolDrive have any specific dish recommendations?",
-          ans: "Paris offers exceptional restaurants for traditional French cuisine. Le Grand Véfour near the Palais Royal is renowned for classic dishes like escargots and foie gras. Au Pied de Cochon in Les Halles serves delicious onion soup and escargots. For fine dining, Guy Savoy offers exquisite French dishes near the Louvre. RolDrive's luxury chauffeur service Paris recommends trying coq au vin at Le Grand Véfour, boeuf bourguignon at Au Pied de Cochon, and soufflé at Guy Savoy for an authentic French culinary experience paired with our comfortable and stylish transportation."
+          question:
+            "Which restaurants in Paris serve the best traditional French cuisine, and does RolDrive have any specific dish recommendations?",
+          ans: "Paris offers exceptional restaurants for traditional French cuisine. Le Grand Véfour near the Palais Royal is renowned for classic dishes like escargots and foie gras. Au Pied de Cochon in Les Halles serves delicious onion soup and escargots. For fine dining, Guy Savoy offers exquisite French dishes near the Louvre. RolDrive's luxury chauffeur service Paris recommends trying coq au vin at Le Grand Véfour, boeuf bourguignon at Au Pied de Cochon, and soufflé at Guy Savoy for an authentic French culinary experience paired with our comfortable and stylish transportation.",
         },
         {
           id: 4,
-          question: "Are there any highly-rated international restaurants in Paris that RolDrive recommends for a diverse culinary experience?",
-          ans: "Paris offers highly-rated international restaurants like Le Cinq for French haute cuisine, L'Atelier de Joël Robuchon for innovative French dishes, and Le Grand Restaurant by Jean-François Piège for modern French fare. Enjoy these culinary delights hassle-free with RolDrive's private car service in Paris."
+          question:
+            "Are there any highly-rated international restaurants in Paris that RolDrive recommends for a diverse culinary experience?",
+          ans: "Paris offers highly-rated international restaurants like Le Cinq for French haute cuisine, L'Atelier de Joël Robuchon for innovative French dishes, and Le Grand Restaurant by Jean-François Piège for modern French fare. Enjoy these culinary delights hassle-free with RolDrive's private car service in Paris.",
         },
         {
           id: 5,
-          question: "Can RolDrive suggest local cafes or patisseries where I can try famous French pastries and desserts?",
-          ans: "RolDrive recommends experiencing famous French pastries at Ladurée for exquisite macarons, Pierre Hermé for innovative flavours, and Angelina for their renowned hot chocolate and Mont Blanc pastry. Enjoy these culinary delights hassle-free with RolDrive's private car service in Paris, ensuring comfortable and stylish transportation between each delightful stop."
+          question:
+            "Can RolDrive suggest local cafes or patisseries where I can try famous French pastries and desserts?",
+          ans: "RolDrive recommends experiencing famous French pastries at Ladurée for exquisite macarons, Pierre Hermé for innovative flavours, and Angelina for their renowned hot chocolate and Mont Blanc pastry. Enjoy these culinary delights hassle-free with RolDrive's private car service in Paris, ensuring comfortable and stylish transportation between each delightful stop.",
         },
         {
           id: 6,
-          question: "What are the must-see historical and cultural sites in Paris that should be on every visitor's itinerary?",
-          ans: "Must-see historical and cultural sites in Paris include the Louvre Museum for iconic artworks like the Mona Lisa, Notre-Dame Cathedral for its Gothic architecture, and the Eiffel Tower for panoramic views. Enjoy these landmarks hassle-free with RolDrive's private car service in Paris, ensuring comfort and convenience throughout your visit."
+          question:
+            "What are the must-see historical and cultural sites in Paris that should be on every visitor's itinerary?",
+          ans: "Must-see historical and cultural sites in Paris include the Louvre Museum for iconic artworks like the Mona Lisa, Notre-Dame Cathedral for its Gothic architecture, and the Eiffel Tower for panoramic views. Enjoy these landmarks hassle-free with RolDrive's private car service in Paris, ensuring comfort and convenience throughout your visit.",
         },
         {
           id: 7,
-          question: "Are there any popular sightseeing tours or guided experiences RolDrive recommends for exploring Paris's famous attractions and hidden gems?",
-          ans: "RolDrive recommends popular sightseeing tours in Paris such as Seine River cruises for iconic views, guided tours of the Louvre for art enthusiasts, and Montmartre walking tours for hidden gems. Enjoy these experiences with RolDrive's private car service in Paris and knowledgeable chauffeurs, ensuring a personalized and informative journey."
+          question:
+            "Are there any popular sightseeing tours or guided experiences RolDrive recommends for exploring Paris's famous attractions and hidden gems?",
+          ans: "RolDrive recommends popular sightseeing tours in Paris such as Seine River cruises for iconic views, guided tours of the Louvre for art enthusiasts, and Montmartre walking tours for hidden gems. Enjoy these experiences with RolDrive's private car service in Paris and knowledgeable chauffeurs, ensuring a personalized and informative journey.",
         },
         {
           id: 8,
-          question: "What are the best ways to get around Paris using taxi alternatives?",
-          ans : "Navigating Paris without relying solely on traditional taxis is best achieved with taxi alternatives like booking private chauffeur services. RolDrive's best car service in Paris offers a superior option with luxury vehicles and professional drivers, ensuring punctuality, comfort, and personalized travel experiences without the hassle of hailing taxis repeatedly. Our courteous and knowledgeable drivers will be happy to help you with your luggage and show you around the city of light at your own pace."
+          question:
+            "What are the best ways to get around Paris using taxi alternatives?",
+          ans: "Navigating Paris without relying solely on traditional taxis is best achieved with taxi alternatives like booking private chauffeur services. RolDrive's best car service in Paris offers a superior option with luxury vehicles and professional drivers, ensuring punctuality, comfort, and personalized travel experiences without the hassle of hailing taxis repeatedly. Our courteous and knowledgeable drivers will be happy to help you with your luggage and show you around the city of light at your own pace.",
         },
         {
           id: 9,
-          question: "What are some family-friendly attractions or activities in Paris that are suitable for children and enjoyable for the whole family?",
-          ans : "Family-friendly attractions in Paris include Disneyland Paris for magical theme park adventures, the Paris Aquarium for marine life exploration, and the Jardin d'Acclimatation for rides and activities. Enjoy these outings with ease using RolDrive's best car service in Paris, ensuring a fun filled day for the entire family. For more locations to visit, feel free to ask our chauffeurs and they’ll be happy to take you."
+          question:
+            "What are some family-friendly attractions or activities in Paris that are suitable for children and enjoyable for the whole family?",
+          ans: "Family-friendly attractions in Paris include Disneyland Paris for magical theme park adventures, the Paris Aquarium for marine life exploration, and the Jardin d'Acclimatation for rides and activities. Enjoy these outings with ease using RolDrive's best car service in Paris, ensuring a fun filled day for the entire family. For more locations to visit, feel free to ask our chauffeurs and they’ll be happy to take you.",
         },
-      ]
+      ],
     },
 
     ChauffeurServiceDescription: [
@@ -1272,7 +1284,7 @@ export const cityData = {
 
     airportsData: {
       title: "Tokyo Airports",
-      show:false,
+      show: false,
       desc: "",
       search: {
         dropdown1: "Choose Your City",
@@ -1302,7 +1314,6 @@ export const cityData = {
           route:
             "http://localhost:3000/rolnew/airport-transfers/london/gatwick",
         },
-        
       ],
     },
 
@@ -1311,55 +1322,65 @@ export const cityData = {
       data: [
         {
           id: 0,
-          question: "Can RolDrive recommend some top-rated hotels in Tokyo that offer great views of iconic landmarks like Tokyo Tower or the Tokyo Skytree?",
-          ans: "RolDrive recommends several top-rated hotels in Tokyo that offer stunning views of iconic landmarks like Tokyo Tower and the Tokyo Skytree. The Ritz-Carlton, Tokyo, and Park Hotel Tokyo provide breathtaking views of Tokyo Tower from their luxurious rooms. For panoramic views of Tokyo Skytree, consider staying at the Asakusa View Hotel or the Tobu Hotel Levant Tokyo. These hotels combine comfort and elegance with remarkable vistas. Enhance your stay by utilizing RolDrive's best chauffeur car service in Tokyo, ensuring convenient and luxurious transportation to and from these exceptional accommodations."
+          question:
+            "Can RolDrive recommend some top-rated hotels in Tokyo that offer great views of iconic landmarks like Tokyo Tower or the Tokyo Skytree?",
+          ans: "RolDrive recommends several top-rated hotels in Tokyo that offer stunning views of iconic landmarks like Tokyo Tower and the Tokyo Skytree. The Ritz-Carlton, Tokyo, and Park Hotel Tokyo provide breathtaking views of Tokyo Tower from their luxurious rooms. For panoramic views of Tokyo Skytree, consider staying at the Asakusa View Hotel or the Tobu Hotel Levant Tokyo. These hotels combine comfort and elegance with remarkable vistas. Enhance your stay by utilizing RolDrive's best chauffeur car service in Tokyo, ensuring convenient and luxurious transportation to and from these exceptional accommodations.",
         },
         {
           id: 1,
-          question: "What are the best areas or neighbourhoods to stay in Tokyo for easy access to major attractions and vibrant local experiences?",
-          ans: "The best areas to stay in Tokyo for easy access to major attractions and vibrant local experiences include Shibuya for its bustling nightlife and shopping, Shinjuku for skyscrapers and entertainment, and Ginza for upscale shopping and dining. Enhance your stay with RolDrive's best chauffeur car service in Tokyo, ensuring seamless transportation to iconic sites like Tokyo Tower, Senso-ji Temple, and the Tsukiji Fish Market, while experiencing the city's diverse culture and dynamic atmosphere firsthand."
+          question:
+            "What are the best areas or neighbourhoods to stay in Tokyo for easy access to major attractions and vibrant local experiences?",
+          ans: "The best areas to stay in Tokyo for easy access to major attractions and vibrant local experiences include Shibuya for its bustling nightlife and shopping, Shinjuku for skyscrapers and entertainment, and Ginza for upscale shopping and dining. Enhance your stay with RolDrive's best chauffeur car service in Tokyo, ensuring seamless transportation to iconic sites like Tokyo Tower, Senso-ji Temple, and the Tsukiji Fish Market, while experiencing the city's diverse culture and dynamic atmosphere firsthand.",
         },
         {
           id: 2,
-          question: "Are there any boutique or luxury hotels in Tokyo that provide a unique and memorable stay?",
-          ans: "Tokyo offers boutique and luxury hotels like Hoshinoya Tokyo for its serene ryokan-style accommodations, and The Capitol Hotel Tokyu for its blend of modern elegance and Japanese aesthetics. Experience these unique stays with ease using RolDrive's best chauffeur car service in Tokyo, thus ensuring comfort throughout your journey."
+          question:
+            "Are there any boutique or luxury hotels in Tokyo that provide a unique and memorable stay?",
+          ans: "Tokyo offers boutique and luxury hotels like Hoshinoya Tokyo for its serene ryokan-style accommodations, and The Capitol Hotel Tokyu for its blend of modern elegance and Japanese aesthetics. Experience these unique stays with ease using RolDrive's best chauffeur car service in Tokyo, thus ensuring comfort throughout your journey.",
         },
         {
           id: 3,
-          question: "Which restaurants in Tokyo serve the best traditional Japanese cuisine, and does RolDrive have any specific dish recommendations?",
-          ans: "Tokyo boasts exceptional restaurants for traditional Japanese cuisine. Restaurants like Sukiyabashi Jiro in Ginza offer world-renowned sushi omakase experiences. For tempura, Tempura Kondo in Ginza serves exquisite dishes using fresh ingredients. RolDrive's best car service in Tokyo ensures seamless travel to these culinary delights, making your dining experience stress-free. Whether you're exploring the elegance of kaiseki at Ishikawa in Kagurazaka or indulging in teppanyaki at Ukai-tei Omotesando, RolDrive guarantees comfort and convenience. Enjoy authentic Japanese flavours while our knowledgeable chauffeur navigates Tokyo's bustling streets, ensuring a memorable culinary journey through the city's gastronomic treasures."
+          question:
+            "Which restaurants in Tokyo serve the best traditional Japanese cuisine, and does RolDrive have any specific dish recommendations?",
+          ans: "Tokyo boasts exceptional restaurants for traditional Japanese cuisine. Restaurants like Sukiyabashi Jiro in Ginza offer world-renowned sushi omakase experiences. For tempura, Tempura Kondo in Ginza serves exquisite dishes using fresh ingredients. RolDrive's best car service in Tokyo ensures seamless travel to these culinary delights, making your dining experience stress-free. Whether you're exploring the elegance of kaiseki at Ishikawa in Kagurazaka or indulging in teppanyaki at Ukai-tei Omotesando, RolDrive guarantees comfort and convenience. Enjoy authentic Japanese flavours while our knowledgeable chauffeur navigates Tokyo's bustling streets, ensuring a memorable culinary journey through the city's gastronomic treasures.",
         },
         {
           id: 4,
-          question: "Are there any highly-rated international restaurants in Tokyo that RolDrive would recommend for a diverse culinary experience?",
-          ans: "For a diverse culinary experience in Tokyo, RolDrive recommends highly-rated international restaurants like L'Effervescence for French cuisine, Sukiyabashi Jiro for sushi perfection, and Florilege for innovative French-Japanese fusion. Enjoy these gastronomic adventures with ease using RolDrive's best car service in Tokyo, ensuring comfort and convenience throughout your culinary journey."
+          question:
+            "Are there any highly-rated international restaurants in Tokyo that RolDrive would recommend for a diverse culinary experience?",
+          ans: "For a diverse culinary experience in Tokyo, RolDrive recommends highly-rated international restaurants like L'Effervescence for French cuisine, Sukiyabashi Jiro for sushi perfection, and Florilege for innovative French-Japanese fusion. Enjoy these gastronomic adventures with ease using RolDrive's best car service in Tokyo, ensuring comfort and convenience throughout your culinary journey.",
         },
         {
           id: 5,
-          question: "Can RolDrive suggest any local cafes or dessert shops where I can try popular Japanese sweets and pastries?",
-          ans: "For delicious Japanese sweets and pastries, visit Nanaya for matcha-flavored treats, Dominique Ansel Bakery for unique desserts, and Kagurazaka Saryo for traditional wagashi. Enjoy these culinary delights with ease using RolDrive's private car service in Tokyo, ensuring comfortable and convenient transportation between these delightful spots."
+          question:
+            "Can RolDrive suggest any local cafes or dessert shops where I can try popular Japanese sweets and pastries?",
+          ans: "For delicious Japanese sweets and pastries, visit Nanaya for matcha-flavored treats, Dominique Ansel Bakery for unique desserts, and Kagurazaka Saryo for traditional wagashi. Enjoy these culinary delights with ease using RolDrive's private car service in Tokyo, ensuring comfortable and convenient transportation between these delightful spots.",
         },
         {
           id: 6,
-          question: "What are the must-see historical and cultural sites in Tokyo that should be on every visitor's itinerary?",
-          ans: "Must-see historical and cultural sites in Tokyo include the Meiji Shrine, offering tranquil Shinto surroundings amidst a lush forest, and the Imperial Palace East Gardens for a glimpse into Japan's imperial history. Visit the Senso-ji Temple in Asakusa for its vibrant atmosphere and Nakamise-dori for traditional souvenirs. Explore the Tokyo National Museum for extensive collections of Japanese art and artefacts. Enhance your journey with RolDrive's private car service in Tokyo, ensuring comfort and efficiency as you navigate between these iconic landmarks and cultural treasures."
+          question:
+            "What are the must-see historical and cultural sites in Tokyo that should be on every visitor's itinerary?",
+          ans: "Must-see historical and cultural sites in Tokyo include the Meiji Shrine, offering tranquil Shinto surroundings amidst a lush forest, and the Imperial Palace East Gardens for a glimpse into Japan's imperial history. Visit the Senso-ji Temple in Asakusa for its vibrant atmosphere and Nakamise-dori for traditional souvenirs. Explore the Tokyo National Museum for extensive collections of Japanese art and artefacts. Enhance your journey with RolDrive's private car service in Tokyo, ensuring comfort and efficiency as you navigate between these iconic landmarks and cultural treasures.",
         },
         {
           id: 7,
-          question: "Are there any popular sightseeing tours or guided experiences that RolDrive recommends for exploring Tokyo's famous attractions and hidden gems?",
-          ans: "Explore Tokyo's attractions and hidden gems with guided tours like Tsukiji Fish Market, Meiji Shrine, and Asakusa Temple. Enhance your experience with RolDrive's chauffeur service in Tokyo, ensuring comfortable travel between sites, personalized itineraries, and knowledgeable local drivers who act as your guide for a seamless exploration of the city's diverse culture and history!"
+          question:
+            "Are there any popular sightseeing tours or guided experiences that RolDrive recommends for exploring Tokyo's famous attractions and hidden gems?",
+          ans: "Explore Tokyo's attractions and hidden gems with guided tours like Tsukiji Fish Market, Meiji Shrine, and Asakusa Temple. Enhance your experience with RolDrive's chauffeur service in Tokyo, ensuring comfortable travel between sites, personalized itineraries, and knowledgeable local drivers who act as your guide for a seamless exploration of the city's diverse culture and history!",
         },
         {
           id: 8,
-          question: "Can RolDrive provide information on the best ways to get around Tokyo?",
-          ans: "Navigating Tokyo efficiently involves using the extensive subway and train networks for fast travel across the city. However, for personalized convenience and comfort, RolDrive's chauffeur service in Tokyo offers a superior alternative. With knowledgeable local drivers, you can seamlessly navigate Tokyo's bustling streets and hidden gems, without the hassle of hailing taxis throughout the day. Whether for airport transfers, city tours, or business meetings, RolDrive ensures punctuality and a stress-free experience, allowing you to focus on enjoying Tokyo's sights and culture without transportation worries acting as the perfect taxi alternative."
+          question:
+            "Can RolDrive provide information on the best ways to get around Tokyo?",
+          ans: "Navigating Tokyo efficiently involves using the extensive subway and train networks for fast travel across the city. However, for personalized convenience and comfort, RolDrive's chauffeur service in Tokyo offers a superior alternative. With knowledgeable local drivers, you can seamlessly navigate Tokyo's bustling streets and hidden gems, without the hassle of hailing taxis throughout the day. Whether for airport transfers, city tours, or business meetings, RolDrive ensures punctuality and a stress-free experience, allowing you to focus on enjoying Tokyo's sights and culture without transportation worries acting as the perfect taxi alternative.",
         },
         {
           id: 9,
-          question: "What are some family-friendly attractions or activities in Tokyo that are suitable for children and enjoyable for the whole family?",
-          ans: "Tokyo offers numerous family-friendly attractions for an enjoyable experience. Visit Tokyo Disneyland or DisneySea for magical adventures with themed rides and shows. Ueno Zoo features giant pandas and diverse wildlife. The Ghibli Museum showcases the works of Studio Ghibli in interactive exhibits. Tokyo Skytree offers panoramic city views, and Odaiba boasts entertainment complexes like TeamLab Borderless and Legoland Discovery Center. Enhance your family trip with RolDrive's chauffeur service in Tokyo, ensuring comfortable and convenient travel between these attractions, allowing you to focus on making lasting memories with your loved ones."
-        }
-      ]
+          question:
+            "What are some family-friendly attractions or activities in Tokyo that are suitable for children and enjoyable for the whole family?",
+          ans: "Tokyo offers numerous family-friendly attractions for an enjoyable experience. Visit Tokyo Disneyland or DisneySea for magical adventures with themed rides and shows. Ueno Zoo features giant pandas and diverse wildlife. The Ghibli Museum showcases the works of Studio Ghibli in interactive exhibits. Tokyo Skytree offers panoramic city views, and Odaiba boasts entertainment complexes like TeamLab Borderless and Legoland Discovery Center. Enhance your family trip with RolDrive's chauffeur service in Tokyo, ensuring comfortable and convenient travel between these attractions, allowing you to focus on making lasting memories with your loved ones.",
+        },
+      ],
     },
 
     ChauffeurServiceDescription: [

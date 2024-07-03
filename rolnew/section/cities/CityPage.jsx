@@ -1,21 +1,22 @@
-'use client';
+"use client";
 
-import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import Banner from 'rolnew/section/cities/Banner';
-import TrustedPartners from 'rolnew/comp/TrustedPartners';
-import OurFeet from 'rolnew/section/home/OurFeet';
-import Locations from 'rolnew/comp/Locations';
-import Contact from 'rolnew/comp/Contact';
-import Destinations from 'rolnew/section/home/Destinations';
-import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
-import ServicesFaq from 'rolnew/comp/ServicesFaq';
-import Landmark from 'rolnew/section/cities/LandMark';
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import Banner from "rolnew/section/cities/Banner";
+import TrustedPartners from "rolnew/comp/TrustedPartners";
+import OurFeet from "rolnew/section/home/OurFeet";
+import Locations from "rolnew/comp/Locations";
+import Contact from "rolnew/comp/Contact";
+import Destinations from "rolnew/section/home/Destinations";
+import DownloadOurApp from "rolnew/section/home/DownloadOurApp";
+import ServicesFaq from "rolnew/comp/ServicesFaq";
+import Landmark from "rolnew/section/cities/LandMark";
 // import ChauffeurServiceDescription from 'rolnew/comp/ChauffeurServiceDescription';
 //import Airports from 'rolnew/comp/Airports';
-import { cityData } from './cityData';
+import { cityData } from "./cityData";
+import BookModal from "rolnew/comp/BookModal";
 
-const cities = ['london', 'dubai', 'newyork', 'paris', 'tokyo'];
+const cities = ["london", "dubai", "newyork", "paris", "tokyo"];
 
 function CityPage() {
   const [pageData, setPageData] = useState({});
@@ -23,10 +24,10 @@ function CityPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const urls = pathName.split('/');
+    const urls = pathName.split("/");
     const url = urls[urls.length - 1];
     if (!cities.includes(url)) {
-      router.push('/404');
+      router.push("/404");
     } else {
       console.log(cityData[url]);
       setPageData(cityData[url]);
@@ -35,7 +36,7 @@ function CityPage() {
   return (
     <>
       <Banner bannerData={pageData.banner} />
-      <div className='bg-[#11202D] py-12'>
+      <div className="bg-[#11202D] py-12">
         <TrustedPartners
           img={pageData?.trustedPartnersData?.img}
           trustedPartnersData={pageData?.trustedPartnersData?.data}
@@ -54,6 +55,7 @@ function CityPage() {
       {/* <ChauffeurServiceDescription
         ChauffeurServiceDescription={pageData.ChauffeurServiceDescription}
       /> */}
+      <BookModal />
     </>
   );
 }
