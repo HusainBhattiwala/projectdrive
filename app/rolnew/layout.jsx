@@ -1,15 +1,14 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Toaster } from 'react-hot-toast';
-import Footer from 'rolnew/comp/Footer';
-import './global.css';
-import Navbar from 'rolnew/comp/Navbar';
-import Providers from 'app/Providers';
-import { LoginProvider } from 'context/LoginContext';
-import { UtilityProvider } from 'context/UtilityContext';
-import { FleetProvider } from 'context/FleetContext';
-import { ModalProvider } from 'context/ModalContext';
-import BookModal from 'rolnew/comp/BookModal';
-import TopWrapper from './TopWrapper';
+import { Toaster } from "react-hot-toast";
+import Footer from "rolnew/comp/Footer";
+import "./global.css";
+import Navbar from "rolnew/comp/Navbar";
+import Providers from "app/Providers";
+import { LoginProvider } from "context/LoginContext";
+import { UtilityProvider } from "context/UtilityContext";
+import { FleetProvider } from "context/FleetContext";
+import { ModalProvider } from "context/ModalContext";
+import TopWrapper from "./TopWrapper";
 
 export default function layout({ children }) {
   return (
@@ -25,7 +24,6 @@ export default function layout({ children }) {
               <FleetProvider>
                 <ModalProvider>
                   <div className="!overflow-x-hidden">{children}</div>
-                  <BookModal />
                 </ModalProvider>
               </FleetProvider>
             </UtilityProvider>

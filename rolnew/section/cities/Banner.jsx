@@ -5,6 +5,7 @@ import { useEffect, useState, useContext } from "react";
 import { ModalContext } from "context/ModalContext";
 
 import Button from "rolnew/ui/Button";
+import BookModal from "rolnew/comp/BookModal";
 
 function Banner({ bannerData }) {
   const [width, setWidth] = useState(1200);
@@ -129,6 +130,7 @@ function Banner({ bannerData }) {
           />
         </div>
       </div>
+      <BookModal />
     </div>
   );
 }

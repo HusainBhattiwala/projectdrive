@@ -149,6 +149,7 @@ import { FleetContext } from "context/FleetContext";
 import { ModalContext } from "context/ModalContext";
 import { fleetData } from "static/fleetData";
 import Category from "./Category";
+import BookModal from "./BookModal";
 
 const defaultDescription = `The Mercedes E-Class is a great option for business
 because of its balance of luxury, performance, and technology. Mercedes Benz is known for their brilliant
@@ -210,7 +211,7 @@ function CarClass({ hideArrow = true }) {
                         {carDetails?.desc}
                       </p>
                       <Button
-                        onClick={() => openModal}
+                        onClick={() => openModal()}
                         className="w-[260px] h-[50px] text-xl mt-4 mb-4 mr-[100px]"
                       >
                         Book Now
@@ -284,6 +285,7 @@ function CarClass({ hideArrow = true }) {
           </div>
         </div>
       </div>
+      <BookModal />
     </>
   );
 }

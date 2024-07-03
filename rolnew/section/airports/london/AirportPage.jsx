@@ -1,25 +1,25 @@
-'use client';
+"use client";
 
-import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import Banner from 'rolnew/section/cities/Banner';
-import OurFeet from 'rolnew/section/home/OurFeet';
-import Locations from 'rolnew/comp/Locations';
-import Contact from 'rolnew/comp/Contact';
-import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
-import AirportBookingFlow from 'rolnew/comp/AirportBookingFlow';
-import Services from 'rolnew/section/home/Services';
-import ServicesFaq from 'rolnew/comp/ServicesFaq';
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import Banner from "rolnew/section/cities/Banner";
+import OurFeet from "rolnew/section/home/OurFeet";
+import Locations from "rolnew/comp/Locations";
+import Contact from "rolnew/comp/Contact";
+import DownloadOurApp from "rolnew/section/home/DownloadOurApp";
+import AirportBookingFlow from "rolnew/comp/AirportBookingFlow";
+import Services from "rolnew/section/home/Services";
+import ServicesFaq from "rolnew/comp/ServicesFaq";
 
-import { airportData } from './airportData';
+import { airportData } from "./airportData";
 
 const airports = [
-  'heathrow',
-  'gatwick',
-  'londoncity',
-  'londonsouthend',
-  'londonstansted',
-  'luton',
+  "heathrow",
+  "gatwick",
+  "londoncity",
+  "londonsouthend",
+  "londonstansted",
+  "luton",
 ];
 
 function AirportPage() {
@@ -28,14 +28,15 @@ function AirportPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const urls = pathName.split('/');
+    const urls = pathName.split("/");
     const url = urls[urls.length - 1];
     if (!airports.includes(url)) {
-      router.push('/404');
+      router.push("/404");
     } else {
       console.log(airportData[url]);
       setPageData(airportData[url]);
     }
+    console.log(pageData);
   }, [pathName, router]);
   return (
     <>
