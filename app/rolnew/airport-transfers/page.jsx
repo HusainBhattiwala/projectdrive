@@ -212,7 +212,7 @@ export default function Page() {
             <br />
             2. In contrast, hailing a cab provides a more utilitarian travel option, with variable costs, standard vehicles, and no guarantee of service level or amenities or punctuality. While cabs are convenient for spontaneous travel, RolDrive specialises in a bespoke, stress-free journey, making it an ideal choice for those seeking reliable, high-quality, and comfortable airport transportation.
           </p>
-        )
+        ),
       },
       {
         title: 'How to go about booking Best Airport Transfers?',

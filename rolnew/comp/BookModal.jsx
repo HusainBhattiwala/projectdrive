@@ -79,7 +79,7 @@ function BookModal() {
     };
   }, []);
 
-  if (!isOpen) return null;
+  if (!isOpen) return;
 
   return (
     <div
