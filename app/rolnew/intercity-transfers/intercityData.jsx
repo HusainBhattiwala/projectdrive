@@ -2,11 +2,11 @@ export const intercityData = {
   bannerData: {
     mainTitle: 'Intercity Chauffeur Service',
     mainDescription:
-            'Your exclusive and dependable chauffeur service indulgence.',
+      'Your exclusive and dependable chauffeur service indulgence.',
     backgroundImage: '/rolnew/services/banners/intercity.jpg',
     title: 'Do you want to customise your booking?',
     description:
-            'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
+      'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
   },
 
   luxuriousServiceData: [
@@ -109,36 +109,185 @@ export const intercityData = {
     data: [
       {
         title: 'What are RolDrive’s intercity transfer coverage zones?',
-        desc: 'RolDrive provides its intercity transfer services in and around the following locations where our professional chauffeurs will transport you wherever you may need to go in absolute comfort, safety and style.',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            RolDrive provides its intercity transfer services in and around the
+            following locations where our professional chauffeurs will transport
+            you wherever you may need to go in absolute comfort, safety, and
+            style.
+          </p>
+        ),
       },
       {
         title: 'RolDrive covers the following locations:',
-        desc: 'Intercity Transfer from London, Intercity Transfer from Dubai, Intercity Transfer from Paris Intercity Transfer from Tokyo, Intercity Transfer from New York',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            <span className="ml-3 text-[#B2B2B2]">
+              1. Intercity Transfer from London
+            </span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">
+              2. Intercity Transfer from Dubai
+            </span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">
+              3. Intercity Transfer from Paris
+            </span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">
+              4. Intercity Transfer from Tokyo
+            </span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">
+              5. Intercity Transfer from New York
+            </span>
+          </p>
+        ),
       },
       {
         title: 'What is an intercity transfer?',
-        desc: 'An intercity transfer refers to the service of transporting passengers from one city to another, typically utilising high-quality, comfortable vehicles to ensure a pleasant journey over longer distances. This type of service is designed to offer a seamless, stress-free travel experience, bridging the gap between different urban centres or regions. Companies like RolDrive specialise in intercity transfers, providing clients with a luxury travel option that combines convenience, comfort, and efficiency. With RolDrive, passengers can expect professional chauffeur services, where every detail is managed meticulously to cater to their needs, from scheduling to route planning, ensuring a smooth and enjoyable journey. Intercity transfers are ideal for business travellers, tourists, or individuals looking to travel between cities with ease, comfort, and a touch of luxury.',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            An intercity transfer refers to the service of transporting
+            passengers from one city to another, typically utilising
+            high-quality, comfortable vehicles to ensure a pleasant journey over
+            longer distances. This type of service is designed to offer a
+            seamless, stress-free travel experience, bridging the gap between
+            different urban centres or regions. Companies like RolDrive
+            specialise in intercity transfers, providing clients with a luxury
+            travel option that combines convenience, comfort, and efficiency.
+            With RolDrive, passengers can expect professional chauffeur
+            services, where every detail is managed meticulously to cater to
+            their needs, from scheduling to route planning, ensuring a smooth
+            and enjoyable journey. Intercity transfers are ideal for business
+            travellers, tourists, or individuals looking to travel between
+            cities with ease, comfort, and a touch of luxury.
+          </p>
+        ),
       },
       {
         title: 'Can I explore landmarks when on an intercity transfer?',
-        desc: 'Yes, when booking an intercity transfer with RolDrive, you have the flexibility to explore landmarks along the way. While the primary goal is to transport you from one city to another, RolDrive’s service can be tailored to include sightseeing stops, allowing you to discover both prominent attractions and hidden gems. The chauffeurs at RolDrive are not only skilled drivers but also knowledgeable about the regions they traverse, often able to share insights about notable sites and local lore. This personalised approach to travel ensures a richer, more enjoyable journey, making your intercity transfer with RolDrive not just a ride, but an explorative experience.',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            Yes, when booking an intercity transfer with RolDrive, you have the
+            flexibility to explore landmarks along the way. While the primary
+            goal is to transport you from one city to another, RolDrive’s
+            service can be tailored to include sightseeing stops, allowing you
+            to discover both prominent attractions and hidden gems. The
+            chauffeurs at RolDrive are not only skilled drivers but also
+            knowledgeable about the regions they traverse, often able to share
+            insights about notable sites and local lore. This personalised
+            approach to travel ensures a richer, more enjoyable journey, making
+            your intercity transfer with RolDrive not just a ride, but an
+            explorative experience.
+          </p>
+        ),
       },
       {
         title: 'How to book intercity transfers?',
-        desc: 'Booking intercity transfers with RolDrive can be done effortlessly through our official website or mobile app. Heres a step-by-step guide: Visit RolDrives Website or App: Start by navigating to RolDrives official platform. Select the Service Type: Choose Interstate Transfer from the available service options.Specify Details: Enter your pickup location, destination city, travel date, and preferred pickup time.Choose a Vehicle: Select from RolDrives fleet of luxury vehicles based on your preference and the number of passengers.Enter Personal Information: Provide necessary details like your name, contact information, and any special requests. Review and Confirm: Check all the details you’ve entered for accuracy, and then proceed to the payment section. Payment: Complete the booking by making a payment through the secure payment gateway provided on the website or app. Booking Confirmation: After payment, youll receive a confirmation of your booking via email or on the app, including details about the vehicle and chauffeur.This process is designed to be user-friendly and efficient, ensuring that booking your intercity transfer with RolDrive is as smooth and hassle-free as the journey itself.',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            Booking intercity transfers with RolDrive can be done effortlessly
+            through our official website or mobile app. Here's a step-by-step
+            guide:
+            <br />
+            <br />
+            1. Visit RolDrive's Website or App: Start by navigating to
+            RolDrive's official platform.
+            <br />
+            2. Select the Service Type: Choose Intercity Transfer from the
+            available service options.
+            <br />
+            3. Specify Details: Enter your pickup location, destination city,
+            travel date, and preferred pickup time.
+            <br />
+            4. Choose a Vehicle: Select from RolDrive's fleet of luxury vehicles
+            based on your preference and the number of passengers.
+            <br />
+            5. Enter Personal Information: Provide necessary details like your
+            name, contact information, and any special requests.
+            <br />
+            6. Review and Confirm: Check all the details you’ve entered for
+            accuracy, and then proceed to the payment section.
+            <br />
+            7. Payment: Complete the booking by making a payment through the
+            secure payment gateway provided on the website or app.
+            <br />
+            8. Booking Confirmation: After payment, you’ll receive a
+            confirmation of your booking via email or on the app, including
+            details about the vehicle and chauffeur.
+            <br />
+            <br />
+            This process is designed to be user-friendly and efficient, ensuring
+            that booking your intercity transfer with RolDrive is as smooth and
+            hassle-free as the journey itself.
+          </p>
+        ),
       },
       {
         title: 'What is the cost of intercity transfers?',
-        desc: 'The cost of intercity transfers varies based on factors like the distance between cities, the type of vehicle chosen, and the service level. Generally, these services are priced either at a flat rate for specific city-to-city transfers or on an hourly basis for more customised travel itineraries. RolDrive, known for providing premium chauffeur services, offers competitive pricing for our intercity transfers, ensuring luxury and comfort throughout your journey. To get an accurate cost for your specific intercity transfer needs with RolDrive, its best to visit our website or contact us directly. There, you can specify your travel details, select from our range of luxury vehicles, and receive a tailored quote reflecting RolDrive’s commitment to providing high-quality service at transparent prices.',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            The cost of intercity transfers varies based on factors like the
+            distance between cities, the type of vehicle chosen, and the service
+            level. Generally, these services are priced either at a flat rate
+            for specific city-to-city transfers or on an hourly basis for more
+            customised travel itineraries. RolDrive, known for providing premium
+            chauffeur services, offers competitive pricing for our intercity
+            transfers, ensuring luxury and comfort throughout your journey. To
+            get an accurate cost for your specific intercity transfer needs with
+            RolDrive, it’s best to visit our website or contact us directly.
+            There, you can specify your travel details, select from our range of
+            luxury vehicles, and receive a tailored quote reflecting RolDrive’s
+            commitment to providing high-quality service at transparent prices.
+          </p>
+        ),
       },
       {
         title: 'What types of vehicles are used for intercity transfers?',
-        desc: 'For intercity transfers, a range of vehicles is used to cater to different preferences and requirements, ensuring a comfortable and stylish journey. RolDrive’s fleet exemplifies this variety, featuring luxury sedans like the Mercedes Benz S Class, known for its elegance and smooth ride, perfect for business travellers or individuals seeking a relaxing journey. For those requiring more space or travelling in groups, SUVs such as the Range Rover offer ample room and are equipped with state-of-the-art amenities. Luxury vans such as the Mercedes V Class are also available for larger groups, ensuring everyone travels together in comfort. For the ultimate in luxury, high-end vehicles like the Bentley or Rolls Royce are part of RolDrives fleet, providing an unparalleled travel experience. Each vehicle in RolDrives fleet is maintained to the highest standards, ensuring reliability and comfort throughout your intercity journey.',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            For intercity transfers, a range of vehicles is used to cater to
+            different preferences and requirements, ensuring a comfortable and
+            stylish journey. RolDrive’s fleet exemplifies this variety,
+            featuring luxury sedans like the Mercedes Benz S Class, known for
+            its elegance and smooth ride, perfect for business travellers or
+            individuals seeking a relaxing journey. For those requiring more
+            space or travelling in groups, SUVs such as the Range Rover offer
+            ample room and are equipped with state-of-the-art amenities. Luxury
+            vans such as the Mercedes V Class are also available for larger
+            groups, ensuring everyone travels together in comfort. For the
+            ultimate in luxury, high-end vehicles like the Bentley or Rolls
+            Royce are part of RolDrive's fleet, providing an unparalleled travel
+            experience. Each vehicle in RolDrive’s fleet is maintained to the
+            highest standards, ensuring reliability and comfort throughout your
+            intercity journey.
+          </p>
+        ),
       },
       {
         title:
-                    'What are the safety measures taken by intercity transfer providers?',
-        desc: 'Intercity transfer providers like RolDrive prioritise safety by implementing a range of measures to ensure a secure and comfortable journey for their passengers. RolDrives chauffeurs are professionally trained in defensive driving, equipped with the skills to navigate various road conditions and traffic scenarios safely. Additionally, RolDrives vehicles are regularly maintained and inspected to meet stringent safety standards, ensuring they are in optimal condition for travel. Safety features like GPS tracking and real-time monitoring systems are also utilised to enhance passenger security and provide peace of mind. Furthermore, RolDrive adheres to comprehensive health and safety protocols, including regular sanitisation of vehicles to protect against health risks. By combining skilled driving, well-maintained vehicles, and strict safety protocols, RolDrive ensures that its intercity transfer services are not only luxurious and comfortable but also exceptionally safe for all passengers.',
+          'What are the safety measures taken by intercity transfer providers?',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            Intercity transfer providers like RolDrive prioritise safety by
+            implementing a range of measures to ensure a secure and comfortable
+            journey for their passengers. RolDrive’s chauffeurs are
+            professionally trained in defensive driving, equipped with the
+            skills to navigate various road conditions and traffic scenarios
+            safely. Additionally, RolDrive’s vehicles are regularly maintained
+            and inspected to meet stringent safety standards, ensuring they are
+            in optimal condition for travel. Safety features like GPS tracking
+            and real-time monitoring systems are also utilised to enhance
+            passenger security and provide peace of mind. Furthermore, RolDrive
+            adheres to comprehensive health and safety protocols, including
+            regular sanitisation of vehicles to protect against health risks. By
+            combining skilled driving, well-maintained vehicles, and strict
+            safety protocols, RolDrive ensures that its intercity transfer
+            services are not only luxurious and comfortable but also
+            exceptionally safe for all passengers.
+          </p>
+        ),
       },
     ],
   },
@@ -159,7 +308,7 @@ export const intercityData = {
       {
         id: 2,
         question:
-                    'What types of vehicles are used for intercity chauffeur services?',
+          'What types of vehicles are used for intercity chauffeur services?',
         ans: 'Luxury sedans, SUVs, and limousines are commonly used, offering comfort for longer journeys.',
       },
       {
@@ -170,7 +319,7 @@ export const intercityData = {
       {
         id: 4,
         question:
-                    'Can I request stops along the route with intercity chauffeur services?',
+          'Can I request stops along the route with intercity chauffeur services?',
         ans: 'Yes, many services including RolDrive allow you to customise the journey with specific stops en route.',
       },
       {
@@ -191,13 +340,13 @@ export const intercityData = {
       {
         id: 8,
         question:
-                    'What amenities can I expect with intercity chauffeur services?',
+          'What amenities can I expect with intercity chauffeur services?',
         ans: 'Amenities often include Wi-Fi, refreshments, climate control, and entertainment systems.',
       },
       {
         id: 9,
         question:
-                    'How far in advance should I book intercity chauffeur services?',
+          'How far in advance should I book intercity chauffeur services?',
         ans: "It's advisable to book as early as possible, especially during peak travel times, to ensure availability.",
       },
     ],

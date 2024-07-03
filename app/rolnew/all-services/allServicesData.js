@@ -202,7 +202,7 @@ export const allServicesData = {
     },
   },
 
-  findMoreData : [
+  findMoreData: [
     {
       title: 'Airport Transfer Service With A Private Car For Hire',
       desc: "RolDrive's luxury 24 hour chauffeur service spans the globe, providing luxurious and efficient transportation for domestic and international travellers. With the global aviation industry facilitating billions of passenger journeys each year, the demand for sophisticated airport transfer services is significant. RolDrive meets this need with elegance, offering a fleet of premium vehicles and professional chauffeurs dedicated to delivering a seamless travel experience. Whether arriving in bustling metropolises like New York, London, or Dubai, RolDrive ensures a top-tier service that embodies comfort and style. Our expert chauffeurs, familiar with the intricacies of each city’s travel, guarantee a smooth transition from the airport to your final destination, affirming RolDrive's commitment to excellence in domestic and international airport transfers.",
@@ -237,8 +237,7 @@ export const allServicesData = {
     },
   ],
 
-
-  trustedPartnersData : [
+  trustedPartnersData: [
     {
       icon: '/rolnew/global/icons/shield-user-line.svg',
       title: 'Safe & Discreet',
@@ -299,4 +298,4 @@ export const allServicesData = {
     ],
   },
 
-}
+};
