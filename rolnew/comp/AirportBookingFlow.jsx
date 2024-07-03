@@ -8,12 +8,19 @@ function AirportBookingFlow({ pageData }) {
     <div className='w-full bg-[#11202D] sm:px-[30px] sm:pt-[60px]'>
       <Container className='bg-[#081017] sm:py-[50px] py-8 mx-auto'>
         <div className='md:flex gap-10 tex-left'>
-          <img
-            src='/rolnew/airports/plane.jpg'
-            alt='plane'
-            className='rounded-xl'
-          />
-
+          {pageData?.aboutData?.img ?
+            <img
+              src={pageData?.aboutData?.img}
+              alt='plane'
+              className='rounded-xl'
+            />
+            :
+            <img
+              src='/rolnew/airports/plane.jpg'
+              alt='plane'
+              className='rounded-xl'
+            />
+        }
           <div className='pt-[45px] space-y-2'>
             <h4 className='text-[#B2B2B2] font-medium text-lg'>About</h4>
             <h2 className='text-[#B2B2B2] font-medium text-3xl'>

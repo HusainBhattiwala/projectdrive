@@ -43,18 +43,22 @@ export default function Page() {
 
   const luxuriousServiceData = [
     {
+      img: '/rolnew/global/icons/airport_transfer/Fixed Price.png',
       title: 'Fixed Price',
       desc: 'Fixed price service, ensuring transparency and predictability in costs for your transportation needs. No hidden charges or surprises.',
     },
     {
+      img: '/rolnew/global/icons/airport_transfer/Free Meet & Greet.png',
       title: 'Free Meet & Greet',
       desc: 'We enhance your travel experience with our complimentary Meet & Greet service, ensuring a personal and welcoming touch upon your arrival.',
     },
     {
+      img: '/rolnew/global/icons/airport_transfer/60 Mins Free Waiting Time.png',
       title: '60 Mins Free Waiting Time',
       desc: 'Delayed flight? We offer a convenient service with 60 minutes of free waiting time, ensuring flexibility and peace of mind upon your arrival.',
     },
     {
+      img: '/rolnew/global/icons/airport_transfer/24_7 Flight Tracking.png',
       title: '24/7 Flight Tracking',
       desc: "Our 24/7 flight tracking ensures your chauffeur is always on time, even if your flight isn't.",
     },
@@ -70,37 +74,37 @@ export default function Page() {
     list: [
       {
         id: 1,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/country/Heathrow_Airport.jpg',
         countryCode: 'GB',
         cityName: 'Heathrow Airport',
       },
       {
         id: 2,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/country/Gatwick_Airport.jpg',
         countryCode: 'GB',
         cityName: 'Gatwick Airport',
       },
       {
         id: 3,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/country/London_City_Airport.jpg',
         countryCode: 'GB',
         cityName: 'London City Airport',
       },
       {
         id: 4,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/country/London_Southend_Airport.jpg',
         countryCode: 'GB',
         cityName: 'London Southend Airport',
       },
       {
         id: 5,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/country/London_Stansted_Airport.jpg',
         countryCode: 'GB',
         cityName: 'London Stansted Airport',
       },
       {
         id: 6,
-        image: '/rolnew/global/country/london.jpg',
+        image: '/rolnew/global/country/Luton_Airport.jpg',
         countryCode: 'GB',
         cityName: 'Luton Airport',
       },

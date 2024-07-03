@@ -24,7 +24,7 @@ function Services() {
             <Card
               title='London Airport Transfers'
               description="RolDrive's Airport Transfers London services cover all major airports in the city ensuring seamless, luxurious travel to and from the city's airports."
-              img='/rolnew/global/card/card-image1.jpg'
+              img='/rolnew/global/card/London_Airport_Transfer.jpg'
             />
           </div>
 
@@ -32,7 +32,7 @@ function Services() {
             <Card
               title='Dubai Airport Transfers'
               description="As Dubai Airport Transfers service providers, RolDrive ensures that your airport pickup or drop-off is as smooth as possible so you know you're in capable hands."
-              img='/rolnew/global/card/card-image2.jpg'
+              img='/rolnew/global/card/Dubai_Airport_Transfer.jpg'
               titleNoWrap
             />
           </div>
@@ -41,7 +41,7 @@ function Services() {
             <Card
               title='Paris Airport Transfers'
               description='Whether on a business trip or for pleasure in the city of Paris, RolDrive’s Paris Airport Transfers will transfer you to or from the airport in a complete fashion.'
-              img='/rolnew/global/card/card-image3.jpg'
+              img='/rolnew/global/card/New_York_Airport_Transfer.jpg'
               titleNoWrap
             />
           </div>
@@ -49,7 +49,7 @@ function Services() {
             <Card
               title='New York Airport Transfers'
               description='In the busy city of New York, RolDrive’s New York Airport Transfers are swift, comfortable and elegant, thus creating room for your next meet.'
-              img='/rolnew/global/card/card-image4.jpg'
+              img='/rolnew/global/card/Paris_Airport.jpg'
               titleNoWrap
             />
           </div>
@@ -57,7 +57,7 @@ function Services() {
             <Card
               title='Tokyo Airport Transfer'
               description='As you arrive or depart from Tokyo, RolDrive’s Tokyo Airport Transfer service offers the perfect blend of business and pleasure while travelling.'
-              img='/rolnew/global/card/card-image5.jpg'
+              img='/rolnew/global/card/Tokyo_Airport_Transfer.jpg'
               titleNoWrap
             />
           </div>
