@@ -17,8 +17,8 @@ const navLinks = [
       { route: "/rolnew/road-shows", label: "Roadshow Transfers" },
       { route: "/rolnew/intercity-transfers", label: "Intercity Transfers" },
       { route: "/rolnew/event-transfers", label: "Event Transfers" },
-      { route: "/rolnew/wedding-service", label: "Wedding Chauffeur" },
-      { route: "/rolnew/corporate-service", label: "Corporate Chauffeur" },
+      { route: "/rolnew/wedding-service", label: "Wedding Transfers" },
+      { route: "/rolnew/corporate-service", label: "Corporate Transfers" },
       { route: "/rolnew/cities-sightseeing", label: "Cities Sightseeing" },
       {
         route: "/rolnew/private-jet-chauffeur",
@@ -185,7 +185,7 @@ export default function Navbar() {
                         {item.label}
                       </Link>
                       {openDropdownIndex === index && (
-                        <ul className="absolute top-14 left-4 mt-1 z-[10] p-2 w-fit sub-menu">
+                        <ul className="absolute top-14 z-[10] left-4 mt-1 p-2 w-fit sub-menu before:backdrop-blur-2xl before:backdrop-hack">
                           {item.subLinks.map((subLink, subIndex) => (
                             <li
                               key={subLink.route}
@@ -203,7 +203,7 @@ export default function Navbar() {
                                     {subLink.label}
                                   </Link>
                                   {openSubDropdownIndex === subIndex && (
-                                    <ul className="absolute left-full top-0 mt-3 z-[10] p-2 w-fit sub-menu">
+                                    <ul className="absolute left-full top-0 mt-3 z-50 p-2 w-fit sub-menu backdrop-blur-2xl">
                                       {subLink.subLinks.map((nestedSubLink) => (
                                         <li key={nestedSubLink.route}>
                                           <Link
