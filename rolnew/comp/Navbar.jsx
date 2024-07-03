@@ -17,8 +17,8 @@ const navLinks = [
       { route: "/rolnew/road-shows", label: "Roadshow Transfers" },
       { route: "/rolnew/intercity-transfers", label: "Intercity Transfers" },
       { route: "/rolnew/event-transfers", label: "Event Transfers" },
-      { route: "/rolnew/wedding-service", label: "Wedding Transfers" },
-      { route: "/rolnew/corporate-service", label: "Corporate Transfers" },
+      { route: "/rolnew/wedding-service", label: "Wedding Chauffeur" },
+      { route: "/rolnew/corporate-service", label: "Corporate Chauffeur" },
       { route: "/rolnew/cities-sightseeing", label: "Cities Sightseeing" },
       {
         route: "/rolnew/private-jet-chauffeur",

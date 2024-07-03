@@ -1,4 +1,4 @@
-// import CategoriesComponent from 'components/AllCategories';
+import CategoriesComponent from 'components/AllCategories';
 import FindMoreComponent from 'components/FindMore';
 import Container from 'rolnew/comp/Container';
 import TopDestination from 'rolnew/comp/TopDestination';
@@ -6,11 +6,7 @@ import ClientTestimonial from 'rolnew/section/home/ClientTestimonial';
 import OurFeet from 'rolnew/section/home/OurFeet';
 import TrustedPartners from 'rolnew/comp/TrustedPartners';
 import Contact from 'rolnew/comp/Contact';
-import {
-  destinationsData,
-  findMoreData,
-  trustedPartnersData,
-} from './allServicesData';
+import { allServicesData } from './allServicesData';
 
 export default function Home() {
   return (
@@ -130,16 +126,16 @@ export default function Home() {
         </div>
       </Container>
       <OurFeet />
-      <TrustedPartners trustedPartnersData={trustedPartnersData} />
+      <TrustedPartners trustedPartnersData={allServicesData.trustedPartnersData} />
       <ClientTestimonial />
-      {/* <CategoriesComponent /> */}
-      <TopDestination data={destinationsData?.london} bg="bg-[#11202D]" />
-      <TopDestination data={destinationsData?.paris} bg="bg-[#223544]" />
+      <CategoriesComponent categoriesData={allServicesData.categoriesData} />
+      <TopDestination data={allServicesData.destinationsData?.london} bg="bg-[#11202D]" />
+      <TopDestination data={allServicesData.destinationsData?.paris} bg="bg-[#223544]" />
       <Contact />
-      <TopDestination data={destinationsData?.newyork} bg="bg-[#223544]" />
-      <TopDestination data={destinationsData?.dubai} bg="bg-[#11202D]" />
-      <TopDestination data={destinationsData?.tokyo} bg="bg-[#223544]" />
-      <FindMoreComponent findMoreData={findMoreData} />
+      <TopDestination data={allServicesData.destinationsData?.newyork} bg="bg-[#223544]" />
+      <TopDestination data={allServicesData.destinationsData?.dubai} bg="bg-[#11202D]" />
+      <TopDestination data={allServicesData.destinationsData?.tokyo} bg="bg-[#223544]" />
+      <FindMoreComponent findMoreData={allServicesData.findMoreData} />
     </>
   );
 }
