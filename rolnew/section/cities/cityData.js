@@ -3,7 +3,7 @@ export const cityData = {
     banner: {
       title: "London Chauffeur Service",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
-      bannerImage: "/rolnew/cities/London City.png",
+      bannerImage: "/images/city/london/banner/london_city.png",
     },
     trustedPartnersData: {
       img: "/rolnew/cities/trust-banner.svg",
@@ -41,21 +41,21 @@ export const cityData = {
     landMarks: [
       {
         id: "land1",
-        src: "/images/city/london/buckingham.png",
+        src: "/images/city/london/landmarks/Buckingham Palace.jpg",
         title: "Buckingham Palace",
         description:
           "The London residence and administrative headquarters of the monarch of the United Kingdom. Renowned for its rich history, opulent staterooms, and royal ceremonies.",
       },
       {
         id: "land2",
-        src: "/images/city/london/parliament.png",
+        src: "/images/city/london/landmarks/The Houses of Parliament.jpg",
         title: "The Houses of Parliament",
         description:
           "Also known as the Palace of Westminster, is the home of the UK’s legislative body and iconic landmark on the River Thames.",
       },
       {
         id: "land3",
-        src: "/images/city/london/landmarks/tower-of-london.jpg",
+        src: "/images/city/london/landmarks/Tower of London.jpg",
         title: "Tower of London",
         description:
           "A historic castle located in central London, known for its dark past, crown jewels, and royal menagerie.",
@@ -67,42 +67,42 @@ export const cityData = {
       list: [
         {
           id: "touristAttraction1",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/london/attraction/The neighbourhoods of Notting Hill.jpg",
           title: "The neighbourhoods of Notting Hill",
           description:
             "A vibrant and affluent neighbourhood in West London, known for its colourful houses, Portobello Road Market, and annual carnival",
         },
         {
           id: "touristAttraction2",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/london/attraction/Greenwich.jpg",
           title: "Greenwich",
           description:
             "Greenwich in London is renowned for its maritime history, the Prime Meridian, the Royal Observatory from where you can enjoy stunning views and the beautiful Greenwich Park",
         },
         {
           id: "touristAttraction3",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/london/attraction/Harrods.jpg",
           title: "Harrods",
           description:
             "A luxury department store in Knightsbridge, London, known for its opulent interior, high-end fashion, and exquisite food hall.",
         },
         {
           id: "touristAttraction4",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/london/attraction/Selfridges.jpg",
           title: "Selfridges",
           description:
             "A high-end department store in Oxford Street, London, known for its luxury fashion, cosmetics and iconic window displays.",
         },
         {
           id: "touristAttraction5",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/london/attraction/Fortnum & Mason.jpg",
           title: "Fortnum & Mason",
           description:
             "A luxury department store in Piccadilly, London, known for its exquisite food hall, fine teas and hampers.",
         },
         {
           id: "touristAttraction6",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/london/attraction/Little Venice.jpg",
           title: "Little Venice",
           description:
             "A picturesque canal area near Paddington with charming houseboats, waterside cafes, and tranquil boat trips",
@@ -302,7 +302,7 @@ export const cityData = {
     banner: {
       title: "Dubai Chauffeur Service",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
-      bannerImage: "/rolnew/cities/london.png",
+      bannerImage: "/images/city/dubai/banner/dubai_city.png",
     },
     servicesData: {
       img: "/rolnew/cities/trust-banner.svg",
@@ -342,21 +342,21 @@ export const cityData = {
     landMarks: [
       {
         id: "land1",
-        src: "/images/city/london/buckingham.png",
+        src: "/images/city/dubai/landmarks/Burj Khalifa.jpg",
         title: "Burj Khalifa",
         description:
           "Among the worlds tallest buildings, offering breathtaking views from its observation decks, luxurious dining experiences, and an impressive display of modern architectural brilliance.",
       },
       {
         id: "land2",
-        src: "/images/city/london/parliament.png",
+        src: "/images/city/dubai/landmarks/The Dubai Mall.jpg",
         title: "The Dubai Mall",
         description:
           "One of the largest shopping malls globally, featuring over 1,200 shops, an indoor aquarium, ice rink, and diverse dining options, making it a shoppers paradise.",
       },
       {
         id: "land3",
-        src: "/images/city/london/landmarks/tower-of-london.jpg",
+        src: "/images/city/dubai/landmarks/Palm Jumeirah.jpg",
         title: "Palm Jumeirah",
         description:
           "An iconic man-made island shaped like a palm tree, home to luxury hotels, pristine beaches, upscale restaurants, and stunning views of the Dubai skyline.",
@@ -368,42 +368,42 @@ export const cityData = {
       list: [
         {
           id: "touristAttraction1",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/dubai/attraction/Alserkal Avenue.jpg",
           title: "Alserkal Avenue",
           description:
             "A vibrant arts district in Al Quoz, featuring contemporary art galleries, studios, and creative spaces, making it a hub for Dubais cultural and artistic community.",
         },
         {
           id: "touristAttraction2",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/dubai/attraction/Dubai Miracle Garden.jpg",
           title: "Dubai Miracle Garden",
           description:
             "A stunning floral paradise with over 50 million blooming flowers arranged in intricate designs, creating a colourful and enchanting landscape.",
         },
         {
           id: "touristAttraction3",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/dubai/attraction/Al Fahidi Historical Neighbourhood.jpg",
           title: "Al Fahidi Historical Neighbourhood",
           description:
             "A charming area showcasing traditional Emirati architecture, narrow alleys, and cultural sites, offering a glimpse into Dubais past and heritage.",
         },
         {
           id: "touristAttraction4",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/dubai/attraction/Ras Al Khor Wildlife Sanctuary.jpg",
           title: "Ras Al Khor Wildlife Sanctuary",
           description:
             "A natural wetland reserve home to diverse bird species, including flamingos, providing a serene escape and an opportunity for bird watching.",
         },
         {
           id: "touristAttraction5",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/dubai/attraction/Etihad Museum.jpg",
           title: "Etihad Museum",
           description:
             "A modern museum located in Jumeirah, dedicated to the history of the United Arab Emirates, featuring interactive exhibits and artefacts from the countrys founding.",
         },
         {
           id: "touristAttraction6",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/dubai/attraction/The Green Planet.jpg",
           title: "The Green Planet",
           description:
             "An indoor tropical rainforest in City Walk, housing over 3,000 plants and animals, offering an immersive educational experience about biodiversity and ecosystems.",
@@ -569,7 +569,7 @@ export const cityData = {
     banner: {
       title: "New York Chauffeur Service",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
-      bannerImage: "/rolnew/cities/london.png",
+      bannerImage: "/images/city/new-york/banner/newyork_city.png",
     },
     trustedPartnersData: {
       img: "/rolnew/cities/trust-banner.svg",
@@ -608,21 +608,21 @@ export const cityData = {
     landMarks: [
       {
         id: "land1",
-        src: "/images/city/london/buckingham.png",
+        src: "/images/city/new-york/landmarks/Burj.jpg",
         title: "Statue of Liberty",
         description:
           "An iconic symbol of freedom, the Statue of Liberty stands on Liberty Island, welcoming visitors with its rich history and breathtaking views of New York Harbor.",
       },
       {
         id: "land2",
-        src: "/images/city/london/parliament.png",
+        src: "/images/city/new-york/landmarks/Burj.jpg",
         title: "Times Square",
         description:
           "Known as The 'Crossroads of the World', Times Square dazzles with its neon lights, bustling atmosphere, Broadway theatres, and countless entertainment options.",
       },
       {
         id: "land3",
-        src: "/images/city/london/landmarks/tower-of-london.jpg",
+        src: "/images/city/new-york/landmarks/Burj.jpg",
         title: "Central Park",
         description:
           "A sprawling urban oasis, Central Park offers lush landscapes, recreational activities, and landmarks like Bethesda Terrace, making it a beloved retreat in the heart of Manhattan.",
@@ -634,42 +634,42 @@ export const cityData = {
       list: [
         {
           id: "touristAttraction1",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/new-york/attraction/Hill.jpg",
           title: "The High Line",
           description:
             "An elevated park built on a historic freight rail line, offering unique views of the city, art installations, and lush gardens.",
         },
         {
           id: "touristAttraction2",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/new-york/attraction/Hill.jpg",
           title: "The Cloiseters",
           description:
             "Part of the Metropolitan Museum of Art, this museum in Fort Tryon Park features medieval European art and architecture in a serene, garden-like setting.",
         },
         {
           id: "touristAttraction3",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/new-york/attraction/Hill.jpg",
           title: "Roosevelt Island",
           description:
             "A narrow island in the East River with historic sites, scenic views, and the unique Roosevelt Island Tramway offering panoramic cityscapes.",
         },
         {
           id: "touristAttraction4",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/new-york/attraction/Hill.jpg",
           title: "Green-Wood Cemetery",
           description:
             "A National Historic Landmark in Brooklyn, known for its beautiful landscapes, Gothic architecture, and as the final resting place of notable figures.",
         },
         {
           id: "touristAttraction5",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/new-york/attraction/Hill.jpg",
           title: "City Hall Station",
           description:
             "An abandoned subway station beneath City Hall, admired for its stunning early 20th-century architecture and intricate tilework, accessible through guided tours.",
         },
         {
           id: "touristAttraction6",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/new-york/attraction/Hill.jpg",
           title: "Fort Tryon Park",
           description:
             "Overlooking the Hudson River, this park offers peaceful walking paths, gardens, and the Heather Garden, with spectacular views of the George Washington Bridge.",
@@ -852,7 +852,7 @@ export const cityData = {
     banner: {
       title: "Paris Chauffeur Service",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
-      bannerImage: "/rolnew/cities/paris-banner.jpg",
+      bannerImage: "/images/city/paris/banner/paris_city.png",
     },
 
     trustedPartnersData: {
@@ -893,21 +893,21 @@ export const cityData = {
     landMarks: [
       {
         id: "land1",
-        src: "/images/city/paris/eiffel_tower.png",
+        src: "/images/city/paris/landmarks/Burj.jpg",
         title: "Eiffel Tower",
         description:
           "An iconic symbol of Paris, offering breathtaking city views from its observation decks and a stunning light display at night",
       },
       {
         id: "land2",
-        src: "/images/city/paris/louvre.png",
+        src: "/images/city/paris/landmarks/Burj.jpg",
         title: "Louvre Museum",
         description:
           "Home to the famous Mona Lisa, this world-renowned museum houses an extensive collection of art and historical artefacts.",
       },
       {
         id: "land3",
-        src: "/images/city/paris/notre_dame.png",
+        src: "/images/city/paris/landmarks/Burj.jpg",
         title: "Notre-Dame Cathedral",
         description:
           "A masterpiece of Gothic architecture, featuring stunning stained glass windows and offering a climb to the towers for panoramic views",
@@ -920,42 +920,42 @@ export const cityData = {
       list: [
         {
           id: "touristAttraction1",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/paris/attraction/Hill.jpg",
           title: "Musée de l'Orangerie",
           description:
             "This museum features Monet’s Water Lilies and other Impressionist and Post-Impressionist masterpieces in a serene, intimate setting.",
         },
         {
           id: "touristAttraction2",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/paris/attraction/Hill.jpg",
           title: "Parc des Buttes-Chaumont",
           description:
             "A picturesque park with dramatic cliffs, waterfalls, and a lake, offering a peaceful escape from the city's hustle and bustle.",
         },
         {
           id: "touristAttraction3",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/paris/attraction/Hill.jpg",
           title: "Musée Rodin",
           description:
             "Dedicated to the works of sculptor Auguste Rodin, this museum features beautiful sculptures in both indoor galleries and a lush garden.",
         },
         {
           id: "touristAttraction4",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/paris/attraction/Hill.jpg",
           title: "Promenade Plantée",
           description:
             "An elevated park built on a former railway line, offering scenic walks with lush greenery and unique perspectives of Paris.",
         },
         {
           id: "touristAttraction5",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/paris/attraction/Hill.jpg",
           title: "La Pagode",
           description:
             "A historic, beautifully restored Asian-style cinema that offers a unique cultural experience with its intricate architecture and curated film selections.",
         },
         {
           id: "touristAttraction6",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/paris/attraction/Hill.jpg",
           title: "Musée de Montmartre",
           description:
             "Located in a historic building in Montmartre, this museum explores the area's artistic history and offers lovely gardens with city views.",
@@ -1129,7 +1129,7 @@ export const cityData = {
     banner: {
       title: "Tokyo Chauffeur Service",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
-      bannerImage: "/rolnew/cities/london.png",
+      bannerImage: "/images/city/tokyo/banner/tokyo_city.png",
     },
     trustedPartnersData: {
       img: "/rolnew/cities/trust-banner.svg",
@@ -1168,21 +1168,21 @@ export const cityData = {
     landMarks: [
       {
         id: "land1",
-        src: "/images/city/london/buckingham.png",
+        src: "/images/city/tokyo/landmarks/Burj.jpg",
         title: "Tokyo Tower",
         description:
           "An iconic symbol of Japan, offering panoramic views of Tokyo from its observation decks and vibrant illumination at night.",
       },
       {
         id: "land2",
-        src: "/images/city/london/parliament.png",
+        src: "/images/city/tokyo/landmarks/Burj.jpg",
         title: "Senso-ji Temple",
         description:
           "Tokyo’s oldest and most significant temple, featuring stunning architecture, a bustling marketplace, and cultural ceremonies in the Asakusa district.",
       },
       {
         id: "land3",
-        src: "/images/city/london/landmarks/tower-of-london.jpg",
+        src: "/images/city/tokyo/landmarks/Burj.jpg",
         title: "Shibuya Crossing",
         description:
           "Famous for its bustling pedestrian scramble, Shibuya Crossing is a vibrant and iconic intersection embodying Tokyo's dynamic urban energy.",
@@ -1194,42 +1194,42 @@ export const cityData = {
       list: [
         {
           id: "touristAttraction1",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/tokyo/attraction/Hill.jpg",
           title: "Yanaka Ginza",
           description:
             "A charming shopping street in an old Tokyo neighbourhood, offering traditional shops, eateries, and a nostalgic atmosphere.",
         },
         {
           id: "touristAttraction2",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/tokyo/attraction/Hill.jpg",
           title: "Nezu Shrine",
           description:
             "A tranquil and historic Shinto shrine known for its beautiful azalea garden and vibrant torii gates.",
         },
         {
           id: "touristAttraction3",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/tokyo/attraction/Hill.jpg",
           title: "Kiyosumi Teien",
           description:
             "A traditional Japanese garden featuring serene ponds, carefully manicured landscapes, and picturesque stone bridges.",
         },
         {
           id: "touristAttraction4",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/tokyo/attraction/Hill.jpg",
           title: "Tokyo Daibutsu",
           description:
             "A large bronze Buddha statue located in Jorenji Temple, offering a peaceful retreat and spiritual ambience",
         },
         {
           id: "touristAttraction5",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/tokyo/attraction/Hill.jpg",
           title: "Koishikawa Korakuen",
           description:
             "One of Tokyo's oldest and most beautiful gardens, showcasing traditional Japanese landscape design and seasonal flora.",
         },
         {
           id: "touristAttraction6",
-          src: "/images/city/london/tourist.png",
+          src: "/images/city/tokyo/attraction/Hill.jpg",
           title: "Nakamise Shopping Street",
           description:
             "A historic shopping street leading to Senso-ji Temple, lined with stalls selling traditional snacks, souvenirs, and crafts.",

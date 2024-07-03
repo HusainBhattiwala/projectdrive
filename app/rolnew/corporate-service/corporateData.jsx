@@ -34,6 +34,7 @@ export const corporateData = {
 
   topPicksData: {
     title: 'Corporate Transfers',
+    showAddress : false,
     search: {
       dropdown1: 'Choose Your City',
       dropdown2: 'Enter Event Name',

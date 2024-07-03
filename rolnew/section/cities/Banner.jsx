@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Button from 'rolnew/ui/Button';
 
-function Banner({ pageData }) {
+function Banner({ bannerData }) {
   const [width, setWidth] = useState(1200);
   const [height, setHeight] = useState(1000);
 
@@ -18,13 +18,13 @@ function Banner({ pageData }) {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, []);  
 
   return (
     <div
       className='relative mt-[72px] w-full flex flex-col items-center md:min-h-[580px] lg:max-h-[90svh] 2xl:min-h-[92svh] max-h-fit bg-[#11202d] sm:bg-cover bg-contain sm:bg-no-repeat sm:bg-center bg-left sm:pt-12 pt-4 sm:min-h-[700px] min-h-[505px]'
       style={{
-        backgroundImage: width > 640 && `url(${pageData?.banner?.bannerImage})`,
+        backgroundImage: width > 640 && `url(${bannerData?.bannerImage})`,
       }}
     >
       <div className='sm:city-banner-gradient city-banner-mobile-gradient sm:opacity-90 absolute top-0 left-0 right-0 h-[250px] xl:min-h-[400px] md:min-h-[420px] lg:min-h-[250px] z-[6]' />
@@ -32,10 +32,10 @@ function Banner({ pageData }) {
       <div className='text-center flex flex-col h-full flex-grow w-full'>
         <div className='z-[7] px-4'>
           <h1 className='lg:text-5xl text-3xl font-semibold text-white drop-shadow-lg mt-3'>
-            {pageData?.banner?.title}
+            {bannerData?.title}
           </h1>
           <p className='sm:text-lg text-base font-medium text-[#E5EAFA] sm:mt-1 sm:leading-normal leading-tight'>
-            {pageData?.banner?.subTitle}
+            {bannerData?.subTitle}
           </p>
         </div>
         <div className='sm:pt-10 relative flex flex-col flex-grow sm:justify-start justify-end bg-cover'>
@@ -43,7 +43,7 @@ function Banner({ pageData }) {
             className='h-full w-full bg-contain z-[1] absolute top-0 bg-contain bg-no-repeat'
             style={{
               backgroundImage:
-                width <= 640 && `url(${pageData?.banner?.bannerImage})`,
+                width <= 640 && `url(${bannerData?.bannerImage})`,
             }}
           />
 

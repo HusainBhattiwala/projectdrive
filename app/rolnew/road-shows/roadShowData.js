@@ -34,6 +34,7 @@ export const roadShowData = {
 
   topPicksData: {
     title: 'Roadshows',
+    showAddress : false,
     search: {
       dropdown1: 'Choose Your City',
       dropdown2: 'Choose Roadshows',
@@ -112,7 +113,7 @@ export const roadShowData = {
       },
       {
         title:
-                    'RolDrive’s roadshow chauffeur service covers the following locations:',
+        'RolDrive’s roadshow chauffeur service covers the following locations:',
         desc: 'Roadshow transfer from London, Roadshow transfer from Dubai, Roadshow transfer from Paris, Roadshow transfer from New York, Roadshow transfer from Tokyo',
       },
       {

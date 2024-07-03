@@ -796,7 +796,7 @@ function FleetPage() {
 
       const payloadData = {
         journey,
-        data: pickupdate,
+        date: pickupdate,
         time: pickuptime,
         pickup: pickupaddress,
         dropOff: dropaddress,

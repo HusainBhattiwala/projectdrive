@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import "./css/fleet.css";
 import Link from "next/link";
 
-function EachSlide({ id, cityName, image, countryCode, address, route }) {
+function EachSlide({ id, cityName, image, countryCode, address, route, showAddress }) {
   return (
     <div
       className="w-full mx-6 h-full group transition ease-in-out delay-150"
@@ -38,7 +38,7 @@ function EachSlide({ id, cityName, image, countryCode, address, route }) {
         </div>
         <p className="text-[#B2B2B2] text-sm font-normal">{cityName}</p>
       </div>
-      {address && (
+      {(address && showAddress) &&  (
         <div className="flex gap-x-4 p-1 items-center mt-1 shrink-0">
           <svg
             width="16"
@@ -70,7 +70,7 @@ function EachSlide({ id, cityName, image, countryCode, address, route }) {
   );
 }
 
-function CountryList({ countryList, bg }) {
+function CountryList({ countryList, bg , showAddress = true }) {
   const [width, setWidth] = useState();
   useEffect(() => {
     function handleResize() {
@@ -141,7 +141,7 @@ function CountryList({ countryList, bg }) {
             )}
             {countryList?.map((item) => (
               <SwiperSlide key={item.id}>
-                <EachSlide {...item} />
+                <EachSlide {...item} showAddress={showAddress}  />
               </SwiperSlide>
             ))}
             {!isSmallList && (
@@ -187,7 +187,7 @@ function CountryList({ countryList, bg }) {
                   {country?.cityName}
                 </p>
               </div>
-              {country?.address && (
+              {(country?.address && showAddress) && (
                 <div className="flex gap-x-4 items-center mt-1 shrink-0">
                   <svg
                     width="16"

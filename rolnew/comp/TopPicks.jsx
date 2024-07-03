@@ -57,7 +57,7 @@ const countryList = [
 
 const items = ['about', 'services'];
 
-function TopPicks({ scrollRef, airportList, topPicksData, show = false }) {
+function TopPicks({ scrollRef, airportList, topPicksData, show = false, }) {
   const { openModal } = useContext(ModalContext);
   return (
     <>
@@ -143,6 +143,7 @@ function TopPicks({ scrollRef, airportList, topPicksData, show = false }) {
 
         <CountryList
           countryList={topPicksData ? topPicksData?.list : countryList}
+          showAddress={false}
         />
 
         <Button
