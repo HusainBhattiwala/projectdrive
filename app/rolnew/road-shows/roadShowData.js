@@ -3,7 +3,7 @@ export const roadShowData = {
     mainTitle: 'Roadshow Transfers',
     mainDescription:
       'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/banners/roadshow (1).jpg',
+    backgroundImage: '/rolnew/services/banners/roadshow.jpg',
     title: 'Do you want to customise your booking?',
     description:
       'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
@@ -34,7 +34,7 @@ export const roadShowData = {
 
   topPicksData: {
     title: 'Roadshows',
-    showAddress : false,
+    showAddress: false,
     search: {
       dropdown1: 'Choose Your City',
       dropdown2: 'Choose Roadshows',
@@ -109,14 +109,13 @@ export const roadShowData = {
     data: [
       {
         title: 'What are RolDrive’s roadshow transfer coverage zones?',
-<<<<<<< HEAD
         desc: 'RolDrive provides its roadshow chauffeur service in the following locations. Our professional and discreet chauffeurs will take you to your locations in absolute comfort and style.',
       },
       {
         title:
-        'RolDrive’s roadshow chauffeur service covers the following locations:',
+          'RolDrive’s roadshow chauffeur service covers the following locations:',
         desc: 'Roadshow transfer from London, Roadshow transfer from Dubai, Roadshow transfer from Paris, Roadshow transfer from New York, Roadshow transfer from Tokyo',
-=======
+
         desc: (
           <p className="text-[#B2B2B2]">
             RolDrive provides its roadshow chauffeur service in the following
@@ -152,7 +151,7 @@ export const roadShowData = {
             <br />
           </p>
         ),
->>>>>>> husain
+
       },
       {
         title: 'What is a roadshow chauffeur service?',
