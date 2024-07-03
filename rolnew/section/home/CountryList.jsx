@@ -83,39 +83,41 @@ function CountryList({ countryList, bg }) {
     };
   }, []);
 
+  const isSmallList = countryList?.length <= 4;
+
   return (
     <div className="max-w-[1440px]">
       {width > 768 ? (
-        <div className="w-full relative presence-slider py-6">
+        <div className={`w-full relative presence-slider py-6 ${isSmallList ? 'flex justify-center' : ''}`}>
           <Swiper
             breakpoints={{
               560: {
-                slidesPerView: 3,
+                slidesPerView: isSmallList ? countryList.length : 3,
                 spaceBetween: 0,
               },
               640: {
-                slidesPerView: 3,
+                slidesPerView: isSmallList ? countryList.length : 3,
                 spaceBetween: 0,
               },
               768: {
-                slidesPerView: 3,
+                slidesPerView: isSmallList ? countryList.length : 3,
                 spaceBetween: 0,
               },
               900: {
-                slidesPerView: 4,
+                slidesPerView: isSmallList ? countryList.length : 4,
                 spaceBetween: 0,
               },
               1260: {
-                slidesPerView: 4,
+                slidesPerView: isSmallList ? countryList.length : 4,
                 spaceBetween: 0,
               },
               1360: {
-                slidesPerView: 5,
+                slidesPerView: isSmallList ? countryList.length : 5,
                 spaceBetween: 0,
               },
             }}
-            loop
-            autoplay
+            loop={!isSmallList}
+            autoplay={!isSmallList}
             pagination={{
               el: ".swiper-pagination",
             }}
@@ -125,31 +127,35 @@ function CountryList({ countryList, bg }) {
             }}
             modules={[Autoplay, Navigation]}
           >
-            <div
-              className={`swiper-btn-prev absolute -left-14 top-2/4 -translate-y-2/4 z-10 w-[60px] h-[60px] ${bg} border ${
-                bg === "bg-[#223544]" ? "border-gray-600" : "border-[#223544]"
-              } rounded-full flex items-center justify-center cursor-pointer`}
-            >
-              <img
-                alt="go-prev"
-                src="/rolnew/global/icons/arrow-left-primary.svg"
-              />
-            </div>
+            {!isSmallList && (
+              <div
+                className={`swiper-btn-prev absolute -left-14 top-2/4 -translate-y-2/4 z-10 w-[60px] h-[60px] ${bg} border ${
+                  bg === "bg-[#223544]" ? "border-gray-600" : "border-[#223544]"
+                } rounded-full flex items-center justify-center cursor-pointer`}
+              >
+                <img
+                  alt="go-prev"
+                  src="/rolnew/global/icons/arrow-left-primary.svg"
+                />
+              </div>
+            )}
             {countryList?.map((item) => (
               <SwiperSlide key={item.id}>
                 <EachSlide {...item} />
               </SwiperSlide>
             ))}
-            <div
-              className={`swiper-btn-next absolute -right-14 top-2/4 -translate-y-2/4 z-10 w-[60px] h-[60px] ${bg} border ${
-                bg === "bg-[#223544]" ? "border-gray-600" : "border-[#223544]"
-              } rounded-full flex items-center justify-center cursor-pointer`}
-            >
-              <img
-                alt="go-prev"
-                src="/rolnew/global/icons/arrow-right-primary.svg"
-              />
-            </div>
+            {!isSmallList && (
+              <div
+                className={`swiper-btn-next absolute -right-14 top-2/4 -translate-y-2/4 z-10 w-[60px] h-[60px] ${bg} border ${
+                  bg === "bg-[#223544]" ? "border-gray-600" : "border-[#223544]"
+                } rounded-full flex items-center justify-center cursor-pointer`}
+              >
+                <img
+                  alt="go-prev"
+                  src="/rolnew/global/icons/arrow-right-primary.svg"
+                />
+              </div>
+            )}
           </Swiper>
         </div>
       ) : (
@@ -215,6 +221,8 @@ function CountryList({ countryList, bg }) {
       )}
     </div>
   );
-}
+
+};
+
 
 export default CountryList;
