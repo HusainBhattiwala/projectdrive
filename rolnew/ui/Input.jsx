@@ -87,7 +87,7 @@ export default function Input({
                 !disabled && ""
               } focus:outline-none focus:bg-opacity-100 !rounded-lg py-3 placeholder:text-sm ${
                 leadingIcon || inputIcon ? "sm:px-10 px-0 pl-9 pr-4" : "px-6"
-              } bg-[#FFFFFF0A] bg-opacity-85 !text-[#B2B2B2] border !border-[#E1E1E140] overflow-ellipsis autofill:!bg-[#223544D9] ${
+              } bg-[#223544D9] bg-opacity-85 !text-[#B2B2B2] border !border-[#E1E1E140] overflow-ellipsis autofill:!bg-[#223544D9] ${
                 inputIcon && "pr-12"
               } ${className}`
             )}
