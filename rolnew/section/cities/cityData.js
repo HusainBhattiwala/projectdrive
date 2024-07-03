@@ -607,21 +607,21 @@ export const cityData = {
     landMarks: [
       {
         id: "land1",
-        src: "/images/city/new-york/landmarks/Burj.jpg",
+        src: "/images/city/new-york/landmarks/Statue-of-Liberty.jpg",
         title: "Statue of Liberty",
         description:
           "An iconic symbol of freedom, the Statue of Liberty stands on Liberty Island, welcoming visitors with its rich history and breathtaking views of New York Harbor.",
       },
       {
         id: "land2",
-        src: "/images/city/new-york/landmarks/Burj.jpg",
+        src: "/images/city/new-york/landmarks/Time-Square.jpg",
         title: "Times Square",
         description:
           "Known as The 'Crossroads of the World', Times Square dazzles with its neon lights, bustling atmosphere, Broadway theatres, and countless entertainment options.",
       },
       {
         id: "land3",
-        src: "/images/city/new-york/landmarks/Burj.jpg",
+        src: "/images/city/new-york/landmarks/Central-Park.jpg",
         title: "Central Park",
         description:
           "A sprawling urban oasis, Central Park offers lush landscapes, recreational activities, and landmarks like Bethesda Terrace, making it a beloved retreat in the heart of Manhattan.",

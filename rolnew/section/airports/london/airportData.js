@@ -3,7 +3,7 @@ export const airportData = {
     banner: {
       title: 'Healthrow Airport Transfer',
       subTitle: 'Arrive in style, stress free and rejuvenated',
-      bannerImage: '/rolnew/airports/london/heathrow-banner1.jpg',
+      bannerImage: '/rolnew/airports/london/heathrow-banner.jpg',
     },
     aboutData: {
       img: '/rolnew/airports/about/About Healthrow Airport.jpg',
