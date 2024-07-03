@@ -3,12 +3,9 @@ export const cityData = {
     banner: {
       title: "London Chauffeur Service",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
-<<<<<<< HEAD
       bannerImage: "/images/city/london/banner/london_city.png",
-=======
-      bannerImage: "/rolnew/cities/london_city.png",
->>>>>>> husain
     },
+    
     trustedPartnersData: {
       img: "/rolnew/cities/trust-banner.svg",
       data: [

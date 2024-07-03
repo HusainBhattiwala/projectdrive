@@ -18,7 +18,7 @@ export const airportData = {
       desc: 'Heathrow Airport, one of the worlds busiest airports, serves as a pivotal hub for the thriving chauffeur business, offering luxurious, personalised transportation solutions.',
       cardData: [
         {
-          img: '/rolnew/global/card/heathrow/Location.jpg',
+          img: '/rolnew/global/card/heathrow/Location1.jpg',
           title: 'Location',
           cardDesc:
             'Heathrow is 14 miles west of Central London. It is located 3 miles west of Hounslow, 3 miles south of Hayes, and 3 miles north-east of Staines-upon-Thames.',
