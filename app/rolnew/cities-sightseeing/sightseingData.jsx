@@ -34,7 +34,7 @@ export const sightseeingData = {
 
   topPicksData: {
     title: 'City Sightseeing',
-    showAddress : false,
+    showAddress: false,
     search: {
       dropdown1: 'Choose Your City',
       dropdown2: 'Enter Event Name',

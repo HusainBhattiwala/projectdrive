@@ -35,13 +35,8 @@ function CityPage() {
   }, [pathName, router]);
   return (
     <>
-<<<<<<< HEAD
       <Banner bannerData={pageData.banner} />
-      <div className='bg-[#11202D] py-12'>
-=======
-      <Banner pageData={pageData} />
       <div className="bg-[#11202D] py-12">
->>>>>>> husain
         <TrustedPartners
           img={pageData?.trustedPartnersData?.img}
           trustedPartnersData={pageData?.trustedPartnersData?.data}

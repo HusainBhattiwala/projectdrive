@@ -34,7 +34,7 @@ export const intercityData = {
 
   topPicksData: {
     title: 'Intercity Transfers',
-    showAddress : false,
+    showAddress: false,
     search: {
       dropdown1: 'Choose Starting Location',
       dropdown2: 'Choose Destination',

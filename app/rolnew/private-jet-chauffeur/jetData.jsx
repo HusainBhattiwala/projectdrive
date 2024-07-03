@@ -34,7 +34,7 @@ export const jetData = {
 
   topPicksData: {
     title: 'Private Jet Chauffeur',
-    showAddress : false,
+    showAddress: false,
     search: {
       dropdown1: 'Choose Your City',
       dropdown2: 'Enter Event Name',
