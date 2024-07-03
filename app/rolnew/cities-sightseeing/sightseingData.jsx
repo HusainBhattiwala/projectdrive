@@ -1,10 +1,12 @@
 export const sightseeingData = {
   bannerData: {
     mainTitle: 'City Sightseeing',
-    mainDescription: 'Your exclusive and dependable chauffeur service indulgence.',
+    mainDescription:
+      'Your exclusive and dependable chauffeur service indulgence.',
     backgroundImage: '/rolnew/services/banners/Sightseeing.jpg',
     title: 'Do you want to customise your booking?',
-    description: 'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
+    description:
+      'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
   },
 
   luxuriousServiceData: [
@@ -98,7 +100,6 @@ export const sightseeingData = {
       desc: 'RolDrives vast fleet includes a wide array of luxury vehicles ranging from elegant sedans and spacious SUVs to top-of-the-line limousines, ensuring a perfect match for any preference or occasion.',
     },
   ],
-
   servicesData: {
     heading: {
       mainTitle: 'About City Sightseeing',
@@ -106,38 +107,99 @@ export const sightseeingData = {
     data: [
       {
         title:
-                    'What are RolDrive’s Sightseeing Chauffeur Service coverage zones?',
-        desc: 'RolDrive provides its sightseeing chauffeur service in the following locations. Our knowledgeable chauffeurs will show you the best sights in town along with a detailed tour across every attraction.',
+          'What are RolDrive’s Sightseeing Chauffeur Service coverage zones?',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            RolDrive provides its sightseeing chauffeur service in the following
+            locations. Our knowledgeable chauffeurs will show you the best
+            sights in town along with a detailed tour across every attraction.
+          </p>
+        ),
       },
       {
         title:
-                    'RolDrive’s sightseeing chauffeur service covers the following locations:',
-        desc: 'London Sightseeing, Dubai Sightseeing, Paris Sightseeing, New York Sightseeing, Tokyo Sightseeing',
+          'RolDrive’s sightseeing chauffeur service covers the following locations:',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            <span className="ml-3 text-[#B2B2B2]">1. London Sightseeing</span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">2. Dubai Sightseeing</span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">3. Paris Sightseeing</span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">4. New York Sightseeing</span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">5. Tokyo Sightseeing</span>
+          </p>
+        ),
       },
       {
         title: 'What is a city sightseeing chauffeur service?',
-        desc: 'A city sightseeing chauffeur service offers a luxurious and personalised way to explore the best sightseeing places in the world. With this service, travellers can enjoy the comfort of a private vehicle and the expertise of a professional chauffeur who knows the city well. This allows visitors to experience the most iconic landmarks, cultural sites, and hidden gems without the stress of navigating unfamiliar public transport systems or dealing with the hassle of renting a car. The service is tailored to the preferences and interests of the traveller, ensuring a flexible itinerary that maximises the enjoyment of each city’s unique attractions and experiences.',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            A city sightseeing chauffeur service offers a luxurious and
+            personalised way to explore the best sightseeing places in the
+            world. With this service, travellers can enjoy the comfort of a
+            private vehicle and the expertise of a professional chauffeur who
+            knows the city well. This allows visitors to experience the most
+            iconic landmarks, cultural sites, and hidden gems without the stress
+            of navigating unfamiliar public transport systems or dealing with
+            the hassle of renting a car. The service is tailored to the
+            preferences and interests of the traveller, ensuring a flexible
+            itinerary that maximises the enjoyment of each city’s unique
+            attractions and experiences.
+          </p>
+        ),
       },
       {
         title: 'Why hire a city sightseeing chauffeur service?',
-        desc: 'Hiring a city sightseeing chauffeur service offers a luxurious and personalized way to explore the best sightseeing places in the world. With a professional chauffeur at the helm, you can enjoy a stress-free journey through iconic landscapes and historical landmarks, without worrying about navigation or parking. Additionally, travelling in an elegant sedan not only enhances your comfort during the tour but also adds a touch of sophistication to your travel photos, making them look even more impressive. This service allows you to tailor your itinerary to suit your interests, ensuring that you dont miss any must-see attractions, all while experiencing the ultimate in convenience and style.',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            Hiring a city sightseeing chauffeur service offers a luxurious and
+            personalized way to explore the best sightseeing places in the
+            world. With a professional chauffeur at the helm, you can enjoy a
+            stress-free journey through iconic landscapes and historical
+            landmarks, without worrying about navigation or parking.
+            Additionally, travelling in an elegant sedan not only enhances your
+            comfort during the tour but also adds a touch of sophistication to
+            your travel photos, making them look even more impressive. This
+            service allows you to tailor your itinerary to suit your interests,
+            ensuring that you don't miss any must-see attractions, all while
+            experiencing the ultimate in convenience and style.
+          </p>
+        ),
       },
       {
         title:
-                    'What vehicles are offered for a city sightseeing chauffeur service?',
-        desc: 'For city sightseeing chauffeur services, particularly when visiting the best sightseeing places in the world, a range of vehicles is typically offered to match the diverse needs and preferences of travellers. These vehicles include luxury sedans, ideal for couples or small groups looking for a comfortable and intimate experience. SUVs are available for those needing a bit more space, perhaps for families or medium-sized groups. For larger groups, executive vans can be used, providing ample space without sacrificing comfort. Each vehicle is chosen for its ability to offer a clear view of the city’s landmarks, smooth ride, and comfort features that enhance the sightseeing experience, making every moment enjoyable as you explore some of the world’s most iconic locations.',
+          'What vehicles are offered for a city sightseeing chauffeur service?',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            For city sightseeing chauffeur services, particularly when visiting
+            the best sightseeing places in the world, a range of vehicles is
+            typically offered to match the diverse needs and preferences of
+            travellers. These vehicles include luxury sedans, ideal for couples
+            or small groups looking for a comfortable and intimate experience.
+            SUVs are available for those needing a bit more space, perhaps for
+            families or medium-sized groups. For larger groups, executive vans
+            can be used, providing ample space without sacrificing comfort. Each
+            vehicle is chosen for its ability to offer a clear view of the
+            city’s landmarks, smooth ride, and comfort features that enhance the
+            sightseeing experience, making every moment enjoyable as you explore
+            some of the world’s most iconic locations.
+          </p>
+        ),
       },
     ],
   },
 
   faqData: {
     title:
-            'Frequently Asked Questions About City Sightseeing Chauffeur Service',
+      'Frequently Asked Questions About City Sightseeing Chauffeur Service',
     data: [
       {
         id: 0,
         question:
-                    "What cities are covered by RolDrive's city sightseeing service?",
+          "What cities are covered by RolDrive's city sightseeing service?",
         ans: "RolDrive offers city sightseeing services in major cities worldwide such as London, Paris, New York, Dubai and Tokyo, focusing on providing comprehensive tours of each location's key attractions and hidden gems.",
       },
       {
@@ -158,13 +220,13 @@ export const sightseeingData = {
       {
         id: 4,
         question:
-                    'Are RolDrives chauffeurs knowledgeable about local attractions?',
+          'Are RolDrives chauffeurs knowledgeable about local attractions?',
         ans: 'Yes, RolDrives chauffeurs are well-informed about local history and attractions, enhancing your tour with insightful commentary.',
       },
       {
         id: 5,
         question:
-                    'Is there a limit to the number of people who can join a city sightseeing tour?',
+          'Is there a limit to the number of people who can join a city sightseeing tour?',
         ans: 'The number of participants depends on the vehicle size, with options available for solo travellers up to larger groups.',
       },
       {
@@ -185,7 +247,7 @@ export const sightseeingData = {
       {
         id: 9,
         question:
-                    'What safety measures does RolDrive implement during city sightseeing tours?',
+          'What safety measures does RolDrive implement during city sightseeing tours?',
         ans: 'RolDrive ensures all vehicles are meticulously maintained and chauffeurs are trained to provide a safe, secure, and comfortable sightseeing experience.',
       },
     ],

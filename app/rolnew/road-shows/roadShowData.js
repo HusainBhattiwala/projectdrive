@@ -2,11 +2,11 @@ export const roadShowData = {
   bannerData: {
     mainTitle: 'Roadshow Transfers',
     mainDescription:
-            'Your exclusive and dependable chauffeur service indulgence.',
+      'Your exclusive and dependable chauffeur service indulgence.',
     backgroundImage: '/rolnew/services/banners/roadshow (1).jpg',
     title: 'Do you want to customise your booking?',
     description:
-            'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
+      'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
   },
 
   luxuriousServiceData: [
@@ -108,12 +108,41 @@ export const roadShowData = {
     data: [
       {
         title: 'What are RolDrive’s roadshow transfer coverage zones?',
-        desc: 'RolDrive provides its roadshow chauffeur service in the following locations. Our professional and discreet chauffeurs will take you to your locations in absolute comfort and style.',
-      },
-      {
-        title:
-                    'RolDrive’s roadshow chauffeur service covers the following locations:',
-        desc: 'Roadshow transfer from London, Roadshow transfer from Dubai, Roadshow transfer from Paris, Roadshow transfer from New York, Roadshow transfer from Tokyo',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            RolDrive provides its roadshow chauffeur service in the following
+            locations. Our professional and discreet chauffeurs will take you to
+            your locations in absolute comfort and style.
+            {' '}
+            <br />
+            {' '}
+            <br />
+            <strong className="text-[#B2B2B2]">
+              RolDrive’s roadshow chauffeur service covers the following:
+            </strong>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">
+              1. Roadshow transfer from London
+            </span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">
+              2. Roadshow transfer from Dubai
+            </span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">
+              3. Roadshow transfer from New York
+            </span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">
+              4. Roadshow transfer from Paris
+            </span>
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">
+              5. Roadshow transfer from Tokyo
+            </span>
+            <br />
+          </p>
+        ),
       },
       {
         title: 'What is a roadshow chauffeur service?',
@@ -146,13 +175,13 @@ export const roadShowData = {
       {
         id: 2,
         question:
-                    'What types of vehicles are available for roadshow transfers?',
+          'What types of vehicles are available for roadshow transfers?',
         ans: 'RolDrive offers a range of vehicles for roadshow transfers, including luxury sedans, executive SUVs, and minibuses, catering to different group sizes and preferences.',
       },
       {
         id: 3,
         question:
-                    'Can RolDrive handle roadshow transfers across different cities?',
+          'Can RolDrive handle roadshow transfers across different cities?',
         ans: 'Yes, RolDrive is equipped to manage roadshow transfers across multiple cities, coordinating complex logistics to maintain a consistent, high-quality service.',
       },
       {
@@ -173,7 +202,7 @@ export const roadShowData = {
       {
         id: 7,
         question:
-                    'How does RolDrive ensure punctuality for roadshow transfers?',
+          'How does RolDrive ensure punctuality for roadshow transfers?',
         ans: 'Using advanced GPS tracking and real-time traffic monitoring, RolDrive plans the best routes and departure times to ensure punctuality for all roadshow stops.',
       },
       {

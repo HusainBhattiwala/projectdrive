@@ -206,7 +206,28 @@ export default function Page() {
       },
       {
         title: 'How to go about booking Best Airport Transfers?',
-        desc: "1. Visit the Website or App: Access RolDrive's platform either through our official website or by downloading our mobile app.\n2. Select Your Service: Choose the airport transfer service option, indicating whether you need a pick-up, drop-off, or both to and from the airport.\n3. Provide Details: Enter your travel details, including the date, time, flight information, and the number of passengers. This ensures that the service is tailored to your schedule and requirements.\n4. Choose Your Vehicle: Select from RolDrive’s fleet of luxury vehicles based on your preference and the number of travellers to ensure a comfortable ride.\n5. Confirm and Pay: Review your booking details, confirm the information, and proceed to payment. RolDrive offers transparent pricing, so you’ll know the cost upfront.\n6. Receive Confirmation: After payment, you'll receive a booking confirmation via email, including the details of your chauffeur and vehicle.",
+        desc: (
+          <p>
+            1. Visit the Website or App: Access RolDrive's platform either
+            through our official website or by downloading our mobile app.
+            {' '}
+            <br />
+            {' '}
+            2. Select Your Service: Choose the airport transfer service
+            option, indicating whether you need a pick-up, drop-off, or both to
+            and from the airport.\n3. Provide Details: Enter your travel
+            details, including the date, time, flight information, and the
+            number of passengers. This ensures that the service is tailored to
+            your schedule and requirements.\n4. Choose Your Vehicle: Select from
+            RolDrive’s fleet of luxury vehicles based on your preference and the
+            number of travellers to ensure a comfortable ride.\n5. Confirm and
+            Pay: Review your booking details, confirm the information, and
+            proceed to payment. RolDrive offers transparent pricing, so you’ll
+            know the cost upfront.\n6. Receive Confirmation: After payment,
+            you'll receive a booking confirmation via email, including the
+            details of your chauffeur and vehicle.
+          </p>
+        ),
       },
       {
         title: 'Will RolDrive provide a Hotel to Airport Transfer?',
