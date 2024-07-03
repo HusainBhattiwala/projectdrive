@@ -237,19 +237,19 @@ export const airportData = {
       desc: 'London City Airport, located in East London, is known for its proximity to the city center, making it convenient for business travellers. It primarily serves short-haul destinations and offers quick check-in and boarding processes, enhancing overall travel efficiency.',
       cardData: [
         {
-          img: '/rolnew/global/card/card-image1.jpg',
+          img: '/rolnew/global/card/londoncity/Location.jpg',
           title: 'Location',
           cardDesc:
             'London City Airport is located approximately 6 miles east of the City of London and 3 miles east of Canary Wharf. These are the twin centres of London s financial industry, which is a major user of the airport.',
         },
         {
-          img: '/rolnew/global/card/card-image2.jpg',
+          img: '/rolnew/global/card/londoncity/Operations.jpg',
           title: 'Operations',
           cardDesc:
             'London City Airport hosts several airline operators, including British Airways, KLM, Lufthansa, Alitalia, SWISS, and Aer Lingus. These airlines offer flights to various European destinations, providing convenient options for both business and leisure travellers',
         },
         {
-          img: '/rolnew/global/card/card-image3.jpg',
+          img: '/rolnew/global/card/londoncity/Terminals.jpg',
           title: 'Terminals',
           cardDesc:
             'The London City Airport has a single, two-storey passenger terminal building with 18 gates, all hardstands. The ground floor contains the check-in desks and some service facilities as well as a staircase leading to the security control on the upper level, after which the airside waiting area and several more shops can be found.',
@@ -346,19 +346,19 @@ export const airportData = {
       desc: 'London Southend Airport, located in Essex, offers convenient access to London and the surrounding areas. Known for its efficient service and short queues, it primarily serves European destinations. Southend Airport transfers ensure a smooth and comfortable journey to and from the airport.',
       cardData: [
         {
-          img: '/rolnew/global/card/card-image1.jpg',
+          img: '/rolnew/global/card/londonsouthend/Location.jpg',
           title: 'Location',
           cardDesc:
             'The London Southend Airport is located between Southend-on-Sea and Rochford town and city centres, 1.7 miles north of Southend, in the county of Essex, 36 miles east of central London',
         },
         {
-          img: '/rolnew/global/card/card-image2.jpg',
+          img: '/rolnew/global/card/londonsouthend/Operations.jpg',
           title: 'Operations',
           cardDesc:
             'The London Southend Airport connects to locations throughout Europe, as well as some far-flung places. There are currently no long-haul flights departing from the airport. Currently, the options for airlines and flights include British Airways, EasyJet, Eurowings, Jet2 and Ryanair.',
         },
         {
-          img: '/rolnew/global/card/card-image3.jpg',
+          img: '/rolnew/global/card/londonsouthend/Terminals.jpg',
           title: 'Terminals',
           cardDesc:
             'The London Southend Airport has twelve check-ins, two floors, ten departure gates and two baggage claims. There are also several amenities such as shops and places to eat and drink.',
@@ -456,19 +456,19 @@ export const airportData = {
       desc: 'London Stansted Airport is the tertiary international airport serving London, the capital of England and the United Kingdom. It is located near Stansted Mountfitchet, Essex. London Stansted serves over 160 destinations across Europe, Asia and Africa. Stansted is a base for several European low-cost carriers.',
       cardData: [
         {
-          img: '/rolnew/global/card/card-image1.jpg',
+          img: '/rolnew/global/card/londonstandsted/Location.jpg',
           title: 'Location',
           cardDesc:
             'London Stansted Airport is located near Stansted Mountfitchet, Essex, 42 miles northeast of Central London.',
         },
         {
-          img: '/rolnew/global/card/card-image2.jpg',
+          img: '/rolnew/global/card/londonstandsted/Operations.jpg',
           title: 'Operations',
           cardDesc:
             "Stansted is a base for many European low-cost carriers. This includes being the largest base for the low cost airline Ryanair, with over 100 destinations served by the airline. Stansted's runway is also used by private companies such as the Harrods Aviation, Titan Airways, and XJet",
         },
         {
-          img: '/rolnew/global/card/card-image3.jpg',
+          img: '/rolnew/global/card/londonstandsted/Terminals.jpg',
           title: 'Terminals',
           cardDesc:
             'London Stansted Airport has one main passenger terminal. Three passenger satellites have departure gates; one is connected to the main terminal by an air bridge and the other two by the Stansted Airport Transit System people mover.',
@@ -566,19 +566,19 @@ export const airportData = {
       desc: "Luton Airport, one of London's major airports, primarily serves low-cost airlines and charter flights. It handles millions of passengers annually, connecting them to numerous European destinations. The airport features modern amenities, efficient transport links to central London, and plays a crucial role in both business and leisure travel.",
       cardData: [
         {
-          img: '/rolnew/global/card/card-image1.jpg',
+          img: '/rolnew/global/card/luton/Location.jpg',
           title: 'Location',
           cardDesc:
             'London Luton Airport is located in Luton, Bedfordshire, England, situated 1.7 miles east of the town centre and 29 miles north of Central London.',
         },
         {
-          img: '/rolnew/global/card/card-image2.jpg',
+          img: '/rolnew/global/card/luton/Operations.jpg',
           title: 'Operations',
           cardDesc:
             'Luton Airport hosts airlines like EasyJet, Ryanair, and Wizz Air, offering numerous European routes. It also handles chartered flights, catering to seasonal and holiday destinations.',
         },
         {
-          img: '/rolnew/global/card/card-image3.jpg',
+          img: '/rolnew/global/card/luton/Terminals.jpg',
           title: 'Terminals',
           cardDesc:
             'Luton Airport has a single terminal that efficiently handles all passenger flights, offering various amenities and services to accommodate millions of travellers annually.',

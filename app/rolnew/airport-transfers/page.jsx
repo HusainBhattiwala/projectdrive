@@ -158,39 +158,39 @@ export default function Page() {
       {
         id: 8,
         question: 'What happens if my flight is delayed?',
-        ans: "Many airport transfer services track flight arrivals and adjust pickup times accordingly. It's essential to notify the service about any delays to ensure they can make necessary adjustments.",
+        ans: "Many airport transfer services including RolDrive track flight arrivals and adjust pickup times accordingly. It\'s essential to notify the service about any delays to ensure they can make necessary adjustments. In the situation where you are unable to coordinate with a RolDrive chauffeur, a free 60-minute waiting time is offered.",
       },
       {
         id: 9,
         question: 'Is there a cancellation policy for airport transfers?',
-        ans: 'Yes, most providers have a cancellation policy. Check the specific terms and conditions when booking an airport transfer.',
+        ans: 'Yes, most providers including RolDrive have a cancellation policy. A full refund is offered if you cancel a RolDrive chauffeur 12 hours prior to booking time. It\'s crucial to be aware of the cancellation terms and conditions when booking an airport transfer.',
       },
-      {
-        id: 10,
-        question: 'How do I identify my driver at the airport?',
-        ans: 'Typically, your driver will have a sign displaying your name on a paging board and the transfer service logo. Some providers also provide driver contact information in advance for easy communication.',
-      },
-      {
-        id: 11,
-        question: 'Are airport transfer prices fixed, or do they vary?',
-        ans: "Prices for airport transfers can vary depending on factors such as the distance, vehicle type, and service provider. It's advisable to check the pricing details before confirming your reservation.",
-      },
-      {
-        id: 12,
-        question: 'Are tips included in the airport transfer cost?',
-        ans: 'Tips are not always included in the airport transfer cost. Clarify this with the service provider or check their guidelines so you don’t face any sudden expenses.',
-      },
-      {
-        id: 13,
-        question: 'Do airport transfer services provide child seats?',
-        ans: "Many airport transfer services offer child seats upon request. It's important to inform them in advance about the age and weight of any children travelling with you.",
-      },
-      {
-        id: 14,
-        question:
-          'Can I use airport transfer services for both domestic and international flights?',
-        ans: 'Yes, airport transfer services cater to both domestic and international flights. Ensure that you provide accurate flight information when making your reservation.',
-      },
+      // {
+      //   id: 10,
+      //   question: 'How do I identify my driver at the airport?',
+      //   ans: 'Typically, your driver will have a sign displaying your name on a paging board and the transfer service logo. Some providers also provide driver contact information in advance for easy communication.',
+      // },
+      // {
+      //   id: 11,
+      //   question: 'Are airport transfer prices fixed, or do they vary?',
+      //   ans: "Prices for airport transfers can vary depending on factors such as the distance, vehicle type, and service provider. It's advisable to check the pricing details before confirming your reservation.",
+      // },
+      // {
+      //   id: 12,
+      //   question: 'Are tips included in the airport transfer cost?',
+      //   ans: 'Tips are not always included in the airport transfer cost. Clarify this with the service provider or check their guidelines so you don’t face any sudden expenses.',
+      // },
+      // {
+      //   id: 13,
+      //   question: 'Do airport transfer services provide child seats?',
+      //   ans: "Many airport transfer services offer child seats upon request. It's important to inform them in advance about the age and weight of any children travelling with you.",
+      // },
+      // {
+      //   id: 14,
+      //   question:
+      //     'Can I use airport transfer services for both domestic and international flights?',
+      //   ans: 'Yes, airport transfer services cater to both domestic and international flights. Ensure that you provide accurate flight information when making your reservation.',
+      // },
     ],
   };
 
@@ -201,35 +201,45 @@ export default function Page() {
     data: [
       {
         title: 'What is an Airport Transfer Service?',
-        desc: "1. RolDrive’s private Airport Transfer focuses on luxury, efficiency, and comfort, offering a premium travel solution for those arriving at or departing from the airport. Specialising in seamless airport journeys, RolDrive caters to individuals who prioritise punctuality, safety, and a touch of sophistication in their travel experience. With a fleet of high-end vehicles, passengers can enjoy a relaxing and stylish ride, complemented by professional chauffeurs who are knowledgeable about the best routes to ensure timely arrivals or departures. Amenities like flight tracking, Meet and Greet services, luggage assistance, complimentary water, Wi-Fi, and child seats upon request are standard, enhancing the journey's comfort and convenience. Whether for business or pleasure, RolDrive's Airport Transfer Service is designed to provide a hassle-free, comfortable, and luxurious start or end to your travel, reflecting the highest standards of hospitality and efficiency in ground transportation.",
+        desc: "RolDrive’s private Airport Transfer focuses on luxury, efficiency, and comfort, offering a premium travel solution for those arriving at or departing from the airport. Specialising in seamless airport journeys, RolDrive caters to individuals who prioritise punctuality, safety, and a touch of sophistication in their travel experience. With a fleet of high-end vehicles, passengers can enjoy a relaxing and stylish ride, complemented by professional chauffeurs who are knowledgeable about the best routes to ensure timely arrivals or departures. Amenities like flight tracking, Meet and Greet services, luggage assistance, complimentary water, Wi-Fi, and child seats upon request are standard, enhancing the journey's comfort and convenience. Whether for business or pleasure, RolDrive's Airport Transfer Service is designed to provide a hassle-free, comfortable, and luxurious start or end to your travel, reflecting the highest standards of hospitality and efficiency in ground transportation.",
       },
       {
         title:
           'Difference between a chauffeured airport transfer and hailing a cab to the airport.',
-        desc: '1. A RolDrive chauffeured airport transfer and hailing a cab represent two distinct experiences. RolDrive offers reliable airport transfers with premium services, ensuring luxury, comfort, and professionalism. Clients enjoy pre-booked, punctual rides in high-end vehicles, with professional chauffeurs, tailored amenities like in-car Wi-Fi and water, and personalized meet-and-greet services.\n2. In contrast, hailing a cab provides a more utilitarian travel option, with variable costs, standard vehicles, and no guarantee of service level or amenities or punctuality. While cabs are convenient for spontaneous travel, RolDrive specialises in a bespoke, stress-free journey, making it an ideal choice for those seeking reliable, high-quality, and comfortable airport transportation.',
+        desc: (
+          <p className="text-[#B2B2B2]">
+            A RolDrive chauffeured airport transfer and hailing a cab represent two distinct experiences. RolDrive offers reliable airport transfers with premium services, ensuring luxury, comfort, and professionalism. Clients enjoy pre-booked, punctual rides in high-end vehicles, with professional chauffeurs, tailored amenities like in-car Wi-Fi and water, and personalized meet-and-greet services.
+            <br />
+            2. In contrast, hailing a cab provides a more utilitarian travel option, with variable costs, standard vehicles, and no guarantee of service level or amenities or punctuality. While cabs are convenient for spontaneous travel, RolDrive specialises in a bespoke, stress-free journey, making it an ideal choice for those seeking reliable, high-quality, and comfortable airport transportation.
+          </p>
+        )
       },
       {
         title: 'How to go about booking Best Airport Transfers?',
         desc: (
-          <p>
-            1. Visit the Website or App: Access RolDrive's platform either
+          <p className="text-[#B2B2B2]">
+            Visit the Website or App: Access RolDrive's platform either
             through our official website or by downloading our mobile app.
-            {' '}
-            <br />
-            {' '}
-            2. Select Your Service: Choose the airport transfer service
-            option, indicating whether you need a pick-up, drop-off, or both to
-            and from the airport.\n3. Provide Details: Enter your travel
-            details, including the date, time, flight information, and the
-            number of passengers. This ensures that the service is tailored to
-            your schedule and requirements.\n4. Choose Your Vehicle: Select from
-            RolDrive’s fleet of luxury vehicles based on your preference and the
-            number of travellers to ensure a comfortable ride.\n5. Confirm and
-            Pay: Review your booking details, confirm the information, and
-            proceed to payment. RolDrive offers transparent pricing, so you’ll
-            know the cost upfront.\n6. Receive Confirmation: After payment,
-            you'll receive a booking confirmation via email, including the
-            details of your chauffeur and vehicle.
+            <p className="text-[#B2B2B2] ml-4">
+              1. Select Your Service: Choose the airport transfer service
+              option, indicating whether you need a pick-up, drop-off, or both to
+              and from the airport
+              <br />
+              2. Provide Details: Enter your travel
+              details, including the date, time, flight information, and the
+              number of passengers. This ensures that the service is tailored to
+              your schedule and requirements.
+              <br />
+              3. Choose Your Vehicle: Select from
+              RolDrive’s fleet of luxury vehicles based on your preference and the
+              number of travellers to ensure a comfortable ride.
+              <br />
+              4. Confirm and Pay: Review your booking details, confirm the information, and
+              proceed to payment. RolDrive offers transparent pricing, so you’ll
+              know the cost upfront.\n6. Receive Confirmation: After payment,
+              you'll receive a booking confirmation via email, including the
+              details of your chauffeur and vehicle.
+            </p>
           </p>
         ),
       },
