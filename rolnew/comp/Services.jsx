@@ -41,7 +41,7 @@ function Services() {
             <Card
               title='Paris Airport Transfers'
               description='Whether on a business trip or for pleasure in the city of Paris, RolDrive’s Paris Airport Transfers will transfer you to or from the airport in a complete fashion.'
-              img='/rolnew/global/card/New_York_Airport_Transfer.jpg'
+              img='/rolnew/global/card/Paris_Airport.jpg'
               titleNoWrap
             />
           </div>
@@ -49,7 +49,7 @@ function Services() {
             <Card
               title='New York Airport Transfers'
               description='In the busy city of New York, RolDrive’s New York Airport Transfers are swift, comfortable and elegant, thus creating room for your next meet.'
-              img='/rolnew/global/card/Paris_Airport.jpg'
+              img='/rolnew/global/card/New_York_Airport_Transfers.jpg'
               titleNoWrap
             />
           </div>
