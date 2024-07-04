@@ -5,27 +5,27 @@ export const cityData = {
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
       bannerImage: "/images/city/london/banner/london_city.png",
     },
-    
+
     trustedPartnersData: {
       img: "/rolnew/cities/trust-banner.svg",
       data: [
         {
-          icon: "/rolnew/global/icons/shield-user-line.svg",
+          icon: "/rolnew/cities/icons/Exceptional Chauffeur Service.png",
           title: "Exceptional Chauffeur Service",
           desc: "RolDrive offers exceptional chauffeur service in London, providing luxurious, reliable transportation with professional drivers. Perfect for airport transfers, business trips, and special events, RolDrive ensures a seamless and comfortable journey, prioritising customer satisfaction and convenience.",
         },
         {
-          icon: "/rolnew/global/icons/steering-wheel.svg",
+          icon: "/rolnew/cities/icons/Comprehensive Airport Coverage.png",
           title: "Comprehensive Airport Coverage",
           desc: "RolDrive's comprehensive airport coverage offers top-tier chauffeur service in London, ensuring seamless transfers to and from all major airports. With luxury vehicles and professional drivers, RolDrive guarantees comfort, reliability, and a stress-free travel experience for every journey.",
         },
         {
-          icon: "/rolnew/global/icons/service-line.svg",
+          icon: "/rolnew/cities/icons/Flexible and Reliable.png",
           title: "Flexible and Reliable",
           desc: "RolDrive offers a flexible and reliable chauffeur service in London, ensuring punctual and comfortable travel. Require a change of plans? No problem, RolDrive caters to various needs, providing a seamless experience for business and leisure travellers alike.",
         },
         {
-          icon: "/rolnew/global/icons/car-line.svg",
+          icon: "/rolnew/cities/icons/Professionalism and Trust.png",
           title: "Professionalism and Trust",
           desc: "RolDrive's chauffeur service in London exemplifies professionalism and trust, offering punctual, reliable, and luxurious transportation. With well-trained chauffeurs and a fleet of high-end vehicles, RolDrive ensures a seamless and comfortable journey for all passengers, prioritising your safety and satisfaction.",
         },
@@ -112,6 +112,7 @@ export const cityData = {
     },
     destinationData: {
       restaurants: {
+        img: "/rolnew/global/icons/Pin.png",
         title: "Explore Top Class Restaurants",
         subTitle: "Popular Trips",
         isFromTo: false,
@@ -127,6 +128,7 @@ export const cityData = {
         ],
       },
       hotel: {
+        img: "/rolnew/global/icons/Pin.png",
         title: "Explore Top Class Hotels",
         subTitle: "Popular Trips",
         isFromTo: false,
@@ -313,22 +315,22 @@ export const cityData = {
       img: "/rolnew/cities/trust-banner.svg",
       data: [
         {
-          icon: "/rolnew/global/icons/shield-user-line.svg",
+          icon: "/rolnew/cities/icons/Exceptional Chauffeur Service.png",
           title: "Exceptional Chauffeur Service",
           desc: "RolDrive provides exceptional chauffeur services in Dubai, offering luxurious and reliable transportation with professional drivers. Ideal for airport transfers, business trips, and special events, RolDrive ensures a seamless and comfortable journey, placing a high priority on customer satisfaction and convenience..",
         },
         {
-          icon: "/rolnew/global/icons/steering-wheel.svg",
+          icon: "/rolnew/cities/icons/Comprehensive Airport Coverage.png",
           title: "Comprehensive Airport Coverage",
           desc: "RolDrive provides extensive airport coverage with top-tier chauffeur service in Dubai, ensuring seamless transfers to and from all major airports. With luxury vehicles and professional drivers, RolDrive guarantees comfort, reliability, and a stress-free travel experience for every journey.",
         },
         {
-          icon: "/rolnew/global/icons/service-line.svg",
+          icon: "/rolnew/cities/icons/Flexible and Reliable.png",
           title: "Flexible and Reliable",
           desc: "RolDrive provides a flexible and reliable chauffeur service in Dubai, guaranteeing punctual and comfortable travel. Need to change plans? No worries—RolDrive accommodates diverse needs, ensuring a seamless experience for both business and leisure travellers.",
         },
         {
-          icon: "/rolnew/global/icons/car-line.svg",
+          icon: "/rolnew/cities/icons/Professionalism and Trust.png",
           title: "Professionalism and Trust",
           desc: "RolDrive's chauffeur service in Dubai epitomises professionalism and trust, providing punctual, reliable, and luxurious transportation. With highly trained chauffeurs and a fleet of high-end vehicles, RolDrive guarantees a seamless and comfortable journey, prioritising passenger safety and satisfaction above all else.",
         },
@@ -413,6 +415,7 @@ export const cityData = {
     },
     destinationData: {
       restaurants: {
+        img: "/rolnew/global/icons/Pin.png",
         title: "Explore Top Class Restaurants",
         subTitle: "Popular Trips",
         isFromTo: false,
@@ -428,6 +431,7 @@ export const cityData = {
         ],
       },
       hotel: {
+        img: "/rolnew/global/icons/Pin.png",
         title: "Explore Top Class Hotels",
         subTitle: "Popular Trips",
         isFromTo: false,
@@ -574,22 +578,22 @@ export const cityData = {
       img: "/rolnew/cities/trust-banner.svg",
       data: [
         {
-          icon: "/rolnew/global/icons/shield-user-line.svg",
+          icon: "/rolnew/cities/icons/Exceptional Chauffeur Service.png",
           title: "Exceptional Chauffeur Service",
           desc: "RolDrive offers exceptional chauffeur service in New York, delivering luxurious and reliable transportation with professional drivers. Ideal for airport transfers, business trips, and special events, RolDrive ensures a seamless, comfortable journey, prioritising customer satisfaction and convenience.",
         },
         {
-          icon: "/rolnew/global/icons/steering-wheel.svg",
+          icon: "/rolnew/cities/icons/Comprehensive Airport Coverage.png",
           title: "Comprehensive Airport Coverage",
           desc: "RolDrive provides top-tier chauffeur service in New York, offering comprehensive airport coverage for seamless transfers to and from all major airports. With luxury vehicles and professional drivers, RolDrive ensures a comfortable, reliable, and stress-free travel experience for every journey.",
         },
         {
-          icon: "/rolnew/global/icons/service-line.svg",
+          icon: "/rolnew/cities/icons/Flexible and Reliable.png",
           title: "Flexible and Reliable",
           desc: "RolDrive provides a flexible and reliable chauffeur service in New York, ensuring punctual and comfortable travel. Need to change plans? No problem. RolDrive caters to diverse needs, delivering a seamless experience for both business and leisure travellers.",
         },
         {
-          icon: "/rolnew/global/icons/car-line.svg",
+          icon: "/rolnew/cities/icons/Professionalism and Trust.png",
           title: "Professionalism and Trust",
           desc: "RolDrive's chauffeur service in New York exemplifies professionalism and trust, providing punctual, reliable, and luxurious transportation. With well-trained chauffeurs and a fleet of high-end vehicles, RolDrive guarantees a seamless and comfortable journey for all passengers, prioritising safety and satisfaction above all else.",
         },
@@ -633,42 +637,42 @@ export const cityData = {
       list: [
         {
           id: "touristAttraction1",
-          src: "/images/city/new-york/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-newyork/The High Line (1).jpg",
           title: "The High Line",
           description:
             "An elevated park built on a historic freight rail line, offering unique views of the city, art installations, and lush gardens.",
         },
         {
           id: "touristAttraction2",
-          src: "/images/city/new-york/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-newyork/The Cloiseters.jpg",
           title: "The Cloiseters",
           description:
             "Part of the Metropolitan Museum of Art, this museum in Fort Tryon Park features medieval European art and architecture in a serene, garden-like setting.",
         },
         {
           id: "touristAttraction3",
-          src: "/images/city/new-york/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-newyork/Roosevelt Island.jpg",
           title: "Roosevelt Island",
           description:
             "A narrow island in the East River with historic sites, scenic views, and the unique Roosevelt Island Tramway offering panoramic cityscapes.",
         },
         {
           id: "touristAttraction4",
-          src: "/images/city/new-york/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-newyork/Green-Wood Cemetery.jpg",
           title: "Green-Wood Cemetery",
           description:
             "A National Historic Landmark in Brooklyn, known for its beautiful landscapes, Gothic architecture, and as the final resting place of notable figures.",
         },
         {
           id: "touristAttraction5",
-          src: "/images/city/new-york/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-newyork/City Hall Station.jpg",
           title: "City Hall Station",
           description:
             "An abandoned subway station beneath City Hall, admired for its stunning early 20th-century architecture and intricate tilework, accessible through guided tours.",
         },
         {
           id: "touristAttraction6",
-          src: "/images/city/new-york/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-newyork/Fort Tryon Park.jpg",
           title: "Fort Tryon Park",
           description:
             "Overlooking the Hudson River, this park offers peaceful walking paths, gardens, and the Heather Garden, with spectacular views of the George Washington Bridge.",
@@ -698,6 +702,7 @@ export const cityData = {
 
     destinationData: {
       restaurants: {
+        img: "/rolnew/global/icons/Pin.png",
         title: "Explore Top Class Restaurants",
         subTitle: "Popular Trips",
         isFromTo: false,
@@ -713,6 +718,7 @@ export const cityData = {
         ],
       },
       hotel: {
+        img: "/rolnew/global/icons/Pin.png",
         title: "Explore Top Class Hotels",
         subTitle: "Popular Trips",
         isFromTo: false,
@@ -858,22 +864,22 @@ export const cityData = {
       img: "/rolnew/cities/trust-banner.svg",
       data: [
         {
-          icon: "/rolnew/global/icons/shield-user-line.svg",
+          icon: "/rolnew/cities/icons/Exceptional Chauffeur Service.png",
           title: "Exceptional Chauffeur Service",
           desc: "RolDrive provides exceptional chauffeur service in Paris, delivering luxurious and reliable transportation with professional drivers. Ideal for airport transfers, business trips, and special events, RolDrive ensures a seamless and comfortable journey, prioritising customer satisfaction and convenience.",
         },
         {
-          icon: "/rolnew/global/icons/steering-wheel.svg",
+          icon: "/rolnew/cities/icons/Comprehensive Airport Coverage.png",
           title: "Comprehensive Airport Coverage",
           desc: "RolDrive provides comprehensive airport coverage with top-tier chauffeur service in Paris, ensuring smooth transfers to and from all major airports. With luxury vehicles and professional drivers, RolDrive guarantees comfort, reliability, and a stress-free travel experience for every journey.",
         },
         {
-          icon: "/rolnew/global/icons/service-line.svg",
+          icon: "/rolnew/cities/icons/Flexible and Reliable.png",
           title: "Flexible and Reliable",
           desc: "RolDrive provides comprehensive airport coverage with top-tier chauffeur service in Paris, ensuring smooth transfers to and from all major airports. With luxury vehicles and professional drivers, RolDrive guarantees comfort, reliability, and a stress-free travel experience for every journey",
         },
         {
-          icon: "/rolnew/global/icons/car-line.svg",
+          icon: "/rolnew/cities/icons/Professionalism and Trust.png",
           title: "Professionalism and Trust",
           desc: "RolDrive's chauffeur service in Paris epitomises professionalism and trust, providing punctual, reliable, and luxurious transportation. With highly trained chauffeurs and a fleet of premium vehicles, RolDrive guarantees a seamless and comfortable journey for all passengers, prioritising your safety and satisfaction above all else.",
         },
@@ -964,6 +970,7 @@ export const cityData = {
 
     destinationData: {
       restaurants: {
+        img: "/rolnew/global/icons/Pin.png",
         title: "Explore Top Class Restaurants",
         subTitle: "Popular Trips",
         isFromTo: false,
@@ -979,6 +986,7 @@ export const cityData = {
         ],
       },
       hotel: {
+        img: "/rolnew/global/icons/Pin.png",
         title: "Explore Top Class Hotels",
         subTitle: "Popular Trips",
         isFromTo: false,
@@ -1144,22 +1152,22 @@ export const cityData = {
       img: "/rolnew/cities/trust-banner.svg",
       data: [
         {
-          icon: "/rolnew/global/icons/shield-user-line.svg",
+          icon: "/rolnew/cities/icons/Exceptional Chauffeur Service.png",
           title: "Exceptional Chauffeur Service",
           desc: "RolDrive provides exceptional chauffeur service in Tokyo, offering luxurious and reliable transportation with professional drivers. Ideal for airport transfers, business trips, and special events, RolDrive ensures a seamless and comfortable journey, prioritising customer satisfaction and convenience.",
         },
         {
-          icon: "/rolnew/global/icons/steering-wheel.svg",
+          icon: "/rolnew/cities/icons/Comprehensive Airport Coverage.png",
           title: "Comprehensive Airport Coverage",
           desc: "RolDrive offers top-tier chauffeur service in Tokyo with comprehensive airport coverage, ensuring seamless transfers to and from all major airports. With luxury vehicles and professional drivers, RolDrive guarantees comfort, reliability, and a stress-free travel experience for every journey.",
         },
         {
-          icon: "/rolnew/global/icons/service-line.svg",
+          icon: "/rolnew/cities/icons/Flexible and Reliable.png",
           title: "Flexible and Reliable",
           desc: "RolDrive provides a flexible and reliable chauffeur service in Tokyo, ensuring punctual and comfortable travel. Need to change plans? No problem. RolDrive caters to various needs, delivering a seamless experience for both business and leisure travellers.",
         },
         {
-          icon: "/rolnew/global/icons/car-line.svg",
+          icon: "/rolnew/cities/icons/Professionalism and Trust.png",
           title: "Professionalism and Trust",
           desc: "RolDrive's chauffeur service in Tokyo epitomises professionalism and trust, providing punctual, reliable, and luxurious transportation. With highly trained chauffeurs and a fleet of premium vehicles, RolDrive guarantees a seamless and comfortable journey for all passengers, prioritising safety and satisfaction above all else.",
         },
@@ -1177,21 +1185,21 @@ export const cityData = {
     landMarks: [
       {
         id: "land1",
-        src: "/images/city/tokyo/landmarks/Burj.jpg",
+        src: "/images/city/tokyo/landmarks/Tokyo Tower.jpg",
         title: "Tokyo Tower",
         description:
           "An iconic symbol of Japan, offering panoramic views of Tokyo from its observation decks and vibrant illumination at night.",
       },
       {
         id: "land2",
-        src: "/images/city/tokyo/landmarks/Burj.jpg",
+        src: "/images/city/tokyo/landmarks/Senso-ji Temple .jpg",
         title: "Senso-ji Temple",
         description:
           "Tokyo’s oldest and most significant temple, featuring stunning architecture, a bustling marketplace, and cultural ceremonies in the Asakusa district.",
       },
       {
         id: "land3",
-        src: "/images/city/tokyo/landmarks/Burj.jpg",
+        src: "/images/city/tokyo/landmarks/Shibuya Crossing.jpg",
         title: "Shibuya Crossing",
         description:
           "Famous for its bustling pedestrian scramble, Shibuya Crossing is a vibrant and iconic intersection embodying Tokyo's dynamic urban energy.",
@@ -1203,42 +1211,42 @@ export const cityData = {
       list: [
         {
           id: "touristAttraction1",
-          src: "/images/city/tokyo/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-tokyo/Yanaka Ginza.jpg",
           title: "Yanaka Ginza",
           description:
             "A charming shopping street in an old Tokyo neighbourhood, offering traditional shops, eateries, and a nostalgic atmosphere.",
         },
         {
           id: "touristAttraction2",
-          src: "/images/city/tokyo/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-tokyo/Nezu Shrine.jpg",
           title: "Nezu Shrine",
           description:
             "A tranquil and historic Shinto shrine known for its beautiful azalea garden and vibrant torii gates.",
         },
         {
           id: "touristAttraction3",
-          src: "/images/city/tokyo/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-tokyo/Kiyosumi Teien.jpg",
           title: "Kiyosumi Teien",
           description:
             "A traditional Japanese garden featuring serene ponds, carefully manicured landscapes, and picturesque stone bridges.",
         },
         {
           id: "touristAttraction4",
-          src: "/images/city/tokyo/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-tokyo/Tokyo Daibutsu.jpg",
           title: "Tokyo Daibutsu",
           description:
             "A large bronze Buddha statue located in Jorenji Temple, offering a peaceful retreat and spiritual ambience",
         },
         {
           id: "touristAttraction5",
-          src: "/images/city/tokyo/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-tokyo/Koishikawa Korakuen.jpg",
           title: "Koishikawa Korakuen",
           description:
             "One of Tokyo's oldest and most beautiful gardens, showcasing traditional Japanese landscape design and seasonal flora.",
         },
         {
           id: "touristAttraction6",
-          src: "/images/city/tokyo/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-tokyo/Nakamise Shopping Street.jpg",
           title: "Nakamise Shopping Street",
           description:
             "A historic shopping street leading to Senso-ji Temple, lined with stalls selling traditional snacks, souvenirs, and crafts.",
@@ -1248,6 +1256,7 @@ export const cityData = {
 
     destinationData: {
       restaurants: {
+        img: "/rolnew/global/icons/Pin.png",
         title: "Explore Top Class Restaurants",
         subTitle: "Popular Trips",
         isFromTo: false,
@@ -1263,6 +1272,7 @@ export const cityData = {
         ],
       },
       hotel: {
+        img: "/rolnew/global/icons/Pin.png",
         title: "Explore Top Class Hotels",
         subTitle: "Popular Trips",
         isFromTo: false,
