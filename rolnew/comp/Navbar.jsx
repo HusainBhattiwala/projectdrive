@@ -128,22 +128,22 @@ export default function Navbar() {
               <button
                 onClick={() => setIsSidebarOpen(true)}
                 type="button"
-                className="lg:hidden h-8 w-8 text-white"
+                className="lg:hidden h-8 w-8 text-white ml-5 sm:ml-0  "
                 aria-label="menu"
               >
                 <svg
-                  className="w-full h-full flex-none"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
                   fill="none"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    d="M3.3335 5H16.6668M3.3335 10H10.0002M3.3335 15H16.6668"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                   />
                 </svg>
               </button>
