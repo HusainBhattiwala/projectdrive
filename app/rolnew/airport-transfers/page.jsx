@@ -247,7 +247,9 @@ export default function Page() {
               <br />
               4. Confirm and Pay: Review your booking details, confirm the
               information, and proceed to payment. RolDrive offers transparent
-              pricing, so youll know the cost upfront.\n6. Receive Confirmation:
+              pricing, so youll know the cost upfront.
+              <br />
+              5. Receive Confirmation:
               After payment, youll receive a booking confirmation via email,
               including the details of your chauffeur and vehicle.
             </p>
