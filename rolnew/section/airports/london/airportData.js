@@ -35,12 +35,6 @@ export const airportData = {
           cardDesc:
             "Heathrow Airport transfers offer 4 terminals to its travellers. These terminals operate both domestic and international flights.",
         },
-        {
-          img: "/rolnew/global/card/card-image4.jpg",
-          title: "Security",
-          cardDesc:
-            "Policing of the airport is the responsibility of the aviation security, a unit of the Metropolitan Police. And also sometimes by the British Army.",
-        },
       ],
     },
     faqData: {
@@ -143,12 +137,6 @@ export const airportData = {
           title: "Terminals",
           cardDesc:
             "Gatwick is comprised of two terminals, the North Terminal and the South Terminal. The most popular airlines from Gatwick include easyJet, British Airways, Norwegian Air, Thomas Cook, TUI and Ryanair.",
-        },
-        {
-          img: "/rolnew/global/card/card-image4.jpg",
-          title: "Security",
-          cardDesc:
-            "The Gatwick District of Sussex Police polices the airport. The district is responsible for the entire airport (including aircraft) and, in certain circumstances, aircraft in flight.",
         },
       ],
     },
@@ -253,12 +241,6 @@ export const airportData = {
           cardDesc:
             "The London City Airport has a single, two-storey passenger terminal building with 18 gates, all hardstands. The ground floor contains the check-in desks and some service facilities as well as a staircase leading to the security control on the upper level, after which the airside waiting area and several more shops can be found.",
         },
-        {
-          img: "/rolnew/global/card/card-image4.jpg",
-          title: "Security",
-          cardDesc:
-            "Aviation Policing Command (APC) or Specialist Operations – Aviation Policing (SOAP), is a Specialist Operations unit of Londons Metropolitan Police Service. The unit is responsible for providing policing and security for both Heathrow and London City airports.",
-        },
       ],
     },
     faqData: {
@@ -360,12 +342,6 @@ export const airportData = {
           title: "Terminals",
           cardDesc:
             "The London Southend Airport has twelve check-ins, two floors, ten departure gates and two baggage claims. There are also several amenities such as shops and places to eat and drink.",
-        },
-        {
-          img: "/rolnew/global/card/card-image4.jpg",
-          title: "Security",
-          cardDesc:
-            "London Southend Airport has become the latest location in the country to be guarded by Project Servator-trained personnel. Servator is a nationwide project that detects, deters, and disrupts illegal activities.",
         },
       ],
     },
@@ -471,12 +447,6 @@ export const airportData = {
           cardDesc:
             "London Stansted Airport has one main passenger terminal. Three passenger satellites have departure gates; one is connected to the main terminal by an air bridge and the other two by the Stansted Airport Transit System people mover.",
         },
-        {
-          img: "/rolnew/global/card/card-image4.jpg",
-          title: "Security",
-          cardDesc:
-            "Security at London Stansted Airport is provided by a combination of airport security staff and the UK government's security agencies, including the Metropolitan Police and the British Transport Police. These agencies work together to ensure the safety and security of passengers, staff, and airport facilities.",
-        },
       ],
     },
     faqData: {
@@ -579,12 +549,6 @@ export const airportData = {
           title: "Terminals",
           cardDesc:
             "Luton Airport has a single terminal that efficiently handles all passenger flights, offering various amenities and services to accommodate millions of travellers annually.",
-        },
-        {
-          img: "/rolnew/global/card/card-image4.jpg",
-          title: "Security",
-          cardDesc:
-            "Luton Airport's security services are provided by Securitas, ensuring passenger safety with advanced screening technologies, trained personnel, and stringent security protocols",
         },
       ],
     },
