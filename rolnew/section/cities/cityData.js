@@ -898,21 +898,21 @@ export const cityData = {
     landMarks: [
       {
         id: "land1",
-        src: "/images/city/paris/landmarks/Burj.jpg",
+        src: "/images/city/paris/landmarks/Eiffel Tower.jpg",
         title: "Eiffel Tower",
         description:
           "An iconic symbol of Paris, offering breathtaking city views from its observation decks and a stunning light display at night",
       },
       {
         id: "land2",
-        src: "/images/city/paris/landmarks/Burj.jpg",
+        src: "/images/city/paris/landmarks/Louvre Museum.jpg",
         title: "Louvre Museum",
         description:
           "Home to the famous Mona Lisa, this world-renowned museum houses an extensive collection of art and historical artefacts.",
       },
       {
         id: "land3",
-        src: "/images/city/paris/landmarks/Burj.jpg",
+        src: "/images/city/paris/landmarks/Notre-Dame Cathedral.jpg",
         title: "Notre-Dame Cathedral",
         description:
           "A masterpiece of Gothic architecture, featuring stunning stained glass windows and offering a climb to the towers for panoramic views",
@@ -925,42 +925,42 @@ export const cityData = {
       list: [
         {
           id: "touristAttraction1",
-          src: "/images/city/paris/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-paris/landmark1.jpg",
           title: "Musée de l'Orangerie",
           description:
             "This museum features Monet’s Water Lilies and other Impressionist and Post-Impressionist masterpieces in a serene, intimate setting.",
         },
         {
           id: "touristAttraction2",
-          src: "/images/city/paris/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-paris/Parc des Buttes-Chaumont.jpg",
           title: "Parc des Buttes-Chaumont",
           description:
             "A picturesque park with dramatic cliffs, waterfalls, and a lake, offering a peaceful escape from the city's hustle and bustle.",
         },
         {
           id: "touristAttraction3",
-          src: "/images/city/paris/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-paris/Mus‚e Rodin.jpg",
           title: "Musée Rodin",
           description:
             "Dedicated to the works of sculptor Auguste Rodin, this museum features beautiful sculptures in both indoor galleries and a lush garden.",
         },
         {
           id: "touristAttraction4",
-          src: "/images/city/paris/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-paris/Promenade Plant‚e.jpg",
           title: "Promenade Plantée",
           description:
             "An elevated park built on a former railway line, offering scenic walks with lush greenery and unique perspectives of Paris.",
         },
         {
           id: "touristAttraction5",
-          src: "/images/city/paris/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-paris/La Pagode.jpg",
           title: "La Pagode",
           description:
             "A historic, beautifully restored Asian-style cinema that offers a unique cultural experience with its intricate architecture and curated film selections.",
         },
         {
           id: "touristAttraction6",
-          src: "/images/city/paris/attraction/Hill.jpg",
+          src: "/rolnew/cities/tourist-attractions-paris/Mus‚e de Montmartre.jpg",
           title: "Musée de Montmartre",
           description:
             "Located in a historic building in Montmartre, this museum explores the area's artistic history and offers lovely gardens with city views.",
