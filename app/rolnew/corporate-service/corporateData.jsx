@@ -216,9 +216,9 @@ export const corporateData = {
             services are tailored to meet the specific needs of the event or
             business, making it essential to consult directly with the service
             provider for a detailed quote. Companies like RolDrive often provide
-            customised quotations based on the client's detailed requirements to
+            customised quotations based on the clients detailed requirements to
             ensure the service matches the expected standards and logistics of
-            corporate needs. So it's best to contact RolDrive directly to know
+            corporate needs. So its best to contact RolDrive directly to know
             how much your corporate transfer will cost.
           </p>
         ),

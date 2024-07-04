@@ -158,12 +158,12 @@ export default function Page() {
       {
         id: 8,
         question: 'What happens if my flight is delayed?',
-        ans: "Many airport transfer services including RolDrive track flight arrivals and adjust pickup times accordingly. It\'s essential to notify the service about any delays to ensure they can make necessary adjustments. In the situation where you are unable to coordinate with a RolDrive chauffeur, a free 60-minute waiting time is offered.",
+        ans: 'Many airport transfer services including RolDrive track flight arrivals and adjust pickup times accordingly. Its essential to notify the service about any delays to ensure they can make necessary adjustments. In the situation where you are unable to coordinate with a RolDrive chauffeur, a free 60-minute waiting time is offered.',
       },
       {
         id: 9,
         question: 'Is there a cancellation policy for airport transfers?',
-        ans: 'Yes, most providers including RolDrive have a cancellation policy. A full refund is offered if you cancel a RolDrive chauffeur 12 hours prior to booking time. It\'s crucial to be aware of the cancellation terms and conditions when booking an airport transfer.',
+        ans: "Yes, most providers including RolDrive have a cancellation policy. A full refund is offered if you cancel a RolDrive chauffeur 12 hours prior to booking time. It's crucial to be aware of the cancellation terms and conditions when booking an airport transfer.",
       },
       // {
       //   id: 10,
@@ -208,9 +208,20 @@ export default function Page() {
           'Difference between a chauffeured airport transfer and hailing a cab to the airport.',
         desc: (
           <p className="text-[#B2B2B2]">
-            A RolDrive chauffeured airport transfer and hailing a cab represent two distinct experiences. RolDrive offers reliable airport transfers with premium services, ensuring luxury, comfort, and professionalism. Clients enjoy pre-booked, punctual rides in high-end vehicles, with professional chauffeurs, tailored amenities like in-car Wi-Fi and water, and personalized meet-and-greet services.
+            A RolDrive chauffeured airport transfer and hailing a cab represent
+            two distinct experiences. RolDrive offers reliable airport transfers
+            with premium services, ensuring luxury, comfort, and
+            professionalism. Clients enjoy pre-booked, punctual rides in
+            high-end vehicles, with professional chauffeurs, tailored amenities
+            like in-car Wi-Fi and water, and personalized meet-and-greet
+            services.
             <br />
-            2. In contrast, hailing a cab provides a more utilitarian travel option, with variable costs, standard vehicles, and no guarantee of service level or amenities or punctuality. While cabs are convenient for spontaneous travel, RolDrive specialises in a bespoke, stress-free journey, making it an ideal choice for those seeking reliable, high-quality, and comfortable airport transportation.
+            2. In contrast, hailing a cab provides a more utilitarian travel
+            option, with variable costs, standard vehicles, and no guarantee of
+            service level or amenities or punctuality. While cabs are convenient
+            for spontaneous travel, RolDrive specialises in a bespoke,
+            stress-free journey, making it an ideal choice for those seeking
+            reliable, high-quality, and comfortable airport transportation.
           </p>
         ),
       },
@@ -218,27 +229,27 @@ export default function Page() {
         title: 'How to go about booking Best Airport Transfers?',
         desc: (
           <p className="text-[#B2B2B2]">
-            Visit the Website or App: Access RolDrive's platform either
-            through our official website or by downloading our mobile app.
+            Visit the Website or App: Access RolDrives platform either through
+            our official website or by downloading our mobile app.
             <p className="text-[#B2B2B2] ml-4">
               1. Select Your Service: Choose the airport transfer service
-              option, indicating whether you need a pick-up, drop-off, or both to
-              and from the airport
+              option, indicating whether you need a pick-up, drop-off, or both
+              to and from the airport
               <br />
-              2. Provide Details: Enter your travel
-              details, including the date, time, flight information, and the
-              number of passengers. This ensures that the service is tailored to
-              your schedule and requirements.
+              2. Provide Details: Enter your travel details, including the date,
+              time, flight information, and the number of passengers. This
+              ensures that the service is tailored to your schedule and
+              requirements.
               <br />
-              3. Choose Your Vehicle: Select from
-              RolDrive’s fleet of luxury vehicles based on your preference and the
-              number of travellers to ensure a comfortable ride.
+              3. Choose Your Vehicle: Select from RolDrives fleet of luxury
+              vehicles based on your preference and the number of travellers to
+              ensure a comfortable ride.
               <br />
-              4. Confirm and Pay: Review your booking details, confirm the information, and
-              proceed to payment. RolDrive offers transparent pricing, so you’ll
-              know the cost upfront.\n6. Receive Confirmation: After payment,
-              you'll receive a booking confirmation via email, including the
-              details of your chauffeur and vehicle.
+              4. Confirm and Pay: Review your booking details, confirm the
+              information, and proceed to payment. RolDrive offers transparent
+              pricing, so youll know the cost upfront.\n6. Receive Confirmation:
+              After payment, youll receive a booking confirmation via email,
+              including the details of your chauffeur and vehicle.
             </p>
           </p>
         ),

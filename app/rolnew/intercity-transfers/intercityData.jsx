@@ -188,12 +188,12 @@ export const intercityData = {
         desc: (
           <p className="text-[#B2B2B2]">
             Booking intercity transfers with RolDrive can be done effortlessly
-            through our official website or mobile app. Here's a step-by-step
+            through our official website or mobile app. Heres a step-by-step
             guide:
             <br />
             <br />
-            1. Visit RolDrive's Website or App: Start by navigating to
-            RolDrive's official platform.
+            1. Visit RolDrives Website or App: Start by navigating to RolDrives
+            official platform.
             <br />
             2. Select the Service Type: Choose Intercity Transfer from the
             available service options.
@@ -201,7 +201,7 @@ export const intercityData = {
             3. Specify Details: Enter your pickup location, destination city,
             travel date, and preferred pickup time.
             <br />
-            4. Choose a Vehicle: Select from RolDrive's fleet of luxury vehicles
+            4. Choose a Vehicle: Select from RolDrives fleet of luxury vehicles
             based on your preference and the number of passengers.
             <br />
             5. Enter Personal Information: Provide necessary details like your
@@ -258,7 +258,7 @@ export const intercityData = {
             vans such as the Mercedes V Class are also available for larger
             groups, ensuring everyone travels together in comfort. For the
             ultimate in luxury, high-end vehicles like the Bentley or Rolls
-            Royce are part of RolDrive's fleet, providing an unparalleled travel
+            Royce are part of RolDrives fleet, providing an unparalleled travel
             experience. Each vehicle in RolDrive’s fleet is maintained to the
             highest standards, ensuring reliability and comfort throughout your
             intercity journey.

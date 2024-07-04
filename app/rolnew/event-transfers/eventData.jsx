@@ -204,12 +204,12 @@ export const eventData = {
         title: 'What is an event transportation service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            RolDrive's event transportation service provides high-end, reliable
+            RolDrives event transportation service provides high-end, reliable
             ground transportation solutions tailored for various events such as
             weddings, corporate gatherings, galas, and conferences. This service
             ensures that all participants arrive at their destinations
             comfortably and punctually, reflecting a professional and organised
-            image. RolDrive's fleet includes a wide range of luxury vehicles to
+            image. RolDrives fleet includes a wide range of luxury vehicles to
             suit different group sizes and preferences, each driven by
             professional chauffeurs who are trained to handle the logistics of
             event transportation smoothly. By offering flexible scheduling, a

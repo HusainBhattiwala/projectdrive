@@ -147,7 +147,7 @@ export const sightseeingData = {
             of navigating unfamiliar public transport systems or dealing with
             the hassle of renting a car. The service is tailored to the
             preferences and interests of the traveller, ensuring a flexible
-            itinerary that maximises the enjoyment of each city’s unique
+            itinerary that maximises the enjoyment of each citys unique
             attractions and experiences.
           </p>
         ),
@@ -165,7 +165,7 @@ export const sightseeingData = {
             comfort during the tour but also adds a touch of sophistication to
             your travel photos, making them look even more impressive. This
             service allows you to tailor your itinerary to suit your interests,
-            ensuring that you don't miss any must-see attractions, all while
+            ensuring that you dont miss any must-see attractions, all while
             experiencing the ultimate in convenience and style.
           </p>
         ),
@@ -183,10 +183,10 @@ export const sightseeingData = {
             SUVs are available for those needing a bit more space, perhaps for
             families or medium-sized groups. For larger groups, executive vans
             can be used, providing ample space without sacrificing comfort. Each
-            vehicle is chosen for its ability to offer a clear view of the
-            city’s landmarks, smooth ride, and comfort features that enhance the
+            vehicle is chosen for its ability to offer a clear view of the citys
+            landmarks, smooth ride, and comfort features that enhance the
             sightseeing experience, making every moment enjoyable as you explore
-            some of the world’s most iconic locations.
+            some of the worlds most iconic locations.
           </p>
         ),
       },
