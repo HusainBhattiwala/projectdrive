@@ -300,7 +300,7 @@ export default function Navbar() {
             exit={{
               x: "-100%",
             }}
-            className="fixed top-0 left-0 h-screen overflow-y-auto z-50 w-[16rem] bg-[#223544] py-8 shadow-md px-8 lg:hidden"
+            className="fixed top-0 left-0 h-screen overflow-y-auto z-50 w-[20rem] bg-[#223544] py-8 shadow-md px-8 lg:hidden"
           >
             <div className="relative bg-[#223544]">
               <button
@@ -316,8 +316,11 @@ export default function Navbar() {
                   alt="logo"
                 />
               </Link>
+
+              <hr className="w-full border-[0.5px] border-[#E1E1E1]/20 mt-8" />
             </div>
-            <div className="flex flex-col gap-4 mt-10">
+
+            <div className="flex flex-col gap-4 mt-5">
               {navLinks.map((item, index) => (
                 <div key={item.route}>
                   <div
@@ -354,7 +357,7 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-              <hr className="w-[192px] border-[0.5px]" />
+              <hr className="w-full border-[0.5px] border-[#E1E1E1]/20" />
             </div>
 
             <div className="flex flex-col flex-start gap-4 mt-4">
@@ -382,21 +385,48 @@ export default function Navbar() {
                 </button>
               </a>
 
-              {["call", "email"].map((item) => (
+              {/* Call */}
+              <a
+                href="tel:+442045920966"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Call"
+              >
                 <button
-                  key={item}
                   type="button"
-                  aria-label={item}
-                  className="pop flex flex-row justify-start mr-12 gap-2"
+                  aria-label="call"
+                  className="pop flex flex-row justify-start mr-28 gap-2"
                 >
                   <img
-                    src={`/rolnew/home/${item}.svg`}
-                    alt=""
+                    src="/rolnew/home/call.svg"
+                    alt="call icon"
                     className="h-[20px] w-[210px]"
                   />
                 </button>
-              ))}
-              <hr className="w-[192px] border-[0.3px]" />
+              </a>
+
+              {/* Email */}
+
+              <a
+                href="mailto:booking@roldrive.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Email"
+              >
+                <button
+                  type="button"
+                  aria-label="email"
+                  className="pop flex flex-row justify-start mr-28 gap-2"
+                >
+                  <img
+                    src="/rolnew/home/email.svg"
+                    alt="email icon"
+                    className="h-[20px] w-[210px]"
+                  />
+                </button>
+              </a>
+
+              <hr className="w-full border-[0.5px] border-[#E1E1E1]/20 mt-2" />
             </div>
 
             <div className="flex flex-col gap-3">

@@ -27,7 +27,13 @@ function NewDropdown({
   };
 
   return (
-    <div className={`relative transition-all duration-300 ${className} ${disable ? 'pointer-events-none !bg-gray-100' : ''}`} ref={outSideClickRef} onClick={toggleDropdown}>
+    <div
+      className={`relative transition-all duration-300 ${className} ${
+        disable ? 'pointer-events-none !bg-gray-100' : ''
+      }`}
+      ref={outSideClickRef}
+      onClick={toggleDropdown}
+    >
       <button
         type="button"
         className={`text-gray-800 py-2 px-1 rounded items-center uppercase lg:text-[14px] md:text-[11px] font-semibold w-full flex justify-between ${btnClass}`}
@@ -38,13 +44,19 @@ function NewDropdown({
           </div>
         )}
         {imageSrc ? (
-          <span className="text-neutral-700 pl-4 text-sm font-medium capitalize tracking-tight">{label}</span>
+          <span className="text-white pl-4 text-sm font-medium capitalize tracking-tight">
+            {label}
+          </span>
         ) : (
-          <span className="text-neutral-700 text-sm font-medium capitalize tracking-tight">{label}</span>
+          <span className="text-white text-sm font-medium capitalize tracking-tight">
+            {label}
+          </span>
         )}
-        { noDrop && imageSrc ? (
+        {noDrop && imageSrc ? (
           <svg
-            className={`w-2.5 h-2.5 ml-auto fill-current flex-none ${width < 786 && isHeader && !isOpen && 'rotate-[270deg]'} `}
+            className={`w-2.5 h-2.5 ml-auto fill-current flex-none ${
+              width < 786 && isHeader && !isOpen && 'rotate-[270deg]'
+            } `}
             viewBox="0 0 12 7"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -55,7 +67,9 @@ function NewDropdown({
           </svg>
         ) : (
           <svg
-            className={`w-3 h-3 ml-10 fill-current ${width < 786 && isHeader && !isOpen && 'rotate-[270deg]'} `}
+            className={`w-3 h-3 ml-10 fill-current ${
+              width < 786 && isHeader && !isOpen && 'rotate-[270deg]'
+            } `}
             viewBox="0 0 12 7"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -68,10 +82,10 @@ function NewDropdown({
       </button>
 
       {isOpen && (
-        <div className={`absolute z-50 left-0 w-full bg-white rounded-none shadow-lg menu !p-0 py-2 ${dropDownClass}`}>
-          <ul className="lg:text-[14px] md:text-[12px]">
-            {children}
-          </ul>
+        <div
+          className={`absolute z-50 left-0 w-full bg-white rounded-none shadow-lg menu !p-0 py-2 ${dropDownClass}`}
+        >
+          <ul className="lg:text-[14px] md:text-[12px]">{children}</ul>
         </div>
       )}
     </div>

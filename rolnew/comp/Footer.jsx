@@ -26,13 +26,12 @@ function Footer() {
               />
             </Link>
             <p className="text-xs leading-5 font-normal text-opacity-65 text-left">
-              RolDrive's chauffeur services offer luxury, reliability, and
-              comfort for all your travel needs at competitive rates. With a
-              fleet of high-end vehicles and professional drivers, we ensure
-              timely and stress-free journeys. From airport transfers to
-              business travel and everything in between, we are your trusted
-              travel partner, committed to delivering exceptional service with a
-              premium experience.
+              RolDrive is a distinguished professional chauffeur services
+              company, dedicated to transforming the way individuals travel,
+              with its roots in London, UK. Established to cater to corporate
+              and celebrity clientele, we offer seamless transportation to their
+              desired destinations across the globe, ensuring absolute comfort,
+              sophistication, and convenience.
             </p>
             <div className="flex flex-col gap-y-2">
               <a
