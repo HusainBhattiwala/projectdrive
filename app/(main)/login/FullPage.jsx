@@ -34,7 +34,7 @@ function Page() {
   const loginRef = useRef();
 
   useEffect(() => {
-    if (pathName === '/rolnew/login') {
+    if (pathName === '/login') {
       setIsLoginPage(true);
       setIsIsLoaded(true);
     }

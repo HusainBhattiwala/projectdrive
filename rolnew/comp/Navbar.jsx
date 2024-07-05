@@ -267,7 +267,7 @@ export default function Navbar() {
                   <p className="font-medium">Contact Us</p>
                 </button>
               </a>
-              <Link href="/rolnew/login">
+              <Link href="/login">
                 <Button className="w-[120px]" white>
                   Sign In
                 </Button>

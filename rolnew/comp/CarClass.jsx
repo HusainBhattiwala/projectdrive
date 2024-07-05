@@ -208,7 +208,7 @@ function CarClass({ hideArrow = true }) {
             !hideArrow ? "mt-[200px]" : "mt-0"
           }`}
         >
-          <div className="flex flex-col gap-y-16 2xl:container mx-auto pb-4 sm:mb-24 sm:pb-20 border-b border-[#8282824D]">
+          <div className="flex flex-col gap-y-16 2xl:container mx-auto pb-4 sm:mb-14 sm:pb-20 sm:border-b border-[#8282824D]">
             <div className="flex flex-col md:flex-row xs:flex-col sm:flex-col">
               <div className="w-full hidden sm:block">
                 <div className="gap-[24px] max-w-[360px] h-[250px] mb-5">
@@ -272,7 +272,7 @@ function CarClass({ hideArrow = true }) {
               </div>
             </div>
 
-            <div className="hidden sm:flex flex-nowrap gap-7 w-full sm:w-[1100px] h-[165px] justify-center mx-auto sm:gap-20 mb-2 overflow-x-auto overflow-y-hidden scroll no-scroll mt-20">
+            <div className="hidden sm:flex flex-nowrap gap-7 w-full sm:w-[1100px] h-[165px] justify-center mx-auto sm:gap-14 mb-2 overflow-x-auto overflow-y-hidden scroll no-scroll mt-14">
               {carCatData?.map((car, index) => (
                 <div
                   className="w-[250px] h-[130px] hover:cursor-pointer hover:scale-105 transition ease-in duration-75 mt-2 relative"
@@ -294,7 +294,7 @@ function CarClass({ hideArrow = true }) {
             </div>
 
             {/* slider for small screen */}
-            <div className="sm:hidden block w-full mt-10">
+            <div className="sm:hidden block max-w-full mt-10">
               <Swiper
                 slidesPerView={2}
                 spaceBetween={100}
@@ -306,7 +306,7 @@ function CarClass({ hideArrow = true }) {
                   prevEl: ".swiper-btn-prev",
                 }}
                 breakpoints={{
-                  580: {
+                  480: {
                     slidesPerView: 2,
                     spaceBetween: 20,
                   },
@@ -330,7 +330,7 @@ function CarClass({ hideArrow = true }) {
                 {carCatData?.map((car, index) => (
                   <SwiperSlide>
                     <div
-                      className="w-[250px] h-[130px] hover:cursor-pointer mt-2 relative"
+                      className="w-[200px] h-[130px] hover:cursor-pointer mt-2 relative"
                       onClick={() => setCarData(car)}
                       key={index}
                     >
@@ -341,7 +341,7 @@ function CarClass({ hideArrow = true }) {
                         src={car?.img || "/images/airports/car4.png"}
                         objectFit="fit"
                       />
-                      <p className="w-full text-center text-base font-medium leading-6 text-[#FFFFFF]">
+                      <p className="w-full text-base font-medium leading-6 text-[#FFFFFF]">
                         {car?.name}
                       </p>
                     </div>
@@ -357,7 +357,7 @@ function CarClass({ hideArrow = true }) {
                   />
                 </div>
                 <div className="swiper-pagination !relative !w-auto sm:mx-[30px] mx-2" />
-                <div className="swiper-btn-next pop w-12 h-12 bg-[#11202D] border border-[#223544] rounded-full flex items-center justify-center cursor-pointer">
+                <div className="swiper-btn-next pop w-12 h-12 bg-[#11202D] rounded-full flex items-center justify-center cursor-pointer">
                   <img
                     alt="go-next"
                     src="/rolnew/global/icons/arrow-right-primary.svg"
