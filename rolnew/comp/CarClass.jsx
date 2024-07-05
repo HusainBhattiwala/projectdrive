@@ -158,8 +158,6 @@ sleek, professional design and a spacious, comfortable interior that suits any b
 Mercedes E Class hire is what most businessmen prefer for their travel needs.`;
 
 function CarClass({ hideArrow = true }) {
-  // const [carDetails, setCarDetails] = useState(null);
-  // const [selectedCatCars, setSelectedCatCars] = useState([]);
   const { carDetails, setCarDetails, carCatData, setCarCatData } =
     useContext(FleetContext);
 

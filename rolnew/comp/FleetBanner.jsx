@@ -10,8 +10,7 @@ function FleetBanner({ mainTitle, hideArrow }) {
   const [width, setWidth] = useState();
   const [height, setHeight] = useState(1000);
 
-  const { carDetails, setCarDetails, carCatData, setCarCatData } =
-    useContext(FleetContext);
+  const { setCarDetails, setCarCatData } = useContext(FleetContext);
 
   const bannerRef = useRef(null);
 
@@ -27,6 +26,12 @@ function FleetBanner({ mainTitle, hideArrow }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleCategoryChange = (category) => {
+    setCarCatData(category.options);
+    setCarDetails(category.options[0]);
+  };
+
   return (
     <div
       className={`relative mt-16 flex flex-col w-full xl:min-h-[560px] md:min-h-[500px] min-h-[500px] max-h-[1000px] bg-[#223544] ${
@@ -111,7 +116,10 @@ function FleetBanner({ mainTitle, hideArrow }) {
 
       {!hideArrow && (
         <div className="mt-20">
-          <Category categorys={fleetData} onCategoryChange={setCarCatData} />
+          <Category
+            categorys={fleetData}
+            onCategoryChange={handleCategoryChange}
+          />
         </div>
       )}
 
