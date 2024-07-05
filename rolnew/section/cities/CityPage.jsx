@@ -35,7 +35,7 @@ function CityPage() {
   }, [pathName, router]);
   return (
     <>
-      <Banner bannerData={pageData.banner} />
+      <Banner pageData={pageData} />
       <div className="bg-[#11202D] py-12">
         <TrustedPartners
           img={pageData?.trustedPartnersData?.img}
