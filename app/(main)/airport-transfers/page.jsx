@@ -209,7 +209,9 @@ export default function Page() {
         desc: (
           <p className="text-[#B2B2B2]">
             A RolDrive chauffeured airport transfer and hailing a cab represent
-            two distinct experiences. RolDrive offers reliable airport transfers
+            two distinct experiences. 
+            <br/>
+            1. RolDrive offers reliable airport transfers
             with premium services, ensuring luxury, comfort, and
             professionalism. Clients enjoy pre-booked, punctual rides in
             high-end vehicles, with professional chauffeurs, tailored amenities
@@ -258,15 +260,15 @@ export default function Page() {
       },
       {
         title: 'Will RolDrive provide a Hotel to Airport Transfer?',
-        desc: "1. Yes, RolDrive certainly provides hotel to airport transfer services. This convenient service is designed for travellers who need reliable and comfortable transportation from their hotel to the airport. With RolDrive, you can expect a luxury experience, including a professional chauffeur who will meet you at your hotel, assist with your luggage, and ensure you arrive at the airport in plenty of time for your flight. This service is part of RolDrive's commitment to offering comprehensive chauffeur services, catering to the needs of both business and leisure travellers. With our fleet of premium vehicles to choose from, you can enjoy a stress-free journey to the airport, knowing that every aspect of your transfer is handled with the utmost professionalism and attention to detail.\n2. We also provide transfer from Airport to Hotel.",
+        desc: "Yes, RolDrive certainly provides hotel to airport transfer services. This convenient service is designed for travellers who need reliable and comfortable transportation from their hotel to the airport. With RolDrive, you can expect a luxury experience, including a professional chauffeur who will meet you at your hotel, assist with your luggage, and ensure you arrive at the airport in plenty of time for your flight. This service is part of RolDrive's commitment to offering comprehensive chauffeur services, catering to the needs of both business and leisure travellers. With our fleet of premium vehicles to choose from, you can enjoy a stress-free journey to the airport, knowing that every aspect of your transfer is handled with the utmost professionalism and attention to detail.\n2. We also provide transfer from Airport to Hotel.",
       },
       {
         title: 'How to know if RolDrive provides airport transfers near me?',
-        desc: "1. To determine if RolDrive provides airport transfers in your area, you should download our app or visit our website. Through these platforms, you can easily access detailed information about the geographic coverage of RolDrive's services. By entering your specific location or airport destination in the app or on the website, you can quickly ascertain whether RolDrive's luxury airport transfer services are available to you. These tools are designed to be user-friendly, offering clear and concise information about service areas, availability, and how to book a transfer. This way, you can effortlessly check if RolDrive caters to your airport transfer needs, ensuring a seamless and luxurious travel experience tailored to your location.",
+        desc: "To determine if RolDrive provides airport transfers in your area, you should download our app or visit our website. Through these platforms, you can easily access detailed information about the geographic coverage of RolDrive's services. By entering your specific location or airport destination in the app or on the website, you can quickly ascertain whether RolDrive's luxury airport transfer services are available to you. These tools are designed to be user-friendly, offering clear and concise information about service areas, availability, and how to book a transfer. This way, you can effortlessly check if RolDrive caters to your airport transfer needs, ensuring a seamless and luxurious travel experience tailored to your location.",
       },
       {
         title: 'How to know if RolDrive provides affordable Airport Transfers?',
-        desc: "1. To find out if RolDrive's airport transfers are affordable for you, simply enter your details into our online booking engine. This can be accessed either through the RolDrive website or our dedicated mobile app. Once you input your pickup and drop-off locations, date, and time, the booking system will provide you with a comprehensive quote. This quote includes all charges, ensuring there are no hidden fees, and allows you to see the full cost of your transfer upfront. By reviewing this all-inclusive price, you can make an informed decision on whether RolDrive's service fits your budget. This transparent pricing model is part of RolDrive's commitment to customer satisfaction, making it easy for you to assess the affordability of our luxury airport transfer services.",
+        desc: "To find out if RolDrive's airport transfers are affordable for you, simply enter your details into our online booking engine. This can be accessed either through the RolDrive website or our dedicated mobile app. Once you input your pickup and drop-off locations, date, and time, the booking system will provide you with a comprehensive quote. This quote includes all charges, ensuring there are no hidden fees, and allows you to see the full cost of your transfer upfront. By reviewing this all-inclusive price, you can make an informed decision on whether RolDrive's service fits your budget. This transparent pricing model is part of RolDrive's commitment to customer satisfaction, making it easy for you to assess the affordability of our luxury airport transfer services.",
       },
     ],
   };
