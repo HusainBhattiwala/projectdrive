@@ -147,17 +147,14 @@ export default function Navbar() {
                   />
                 </svg>
               </button>
-              <Link
-                href="/rolnew"
-                className="hidden flex-none sm:block items-center"
-              >
+              <Link href="/" className="hidden flex-none sm:block items-center">
                 <img
                   className="h-[50px] w-[155px]"
                   src="/rolnew/global/logo.svg"
                   alt="logo"
                 />
               </Link>
-              <Link href="/rolnew" className="flex-none sm:hidden items-center">
+              <Link href="/" className="flex-none sm:hidden items-center">
                 <img
                   className="h-[50px] w-[90px]"
                   src="/rolnew/global/logo.svg"
