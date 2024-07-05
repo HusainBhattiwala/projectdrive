@@ -41,7 +41,7 @@ export default function Hero2() {
             <div className="flex sm:gap-x-4 gap-x-1.5 justify-between">
               <div className="flex items-center sm:gap-x-2 gap-x-1 text-[#FDC65C] lg:text-base text-xs font-medium flex-nowrap pop">
                 <img src="/rolnew/global/icons/phone-primary-gold.svg" alt="phone-primary-gold" />
-                <a href="tel:+442071128101">+44 207 112 8101</a>
+                <a href="tel:+442045920966">+44 204 592 0966</a>
               </div>
               <div className="flex items-center sm:gap-x-2 gap-x-1 text-[#FDC65C] lg:text-base text-xs font-medium pop">
                 <img src="/rolnew/global/icons/mail-primary-gold.svg" alt="phone-primary-gold" />
@@ -83,11 +83,11 @@ export default function Hero2() {
               <div className="flex sm:gap-x-[12px] gap-x-1.5 justify-between">
                 <div className="flex items-center sm:gap-x-2 gap-x-1 text-[#FDC65C] sm:text-base text-xs font-medium pop">
                   <img src="/rolnew/global/icons/phone-primary-gold.svg" alt="phone-primary-gold" />
-                  <a href="tel:+442071128101">+44 207 112 8101</a>
+                  <a href="tel:+442045920966">+44 204 592 0966</a>
                 </div>
                 <div className="flex items-center sm:gap-x-2 gap-x-1 text-[#FDC65C] sm:text-base text-xs font-medium pop">
                   <img src="/rolnew/global/icons/mail-primary-gold.svg" alt="phone-primary-gold" />
-                  <a href="mailto:+442071128101">booking@roldrive.com</a>
+                  <a href="mailto:+booking@roldrive.com">booking@roldrive.com</a>
                 </div>
               </div>
             </div>

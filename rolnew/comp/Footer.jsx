@@ -36,10 +36,10 @@ function Footer() {
             </p>
             <div className="flex flex-col gap-y-2">
               <a
-                href="tel:+4402071128101"
+                href="tel:+4402045920966"
                 className="text-base leading-[26px] font-light text-opacity-65 text-left pop"
               >
-                +44 (0) 207 112 8101
+                +44 (0) 204 592 0966
               </a>
               <a
                 href="mailto:booking@roldrive.com"

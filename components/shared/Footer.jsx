@@ -39,7 +39,7 @@ function Footer() {
                 <li className="flex items-center mb-1">
                   <Link
                     className="flex flex-wrap hover:text-primary pop"
-                    href="tel:+4402071128101"
+                    href="tel:+4402045920966"
                   >
                     <div className="w-4 h-4 my-auto mr-1">
                       <Pic
@@ -47,7 +47,7 @@ function Footer() {
                         alt="GB"
                       />
                     </div>
-                    <P className="mb-1 ml-1">+44 (0) 207 112 8101</P>
+                    <P className="mb-1 ml-1">+44 (0) 204 592 0966</P>
                   </Link>
                 </li>
               </ul>

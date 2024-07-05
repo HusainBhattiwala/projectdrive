@@ -81,11 +81,11 @@ function ContactDetails() {
         <div className="col-span-1 flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-4">
             <a
-              href="tel:+4402071128101"
+              href="tel:+4402045920966"
               className="flex sm:gap-x-4 gap-x-1 items-center sm:text-base text-sm sm:font-light font-medium text-[#FDC65C]"
             >
               <FiPhone className="sm:text-xl text-base" />
-              +44 (0) 207 112 8101
+              +44 (0) 204 592 0966
             </a>
             <a
               href="mailto:booking@roldrive.com"
@@ -219,11 +219,11 @@ function ContactDetails() {
         <div className="col-span-1">
           <div className="flex justify-between my-6">
             <a
-              href="tel:+4402071128101"
+              href="tel:+4402045920966"
               className="flex sm:gap-x-4 gap-x-1 items-center sm:text-base text-sm sm:font-light font-medium text-[#FDC65C]"
             >
               <FiPhone className="sm:text-xl text-base" />
-              +44 (0) 207 112 8101
+              +44 (0) 204 592 0966
             </a>
             <a
               href="mailto:booking@roldrive.com"

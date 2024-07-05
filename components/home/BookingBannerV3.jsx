@@ -112,9 +112,9 @@ export default function BookingBannerV3({
               </div>
               <a
                 className="text-[#ff7e24] !text-base"
-                href="tel:+442071128101"
+                href="tel:+442045920966"
               >
-                +442071128101
+                +442045920966
               </a>
             </div>
             <div className="flex gap-x-1 items-center">
@@ -131,7 +131,7 @@ export default function BookingBannerV3({
             <div className="flex gap-x-1">
               <a
                 target="_blank"
-                href="https://wa.me/442071128101"
+                href="https://wa.me/442045920966"
                 rel="noreferrer"
               >
                 <div className="flex items-center">
@@ -148,7 +148,7 @@ export default function BookingBannerV3({
               <div className="hidden md:block">
                 <a
                   target="_blank"
-                  href="https://wa.me/442071128101"
+                  href="https://wa.me/442045920966"
                   rel="noreferrer"
                 >
                   <div className="flex">
@@ -156,7 +156,7 @@ export default function BookingBannerV3({
                       <Pic src="/images/icons/whatsapp-icon.svg" />
                     </div>
                     <P className="text-primary !text-sm font-semibold pl-2">
-                      +442071128101
+                      +442045920966
                     </P>
                   </div>
                 </a>
@@ -226,7 +226,7 @@ export default function BookingBannerV3({
   //           <div className="w-[24px] h-[14px]">
   //             <Pic src="images/icons/uk-flag.svg" alt="uk-flag" />
   //           </div>
-  //           <a className="text-primary !text-sm font-semibold" href="tel:+44 (0) 207 112 8101">+442071128101</a>
+  //           <a className="text-primary !text-sm font-semibold" href="tel:+44 (0) 204 592 0966">+442045920966</a>
   //         </div>
   //         <div className="flex gap-x-2">
   //           <div className="w-[24px] h-[14px]">

@@ -9,16 +9,16 @@ import ServingCountries from 'components/home/ServingCountries';
 
 export function generateMetadata() {
   return metadata({
-    title: 'Book a Luxury Black Car To Call +44 (0) 207 112 8101 | Rol Drive',
+    title: 'Book a Luxury Black Car To Call +44 (0) 204 592 0966 | Rol Drive',
     description:
-      "RolDrive's luxury black car service. Dial +44 (0) 207 112 8101 for an opulent ride tailored to your elegance. Book now",
+      "RolDrive's luxury black car service. Dial +44 (0) 204 592 0966 for an opulent ride tailored to your elegance. Book now",
     keywords: ['contact us', 'black car', 'luxury car'],
-    ogTitle: 'Call +44 (0) 207 112 8101 to Book a Luxury Black Car | RolDrive',
+    ogTitle: 'Call +44 (0) 204 592 0966 to Book a Luxury Black Car | RolDrive',
     ogDescription:
-      'Experience elegance at your fingertips. Dial +44 (0) 207 112 8101 to book a luxury black car with RolDrive. Your opulent journey begins with a call.',
-    twTitle: 'Call +44 (0) 207 112 8101 to Book a Luxury Black Car | RolDrive',
+      'Experience elegance at your fingertips. Dial +44 (0) 204 592 0966 to book a luxury black car with RolDrive. Your opulent journey begins with a call.',
+    twTitle: 'Call +44 (0) 204 592 0966 to Book a Luxury Black Car | RolDrive',
     twDescription:
-      'Experience elegance at your fingertips. Dial +44 (0) 207 112 8101 to book a luxury black car with RolDrive. Your opulent journey begins with a call.',
+      'Experience elegance at your fingertips. Dial +44 (0) 204 592 0966 to book a luxury black car with RolDrive. Your opulent journey begins with a call.',
   });
 }
 
@@ -109,8 +109,8 @@ export default function Home() {
                   Telephone number
                 </H4>
                 <P>Give us call at</P>
-                <Link href="tel:+4402071128101" className="text-[14px]">
-                  +44 (0) 207 112 8101
+                <Link href="tel:+4402045920966" className="text-[14px]">
+                  +44 (0) 204 592 0966
                 </Link>
               </div>
               <div>
@@ -136,8 +136,8 @@ export default function Home() {
                   src={`${process.env.NEXT_PUBLIC_COUNTRY_FLAG_URL}/GB.svg`}
                 />
                 {' '}
-                <Link href="tel:+4402071128101" className="text-[14px]">
-                  +44 (0) 207 112 8101
+                <Link href="tel:+4402045920966" className="text-[14px]">
+                  +44 (0) 204 592 0966
                 </Link>
               </P>
             </div> */}

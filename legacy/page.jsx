@@ -40,7 +40,7 @@ const jsonLd = {
   logo: 'https://www.roldrive.com/_next/image?url=%2Fimages%2Flogo.png&w=1920&q=75',
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+44 (0) 207 112 8101',
+    telephone: '+44 (0) 204 592 0966',
     contactType: 'customer service',
     contactOption: 'TollFree',
     areaServed: 'GB',

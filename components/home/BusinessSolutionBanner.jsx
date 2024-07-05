@@ -119,9 +119,9 @@ export default function BusinessSolutionBanner({
                 </div>
                 <a
                   className="text-white !text-sm font-medium"
-                  href="tel:+442071128101"
+                  href="tel:+442045920966"
                 >
-                  +44 (0) 207 112 8101
+                  +44 (0) 204 592 0966
                 </a>
               </div>
               <div className="flex gap-2">
@@ -141,16 +141,16 @@ export default function BusinessSolutionBanner({
                 </div>
                 <a
                   className="text-white !text-sm font-medium"
-                  href="https://wa.me/442071128101"
+                  href="https://wa.me/442045920966"
                 >
-                  +44 (0) 207 112 8101
+                  +44 (0) 204 592 0966
                 </a>
               </div>
               {pathName === '/' && (
               <div className="hidden md:block">
                 <a
                   target="_blank"
-                  href="https://wa.me/442071128101"
+                  href="https://wa.me/442045920966"
                   rel="noreferrer"
                 >
                   <div className="flex">
@@ -158,7 +158,7 @@ export default function BusinessSolutionBanner({
                       <Pic src="/images/icons/whatsapp-icon.svg" />
                     </div>
                     <P className="text-primary !text-sm font-semibold pl-2">
-                      +442071128101
+                      +442045920966
                     </P>
                   </div>
                 </a>

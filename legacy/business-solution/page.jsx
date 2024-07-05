@@ -119,7 +119,7 @@ export default function Home() {
               <div className="flex flex-row gap-3 mt-2 text-black text-sm font-normal">
                 Prefer to call?
                 <img src="/images/global/mobile_primary.svg" alt="" />
-                +44(0) 207 112 8101
+                +44(0) 204 592 0966
               </div>
             </div>
           </form>
