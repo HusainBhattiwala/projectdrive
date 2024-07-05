@@ -191,19 +191,18 @@ function Footer() {
               </Link>
             </div>
             <div className='flex flex-col gap-y-5 items-start text-left'>
-              <Link href='#' className='text-base pop'>
+              <Link href='#' className='text-base pop' onClick={(e) => e.preventDefault()}>
                 FAQ
               </Link>
-              <Link href='#' className='text-base pop'>
+              <Link href='#' className='text-base pop' onClick={(e) => e.preventDefault()}>
                 Blogs
               </Link>
-              <Link href='#' className='text-base pop'>
+              <Link href='#' className='text-base pop' onClick={(e) => e.preventDefault()}>
                 About Us
               </Link>
               <Link
                 href='#'
-                className='text-base text-[#FDC65C] whitespace-nowrap pop'
-              >
+                className='text-base text-[#FDC65C] whitespace-nowrap pop' onClick={(e) => e.preventDefault()}>
                 Become A Supplier
               </Link>
             </div>
