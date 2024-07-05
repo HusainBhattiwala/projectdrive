@@ -641,7 +641,7 @@ function BookingEngine3({ setFocus, width, height }) {
         <div className="flex gap-x-4">
           <div className="relative sm:w-2/4 w-full" ref={userDatePicker}>
             <Input
-              leadingIcon="/rolnew/home/gps.svg"
+              leadingIcon="/rolnew/home/icon.png"
               label="Date"
               placeholder="Pick up date"
               className="cursor-pointer"
@@ -670,7 +670,7 @@ function BookingEngine3({ setFocus, width, height }) {
           </div>
           <div className="relative sm:w-2/4 w-full" ref={userTimePicker}>
             <Input
-              leadingIcon="/rolnew/home/gps.svg"
+              leadingIcon="/rolnew/home/clock.png"
               label="Time"
               showError={showTimeError}
               placeholder="Pick up time"
@@ -760,7 +760,7 @@ function BookingEngine3({ setFocus, width, height }) {
                   ref={userReturnDatePicker}
                 >
                   <Input
-                    leadingIcon="/rolnew/home/gps.svg"
+                    leadingIcon="/rolnew/home/icon.png"
                     label="Return Date"
                     placeholder="Pick up date"
                     className="cursor-pointer"
@@ -792,7 +792,7 @@ function BookingEngine3({ setFocus, width, height }) {
                   ref={userReturnTimePicker}
                 >
                   <Input
-                    leadingIcon="/rolnew/home/gps.svg"
+                    leadingIcon="/rolnew/home/clock.png"
                     label="Return Time"
                     placeholder="Pick up time"
                     className="cursor-pointer"
@@ -829,7 +829,7 @@ function BookingEngine3({ setFocus, width, height }) {
         {bookingType === 'hourly' && (
           <div className={`relative ${height > 600 ? 'pb-6' : 'pb-4'}`}>
             <Select
-              leadingIcon="/rolnew/home/gps.svg"
+              leadingIcon="/rolnew/home/clock.png"
               label="Duration"
               errors={errors}
               register={register}
