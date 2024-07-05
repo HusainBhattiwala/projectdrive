@@ -1,46 +1,46 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import Container from 'rolnew/comp/Container';
-import Pic from 'rolnew/util/Pic';
-import Title from 'rolnew/section/home/Title';
-import CountryList from 'rolnew/section/home/CountryList';
-import Button from 'rolnew/ui/Button';
-import Dropdown from 'rolnew/ui/Dropdown';
-import { useContext, useState } from 'react';
-import { ModalContext } from 'context/ModalContext';
-import BookModal from './BookModal';
+import { useRouter } from "next/navigation";
+import Container from "rolnew/comp/Container";
+import Pic from "rolnew/util/Pic";
+import Title from "rolnew/section/home/Title";
+import CountryList from "rolnew/section/home/CountryList";
+import Button from "rolnew/ui/Button";
+import Dropdown from "rolnew/ui/Dropdown";
+import { useContext, useState } from "react";
+import { ModalContext } from "context/ModalContext";
+import BookModal from "./BookModal";
 
 const countryList = [
   {
     id: 1,
-    image: '/rolnew/global/country/london.jpg',
-    countryCode: 'GB',
-    cityName: 'London',
+    image: "/rolnew/global/country/london.jpg",
+    countryCode: "GB",
+    cityName: "London",
   },
   {
     id: 2,
-    image: '/rolnew/global/country/london.jpg',
-    countryCode: 'GB',
-    cityName: 'Paris',
+    image: "/rolnew/global/country/london.jpg",
+    countryCode: "GB",
+    cityName: "Paris",
   },
   {
     id: 3,
-    image: '/rolnew/global/country/london.jpg',
-    countryCode: 'GB',
-    cityName: 'Dubai',
+    image: "/rolnew/global/country/london.jpg",
+    countryCode: "GB",
+    cityName: "Dubai",
   },
   {
     id: 4,
-    image: '/rolnew/global/country/london.jpg',
-    countryCode: 'GB',
-    cityName: 'New York',
+    image: "/rolnew/global/country/london.jpg",
+    countryCode: "GB",
+    cityName: "New York",
   },
   {
     id: 5,
-    image: '/rolnew/global/country/london.jpg',
-    countryCode: 'GB',
-    cityName: 'Tokyo',
+    image: "/rolnew/global/country/london.jpg",
+    countryCode: "GB",
+    cityName: "Tokyo",
   },
 ];
 
@@ -62,41 +62,39 @@ function Airports({ scrollRef, airportsData, show = false }) {
         ? selectedCity?.toLowerCase()
         : airportsData?.dropdownOneData[0].toLowerCase();
       const formattedAirport = selectedAirport
-        .replace(' Airport', '')
-        .replace(/\s+/g, '')
+        .replace(" Airport", "")
+        .replace(/\s+/g, "")
         .toLowerCase();
-      router.push(
-        `/rolnew/airport-transfers/${formattedCity}/${formattedAirport}`
-      );
+      router.push(`/airport-transfers/${formattedCity}/${formattedAirport}`);
     }
   };
 
   return (
     <>
-      <div className='w-full h-[1px] mx-auto'>
-        <Pic src='/rolnew/global/hr.svg' alt='hr' objectFit='cover' />
+      <div className="w-full h-[1px] mx-auto">
+        <Pic src="/rolnew/global/hr.svg" alt="hr" objectFit="cover" />
       </div>
-      <Container className='bg-[#11202D] sm:py-16 py-8 text-center'>
+      <Container className="bg-[#11202D] sm:py-16 py-8 text-center">
         <Title
-          subTitle='Airport Transfers'
+          subTitle="Airport Transfers"
           mainTitle={airportsData?.title}
           description={airportsData?.desc}
         />
 
         {show && (
-          <div className='px-4 sm:px-24'>
+          <div className="px-4 sm:px-24">
             <div
-              className='boxes p-[10px] bg-[#2F4456] mt-20 mb-10 w-full h-auto sm:h-20 flex flex-col sm:flex-row gap-1 justify-center items-center rounded-xl'
+              className="boxes p-[10px] bg-[#2F4456] mt-20 mb-10 w-full h-auto sm:h-20 flex flex-col sm:flex-row gap-1 justify-center items-center rounded-xl"
               ref={scrollRef}
             >
-              <div className='box w-full sm:w-full p-2'>
+              <div className="box w-full sm:w-full p-2">
                 <Dropdown
                   label={
                     airportsData
                       ? airportsData?.search?.dropdown1
-                      : 'Choose Your City'
+                      : "Choose Your City"
                   }
-                  className='rounded-xl'
+                  className="rounded-xl"
                   items={
                     airportsData?.dropdownOneData
                       ? airportsData?.dropdownOneData
@@ -107,14 +105,14 @@ function Airports({ scrollRef, airportsData, show = false }) {
                   onSelect={setSelectedCity}
                 />
               </div>
-              <div className='box w-full sm:w-full p-2'>
+              <div className="box w-full sm:w-full p-2">
                 <Dropdown
                   label={
                     airportsData
                       ? airportsData?.search?.dropdown2
-                      : 'Choose Your Destination'
+                      : "Choose Your Destination"
                   }
-                  className='rounded-xl'
+                  className="rounded-xl"
                   items={
                     airportsData?.dropdownTwoData
                       ? airportsData?.dropdownTwoData
@@ -124,8 +122,8 @@ function Airports({ scrollRef, airportsData, show = false }) {
                   onSelect={setSelectedAirport}
                 />
               </div>
-              <div className='box w-full sm:w-[50%] p-2'>
-                <Button className='w-full' white onClick={handleSearch}>
+              <div className="box w-full sm:w-[50%] p-2">
+                <Button className="w-full" white onClick={handleSearch}>
                   Search
                 </Button>
               </div>
@@ -138,7 +136,7 @@ function Airports({ scrollRef, airportsData, show = false }) {
         />
 
         <Button
-          className='mt-14 w-full sm:w-[30%]'
+          className="mt-14 w-full sm:w-[30%]"
           cta
           onClick={() => openModal()}
         >

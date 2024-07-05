@@ -34,7 +34,7 @@ function Page() {
   const loginRef = useRef();
 
   useEffect(() => {
-    if (pathName === '/login') {
+    if (pathName === '/rolnew/login') {
       setIsLoginPage(true);
       setIsIsLoaded(true);
     }
@@ -122,12 +122,12 @@ function Page() {
 
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-9 relative bg-[#223544]"
+      className="grid grid-cols-1 md:grid-cols-9 2xl:min-h-[90svh] bg-[#223544] relative mt-16"
       ref={loginRef}
     >
       {isLoaded && (
         <>
-          <div className="col-span-5 w-full h-full">
+          <div className="col-span-5 w-full h-full relative">
             <Banner
               title="Premium Chauffeur Service"
               description="Your exclusive and dependable chauffeur service indulgence"

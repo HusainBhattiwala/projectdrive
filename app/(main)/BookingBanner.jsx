@@ -4,9 +4,7 @@
 import Hero2 from 'rolnew/section/home/Hero2';
 
 function BookingBanner() {
-  return (
-    <Hero2 />
-  );
+  return <Hero2 />;
 }
 
 export default BookingBanner;
