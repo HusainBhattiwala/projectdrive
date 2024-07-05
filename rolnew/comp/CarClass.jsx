@@ -143,8 +143,20 @@
 "use client";
 
 import { useState, useEffect, useContext } from "react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import "rolnew/comp/css/carSlider.css";
+
 import Pic from "rolnew/util/Pic";
+
 import Button from "rolnew/ui/Button";
+
 import { FleetContext } from "context/FleetContext";
 import { ModalContext } from "context/ModalContext";
 import { fleetData } from "static/fleetData";
@@ -260,7 +272,7 @@ function CarClass({ hideArrow = true }) {
               </div>
             </div>
 
-            <div className="flex flex-nowrap gap-7 w-full sm:w-[1100px] h-[165px] justify-center mx-auto sm:gap-20 mb-2 overflow-x-auto overflow-y-hidden scroll no-scroll mt-20">
+            <div className="hidden sm:flex flex-nowrap gap-7 w-full sm:w-[1100px] h-[165px] justify-center mx-auto sm:gap-20 mb-2 overflow-x-auto overflow-y-hidden scroll no-scroll mt-20">
               {carCatData?.map((car, index) => (
                 <div
                   className="w-[250px] h-[130px] hover:cursor-pointer hover:scale-105 transition ease-in duration-75 mt-2 relative"
@@ -279,6 +291,79 @@ function CarClass({ hideArrow = true }) {
                   </p>
                 </div>
               ))}
+            </div>
+
+            {/* slider for small screen */}
+            <div className="sm:hidden block w-full mt-10">
+              <Swiper
+                slidesPerView={2}
+                spaceBetween={100}
+                pagination={{
+                  el: ".swiper-pagination",
+                }}
+                navigation={{
+                  nextEl: ".swiper-btn-next",
+                  prevEl: ".swiper-btn-prev",
+                }}
+                breakpoints={{
+                  580: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  640: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                  },
+                  1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                  },
+                }}
+                centerInsufficientSlides
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+              >
+                {carCatData?.map((car, index) => (
+                  <SwiperSlide>
+                    <div
+                      className="w-[250px] h-[130px] hover:cursor-pointer mt-2 relative"
+                      onClick={() => setCarData(car)}
+                      key={index}
+                    >
+                      <div className="absolute w-[90px] h-[30px] sm:w-[150px] sm:h-[100px] px-20 py-16 -top-2 -right-1 rounded-2xl bg-[#111E28]"></div>
+                      <Pic
+                        alt="trust"
+                        className="rounded-xl transform scale-x-[-1] w-full h-full"
+                        src={car?.img || "/images/airports/car4.png"}
+                        objectFit="fit"
+                      />
+                      <p className="w-full text-center text-base font-medium leading-6 text-[#FFFFFF]">
+                        {car?.name}
+                      </p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              <div className="flex justify-center items-center gap-x-3 sm:mt-5 relative mt-10">
+                <div className="swiper-btn-prev pop w-12 h-12 bg-[#11202D] sm:border border-[#223544] rounded-full flex items-center justify-center cursor-pointer">
+                  <img
+                    alt="go-prev"
+                    src="/rolnew/global/icons/arrow-left-primary.svg"
+                  />
+                </div>
+                <div className="swiper-pagination !relative !w-auto sm:mx-[30px] mx-2" />
+                <div className="swiper-btn-next pop w-12 h-12 bg-[#11202D] border border-[#223544] rounded-full flex items-center justify-center cursor-pointer">
+                  <img
+                    alt="go-next"
+                    src="/rolnew/global/icons/arrow-right-primary.svg"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

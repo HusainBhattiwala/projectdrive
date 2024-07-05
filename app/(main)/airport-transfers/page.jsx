@@ -209,8 +209,8 @@ export default function Page() {
         desc: (
           <p className="text-[#B2B2B2]">
             A RolDrive chauffeured airport transfer and hailing a cab represent
-            two distinct experiences. 
-            <br/>
+            two distinct experiences.
+            <br />
             1. RolDrive offers reliable airport transfers
             with premium services, ensuring luxury, comfort, and
             professionalism. Clients enjoy pre-booked, punctual rides in
