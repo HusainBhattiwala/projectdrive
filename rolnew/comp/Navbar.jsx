@@ -75,8 +75,8 @@ const navLinks = [
       },
       { route: "/rolnew/airport-transfers/dubai", label: "Dubai Airport" },
       { route: "/rolnew/airport-transfers/newyork", label: "New York Airport" },
-      { route: "/rolnew/airport-transfers/paris", label: "Paris Airport" },
-      { route: "/rolnew/airport-transfers/tokyo", label: "Tokyo Airport" },
+      // { route: "/rolnew/airport-transfers/paris", label: "Paris Airport" },
+      // { route: "/rolnew/airport-transfers/tokyo", label: "Tokyo Airport" },
     ],
   },
 ];
