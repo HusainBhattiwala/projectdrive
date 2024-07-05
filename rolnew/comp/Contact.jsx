@@ -7,7 +7,7 @@ function Contact() {
   return (
     <Container className='bg-[#11202D] sm:py-[100px] py-8 text-center'>
       <Title
-        subTitle='Let’s get in touch!'
+        subTitle='Let’s Get In Touch!'
         mainTitle='Contact us for quick and friendly support.'
       />
       <ContactDetails />

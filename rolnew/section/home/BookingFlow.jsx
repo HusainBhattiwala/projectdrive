@@ -7,7 +7,7 @@ function BookingFlow() {
   return (
     <Container className='bg-[#081017] sm:py-[100px] py-8 text-center'>
       <Title
-        subTitle='How it Works'
+        subTitle='How It Works'
         mainTitle='Book Your Luxury Chauffeur Service Experience In Three Simple Steps'
       />
       <div className='grid lg:grid-cols-5 sm:grid-cols-11 grid-cols-1 sm:justify-center sm:items-center pt-10 gap-y-4'>

@@ -13,7 +13,7 @@ function FAQ({ faq }) {
 
   return (
     <Container className='bg-[#081017] sm:py-[60px] py-[32px] text-center'>
-      <Title subTitle='Have queries?' mainTitle='Frequently Asked Questions' />
+      <Title subTitle='Have Queries?' mainTitle='Frequently Asked Questions' />
       <FleetFaqCat categorys={faq} setFaqCat={setFaqCat} />
       {selectedCat.length > 0 && <Collaspe list={selectedCat} />}
     </Container>

@@ -21,7 +21,7 @@ function Destinations({ destinationData }) {
   return (
     <Container className="bg-[#223544] py-20 text-center">
       <Title
-        subTitle={destinationData?.subTitle || "Popular trips"}
+        subTitle={destinationData?.subTitle || "Popular Trips"}
         mainTitle={
           destinationData?.title || "Explore Our Most Sought-After Destinations"
         }
