@@ -145,8 +145,8 @@ function ContactDetails() {
           <div className="flex flex-col gap-y-3">
             <Input
               name="name"
-              label="First Name"
-              placeholder="Enter first name"
+              label="Full Name"
+              placeholder="Enter full name"
               labelClass="!text-xs !text-[#B2B2B2]"
               value={formData.name}
               onChange={handleChange}
@@ -191,8 +191,8 @@ function ContactDetails() {
           <div className="flex flex-col gap-y-3">
             <Input
               name="name"
-              label="First Name"
-              placeholder="Enter first name"
+              label="Full Name"
+              placeholder="Enter full name"
               labelClass="!text-xs !text-[#B2B2B2]"
               value={formData.name}
               onChange={handleChange}

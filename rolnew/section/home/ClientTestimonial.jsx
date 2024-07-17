@@ -62,7 +62,7 @@ function ClientTestimonial() {
   return (
     <Container className='bg-[#11202D] sm:pt-[42px] sm:pb-[60px] sm:py-0 py-6 text-center'>
       <Title
-        subTitle='Client Stories'
+        subTitle='Client Reviews'
         mainTitle='Ratings By Our Esteemed Clients'
       />
       <div className='w-full sm:mt-12 mt-6'>
