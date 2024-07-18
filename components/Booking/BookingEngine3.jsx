@@ -514,7 +514,7 @@ function BookingEngine3({ setFocus, width, height }) {
     ...rest
   }) => (
     <Input
-      inputIcon={userPickupLocation ? '' : '/rolnew/home/inputIcon.svg'}
+      inputIcon="/rolnew/home/inputIcon.svg"
       leadingIcon="/rolnew/home/gps.svg"
       label="Pick Up"
       placeholder="Enter pick up location"
@@ -543,7 +543,7 @@ function BookingEngine3({ setFocus, width, height }) {
     ...rest
   }) => (
     <Input
-      inputIcon={userPickupLocation ? '' : '/rolnew/home/inputIcon.svg'}
+      inputIcon="/rolnew/home/inputIcon.svg"
       leadingIcon="/rolnew/home/gps.svg"
       label="Drop Off"
       placeholder="Enter drop off location"
