@@ -23,8 +23,8 @@ function Collaspe({ list }) {
               setSelectedId(slectedId !== index ? index : "");
             }}
           >
-            <h3 className="text-[#B2B2B2] lg:text-lg md:text-md sm:text-md text-base">
-              {faq.question}
+            <h3 className="text-[#B2B2B2] lg:text-lg md:text-lg sm:text-md text-base">
+              <strong className="lg:text-lg md:text-lg sm:text-lg">{faq.question}</strong>
             </h3>
             <div className="w-6 h-6 ml-2">
               <Pic
@@ -42,7 +42,7 @@ function Collaspe({ list }) {
               slectedId === index ? "h-auto block sm:pt-6 pt-4" : "h-0 hidden"
             } transition-all delay-150`}
           >
-            <p className="lg:text-lg md:text-md sm:text-md font-normal text-[#B2B2B2]">
+            <p className="lg:text-lg md:text-md sm:text-xs font-normal text-[#B2B2B2]">
               {faq.ans}
             </p>
           </div>
