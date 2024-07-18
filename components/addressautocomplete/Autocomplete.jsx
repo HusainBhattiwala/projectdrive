@@ -162,13 +162,13 @@ function Autocomplete(props) {
           }}
         >
           {defaultValue && items.length === 0 && (
-            <P className="text-[#B2B2B2] mt-[7px] mr-2">
+            <P className="text-[#B2B2B2] mt-[0px] mr-2">
               <CgClose />
             </P>
           )}
           {textvalue && items.length > 0 && (
-            <P className="text-[#B2B2B2] mt-[7px] mr-2">
-              <CgClose />
+            <P className="text-[#B2B2B2] mt-[7px] z-10">
+              <CgClose size={18} color="white" />
             </P>
           )}
           {items.length === 0 && open && (
@@ -205,7 +205,10 @@ function Autocomplete(props) {
         autoComplete="false"
         id={`text${name}`}
         value={textvalue}
-        className={`${SelectedComponent !== 'string' || 'w-full pt-1 pl-1 overflow-hidden !text-[14px] text-black rounded-none resize-none min-h-12 h-fit input focus:border-primary focus:outline-none focus:ring-transparent active:ring-transparent disabled:bg-white disabled:border-none disabled:opacity-100 -top-6 address-text'}`}
+        className={`${
+          SelectedComponent !== 'string'
+          || 'w-full pt-1 pl-1 overflow-hidden !text-[14px] text-black rounded-none resize-none min-h-12 h-fit input focus:border-primary focus:outline-none focus:ring-transparent active:ring-transparent disabled:bg-white disabled:border-none disabled:opacity-100 -top-6 address-text'
+        }`}
         onChange={(e) => {
           toggleOpen(e.target.value);
           setTextvalue(e.target.value);
@@ -224,10 +227,18 @@ function Autocomplete(props) {
         name={name}
       />
 
-      <div className={` ${isFullScreen ? 'fixed z-[9999999999] top-16 left-0 right-0 max-h-[100vh]' : 'absolute z-40 max-h-72 bottom-auto'} w-full overflow-x-hidden overflow-y-auto rounded-xl`}>
+      <div
+        className={` ${
+          isFullScreen
+            ? 'fixed z-[9999999999] top-32 left-0 right-0 max-h-[100vh]'
+            : 'absolute z-40 max-h-72 bottom-auto'
+        } w-full overflow-x-hidden overflow-y-auto rounded-xl`}
+      >
         {open && items.length > 0 && (
           <ul
-            className={`pt-1 ${items.length > 0 ? 'border border-t-0 border-[#E1E1E140]' : ''} ${isFullScreen ? 'border-0 border-t' : ''}`}
+            className={`pt-1 ${
+              items.length > 0 ? 'border border-t-0 border-[#E1E1E140]' : ''
+            } ${isFullScreen ? 'border-0 border-t' : ''}`}
             style={{ width: isFullScreen ? '100%' : ref.current?.clientWidth }}
           >
             {items.map((item, index) => (
