@@ -245,9 +245,9 @@ export default function Navbar() {
             </div>
 
             <div className="hidden sm:flex items-center gap-4">
-              <div className="flex gap-4 items-center pop mr-2" type="button">
+              {/* <div className="flex gap-4 items-center pop mr-2" type="button">
                 <img src="/images/navbar/icon.png" alt="" className="h-5 w-4" />
-              </div>
+              </div> */}
 
               <a
                 href="https://wa.me/442045920966 "
@@ -271,9 +271,9 @@ export default function Navbar() {
               </Link>
             </div>
             <div className="sm:hidden absolute flex flex-row right-5 gap-4">
-              <div className="flex gap-4 items-center pop" type="button">
+              {/* <div className="flex gap-4 items-center pop" type="button">
                 <img src="/images/navbar/icon.png" alt="" className="h-5 w-4" />
-              </div>
+              </div> */}
               <Link href="/login">
                 <Button className="w-[120px]" white>
                   Sign In

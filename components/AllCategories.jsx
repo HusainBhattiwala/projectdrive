@@ -19,7 +19,7 @@ export default function CategoriesComponent({ categoriesData }) {
             {' '}
             {categoriesData?.categories.map((category) => (
               <div key={category.id} className="text-center">
-                <p className="text-lg mb-12 px-6">{category.name}</p>
+                <p className="sm:text-xs md:text-md lg:text-lg mb-12 px-6">{category.name}</p>
               </div>
             ))}
           </>
