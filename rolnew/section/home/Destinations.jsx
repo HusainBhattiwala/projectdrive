@@ -27,7 +27,7 @@ function Destinations({ destinationData }) {
         }
       />
 
-      <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 pt-11 justify-center items-center gap-5">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 pt-11 justify-center items-center gap-5">
         {data.map((destination, index) => (
           <div key={index} className="col-span-1">
             <div className="px-6 py-4 bg-white bg-opacity-10 flex items-center justify-start gap-x-4 rounded-xl">
@@ -44,8 +44,8 @@ function Destinations({ destinationData }) {
                   />
                 </div>
               </div>
-              <div className="flex items-center gap-x-0.5 w-full overflow-hidden">
-                <p className="text-[#B2B2B2] font-normal text-base text-left">
+              <div className="flex items-center gap-x-0.5 overflow-hidden">
+                <p className="text-[#B2B2B2] font-normal w-full text-base text-left">
                   {destination.from}
                 </p>
 
