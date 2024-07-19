@@ -230,7 +230,7 @@ function Autocomplete(props) {
       <div
         className={` ${
           isFullScreen
-            ? 'fixed z-[9999999999] top-32 left-0 right-0 max-h-[100vh]'
+            ? 'fixed z-[9999999999] top-20 left-0 right-0 max-h-[100vh]'
             : 'absolute z-40 max-h-72 bottom-auto'
         } w-full overflow-x-hidden overflow-y-auto rounded-xl`}
       >

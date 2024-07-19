@@ -156,7 +156,7 @@ export default function Input({
     <div
       className={`w-full ${
         isFullScreen
-          ? "fixed h-full top-0 left-0 right-0 bottom-0 z-[99999999] bg-[#223544] py-4"
+          ? "fixed h-full top-0 left-0 right-0 bottom-0 z-[99999999] bg-[#223544] py-4 px-4"
           : "relative"
       }`}
     >
@@ -170,13 +170,16 @@ export default function Input({
           {label}
         </p>
       )}
+      {/* <div className="flex w-full gap-x-3 items-center"></div> */}
       <div
         className={`flex ${
-          isFullScreen ? "flex-col gap-5 w-full" : "w-full gap-x-3 items-center"
+          isFullScreen
+            ? "flex-row-reverse w-full items-center gap-x-3"
+            : "w-full gap-x-3 items-center"
         }`}
       >
         {isFullScreen && (
-          <div className="flex justify-end w-full">
+          <div className="flex justify-end">
             <button type="button" onClick={closeFocus}>
               <img
                 alt="clear"
