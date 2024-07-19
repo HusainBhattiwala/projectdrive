@@ -170,7 +170,6 @@ export default function Input({
           {label}
         </p>
       )}
-      {/* <div className="flex w-full gap-x-3 items-center"></div> */}
       <div
         className={`flex ${
           isFullScreen
