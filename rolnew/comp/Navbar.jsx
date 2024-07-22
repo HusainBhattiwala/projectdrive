@@ -30,7 +30,7 @@ const navLinks = [
     route: "/fleet",
     label: "Fleet",
   },
-  // { route: '/rolnew/business-solution', label: 'Business Solutions' },
+  
   {
     route: "#",
     label: "Cities",
@@ -48,37 +48,38 @@ const navLinks = [
     subLinks: [
       {
         route: "/airport-transfers/london",
-        label: "London Airport",
+        label: "London",
         subLinks: [
           {
             route: "/airport-transfers/london/heathrow",
-            label: "Heathrow",
+            label: "Heathrow Airport",
           },
           {
             route: "/airport-transfers/london/gatwick",
-            label: "Gatwick",
+            label: "Gatwick Airport",
           },
           {
             route: "/airport-transfers/london/londoncity",
-            label: "London City",
+            label: "London City Airport",
           },
           {
             route: "/airport-transfers/london/londonsouthend",
-            label: "London Southend",
+            label: "London Southend Airport",
           },
           {
             route: "/airport-transfers/london/londonstansted",
-            label: "London Stansted",
+            label: "London Stansted Airport",
           },
-          { route: "/airport-transfers/london/luton", label: "Luton" },
+          { route: "/airport-transfers/london/luton", label: "Luton Airport" },
         ],
       },
-      { route: "/airport-transfers/dubai", label: "Dubai Airport" },
-      { route: "/airport-transfers/newyork", label: "New York Airport" },
+      { route: "/airport-transfers/dubai", label: "Dubai" },
+      { route: "/airport-transfers/newyork", label: "New York" },
       // { route: "/rolnew/airport-transfers/paris", label: "Paris Airport" },
       // { route: "/rolnew/airport-transfers/tokyo", label: "Tokyo Airport" },
     ],
   },
+  // { route: '/rolnew/business-solution', label: 'Business Solutions' },
 ];
 
 export default function Navbar() {

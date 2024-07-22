@@ -194,7 +194,7 @@ export default function Page() {
     ],
   };
 
-  const servicesData = {
+  const offeringData = {
     heading: {
       mainTitle: 'About Airport Transfer Service',
     },
@@ -260,7 +260,7 @@ export default function Page() {
       },
       {
         title: 'Will RolDrive provide a Hotel to Airport Transfer?',
-        desc: "Yes, RolDrive certainly provides hotel to airport transfer services. This convenient service is designed for travellers who need reliable and comfortable transportation from their hotel to the airport. With RolDrive, you can expect a luxury experience, including a professional chauffeur who will meet you at your hotel, assist with your luggage, and ensure you arrive at the airport in plenty of time for your flight. This service is part of RolDrive's commitment to offering comprehensive chauffeur services, catering to the needs of both business and leisure travellers. With our fleet of premium vehicles to choose from, you can enjoy a stress-free journey to the airport, knowing that every aspect of your transfer is handled with the utmost professionalism and attention to detail.\n2. We also provide transfer from Airport to Hotel.",
+        desc: "Yes, RolDrive certainly provides hotel to airport transfer services. This convenient service is designed for travellers who need reliable and comfortable transportation from their hotel to the airport. With RolDrive, you can expect a luxury experience, including a professional chauffeur who will meet you at your hotel, assist with your luggage, and ensure you arrive at the airport in plenty of time for your flight. This service is part of RolDrive's commitment to offering comprehensive chauffeur services, catering to the needs of both business and leisure travellers. With our fleet of premium vehicles to choose from, you can enjoy a stress-free journey to the airport, knowing that every aspect of your transfer is handled with the utmost professionalism and attention to detail. We also provide transfer from Airport to Hotel.",
       },
       {
         title: 'How to know if RolDrive provides airport transfers near me?',
@@ -291,7 +291,7 @@ export default function Page() {
       <Contact />
       <OurPresence />
       <Locations />
-      <ServiceOfferings servicesData={servicesData} />
+      <ServiceOfferings servicesData={offeringData} />
       <DownloadOurApp />
       <BookModal />
     </>
