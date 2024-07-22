@@ -374,7 +374,7 @@ function BookingEngine3({ setFocus, width, height }) {
       });
       if (response.data.length > 0) {
         sessionStorage.setItem('fleetlist', JSON.stringify(response.data));
-        router.push('/rolnew/fleet-availability');
+        router.push('/fleet-availability');
       } else {
         toast.error('No Fleet Available', {
           autoClose: 3000,
