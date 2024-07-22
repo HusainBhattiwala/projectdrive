@@ -100,6 +100,90 @@ export const airportData = {
         },
       ],
     },
+    offeringData: {
+      heading: {
+        mainTitle: 'About Heathrow Airport Transfer Service',
+      },
+      data: [
+        {
+          title: 'What is the difference between a Heathrow transfer and a RolDrive Heathrow luxury car service?',
+          desc: "RolDrive’s Heathrow luxury transfer service when compared to a basic Heathrow transfer, will take you to and from Heathrow Airport on time, in complete comfort, and with the certainty of being driven by one of our professionally experienced drivers. Upgrading to our luxury Heathrow transfer service will provide you with an added level of style and comfort. With complimentary bottled water, a newspaper, and Wi-Fi on request all included in the fee, you'll have all you need to enjoy the ride while our driver handles the rest.",
+        },
+        {
+          title:
+            'Is my Heathrow Airport pick-up/drop-off online price all-inclusive?',
+          desc: "Yes, RolDrive follows a transparent pricing policy where you pay the quoted amount only. Our Heathrow Airport transfer to London service covers all expenses such as fuel, toll, airport parking fees. The price quotes also include VAT. It is however advised to confirm the price you pay as the charge might change due to additional requirements such as extended wait times although the first one hour wait time in case of a flight delay is free."
+        },
+        {
+          title: 'Do I need to know which terminal I will be travelling to/from when booking a Heathrow airport transfer?',
+          desc: "When booking a Heathrow Airport transfer service, it is advisable that you find out which terminal you will be travelling to or from. This is because Heathrow has multiple terminals and each serves different airlines and destinations. When you provide your terminal details, your chauffeur knows exactly where to pick or drop you off at. This helps avoid confusion, especially when a flight is involved. Knowing you terminal details also helps for a smoother Heathrow Airport transfer. In case you don't know your terminal details, you can always get in touch with your Heathrow Airport taxi meet and greet chauffeur for help and they will quickly guide you with the terminal details required."
+        },
+        {
+          title: 'Do I need to know my flight number for a Heathrow Airport pickup?',
+          desc: "Yes. Knowing your flight number is always helpful towards a synchronised travel experience. Through your flight details, your chauffeur is able to track the flight and reach the airport accordingly. Through flight tracking provided by your flight number, your chauffeur is able to know if your flight is delayed or is early. Also, through your flight number, the chauffeur knows exactly which terminal to pick or drop you off at. This synchronised travel experience is what we at RolDrive aim to provide you with. Therefore, when booking your airport transfer, always ensure to include your flight number to guarantee a seamless pickup. We also do Gatwick Airport to Heathrow Airport transfers for your convenience.",
+        },
+        {
+          title: 'What are the popular destinations for Heathrow Airport transfers?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Travellers arriving at Heathrow Airport in London often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from Heathrow Airport:
+              <p className="text-[#B2B2B2] ml-4">
+                1. Central London (Westminster and the City of London): 
+                This area includes iconic landmarks such as Buckingham Palace, the Houses of Parliament, Big Ben, and the London Eye. It’s the heart of political, cultural, and historical significance in the city.
+
+                <br />
+                2. Kensington and Chelsea: 
+                Home to famous museums like the Natural History Museum, the Victoria and Albert Museum, and the Science Museum, as well as luxurious shopping at Harrods and the fashionable King's Road.
+
+                <br />
+                3. Covent Garden: 
+                Known for its vibrant atmosphere, street performers, the Royal Opera House, and an array of shops, restaurants, and theatres.
+
+                <br />
+                4. Southbank: 
+                Stretching along the River Thames, this area is home to cultural landmarks such as the Southbank Centre, the National Theatre, the Tate Modern, and Shakespeare’s Globe Theatre.
+
+                <br />
+                5. Notting Hill: 
+                Famous for the annual Notting Hill Carnival, the Portobello Road Market, and its charming streets lined with pastel-colored houses.
+
+              </p>
+            </p>
+          ),
+        },
+        {
+          title: 'What are the popular hotels for Heathrow Airport transfers?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Below are the top five hotels in London frequently chosen by travellers for their Heathrow Airport transfers to hotel:
+              <p className="text-[#B2B2B2] ml-4">
+                1. The Savoy 
+                The Savoy is an iconic luxury hotel known for its historic elegance, outstanding service, and prime location near Covent Garden and the West End theatres. It offers excellent facilities for business travellers, including meeting rooms and business services.
+
+                <br />
+                2. The Ritz London 
+                The Ritz is synonymous with luxury and sophistication, offering impeccable service and amenities. Its central location in Piccadilly makes it convenient for business travellers with meetings in Mayfair, St. James’s, or the City.
+
+                <br />
+                3. Four Seasons Hotel London at Park Lane 
+                This hotel offers luxurious accommodations and top-notch amenities, including a spa, fitness centre, and extensive business facilities. It’s located near Hyde Park and major business districts
+
+
+                <br />
+                4. The Langham, London 
+                The Langham is known for its blend of classic elegance and modern luxury. It offers excellent business facilities and is located close to the financial and commercial areas of London.
+
+
+                <br />
+                5. The Dorchester 
+                The Dorchester is one of London's most prestigious hotels, offering world-class service, luxurious accommodations, and excellent dining options. It’s situated in Mayfair, close to major business and financial districts.
+
+              </p>
+            </p>
+          ),
+        },
+      ],
+    }
   },
 
   gatwick: {
@@ -201,6 +285,90 @@ export const airportData = {
           question:
             "Are RolDrive's airport transfer services at Gatwick wheelchair accessible?",
           ans: "RolDrive offers wheelchair-accessible vehicles upon request to accommodate passengers with mobility needs.",
+        },
+      ],
+    },
+    offeringData: {
+      heading: {
+        mainTitle: 'About Gatwick Airport Transfer Service',
+      },
+      data: [
+        {
+          title: 'What is the difference between a Heathrow transfer and a RolDrive Heathrow luxury car service?',
+          desc: "RolDrive’s Heathrow luxury transfer service when compared to a basic Heathrow transfer, will take you to and from Heathrow Airport on time, in complete comfort, and with the certainty of being driven by one of our professionally experienced drivers. Upgrading to our luxury Heathrow transfer service will provide you with an added level of style and comfort. With complimentary bottled water, a newspaper, and Wi-Fi on request all included in the fee, you'll have all you need to enjoy the ride while our driver handles the rest.",
+        },
+        {
+          title:
+            'Is my Heathrow Airport pick-up/drop-off online price all-inclusive?',
+          desc: "Yes, RolDrive follows a transparent pricing policy where you pay the quoted amount only. Our Heathrow Airport transfer to London service covers all expenses such as fuel, toll, airport parking fees. The price quotes also include VAT. It is however advised to confirm the price you pay as the charge might change due to additional requirements such as extended wait times although the first one hour wait time in case of a flight delay is free."
+        },
+        {
+          title: 'Do I need to know which terminal I will be travelling to/from when booking a Heathrow airport transfer?',
+          desc: "When booking a Heathrow Airport transfer service, it is advisable that you find out which terminal you will be travelling to or from. This is because Heathrow has multiple terminals and each serves different airlines and destinations. When you provide your terminal details, your chauffeur knows exactly where to pick or drop you off at. This helps avoid confusion, especially when a flight is involved. Knowing you terminal details also helps for a smoother Heathrow Airport transfer. In case you don't know your terminal details, you can always get in touch with your Heathrow Airport taxi meet and greet chauffeur for help and they will quickly guide you with the terminal details required."
+        },
+        {
+          title: 'Do I need to know my flight number for a Heathrow Airport pickup?',
+          desc: "Yes. Knowing your flight number is always helpful towards a synchronised travel experience. Through your flight details, your chauffeur is able to track the flight and reach the airport accordingly. Through flight tracking provided by your flight number, your chauffeur is able to know if your flight is delayed or is early. Also, through your flight number, the chauffeur knows exactly which terminal to pick or drop you off at. This synchronised travel experience is what we at RolDrive aim to provide you with. Therefore, when booking your airport transfer, always ensure to include your flight number to guarantee a seamless pickup. We also do Gatwick Airport to Heathrow Airport transfers for your convenience.",
+        },
+        {
+          title: 'What are the popular destinations for Heathrow Airport transfers?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Travellers arriving at Heathrow Airport in London often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from Heathrow Airport:
+              <p className="text-[#B2B2B2] ml-4">
+                1. Central London (Westminster and the City of London): 
+                This area includes iconic landmarks such as Buckingham Palace, the Houses of Parliament, Big Ben, and the London Eye. It’s the heart of political, cultural, and historical significance in the city.
+
+                <br />
+                2. Kensington and Chelsea: 
+                Home to famous museums like the Natural History Museum, the Victoria and Albert Museum, and the Science Museum, as well as luxurious shopping at Harrods and the fashionable King's Road.
+
+                <br />
+                3. Covent Garden: 
+                Known for its vibrant atmosphere, street performers, the Royal Opera House, and an array of shops, restaurants, and theatres.
+
+                <br />
+                4. Southbank: 
+                Stretching along the River Thames, this area is home to cultural landmarks such as the Southbank Centre, the National Theatre, the Tate Modern, and Shakespeare’s Globe Theatre.
+
+                <br />
+                5. Notting Hill: 
+                Famous for the annual Notting Hill Carnival, the Portobello Road Market, and its charming streets lined with pastel-colored houses.
+
+              </p>
+            </p>
+          ),
+        },
+        {
+          title: 'What are the popular hotels for Heathrow Airport transfers?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Below are the top five hotels in London frequently chosen by travellers for their Heathrow Airport transfers to hotel:
+              <p className="text-[#B2B2B2] ml-4">
+                1. The Savoy 
+                The Savoy is an iconic luxury hotel known for its historic elegance, outstanding service, and prime location near Covent Garden and the West End theatres. It offers excellent facilities for business travellers, including meeting rooms and business services.
+
+                <br />
+                2. The Ritz London 
+                The Ritz is synonymous with luxury and sophistication, offering impeccable service and amenities. Its central location in Piccadilly makes it convenient for business travellers with meetings in Mayfair, St. James’s, or the City.
+
+                <br />
+                3. Four Seasons Hotel London at Park Lane 
+                This hotel offers luxurious accommodations and top-notch amenities, including a spa, fitness centre, and extensive business facilities. It’s located near Hyde Park and major business districts
+
+
+                <br />
+                4. The Langham, London 
+                The Langham is known for its blend of classic elegance and modern luxury. It offers excellent business facilities and is located close to the financial and commercial areas of London.
+
+
+                <br />
+                5. The Dorchester 
+                The Dorchester is one of London's most prestigious hotels, offering world-class service, luxurious accommodations, and excellent dining options. It’s situated in Mayfair, close to major business and financial districts.
+
+              </p>
+            </p>
+          ),
         },
       ],
     },

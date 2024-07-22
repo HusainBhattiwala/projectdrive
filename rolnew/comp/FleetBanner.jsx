@@ -52,7 +52,7 @@ function FleetBanner({ mainTitle, hideArrow }) {
             <div className="flex flex-row gap-2 sm:gap-4 sm:flex-col sm:items-center items-center">
               <div className="w-7 h-6">
                 <Pic
-                  src="/rolnew/global/icons/fleet/Upgrade Your Image.png"
+                  src="/rolnew/global/icons/fleet/upgrade-your-image.png"
                   alt="fleet icon"
                   objectFit="cover"
                 />

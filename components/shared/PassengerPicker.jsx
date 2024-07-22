@@ -2,7 +2,7 @@
 import P from '../typography/P';
 
 function PassengerPicker({
-  setPassenger, passengers, decrement, increment,
+  setPassenger, passengers, decrement, increment, fleetDetails
 }) {
   return (
     <div className="rounded-md w-full grid sm:grid-cols-2  grid-cols-1 gap-x-2 font-sans items-center justify-between gap-y-5">
@@ -19,8 +19,11 @@ function PassengerPicker({
             <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center">  - </button>
           </div>
           <P className="text-bold w-[25px] text-center ">{passengers.adult}</P>
-          <div onClick={() => { increment('adult'); setPassenger(); }}>
-            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center">  + </button>
+          <div onClick={() => {
+              increment('adult');
+              setPassenger();
+          }}>
+            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center" disabled={passengers.adult >= fleetDetails.adult_seat_count}>  + </button>
           </div>
         </div>
       </div>
@@ -37,7 +40,7 @@ function PassengerPicker({
           </div>
           <P className="text-bold w-[25px] text-center ">{passengers.luggage}</P>
           <div onClick={() => { increment('luggage'); setPassenger(); }}>
-            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center">
+            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center" disabled={passengers.luggage >= fleetDetails.luggage_count}>
               +
             </button>
           </div>
@@ -58,7 +61,7 @@ function PassengerPicker({
           </div>
           <P className="text-bold w-[25px] text-center ">{passengers.children}</P>
           <div onClick={() => { increment('children'); setPassenger(); }}>
-            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center">  + </button>
+            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center" disabled={passengers.children >= fleetDetails.children_count}>  + </button>
           </div>
         </div>
       </div>
@@ -77,7 +80,7 @@ function PassengerPicker({
           </div>
           <P className="text-bold w-[25px] text-center ">{passengers.infant}</P>
           <div onClick={() => { increment('infant'); setPassenger(); }}>
-            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center">
+            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center" disabled={passengers.infant >= fleetDetails.infant_count}>
               +
             </button>
           </div>

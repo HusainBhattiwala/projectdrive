@@ -8,9 +8,9 @@ function ServicesFaq({ faqData }) {
       <Title subTitle="Have queries?" mainTitle={faqData?.title} />
       <Collaspe list={faqData?.data} />
 
-      <button className="mt-10 text-[18px] font-medium text-[#828282] pop">
+      {/* <button className="mt-10 text-[18px] font-medium text-[#828282] pop">
         View All
-      </button>
+      </button> */}
     </Container>
   );
 }

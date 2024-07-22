@@ -1411,6 +1411,7 @@ function FleetPage() {
                           getMobileNumber={getMobileNumber}
                           setPassengers={setPassengers}
                           getValues={getValues}
+                          fleetDetails={selectedCarDetails}
                         />
                       </form>
                       <div className={`${!showPayment && 'hidden'}`}>

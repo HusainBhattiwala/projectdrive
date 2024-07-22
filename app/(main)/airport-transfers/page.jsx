@@ -211,19 +211,21 @@ export default function Page() {
             A RolDrive chauffeured airport transfer and hailing a cab represent
             two distinct experiences.
             <br />
-            1. RolDrive offers reliable airport transfers
-            with premium services, ensuring luxury, comfort, and
-            professionalism. Clients enjoy pre-booked, punctual rides in
-            high-end vehicles, with professional chauffeurs, tailored amenities
-            like in-car Wi-Fi and water, and personalized meet-and-greet
-            services.
-            <br />
-            2. In contrast, hailing a cab provides a more utilitarian travel
-            option, with variable costs, standard vehicles, and no guarantee of
-            service level or amenities or punctuality. While cabs are convenient
-            for spontaneous travel, RolDrive specialises in a bespoke,
-            stress-free journey, making it an ideal choice for those seeking
-            reliable, high-quality, and comfortable airport transportation.
+            <p className="text-[#B2B2B2] ml-4">
+              1. RolDrive offers reliable airport transfers
+              with premium services, ensuring luxury, comfort, and
+              professionalism. Clients enjoy pre-booked, punctual rides in
+              high-end vehicles, with professional chauffeurs, tailored amenities
+              like in-car Wi-Fi and water, and personalized meet-and-greet
+              services.
+              <br />
+              2. In contrast, hailing a cab provides a more utilitarian travel
+              option, with variable costs, standard vehicles, and no guarantee of
+              service level or amenities or punctuality. While cabs are convenient
+              for spontaneous travel, RolDrive specialises in a bespoke,
+              stress-free journey, making it an ideal choice for those seeking
+              reliable, high-quality, and comfortable airport transportation.
+            </p>
           </p>
         ),
       },

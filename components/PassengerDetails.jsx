@@ -36,6 +36,7 @@ function PassengerDetails({
   setPassengers,
   getValues,
   setDetails,
+  fleetDetails
 }) {
   const { errors } = formState;
 
@@ -403,6 +404,7 @@ function PassengerDetails({
                     increment={increment}
                     decrement={decrement}
                     passengers={passengers}
+                    fleetDetails={fleetDetails}
                   />
                   {showPassengerError && (
                     <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">

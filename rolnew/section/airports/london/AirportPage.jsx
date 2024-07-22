@@ -10,8 +10,9 @@ import DownloadOurApp from "rolnew/section/home/DownloadOurApp";
 import AirportBookingFlow from "rolnew/comp/AirportBookingFlow";
 import Services from "rolnew/section/home/Services";
 import ServicesFaq from "rolnew/comp/ServicesFaq";
-
+import ServiceOfferings from "rolnew/comp/ServiceOfferings";
 import { airportData } from "./airportData";
+
 
 const airports = [
   "heathrow",
@@ -47,6 +48,7 @@ function AirportPage() {
       <Locations />
       <Contact />
       <ServicesFaq faqData={pageData?.faqData} />
+      <ServiceOfferings servicesData={pageData?.offeringData} />
       <DownloadOurApp />
     </>
   );
