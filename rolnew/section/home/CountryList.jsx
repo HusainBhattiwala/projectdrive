@@ -88,7 +88,7 @@ function CountryList({ countryList, bg , showAddress = true }) {
   return (
     <div className="max-w-[1440px]">
       {width > 768 ? (
-        <div className={`relative presence-slider py-6 ${isSmallList ? 'flex justify-center' : ''}`}>
+        <div className={`w-full relative presence-slider py-6 ${isSmallList ? 'flex justify-center' : ''}`}>
           <Swiper
             breakpoints={{
               560: {

@@ -1,13 +1,13 @@
 export const airportData = {
   heathrow: {
     banner: {
-      title: "Healthrow Airport Transfer",
+      title: "Heathrow Airport Transfer",
       subTitle: "Arrive in style, stress free and rejuvenated",
       bannerImage: "/rolnew/airports/london/heathrow_banner.jpg",
     },
     aboutData: {
       img: "/rolnew/airports/about/About Healthrow Airport.jpg",
-      title: "Healthrow Airport",
+      title: "Heathrow Airport",
       description:
         "Heathrow Airport, called London Airport until 1966 and now known as London Heathrow, is the main international airport serving London, England. It is the largest of the six international airports in the London airport system.",
     },
@@ -43,43 +43,43 @@ export const airportData = {
         {
           id: 0,
           question:
-            "What does RolDrive offer for Heathrow airport chauffeur service?",
-          ans: "RolDrive provides luxury Heathrow airport chauffeur service as its airport transfers, including meet-and-greet services, assistance with luggage, and direct transportation to your destination.",
+            "What does RolDrive offer for Heathrow Airport chauffeur service?",
+          ans: "RolDrive provides luxury Heathrow Airport chauffeur service as its airport transfers, including meet-and-greet services, assistance with luggage, and direct transportation to your destination.",
         },
         {
           id: 1,
           question:
-            "How can I book a Heathrow airport chauffeur service transfer with RolDrive?",
-          ans: "You can book a Heathrow airport chauffeur service transfer via our website, mobile app, or by contacting our customer service phone line.",
+            "How can I book a Heathrow Airport chauffeur service transfer with RolDrive?",
+          ans: "You can book a Heathrow Airport chauffeur service transfer via our website, mobile app, or by contacting our customer service phone line.",
         },
         {
           id: 2,
           question:
-            "What types of vehicles are available for Heathrow airport pick-up?",
+            "What types of vehicles are available for Heathrow Airport pick-up?",
           ans: "RolDrive offers a range of executive vehicles including sedans, luxury cars, SUVs, and minivans to accommodate different group sizes and preferences.",
         },
         {
           id: 3,
           question:
-            "Are RolDrive’s Heathrow airport pick-up chauffeurs experienced and licensed?",
+            "Are RolDrive’s Heathrow Airport pick-up chauffeurs experienced and licensed?",
           ans: "Yes, all RolDrive chauffeurs are professionally trained, licensed, and have extensive experience in providing high-quality service.",
         },
         {
           id: 4,
           question:
-            "Can RolDrive’s Heathrow airport pick-up service accommodate last-minute bookings?",
+            "Can RolDrive’s Heathrow Airport pick-up service accommodate last-minute bookings?",
           ans: "Yes, RolDrive can often accommodate last-minute bookings, but availability cannot be guaranteed without prior reservation.",
         },
         {
           id: 5,
           question:
-            "Is there a cancellation policy for Heathrow airport transfers bookings?",
+            "Is there a cancellation policy for Heathrow Airport transfers bookings?",
           ans: "Yes, bookings can be cancelled up to 12 hours before the scheduled transfer time without a penalty.",
         },
         {
           id: 6,
           question:
-            "Are there additional charges for flight delays at Heathrow airport?",
+            "Are there additional charges for flight delays at Heathrow Airport?",
           ans: "RolDrive monitors flight statuses and adjusts pickup times accordingly. RolDrive even offers a one hour free waiting time in case of flight delays.",
         },
         {
@@ -116,7 +116,7 @@ export const airportData = {
         },
         {
           title: 'Do I need to know which terminal I will be travelling to/from when booking a Heathrow airport transfer?',
-          desc: "When booking a Heathrow Airport transfer service, it is advisable that you find out which terminal you will be travelling to or from. This is because Heathrow has multiple terminals and each serves different airlines and destinations. When you provide your terminal details, your chauffeur knows exactly where to pick or drop you off at. This helps avoid confusion, especially when a flight is involved. Knowing you terminal details also helps for a smoother Heathrow Airport transfer. In case you don't know your terminal details, you can always get in touch with your Heathrow Airport taxi meet and greet chauffeur for help and they will quickly guide you with the terminal details required."
+          desc: "When booking a Heathrow Airport transfer service, it is advisable that you find out which terminal you will be travelling to or from. This is because Heathrow has multiple terminals and each serves different airlines and destinations. When you provide your terminal details, your chauffeur knows exactly where to pick or drop you off at. This helps avoid confusion, especially when a flight is involved. Knowing your terminal details also helps for a smoother Heathrow Airport transfer. In case you don't know your terminal details, you can always get in touch with your Heathrow Airport taxi meet and greet chauffeur for help and they will quickly guide you with the terminal details required."
         },
         {
           title: 'Do I need to know my flight number for a Heathrow Airport pickup?',
@@ -126,26 +126,26 @@ export const airportData = {
           title: 'What are the popular destinations for Heathrow Airport transfers?',
           desc: (
             <p className="text-[#B2B2B2]">
-              Travellers arriving at Heathrow Airport in London often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from Heathrow Airport:
+              Travellers arriving at Heathrow Airport in London often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from Heathrow Airport:<br/><br/>
               <p className="text-[#B2B2B2] ml-4">
-                1. Central London (Westminster and the City of London):
-                This area includes iconic landmarks such as Buckingham Palace, the Houses of Parliament, Big Ben, and the London Eye. It’s the heart of political, cultural, and historical significance in the city.
+                1. Central London (Westminster and the City of London):<br/>
+                <p className="text-[#B2B2B2] ml-5">This area includes iconic landmarks such as Buckingham Palace, the Houses of Parliament, Big Ben, and the London Eye. It’s the heart of political, cultural, and historical significance in the city.</p>
 
                 <br />
-                2. Kensington and Chelsea:
-                Home to famous museums like the Natural History Museum, the Victoria and Albert Museum, and the Science Museum, as well as luxurious shopping at Harrods and the fashionable King's Road.
+                2. Kensington and Chelsea:<br/>
+                <p className="text-[#B2B2B2] ml-5">Home to famous museums like the Natural History Museum, the Victoria and Albert Museum, and the Science Museum, as well as luxurious shopping at Harrods and the fashionable King's Road.</p>
 
                 <br />
-                3. Covent Garden:
-                Known for its vibrant atmosphere, street performers, the Royal Opera House, and an array of shops, restaurants, and theatres.
+                3. Covent Garden:<br/>
+                <p className="text-[#B2B2B2] ml-5">Known for its vibrant atmosphere, street performers, the Royal Opera House, and an array of shops, restaurants, and theatres.</p>
 
                 <br />
-                4. Southbank:
-                Stretching along the River Thames, this area is home to cultural landmarks such as the Southbank Centre, the National Theatre, the Tate Modern, and Shakespeare’s Globe Theatre.
+                4. Southbank:<br/>
+                <p className="text-[#B2B2B2] ml-5">Stretching along the River Thames, this area is home to cultural landmarks such as the Southbank Centre, the National Theatre, the Tate Modern, and Shakespeare’s Globe Theatre.</p>
 
                 <br />
-                5. Notting Hill:
-                Famous for the annual Notting Hill Carnival, the Portobello Road Market, and its charming streets lined with pastel-colored houses.
+                5. Notting Hill:<br/>
+                <p className="text-[#B2B2B2] ml-5">Famous for the annual Notting Hill Carnival, the Portobello Road Market, and its charming streets lined with pastel-colored houses.</p>
 
               </p>
             </p>
@@ -156,27 +156,26 @@ export const airportData = {
           desc: (
             <p className="text-[#B2B2B2]">
               Below are the top five hotels in London frequently chosen by travellers for their Heathrow Airport transfers to hotel:
+              <br/><br/>
               <p className="text-[#B2B2B2] ml-4">
-                1. The Savoy
-                The Savoy is an iconic luxury hotel known for its historic elegance, outstanding service, and prime location near Covent Garden and the West End theatres. It offers excellent facilities for business travellers, including meeting rooms and business services.
+                1. The Savoy <br/>
+                <p className="text-[#B2B2B2] ml-5">The Savoy is an iconic luxury hotel known for its historic elegance, outstanding service, and prime location near Covent Garden and the West End theatres. It offers excellent facilities for business travellers, including meeting rooms and business services.</p>
 
                 <br />
-                2. The Ritz London
-                The Ritz is synonymous with luxury and sophistication, offering impeccable service and amenities. Its central location in Piccadilly makes it convenient for business travellers with meetings in Mayfair, St. James’s, or the City.
+                2. The Ritz London<br/>
+                <p className="text-[#B2B2B2] ml-5">The Ritz is synonymous with luxury and sophistication, offering impeccable service and amenities. Its central location in Piccadilly makes it convenient for business travellers with meetings in Mayfair, St. James’s, or the City.</p>
 
                 <br />
-                3. Four Seasons Hotel London at Park Lane
-                This hotel offers luxurious accommodations and top-notch amenities, including a spa, fitness centre, and extensive business facilities. It’s located near Hyde Park and major business districts
-
-
-                <br />
-                4. The Langham, London
-                The Langham is known for its blend of classic elegance and modern luxury. It offers excellent business facilities and is located close to the financial and commercial areas of London.
-
+                3. Four Seasons Hotel London at Park Lane<br/>
+                <p className="text-[#B2B2B2] ml-5">This hotel offers luxurious accommodations and top-notch amenities, including a spa, fitness centre, and extensive business facilities. It’s located near Hyde Park and major business districts.</p>
 
                 <br />
-                5. The Dorchester
-                The Dorchester is one of London's most prestigious hotels, offering world-class service, luxurious accommodations, and excellent dining options. It’s situated in Mayfair, close to major business and financial districts.
+                4. The Langham, London<br/>
+                <p className="text-[#B2B2B2] ml-5">The Langham is known for its blend of classic elegance and modern luxury. It offers excellent business facilities and is located close to the financial and commercial areas of London.</p>
+
+                <br />
+                5. The Dorchester<br/>
+                <p className="text-[#B2B2B2] ml-5">The Dorchester is one of London's most prestigious hotels, offering world-class service, luxurious accommodations, and excellent dining options. It’s situated in Mayfair, close to major business and financial districts.</p>
 
               </p>
             </p>

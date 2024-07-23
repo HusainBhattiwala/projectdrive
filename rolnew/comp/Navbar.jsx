@@ -11,7 +11,7 @@ import NewDropdown from "components/ui/NewDropdown";
 
 const navLinks = [
   {
-    route: "/all-services",
+    route: "#",
     label: "Services",
     subLinks: [
       { route: "/road-shows", label: "Roadshow Transfers" },
