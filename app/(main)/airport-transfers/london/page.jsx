@@ -122,8 +122,7 @@ const pageData = {
     ],
   },
 
-  
-  offeringData : {
+  offeringData: {
     heading: {
       mainTitle: 'About London Airport Transfer Service',
     },
@@ -140,19 +139,21 @@ const pageData = {
             A RolDrive chauffeured airport transfer and hailing a cab represent
             two distinct experiences.
             <br />
-            1. RolDrive offers reliable airport transfers
-            with premium services, ensuring luxury, comfort, and
-            professionalism. Clients enjoy pre-booked, punctual rides in
-            high-end vehicles, with professional chauffeurs, tailored amenities
-            like in-car Wi-Fi and water, and personalized meet-and-greet
-            services.
-            <br />
-            2. In contrast, hailing a cab provides a more utilitarian travel
-            option, with variable costs, standard vehicles, and no guarantee of
-            service level or amenities or punctuality. While cabs are convenient
-            for spontaneous travel, RolDrive specialises in a bespoke,
-            stress-free journey, making it an ideal choice for those seeking
-            reliable, high-quality, and comfortable airport transportation.
+            <p className="text-[#B2B2B2] ml-4">
+              1. RolDrive offers reliable airport transfers
+              with premium services, ensuring luxury, comfort, and
+              professionalism. Clients enjoy pre-booked, punctual rides in
+              high-end vehicles, with professional chauffeurs, tailored amenities
+              like in-car Wi-Fi and water, and personalized meet-and-greet
+              services.
+              <br />
+              2. In contrast, hailing a cab provides a more utilitarian travel
+              option, with variable costs, standard vehicles, and no guarantee of
+              service level or amenities or punctuality. While cabs are convenient
+              for spontaneous travel, RolDrive specialises in a bespoke,
+              stress-free journey, making it an ideal choice for those seeking
+              reliable, high-quality, and comfortable airport transportation.
+            </p>
           </p>
         ),
       },
@@ -200,7 +201,7 @@ const pageData = {
         desc: "To find out if RolDrive's airport transfers are affordable for you, simply enter your details into our online booking engine. This can be accessed either through the RolDrive website or our dedicated mobile app. Once you input your pickup and drop-off locations, date, and time, the booking system will provide you with a comprehensive quote. This quote includes all charges, ensuring there are no hidden fees, and allows you to see the full cost of your transfer upfront. By reviewing this all-inclusive price, you can make an informed decision on whether RolDrive's service fits your budget. This transparent pricing model is part of RolDrive's commitment to customer satisfaction, making it easy for you to assess the affordability of our luxury airport transfer services.",
       },
     ],
-  }
+  },
 };
 
 function LondonAirportPage() {

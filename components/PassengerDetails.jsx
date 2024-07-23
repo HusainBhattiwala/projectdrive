@@ -36,7 +36,7 @@ function PassengerDetails({
   setPassengers,
   getValues,
   setDetails,
-  fleetDetails
+  fleetDetails,
 }) {
   const { errors } = formState;
 

@@ -7,7 +7,7 @@ export const cityData = {
     },
 
     trustedPartnersData: {
-      img: "/rolnew/cities/trust-banner.svg",
+      img: "/rolnew/cities/trust/trust-london.jpg",
       data: [
         {
           icon: "/rolnew/cities/icons/Exceptional Chauffeur Service.png",
@@ -312,7 +312,7 @@ export const cityData = {
     },
 
     trustedPartnersData: {
-      img: "/rolnew/cities/trust-banner.svg",
+      img: "/rolnew/cities/trust/trust-dubai.jpg",
       data: [
         {
           icon: "/rolnew/cities/icons/Exceptional Chauffeur Service.png",
@@ -575,7 +575,7 @@ export const cityData = {
       bannerImage: "/images/city/new-york/banner/newyork_city.png",
     },
     trustedPartnersData: {
-      img: "/rolnew/cities/trust-banner.svg",
+      img: "/rolnew/cities/trust/trust-newyork.jpg",
       data: [
         {
           icon: "/rolnew/cities/icons/Exceptional Chauffeur Service.png",
@@ -861,7 +861,7 @@ export const cityData = {
     },
 
     trustedPartnersData: {
-      img: "/rolnew/cities/trust-banner.svg",
+      img: "/rolnew/cities/trust/trust-paris.jpg",
       data: [
         {
           icon: "/rolnew/cities/icons/Exceptional Chauffeur Service.png",
@@ -939,7 +939,7 @@ export const cityData = {
         },
         {
           id: "touristAttraction3",
-          src: "/rolnew/cities/tourist-attractions-paris/Mus‚e Rodin.jpg",
+          src: "/rolnew/cities/tourist-attractions-paris/Muse Rodin.jpg",
           title: "Musée Rodin",
           description:
             "Dedicated to the works of sculptor Auguste Rodin, this museum features beautiful sculptures in both indoor galleries and a lush garden.",
@@ -960,7 +960,7 @@ export const cityData = {
         },
         {
           id: "touristAttraction6",
-          src: "/rolnew/cities/tourist-attractions-paris/Mus‚e de Montmartre.jpg",
+          src: "/rolnew/cities/tourist-attractions-paris/Muse de Montmartre.jpg",
           title: "Musée de Montmartre",
           description:
             "Located in a historic building in Montmartre, this museum explores the area's artistic history and offers lovely gardens with city views.",
@@ -1149,7 +1149,7 @@ export const cityData = {
       bannerImage: "/images/city/tokyo/banner/tokyo_city.png",
     },
     trustedPartnersData: {
-      img: "/rolnew/cities/trust-banner.svg",
+      img: "/rolnew/cities/trust/trust-tokyo.jpg",
       data: [
         {
           icon: "/rolnew/cities/icons/Exceptional Chauffeur Service.png",

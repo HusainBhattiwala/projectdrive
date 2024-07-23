@@ -62,7 +62,7 @@ function Destinations({ destinationData }) {
                         objectFit="cover"
                       />
                     </div>
-                    <p className="text-[#B2B2B2] font-normal text-base">
+                    <p className="text-[#B2B2B2] font-normal text-base ml-2">
                       {destination.to}
                     </p>
                   </>

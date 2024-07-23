@@ -186,13 +186,13 @@ function Footer() {
               >
                 Blogs
               </Link>
-              <Link
+              {/* <Link
                 href="#"
                 className="text-base pop"
                 onClick={(e) => e.preventDefault()}
               >
                 About Us
-              </Link>
+              </Link> */}
               <Link
                 href="#"
                 className="text-base text-[#FDC65C] whitespace-nowrap pop"

@@ -2,7 +2,7 @@
 import P from '../typography/P';
 
 function PassengerPicker({
-  setPassenger, passengers, decrement, increment, fleetDetails
+  setPassenger, passengers, decrement, increment, fleetDetails,
 }) {
   return (
     <div className="rounded-md w-full grid sm:grid-cols-2  grid-cols-1 gap-x-2 font-sans items-center justify-between gap-y-5">
@@ -20,9 +20,10 @@ function PassengerPicker({
           </div>
           <P className="text-bold w-[25px] text-center ">{passengers.adult}</P>
           <div onClick={() => {
-              increment('adult');
-              setPassenger();
-          }}>
+            increment('adult');
+            setPassenger();
+          }}
+          >
             <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center" disabled={passengers.adult >= fleetDetails.adult_seat_count}>  + </button>
           </div>
         </div>
