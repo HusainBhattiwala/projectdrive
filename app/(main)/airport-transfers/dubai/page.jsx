@@ -96,7 +96,7 @@ const pageData = {
       },
     ],
   },
-  offeringData : {
+  offeringData: {
     heading: {
       mainTitle: 'About Dubai Airport Transfer Service',
     },
@@ -162,7 +162,7 @@ const pageData = {
       // },
       {
         title: 'How far in advance should I book my airport transfer in Dubai?',
-        desc: "It is advisable to book your airport transfers from Dubai Airport the moment you have your flight tickets in hand. This lead time allows RolDrive to guarantee the availability of a vehicle that best suits your needs and preferences. Early booking is particularly crucial during peak travel seasons or if you require specific amenities, such as accessibility features. Booking ahead not only ensures a smoother experience but also helps avoid last-minute stress and potential unavailability, especially in a bustling metropolis like Dubai where demand for reliable transportation can be high.",
+        desc: 'It is advisable to book your airport transfers from Dubai Airport the moment you have your flight tickets in hand. This lead time allows RolDrive to guarantee the availability of a vehicle that best suits your needs and preferences. Early booking is particularly crucial during peak travel seasons or if you require specific amenities, such as accessibility features. Booking ahead not only ensures a smoother experience but also helps avoid last-minute stress and potential unavailability, especially in a bustling metropolis like Dubai where demand for reliable transportation can be high.',
       },
       {
         title: 'What is the average cost of a RolDrive airport transfer from Dubai International Airport to the city centre?',
@@ -173,7 +173,7 @@ const pageData = {
         desc: "Yes, there are airport transfer services in Dubai that cater to large groups or families. RolDrive is one such service, which offers the Mercedes Benz V Class for example specifically for this purpose. This luxury vehicle is ideal for airport transfers in Dubai, providing ample space and comfort for larger parties. Whether you're travelling with family or a group of colleagues, the Mercedes Benz V Class ensures that everyone can travel together in style and comfort, making it a perfect choice for those needing a spacious and elegant solution for their airport transfer needs in Dubai. Be it a to or from Dubai Airport transfer service.",
       },
     ],
-  }
+  },
 };
 
 function DubaiAirportPage() {

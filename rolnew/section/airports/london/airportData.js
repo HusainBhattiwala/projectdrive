@@ -126,25 +126,25 @@ export const airportData = {
           title: 'What are the popular destinations for Heathrow Airport transfers?',
           desc: (
             <p className="text-[#B2B2B2]">
-              Travellers arriving at Heathrow Airport in London often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from Heathrow Airport:<br/><br/>
+              Travellers arriving at Heathrow Airport in London often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from Heathrow Airport:<br /><br />
               <p className="text-[#B2B2B2] ml-4">
-                1. Central London (Westminster and the City of London):<br/>
+                1. Central London (Westminster and the City of London):<br />
                 <p className="text-[#B2B2B2] ml-5">This area includes iconic landmarks such as Buckingham Palace, the Houses of Parliament, Big Ben, and the London Eye. It’s the heart of political, cultural, and historical significance in the city.</p>
 
                 <br />
-                2. Kensington and Chelsea:<br/>
+                2. Kensington and Chelsea:<br />
                 <p className="text-[#B2B2B2] ml-5">Home to famous museums like the Natural History Museum, the Victoria and Albert Museum, and the Science Museum, as well as luxurious shopping at Harrods and the fashionable King's Road.</p>
 
                 <br />
-                3. Covent Garden:<br/>
+                3. Covent Garden:<br />
                 <p className="text-[#B2B2B2] ml-5">Known for its vibrant atmosphere, street performers, the Royal Opera House, and an array of shops, restaurants, and theatres.</p>
 
                 <br />
-                4. Southbank:<br/>
+                4. Southbank:<br />
                 <p className="text-[#B2B2B2] ml-5">Stretching along the River Thames, this area is home to cultural landmarks such as the Southbank Centre, the National Theatre, the Tate Modern, and Shakespeare’s Globe Theatre.</p>
 
                 <br />
-                5. Notting Hill:<br/>
+                5. Notting Hill:<br />
                 <p className="text-[#B2B2B2] ml-5">Famous for the annual Notting Hill Carnival, the Portobello Road Market, and its charming streets lined with pastel-colored houses.</p>
 
               </p>
@@ -156,25 +156,25 @@ export const airportData = {
           desc: (
             <p className="text-[#B2B2B2]">
               Below are the top five hotels in London frequently chosen by travellers for their Heathrow Airport transfers to hotel:
-              <br/><br/>
+              <br /><br />
               <p className="text-[#B2B2B2] ml-4">
-                1. The Savoy <br/>
+                1. The Savoy <br />
                 <p className="text-[#B2B2B2] ml-5">The Savoy is an iconic luxury hotel known for its historic elegance, outstanding service, and prime location near Covent Garden and the West End theatres. It offers excellent facilities for business travellers, including meeting rooms and business services.</p>
 
                 <br />
-                2. The Ritz London<br/>
+                2. The Ritz London<br />
                 <p className="text-[#B2B2B2] ml-5">The Ritz is synonymous with luxury and sophistication, offering impeccable service and amenities. Its central location in Piccadilly makes it convenient for business travellers with meetings in Mayfair, St. James’s, or the City.</p>
 
                 <br />
-                3. Four Seasons Hotel London at Park Lane<br/>
+                3. Four Seasons Hotel London at Park Lane<br />
                 <p className="text-[#B2B2B2] ml-5">This hotel offers luxurious accommodations and top-notch amenities, including a spa, fitness centre, and extensive business facilities. It’s located near Hyde Park and major business districts.</p>
 
                 <br />
-                4. The Langham, London<br/>
+                4. The Langham, London<br />
                 <p className="text-[#B2B2B2] ml-5">The Langham is known for its blend of classic elegance and modern luxury. It offers excellent business facilities and is located close to the financial and commercial areas of London.</p>
 
                 <br />
-                5. The Dorchester<br/>
+                5. The Dorchester<br />
                 <p className="text-[#B2B2B2] ml-5">The Dorchester is one of London's most prestigious hotels, offering world-class service, luxurious accommodations, and excellent dining options. It’s situated in Mayfair, close to major business and financial districts.</p>
 
               </p>
@@ -299,30 +299,26 @@ export const airportData = {
           title: 'What are the popular destinations for Gatwick Airport transfers?',
           desc: (
             <p className="text-[#B2B2B2]">
-              Travellers arriving at Gatwick Airport in London often head to a variety of popular destinations within the city. Here are the top 5 locations people commonly travel to from Gatwick Airport:
+              Travellers arriving at Gatwick Airport in London often head to a variety of popular destinations within the city. Here are the top 5 locations people commonly travel to from Gatwick Airport: <br /><br />
               <p className="text-[#B2B2B2] ml-4">
-                1. Central London (Westminster and the City of London) :
-                This area encompasses many of London’s most iconic landmarks, including Buckingham Palace, the Houses of Parliament, Big Ben, and the London Eye.
+                1. Central London (Westminster and the City of London) :<br />
+                <p className="text-[#B2B2B2] ml-5">This area encompasses many of London’s most iconic landmarks, including Buckingham Palace, the Houses of Parliament, Big Ben, and the London Eye.</p>
 
                 <br />
-                2. Victoria :
-                Known for its transportation hub, Victoria Station, and landmarks like Buckingham Palace, Westminster Cathedral, and the Apollo Victoria Theatre.
+                2. Victoria :<br />
+                <p className="text-[#B2B2B2] ml-5">Known for its transportation hub, Victoria Station, and landmarks like Buckingham Palace, Westminster Cathedral, and the Apollo Victoria Theatre.</p>
 
                 <br />
-                3. Southbank :
-                Stretching along the River Thames, this area features cultural landmarks such as the Southbank Centre, the National Theatre, the Tate Modern, and Shakespeare’s Globe Theatre.
-
-
-                <br />
-                4. Covent Garden :
-                Famous for its lively market, street performers, the Royal Opera House, and a wide array of shops, restaurants, and theatres
-
+                3. Southbank :<br />
+                <p className="text-[#B2B2B2] ml-5">Stretching along the River Thames, this area features cultural landmarks such as the Southbank Centre, the National Theatre, the Tate Modern, and Shakespeare’s Globe Theatre.</p>
 
                 <br />
-                5. London Bridge :
-                This area includes attractions like The Shard, Borough Market, HMS Belfast, and the Tower Bridge.
+                4. Covent Garden :<br />
+                <p className="text-[#B2B2B2] ml-5">Famous for its lively market, street performers, the Royal Opera House, and a wide array of shops, restaurants, and theatres</p>
 
-
+                <br />
+                5. London Bridge :<br />
+                <p className="text-[#B2B2B2] ml-5">This area includes attractions like The Shard, Borough Market, HMS Belfast, and the Tower Bridge.</p>
               </p>
             </p>
           ),
@@ -331,26 +327,26 @@ export const airportData = {
           title: 'What are the popular hotels for Airport Transfers Gatwick?',
           desc: (
             <p className="text-[#B2B2B2]">
-              Here are the top 5 hotels in London that are popular among travellers for Gatwick Airport hotel transfers:
+              Here are the top 5 hotels in London that are popular among travellers for Gatwick Airport hotel transfers:<br /><br />
               <p className="text-[#B2B2B2] ml-4">
-                1. The Savoy :
-                The Savoy, a luxury hotel in London, is renowned for its elegant accommodations, exceptional service, and rich history. Located on the Strand, it offers stunning views of the River Thames, making it a favourite among business executives and discerning travellers.
+                1. The Savoy :<br />
+                <p className="text-[#B2B2B2] ml-5">The Savoy, a luxury hotel in London, is renowned for its elegant accommodations, exceptional service, and rich history. Located on the Strand, it offers stunning views of the River Thames, making it a favourite among business executives and discerning travellers.</p>
 
                 <br />
-                2. The Ritz London :
-                The Ritz London, located in Piccadilly, is an epitome of luxury and elegance. Renowned for its exquisite rooms, world-class dining, and exceptional service, it is a favoured destination for business executives and travellers seeking a prestigious and comfortable stay in the heart of London.
+                2. The Ritz London :<br />
+                <p className="text-[#B2B2B2] ml-5">The Ritz London, located in Piccadilly, is an epitome of luxury and elegance. Renowned for its exquisite rooms, world-class dining, and exceptional service, it is a favoured destination for business executives and travellers seeking a prestigious and comfortable stay in the heart of London.</p>
 
                 <br />
-                3. Four Seasons Hotel London at Park Lane :
-                The Four Seasons Hotel London at Park Lane offers luxurious accommodations with exceptional service. Located in the heart of Mayfair, it features elegant rooms, a rooftop spa with stunning city views, and top-notch dining options, ideal for discerning business and leisure travellers.
+                3. Four Seasons Hotel London at Park Lane :<br />
+                <p className="text-[#B2B2B2] ml-5">The Four Seasons Hotel London at Park Lane offers luxurious accommodations with exceptional service. Located in the heart of Mayfair, it features elegant rooms, a rooftop spa with stunning city views, and top-notch dining options, ideal for discerning business and leisure travellers.</p>
 
                 <br />
-                4. The Langham, London :
-                The Langham, London is a luxurious hotel known for its elegant Victorian charm and modern amenities. Located in the heart of the city, it offers exceptional service, exquisite dining, and top-notch facilities, making it a preferred choice for discerning travellers.
+                4. The Langham, London :<br />
+                <p className="text-[#B2B2B2] ml-5">The Langham, London is a luxurious hotel known for its elegant Victorian charm and modern amenities. Located in the heart of the city, it offers exceptional service, exquisite dining, and top-notch facilities, making it a preferred choice for discerning travellers.</p>
 
                 <br />
-                5. Shangri-La Hotel, At The Shard, London :
-                Shangri-La Hotel, At The Shard, London, offers luxurious accommodations with stunning city views from its high-rise location. Guests enjoy top-tier amenities, including an infinity pool, fine dining, and exceptional service, making it a premier choice for travellers.
+                5. Shangri-La Hotel, At The Shard, London :<br />
+                <p className="text-[#B2B2B2] ml-5">Shangri-La Hotel, At The Shard, London, offers luxurious accommodations with stunning city views from its high-rise location. Guests enjoy top-tier amenities, including an infinity pool, fine dining, and exceptional service, making it a premier choice for travellers.</p>
               </p>
             </p>
           ),
@@ -487,18 +483,26 @@ export const airportData = {
             "What are the popular destinations for London City Airport Transfers?",
           desc: (
             <p className="text-[#B2B2B2]">
-              Travellers arriving at London City Airport often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from London City Airport:
+              Travellers arriving at London City Airport often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from London City Airport:<br /><br />
               <p className="text-[#B2B2B2] ml-4">
-                1.The Shard : The Shard is one of London’s most iconic landmarks, offering breathtaking views of the city from its observation deck. Standing at 310 meters, it is the tallest building in the UK. Visitors can enjoy fine dining, a luxury hotel, and stunning vistas from the upper levels, making it a must-visit destination.
-                <br />
-                2. Tower of London: A historic fortress located on the north bank of the River Thames, the Tower of London is famous for housing the Crown Jewels and its storied past as a royal palace, prison, and treasury. Visitors can explore its medieval architecture, learn about its history, and enjoy the legendary Yeoman Warder tours.
-                <br />
-                3. Canary Wharf: Canary Wharf is a major business district known for its modern skyscrapers, upscale shopping centres, and vibrant dining scene. It’s a hub for finance and commerce, offering attractions such as the Museum of London Docklands and Jubilee Park. Its contemporary architecture and bustling atmosphere make it a dynamic destination.
-                <br />
-                4. Westminster Abbey: A Gothic masterpiece and UNESCO World Heritage Site, Westminster Abbey is a must-see for history and architecture enthusiasts. It has been the coronation church since 1066 and is the final resting place of numerous British monarchs and notable figures. Visitors can marvel at its stunning interiors and rich historical significance.
+                1. The Shard : <br />
+                <p className="text-[#B2B2B2] ml-5">The Shard is one of London’s most iconic landmarks, offering breathtaking views of the city from its observation deck. Standing at 310 meters, it is the tallest building in the UK. Visitors can enjoy fine dining, a luxury hotel, and stunning vistas from the upper levels, making it a must-visit destination.</p>
 
                 <br />
-                5. Covent Garden: Covent Garden is a lively area known for its shopping, street performers, and diverse dining options. It hosts the historic Apple Market and the Royal Opera House. With its charming piazza and cultural attractions, Covent Garden is a favourite spot for both tourists and locals seeking entertainment and relaxation.
+                2. Tower of London: <br />
+                <p className="text-[#B2B2B2] ml-5">A historic fortress located on the north bank of the River Thames, the Tower of London is famous for housing the Crown Jewels and its storied past as a royal palace, prison, and treasury. Visitors can explore its medieval architecture, learn about its history, and enjoy the legendary Yeoman Warder tours.</p>
+
+                <br />
+                3. Canary Wharf: <br />
+                <p className="text-[#B2B2B2] ml-5">Canary Wharf is a major business district known for its modern skyscrapers, upscale shopping centres, and vibrant dining scene. It’s a hub for finance and commerce, offering attractions such as the Museum of London Docklands and Jubilee Park. Its contemporary architecture and bustling atmosphere make it a dynamic destination.</p>
+
+                <br />
+                4. Westminster Abbey: <br />
+                <p className="text-[#B2B2B2] ml-5">A Gothic masterpiece and UNESCO World Heritage Site, Westminster Abbey is a must-see for history and architecture enthusiasts. It has been the coronation church since 1066 and is the final resting place of numerous British monarchs and notable figures. Visitors can marvel at its stunning interiors and rich historical significance.</p>
+
+                <br />
+                5. Covent Garden: <br />
+                <p className="text-[#B2B2B2] ml-5">Covent Garden is a lively area known for its shopping, street performers, and diverse dining options. It hosts the historic Apple Market and the Royal Opera House. With its charming piazza and cultural attractions, Covent Garden is a favourite spot for both tourists and locals seeking entertainment and relaxation.</p>
               </p>
             </p>
           ),
@@ -507,17 +511,26 @@ export const airportData = {
           title: "What are the popular hotels for London City Airport Transfers?",
           desc: (
             <p className="text-[#B2B2B2]">
-              Below are the top five hotels in London frequently chosen by travellers after their London City Airport transfers:
+              Below are the top five hotels in London frequently chosen by travellers after their London City Airport transfers:<br /><br />
               <p className="text-[#B2B2B2] ml-4">
-                1.The Savoy: The Savoy is an iconic luxury hotel located on the Strand in central London. Known for its rich history and timeless elegance, it offers stunning views of the River Thames and exceptional service. Guests can enjoy luxurious accommodations, fine dining, and easy access to major attractions and business districts.e Strand, it offers stunning views of the River Thames, making it a favourite among business executives and discerning travellers.
+                1. The Savoy: <br />
+                <p className="text-[#B2B2B2] ml-5">The Savoy is an iconic luxury hotel located on the Strand in central London. Known for its rich history and timeless elegance, it offers stunning views of the River Thames and exceptional service. Guests can enjoy luxurious accommodations, fine dining, and easy access to major attractions and business districts.e Strand, it offers stunning views of the River Thames, making it a favourite among business executives and discerning travellers.</p>
+
                 <br />
-                2.Shangri-La Hotel at The Shard: Occupying the upper floors of The Shard, the Shangri-La Hotel offers breathtaking views over London. This five-star hotel is renowned for its luxurious rooms, exceptional service, and high-end dining options. Its central location makes it ideal for business travellers and tourists alike, with convenient transfers to and from London City Airport.
+                2. Shangri-La Hotel at The Shard: <br />
+                <p className="text-[#B2B2B2] ml-5">Occupying the upper floors of The Shard, the Shangri-La Hotel offers breathtaking views over London. This five-star hotel is renowned for its luxurious rooms, exceptional service, and high-end dining options. Its central location makes it ideal for business travellers and tourists alike, with convenient transfers to and from London City Airport.</p>
+
                 <br />
-                3.The Ritz London: The Ritz is synonymous with luxury and elegance, located in the heart of Piccadilly. This prestigious hotel offers opulent rooms, world-class dining, and traditional afternoon tea. Its central location and impeccable service make it a preferred choice for those seeking a luxurious stay with seamless airport transfers.
+                3. The Ritz London: <br />
+                <p className="text-[#B2B2B2] ml-5">The Ritz is synonymous with luxury and elegance, located in the heart of Piccadilly. This prestigious hotel offers opulent rooms, world-class dining, and traditional afternoon tea. Its central location and impeccable service make it a preferred choice for those seeking a luxurious stay with seamless airport transfers.</p>
+
                 <br />
-                4.Four Seasons Hotel London at Ten Trinity Square: Situated near the Tower of London, this five-star hotel offers a blend of historic charm and modern luxury. The Four Seasons Hotel London at Ten Trinity Square features elegantly appointed rooms, fine dining, and a luxurious spa. Its proximity to major landmarks and business hubs makes it ideal for both leisure and business travellers.
+                4. Four Seasons Hotel London at Ten Trinity Square: <br />
+                <p className="text-[#B2B2B2] ml-5">Situated near the Tower of London, this five-star hotel offers a blend of historic charm and modern luxury. The Four Seasons Hotel London at Ten Trinity Square features elegantly appointed rooms, fine dining, and a luxurious spa. Its proximity to major landmarks and business hubs makes it ideal for both leisure and business travellers.</p>
+
                 <br />
-                5.InterContinental London - The O2: Located on the Greenwich Peninsula, this luxury hotel offers stunning views of the River Thames and Canary Wharf. The InterContinental London - The O2 provides luxurious accommodations, multiple dining options, and direct access to the O2 Arena. Its convenient location and comprehensive amenities make it a popular choice for travellers seeking comfort and style.
+                5. InterContinental London - The O2: <br />
+                <p className="text-[#B2B2B2] ml-5">Located on the Greenwich Peninsula, this luxury hotel offers stunning views of the River Thames and Canary Wharf. The InterContinental London - The O2 provides luxurious accommodations, multiple dining options, and direct access to the O2 Arena. Its convenient location and comprehensive amenities make it a popular choice for travellers seeking comfort and style.</p>
               </p>
             </p>
           ),
@@ -654,18 +667,27 @@ export const airportData = {
             "What are the popular destinations for London Southend Airport Transfers?",
           desc: (
             <p className="text-[#B2B2B2]">
-              Travellers arriving at London Southend Airport often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from London Southend Airport:
+              Travellers arriving at London Southend Airport often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from London Southend Airport:<br /><br />
+
               <p className="text-[#B2B2B2] ml-4">
-                1.Central London : Central London is a top destination for Southend Airport travellers, offering iconic landmarks such as Buckingham Palace, the Tower of London, and the British Museum. The bustling city centre is perfect for business, shopping, dining, and experiencing London's vibrant culture and history.
-                <br />
-                2. Canary Wharf: Canary Wharf, London's financial district, attracts business travellers with its modern skyscrapers and corporate offices. It’s also home to shopping centres, restaurants, and bars, making it a convenient and lively destination for both work and leisure.
-                <br />
-                3. Cambridge: Known for its prestigious university and historic architecture, Cambridge is a popular choice for travellers from Southend Airport. Visitors enjoy exploring the picturesque colleges, punting on the River Cam, and experiencing the rich academic and cultural heritage of this charming city.
-                <br />
-                4. Southend-on-Sea: Just a short drive from the airport, Southend-on-Sea is a popular seaside resort town. It offers attractions such as the longest pleasure pier in the world, Adventure Island amusement park, and beautiful beaches, making it ideal for family outings and leisurely weekends.
+                1. Central London : <br />
+                <p className="text-[#B2B2B2] ml-5">Central London is a top destination for Southend Airport travellers, offering iconic landmarks such as Buckingham Palace, the Tower of London, and the British Museum. The bustling city centre is perfect for business, shopping, dining, and experiencing London's vibrant culture and history.</p>
 
                 <br />
-                5. Chelmsford: Chelmsford, the county town of Essex, is known for its blend of historical sites and modern amenities. Visitors enjoy the stunning Chelmsford Cathedral, Hylands House, and the Riverside Leisure Centre. It's a convenient and attractive destination for both business and leisure travellers.
+                2. Canary Wharf: <br />
+                <p className="text-[#B2B2B2] ml-5">Canary Wharf, London's financial district, attracts business travellers with its modern skyscrapers and corporate offices. It’s also home to shopping centres, restaurants, and bars, making it a convenient and lively destination for both work and leisure.</p>
+
+                <br />
+                3. Cambridge: <br />
+                <p className="text-[#B2B2B2] ml-5">Known for its prestigious university and historic architecture, Cambridge is a popular choice for travellers from Southend Airport. Visitors enjoy exploring the picturesque colleges, punting on the River Cam, and experiencing the rich academic and cultural heritage of this charming city.</p>
+
+                <br />
+                4. Southend-on-Sea: <br />
+                <p className="text-[#B2B2B2] ml-5">Just a short drive from the airport, Southend-on-Sea is a popular seaside resort town. It offers attractions such as the longest pleasure pier in the world, Adventure Island amusement park, and beautiful beaches, making it ideal for family outings and leisurely weekends.</p>
+
+                <br />
+                5. Chelmsford: <br />
+                <p className="text-[#B2B2B2] ml-5">Chelmsford, the county town of Essex, is known for its blend of historical sites and modern amenities. Visitors enjoy the stunning Chelmsford Cathedral, Hylands House, and the Riverside Leisure Centre. It's a convenient and attractive destination for both business and leisure travellers.</p>
               </p>
             </p>
           ),
@@ -674,17 +696,27 @@ export const airportData = {
           title: "What are the popular hotels for London Southend Airport Transfers?",
           desc: (
             <p className="text-[#B2B2B2]">
-              Below are the top five hotels in London frequently chosen by travellers after their London Southend Airport transfers:
+              Below are the top five hotels in London frequently chosen by travellers after their London Southend Airport transfers:<br /><br />
+
               <p className="text-[#B2B2B2] ml-4">
-                1.Holiday Inn Southend: Located just minutes from London Southend Airport, Holiday Inn Southend offers modern rooms, a rooftop restaurant with panoramic views, and excellent amenities. It's a convenient choice for travellers looking for comfort and proximity to the airport
+                1. Holiday Inn Southend: <br />
+                <p className="text-[#B2B2B2] ml-5">Located just minutes from London Southend Airport, Holiday Inn Southend offers modern rooms, a rooftop restaurant with panoramic views, and excellent amenities. It's a convenient choice for travellers looking for comfort and proximity to the airport</p>
+
                 <br />
-                2.Roslin Beach Hotel: Situated on the scenic Thorpe Bay seafront, Roslin Beach Hotel provides luxurious accommodations with stunning sea views. Renowned for its award-winning restaurant and spa services, it's perfect for those seeking relaxation near Southend.
+                2. Roslin Beach Hotel: <br />
+                <p className="text-[#B2B2B2] ml-5">Situated on the scenic Thorpe Bay seafront, Roslin Beach Hotel provides luxurious accommodations with stunning sea views. Renowned for its award-winning restaurant and spa services, it's perfect for those seeking relaxation near Southend.</p>
+
                 <br />
-                3.Park Inn by Radisson Palace : Overlooking the Southend Pier and Adventure Island, Park Inn by Radisson Palace combines contemporary design with comfortable amenities. Ideal for families and business travellers, it offers easy access to Southend's attractions and the airport.
+                3. Park Inn by Radisson Palace : <br />
+                <p className="text-[#B2B2B2] ml-5">Overlooking the Southend Pier and Adventure Island, Park Inn by Radisson Palace combines contemporary design with comfortable amenities. Ideal for families and business travellers, it offers easy access to Southend's attractions and the airport.</p>
+
                 <br />
-                4.The Seven Hotel : This stylish boutique hotel in Southend-on-Sea features chic rooms, a trendy restaurant, and a bar. The Seven Hotel is a favourite for its modern décor and prime location near the beach and Southend's vibrant nightlife.
+                4. The Seven Hotel : <br />
+                <p className="text-[#B2B2B2] ml-5">This stylish boutique hotel in Southend-on-Sea features chic rooms, a trendy restaurant, and a bar. The Seven Hotel is a favourite for its modern décor and prime location near the beach and Southend's vibrant nightlife.</p>
+
                 <br />
-                5.Camelia Hotel: Camelia Hotel, located on the seafront, offers a blend of traditional charm and modern comfort. With well-appointed rooms, an excellent restaurant, and friendly service, it's a popular choice for both leisure and business travellers seeking a pleasant stay near the airport.
+                5. Camelia Hotel: <br />
+                <p className="text-[#B2B2B2] ml-5">Camelia Hotel, located on the seafront, offers a blend of traditional charm and modern comfort. With well-appointed rooms, an excellent restaurant, and friendly service, it's a popular choice for both leisure and business travellers seeking a pleasant stay near the airport.</p>
               </p>
             </p>
           ),
@@ -821,18 +853,23 @@ export const airportData = {
             "What are the popular destinations for London Stansted Airport transfers?",
           desc: (
             <p className="text-[#B2B2B2]">
-              Travellers arriving at Stansted Airport in London often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from Stansted Airport:
+              Travellers arriving at Stansted Airport in London often choose to visit several popular destinations within the city. Here are the top 5 locations people commonly travel to from Stansted Airport:<br /><br />
               <p className="text-[#B2B2B2] ml-4">
-                1.Central London : Central London is a bustling hub of iconic landmarks, business districts, and cultural attractions, making it a top destination for both tourists and business travellers.
+                1. Central London : <br />
+                <p className="text-[#B2B2B2] ml-5">Central London is a bustling hub of iconic landmarks, business districts, and cultural attractions, making it a top destination for both tourists and business travellers.</p>
                 <br />
-                2. Cambridge : Home to the prestigious University of Cambridge, this historic city offers beautiful architecture, picturesque landscapes, and a vibrant academic atmosphere, attracting visitors worldwide.
+                2. Cambridge : <br />
+                <p className="text-[#B2B2B2] ml-5">Home to the prestigious University of Cambridge, this historic city offers beautiful architecture, picturesque landscapes, and a vibrant academic atmosphere, attracting visitors worldwide.</p>
                 <br />
-                3. St. Albans: Known for its rich Roman history, charming medieval architecture, and the stunning St. Albans Cathedral, this city is a popular choice for history enthusiasts.
+                3. St. Albans: <br />
+                <p className="text-[#B2B2B2] ml-5">Known for its rich Roman history, charming medieval architecture, and the stunning St. Albans Cathedral, this city is a popular choice for history enthusiasts.</p>
                 <br />
-                4. Chelmsford: As Essex's only city, Chelmsford boasts a mix of modern amenities, shopping centres, and beautiful parks, making it an attractive destination for families and professionals.
+                4. Chelmsford: <br />
+                <p className="text-[#B2B2B2] ml-5">As Essex's only city, Chelmsford boasts a mix of modern amenities, shopping centres, and beautiful parks, making it an attractive destination for families and professionals.</p>
 
                 <br />
-                5. Bishop's Stortford: This market town offers a blend of historical charm and modern conveniences, with quaint shops, restaurants, and excellent transport links to London, appealing to various visitors.
+                5. Bishop's Stortford: <br />
+                <p className="text-[#B2B2B2] ml-5">This market town offers a blend of historical charm and modern conveniences, with quaint shops, restaurants, and excellent transport links to London, appealing to various visitors.</p>
               </p>
             </p>
           ),
@@ -841,17 +878,22 @@ export const airportData = {
           title: "What are the popular hotels for London Stansted Airport transfers?",
           desc: (
             <p className="text-[#B2B2B2]">
-              Below are the top five hotels in London frequently chosen by travellers for their London Stansted Airport hotel transfers:
+              Below are the top five hotels in London frequently chosen by travellers for their London Stansted Airport hotel transfers:<br /><br />
               <p className="text-[#B2B2B2] ml-4">
-                1.Radisson Blu Hotel : Directly connected to the airport terminal, this hotel offers modern rooms, a stylish wine tower bar, and convenient amenities for travellers, including a fitness centre and meeting rooms.
+                1. Radisson Blu Hotel : <br />
+                <p className="text-[#B2B2B2] ml-5">Directly connected to the airport terminal, this hotel offers modern rooms, a stylish wine tower bar, and convenient amenities for travellers, including a fitness centre and meeting rooms.</p>
                 <br />
-                2.Hampton by Hilton: Located within walking distance of the terminal, this hotel provides comfortable rooms, complimentary breakfast, and a 24-hour fitness centre, ideal for both business and leisure travellers.
+                2. Hampton by Hilton: <br />
+                <p className="text-[#B2B2B2] ml-5">Located within walking distance of the terminal, this hotel provides comfortable rooms, complimentary breakfast, and a 24-hour fitness centre, ideal for both business and leisure travellers.</p>
                 <br />
-                3.Holiday Inn Express : Just a short ride from the airport, this hotel features modern accommodations, complimentary breakfast, and a 24-hour bar, ensuring a pleasant stay for all guests.
+                3. Holiday Inn Express : <br />
+                <p className="text-[#B2B2B2] ml-5">Just a short ride from the airport, this hotel features modern accommodations, complimentary breakfast, and a 24-hour bar, ensuring a pleasant stay for all guests.</p>
                 <br />
-                4.Novotel : Offering stylish rooms, an on-site restaurant, and a fitness centre, Novotel is perfect for travellers seeking comfort and convenience, with easy access to the airport.
+                4 Novotel : <br />
+                <p className="text-[#B2B2B2] ml-5">Offering stylish rooms, an on-site restaurant, and a fitness centre, Novotel is perfect for travellers seeking comfort and convenience, with easy access to the airport.</p>
                 <br />
-                5.Premier Inn : Known for its comfortable rooms and family-friendly atmosphere, Premier Inn provides a convenient shuttle service to the airport, along with an on-site restaurant and bar.
+                5. Premier Inn : <br />
+                <p className="text-[#B2B2B2] ml-5">Known for its comfortable rooms and family-friendly atmosphere, Premier Inn provides a convenient shuttle service to the airport, along with an on-site restaurant and bar.</p>
               </p>
             </p>
           ),
@@ -986,18 +1028,23 @@ export const airportData = {
             "What are the popular destinations for Luton Airport transfers?",
           desc: (
             <p className="text-[#B2B2B2]">
-              Travellers arriving at Luton Airport in Bedfordshire often choose to visit several popular destinations in and around the town. Here are the top 5 locations people commonly travel to from Luton Airport:
+              Travellers arriving at Luton Airport in Bedfordshire often choose to visit several popular destinations in and around the town. Here are the top 5 locations people commonly travel to from Luton Airport:<br /><br />
               <p className="text-[#B2B2B2] ml-4">
-                1.Central London : The heart of the UK's capital city, Central London boasts iconic landmarks like Buckingham Palace, Big Ben, and world-class shopping and dining experiences.
+                1. Central London : <br />
+                <p className="text-[#B2B2B2] ml-5">The heart of the UK's capital city, Central London boasts iconic landmarks like Buckingham Palace, Big Ben, and world-class shopping and dining experiences.</p>
                 <br />
-                2. Oxford  : Famous for its prestigious university, Oxford offers stunning architecture, historic colleges, and museums, making it a cultural and intellectual hub.
+                2. Oxford : <br />
+                <p className="text-[#B2B2B2] ml-5">Famous for its prestigious university, Oxford offers stunning architecture, historic colleges, and museums, making it a cultural and intellectual hub.</p>
                 <br />
-                3. Milton Keynes: Known for its modern amenities, shopping centres like the MK Centre, and entertainment options like Bletchley Park, Milton Keynes is a vibrant city.
+                3. Milton Keynes: <br />
+                <p className="text-[#B2B2B2] ml-5">Known for its modern amenities, shopping centres like the MK Centre, and entertainment options like Bletchley Park, Milton Keynes is a vibrant city.</p>
                 <br />
-                4. Cambridge: Home to the University of Cambridge, this city features beautiful architecture, punting on the River Cam, and a rich academic and cultural heritage.
+                4. Cambridge: <br />
+                <p className="text-[#B2B2B2] ml-5">Home to the University of Cambridge, this city features beautiful architecture, punting on the River Cam, and a rich academic and cultural heritage.</p>
 
                 <br />
-                5. Watford: Close to London, Watford attracts visitors to Warner Bros. Studio Tour, showcasing Harry Potter film sets, along with parks and shopping centres.
+                5. Watford: <br />
+                <p className="text-[#B2B2B2] ml-5">Close to London, Watford attracts visitors to Warner Bros. Studio Tour, showcasing Harry Potter film sets, along with parks and shopping centres.</p>
               </p>
             </p>
           ),
@@ -1006,17 +1053,22 @@ export const airportData = {
           title: "What are the popular hotels for Luton Airport transfers?",
           desc: (
             <p className="text-[#B2B2B2]">
-              Below are the top five hotels in Luton frequently chosen by travellers for their Luton Airport hotel transfers:
+              Below are the top five hotels in Luton frequently chosen by travellers for their Luton Airport hotel transfers:<br /><br />
               <p className="text-[#B2B2B2] ml-4">
-                1.Hilton Garden Inn : Conveniently located near Luton Airport, offering modern rooms, a fitness centre, and a restaurant, ideal for business and leisure travellers.
+                1. Hilton Garden Inn : <br />
+                <p className="text-[#B2B2B2] ml-5">Conveniently located near Luton Airport, offering modern rooms, a fitness centre, and a restaurant, ideal for business and leisure travellers.</p>
                 <br />
-                2.Holiday Inn: Adjacent to the airport, featuring contemporary rooms, a restaurant, and meeting facilities, providing convenience and comfort for travellers.
+                2. Holiday Inn: <br />
+                <p className="text-[#B2B2B2] ml-5">Adjacent to the airport, featuring contemporary rooms, a restaurant, and meeting facilities, providing convenience and comfort for travellers.</p>
                 <br />
-                3.Courtyard by Marriott : A stylish hotel with spacious rooms, a fitness centre, and a restaurant, offering easy access to Luton Airport and nearby attractions
+                3. Courtyard by Marriott : <br />
+                <p className="text-[#B2B2B2] ml-5">A stylish hotel with spacious rooms, a fitness centre, and a restaurant, offering easy access to Luton Airport and nearby attractions</p>
                 <br />
-                4.Hampton by Hilton : Within walking distance of the airport, providing comfortable rooms, complimentary breakfast, and a fitness centre, perfect for short stays.
+                4. Hampton by Hilton : <br />
+                <p className="text-[#B2B2B2] ml-5">Within walking distance of the airport, providing comfortable rooms, complimentary breakfast, and a fitness centre, perfect for short stays.</p>
                 <br />
-                5.Ibis : Budget-friendly accommodations with modern rooms, a restaurant, and a bar, offering convenience and affordability near Luton Airport.
+                5. Ibis : <br />
+                <p className="text-[#B2B2B2] ml-5">Budget-friendly accommodations with modern rooms, a restaurant, and a bar, offering convenience and affordability near Luton Airport.</p>
               </p>
             </p>
           ),

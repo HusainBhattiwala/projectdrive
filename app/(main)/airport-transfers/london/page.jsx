@@ -10,13 +10,13 @@ import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
 
 const pageData = {
   banner: {
-    title: 'Airport Transfers London',
+    title: 'Airport Transfers In London',
     subTitle: 'Arrive in style, stress free and rejuvenated',
     bannerImage: '/rolnew/airports/airport-transfer-london.jpg',
   },
   aboutData: {
     img: '/rolnew/airports/about/About London.jpg',
-    title: 'Airport Transfers London',
+    title: 'Airport Transfers In London',
     description:
       'Offering premium airport transfers London services, we ensure a seamless connection to and from all of London’s airports. With a fleet of luxury vehicles to take care of all your transportation needs, our professional chauffeur service provides reliable, comfortable and stylish transportation tailored to meet the needs of both business and leisure travellers. ',
   },
@@ -121,14 +121,14 @@ const pageData = {
       },
     ],
   },
-  offeringData : {
+  offeringData: {
     heading: {
       mainTitle: 'About London Airport Transfer Service',
     },
     data: [
       {
         title: 'What is an airport transfer chauffeur London service?',
-        desc: "An airport transfer chauffeur London service provides private, pre-arranged transportation between an airport and the client’s destination, typically in and around London. This professional service is designed for convenience and efficiency, offering a seamless travel experience for the client. When you book an airport transfer chauffeur, you get a professional driver who meets you at the airport, assists with luggage, and drives you directly to your location in a comfortable, private vehicle. This eliminates the stress of navigating public transport or hailing taxis, making it ideal for business travellers, tourists, or those who would like to prefer a more luxurious and personalised mode of travel.",
+        desc: 'An airport transfer chauffeur London service provides private, pre-arranged transportation between an airport and the client’s destination, typically in and around London. This professional service is designed for convenience and efficiency, offering a seamless travel experience for the client. When you book an airport transfer chauffeur, you get a professional driver who meets you at the airport, assists with luggage, and drives you directly to your location in a comfortable, private vehicle. This eliminates the stress of navigating public transport or hailing taxis, making it ideal for business travellers, tourists, or those who would like to prefer a more luxurious and personalised mode of travel.',
       },
       // {
       //   title:

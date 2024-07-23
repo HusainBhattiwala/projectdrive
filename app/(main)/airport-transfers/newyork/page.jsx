@@ -113,7 +113,7 @@ const pageData = {
       },
     ],
   },
-  offeringData : {
+  offeringData: {
     heading: {
       mainTitle: 'About New York Airport Transfer Service',
     },
@@ -183,14 +183,14 @@ const pageData = {
       },
       {
         title: 'How can I arrange an airport transfer for a group of travellers in New York City?',
-        desc: "For a luxury airport transfer in New York tailored for larger groups, consider RolDrive’s chauffeur service featuring the Mercedes Benz V Class. This spacious and sophisticated vehicle is perfect for accommodating groups comfortably, ensuring everyone travels together in style. To arrange a transfer, simply visit RolDrive’s website or use our mobile app to book the Mercedes Benz V Class. Specify your group’s size, luggage requirements, and any special accommodations you might need. RolDrive’s professional chauffeurs, experienced in navigating New York City’s bustling streets, will ensure a smooth, luxurious journey to or from the airport",
+        desc: 'For a luxury airport transfer in New York tailored for larger groups, consider RolDrive’s chauffeur service featuring the Mercedes Benz V Class. This spacious and sophisticated vehicle is perfect for accommodating groups comfortably, ensuring everyone travels together in style. To arrange a transfer, simply visit RolDrive’s website or use our mobile app to book the Mercedes Benz V Class. Specify your group’s size, luggage requirements, and any special accommodations you might need. RolDrive’s professional chauffeurs, experienced in navigating New York City’s bustling streets, will ensure a smooth, luxurious journey to or from the airport',
       },
       {
         title: 'What are the most reliable airport transfer services in New York City?',
         desc: "RolDrive's chauffeur service stands out as a premier choice for luxury airport transfer in New York. Renowned for reliability, we cater to JFK, LaGuardia, Newark and Buffalo Niagara airports with a fleet of high-end vehicles designed for comfort and style. Each chauffeur is expertly trained to navigate the bustling streets of New York efficiently, ensuring timely arrivals and departures. With a focus on customer satisfaction, RolDrive offers personalized meet-and-greet services, flight tracking to accommodate delays, and flexible booking options. Whether for business or leisure, RolDrive enhances your travel experience, epitomising luxury airport transfer in New York.",
       },
     ],
-  }
+  },
 };
 
 function NewyorkAirportPage() {
