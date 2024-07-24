@@ -13,7 +13,7 @@ export const jetData = {
     {
       img: '/rolnew/global/icons/jet/FBO Pickup.png',
       title: 'FBO Pickup',
-      desc: 'We provide a Private Jet FBO Pickup service, ensuring a seamless and luxurious transition from your private jet to your next destination.',
+      desc: 'We provide a Private Jet FBO Pickup service, ensuring a seamless and luxurious transition from your private jet right from the airport tarmac to your next destination.',
     },
     {
       img: '/rolnew/global/icons/jet/Free Meet & Greet.png',
@@ -83,12 +83,12 @@ export const jetData = {
     {
       icon: '/rolnew/global/icons/shield-user-line.svg',
       title: 'Safe & Discreet',
-      desc: 'RolDrives chauffeur service is renowned for its safety and discretion, providing secure, private transportation with expertly trained chauffeurs committed to maintaining confidentiality and ensuring passenger safety on every journey.',
+      desc: "RolDrive's chauffeur service is renowned for its safety and discretion, providing secure, private transportation with expertly trained chauffeurs committed to maintaining confidentiality and ensuring passenger safety on every journey.",
     },
     {
       icon: '/rolnew/global/icons/steering-wheel.svg',
       title: 'Punctual',
-      desc: 'RolDrives punctual chauffeur service guarantees timely arrivals with skilled drivers who adeptly navigate to ensure you reach your destinations on schedule, every time.',
+      desc: "RolDrive's punctual chauffeur service guarantees timely arrivals with skilled drivers who adeptly navigate to ensure you reach your destinations on schedule, every time.",
     },
     {
       icon: '/rolnew/global/icons/service-line.svg',
@@ -98,7 +98,7 @@ export const jetData = {
     {
       icon: '/rolnew/global/icons/car-line.svg',
       title: 'A Great Fleet',
-      desc: 'RolDrives vast fleet includes a wide array of luxurious vehicles, from sleek sedans and spacious SUVs to elegant limousines, tailored to meet any travel need or preference.',
+      desc: "RolDrive's vast fleet includes a wide array of luxurious vehicles, from sleek sedans and spacious SUVs to elegant limousines, tailored to meet any travel need or preference.",
     },
   ],
   servicesData: {
@@ -107,12 +107,10 @@ export const jetData = {
     },
     data: [
       {
-        title: 'What are RolDrive’s private jet chauffeur coverage zones?',
+        title: 'What are RolDrive’s private jet transfer coverage zones?',
         desc: (
           <p className="text-[#B2B2B2]">
-            RolDrive provides its private jet chauffeur service in the following
-            locations. Our professional and discreet chauffeurs will take you to
-            and from the tarmac in absolute comfort and style.
+            RolDrive provides its private jet chauffeur service in the following locations. Our professional and discreet chauffeurs will take you to and from the tarmac in absolute comfort and style.
           </p>
         ),
       },
@@ -144,21 +142,10 @@ export const jetData = {
         ),
       },
       {
-        title: 'What is a private jet chauffeur service?',
+        title: 'What is a private jet transfer service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            A private jet chauffeur service is a specialised transportation
-            option designed for travellers using private aviation. This service
-            offers seamless private jet transfers, ensuring a smooth connection
-            between the airport and the passengers final destination. Tailored
-            for comfort and convenience, it includes luxury vehicles ready at
-            the tarmac upon arrival and professional chauffeurs who are trained
-            to handle discreet and efficient travel needs. The service is
-            customisable, accommodating specific requests such as preferred
-            routes or on-board amenities. This premium service is ideal for
-            those seeking privacy, speed, and high levels of service in their
-            ground transportation, matching the exclusivity of private jet
-            travel.
+            A private jet chauffeur service is a specialised transportation option designed for travellers using private aviation. This service offers seamless private jet transfers, ensuring a smooth connection between the airport tarmac (FBO service) and the passenger's final destination. Tailored for comfort and convenience, it includes luxury vehicles ready at the tarmac upon arrival and professional chauffeurs who are trained to handle discreet and efficient travel needs. The private jet car hire per hour service is customisable, accommodating specific requests such as preferred routes or on-board amenities. This premium service is ideal for those seeking privacy, speed, and high levels of service in their ground transportation, matching the exclusivity of private jet travel.
           </p>
         ),
       },
@@ -166,17 +153,7 @@ export const jetData = {
         title: 'Why hire a private jet chauffeur service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            Hiring a private jet chauffeur service enhances the seamless luxury
-            and efficiency of private air travel. This specialised service
-            ensures that your ground transportation is as personalised and
-            comfortable as your flight. With a private jet transfer, you avoid
-            the hassles of navigating through public airports or waiting for
-            taxis. Instead, you are greeted by a professional chauffeur who
-            manages all logistics from doorstep to runway, providing privacy,
-            security, and comfort. This level of service is particularly
-            beneficial for those with tight schedules or those seeking an
-            exclusive, stress-free travel experience, making transitions between
-            appointments or destinations smooth and effortless.
+            Hiring a private jet chauffeur service enhances the seamless luxury and efficiency of private air travel. This specialised service ensures that your ground transportation is as personalised and comfortable as your flight. With a private jet transfer, you avoid the hassles of navigating through public airports or waiting for taxis. Instead, you are greeted by a professional chauffeur who manages all logistics from doorstep to runway, providing privacy, security, and comfort. This level of service is particularly beneficial for those with tight schedules or those seeking an exclusive, stress-free travel experience, making transitions between appointments or destinations smooth and effortless.
           </p>
         ),
       },
@@ -184,19 +161,7 @@ export const jetData = {
         title: 'What vehicles are offered for a private jet chauffeur service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            For private jet transfer services, the vehicle options are curated
-            to meet the highest standards of luxury and comfort. Clients can
-            choose from a range of top-tier vehicles such as Rolls Royce,
-            Bentley, and Mercedes Benz S Class, which are popular for their
-            elegance and superior comfort features. These vehicles are equipped
-            with plush interiors, climate control, and privacy features like
-            tinted windows, making them perfect for high-profile travellers
-            seeking discretion. Additionally, for groups, luxury SUVs like the
-            Range Rover are available, offering spacious seating without
-            compromising on sophistication or performance. For even larger
-            groups, clients can choose the Mercedes Benz V Class. Each vehicle
-            in the fleet is maintained meticulously to ensure safety,
-            reliability, and a first-class experience during every journey.
+            For private jet transfer services, the vehicle options are curated to meet the highest standards of luxury and comfort. Clients can choose from a range of top-tier vehicles such as Rolls Royce, Bentley, and Mercedes Benz S Class, which are popular for their elegance and superior comfort features. These vehicles are equipped with plush interiors, climate control, and privacy features like tinted windows, making them perfect for high-profile travellers seeking discretion. Additionally, for groups, luxury SUVs like the Range Rover are available, offering spacious seating without compromising on sophistication or performance. And for even larger groups, clients can always choose the Mercedes Benz V Class. Each vehicle in the fleet is maintained meticulously to ensure safety, reliability, and a first-class experience during every journey.
           </p>
         ),
       },
@@ -209,7 +174,7 @@ export const jetData = {
       {
         id: 0,
         question: "What is RolDrive's private jet chauffeur service?",
-        ans: "RolDrive's private jet chauffeur service, such as a private jet at Heathrow Airport, provides personalised transportation to and from airports, offering seamless connections between your flight and ground destinations.",
+        ans: "RolDrive's private jet chauffeur service such as a private jet Heathrow Airport or private jet London City Airport, provides personalised transportation to and from airports right from the airport tarmac (FBO pickup and dropoff), offering seamless connections between your flight and ground destinations.",
       },
       {
         id: 1,
@@ -226,7 +191,7 @@ export const jetData = {
       {
         id: 3,
         question: 'Are RolDrive’s chauffeurs trained for private jet services?',
-        ans: 'Yes, chauffeurs dedicated to the private jet chauffeur service are specially trained to meet the unique needs of private aviation clients, focusing on discretion, punctuality, and professionalism.',
+        ans: 'Yes, chauffeurs dedicated to private jet travel are specially trained to meet the unique needs of private aviation clients, focusing on discretion, punctuality, and professionalism.',
       },
       {
         id: 4,
