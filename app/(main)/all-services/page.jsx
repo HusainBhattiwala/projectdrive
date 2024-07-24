@@ -12,6 +12,7 @@ import Button from 'rolnew/ui/Button';
 import { ModalContext } from 'context/ModalContext';
 import { useContext } from 'react';
 import { allServicesData } from './allServicesData';
+import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
 
 export default function Home() {
   const { openModal } = useContext(ModalContext);
@@ -156,7 +157,7 @@ export default function Home() {
         data={allServicesData.destinationsData?.tokyo}
         bg="bg-[#223544]"
       />
-      <FindMoreComponent findMoreData={allServicesData.findMoreData} />
+      <ServiceOfferings servicesData={allServicesData.offeringData}/>
     </>
   );
 }
