@@ -28,7 +28,7 @@ export const corporateData = {
     {
       img: '/rolnew/global/icons/corporate/Flight Tracking.png',
       title: 'Flight Tracking',
-      desc: 'Our flight tracking service ensures timely pickups by monitoring your flights arrival time, adjusting the pickup schedule based on any delays or early arrivals to provide seamless transportation.',
+      desc: "Our flight tracking service ensures timely pickups by monitoring your flight's arrival time, adjusting the pickup schedule based on any delays or early arrivals to provide seamless transportation.",
     },
   ],
 
@@ -83,12 +83,12 @@ export const corporateData = {
     {
       icon: '/rolnew/global/icons/shield-user-line.svg',
       title: 'Knowledgable Chauffeurs',
-      desc: 'RolDrives chauffeurs are highly knowledgeable, trained in local geography and skilled in navigating efficiently. They ensure a smooth, informed journey, enhancing the travel experience with their professionalism and expertise.',
+      desc: "RolDrive's chauffeurs are highly knowledgeable, trained in local geography and skilled in navigating efficiently. They ensure a smooth, informed journey, enhancing the travel experience with their professionalism and expertise.",
     },
     {
       icon: '/rolnew/global/icons/steering-wheel.svg',
       title: 'Professional Chauffeurs',
-      desc: 'RolDrives professional chauffeurs are always impeccably dressed in a suit and tie, reflecting the high standards and professionalism expected in luxury transportation. Their attire ensures a polished appearance that complements the upscale experience of each journey.',
+      desc: "RolDrive's professional chauffeurs are always impeccably dressed in a suit and tie, reflecting the high standards and professionalism expected in luxury transportation. Their attire ensures a polished appearance that complements the upscale experience of each journey.",
     },
     {
       icon: '/rolnew/global/icons/service-line.svg',
@@ -111,10 +111,7 @@ export const corporateData = {
         title: 'What are RolDrive’s corporate car hire coverage zones?',
         desc: (
           <p className="text-[#B2B2B2]">
-            RolDrive provides its corporate car hire services in and around the
-            following locations. Our professional chauffeurs will transport
-            clients to and from locations in absolute comfort, safety, and
-            style.
+            RolDrive provides its corporate car hire services in and around the following locations. Our professional chauffeurs will transport clients to and from locations in absolute comfort, safety and style.
           </p>
         ),
       },
@@ -149,18 +146,7 @@ export const corporateData = {
         title: 'What is a corporate chauffeur hire?',
         desc: (
           <p className="text-[#B2B2B2]">
-            A corporate event chauffeur hire refers to a specialised service
-            tailored for business use, providing companies with reliable,
-            high-quality transportation for executives, clients, and employees.
-            This service ensures punctuality and professionalism, utilising
-            luxury vehicles that offer comfort and are equipped with modern
-            amenities suitable for a corporate setting. A corporate chauffeur
-            hire service is particularly useful for travel to meetings, airport
-            transfers, corporate events, and roadshows. Employing a corporate
-            chauffeur service enhances the corporate image and ensures that
-            transportation is handled efficiently and safely, allowing business
-            professionals to focus on their work without the stress of
-            navigating traffic or managing travel logistics.
+            Chauffeurs for corporate events refers to a specialised service tailored for business use, providing companies with reliable, high-quality transportation for executives, clients, and employees. This service ensures punctuality and professionalism, utilising luxury vehicles that offer comfort and are equipped with modern amenities suitable for a corporate setting. A corporate chauffeur hire service is particularly useful for travel to meetings, airport transfers, corporate events, and roadshows. Employing a corporate chauffeur service enhances the corporate image and ensures that transportation is handled efficiently and safely, allowing business professionals to focus on their work without the stress of navigating traffic or managing travel logistics.
           </p>
         ),
       },
@@ -168,18 +154,7 @@ export const corporateData = {
         title: 'Are corporate chauffeurs reliable?',
         desc: (
           <p className="text-[#B2B2B2]">
-            Yes, corporate chauffeurs are highly reliable. For a corporate event
-            chauffeur hire, these professionals undergo rigorous training in
-            driving, customer service, and safety protocols to ensure they meet
-            the high standards expected in corporate environments. Corporate
-            chauffeurs are accustomed to handling sensitive business matters
-            discreetly and efficiently, making them trustworthy partners for
-            transporting executives and clients. Companies like RolDrive ensure
-            their chauffeurs have a solid background in corporate services,
-            providing peace of mind to businesses that their transportation
-            needs are handled with utmost professionalism and punctuality. This
-            reliability is crucial for maintaining a smooth operation of
-            business schedules and enhancing the corporate travel experience.
+            Yes, chauffeured service for corporate events are highly reliable. For a corporate event chauffeur hire, our professionals undergo rigorous training in driving, customer service, and safety protocols to ensure they meet the high standards expected in corporate environments. Corporate chauffeurs are accustomed to handling sensitive business matters discreetly and efficiently, making them trustworthy partners for transporting executives and clients. Companies like RolDrive ensure their chauffeurs have a solid background in corporate services, providing peace of mind to businesses that their transportation needs are handled with utmost professionalism and punctuality. This reliability is crucial for maintaining a smooth operation of business schedules and enhancing the corporate travel experience.
           </p>
         ),
       },
@@ -187,18 +162,7 @@ export const corporateData = {
         title: 'What vehicles are offered for corporate transfers?',
         desc: (
           <p className="text-[#B2B2B2]">
-            For corporate event chauffeur hire, vehicles are selected to meet
-            the specific needs of business environments, emphasising comfort,
-            style, and functionality. The fleet typically includes luxury sedans
-            such as the Mercedes Benz S Class, known for its comfort and
-            sophisticated presence. For larger groups or higher-tier executives,
-            SUVs like the Range Rover offer spacious interiors and a commanding
-            road presence. Additionally, for group transfers or events,
-            executive shuttles or coaches are available such as the Mercedes
-            Benz V Class, providing efficient transportation for larger parties
-            while maintaining high standards of luxury and convenience. Each
-            vehicle is equipped with modern amenities to ensure a productive and
-            relaxing environment for passengers.
+            For corporate event chauffeur hire, vehicles are selected to meet the specific needs of business environments, emphasising comfort, style, and functionality. The fleet typically includes luxury sedans such as the Mercedes Benz S Class, known for its comfort and sophisticated presence. For larger groups or higher-tier executives, SUVs like the Range Rover offer spacious interiors and a commanding road presence. Additionally, for group transfers or events, executive shuttles or coaches are available such as the Mercedes Benz V Class, providing efficient transportation for larger parties while maintaining high standards of luxury and convenience. Each vehicle is equipped with modern amenities to ensure a productive and relaxing environment for passengers.
           </p>
         ),
       },
@@ -206,20 +170,7 @@ export const corporateData = {
         title: 'How much does a corporate chauffeur transfer cost?',
         desc: (
           <p className="text-[#B2B2B2]">
-            The cost of a corporate chauffeur transfer can vary significantly
-            based on several factors, including the type of vehicle selected,
-            the duration of the hire, the distance to be travelled, and any
-            specific requirements unique to the corporate event. For corporate
-            event chauffeur hire, companies might also consider the level of
-            service required, such as the provision of additional amenities or
-            custom requests that can influence the overall price. Typically,
-            services are tailored to meet the specific needs of the event or
-            business, making it essential to consult directly with the service
-            provider for a detailed quote. Companies like RolDrive often provide
-            customised quotations based on the clients detailed requirements to
-            ensure the service matches the expected standards and logistics of
-            corporate needs. So its best to contact RolDrive directly to know
-            how much your corporate transfer will cost.
+            The cost of a corporate chauffeur transfer can vary significantly based on several factors, including the type of vehicle selected, the duration of the hire, the distance to be travelled, and any specific requirements unique to the corporate event. For corporate event chauffeur hire, companies might also consider the level of service required, such as the provision of additional amenities or custom requests that can influence the overall price. Typically, services are tailored to meet the specific needs of the event or business, making it essential to consult directly with the service provider for a detailed quote. Companies like RolDrive often provide customised quotations based on the client's detailed requirements to ensure the service matches the expected standards and logistics of corporate needs. So it's best to contact RolDrive directly to know how much your corporate transfer will cost.
           </p>
         ),
       },
@@ -244,23 +195,23 @@ export const corporateData = {
         id: 2,
         question:
           'What types of vehicles are available for corporate chauffeur hire?',
-        ans: 'RolDrives fleet for corporate clients includes luxury sedans, executive SUVs, and minivans, all equipped with amenities conducive to a professional environment.',
+        ans: "RolDrive's fleet for corporate clients includes luxury sedans, executive SUVs, and minivans, all equipped with amenities conducive to a professional environment",
       },
       {
         id: 3,
         question:
-          'Are RolDrives chauffeurs trained to handle corporate clients?',
-        ans: 'Yes, chauffeurs are professionally trained to provide discreet and efficient service, understanding the nuances of corporate etiquette and client privacy.',
+          "Are RolDrive's chauffeurs trained to handle corporate clients?",
+        ans: 'Yes, when it comes to our corporate chauffeured cars, our chauffeurs are professionally trained to provide discreet and efficient service, understanding the nuances of corporate etiquette and client privacy.',
       },
       {
         id: 4,
-        question: 'What are the payment options for corporate clients?',
-        ans: 'RolDrive accepts various payment methods including corporate credit cards, bank transfers, and invoicing, offering flexible payment solutions for businesses.',
+        question: 'Can RolDrive accommodate corporate events of large scale?',
+        ans: 'Yes, RolDrive has extensive experience in managing transportation for large corporate events and can coordinate multiple vehicles for group transfers. Try our corporate car hire services to experience the difference.',
       },
       {
         id: 5,
-        question: 'Can RolDrive accommodate corporate events of large scale?',
-        ans: 'Yes, RolDrive has extensive experience in managing transportation for large corporate events and can coordinate multiple vehicles for group transfers.',
+        question: 'What are the payment options for corporate clients?',
+        ans: 'RolDrive accepts various payment methods including corporate credit cards, bank transfers, and invoicing, offering flexible payment solutions for businesses.',
       },
       {
         id: 6,

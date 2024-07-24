@@ -18,7 +18,7 @@ export const weddingData = {
     {
       img: '/rolnew/global/icons/wedding/Luxury Vehicles.png',
       title: 'Luxury Vehicles',
-      desc: 'We offer an array of luxury vehicles to ensure a prestigious and comfortable travel experience tailored to your preferences and requirements',
+      desc: 'We offer an array of luxury vehicles to ensure a prestigious and comfortable travel experience tailored to your preferences and requirements.',
     },
     {
       img: '/rolnew/global/icons/wedding/Flexibility.png',
@@ -46,34 +46,34 @@ export const weddingData = {
         image: '/rolnew/services/wedding/Wedding Transfer in London.jpg',
         cityName: 'Wedding Transfer',
         countryCode: 'GB',
-        address: 'London',
+        address: 'weeee',
       },
       {
         id: 2,
         image: '/rolnew/services/wedding/Wedding Transfer in Dubai.jpg',
         cityName: 'Wedding Transfer ',
-        countryCode: 'AE',
+        countryCode: 'GB',
         address: 'Dubai',
       },
       {
         id: 3,
         image: '/rolnew/services/wedding/Wedding Transfer in New York.jpg',
         cityName: 'Wedding Transfer',
-        countryCode: 'US',
+        countryCode: 'GB',
         address: 'New York',
       },
       {
         id: 4,
         image: '/rolnew/services/wedding/Wedding Transfer in Paris.jpg',
         cityName: 'Wedding Transfer',
-        countryCode: 'FR',
+        countryCode: 'GB',
         address: 'Paris',
       },
       {
         id: 5,
         image: '/rolnew/services/wedding/Wedding Transfer in Tokyo.jpg',
         cityName: 'Wedding Transfer',
-        countryCode: 'JP',
+        countryCode: 'GB',
         address: 'Tokyo',
       },
     ],
@@ -88,7 +88,7 @@ export const weddingData = {
     {
       icon: '/rolnew/global/icons/steering-wheel.svg',
       title: 'Professional Chauffeurs',
-      desc: 'Dressed in a suit and tie, RolDrives chauffeurs look the part for any event, especially during a wedding when opening the door for the bride or groom.',
+      desc: 'Dressed in a suit and tie, RolDrive’s chauffeurs look the part for any event, especially during a wedding when opening the door for the bride or groom.',
     },
     {
       icon: '/rolnew/global/icons/service-line.svg',
@@ -111,10 +111,7 @@ export const weddingData = {
         title: 'What are RolDrive’s wedding car hire coverage zones?',
         desc: (
           <p className="text-[#B2B2B2]">
-            RolDrive provides its wedding chauffeur services in and around the
-            following locations. Our professional chauffeurs will transport you
-            and your guests to and from the wedding venue in absolute comfort,
-            safety and style.
+            RolDrive provides its wedding chauffeur services in and around the following locations. Our professional chauffeurs will transport you and your guests to and from the wedding venue in absolute comfort, safety and style.
           </p>
         ),
       },
@@ -148,16 +145,7 @@ export const weddingData = {
         title: 'What is a wedding transfer?',
         desc: (
           <p className="text-[#B2B2B2]">
-            A wedding transfer refers to the transportation service provided for
-            the bride, groom, and other wedding party members from one location
-            to another on the wedding day. This service is crucial for ensuring
-            that all key participants arrive at the ceremony, photo sessions,
-            and reception on time and in style. Utilising a luxury vehicle like
-            a Rolls Royce wedding car for these transfers adds a touch of
-            elegance and sophistication to the event. The Rolls Royce, known for
-            its classic design and plush interiors, provides a stunning backdrop
-            for wedding photos and offers the bride and groom comfort and luxury
-            as they travel between venues on their special day.
+            A wedding transfer refers to the chauffeur service for weddings provided for the bride, groom, and other wedding party members from one location to another on the wedding day. This service is crucial for ensuring that all key participants arrive at the ceremony, photo sessions, and reception on time and in style. Utilising a luxury vehicle like a Rolls Royce wedding car for these transfers adds a touch of elegance and sophistication to the event. The Rolls Royce, known for its classic design and plush interiors, provides a stunning backdrop for wedding photos and offers the bride and groom comfort and luxury as they travel between venues on their special day.
           </p>
         ),
       },
@@ -165,19 +153,7 @@ export const weddingData = {
         title: 'Why hire a wedding chauffeur service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            Hiring a wedding chauffeur service, such as a Rolls Royce wedding
-            car, offers numerous benefits that ensure a seamless and memorable
-            wedding day. One critical necessity is punctuality; a professional
-            chauffeur ensures the bride, groom, and wedding party arrive on time
-            to various venues, alleviating stress and maintaining the day’s
-            schedule. Additionally, considering that the bride and groom often
-            wear elaborate and heavy attire, having a chauffeur assists with
-            navigating in and out of the vehicle comfortably and elegantly.
-            Furthermore, a wedding chauffeur helps manage the day’s logistics,
-            from coordinating travel between locations to handling unexpected
-            delays, ensuring everything proceeds smoothly. Opting for a
-            luxurious Rolls Royce as the wedding car adds a touch of elegance
-            and makes a spectacular statement on your special day.
+            Hiring a wedding chauffeur service, such as a Rolls Royce wedding car, offers numerous benefits that ensure a seamless and memorable wedding day. One critical necessity is punctuality; a professional chauffeur ensures the bride, groom, and wedding party arrive on time to various venues, alleviating stress and maintaining the day’s schedule. Additionally, considering that the bride and groom often wear elaborate and heavy attire, having a chauffeur assists with navigating in and out of the vehicle comfortably and elegantly. Furthermore, a wedding chauffeur helps manage the day’s logistics, from coordinating travel between locations to handling unexpected delays, ensuring everything proceeds smoothly. Opting for a luxurious Rolls Royce as the wedding car adds a touch of elegance and makes a spectacular statement on your special day.
           </p>
         ),
       },
@@ -185,17 +161,7 @@ export const weddingData = {
         title: 'Can I explore landmarks when on a wedding transfer?',
         desc: (
           <p className="text-[#B2B2B2]">
-            Absolutely, you can explore landmarks during a wedding transfer with
-            your luxury wedding cars. The luxury vehicle not only adds a touch
-            of elegance and style to your special day but also provides a
-            comfortable and memorable way to visit iconic spots for photo
-            opportunities. Whether you want to stop at historical buildings,
-            picturesque parks, or scenic viewpoints, the luxury wedding cars
-            offer a splendid backdrop for your wedding photos. Just discuss your
-            itinerary with the chauffeur service beforehand to ensure that your
-            route includes all the desired landmarks and that enough time is
-            allocated for each stop. This personalised touch can make your
-            wedding day even more special and unforgettable.
+            Absolutely, you can explore landmarks during a wedding transfer with your luxury wedding cars. The luxury vehicle not only adds a touch of elegance and style to your special day but also provides a comfortable and memorable way to visit iconic spots for photo opportunities. Whether you want to stop at historical buildings, picturesque parks, or scenic viewpoints, the luxury wedding cars offer a splendid backdrop for your wedding photos. Just discuss your itinerary with the chauffeur service beforehand to ensure that your route includes all the desired landmarks and that enough time is allocated for each stop. This personalised touch can make your wedding day even more special and unforgettable.
           </p>
         ),
       },
@@ -203,18 +169,7 @@ export const weddingData = {
         title: 'What types of vehicles are recommended for a wedding transfer?',
         desc: (
           <p className="text-[#B2B2B2]">
-            For wedding transfers, selecting the right vehicle can add a touch
-            of elegance and make a memorable impact. Luxury sedans and vintage
-            cars are popular choices, with the Rolls Royce wedding car being one
-            of the most sought-after options. A Rolls Royce offers timeless
-            elegance, opulent comfort, and a classic aesthetic that can
-            complement any wedding theme. Its spacious interior ensures a
-            comfortable ride, and its distinguished presence guarantees stunning
-            photos. For larger wedding parties, limousines or luxury SUVs may be
-            appropriate as they offer more space and can accommodate more
-            guests. Each vehicle type, from classic to contemporary luxury,
-            provides a different style and comfort level to suit various
-            personal preferences and wedding themes.
+            For wedding transfers, selecting the right vehicle can add a touch of elegance and make a memorable impact. Luxury sedans and vintage cars are popular choices, with the Rolls Royce wedding car being one of the most sought-after options. A Rolls Royce offers timeless elegance, opulent comfort, and a classic aesthetic that can complement any wedding theme. Its spacious interior ensures a comfortable ride, and its distinguished presence guarantees stunning photos. For larger wedding parties, limousines or luxury SUVs may be appropriate as they offer more space and can accommodate more guests. Each vehicle type, from classic to contemporary luxury, provides a different style and comfort level to suit various personal preferences and wedding themes.
           </p>
         ),
       },
@@ -227,12 +182,12 @@ export const weddingData = {
         id: 0,
         question:
           "What types of vehicles are available in RolDrive's wedding chauffeur service?",
-        ans: 'RolDrive offers a variety of luxury vehicles including elegant sedans and spacious SUVs for wedding events. We also offer high-end vehicles such as the Rolls Royce, Bentley, and Maybach to make your day one of a kind!',
+        ans: 'RolDrive offers a variety of luxury vehicles including elegant wedding limousine services, sedans and spacious SUVs for wedding events. We also offer high end vehicles such as the Rolls Royce, Bentley and Maybach to make your day one of a kind! ',
       },
       {
         id: 1,
         question:
-          'How far in advance should I book the wedding chauffeur service?',
+          'How far in advance should I book the wedding car service?',
         ans: 'It is recommended to book as early as possible, preferably several months in advance, to ensure the availability of your preferred vehicle during the wedding season.',
       },
       {
@@ -261,7 +216,7 @@ export const weddingData = {
         id: 6,
         question:
           'Is there a minimum rental time required for the wedding chauffeur service?',
-        ans: 'Yes, there is typically a minimum rental period. It’s best to contact our customer support for further details depending on the specifics of your booking.',
+        ans: 'Yes, there is typically a minimum rental period. It’s best advised to contact our customer support for further details depending on the specifics of your booking.',
       },
       {
         id: 7,

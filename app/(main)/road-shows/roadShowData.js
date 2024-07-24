@@ -98,7 +98,7 @@ export const roadShowData = {
     {
       icon: '/rolnew/global/icons/car-line.svg',
       title: 'A Great Fleet',
-      desc: 'RolDrives vast fleet includes an impressive array of luxury vehicles, ranging from sleek sedans and spacious SUVs to elegant limousines, all meticulously maintained for comfort and style.',
+      desc: "RolDrive's vast fleet includes an impressive array of luxury vehicles, ranging from sleek sedans and spacious SUVs to elegant limousines, all meticulously maintained for comfort and style.",
     },
   ],
 
@@ -111,15 +111,11 @@ export const roadShowData = {
         title: 'What are RolDrive’s roadshow transfer coverage zones?',
         desc: (
           <p className="text-[#B2B2B2]">
-            RolDrive provides its roadshow chauffeur service in the following
-            locations. Our professional and discreet chauffeurs will take you to
-            your locations in absolute comfort and style.
-            {' '}
+            RolDrive provides its roadshow chauffeur service in the following locations. Our professional and discreet chauffeurs will take you to your locations in absolute comfort and style.
             <br />
-            {' '}
             <br />
             <strong className="text-[#B2B2B2]">
-              RolDrive’s roadshow chauffeur service covers the following:
+              RolDrive’s roadshow chauffeur service covers the following locations:
             </strong>
             <br />
             <span className="ml-3 text-[#B2B2B2]">
@@ -131,11 +127,11 @@ export const roadShowData = {
             </span>
             <br />
             <span className="ml-3 text-[#B2B2B2]">
-              3. Roadshow transfer from New York
+              3. Roadshow transfer from Paris
             </span>
             <br />
             <span className="ml-3 text-[#B2B2B2]">
-              4. Roadshow transfer from Paris
+              4. Roadshow transfer from New York
             </span>
             <br />
             <span className="ml-3 text-[#B2B2B2]">
@@ -147,11 +143,11 @@ export const roadShowData = {
       },
       {
         title: 'What is a roadshow chauffeur service?',
-        desc: 'RolDrives roadshow chauffeur service caters to corporate clients needing precise, reliable transportation across multiple scheduled stops, typically for business meetings, presentations, or site visits. This service emphasises punctuality, consistency, and high-quality service, ensuring that these individuals can move efficiently and comfortably between venues without the stress of navigating or timing. Chauffeurs are experienced with complex itineraries and are trained to handle the dynamic nature of roadshows, adapting quickly to any schedule changes. RolDrives roadshow service offers a fleet of luxury vehicles, equipped to provide a mobile office environment, enabling productivity en route and maintaining a professional image throughout the journey. This service is ideal for clients who require flawless execution and a high degree of coordination. RolDrive even provides a dedicated event manager to oversee the process and ensure a smooth transition between venues.',
+        desc: "RolDrive's chauffeur car service roadshow caters to corporate clients needing precise, reliable transportation across multiple scheduled stops, typically for business meetings, presentations, or site visits. This service emphasises punctuality, consistency, and high-quality service, ensuring that these individuals can move efficiently and comfortably between venues without the stress of navigating or timing. Chauffeurs are experienced with complex itineraries and are trained to handle the dynamic nature of roadshows, adapting quickly to any schedule changes. RolDrive's roadshow service offers a fleet of luxury vehicles, equipped to provide a mobile office environment, enabling productivity en route and maintaining a professional image throughout the journey. This service is ideal for clients who require flawless execution and a high degree of coordination. RolDrive even provides a dedicated event manager to oversee the process and ensure a smooth transition between venues.",
       },
       {
         title: 'Why hire a roadshow chauffeur service?',
-        desc: 'Hiring a roadshow chauffeur service through RolDrive provides numerous advantages for businesses coordinating multi-stop events. RolDrive ensures precision in scheduling and routing, which is crucial for maintaining tight roadshow itineraries. Our experienced chauffeurs are professionally trained to handle the dynamics of corporate roadshows, offering a discreet and efficient service that aligns with corporate professionalism. RolDrives luxurious and diverse fleet can accommodate any group size or preference, enhancing the comfort and image of the travelling individuals. Furthermore, the reliability and high standards of service help to alleviate the stress of planning and executing complex itineraries, allowing business professionals to focus on their engagements rather than logistics. This seamless integration of transportation ensures that roadshows are conducted smoothly, bolstering the success of business operations.',
+        desc: "Hiring a roadshow chauffeur service through RolDrive provides numerous advantages for businesses coordinating multi-stop events. RolDrive ensures precision in scheduling and routing, which is crucial for maintaining tight roadshow itineraries. Our experienced chauffeurs are professionally trained to handle the dynamics of corporate roadshows, offering a discreet and efficient service that aligns with corporate professionalism. RolDrive's luxurious and diverse fleet can accommodate any group size or preference, enhancing the comfort and image of the travelling individuals. Furthermore, the reliability and high standards of service help to alleviate the stress of planning and executing complex itineraries, allowing business professionals to focus on their engagements rather than logistics. This seamless integration of transportation ensures that roadshows are conducted smoothly, bolstering the success of business operations.",
       },
       {
         title: 'What vehicles are offered for a roadshow chauffeur service?',
