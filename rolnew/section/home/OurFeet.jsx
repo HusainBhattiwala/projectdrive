@@ -77,7 +77,7 @@ import { FleetContext } from 'context/FleetContext';
 //   },
 // ];
 
-function OurFeet({ showBooking }) {
+function OurFeet({ showBooking,pageData }) {
   const { setCarDetails, carCatData, setCarCatData } = useContext(FleetContext);
 
   useEffect(() => {
@@ -95,7 +95,7 @@ function OurFeet({ showBooking }) {
       <Container className='bg-[#11202D] sm:pt-[60px] py-8 text-center'>
         <Title
           subTitle='Our Fleet'
-          mainTitle='Introducing Our Luxury Chauffeur Hire Service Handpicked For Your Comfort'
+          mainTitle={pageData?.fleetData?.title}
         />
         <CarCategory
           categorys={fleetData}

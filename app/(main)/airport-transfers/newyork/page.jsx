@@ -6,6 +6,7 @@ import DownloadOurApp from 'rolnew/section/home/DownloadOurApp';
 import AirportBookingFlow from 'rolnew/comp/AirportBookingFlow';
 import Services from 'rolnew/section/home/Services';
 import ServicesFaq from 'rolnew/comp/ServicesFaq';
+import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
 
 const pageData = {
   banner: {
@@ -19,10 +20,16 @@ const pageData = {
     description:
       'Offering premium airport transfer New York services, we ensure a seamless connection to and from all of New York’s airports. With a fleet of luxury vehicles to take care of all your transportation needs, our professional chauffeur service provides reliable, comfortable and stylish transportation tailored to meet the needs of both business and leisure travellers. ',
   },
+  howitworks: {
+    title: 'Book Your Luxury Airport Transfer New York Chauffeur Experience In Three Simple Steps',
+  },
+  fleetData: {
+    title: 'Introducing Our Airport Transfer In New York Service Handpicked For Your Comfort',
+  },
   servicesData: {
     subTitle: 'More About Airport Transfer New York',
     action: 'Book Now',
-    mainTitle: 'Tailored Chauffeur Services For Your Every Need',
+    mainTitle: 'Tailored New York Airport Transfers For Your Every Need',
     desc: 'Indulge in an unparalleled chauffeur experience with our tailored services designed to meet your unique luxury airport transfer requirements. Whether you need a seamless airport transfer for your corporate travel or special event transfer, our chauffeur services are crafted to upgrade your journey. As among the best airport transfer New York service providers, embark on a journey where every detail is tailored to perfection.',
     cardData: [
       {
@@ -198,11 +205,12 @@ function NewyorkAirportPage() {
     <>
       <Banner pageData={pageData} />
       <AirportBookingFlow pageData={pageData} />
-      <OurFeet showBooking />
+      <OurFeet showBooking pageData={pageData} />
       <Services servicesData={pageData?.servicesData} />
       <Locations />
       <Contact />
       <ServicesFaq faqData={pageData?.faqData} />
+      <ServiceOfferings servicesData={pageData?.offeringData} />
       <DownloadOurApp />
     </>
   );

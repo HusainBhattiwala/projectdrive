@@ -20,10 +20,16 @@ const pageData = {
     description:
       'Offering premium airport transfers London services, we ensure a seamless connection to and from all of London’s airports. With a fleet of luxury vehicles to take care of all your transportation needs, our professional chauffeur service provides reliable, comfortable and stylish transportation tailored to meet the needs of both business and leisure travellers. ',
   },
+  howitworks: {
+    title: 'Book Your Airport Transfers Chauffeur Experience In Three Simple Steps',
+  },
+  fleetData: {
+    title: 'Introducing Our Airport Transfers Service Handpicked For Your Comfort in London',
+  },
   servicesData: {
     subTitle: 'More About Airport Transfers London',
     action: 'Book Now',
-    mainTitle: 'Tailored Chauffeur Services For Your Every Need',
+    mainTitle: 'Tailored Airport Transfers Chauffeur Services For Your Every Need In London',
     desc: 'Indulge in an unparalleled chauffeur experience with our tailored services designed to meet your unique luxury airport transfers London requirements. Whether you need a seamless airport transfer for your corporate travel or special event transfer, our luxury chauffeur services are crafted to upgrade your journey. As among the best airport transfers from London UK service providers, embark on a journey where every detail is tailored to perfection.',
     cardData: [
       {
@@ -206,7 +212,7 @@ function LondonAirportPage() {
     <>
       <Banner pageData={pageData} />
       <AirportBookingFlow pageData={pageData} />
-      <OurFeet showBooking />
+      <OurFeet showBooking pageData={pageData} />
       <Services servicesData={pageData?.servicesData} />
       <Locations />
       <Contact />

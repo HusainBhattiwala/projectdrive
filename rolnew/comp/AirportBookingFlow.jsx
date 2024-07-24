@@ -35,7 +35,7 @@ function AirportBookingFlow({ pageData }) {
       <Container className='bg-[#081017] sm:pb-[100px] pb-8 text-center mx-auto'>
         <Title
           subTitle='How it Works'
-          mainTitle='Book Your Chauffeur Experience in Three Simple Steps'
+          mainTitle={pageData?.howitworks?.title}
         />
         <div className='grid lg:grid-cols-5 sm:grid-cols-11 grid-cols-1 sm:justify-center sm:items-center pt-10 gap-y-4'>
           <div className='lg:col-span-1 sm:col-span-3 col-span-1 flex sm:flex-col flex-row sm:justify-center items-center sm:gap-x-0 gap-x-2'>

@@ -200,7 +200,7 @@ export const eventData = {
         title: 'What is an event transportation service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            RolDrive's transportation for international event service provides high-end, reliable ground transportation solutions tailored for various events such as weddings, corporate gatherings, galas, and conferences. This service ensures that all participants arrive at their destinations comfortably and punctually, reflecting a professional and organised image. RolDrive's fleet includes a wide range of luxury vehicles to suit different group sizes and preferences, each driven by professional chauffeurs who are trained to handle the logistics of event transportation smoothly. By offering flexible scheduling, a dedicated event manager, route optimisation, and attentive customer service, RolDrive ensures that your event transportation is seamless, enhancing the overall experience of your event attendees.
+            RolDrive’s transportation for international event service provides high-end, reliable ground transportation solutions tailored for various events such as weddings, corporate gatherings, galas, and conferences. This service ensures that all participants arrive at their destinations comfortably and punctually, reflecting a professional and organised image. RolDrive’s fleet includes a wide range of luxury vehicles to suit different group sizes and preferences, each driven by professional chauffeurs who are trained to handle the logistics of event transportation smoothly. By offering flexible scheduling, a dedicated event manager, route optimisation, and attentive customer service, RolDrive ensures that your event transportation is seamless, enhancing the overall experience of your event attendees.
           </p>
         ),
       },
@@ -224,7 +224,7 @@ export const eventData = {
   },
 
   faqData: {
-    title: 'Frequently Asked Questions About Event Transportation Service',
+    title: 'Frequently Asked Questions About Event Transportation Services:',
     data: [
       {
         id: 0,

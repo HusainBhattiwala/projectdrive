@@ -13,6 +13,7 @@ import ServicesFaq from "rolnew/comp/ServicesFaq";
 import ServiceOfferings from "rolnew/comp/ServiceOfferings";
 import { airportData } from "./airportData";
 
+
 const airports = [
   "heathrow",
   "gatwick",
@@ -42,7 +43,7 @@ function AirportPage() {
     <>
       <Banner pageData={pageData} />
       <AirportBookingFlow pageData={pageData} />
-      <OurFeet showBooking />
+      <OurFeet showBooking pageData={pageData} />
       <Services servicesData={pageData?.servicesData} />
       <Locations />
       <Contact />

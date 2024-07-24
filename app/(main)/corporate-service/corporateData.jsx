@@ -167,10 +167,10 @@ export const corporateData = {
         ),
       },
       {
-        title: 'How much does a corporate chauffeur transfer cost?',
+        title: 'How much does a corporate event chauffeur hire transfer cost?',
         desc: (
           <p className="text-[#B2B2B2]">
-            The cost of a corporate chauffeur transfer can vary significantly based on several factors, including the type of vehicle selected, the duration of the hire, the distance to be travelled, and any specific requirements unique to the corporate event. For corporate event chauffeur hire, companies might also consider the level of service required, such as the provision of additional amenities or custom requests that can influence the overall price. Typically, services are tailored to meet the specific needs of the event or business, making it essential to consult directly with the service provider for a detailed quote. Companies like RolDrive often provide customised quotations based on the client&apos;s detailed requirements to ensure the service matches the expected standards and logistics of corporate needs. So it&apos;s best to contact RolDrive directly to know how much your corporate transfer will cost.
+            The cost of a corporate chauffeur transfer can vary significantly based on several factors, including the type of vehicle selected, the duration of the hire, the distance to be travelled, and any specific requirements unique to the corporate event. For corporate event chauffeur hire, companies might also consider the level of service required, such as the provision of additional amenities or custom requests that can influence the overall price. Typically, services are tailored to meet the specific needs of the event or business, making it essential to consult directly with the service provider for a detailed quote. Companies like RolDrive often provide customised quotations based on the client’s detailed requirements to ensure the service matches the expected standards and logistics of corporate needs. So it’s best to contact RolDrive directly to know how much your corporate transfer will cost.
           </p>
         ),
       },

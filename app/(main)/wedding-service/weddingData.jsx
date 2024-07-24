@@ -150,15 +150,15 @@ export const weddingData = {
         ),
       },
       {
-        title: 'Why hire a wedding chauffeur service?',
+        title: 'Why hire a Rolls Royce wedding car chauffeur service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            Hiring a wedding chauffeur service, such as a Rolls Royce wedding car, offers numerous benefits that ensure a seamless and memorable wedding day. One critical necessity is punctuality; a professional chauffeur ensures the bride, groom, and wedding party arrive on time to various venues, alleviating stress and maintaining the day’s schedule. Additionally, considering that the bride and groom often wear elaborate and heavy attire, having a chauffeur assists with navigating in and out of the vehicle comfortably and elegantly. Furthermore, a wedding chauffeur helps manage the day’s logistics, from coordinating travel between locations to handling unexpected delays, ensuring everything proceeds smoothly. Opting for a luxurious Rolls Royce as the wedding car adds a touch of elegance and makes a spectacular statement on your special day.
+            Hiring a wedding chauffeur service, such as a Rolls Royce wedding car, offers numerous benefits that ensure a seamless and memorable wedding day. One critical necessity is punctuality; a professional chauffeur ensures the bride, groom, and wedding party arrive on time to various venues, alleviating stress and maintaining the day’s schedule whilst looking good. And a Rolls Royce chauffeur service does just that. Additionally, considering that the bride and groom often wear elaborate and heavy attire, having a chauffeur assists with navigating in and out of the vehicle comfortably and elegantly. Furthermore, RolDrive provides a dedicated event manager who helps manage the day’s logistics, from coordinating travel between locations to handling unexpected delays, ensuring everything proceeds smoothly. Opting for a luxurious Rolls Royce as the wedding car adds a touch of elegance and makes a spectacular statement on your special day.
           </p>
         ),
       },
       {
-        title: 'Can I explore landmarks when on a wedding transfer?',
+        title: 'Can I explore landmarks in luxury wedding cars during a wedding transfer?',
         desc: (
           <p className="text-[#B2B2B2]">
             Absolutely, you can explore landmarks during a wedding transfer with your luxury wedding cars. The luxury vehicle not only adds a touch of elegance and style to your special day but also provides a comfortable and memorable way to visit iconic spots for photo opportunities. Whether you want to stop at historical buildings, picturesque parks, or scenic viewpoints, the luxury wedding cars offer a splendid backdrop for your wedding photos. Just discuss your itinerary with the chauffeur service beforehand to ensure that your route includes all the desired landmarks and that enough time is allocated for each stop. This personalised touch can make your wedding day even more special and unforgettable.

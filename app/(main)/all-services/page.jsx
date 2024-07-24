@@ -1,7 +1,6 @@
 'use client';
 
 import CategoriesComponent from 'components/AllCategories';
-import FindMoreComponent from 'components/FindMore';
 import Container from 'rolnew/comp/Container';
 import TopDestination from 'rolnew/comp/TopDestination';
 import ClientTestimonial from 'rolnew/section/home/ClientTestimonial';
@@ -11,8 +10,8 @@ import Contact from 'rolnew/comp/Contact';
 import Button from 'rolnew/ui/Button';
 import { ModalContext } from 'context/ModalContext';
 import { useContext } from 'react';
-import { allServicesData } from './allServicesData';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import { allServicesData } from './allServicesData';
 
 export default function Home() {
   const { openModal } = useContext(ModalContext);
@@ -157,7 +156,7 @@ export default function Home() {
         data={allServicesData.destinationsData?.tokyo}
         bg="bg-[#223544]"
       />
-      <ServiceOfferings servicesData={allServicesData.offeringData}/>
+      <ServiceOfferings servicesData={allServicesData.offeringData} />
     </>
   );
 }
