@@ -13,7 +13,6 @@ import ServicesFaq from "rolnew/comp/ServicesFaq";
 import ServiceOfferings from "rolnew/comp/ServiceOfferings";
 import { airportData } from "./airportData";
 
-
 const airports = [
   "heathrow",
   "gatwick",

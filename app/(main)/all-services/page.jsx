@@ -1,3 +1,5 @@
+'use client';
+
 import CategoriesComponent from 'components/AllCategories';
 import FindMoreComponent from 'components/FindMore';
 import Container from 'rolnew/comp/Container';
@@ -6,9 +8,13 @@ import ClientTestimonial from 'rolnew/section/home/ClientTestimonial';
 import OurFeet from 'rolnew/section/home/OurFeet';
 import TrustedPartners from 'rolnew/comp/TrustedPartners';
 import Contact from 'rolnew/comp/Contact';
+import Button from 'rolnew/ui/Button';
+import { ModalContext } from 'context/ModalContext';
+import { useContext } from 'react';
 import { allServicesData } from './allServicesData';
 
 export default function Home() {
+  const { openModal } = useContext(ModalContext);
   return (
     <>
       <Container className="bg-[#223544] sm:py-8 py-6 text-center mt-16">
@@ -23,12 +29,10 @@ export default function Home() {
         <p className="py-6">
           Your exclusive and dependable chauffeur service indulgence
         </p>
-        <button
-          type="button"
-          className="sm:w-auto w-full bg-primary rounded-md px-12 py-1.5 sm:-mb-10 font-bold text-lg"
-        >
+
+        <Button onClick={() => openModal()} className="!px-16 py-2">
           Book Now
-        </button>
+        </Button>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 md:-mt-5 mt-5">
           <div className="grid gap-y-2">
@@ -126,15 +130,32 @@ export default function Home() {
         </div>
       </Container>
       <OurFeet />
-      <TrustedPartners trustedPartnersData={allServicesData.trustedPartnersData} />
+      <TrustedPartners
+        trustedPartnersData={allServicesData.trustedPartnersData}
+      />
       <ClientTestimonial />
       <CategoriesComponent categoriesData={allServicesData.categoriesData} />
-      <TopDestination data={allServicesData.destinationsData?.london} bg="bg-[#11202D]" />
-      <TopDestination data={allServicesData.destinationsData?.paris} bg="bg-[#223544]" />
+      <TopDestination
+        data={allServicesData.destinationsData?.london}
+        bg="bg-[#11202D]"
+      />
+      <TopDestination
+        data={allServicesData.destinationsData?.paris}
+        bg="bg-[#223544]"
+      />
       <Contact />
-      <TopDestination data={allServicesData.destinationsData?.newyork} bg="bg-[#223544]" />
-      <TopDestination data={allServicesData.destinationsData?.dubai} bg="bg-[#11202D]" />
-      <TopDestination data={allServicesData.destinationsData?.tokyo} bg="bg-[#223544]" />
+      <TopDestination
+        data={allServicesData.destinationsData?.newyork}
+        bg="bg-[#223544]"
+      />
+      <TopDestination
+        data={allServicesData.destinationsData?.dubai}
+        bg="bg-[#11202D]"
+      />
+      <TopDestination
+        data={allServicesData.destinationsData?.tokyo}
+        bg="bg-[#223544]"
+      />
       <FindMoreComponent findMoreData={allServicesData.findMoreData} />
     </>
   );
