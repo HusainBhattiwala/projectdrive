@@ -641,7 +641,7 @@ function BookingEngine3({ setFocus, width, height }) {
         <div className="flex gap-x-4">
           <div className="relative sm:w-2/4 w-full" ref={userDatePicker}>
             <Input
-              leadingIcon="/rolnew/home/icon.png"
+              leadingIcon="/rolnew/home/calender_icon.png"
               label="Date"
               placeholder="Pick up date"
               className="cursor-pointer"

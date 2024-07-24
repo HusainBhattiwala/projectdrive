@@ -144,7 +144,7 @@ export const sightseeingData = {
         title: 'Why hire a city sightseeing chauffeur service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            Hiring a city sightseeing chauffeur service offers a luxurious and personalized way to explore the best sightseeing places in the world. With a professional chauffeur at the helm, you can enjoy a stress-free journey through iconic landscapes and historical landmarks, without worrying about navigation or parking. Additionally, travelling in an elegant sedan not only enhances your comfort during the tour but also adds a touch of sophistication to your travel photos, making them look even more impressive. This service allows you to tailor your itinerary to suit your interests, ensuring that you don't miss any must-see attractions, all while experiencing the ultimate in convenience and style.
+            Hiring a city sightseeing chauffeur service offers a luxurious and personalized way to explore the best sightseeing places in the world. With a professional chauffeur at the helm, you can enjoy a stress-free journey through iconic landscapes and historical landmarks, without worrying about navigation or parking. Additionally, travelling in an elegant sedan not only enhances your comfort during the tour but also adds a touch of sophistication to your travel photos, making them look even more impressive. This service allows you to tailor your itinerary to suit your interests, ensuring that you don&apos;t miss any must-see attractions, all while experiencing the ultimate in convenience and style.
           </p>
         ),
       },
