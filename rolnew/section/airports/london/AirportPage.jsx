@@ -15,12 +15,12 @@ import { airportData } from "./airportData";
 
 
 const airports = [
-  "heathrow",
-  "gatwick",
-  "londoncity",
-  "londonsouthend",
-  "londonstansted",
-  "luton",
+  {"name" : "heathrow", "value" : "airport-transfer-heathrow"},
+  {"name" : "gatwick", "value" : "airport-transfer-gatwick"},
+  {"name" : "london-city", "value" : "airport-transfer-london-city"},
+  {"name" : "londonsouthend", "value" : "airport-transfer-london-southend"},
+  {"name" : "londonstansted", "value" : "airport-transfer-london-stansted"},
+  {"name" : "luton", "value" : "airport-transfer-luton"},
 ];
 
 function AirportPage() {
@@ -31,11 +31,13 @@ function AirportPage() {
   useEffect(() => {
     const urls = pathName.split("/");
     const url = urls[urls.length - 1];
-    if (!airports.includes(url)) {
+    const airport = airports.find(airport => airport.value === url);
+
+    if (!airport) {
       router.push("/404");
     } else {
       console.log(airportData[url]);
-      setPageData(airportData[url]);
+      setPageData(airportData[airport.name]);
     }
     console.log(pageData);
   }, [pathName, router]);

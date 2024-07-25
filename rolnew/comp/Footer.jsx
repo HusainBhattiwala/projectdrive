@@ -95,25 +95,25 @@ function Footer() {
               <Link href="/fleet" className="text-left text-base font-normal">
                 Fleet
               </Link>
-              <Link href="#" className="text-base font-light pop">
+              <Link href="/fleet" className="text-base font-light pop">
                 Business
               </Link>
-              <Link href="#" className="text-base font-light pop">
+              <Link href="/fleet" className="text-base font-light pop">
                 First
               </Link>
-              <Link href="#" className="text-base font-light pop">
+              <Link href="/fleet" className="text-base font-light pop">
                 Luxury
               </Link>
-              <Link href="#" className="text-base font-light pop">
+              <Link href="/fleet" className="text-base font-light pop">
                 Electric
               </Link>
-              <Link href="#" className="text-base font-light pop">
+              <Link href="/fleet" className="text-base font-light pop">
                 SUV
               </Link>
-              <Link href="#" className="text-base font-light pop">
+              <Link href="/fleet" className="text-base font-light pop">
                 MVP
               </Link>
-              <Link href="#" className="text-base font-light pop">
+              <Link href="/fleet" className="text-base font-light pop">
                 Sprinter
               </Link>
             </div>
@@ -134,20 +134,20 @@ function Footer() {
                 Road Shows
               </Link>
               <Link
-                href="/intercity-transfers"
+                href="/intercity-rides"
                 className="text-base font-light pop"
               >
                 Intercity Transfers
               </Link>
               <Link
-                href="/event-transfers"
+                href="/event-transportation-services"
                 className="text-base font-light pop"
               >
                 Event Transfers
               </Link>
-              <Link href="/all-services" className="text-base font-light pop">
+              {/* <Link href="/all-services" className="text-base font-light pop">
                 All Services
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="flex lg:gap-x-[85px] sm:gap-x-[30px] gap-x-6 sm:my-0 py-6 sm:border-none border-t border-[#FFFFFF] border-opacity-40">
@@ -155,19 +155,19 @@ function Footer() {
               <h4 className="text-left text-base font-normal whitespace-nowrap">
                 Top Cities
               </h4>
-              <Link href="/cities/london" className="text-base font-light pop">
+              <Link href="/chauffeur-service-in-london" className="text-base font-light pop">
                 London
               </Link>
-              <Link href="/cities/paris" className="text-base font-light pop">
+              <Link href="/chauffeur-service-in-paris" className="text-base font-light pop">
                 Paris
               </Link>
-              <Link href="/cities/newyork" className="text-base font-light pop">
+              <Link href="/chauffeur-service-in-new-york" className="text-base font-light pop">
                 New York
               </Link>
-              <Link href="/cities/dubai" className="text-base font-light pop">
+              <Link href="/chauffeur-service-in-dubai" className="text-base font-light pop">
                 Dubai
               </Link>
-              <Link href="/cities/tokyo" className="text-base font-light pop">
+              <Link href="/chauffeur-service-in-tokyo" className="text-base font-light pop">
                 Tokyo
               </Link>
             </div>

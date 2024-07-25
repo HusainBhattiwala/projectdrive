@@ -16,7 +16,15 @@ import Landmark from "rolnew/section/cities/LandMark";
 import { cityData } from "./cityData";
 import BookModal from "rolnew/comp/BookModal";
 
-const cities = ["london", "dubai", "newyork", "paris", "tokyo"];
+// const cities = ["chauffeur-service-in-london", "chauffeur-service-in-dubai", "chauffeur-service-in-new-york", "chauffeur-service-in-paris", "chauffeur-service-in-tokyo"];
+
+const cities = [
+  {"name" : "london", "value" : "chauffeur-service-in-london"},
+  {"name" : "dubai", "value" : "chauffeur-service-in-dubai"},
+  {"name" : "newyork", "value" : "chauffeur-service-in-new-york"},
+  {"name" : "paris", "value" : "chauffeur-service-in-paris"},
+  {"name" : "tokyo", "value" : "chauffeur-service-in-tokyo"},
+];
 
 function CityPage() {
   const [pageData, setPageData] = useState({});
@@ -26,11 +34,14 @@ function CityPage() {
   useEffect(() => {
     const urls = pathName.split("/");
     const url = urls[urls.length - 1];
-    if (!cities.includes(url)) {
+    const city = cities.find(city => city.value === url);
+
+    if (!city) {
       router.push("/404");
     } else {
+
       console.log(cityData[url]);
-      setPageData(cityData[url]);
+      setPageData(cityData[city.name]);
     }
   }, [pathName, router]);
   return (
@@ -48,9 +59,9 @@ function CityPage() {
       {/* <Airports airportsData={pageData?.airportsData} show={pageData?.airportsData?.show}/> */}
       <Locations showPadding />
       <Contact />
-      <Destinations destinationData={pageData.destinationData?.restaurants} />
+      <Destinations destinationData={pageData?.destinationData?.restaurants} />
       <DownloadOurApp />
-      <Destinations destinationData={pageData.destinationData?.hotel} />
+      <Destinations destinationData={pageData?.destinationData?.hotel} />
       <ServicesFaq faqData={pageData?.faqData} />
       {/* <ChauffeurServiceDescription
         ChauffeurServiceDescription={pageData.ChauffeurServiceDescription}

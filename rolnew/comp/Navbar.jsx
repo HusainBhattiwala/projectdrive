@@ -15,15 +15,12 @@ const navLinks = [
     label: "Services",
     subLinks: [
       { route: "/road-shows", label: "Roadshow Transfers" },
-      { route: "/intercity-transfers", label: "Intercity Transfers" },
-      { route: "/event-transfers", label: "Event Transfers" },
-      { route: "/wedding-service", label: "Wedding Transfers" },
-      { route: "/corporate-service", label: "Corporate Transfers" },
-      { route: "/cities-sightseeing", label: "Cities Sightseeing" },
-      {
-        route: "/private-jet-chauffeur",
-        label: "Private Jet Chauffeur",
-      },
+      { route: "/intercity-rides", label: "Intercity Transfers" },
+      { route: "/event-transportation-services", label: "Event Transfers" },
+      { route: "/wedding-chauffeur-service", label: "Wedding Transfers" },
+      { route: "/corporate-chauffeur-service-london", label: "Corporate Transfers" },
+      { route: "/sightseening-chauffeur-service", label: "Cities Sightseeing" },
+      { route: "/private-jet-chauffeur-service", label: "Private Jet Chauffeur",},
     ],
   },
   {
@@ -35,11 +32,11 @@ const navLinks = [
     route: "#",
     label: "Cities",
     subLinks: [
-      { route: "/cities/london", label: "London" },
-      { route: "/cities/dubai", label: "Dubai" },
-      { route: "/cities/newyork", label: "New York" },
-      { route: "/cities/paris", label: "Paris" },
-      { route: "/cities/tokyo", label: "Tokyo" },
+      { route: "/chauffeur-service-in-london", label: "London" },
+      { route: "/chauffeur-service-in-dubai", label: "Dubai" },
+      { route: "/chauffeur-service-in-new-york", label: "New York" },
+      { route: "/chauffeur-service-in-paris", label: "Paris" },
+      { route: "/chauffeur-service-in-tokyo", label: "Tokyo" },
     ],
   },
   {
@@ -47,34 +44,34 @@ const navLinks = [
     label: "Airport Transfers",
     subLinks: [
       {
-        route: "/airport-transfers/london",
+        route: "/airport-transfers/airport-transfer-london",
         label: "London",
         subLinks: [
           {
-            route: "/airport-transfers/london/heathrow",
+            route: "/airport-transfers/airport-transfer-london/airport-transfer-heathrow",
             label: "Heathrow Airport",
           },
           {
-            route: "/airport-transfers/london/gatwick",
+            route: "/airport-transfers/airport-transfer-london/airport-transfer-gatwick",
             label: "Gatwick Airport",
           },
           {
-            route: "/airport-transfers/london/londoncity",
+            route: "/airport-transfers/airport-transfer-london/airport-transfer-london-city",
             label: "London City Airport",
           },
           {
-            route: "/airport-transfers/london/londonsouthend",
+            route: "/airport-transfers/airport-transfer-london/airport-transfer-london-southend",
             label: "London Southend Airport",
           },
           {
-            route: "/airport-transfers/london/londonstansted",
+            route: "/airport-transfers/airport-transfer-london/airport-transfer-london-stansted",
             label: "London Stansted Airport",
           },
-          { route: "/airport-transfers/london/luton", label: "Luton Airport" },
+          { route: "/airport-transfers/airport-transfer-london/airport-transfer-luton", label: "Luton Airport" },
         ],
       },
-      { route: "/airport-transfers/dubai", label: "Dubai" },
-      { route: "/airport-transfers/newyork", label: "New York" },
+      { route: "/airport-transfers/airport-transfer-dubai", label: "Dubai" },
+      { route: "/airport-transfers/airport-transfer-new-york", label: "New York" },
       // { route: "/rolnew/airport-transfers/paris", label: "Paris Airport" },
       // { route: "/rolnew/airport-transfers/tokyo", label: "Tokyo Airport" },
     ],
