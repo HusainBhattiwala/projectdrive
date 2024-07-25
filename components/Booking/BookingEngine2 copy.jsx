@@ -508,7 +508,6 @@ function BookingEngine() {
                           removeDateTime();
                           removeReturnDateTime();
                         }}
-                        className="text-gray-50"
                         defaultValue={userPickupLocation?.address}
                         locationError={() => {}}
                         errorLabel={() => {}}

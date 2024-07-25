@@ -106,7 +106,7 @@ export function Nav({ showSideBar, setShowSideBar }) {
           </div>
         </div>
       </nav>
-      <SideMenu setShowSideBar={setShowSideBar} showSideBar={showSideBar} showNewBooking={showNewBooking} setShowNewBooking={setShowNewBooking} showViewBooking={showViewBooking} setShowViewBooking={setShowViewBooking} />
+      <SideMenu className="text-gray-50" setShowSideBar={setShowSideBar} showSideBar={showSideBar} showNewBooking={showNewBooking} setShowNewBooking={setShowNewBooking} showViewBooking={showViewBooking} setShowViewBooking={setShowViewBooking} />
     </>
   );
 }

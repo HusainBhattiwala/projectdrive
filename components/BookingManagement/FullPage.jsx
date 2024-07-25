@@ -427,7 +427,7 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
             </div>
           )}
           {showNewBooking && (
-            <div className="relative px-6 py-4 pb-12 bg-primary bg-opacity-20">
+            <div className="relative px-6 py-4 pb-12 bg-[#1e1d1d] bg-opacity-20">
               <div
                 className="absolute top-0 z-30 cursor-pointer right-3"
                 onClick={removeQueryParam}
