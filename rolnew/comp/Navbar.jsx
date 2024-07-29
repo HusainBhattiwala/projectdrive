@@ -20,14 +20,14 @@ const navLinks = [
       { route: "/wedding-chauffeur-service", label: "Wedding Transfers" },
       { route: "/corporate-chauffeur-service-london", label: "Corporate Transfers" },
       { route: "/sightseening-chauffeur-service", label: "Cities Sightseeing" },
-      { route: "/private-jet-chauffeur-service", label: "Private Jet Chauffeur",},
+      { route: "/private-jet-chauffeur-service", label: "Private Jet Chauffeur", },
     ],
   },
   {
     route: "/fleet",
     label: "Fleet",
   },
-  
+
   {
     route: "#",
     label: "Cities",
@@ -111,6 +111,14 @@ export default function Navbar() {
     }
   };
 
+  const toggleSubDropdown = (index) => {
+    if (openSubDropdownIndex === index) {
+      setOpenSubDropdownIndex(null);
+    } else {
+      setOpenSubDropdownIndex(index);
+    }
+  };
+
   const closeAll = () => {
     setIsSidebarOpen(false);
     setOpenDropdownIndex(null);
@@ -172,9 +180,8 @@ export default function Navbar() {
                     <>
                       <Link
                         href={item.route}
-                        className={`text-white ${
-                          pathname === item.route ? "font-normal" : ""
-                        } text-sm font-medium px-2 whitespace-nowrap hover:bg-[rgba(255,255,255,0.2)] hover:rounded-md`}
+                        className={`text-white ${pathname === item.route ? "font-normal" : ""
+                          } text-sm font-medium px-2 whitespace-nowrap hover:bg-[rgba(255,255,255,0.2)] hover:rounded-md`}
                         onClick={closeAll}
                       >
                         {item.label}
@@ -230,9 +237,8 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={item.route}
-                      className={`text-white ${
-                        pathname === item.route ? "font-normal" : ""
-                      } text-sm hover:bg-[rgb(255,255,255)]/20 hover:rounded-md underline-offset-2 font-medium px-2 whitespace-nowrap pop`}
+                      className={`text-white ${pathname === item.route ? "font-normal" : ""
+                        } text-sm hover:bg-[rgb(255,255,255)]/20 hover:rounded-md underline-offset-2 font-medium px-2 whitespace-nowrap pop`}
                       onClick={closeAll}
                     >
                       {item.label}
@@ -322,34 +328,55 @@ export default function Navbar() {
               {navLinks.map((item, index) => (
                 <div key={item.route}>
                   <div
-                    className={`${
-                      pathname === item.route ? "font-bold" : ""
-                    } hover:bg-[rgb(255,255,255)]/20 hover:rounded-md px-3 py-2 text-[#E1E1E1] text-sm leading-5 cursor-pointer`}
-                    role="button"
-                    onClick={
-                      item.subLinks
-                        ? () => toggleDropdown(index)
-                        : () => setIsSidebarOpen(false)
-                    }
+                    className={`${pathname === item.route ? "font-bold" : ""
+                      } hover:bg-[rgb(255,255,255)]/20 hover:rounded-md px-3 py-2 text-[#E1E1E1] text-sm leading-5 cursor-pointer flex justify-between items-center`}
                   >
-                    <Link href={item.route} className="block w-full h-full">
+                    <Link href={item.route} className="block w-full h-full" onClick={() => setIsSidebarOpen(false)}>
                       {item.label}
                     </Link>
+                    {item.subLinks && (
+                      <img
+                        alt='arrow-down'
+                        className={`w-6 h-6 transition-transform cursor-pointer ${openDropdownIndex === index ? 'transform rotate-180' : ''}`}
+                        src='/rolnew/global/icons/arrow-down.svg'
+                        onClick={() => toggleDropdown(index)}
+                      />
+                    )}
                   </div>
-                  {item.subLinks && openDropdownIndex === index && (
+                  {item?.subLinks && openDropdownIndex === index && (
                     <div className="ml-4 space-y-1 flex flex-col mt-2 p-2 rounded">
-                      {item.subLinks.map((subLink) => (
-                        <Link
-                          key={subLink.route}
-                          className="text-[#E1E1E1] hover:text-[#223544] w-[176px] h-[36px] text-sm font-bold leading-5 text-left items-center block p-2 rounded-md hover:bg-[rgb(229,234,250)]/100"
-                          href={subLink.route}
-                          onClick={() => {
-                            setIsSidebarOpen(false);
-                            setOpenDropdownIndex(null);
-                          }}
-                        >
-                          {subLink.label}
-                        </Link>
+                      {item.subLinks.map((subLink, subIndex) => (
+                        <div key={subLink.route}>
+                          <div
+                            className="flex justify-between text-[#E1E1E1] hover:text-[#223544] w-[176px] h-[36px] text-sm font-bold leading-5 text-left items-center p-2 rounded-md hover:bg-[rgb(229,234,250)]/100"
+                          >
+                            <Link href={subLink.route} className="block w-full h-full" onClick={() => setIsSidebarOpen(false)}>
+                              {subLink.label}
+                            </Link>
+                            {subLink.subLinks && (
+                              <img
+                                alt='arrow-down'
+                                className={`w-6 h-6 transition-transform cursor-pointer ${openSubDropdownIndex === subIndex ? 'transform rotate-180' : ''}`}
+                                src='/rolnew/global/icons/arrow-down.svg'
+                                onClick={() => toggleSubDropdown(subIndex)}
+                              />
+                            )}
+                          </div>
+                          {openSubDropdownIndex === subIndex && subLink.subLinks && (
+                            <div className="ml-4 space-y-1 flex flex-col mt-2 p-2 rounded">
+                              {subLink.subLinks.map((nestedSubLink) => (
+                                <Link
+                                  key={nestedSubLink.route}
+                                  className="text-[#E1E1E1] hover:text-[#223544] w-[176px] h-[36px] text-sm font-bold leading-5 text-left items-center block p-2 rounded-md hover:bg-[rgb(229,234,250)]/100"
+                                  href={nestedSubLink.route}
+                                  onClick={() => setIsSidebarOpen(false)}
+                                >
+                                  {nestedSubLink.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </div>
                   )}

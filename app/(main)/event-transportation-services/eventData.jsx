@@ -33,13 +33,13 @@ export const eventData = {
   ],
 
   topPicksData: {
-    title: 'Events Transfers',
+    title: 'Event Transportation',
     showAddress: false,
     search: {
       dropdown1: 'Choose Your City',
       dropdown2: 'Enter Event Name',
     },
-    desc: 'Our event transportation services offer reliable and stylish solutions for any occasion, ensuring guests arrive in comfort and on time. Catering to both corporate events and private gatherings, our fleet includes luxury vehicles that promise an impressive arrival and a smooth ride, enhancing any event experience. We provide our event transportation services on a global scale which includes our event <a href="">chauffeur service in London</a>',
+    desc: 'Our event transportation services offer reliable and stylish solutions for any occasion, ensuring guests arrive in comfort and on time. Catering to both corporate events and private gatherings, our fleet includes luxury vehicles that promise an impressive arrival and a smooth ride, enhancing any event experience. We provide our event transportation services on a global scale which includes our event chauffeur service in London.',
     list: [
       {
         id: 1,
@@ -166,15 +166,9 @@ export const eventData = {
       {
         title: 'What are RolDrive’s event transportation services coverage zones?',
         desc: (
-          <p className="text-[#B2B2B2]">RolDrive provides its event transportation service in the following locations. Our professional and discreet chauffeurs will take you to your event in absolute comfort and style. </p>
-        ),
-      },
-      {
-        title:
-          'RolDrive’s event transportation chauffeur service covers the following locations:',
-        desc: (
-          <p className="text-[#B2B2B2]">
-            <span className="ml-3 text-[#B2B2B2]">
+          <p className="text-[#B2B2B2]">RolDrive provides its event transportation service in the following locations. Our professional and discreet chauffeurs will take you to your event in absolute comfort and style. <br /> <br />
+          <strong className="text-[#B2B2B2]">RolDrive’s event transportation chauffeur service covers the following locations:</strong> <br /> <br />
+          <span className="ml-3 text-[#B2B2B2]">
               1. Event transportation services London
             </span>
             <br />
@@ -193,14 +187,17 @@ export const eventData = {
             <span className="ml-3 text-[#B2B2B2]">
               5. Event transportation services Tokyo
             </span>
-          </p>
+          
+          
+          </p>  
         ),
       },
+      
       {
         title: 'What is an event transportation service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            RolDrive’s transportation for international event service provides high-end, reliable ground transportation solutions tailored for various events such as weddings, corporate gatherings, galas, and conferences. This service ensures that all participants arrive at their destinations comfortably and punctually, reflecting a professional and organised image. RolDrive’s fleet includes a wide range of luxury vehicles to suit different group sizes and preferences, each driven by professional chauffeurs who are trained to handle the logistics of event transportation smoothly. By offering flexible scheduling, a dedicated event manager, route optimisation, and attentive customer service, RolDrive ensures that your event transportation is seamless, enhancing the overall experience of your event attendees.
+            RolDrive's transportation for international event service provides high-end, reliable ground transportation solutions tailored for various events such as weddings, corporate gatherings, galas, and conferences. This service ensures that all participants arrive at their destinations comfortably and punctually, reflecting a professional and organised image. RolDrive's fleet includes a wide range of luxury vehicles to suit different group sizes and preferences, each driven by professional chauffeurs who are trained to handle the logistics of event transportation smoothly. By offering flexible scheduling, a dedicated event manager, route optimisation, and attentive customer service, RolDrive ensures that your event transportation is seamless, enhancing the overall experience of your event attendees.
           </p>
         ),
       },
@@ -216,7 +213,7 @@ export const eventData = {
         title: 'What vehicles are offered for an event transportation service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            RolDrive offers a diverse range of vehicles for its event transport hire services to cater to various preferences and needs. Our  fleet includes luxury sedans like the Mercedes Benz S Class for executives or small groups seeking elegance and comfort. For larger groups, SUVs such as the Range Rover provide ample space and luxury. For weddings or special celebrations, limousines are available, adding a touch of glamour and sophistication. Additionally, for events requiring transportation of larger groups, RolDrive provides luxury minibuses and coaches such as the Mercedes Benz V Class that ensure comfort while maintaining a high standard of class and efficiency, making them suitable for corporate events, large family gatherings, or group tours. Each vehicle type is selected to offer reliability, style, and comfort to enhance the experience of event attendees. We can also provide vehicles like an event limousine transportation should you need it.
+            RolDrive offers a diverse range of vehicles for its event transport hire services to cater to various preferences and needs. Our fleet includes luxury sedans like the Mercedes Benz S Class for executives or small groups seeking elegance and comfort. For larger groups, SUVs such as the Range Rover provide ample space and luxury. For weddings or special celebrations, limousines are available, adding a touch of glamour and sophistication. Additionally, for events requiring transportation of larger groups, RolDrive provides luxury minibuses and coaches such as the Mercedes Benz V Class that ensure comfort while maintaining a high standard of class and efficiency, making them suitable for corporate events, large family gatherings, or group tours. Each vehicle type is selected to offer reliability, style, and comfort to enhance the experience of event attendees. We can also provide vehicles like an event limousine transportation should you need it.
           </p>
         ),
       },

@@ -100,17 +100,17 @@ function ServicesBanner({
           <div className='animate-bounce'>
             <img
               alt='arrow-down'
-              className='w-8 h-8'
+              className='w-8 h-8 sm:w-8 sm:h-8 sm:mt-4'
               src='/rolnew/global/icons/arrow-down.svg'
             />
             <img
               alt='arrow-down'
-              className='w-8 h-8 -mt-5'
+              className='w-8 h-8 -mt-10 sm:w-8 sm:h-8 sm:-mt-5'
               src='/rolnew/global/icons/arrow-down.svg'
             />
             <img
               alt='arrow-down'
-              className='w-8 h-8 -mt-5'
+              className='w-8 h-8 -mt-10 sm:w-8 sm:h-8 sm:-mt-5'
               src='/rolnew/global/icons/arrow-down.svg'
             />
           </div>

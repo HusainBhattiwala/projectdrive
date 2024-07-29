@@ -140,7 +140,7 @@ export const fleetData = [
       {
         name: 'Sprinter 19 seater',
         desc: 'The Mercedes 19 seater offered by RolDrive is an excellent choice for group travel. With its spacious interior and seating capacity for up to 19 passengers, it provides ample room for everyone to travel comfortably. The vehicle is equipped with comfortable seating, climate control, and modern amenities to enhance the travel experience. The Mercedes 19 seater combines luxury and functionality, making it an ideal option for corporate events, team outings, or group transfers. With its superior design and reliable performance, this vehicle ensures a smooth and enjoyable journey for larger groups.',
-        img: '/rolnew/fleet/sprinter class/spr3.png',
+        img: '/rolnew/fleet/sprinter class/spr4.png',
       },
     ],
   },

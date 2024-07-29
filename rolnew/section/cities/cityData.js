@@ -62,6 +62,7 @@ export const cityData = {
           "A historic castle located in central London, known for its dark past, crown jewels, and royal menagerie.",
       },
     ],
+
     touristAttraction: {
       title: "Tourist Attraction",
       subTitle: "Hidden Gems",
@@ -221,7 +222,9 @@ export const cityData = {
           id: 8,
           question:
             "What are the best ways to get around London using taxi alternatives?",
-          ans: "Navigating London efficiently involves using the Tube for its extensive network, and buses for scenic routes. But, for personalized travel, consider RolDrive's car hire London by the hour which acts as a taxi alternative, offering superior luxury and convenience. Whether for airport transfers, corporate or event transfers or city tours, RolDrive ensures a comfortable and stylish experience tailored to your schedule. Also acting as the perfect backdrop to your memories.",
+          ans: (
+            <p>Navigating London efficiently involves using the Tube for its extensive network, and buses for scenic routes. But, for personalized travel, consider RolDrive's car hire London by the hour which acts as a <a href="/contact-us" className="text-blue-500">taxi alternative,</a> offering superior luxury and convenience. Whether for airport transfers, corporate or event transfers or city tours, RolDrive ensures a comfortable and stylish experience tailored to your schedule. Also acting as the perfect backdrop to your memories.</p>
+          ),
         },
         {
           id: 9,
@@ -231,6 +234,55 @@ export const cityData = {
         },
       ],
     },
+
+    offeringData: {
+      heading: {
+        mainTitle: 'RolDrive Chauffeur Service in London',
+      },
+      data: [
+        {
+          title: 'What types of vehicles are commonly offered by RolDrive’s chauffeur service in London?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Chauffeur services in London commonly offer a diverse range of vehicles to cater to various needs and preferences. RolDrive's chauffeur service in London provides an extensive fleet, starting with the elegant Mercedes Benz E Class, ideal for business travel and city tours. For those seeking ultimate luxury, the Rolls Royce Phantom is the top of opulence and comfort. Additionally, RolDrive's fleet includes options like the spacious Mercedes V Class for group travel and the sophisticated Bentley Mulsanne for special occasions. To learn more about the vehicles offered in London, check out our <a href="/fleet" className="text-blue-500">fleet</a> section.
+            </p>
+          ),
+        },
+        {
+          title: 'Are there any chauffeur services in London that specialise in airport transfers?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Yes, RolDrive's chauffeur service in London specialises in airport transfers, offering seamless and reliable transportation to and from all major airports. To ensure the availability of your preferred vehicle, we recommend booking as soon as you receive your tickets. Our professional chauffeurs provide a stress-free experience, tracking your flight to guarantee timely arrivals and pickups. Whether you're heading to the airport or arriving in London, RolDrive ensures a comfortable, punctual, and luxurious journey. Trust us to handle your airport transfers with the utmost care and professionalism. <a href="/" className="text-blue-500">Book your vehicle</a> now and enjoy a superior travel experience.
+            </p>
+          ),
+        },
+        {
+          title: 'What are the average costs of hiring a London chauffeur service?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              The average costs of hiring a London chauffeur service can vary based on several factors, including the type of vehicle, duration of hire, and specific requirements. With RolDrive's London chauffeur service, you can expect competitive rates for luxury transportation. To get an accurate estimate tailored to your needs, we recommend checking through our booking engine or <a href="/contact-us" className="text-blue-500">contacting us directly</a> for a free quote. Our team is always ready to provide you with detailed information and transparent pricing that helps you choose the best option for your travel requirements. Experience the comfort and convenience of RolDrive’s premium chauffeur services in London.
+            </p>
+          ),
+        },
+        {
+          title: 'Can luxury chauffeur services in London such as RolDrive be booked for special events such as weddings or corporate functions?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Yes, RolDrive's luxury chauffeur services in London can be booked for special events such as weddings and corporate functions. Our tailored services ensure your transportation needs are met with elegance and professionalism. For weddings, we provide a stylish and comfortable ride for the bride, groom, and guests, ensuring a memorable day. For corporate functions, our reliable and punctual chauffeurs guarantee seamless transportation for your team and clients, enhancing your event's success. With a diverse fleet of high-end vehicles and a dedicated event manager at your service, RolDrive offers unparalleled comfort and sophistication, making your special events truly extraordinary.
+            </p>
+          ),
+        },
+        {
+          title: 'Are private chauffeur services in London available 24/7?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Yes, RolDrive's private chauffeur services in London are available 24/7 to accommodate all your travel needs. Whether you require early morning airport transfers, late-night pickups, or transportation during odd hours, our professional chauffeurs are always ready to provide seamless and reliable service. We understand the importance of flexibility and convenience, ensuring that you can travel comfortably at any time of day or night. With our round-the-clock availability, RolDrive guarantees that you receive exceptional service whenever you need it, offering peace of mind and unparalleled comfort for your journeys in and around London.
+            </p>
+          ),
+        },
+      ],
+    },
+
 
     airportsData: {
       title: "London Airports",
@@ -336,12 +388,14 @@ export const cityData = {
         },
       ],
     },
+
     title1: {
       subTitle: "Tailored Luxury Chauffeur Services",
       mainTitle: "Dubai Landmarks",
       description:
         "Dubai's attractions can be bustling and challenging to navigate, particularly during peak tourist seasons. By hiring a luxury chauffeur service in Dubai like RolDrive, clients can sit back and relax while an experienced driver expertly navigates the busy city streets, providing guidance and ensuring a smooth and enjoyable journey.",
     },
+
     landMarks: [
       {
         id: "land1",
@@ -365,6 +419,7 @@ export const cityData = {
           "An iconic man-made island shaped like a palm tree, home to luxury hotels, pristine beaches, upscale restaurants, and stunning views of the Dubai skyline.",
       },
     ],
+
     touristAttraction: {
       title: "Tourist Attraction",
       subTitle: "Hidden Gems",
@@ -413,6 +468,7 @@ export const cityData = {
         },
       ],
     },
+
     destinationData: {
       restaurants: {
         img: "/rolnew/global/icons/Pin.png",
@@ -447,6 +503,7 @@ export const cityData = {
         ],
       },
     },
+
     ChauffeurServiceDescription: [
       {
         p: "By hiring a chauffeur service, tourists can easily visit these stores and enjoy a shopping experience without the added stress of carrying around their purchases.",
@@ -556,7 +613,10 @@ export const cityData = {
           id: 8,
           question:
             "What are the best ways to get around Dubai using taxi alternatives?",
-          ans: "RolDrive recommends considering alternatives to taxis, such as RolDrive's Rolls Royce chauffeur Dubai service. Unlike public transportation, a chauffeured vehicle offers personalized, luxurious travel that caters to your schedule and comfort. This is especially beneficial when exploring shopping and dining spots as a newcomer. RolDrive ensures seamless journeys between iconic malls like The Dubai Mall and world-class restaurants such as Zuma or Pierchic, providing door-to-door service and local insights. Whether it's navigating traffic or finding the best spots, RolDrive enhances your Dubai experience with comfort, convenience, and a touch of luxury unmatched by public transport options. Our chauffeurs will help carry your purchases and having a vehicle by your side means you have the freedom to explore the city at your own pace.",
+          ans: (
+            <p>RolDrive recommends considering <a href="/fleet" className="text-blue-500">alternatives to taxis,</a> such as RolDrive's Rolls Royce chauffeur Dubai service. Unlike public transportation, a chauffeured vehicle offers personalized, luxurious travel that caters to your schedule and comfort. This is especially beneficial when exploring shopping and dining spots as a newcomer. RolDrive ensures seamless journeys between iconic malls like The Dubai Mall and world-class restaurants such as Zuma or Pierchic, providing door-to-door service and local insights. Whether it's navigating traffic or finding the best spots, RolDrive enhances your Dubai experience with comfort, convenience, and a touch of luxury unmatched by public transport options. Our chauffeurs will help carry your purchases and having a vehicle by your side means you have the freedom to explore the city at your own pace.</p>
+
+          ),
         },
         {
           id: 9,
@@ -566,6 +626,55 @@ export const cityData = {
         },
       ],
     },
+
+    offeringData: {
+      heading: {
+        mainTitle: 'RolDrive Chauffeur Services in Dubai',
+      },
+      data: [
+        {
+          title: 'What luxury vehicles are available through RolDrive’s chauffeur services in Dubai?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Through RolDrive’s chauffeur services in Dubai, we provide a range of luxury vehicles to suit your needs. Choose from the elegant Lexus 300h for a refined experience, or opt for the spacious Toyota Highlander for added comfort and room. For a truly opulent journey, our BMW 7 Series offers unparalleled luxury and style. Whether you need a sophisticated ride for business or a lavish vehicle for special occasions, RolDrive’s chauffeur services in Dubai ensure a first-class experience with every trip. Check out our <a href="/fleet" className="text-blue-500">fleet</a> section to know more about the vehicles on offer.
+            </p>
+          ),
+        },
+        {
+          title: 'How do RolDrive’s luxury chauffeur services in Dubai ensure a high level of comfort and safety for its passengers?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              RolDrive’s luxury chauffeur services in Dubai ensure a high level of comfort and safety for passengers by providing clean and sanitised vehicles equipped with amenities such as free newspapers, water, and WiFi. Our drivers and vehicles are always in immaculate condition, reflecting our commitment to quality. With defensive driving skills, our handpicked chauffeurs prioritise passenger safety at all times. Experience unparalleled comfort and security with RolDrive’s luxury chauffeur services in Dubai, designed to meet the highest standards and exceed your expectations for a luxurious travel experience.
+            </p>
+          ),
+        },
+        {
+          title: 'Can RolDrive’s luxury chauffeur Dubai services be customised for specific events like weddings or business meetings?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Yes, RolDrive’s luxury chauffeur services in Dubai can be customised for specific events like weddings or business meetings. For weddings, we provide elegant vehicles and professional chauffeurs to ensure a smooth and stylish arrival. For business meetings, our chauffeurs offer punctual, discreet, and reliable service, allowing you to focus on your professional commitments. Whether it's an intimate gathering or a large corporate event, our flexible services can be tailored to meet your unique requirements. Enjoy a smooth experience with our high-end fleet and dedicated chauffeurs, making your special occasions and business engagements in Dubai truly memorable and impressive.
+            </p>
+          ),
+        },
+        {
+          title: 'What are the costs associated with hiring a private chauffeur in Dubai?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Hiring RolDrive’s private chauffeur in Dubai services involves various costs depending on vehicle type, date, time, and special occasions. Our all-inclusive pricing is transparent, ensuring no hidden fees. For exact rates, check out our booking engine or <a href="/contact-us" className="text-blue-500">contact us</a> for a free quote. Enjoy seamless and luxurious transportation with our professional chauffeurs, making every journey in Dubai comfortable and stress-free. Whether you need airport transfers, corporate travel, or special event transportation, RolDrive ensures a top-notch experience tailored to your needs.
+            </p>
+          ),
+        },
+        {
+          title: 'Can RolDrive’s chauffeur services in Dubai accommodate special requests, such as child seats or specific routes?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Yes, RolDrive’s chauffeur services in Dubai will be more than happy to accommodate special requests to enhance your travel experience. Whether you need child seats for your little ones or specific routes to follow, we tailor our services to meet your unique needs. Our commitment to providing the best about your journey ensures that all passengers, regardless of their requirements, are well taken care of. With a focus on safety, convenience, and personalised service, RolDrive's professional chauffeurs are prepared to handle any special requests, making your travel in Dubai both luxurious and entertaining. Contact us to customise your ride today.
+            </p>
+          ),
+        },
+      ],
+    },
+
   },
 
   newyork: {
@@ -574,6 +683,7 @@ export const cityData = {
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
       bannerImage: "/images/city/new-york/banner/newyork_city.png",
     },
+
     trustedPartnersData: {
       img: "/rolnew/cities/trust/trust-newyork.jpg",
       data: [
@@ -599,15 +709,18 @@ export const cityData = {
         },
       ],
     },
+
     servicesData: {
       img: "/rolnew/cities/trust-banner.svg",
     },
+
     title1: {
       subTitle: "Tailored Luxury Chauffeur Services",
       mainTitle: "New York Landmarks",
       description:
         "New York's attractions can be bustling and challenging to navigate, especially during peak tourist seasons. By hiring a luxury chauffeur service in New York like RolDrive, clients can sit back and relax while an experienced driver expertly navigates the busy city streets and serves as a knowledgeable guide throughout the journey.",
     },
+
     landMarks: [
       {
         id: "land1",
@@ -631,6 +744,7 @@ export const cityData = {
           "A sprawling urban oasis, Central Park offers lush landscapes, recreational activities, and landmarks like Bethesda Terrace, making it a beloved retreat in the heart of Manhattan.",
       },
     ],
+
     touristAttraction: {
       title: "Tourist Attraction",
       subTitle: "Hidden Gems",
@@ -679,6 +793,7 @@ export const cityData = {
         },
       ],
     },
+
     ChauffeurServiceDescription: [
       {
         p: "By hiring a chauffeur service, tourists can easily visit these stores and enjoy a shopping experience without the added stress of carrying around their purchases.",
@@ -841,7 +956,9 @@ export const cityData = {
           id: 8,
           question:
             "What are the best ways to get around New York using taxi alternatives?",
-          ans: "Navigating New York is easy with public transportation, including the subway and buses, or by biking using Citi Bike. For a more comfortable and personalized experience, RolDrive's taxi alternative chauffeur services provide luxurious, reliable transportation, ensuring you travel efficiently and stylishly throughout the city.",
+          ans: (
+            <p>Navigating New York is easy with public transportation, including the subway and buses, or by biking using Citi Bike. For a more comfortable and personalized experience, RolDrive's <a href="/fleet" className="text-blue-500">taxi alternative</a> chauffeur services provide luxurious, reliable transportation, ensuring you travel efficiently and stylishly throughout the city.</p>
+          ),
         },
         {
           id: 9,
@@ -851,6 +968,55 @@ export const cityData = {
         },
       ],
     },
+
+    offeringData: {
+      heading: {
+        mainTitle: 'RolDrive Chauffeur Service in New York',
+      },
+      data: [
+        {
+          title: 'What vehicles does RolDrive’s luxury chauffeur service in New York have to offer?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              RolDrive’s luxury chauffeur service in New York offers a selection of premium vehicles to meet your travel needs. Our fleet includes the Cadillac Escalade, known for its spacious and opulent interiors, the Lincoln Aviator, offering a blend of luxury and advanced technology, the Cadillac CT6, renowned for its elegance and comfort, and the Mercedes Benz S Class, celebrated for its unparalleled luxury and performance. Each vehicle is meticulously maintained to ensure a first-class experience, providing you with comfort and sophistication during your journeys across New York City. To know more about the vehicles on offer, please visit our <a href="/fleet" className="text-blue-500">fleet</a> section.
+            </p>
+          ),
+        },
+        {
+          title: 'What are the key benefits of using a RolDrive chauffeur service in New York?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              The key benefits of using a RolDrive chauffeur service in New York include luxury, comfort, and convenience. Our professional chauffeurs provide seamless navigation through the bustling city, ensuring punctual arrivals for all your engagements. Enjoy a personalised travel experience with our diverse fleet of high-end vehicles, designed to meet your unique needs. Whether it's for business, leisure, or special events, RolDrive offers reliable, stress-free transportation. With our focus on safety, customer satisfaction, and exceptional service, you can relax and enjoy your journey, knowing you're in good hands with RolDrive’s chauffeur service in New York.
+            </p>
+          ),
+        },
+        {
+          title: 'What is the process for booking a private chauffeur service in NYC, and how far in advance should it be done?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Booking RolDrive's private chauffeur service in NYC is simple and convenient. You can make reservations directly through our booking engine on the website or by <a href="/contact-us" className="text-blue-500">contacting us.</a> For added convenience, download the RolDrive App onto your phone. We recommend booking as soon as possible to ensure your preferred vehicle is available. Our team is ready to assist you with any special requests or questions, ensuring a seamless and luxurious travel experience in New York City.
+            </p>
+          ),
+        },
+        {
+          title: 'Do the best chauffeur services in NYC offer any additional amenities or services?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Yes, the best chauffeur services in NYC offer a range of additional amenities to enhance your travel experience. RolDrive's best chauffeur services in NYC provide complimentary newspapers, bottled water, and WiFi for work connectivity during your journey. We understand that every client has unique needs, so any additional requirements can be requested, and RolDrive will strive to accommodate them. Our goal is to ensure a comfortable, convenient, and luxurious ride tailored to your preferences, making your experience with RolDrive exceptional in every way. Contact us to discuss your specific needs and enjoy the finest chauffeur service in NYC.
+            </p>
+          ),
+        },
+        {
+          title: 'How can VIP clients ensure privacy and confidentiality when using a private chauffeur service in NYC?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              VIP clients can ensure privacy and confidentiality when using RolDrive's private chauffeur service in New York City by taking advantage of several key features. Our professional chauffeurs are trained to maintain discretion and respect client privacy at all times. Each vehicle is equipped with tinted windows to provide a shielded environment, ensuring a private travel experience. Additionally, RolDrive implements strict data protection protocols, safeguarding all personal and travel information. For added security, clients can request non-disclosure agreements (NDAs) tailored to their specific needs. With these measures in place, RolDrive’s private chauffeur service in New York City guarantees a secure and confidential journey for VIP clients.
+            </p>
+          ),
+        },
+      ],
+    },
+
   },
 
   paris: {
@@ -889,6 +1055,7 @@ export const cityData = {
     servicesData: {
       img: "/rolnew/cities/trust-banner2.jpg",
     },
+
     title1: {
       subTitle: "Tailored Luxury Chauffeur Services",
       mainTitle: "Paris Landmarks",
@@ -1109,13 +1276,63 @@ export const cityData = {
           id: 8,
           question:
             "What are the best ways to get around Paris using taxi alternatives?",
-          ans: "Navigating Paris without relying solely on traditional taxis is best achieved with taxi alternatives like booking private chauffeur services. RolDrive's best car service in Paris offers a superior option with luxury vehicles and professional drivers, ensuring punctuality, comfort, and personalized travel experiences without the hassle of hailing taxis repeatedly. Our courteous and knowledgeable drivers will be happy to help you with your luggage and show you around the city of light at your own pace.",
+          ans: (
+            <p>Navigating Paris without relying solely on traditional taxis is best achieved with <a href="/fleet" className="text-blue-500">taxi alternatives</a> like booking private chauffeur services. RolDrive's best car service in Paris offers a superior option with luxury vehicles and professional drivers, ensuring punctuality, comfort, and personalized travel experiences without the hassle of hailing taxis repeatedly. Our courteous and knowledgeable drivers will be happy to help you with your luggage and show you around the city of light at your own pace.</p>
+          ),
         },
         {
           id: 9,
           question:
             "What are some family-friendly attractions or activities in Paris that are suitable for children and enjoyable for the whole family?",
           ans: "Family-friendly attractions in Paris include Disneyland Paris for magical theme park adventures, the Paris Aquarium for marine life exploration, and the Jardin d'Acclimatation for rides and activities. Enjoy these outings with ease using RolDrive's best car service in Paris, ensuring a fun filled day for the entire family. For more locations to visit, feel free to ask our chauffeurs and they’ll be happy to take you.",
+        },
+      ],
+    },
+
+    offeringData: {
+      heading: {
+        mainTitle: 'RolDrive Chauffeur Service in Paris',
+      },
+      data: [
+        {
+          title: 'What vehicles does RolDrive’s luxury chauffeur service in Paris have to offer?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              RolDrive’s luxury chauffeur service in Paris offers a range of high-end vehicles to meet your needs. Our <a href="/fleet" className="text-blue-500">fleet</a> includes the stylish Mercedes Benz E Class, ideal for elegant yet practical travel; the luxurious S Class, perfect for those seeking top-tier comfort and sophistication; and the spacious V Class, great for group travel with ample room and luxury. For more details on our vehicle options, including specifications and availability, please visit our fleet section. Experience exceptional comfort and style with RolDrive’s luxury chauffeur service in Paris.
+            </p>
+          ),
+        },
+        {
+          title: 'What are the main benefits of using a chauffeur service in Paris compared to other transportation options?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Using RolDrive’s chauffeur service in Paris offers numerous benefits compared to other transportation options. With our professional chauffeurs, you can enjoy a stress-free and luxurious travel experience, avoiding the hassle of navigating unfamiliar streets or dealing with public transport schedules. Our service provides door-to-door convenience, ensuring timely arrivals and departures. The diverse fleet of high-end vehicles ensures comfort and style for every journey. Additionally, our knowledgeable chauffeurs can offer valuable insights and recommendations, enhancing your visit. Whether for business or leisure, RolDrive’s chauffeur service in Paris guarantees a smooth, reliable, and enjoyable transportation solution tailored to your needs.
+            </p>
+          ),
+        },
+        {
+          title: 'What is the typical pricing structure for a private car service in Paris, and are there any hidden fees?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              The typical pricing structure for RolDrive’s private car service in Paris is transparent and straightforward, with no hidden fees. While rates depend on factors like the vehicle type, date, time, and special occasions, our commitment to clarity ensures you know exactly what you're paying for. To find out the cost of a specific transfer, use our user-friendly booking engine or <a href="/contact-us" className="text-blue-500">contact us</a> for a free, tailored quote. Experience stress-free, luxurious transportation with RolDrive, confident that there are no surprises in your final bill.
+            </p>
+          ),
+        },
+        {
+          title: 'How do luxury chauffeur services in Paris manage airport transfers and coordinate with flight schedules?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Luxury chauffeur services in Paris, such as RolDrive, expertly manage airport transfers by closely tracking flight schedules. This ensures timely pickups and drop-offs, even with flight delays or changes. Our chauffeurs monitor real-time flight information to adjust schedules accordingly, providing a seamless and stress-free experience for clients. Upon arrival, passengers are greeted by professional chauffeurs who assist with luggage and ensure a smooth transition to their destination. This meticulous coordination guarantees that every journey with RolDrive’s luxury chauffeur services in Paris is efficient, punctual, and tailored to the client’s needs.
+            </p>
+          ),
+        },
+        {
+          title: 'What distinguishes RolDrive’s private car service in Paris from other transportation options?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              RolDrive’s private car service in Paris stands out for its exceptional blend of luxury, professionalism, and personalised attention. Unlike other transportation options, RolDrive offers a <a href="/fleet" className="text-blue-500">fleet</a> of high-end vehicles, ensuring comfort and style. Our chauffeurs are not only highly trained but also knowledgeable about the city, providing a smooth and efficient journey. With a focus on punctuality and customer satisfaction, RolDrive guarantees a stress-free travel experience. Whether you need airport transfers, corporate travel, or city tours, RolDrive’s private car service in Paris delivers unparalleled convenience and elegance, setting a new standard in transportation excellence.
+            </p>
+          ),
         },
       ],
     },
@@ -1140,6 +1357,7 @@ export const cityData = {
         p: "In conclusion, London is a city with endless possibilities for tourists and visitors, and using a chauffeur service like RolDrive can make the experience even more enjoyable. From exploring the city's famous landmarks to discovering its hidden gems, shopping, and experiencing the nightlife, a chauffeur service can provide a comfortable and stress-free way to explore the city. With the added benefits of time-saving, avoiding traffic congestion, and convenience, hiring a chauffeur service in London is a must for any tourist looking for a wonderful experience. Simply type ‘RolDrive’ or search ‘chauffeur service near me.",
       },
     ],
+
   },
 
   tokyo: {
@@ -1148,6 +1366,7 @@ export const cityData = {
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
       bannerImage: "/images/city/tokyo/banner/tokyo_city.png",
     },
+
     trustedPartnersData: {
       img: "/rolnew/cities/trust/trust-tokyo.jpg",
       data: [
@@ -1173,9 +1392,11 @@ export const cityData = {
         },
       ],
     },
+
     servicesData: {
       img: "/rolnew/cities/trust-banner.svg",
     },
+
     title1: {
       subTitle: "Tailored Luxury Chauffeur Services",
       mainTitle: "Tokyo Landmarks",
@@ -1205,6 +1426,7 @@ export const cityData = {
           "Famous for its bustling pedestrian scramble, Shibuya Crossing is a vibrant and iconic intersection embodying Tokyo's dynamic urban energy.",
       },
     ],
+
     touristAttraction: {
       title: "Tourist Attraction",
       subTitle: "Hidden Gems",
@@ -1389,6 +1611,55 @@ export const cityData = {
         },
       ],
     },
+
+    offeringData : {
+      heading: {
+        mainTitle: 'RolDrive Chauffeur Service in Tokyo',
+      },
+      data: [
+        {
+          title: 'What vehicles does RolDrive’s luxury chauffeur service in Tokyo have to offer?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              RolDrive’s luxury chauffeur service in Tokyo offers a range of high-end vehicles to cater to your transportation needs. Our fleet includes the elegant Mercedes Benz E Class, perfect for a sophisticated ride. The spacious Toyota Vellfire provides ample comfort for group travel. For those seeking ultimate luxury, the Mercedes Benz S Class delivers unparalleled refinement. Additionally, the Mercedes Benz V Class offers versatile and premium transportation for larger groups or special occasions. Experience top-tier comfort and style with RolDrive’s luxury chauffeur service in Tokyo, ensuring a memorable and seamless travel experience. Check our <a href="/fleet" className="text-blue-500">fleet</a> section to know more about the vehicles we have on offer.
+            </p>
+          ),
+        },
+        {
+          title: 'What is the average cost of hiring a RolDrive chauffeur service in Tokyo, and what factors affect the pricing?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              The average cost of hiring a RolDrive chauffeur service in Tokyo varies based on several factors. These include the type of vehicle selected, the duration of the hire, the date and time of the service, and any special occasions or events. RolDrive offers a range of luxury vehicles to suit your needs and ensures competitive pricing. To get an accurate quote tailored to your specific requirements, please check our booking engine or <a href="/contact-us" className="text-blue-500">contact us</a> directly for a free, no-obligation quote. Experience premium transportation with RolDrive’s exceptional chauffeur service in Tokyo.
+            </p>
+          ),
+        },
+        {
+          title: 'Are RolDrive’s private car service in Tokyo available for special events, such as weddings or corporate functions?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              Yes, RolDrive’s private car service in Tokyo is available for special events such as weddings and corporate functions. We provide tailored transportation solutions to ensure your event is seamless and stylish. Whether you need elegant vehicles for a wedding or professional transportation for a corporate function, our fleet and experienced chauffeurs are equipped to meet your needs. Enjoy luxurious comfort, punctuality, and exceptional service that enhances your special occasion. Contact us to discuss your event requirements and let RolDrive’s private car service in Tokyo help make your event truly memorable.
+            </p>
+          ),
+        },
+        {
+          title: 'How do the best chauffeur car services in Tokyo manage airport transfers and coordinate with flight schedules?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              The best chauffeur car services in Tokyo, including RolDrive, expertly manage airport transfers by closely monitoring flight schedules to ensure timely pickups and drop-offs. Our chauffeurs track flight status in real-time, allowing them to adjust pickup times for delays or early arrivals. They maintain clear communication with passengers and provide seamless transitions from the airport to your destination. With a focus on punctuality and convenience, RolDrive ensures that your travel experience is smooth and stress-free, offering luxury and reliability for every airport transfer.
+            </p>
+          ),
+        },
+        {
+          title: 'How does RolDrive chauffeur service in Tokyo personalise the travel experience for their clients?',
+          desc: (
+            <p className="text-[#B2B2B2]">
+              RolDrive’s chauffeur service in Tokyo personalises the travel experience by tailoring every aspect to meet clients' specific needs. From the moment you book, our team ensures that preferences such as vehicle type, amenities, and routes are customised to your requirements. Our professional chauffeurs are trained to provide attentive service, offering local insights and recommendations to enhance your journey. Whether it’s for a business meeting or leisure, we prioritise comfort and convenience, ensuring a smooth and enjoyable experience. With RolDrive’s chauffeur service in Tokyo, every detail is meticulously arranged to reflect your personal preferences and expectations.
+            </p>
+          ),
+        },
+      ],
+    },
+    
 
     ChauffeurServiceDescription: [
       {

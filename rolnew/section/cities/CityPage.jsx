@@ -15,6 +15,7 @@ import Landmark from "rolnew/section/cities/LandMark";
 //import Airports from 'rolnew/comp/Airports';
 import { cityData } from "./cityData";
 import BookModal from "rolnew/comp/BookModal";
+import ServiceOfferings from "rolnew/comp/ServiceOfferings";
 
 // const cities = ["chauffeur-service-in-london", "chauffeur-service-in-dubai", "chauffeur-service-in-new-york", "chauffeur-service-in-paris", "chauffeur-service-in-tokyo"];
 
@@ -66,6 +67,7 @@ function CityPage() {
       {/* <ChauffeurServiceDescription
         ChauffeurServiceDescription={pageData.ChauffeurServiceDescription}
       /> */}
+      <ServiceOfferings servicesData={pageData?.offeringData} />
       <BookModal />
     </>
   );

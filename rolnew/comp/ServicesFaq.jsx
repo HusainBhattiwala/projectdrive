@@ -5,7 +5,7 @@ import Collaspe from "./Collaspe";
 function ServicesFaq({ faqData }) {
   return (
     <Container className="bg-[#081017] sm:py-[60px] py-[32px] text-center">
-      <Title subTitle="Have queries?" mainTitle={faqData?.title} />
+      <Title subTitle="Have Queries?" mainTitle={faqData?.title} />
       <Collaspe list={faqData?.data} />
 
       {/* <button className="mt-10 text-[18px] font-medium text-[#828282] pop">

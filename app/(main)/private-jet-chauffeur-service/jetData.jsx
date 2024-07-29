@@ -11,7 +11,7 @@ export const jetData = {
 
   luxuriousServiceData: [
     {
-      img: '/rolnew/global/icons/jet/FBO Pickup.png',
+      img: '/rolnew/global/icons/jet/fbo-Pickup.png',
       title: 'FBO Pickup',
       desc: 'We provide a Private Jet FBO Pickup service, ensuring a seamless and luxurious transition from your private jet right from the airport tarmac to your next destination.',
     },
@@ -145,7 +145,7 @@ export const jetData = {
         title: 'What is a private jet transfer service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            A private jet chauffeur service is a specialised transportation option designed for travellers using private aviation. This service offers seamless private jet transfers, ensuring a smooth connection between the airport tarmac (FBO service) and the passenger’s final destination. Tailored for comfort and convenience, it includes luxury vehicles ready at the tarmac upon arrival and professional chauffeurs who are trained to handle discreet and efficient travel needs. The private jet car hire per hour service is customisable, accommodating specific requests such as preferred routes or on-board amenities. This premium service is ideal for those seeking privacy, speed, and high levels of service in their ground transportation, matching the exclusivity of private jet travel.
+            A private jet chauffeur service is a specialised transportation option designed for travellers using private aviation. This service offers seamless private jet transfers, ensuring a smooth connection between the airport tarmac (FBO service) and the passenger's final destination. Tailored for comfort and convenience, it includes luxury vehicles ready at the tarmac upon arrival and professional chauffeurs who are trained to handle discreet and efficient travel needs. The private jet car hire per hour service is customisable, accommodating specific requests such as preferred routes or on-board amenities. This premium service is ideal for those seeking privacy, speed, and high levels of service in their ground transportation, matching the exclusivity of private jet travel.
           </p>
         ),
       },
