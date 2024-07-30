@@ -1,55 +1,55 @@
-import ClientTestimonial from "rolnew/section/home/ClientTestimonial";
-import Contact from "rolnew/comp/Contact";
-import Locations from "rolnew/section/home/Locations";
-import Services from "rolnew/section/home/Services";
-import BookingBanner from "../BookingBanner";
-import ServicesFaq from "rolnew/comp/ServicesFaq";
-import ServiceOfferings from "rolnew/comp/ServiceOfferings";
+import ClientTestimonial from 'rolnew/section/home/ClientTestimonial';
+import Contact from 'rolnew/comp/Contact';
+import Locations from 'rolnew/section/home/Locations';
+import Services from 'rolnew/section/home/Services';
+import ServicesFaq from 'rolnew/comp/ServicesFaq';
+import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import BookingBanner from '../BookingBanner';
 
 export const metadata = {
-  title: "Roldrive",
-  description: "Welcome to roldrive :)",
+  title: 'Roldrive',
+  description: 'Welcome to roldrive :)',
 };
 
 const ServicesData = {
-  subTitle: "Our Services",
-  action: "Book Now",
-  mainTitle: "Tailored Hire A Personal Chauffeur Services For Your Every Need",
+  subTitle: 'Our Services',
+  action: 'Book Now',
+  mainTitle: 'Tailored Hire A Personal Chauffeur Services For Your Every Need',
   desc: "Planning an outing in London? Hire a personal chauffeur with us and discover exceptional comfort and reliability for your travels. Whether you're attending a meeting or exploring the city, our experienced chauffeurs ensure a smooth, relaxing ride. Experience luxury and peace of mind with our tailored services designed for your convenience, making every journey in London a delightful experience. Enjoy the city with our professional chauffeur service.",
   cardData: [
     {
-      img: "/rolnew/global/card/home/Airport Transfer Home.jpg",
-      title: "Airport Transfers",
+      img: '/rolnew/global/card/home/Airport Transfer Home.jpg',
+      title: 'Airport Transfers',
       cardDesc:
-        "Our airport transfers are seamless and hassle-free. Whether you need a pickup from the hotel to the airport or vice versa, our friendly and courteous professional chauffeurs will ensure your journey is comfortable and stress free.",
+        'Our airport transfers are seamless and hassle-free. Whether you need a pickup from the hotel to the airport or vice versa, our friendly and courteous professional chauffeurs will ensure your journey is comfortable and stress free.',
     },
     {
-      img: "/rolnew/global/card/card-image2.jpg",
-      title: "Corporate Chauffeurs",
+      img: '/rolnew/global/card/card-image2.jpg',
+      title: 'Corporate Chauffeurs',
       cardDesc:
         "With RolDrive, you'll make a lasting impression the moment you step out of our chauffeur driven vehicles. Let us help you make a statement and command the boardroom. Our corporate chauffeurs are dependable, efficient, and dedicated to exceeding your expectations.",
     },
     {
-      img: "/rolnew/global/card/home/Wedding Transfer Home.jpg",
-      title: "Wedding Transfers",
+      img: '/rolnew/global/card/home/Wedding Transfer Home.jpg',
+      title: 'Wedding Transfers',
       cardDesc:
-        "We understand the importance of making your special day flawless. That’s why we offer a range of chauffeur driven vehicles, including luxury brands such as Rolls Royce, Maybach, and Bentley. Our meticulously maintained cars add an extra touch of elegance to your celebration.",
+        'We understand the importance of making your special day flawless. That’s why we offer a range of chauffeur driven vehicles, including luxury brands such as Rolls Royce, Maybach, and Bentley. Our meticulously maintained cars add an extra touch of elegance to your celebration.',
     },
     {
-      img: "/rolnew/global/card/home/Private Jet Transfer Home.jpg",
-      title: "Private Jet Transfers",
+      img: '/rolnew/global/card/home/Private Jet Transfer Home.jpg',
+      title: 'Private Jet Transfers',
       cardDesc:
-        "Our experienced private jet chauffeur service safely transports you to and from the tarmac of your private jet or helicopter, ensuring a seamless journey to your hotel or business meeting. Our fleet offers complimentary amenities for a comfortable and enjoyable travel experience.",
+        'Our experienced private jet chauffeur service safely transports you to and from the tarmac of your private jet or helicopter, ensuring a seamless journey to your hotel or business meeting. Our fleet offers complimentary amenities for a comfortable and enjoyable travel experience.',
     },
     {
-      img: "/rolnew/global/card/home/Event Transfer Home.jpg",
-      title: "Event Transfers",
+      img: '/rolnew/global/card/home/Event Transfer Home.jpg',
+      title: 'Event Transfers',
       cardDesc:
         "We offer transportation services for social, cultural, and sports events in and around the city. Whether you're attending a private party or a large scale gathering, our event transfer cars are stylish, sophisticated, and comfortable, ensuring a safe and memorable experience for all.",
     },
     {
-      img: "/rolnew/global/card/home/Sightseeing Tours Home.jpg",
-      title: "Sightseeing Tours",
+      img: '/rolnew/global/card/home/Sightseeing Tours Home.jpg',
+      title: 'Sightseeing Tours',
       cardDesc:
         "Choose from our diverse fleet with our hourly or full day chauffeur service to ensure your journey is both comfortable and memorable. Experience RolDrive's luxurious and stress free transportation solutions, guided by knowledgeable chauffeurs who enhance your travel experience.",
     },
@@ -64,13 +64,18 @@ const faqData = {
       question:
         'What steps are involved if I hire a personal driver in London with a vehicle?',
       ans: (
-        <p>To <a href="/" className="text-blue-500"> hire a personal driver </a> in London, visit our website and complete the online booking form. Choose your preferred vehicle and service duration. Rest assured, our chauffeurs are thoroughly background-checked and vetted, ensuring a safe and reliable experience. Enjoy seamless, professional chauffeur services.</p>
+        <p>
+          To
+          <a href="/" className="text-blue-500"> hire a personal driver </a>
+          {' '}
+          in London, visit our website and complete the online booking form. Choose your preferred vehicle and service duration. Rest assured, our chauffeurs are thoroughly background-checked and vetted, ensuring a safe and reliable experience. Enjoy seamless, professional chauffeur services.
+        </p>
       ),
     },
     {
       id: 1,
       question: 'Where can I find reputable agencies or companies offering personal chauffeur services in London?',
-      ans: "To hire a personal driver in London, look no further than RolDrive. As a reputable agency offering exceptional chauffeur services, RolDrive ensures comfort, reliability, and professionalism. Try our services to experience the difference in luxury transportation in London.",
+      ans: 'To hire a personal driver in London, look no further than RolDrive. As a reputable agency offering exceptional chauffeur services, RolDrive ensures comfort, reliability, and professionalism. Try our services to experience the difference in luxury transportation in London.',
     },
     {
       id: 2,
@@ -86,7 +91,12 @@ const faqData = {
       id: 4,
       question: 'Are there different types of vehicles available for hire with personal chauffeur services in London?',
       ans: (
-        <p>Yes, when you hire a personal chauffeur in London, you can choose from a range of vehicles including the Mercedes S Class, Mercedes V Class, Rolls Royce, and Bentley. Visit our <a href="/fleet" className="text-blue-500">Fleet</a> section to learn more about our luxurious options.</p>
+        <p>
+          Yes, when you hire a personal chauffeur in London, you can choose from a range of vehicles including the Mercedes S Class, Mercedes V Class, Rolls Royce, and Bentley. Visit our
+          <a href="/fleet" className="text-blue-500">Fleet</a>
+          {' '}
+          section to learn more about our luxurious options.
+        </p>
       ),
     },
     {
@@ -108,13 +118,18 @@ const faqData = {
       id: 8,
       question: 'What are the cancellation policies and terms typically associated with if I hire a personal driver in London with a vehicle?',
       ans: (
-        <p>When you hire a personal chauffeur in London, you can cancel your service up to 12 hours before the booking time to receive a full refund. Cancellations made within 12 hours may incur charges or be non-refundable. <a href="/contact-us" className="text-blue-500">Contact RolDrive</a> for further details on our cancellation policies.</p>
+        <p>
+          When you hire a personal chauffeur in London, you can cancel your service up to 12 hours before the booking time to receive a full refund. Cancellations made within 12 hours may incur charges or be non-refundable.
+          <a href="/contact-us" className="text-blue-500">Contact RolDrive</a>
+          {' '}
+          for further details on our cancellation policies.
+        </p>
       ),
     },
     {
       id: 9,
       question: 'Are there any additional services offered by personal chauffeur companies in London, such as airport transfers or city tours?',
-      ans: "Yes, personal chauffeur companies in London such as RolDrive offer a range of services including airport transfers, wedding transfers, corporate transfers, city tours, intercity transfers, and more. Hire a personal chauffeur to enjoy these services and ensure a comfortable and convenient travel experience tailored to your needs.",
+      ans: 'Yes, personal chauffeur companies in London such as RolDrive offer a range of services including airport transfers, wedding transfers, corporate transfers, city tours, intercity transfers, and more. Hire a personal chauffeur to enjoy these services and ensure a comfortable and convenient travel experience tailored to your needs.',
     },
   ],
 };
@@ -128,7 +143,11 @@ const offeringData = {
       title: 'How does the pricing structure work for hiring a personal chauffeur in London?',
       desc: (
         <p className="text-[#B2B2B2]">
-          RolDrive’s hire a personal chauffeur in London services offer a transparent and flexible pricing structure. The cost depends on whether you choose hourly rates or direct transfers and also varies based on the vehicle selected. Our all-inclusive pricing ensures you can budget accurately without hidden fees. To get an exact quote, you can use our online booking engine or <a href="/contact-us" className="text-blue-500">contact us</a> directly for a free tailored quote. Enjoy the convenience of knowing upfront costs for your luxurious, stress-free transportation experience with RolDrive.
+          RolDrive’s hire a personal chauffeur in London services offer a transparent and flexible pricing structure. The cost depends on whether you choose hourly rates or direct transfers and also varies based on the vehicle selected. Our all-inclusive pricing ensures you can budget accurately without hidden fees. To get an exact quote, you can use our online booking engine or
+          {' '}
+          <a href="/contact-us" className="text-blue-500">contact us</a>
+          {' '}
+          directly for a free tailored quote. Enjoy the convenience of knowing upfront costs for your luxurious, stress-free transportation experience with RolDrive.
         </p>
       ),
     },
@@ -136,7 +155,7 @@ const offeringData = {
       title: 'Are there any additional services offered when I hire a personal chauffeur in London?',
       desc: (
         <p className="text-[#B2B2B2]">
-          Yes, when you use RolDrive’s hire a personal chauffeur in London services, you benefit from a range of additional services designed to enhance your experience. Our chauffeurs offer free luggage assistance, ensuring your belongings are handled with care. With our meet and greet services, you receive a warm welcome and smooth transition to your vehicle. Additionally, our knowledgeable chauffeurs can act as your guide, offering local insights and recommendations if you're new to the city. Whether it's airport transfers, corporate travel, or sightseeing, RolDrive ensures a comprehensive and personalised transportation experience.
+          Yes, when you use RolDrive’s hire a personal chauffeur in London services, you benefit from a range of additional services designed to enhance your experience. Our chauffeurs offer free luggage assistance, ensuring your belongings are handled with care. With our meet and greet services, you receive a warm welcome and smooth transition to your vehicle. Additionally, our knowledgeable chauffeurs can act as your guide, offering local insights and recommendations if you’re new to the city. Whether it’s airport transfers, corporate travel, or sightseeing, RolDrive ensures a comprehensive and personalised transportation experience.
         </p>
       ),
     },
@@ -160,14 +179,12 @@ const offeringData = {
       title: 'By hiring a personal driver in London, how does the chauffeur ensure the safety and security of its passengers during their journey in London?',
       desc: (
         <p className="text-[#B2B2B2]">
-          Through RolDrive's hire a personal driver in London service, we ensure your safety and security throughout the journey. Our chauffeurs are meticulously trained and handpicked professionals with extensive knowledge of London’s roads and traffic patterns. They follow strict safety protocols, including defensive driving techniques and adherence to traffic regulations. Vehicles are regularly inspected and maintained to the highest standards. Additionally, our chauffeurs undergo thorough background checks and continuous training to ensure reliable and secure service. With RolDrive, you can relax and enjoy your journey, knowing your safety is our top priority.
+          Through RolDrive’s hire a personal driver in London service, we ensure your safety and security throughout the journey. Our chauffeurs are meticulously trained and handpicked professionals with extensive knowledge of London’s roads and traffic patterns. They follow strict safety protocols, including defensive driving techniques and adherence to traffic regulations. Vehicles are regularly inspected and maintained to the highest standards. Additionally, our chauffeurs undergo thorough background checks and continuous training to ensure reliable and secure service. With RolDrive, you can relax and enjoy your journey, knowing your safety is our top priority.
         </p>
       ),
     },
   ],
 };
-
-
 
 export default function page() {
   return (

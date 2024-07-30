@@ -111,14 +111,12 @@ export const jetData = {
         desc: (
           <p className="text-[#B2B2B2]">
             RolDrive provides its private jet chauffeur service in the following locations. Our professional and discreet chauffeurs will take you to and from the tarmac in absolute comfort and style.
-          </p>
-        ),
-      },
-      {
-        title:
-          'RolDrive’s private jet chauffeur service covers the following locations:',
-        desc: (
-          <p className="text-[#B2B2B2]">
+            <br />
+            <br />
+            <strong className="text-[#B2B2B2]">
+              RolDrive’s private jet chauffeur service covers the following locations:
+            </strong>
+            <br />
             <span className="ml-3 text-[#B2B2B2]">
               1. Private jet transfer London
             </span>
@@ -141,11 +139,12 @@ export const jetData = {
           </p>
         ),
       },
+
       {
         title: 'What is a private jet transfer service?',
         desc: (
           <p className="text-[#B2B2B2]">
-            A private jet chauffeur service is a specialised transportation option designed for travellers using private aviation. This service offers seamless private jet transfers, ensuring a smooth connection between the airport tarmac (FBO service) and the passenger's final destination. Tailored for comfort and convenience, it includes luxury vehicles ready at the tarmac upon arrival and professional chauffeurs who are trained to handle discreet and efficient travel needs. The private jet car hire per hour service is customisable, accommodating specific requests such as preferred routes or on-board amenities. This premium service is ideal for those seeking privacy, speed, and high levels of service in their ground transportation, matching the exclusivity of private jet travel.
+            A private jet chauffeur service is a specialised transportation option designed for travellers using private aviation. This service offers seamless private jet transfers, ensuring a smooth connection between the airport tarmac (FBO service) and the passenger’s final destination. Tailored for comfort and convenience, it includes luxury vehicles ready at the tarmac upon arrival and professional chauffeurs who are trained to handle discreet and efficient travel needs. The private jet car hire per hour service is customisable, accommodating specific requests such as preferred routes or on-board amenities. This premium service is ideal for those seeking privacy, speed, and high levels of service in their ground transportation, matching the exclusivity of private jet travel.
           </p>
         ),
       },

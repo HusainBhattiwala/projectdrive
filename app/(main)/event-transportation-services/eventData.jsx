@@ -166,9 +166,15 @@ export const eventData = {
       {
         title: 'What are RolDrive’s event transportation services coverage zones?',
         desc: (
-          <p className="text-[#B2B2B2]">RolDrive provides its event transportation service in the following locations. Our professional and discreet chauffeurs will take you to your event in absolute comfort and style. <br /> <br />
-          <strong className="text-[#B2B2B2]">RolDrive’s event transportation chauffeur service covers the following locations:</strong> <br /> <br />
-          <span className="ml-3 text-[#B2B2B2]">
+          <p className="text-[#B2B2B2]">
+            RolDrive provides its event transportation service in the following locations. Our professional and discreet chauffeurs will take you to your event in absolute comfort and style.
+            <br />
+            {' '}
+            <br />
+            <strong className="text-[#B2B2B2]">RolDrive’s event transportation chauffeur service covers the following locations:</strong>
+            {' '}
+            <br />
+            <span className="ml-3 text-[#B2B2B2]">
               1. Event transportation services London
             </span>
             <br />
@@ -187,12 +193,11 @@ export const eventData = {
             <span className="ml-3 text-[#B2B2B2]">
               5. Event transportation services Tokyo
             </span>
-          
-          
-          </p>  
+
+          </p>
         ),
       },
-      
+
       {
         title: 'What is an event transportation service?',
         desc: (
@@ -221,7 +226,7 @@ export const eventData = {
   },
 
   faqData: {
-    title: 'Frequently Asked Questions About Event Transportation Services:',
+    title: 'Frequently Asked Questions About Event Transportation Services',
     data: [
       {
         id: 0,

@@ -111,8 +111,11 @@ export const weddingData = {
         title: 'What are RolDrive’s wedding car hire coverage zones?',
         desc: (
           <p className="text-[#B2B2B2]">
-            RolDrive provides its wedding chauffeur services in and around the following locations. Our professional chauffeurs will transport you and your guests to and from the wedding venue in absolute comfort, safety and style. <br /><br />
-            <strong>RolDrive’s wedding car hire covers the following locations:</strong> <br /><br />
+            RolDrive provides its wedding chauffeur services in and around the following locations. Our professional chauffeurs will transport you and your guests to and from the wedding venue in absolute comfort, safety and style.
+            <br />
+            <br />
+            <strong>RolDrive’s wedding car hire covers the following locations:</strong>
+            <br />
             <span className="ml-3 text-[#B2B2B2]">
               1. Wedding car hire in London
             </span>

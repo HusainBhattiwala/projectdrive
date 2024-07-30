@@ -111,8 +111,12 @@ export const sightseeingData = {
           'What are RolDrive’s Sightseeing Chauffeur Service coverage zones?',
         desc: (
           <p className="text-[#B2B2B2]">
-            RolDrive provides its sightseeing chauffeur service in the following locations. Our knowledgeable chauffeurs will show you the best sights in town along with a detailed tour across every attraction. <br /> <br />
-            <strong>RolDrive’s sightseeing chauffeur service covers the following locations: </strong><br /> <br />
+            RolDrive provides its sightseeing chauffeur service in the following locations. Our knowledgeable chauffeurs will show you the best sights in town along with a detailed tour across every attraction.
+            <br />
+            {' '}
+            <br />
+            <strong>RolDrive’s sightseeing chauffeur service covers the following locations: </strong>
+            <br />
             <span className="ml-3 text-[#B2B2B2]">1. London Sightseeing</span>
             <br />
             <span className="ml-3 text-[#B2B2B2]">2. Dubai Sightseeing</span>
@@ -125,7 +129,7 @@ export const sightseeingData = {
           </p>
         ),
       },
- 
+
       {
         title: 'What is a city sightseeing chauffeur service?',
         desc: (
@@ -139,7 +143,7 @@ export const sightseeingData = {
         title: 'Why hire a city sightseeing chauffeur service for the best sightseeing places in the world?',
         desc: (
           <p className="text-[#B2B2B2]">
-            Hiring a city sightseeing chauffeur service offers a luxurious and personalized way to explore the best sightseeing places in the world. With a professional chauffeur at the helm, you can enjoy a stress-free journey through iconic landscapes and historical landmarks, without worrying about navigation or parking. Additionally, travelling in an elegant sedan not only enhances your comfort during the tour but also adds a touch of sophistication to your travel photos, making them look even more impressive. This service allows you to tailor your itinerary to suit your interests, ensuring that you don't miss any must-see attractions, all while experiencing the ultimate in convenience and style.
+            Hiring a city sightseeing chauffeur service offers a luxurious and personalized way to explore the best sightseeing places in the world. With a professional chauffeur at the helm, you can enjoy a stress-free journey through iconic landscapes and historical landmarks, without worrying about navigation or parking. Additionally, travelling in an elegant sedan not only enhances your comfort during the tour but also adds a touch of sophistication to your travel photos, making them look even more impressive. This service allows you to tailor your itinerary to suit your interests, ensuring that you don’t miss any must-see attractions, all while experiencing the ultimate in convenience and style.
           </p>
         ),
       },
