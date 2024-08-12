@@ -110,7 +110,6 @@ function BookingEngine3({ setFocus, height }) {
   //   }
   // };
 
-
   // const setDateTime = () => {
   //   setselectedDateTime((prev) => ({
   //     ...prev,
@@ -121,15 +120,14 @@ function BookingEngine3({ setFocus, height }) {
   // };
 
   const setDateTime = (newDate) => {
-      setselectedDateTime((prev) => ({
-        ...prev,
-        selectedDate: newDate,
-        dateChanged: true,
-      }));
-      setShowDatepicker(false);
-      setShowDateError(false);
-    };
-  
+    setselectedDateTime((prev) => ({
+      ...prev,
+      selectedDate: newDate,
+      dateChanged: true,
+    }));
+    setShowDatepicker(false);
+    setShowDateError(false);
+  };
 
   const setTimeChange = () => {
     setselectedDateTime((prev) => ({
@@ -147,9 +145,10 @@ function BookingEngine3({ setFocus, height }) {
     }));
     setShowDatepicker(false);
   };
-  const setReturnDateTime = () => {
+  const setReturnDateTime = (newDate) => {
     setSelectedReturnDateTime((prev) => ({
       ...prev,
+      selectedDate: newDate,
       dateChanged: true,
     }));
     setShowReturnDatepicker(false);
@@ -197,7 +196,7 @@ function BookingEngine3({ setFocus, height }) {
       const distance = await getDistance();
       const time = `${selectedDateTime.hour}:${selectedDateTime.minute}`;
       let selectedDayTime = `${selectedDateTime.selectedDate.getMonth() + 1
-        }/${selectedDateTime.selectedDate.getDate()}/${selectedDateTime.selectedDate.getFullYear()} ${time}`;
+      }/${selectedDateTime.selectedDate.getDate()}/${selectedDateTime.selectedDate.getFullYear()} ${time}`;
 
       selectedDayTime = new Date(selectedDayTime);
 
@@ -439,25 +438,28 @@ function BookingEngine3({ setFocus, height }) {
       });
     } else if (rideDuration === null && bookingType !== 'transfers') {
       setshowDurationError(true);
-    } else if (!selectedDateTime.dateChanged) {
-      setShowDateError(true);
-      userDatePicker.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-      });
-    } else if (!selectedDateTime.timeChanged) {
+    }
+    // else if (!selectedDateTime.dateChanged) {
+    //   setShowDateError(true);
+    //   userDatePicker.current.scrollIntoView({
+    //     behavior: 'smooth',
+    //     block: 'center',
+    //   });
+    else if (!selectedDateTime.timeChanged) {
       setShowTimeError(true);
       userTimePicker.current.scrollIntoView({
         behavior: 'smooth',
         block: 'center',
       });
-    } else if (showReturnDate && !selectedReturnDateTime.dateChanged) {
-      setShowReturnDateError(true);
-      userTimePicker.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-      });
-    } else if (showReturnDate && !selectedReturnDateTime.timeChanged) {
+    } 
+    // else if (showReturnDate && !selectedReturnDateTime.dateChanged) {
+    //   setShowReturnDateError(true);
+    //   userTimePicker.current.scrollIntoView({
+    //     behavior: 'smooth',
+    //     block: 'center',
+    //   });
+    // } 
+    else if (showReturnDate && !selectedReturnDateTime.timeChanged) {
       setShowReturnTimeError(true);
       userTimePicker.current.scrollIntoView({
         behavior: 'smooth',
@@ -625,7 +627,7 @@ function BookingEngine3({ setFocus, height }) {
             className={`rounded-full bg-[#223544] py-[10px] border border-[#fff] pop w-1/2 font-medium ${bookingType !== item.id
               ? 'opacity-40 border-opacity-30'
               : 'border-opacity-40'
-              }`}
+            }`}
             id={item.id}
             onClick={() => setBookingType(item.id)}
             key={item.id}
@@ -636,7 +638,7 @@ function BookingEngine3({ setFocus, height }) {
       </div>
       <div
         className={`flex flex-col  z-[50] ${height > 600 ? 'pt-6 gap-y-6' : 'pt-4 gap-y-4'
-          } `}
+        } `}
         ref={addressPicker}
       >
         <CountriesAutocomplete
@@ -678,7 +680,7 @@ function BookingEngine3({ setFocus, height }) {
           errors={showDropError}
           setError={setShowDropError}
         />
-        
+
         <div className="flex gap-x-4">
           <div className="relative sm:w-2/4 w-full" ref={userDatePicker}>
             <Input
@@ -693,7 +695,7 @@ function BookingEngine3({ setFocus, height }) {
               //     ? formatDateTime(selectedDateTime?.selectedDate)
               //     : ''
               // }
-              value={formatDateTime(selectedDateTime?.selectedDate)}
+              value={selectedDateTime?.selectedDate ? formatDateTime(selectedDateTime?.selectedDate) : ''}
               onClick={() => {
                 setShowDatepicker(true);
               }}
@@ -810,11 +812,12 @@ function BookingEngine3({ setFocus, height }) {
                     className="cursor-pointer"
                     readOnly
                     showError={showReturnDateError}
-                    value={
-                      selectedReturnDateTime?.dateChanged
-                        ? formatDateTime(selectedReturnDateTime?.selectedDate)
-                        : ''
-                    }
+                    // value={
+                    //   selectedReturnDateTime?.dateChanged
+                    //     ? formatDateTime(selectedReturnDateTime?.selectedDate)
+                    //     : ''
+                    // }
+                    value={selectedReturnDateTime?.selectedDate ? formatDateTime(selectedReturnDateTime?.selectedDate) : ''}
                     onClick={() => {
                       setShowReturnDatepicker(true);
                     }}
@@ -826,7 +829,10 @@ function BookingEngine3({ setFocus, height }) {
                       minDatetime={minReturnDatetime}
                       compareWith={selectedDateTime.date}
                       setselectedDateTime={setSelectedReturnDateTime}
-                      setDateTime={setReturnDateTime}
+                      setDateTime={(newDate) => {
+                        setReturnDateTime(newDate); // Pass the selected date
+                      }}
+                      // setDateTime={setReturnDateTime}
                       onChange={() => { }}
                     />
                   )}

@@ -506,7 +506,7 @@ function FleetPage() {
       pickup_location_id: pickuplocationid || null,
       drop_location_id: droplocationid || null,
       pickup_loc_coord: `POINT(${pickuplatlng.split(',')[1]} ${pickuplatlng.split(',')[0]
-        })`,
+      })`,
       travel_date: pickUpdateTime.trim(),
       preferred_vehicle: selectedCarDetails.vehicle_cat_id,
       passenger_adult_cnt: Number(passengers.adult),
@@ -631,7 +631,7 @@ function FleetPage() {
       payload.drop_location = dropaddress;
       payload.drop_postcode = droppostalcode;
       payload.drop_loc_coord = `POINT(${droplatlng.split(',')[1]} ${droplatlng.split(',')[0]
-        })`;
+      })`;
       payload.drop_location_type = droplocationtype;
     }
 
@@ -803,7 +803,7 @@ function FleetPage() {
       };
 
       const queryParams = `?email=${useremailid || null}&phoneNo=${usermobileno || null
-        }&countryCode=${usercountrycode || null}`;
+      }&countryCode=${usercountrycode || null}`;
 
       const response = await api.post(
         `/users/reminder${queryParams}`,
@@ -949,7 +949,7 @@ function FleetPage() {
             <div className="xl:container mx-auto py-12">
               <div
                 className={`mx-auto lg:container flex items-center ${!isCarSelected && ' justify-between'
-                  }`}
+                }`}
               >
                 <div
                   className="flex items-center text-primary text-sm font-bold cursor-pointer mb-2 sm:mb-0 2xl:basis-[35%] lg:basis-[387px]"
@@ -998,7 +998,7 @@ function FleetPage() {
                           className={`rounded-full transition duration-500 ease-in-out sm:w-10 sm:h-10 w-8 h-8 flex items-center justify-center font-semibold ${showPayment
                             ? 'bg-success bg-opacity-90 text-success text-xl'
                             : 'bg-[#223544] text-primary border border-[#fff] border-opacity-40'
-                            }`}
+                          }`}
                         >
                           {showPayment && (
                             <FiCheck className="text-[#96fe96] sm:text-sm text-xs" />
@@ -1009,7 +1009,7 @@ function FleetPage() {
                         <div className="sm:px-3 px-1 w-24 sm:w-auto text-center">
                           <P
                             className={`font-semibold uppercase sm:text-sm !text-xs text-center pt-1 ${showPayment ? 'text-success' : ' text-[#F7BC3A]'
-                              }`}
+                            }`}
                           >
                             Passenger Details
                           </P>
@@ -1027,7 +1027,7 @@ function FleetPage() {
                         <div className="sm:px-3 px-1 w-24 sm:w-auto">
                           <P
                             className={`font-semibold uppercase sm:text-sm !text-xs text-center pt-1 ${showPayment ? ' text-[#F7BC3A]' : ''
-                              }`}
+                            }`}
                           >
                             PAYMENT
                           </P>
@@ -1042,7 +1042,7 @@ function FleetPage() {
                   className={`2xl:basis-[45%] lg:basis-[400px] lg:sticky fixed h-5/6  md:h-[85%] left-0 right-0 lg:top-24 lg:mt-0 lg:order-1 order-2 lg:z-auto z-50 transition-transform duration-150 ease-in-out delay-500 lg:bg-[#223544] bg-[#11202D] lg:px-0 px-4 lg:py-0 py-2 ${showTransfer
                     ? 'top-auto bottom-0 mt-0 overflow-y-auto bg-[#223544]'
                     : 'top-full -mt-12'
-                    }`}
+                  }`}
                 >
                   <div className="relative text-left">
                     <div
@@ -1314,7 +1314,7 @@ function FleetPage() {
                     </div>
                   </div>
                 </div>
-                <div className="relative order-1 w-auto max-w-full lg:ml-5 lg:order-2 grow">
+                <div className="relative order-1 w-full max-w-full lg:ml-5 lg:order-2 grow">
                   {showLoader && <Loader />}
                   {!isCarSelected
                     && filterFleetList

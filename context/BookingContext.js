@@ -73,7 +73,7 @@ export function BookingProvider({ children }) {
       minute: setMinute(newDate),
       date: newDate,
       selectedDate: newDate,
-      dateChanged: true,
+      dateChanged: false,
     });
   }, [date]);
   const [selectedReturnDateTime, setSelectedReturnDateTime] = useState({});

@@ -311,7 +311,7 @@ function OTP({
 
         {!showInputs && (
           <div className="flex flex-col md:flex-row items-center md:items-end gap-y-4 md:gap-x-4">
-            <div className="w-auto md:w-full">
+            <div className="w-full md:w-full">
               <P className="mb-1 font-normal text-xs text-white">
                 Mobile Number
               </P>
@@ -323,7 +323,7 @@ function OTP({
                 inputProps={{
                   name: 'mobileno',
                   required: true,
-                  autoFocus: true,
+                  autoFocus: false,
                   autoComplete: 'off',
                 }}
                 countryCodeEditable={false}
@@ -353,7 +353,7 @@ function OTP({
               type="submit"
               kind="primary"
               isLoading={showLoader}
-              className="w-auto md:w-auto !text-white top-0 !text-opacity-100 !capitalize !text-xl mt-4 md:mt-0"
+              className="w-full md:w-auto !text-white top-0 !text-opacity-100 !capitalize !text-xl mt-4 md:mt-0"
             >
               Get OTP
             </Button>
