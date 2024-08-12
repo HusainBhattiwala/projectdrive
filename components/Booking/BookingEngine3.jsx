@@ -329,7 +329,7 @@ function BookingEngine3({ setFocus, height }) {
         rideduration: rideDuration,
       }));
     }
-    if (selectedReturnDateTime.dateChanged) {
+    if (selectedReturnDateTime.selectedDate) {
       setAddressObject((prev) => ({
         ...prev,
         returndate: `${returnSelectedDay} ${returnMonthName} ${returnSelectedYear}`,
