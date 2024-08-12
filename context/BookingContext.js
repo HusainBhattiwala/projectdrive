@@ -3,27 +3,27 @@
 /* eslint-disable operator-assignment */
 /* eslint-disable no-lone-blocks */
 
-'use client';
+"use client";
 
-import { createContext, useState, useEffect } from 'react';
-import api from 'components/utils/api';
+import { createContext, useState, useEffect } from "react";
+import api from "components/utils/api";
 
 const BookingContext = createContext();
 
 const options = [
   {
     id: 1,
-    text: 'transfers',
+    text: "transfers",
   },
   {
     id: 2,
-    text: 'hourly',
+    text: "hourly",
   },
 ];
 const hourList = [
   {
     value: null,
-    option: 'Select hour',
+    option: "Select hour",
   },
 ];
 for (let i = 4; i <= 24; i++) {
@@ -65,14 +65,14 @@ export function BookingProvider({ children }) {
       minHour: selectHour,
       minMinute:
         Math.round(newDate.getMinutes() / 5) * 5 === 60
-          ? '00'
+          ? "00"
           : Math.round(newDate.getMinutes() / 5) * 5,
     });
     setselectedDateTime({
       hour: selectHour,
       minute: setMinute(newDate),
       date: newDate,
-      selectedDate: newDate,
+      selectedDate: null,
       dateChanged: false,
     });
   }, [date]);
@@ -110,9 +110,11 @@ export function BookingProvider({ children }) {
 
   useEffect(() => {
     const getData = async () => {
-      const data = sessionStorage.getItem('storesearchdata');
+      const data = sessionStorage.getItem("storesearchdata");
       if (data) {
-        const getSearchData = await JSON.parse(sessionStorage.getItem('storesearchdata'));
+        const getSearchData = await JSON.parse(
+          sessionStorage.getItem("storesearchdata")
+        );
         setBookingType(getSearchData.bookingtype);
         setUserPickupLocation({
           address: getSearchData.pickupaddress,
@@ -142,10 +144,10 @@ export function BookingProvider({ children }) {
           luggage: getSearchData.luggage,
           passengerChanged: true,
         });
-        const selectedHour = getSearchData.pickuptime.split(' ')[0];
+        const selectedHour = getSearchData.pickuptime.split(" ")[0];
         setselectedDateTime({
-          hour: selectedHour.split(':')[0],
-          minute: selectedHour.split(':')[1],
+          hour: selectedHour.split(":")[0],
+          minute: selectedHour.split(":")[1],
           date: new Date(getSearchData.pickupdate),
           selectedDate: new Date(getSearchData.pickupdate),
           dateChanged: true,
@@ -153,10 +155,10 @@ export function BookingProvider({ children }) {
         });
 
         if (getSearchData.returntime) {
-          const selectedReturnHour = getSearchData.returntime.split(' ')[0];
+          const selectedReturnHour = getSearchData.returntime.split(" ")[0];
           setSelectedReturnDateTime({
-            hour: selectedReturnHour.split(':')[0],
-            minute: selectedReturnHour.split(':')[1],
+            hour: selectedReturnHour.split(":")[0],
+            minute: selectedReturnHour.split(":")[1],
             date: new Date(getSearchData.returndate),
             selectedDate: new Date(getSearchData.returndate),
             dateChanged: true,
@@ -174,7 +176,9 @@ export function BookingProvider({ children }) {
 
   async function getDistance() {
     if (userDropLocation !== null && userPickupLocation !== null) {
-      const distance = await api.get(`/misc-address/get-distance?from_place_point=${userPickupLocation.latLng}&to_place_point=${userDropLocation.latLng}`);
+      const distance = await api.get(
+        `/misc-address/get-distance?from_place_point=${userPickupLocation.latLng}&to_place_point=${userDropLocation.latLng}`
+      );
       setDistanceBetween(distance.data);
       return distance.data;
     }
@@ -187,7 +191,7 @@ export function BookingProvider({ children }) {
 
   async function getUserData() {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_ROOT_API}/userSelectedAddress/1`,
+      `${process.env.NEXT_PUBLIC_ROOT_API}/userSelectedAddress/1`
     );
     const getData = await response.json();
     setData(getData);
