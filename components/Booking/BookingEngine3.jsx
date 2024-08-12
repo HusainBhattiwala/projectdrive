@@ -127,6 +127,7 @@ function BookingEngine3({ setFocus, height }) {
     }));
     setShowDatepicker(false);
     setShowDateError(false);
+    console.log("Pickup date after function call - " + selectedDate)
   };
 
   const setTimeChange = () => {
@@ -153,6 +154,7 @@ function BookingEngine3({ setFocus, height }) {
     }));
     setShowReturnDatepicker(false);
     setShowReturnDateError(false);
+    console.log("Return date after function call - " + selectedDate)
   };
   const setReturnTime = () => {
     setSelectedReturnDateTime((prev) => ({
@@ -187,8 +189,8 @@ function BookingEngine3({ setFocus, height }) {
       return;
     }
     if (
-      selectedDateTime.dateChanged
-      && selectedDateTime.timeChanged
+      // selectedDateTime.dateChanged && 
+      selectedDateTime.timeChanged
       && userPickupLocation
       && userDropLocation
     ) {
