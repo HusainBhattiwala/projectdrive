@@ -34,7 +34,7 @@ function FleetBanner({ mainTitle, hideArrow }) {
 
   return (
     <div
-      className={`relative mt-16 flex flex-col w-full xl:min-h-[560px] md:min-h-[500px] min-h-[500px] max-h-[1000px] bg-[#223544] ${
+      className={`relative flex flex-col w-full xl:min-h-[560px] md:min-h-[500px] min-h-[500px] max-h-[1000px] bg-[#223544] ${
         !hideArrow ? "2xl:min-h-[80svh]" : "2xl:min-h-[75svh]"
       }`}
       ref={bannerRef}
@@ -63,9 +63,7 @@ function FleetBanner({ mainTitle, hideArrow }) {
               </h3>
             </div>
             <p className="font-normal text-sm text-[#B2B2B2]">
-              A commanding presence is vital for success. Making this impact
-              starts with your appearance. Arrive at your venue impeccably
-              groomed to leave a lasting impression
+            A commanding presence is vital for success. Making this impact starts with your appearance. Arrive at your venue impeccably groomed to leave a lasting impression.
             </p>
           </div>
           <div className="sm:text-center w-full md:w-[336px] p-[18px] flex flex-col gap-1 sm:gap-4 sm:items-center">
@@ -83,10 +81,7 @@ function FleetBanner({ mainTitle, hideArrow }) {
               </h3>
             </div>
             <p className="font-normal text-sm text-[#B2B2B2]">
-              The comfort, luxury and safety offered by our chauffeur driven
-              cars equipped with all amenities means a more pleasant and
-              relaxing journey. Safety and security are paramount too through
-              our experienced and vetted drivers at the helm
+            The comfort, luxury and safety offered by our chauffeur driven cars equipped with all amenities means a more pleasant and relaxing journey. Safety and security are paramount too through our experienced and vetted drivers at the helm.
             </p>
           </div>
           <div className="sm:text-center w-full md:w-[336px] p-[18px] flex flex-col gap-1 sm:gap-4 sm:items-center">
@@ -105,10 +100,7 @@ function FleetBanner({ mainTitle, hideArrow }) {
             </div>
 
             <p className="font-normal text-sm text-[#B2B2B2]">
-              Through our chauffeur driven cars, having a driver navigate
-              traffic allows for a stress free journey allowing you to focus on
-              the task at hand. Hiring a business class chauffeur service can
-              also save on costs for those requiring regular transportation.
+            Through our chauffeur driven cars, having a driver navigate traffic allows for a stress free journey allowing you to focus on the task at hand. Hiring a business class chauffeur service can also save on costs for those requiring regular transportation.
             </p>
           </div>
         </div>

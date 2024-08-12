@@ -386,7 +386,7 @@ export default function PassengerModal({
                         {...register('passengerFname', {
                           required: 'First Name is required',
                         })}
-                        className="input input-bordered w-full pr-0 text-start text-sm font-medium focus:border-primary focus:outline-none sm:text-[1rem]"
+                        className="input input-bordered !text-gray-700 w-full pr-0 text-start text-sm font-medium focus:border-primary focus:outline-none sm:text-[1rem]"
                       />
                       {errors.passengerFname && (
                         <span className="text-red-500">
@@ -416,7 +416,7 @@ export default function PassengerModal({
                               'Last name should start with a letter or number.',
                           },
                         })}
-                        className="input input-bordered w-full pr-0 text-start text-sm font-medium focus:border-primary focus:outline-none sm:text-[1rem]"
+                        className="input input-bordered !text-gray-700 w-full pr-0 text-start text-sm font-medium focus:border-primary focus:outline-none sm:text-[1rem]"
                       />
                       {errors.passengerLname && (
                         <span className="text-red-500">
@@ -455,7 +455,7 @@ export default function PassengerModal({
                         clearErrors('invalidMobile');
                         checkMobileNumber(value, country);
                       }}
-                      inputClass="focus:border-primary focus:outline-none"
+                      inputClass="input input-bordered focus:border-primary focus:outline-none !text-gray-700"
                     />
                     {errors.passengerMobile && (
                       <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
@@ -495,7 +495,7 @@ export default function PassengerModal({
                       //   });
                       // }}
                       placeholder="Enter email address"
-                      className="input input-bordered w-full bg-white text-sm font-medium focus:border-primary focus:outline-none sm:text-[1rem]"
+                      className="input input-bordered !text-gray-700 w-full bg-white text-sm font-medium focus:border-primary focus:outline-none sm:text-[1rem]"
                     />
                   </div>
                   {errors.passengerEmail && (

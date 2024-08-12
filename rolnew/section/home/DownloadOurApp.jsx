@@ -1,5 +1,7 @@
 import Container from "rolnew/comp/Container";
 import Image from "next/image";
+import Link from "next/link";
+
 
 function DownloadOurApp() {
   return (
@@ -12,34 +14,57 @@ function DownloadOurApp() {
             </p>
           </div>
           <div className="box hidden md:block pop cursor-pointer">
-            <Image
-              src="/rolnew/home/playstore.png"
-              width={150}
-              height={150}
-              alt="playstore"
-            />
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.roldrive.roldrive&hl=en&pli=1"
+              target="_blank"
+            >
+              <Image
+                src="/rolnew/home/playstore.png"
+                width={150}
+                height={150}
+                alt="playstore"
+              />
+            </Link>
+
           </div>
           <div className="box block md:hidden w-full h-[58px] relative pop cursor-pointer">
-            <Image
-              src="/rolnew/home/googleplay-mobile.svg"
-              fill
-              alt="playstore"
-            />
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.roldrive.roldrive&hl=en&pli=1"
+              target="_blank"
+            >
+              <Image
+                src="/rolnew/home/googleplay-mobile.svg"
+                fill
+                alt="playstore"
+              />
+            </Link>
           </div>
           <div className="box hidden md:block pop cursor-pointer">
-            <Image
-              src="/rolnew/home/appstore.png"
-              width={150}
-              height={150}
-              alt="playstore"
-            />
+            <Link
+              href="https://apps.apple.com/us/app/roldrive/id6470998693"
+              target="_blank"
+            >
+              <Image
+                src="/rolnew/home/appstore.png"
+                width={150}
+                height={150}
+                alt="playstore"
+              />
+            </Link>
+
           </div>
           <div className="box block md:hidden w-full h-[58px] relative pop cursor-pointer">
-            <Image
-              src="/rolnew/home/appstore-mobile.svg"
-              fill
-              alt="playstore"
-            />
+            <Link
+              href="https://apps.apple.com/us/app/roldrive/id6470998693"
+              target="_blank"
+            >
+              <Image
+                src="/rolnew/home/appstore-mobile.svg"
+                fill
+                alt="playstore"
+              />
+            </Link>
+
           </div>
           <div className="box hidden md:block pop cursor-pointer">
             <Image src="/rolnew/home/OR.svg" alt="or" width={20} height={20} />
@@ -52,9 +77,9 @@ function DownloadOurApp() {
               height={58}
             />
           </div>
-          <div className="box ">
+          <div className="box">
             <Image
-              src="/rolnew/home/qrCode.png"
+              src="/rolnew/home/qrCode1.jpeg"
               alt="qrcode"
               width={150}
               height={150}

@@ -18,13 +18,13 @@ function Card({ title, description, img, titleNoWrap, action }) {
       </figure>
       <div className="card-body gap-y-1 bg-[#161d25] sm:py-1 sm:px-7 px-3 py-2 rounded-b-lg">
         <h2
-          className={`card-title text-sm sm:text-xl font-medium text-[#BBBCC0] text-left sm:mt-4 mt-0 ${
+          className={`card-title text-sm sm:text-xl font-medium text-left sm:mt-4 mt-0 ${
             titleNoWrap && "sm:whitespace-nowrap"
           }`}
         >
           {title}
         </h2>
-        <p className="text-[#B2B2B2] text-sm font-normal leading-snug text-left">
+        <p className="text-[#B2B2B2] !text-sm font-extralight text-left">
           {description}
         </p>
         <div className="card-actions flex gap-x-2 items-center cursor-pointer mt-1 sm:mb-6 mb-1 pop">

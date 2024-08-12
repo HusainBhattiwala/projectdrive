@@ -4,6 +4,9 @@ import Container from 'rolnew/comp/Container';
 import Pic from 'rolnew/util/Pic';
 import CarouselV1 from 'rolnew/ui/CarouselV1';
 import Title from './Title';
+import { Montserrat } from 'next/font/google';  // Updated import
+
+const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] });
 
 const testimonials = [
   {
@@ -60,7 +63,7 @@ const testimonials = [
 
 function ClientTestimonial() {
   return (
-    <Container className='bg-[#11202D] sm:pt-[42px] sm:pb-[60px] sm:py-0 py-6 text-center'>
+    <Container className={`bg-[#11202D] sm:pt-[42px] sm:pb-[60px] sm:py-0 py-6 text-center ${montserrat.className}`}>
       <Title
         subTitle='Client Reviews'
         mainTitle='Ratings By Our Esteemed Clients'
@@ -72,16 +75,8 @@ function ClientTestimonial() {
               className='w-full h-full sm:mx-2 mx-8 group cursor-pointer transition ease-in-out delay-150 bg-[#E1E1E1] bg-opacity-15 p-4 rounded-xl flex flex-col justify-between'
               key={testimonial?.id}
             >
-              <div className='h-full'>
-                <h3 className='text-left sm:text-lg text-base font-medium'>
-                  {testimonial?.title}
-                </h3>
-                <p className='text-left text-xs leading-5 font-normal text-[#B2B2B2]'>
-                  {testimonial?.description}
-                </p>
-              </div>
               <div className='grow'>
-                <div className='flex gap-x-2 justify-start mt-5 items-center'>
+                <div className='flex gap-x-2 justify-start mt-2 mb-8 items-center'>
                   <div className='sm:w-8 sm:h-8 w-5 h-5'>
                     <Pic
                       className='rounded-full'
@@ -90,11 +85,21 @@ function ClientTestimonial() {
                       objectFit='cover'
                     />
                   </div>
-                  <p className='text-[#B2B2B2] text-sm font-normal'>
-                    {testimonial?.name}
+                  <p className='text-[#B2B2B2] text-lg ml- font-normal'>
+                    <strong>{testimonial?.name}</strong>
                   </p>
                 </div>
               </div>
+
+              <div className='h-full'>
+                {/* <h3 className='text-left sm:text-lg text-base font-medium'>
+                  {testimonial?.title}
+                </h3> */}
+                <p className='text-left text-sm leading-5 font-normal text-[#B2B2B2]'>
+                  {testimonial?.description}
+                </p>
+              </div>
+
             </div>
           ))}
         </CarouselV1>

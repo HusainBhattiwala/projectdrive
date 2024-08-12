@@ -5,6 +5,10 @@ import Services from 'rolnew/section/home/Services';
 import Locations from 'rolnew/comp/Locations';
 import Contact from 'rolnew/comp/Contact';
 import FAQ from 'rolnew/comp/FAQ';
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
+
+const metadata = metadataConfig.becomeASupplier;
 
 export default function page() {
   const bannerData = {
@@ -17,6 +21,7 @@ export default function page() {
 
   return (
     <>
+      <MetaTags metadata={metadata} />
       <SupplierBanner {...bannerData} />
 
       <div className="md:hidden" style={{ backgroundColor: '#223544', height: '100px' }} />

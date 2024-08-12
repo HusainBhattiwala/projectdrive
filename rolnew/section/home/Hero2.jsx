@@ -4,8 +4,11 @@ import BookingEngine3 from "components/Booking/BookingEngine3";
 import { BookingProvider } from "context/BookingContext";
 import { useEffect, useState } from "react";
 import "./css/booking.css";
+// import { Montserrat } from 'next/font/google';  // Updated import
 
-export default function Hero2() {
+// const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] });
+
+export default function  Hero2({banner}) {
   const [width, setWidth] = useState(1200);
   const [height, setHeight] = useState(1000);
   const [focus, setFocus] = useState(false);
@@ -23,14 +26,14 @@ export default function Hero2() {
   }, []);
   return (
     <div
-      className={`relative mt-[72px] flex flex-col w-full md:min-h-[700px] lg:min-h-[90svh] overflow-hidden 2xl:min-h-[92svh] min-h-fit bg-[#11202d] ${
+      className={`relative flex flex-col w-full md:min-h-[700px] lg:min-h-[90svh] overflow-auto 2xl:min-h-[92svh] min-h-fit bg-[#11202d] ${
         focus && "z-50"
       }`}
     >
       <div
         className="absolute md:block hidden xl:px-[130px] md:px-[60px] 2xl:px-[130px] z-[6] 2xl:container 2xl:mb-10"
         style={{
-          bottom: height > 600 ? "58px" : "110px",
+          bottom: height > 600 ? "30px" : "110px",
           left: width >= 1533 && "50%",
           transform: width >= 1533 && "translateX(-50%)",
         }}
@@ -64,12 +67,14 @@ export default function Hero2() {
           </div>
         </div>
       </div>
-      <div className="home-mobile-gradient absolute left-0 right-0 bg-repeat h-[400px] w-full z-[3] -bottom-5 sm:hidden block" />
-      <div className="home-banner absolute top-0 left-0 right-0 h-auto xl:min-h-[332px] md:min-h-[420px] lg:min-h-[350px] z-[2]" />
+      <div className="home-mobile-gradient absolute left-0 right-0 bg-repeat h-[350px] w-full z-[3] sm:hidden block" />
+      <div className={`home-banner absolute top-0 left-0 right-0 h-auto ${banner?.title?.length > 25 ? 'xl:min-h-[450px] lg:min-h-[400px]': 'xl:min-h-[332px] lg:min-h-[350px]'}  md:min-h-[420px] sm:min-h-[450px] z-[2]`} />
       {width <= 768 && (
         <div
           className="sm:bg-cover bg-contain bg-top bg-no-repeat absolute -top-10 left-0 bottom-0 right-0 z-[5]"
-          style={{ backgroundImage: 'url("/rolnew/home/banner-mobile.jpg")' }}
+          style={{ 
+            backgroundImage: banner?.bannerImage ? `url(${banner?.bannerImage}` : 'url("/rolnew/home/banner-mobile.jpg")' 
+          }}
         >
           <div
             className="bg-cover absolute top-0 left-0 bottom-0 right-0 z-[1]"
@@ -79,11 +84,11 @@ export default function Hero2() {
           />
         </div>
       )}
-      <div className="sm:h-full h-full flex flex-col sm:gap-y-0 gap-y-8 justify-center sm:pt-[28px] pt-[24px] z-[10]">
-        <div className="relative z-[5] text-left xl:px-[130px] md:px-[60px] 2xl:px-[130px] px-4 2xl:container 2xl:mx-auto flex lg:flex-row flex-col md:justify-between justify-center items-center md:items-start gap-y-6">
-          <div className="md:w-[350px] lg:w-[450px] xl:w-full w-full">
+      <div className="sm:h-full h-full flex flex-col sm:gap-y-0 gap-y-6 justify-center sm:pt-[28px] pt-[24px]">
+        <div className="relative z-[10] text-left xl:px-[130px] md:px-[60px] 2xl:px-[130px] px-4 2xl:container 2xl:mx-auto flex lg:flex-row flex-col md:justify-between justify-center items-center md:items-start gap-y-6">
+          <div className={`md:w-[350px] lg:w-1/2 xl:w-1/2 `}>
             <h1 className="lg:text-5xl text-3xl font-semibold text-white drop-shadow-lg">
-              Luxury Chauffeur Service
+              {banner?.title ? banner?.title : 'Global Chauffeur Service'}
             </h1>
             <p className="sm:text-lg text-base font-medium text-[#E5EAFA] sm:mt-1 sm:leading-normal leading-tight">
               Your exclusive and dependable chauffeur service indulgence
@@ -151,8 +156,8 @@ export default function Hero2() {
             className="2xl:bg-cover bg-cover bg-top absolute 2xl:bg-no-repeat top-0 left-0 bottom-0 right-0"
             style={{
               backgroundImage:
-                width <= 1536
-                  ? 'url("/rolnew/home/bannerv2.svg")'
+                width <= 1536 && banner?.bannerImage
+                  ? `url(${banner?.bannerImage}`
                   : 'url("/rolnew/home/bannerv2.svg")',
             }}
           />

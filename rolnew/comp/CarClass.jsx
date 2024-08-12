@@ -211,7 +211,7 @@ function CarClass({ hideArrow = true }) {
           <div className="flex flex-col gap-y-16 2xl:container mx-auto pb-4 sm:mb-14 sm:pb-20 sm:border-b border-[#8282824D]">
             <div className="flex flex-col md:flex-row xs:flex-col sm:flex-col">
               <div className="w-full hidden sm:block">
-                <div className="gap-[24px] max-w-[360px] h-[250px] mb-5">
+                <div className="gap-[24px] max-w-[400px] h-[250px] mb-5">
                   <div>
                     <div className="sm:mt-6 mt-2 text-[#B2B2B2] leading-5">
                       <h2 className="sm:text-3xl leading-9 text-left font-medium text-[#FFFFFF]">
@@ -222,7 +222,7 @@ function CarClass({ hideArrow = true }) {
                       </p>
                       <Button
                         onClick={() => openModal()}
-                        className="w-[260px] h-[50px] text-xl mt-4 mb-4 mr-[100px]"
+                        className="w-[300px] h-[50px] text-xl mt-4 mb-4 mr-[100px]"
                       >
                         Book Now
                       </Button>
@@ -272,7 +272,7 @@ function CarClass({ hideArrow = true }) {
               </div>
             </div>
 
-            <div className="hidden sm:flex flex-nowrap gap-7 w-full sm:w-[1100px] h-[165px] justify-center mx-auto sm:gap-14 mb-2 overflow-x-auto overflow-y-hidden scroll no-scroll mt-14">
+            <div className={`hidden sm:flex flex-nowrap gap-7 w-full sm:w-[1100px] h-[165px] justify-center mx-auto sm:gap-14 mb-2 overflow-x-auto overflow-y-hidden scroll no-scroll ${carDetails?.desc?.length > 540 ? 'mt-24' : 'mt-14' }`}>
               {carCatData?.map((car, index) => (
                 <div
                   className="w-[250px] h-[130px] hover:cursor-pointer hover:scale-105 transition ease-in duration-75 mt-2 relative"
@@ -287,7 +287,7 @@ function CarClass({ hideArrow = true }) {
                     objectFit="fit"
                   />
                   <p className="w-full text-center text-base font-medium leading-6 text-[#FFFFFF]">
-                    {car?.name}
+                    {car?.shortName ? car?.name : car?.name}
                   </p>
                 </div>
               ))}

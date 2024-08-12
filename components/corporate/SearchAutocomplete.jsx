@@ -73,11 +73,11 @@ function SearchAutocomplete({
   });
 
   return (
-    <div className="relative" ref={ref}>
-      <div className="relative">
+    <div className="relative !text-gray-700" ref={ref}>
+      <div className="relative !text-gray-700">
         <input
           type="text"
-          className="w-full input input-bordered focus:border-primary focus:outline-none pr-7"
+          className="w-full input input-bordered focus:border-primary focus:outline-none pr-7 !text-gray-700"
           placeholder={placeHolder}
           value={searchTerm}
           onChange={handleInputChange}
@@ -92,7 +92,7 @@ function SearchAutocomplete({
 
       </div>
       {showList && suggestions && suggestions.length > 0 && (
-        <ul className="absolute left-0 right-0 border border-t-0 rounded-lg shadow-lg bg-white max-h-64 overflow-y-auto z-30">
+        <ul className="absolute left-0 right-0 border border-t-0 rounded-lg shadow-lg bg-white !text-gray-700 max-h-64 overflow-y-auto z-30">
           {suggestions.map((suggestion) => (
             // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
             <li
@@ -139,7 +139,7 @@ function SearchAutocomplete({
         </ul>
       )}
       {showList && suggestions.length === 0 && (
-        <ul className="absolute left-0 right-0 border border-t-0 rounded-lg shadow-lg bg-white max-h-64 overflow-y-auto z-30">
+        <ul className="absolute left-0 right-0 border border-t-0 rounded-lg shadow-lg bg-white !text-gray-700 max-h-64 overflow-y-auto z-30">
 
           <li
             className="px-4 py-3 cursor-pointer hover:bg-gray-100 w-full text-center"

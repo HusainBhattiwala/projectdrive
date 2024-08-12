@@ -74,7 +74,9 @@ export const homePageFaq = [
       {
         question:
           'What are the payment options available for me to book a RolDrive chauffeur service?',
-        ans: 'We accept all major credit and debit cards for payments. Contact our finance department for direct bank transfer at booking@roldrive.com',
+        ans: (
+          <p>We accept all major credit and debit cards for payments. Contact our finance department for direct bank transfer at <a href="/" className="text-blue-400">booking@roldrive.com</a></p>
+        ),
       },
     ],
   },

@@ -14,6 +14,10 @@ import EmailLogin from 'components/auth/ShowEmailLogin';
 import BusinessRegistation from 'components/auth/BusinessRegistation';
 import CorporateLogin from 'components/auth/CorporateLogin';
 import CorporateLoginToggle from 'components/auth/CorporateLoginToggle';
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
+
+const metadata = metadataConfig.login;
 // import { Pic } from 'components/ui/Pic';
 
 function Page() {
@@ -125,6 +129,7 @@ function Page() {
       className="grid grid-cols-1 md:grid-cols-9 2xl:min-h-[90svh] bg-[#223544] relative mt-16"
       ref={loginRef}
     >
+      <MetaTags metadata={metadata} />
       {isLoaded && (
         <>
           <div className="col-span-5 w-full h-full relative">

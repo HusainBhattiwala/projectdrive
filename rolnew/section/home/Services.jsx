@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 import Container from 'rolnew/comp/Container';
 import Card from 'rolnew/comp/Card';
 import Title from './Title';
+import Link from 'next/link';
 
 function Services({ servicesData }) {
   return (
@@ -44,13 +47,16 @@ function Services({ servicesData }) {
             />
 
             <div className='grid lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 grid-cols-2 sm:justify-center sm:items-center gap-x-6 gap-y-6 sm:mt-0'>
-              <div className='col-span-1 h-full'>
-                <Card
-                  title='Airport Transfer'
-                  description='Our airport transfers are smooth and effortless. Whether you need to be picked up from your hotel and dropped off at the airport or vice versa, our friendly yet professional chauffeur service will ensure your journey is comfortable and stress-free.'
-                  img='/rolnew/global/card/home/Airport Transfer Home.jpg'
-                />
-              </div>
+
+              <Link href="/airport-transfers">
+                <div className='col-span-1 h-full'>
+                  <Card
+                    title='Airport Transfer'
+                    description='Our airport transfers are smooth and effortless. Whether you need to be picked up from your hotel and dropped off at the airport or vice versa, our friendly yet professional chauffeur service will ensure your journey is comfortable and stress-free.'
+                    img='/rolnew/global/card/home/Airport Transfer Home.jpg'
+                  />
+                </div>
+              </Link>
 
               <div className='col-span-1 h-full'>
                 <Card

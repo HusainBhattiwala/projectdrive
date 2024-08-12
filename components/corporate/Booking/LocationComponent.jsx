@@ -251,7 +251,7 @@ function LocationComponent({
 
   return (
     <>
-      <div className="grid sm:grid-cols-7 grid-cols-1 items-center py-2  px-2">
+      <div className="grid sm:grid-cols-7 grid-cols-1 items-center py-2 px-2 !text-gray-700">
         <div className="col-span-2">
           <P className="text-[#797979] !text-normal !text-sm">
             Pickup Point
@@ -259,8 +259,8 @@ function LocationComponent({
             <span className="text-red-500">*</span>
           </P>
         </div>
-        <div className="col-span-5">
-          <div className="relative" ref={pickUpLocationRef}>
+        <div className="col-span-5 !text-gray-700">
+          <div className="relative !text-gray-700" ref={pickUpLocationRef}>
             <CountriesAutocomplete
               autoCompleteComponent={Input}
               autoCompleteComponentClassName={`!rounded-lg !text-[14px] !pl-3 !pr-8 ${

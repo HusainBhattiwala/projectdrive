@@ -29,9 +29,9 @@ function getMobileNumber(phone, country) {
 function OTP({
   isOtpVerified,
   loginPage,
-  setAuthType = () => {},
+  setAuthType = () => { },
   accountType = 'personal',
-  setShowOTP = () => {},
+  setShowOTP = () => { },
 }) {
   const { setShowLogin, setUserName, setIsNewUser } = useContext(LoginContext);
 
@@ -288,23 +288,6 @@ function OTP({
       onSubmit={handleSubmit(onSubmit)}
       className={`text-left ${!loginPage && 'relative'}`}
     >
-      {showInputs && (
-        <button
-          type="button"
-          className={`absolute ${
-            loginPage ? 'top-5' : 'top-1'
-          } z-[1] text-white flex items-center font-semibold`}
-          onClick={() => {
-            setShowInputs(false);
-            setUserMobile('');
-            setUserCountryCode('');
-            setShowOTP(false);
-          }}
-        >
-          <img src="/rolnew/global/icons/arrow-white.svg" alt="arrow-white" />
-          Back
-        </button>
-      )}
       <div className="relative sm:mb-10 mb-5">
         <ToastContainer
           limit={1}
@@ -325,12 +308,14 @@ function OTP({
             showError={showMobileError}
           />
         )}
+
         {!showInputs && (
-          <div className="flex items-end gap-x-4">
-            <div className="grow">
+          <div className="flex flex-col md:flex-row items-center md:items-end gap-y-4 md:gap-x-4">
+            <div className="w-auto md:w-full">
               <P className="mb-1 font-normal text-xs text-white">
                 Mobile Number
               </P>
+
               <PhoneInput
                 enableSearch
                 autoFormat={false}
@@ -351,16 +336,16 @@ function OTP({
                 onCountryChange={() => {
                   setUserMobile();
                 }}
-                inputClass="!bg-[#FFFFFF0A] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
+                inputClass="!bg-[#223544] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
+                dropdownStyle={{ zIndex: 1000 }} // Ensure dropdown has a high z-index
               />
               {isValidMobileNumber && (
                 <P className=" text-red-500 !text-x">
-                  {' '}
                   Not a valid mobile number
                 </P>
               )}
               {showOTPError && (
-                <P className=" text-red-500 !text-x">OTP not send</P>
+                <P className=" text-red-500 !text-x">OTP not sent</P>
               )}
             </div>
 
@@ -368,84 +353,98 @@ function OTP({
               type="submit"
               kind="primary"
               isLoading={showLoader}
-              className={`w-auto !text-white !text-opacity-100 !capitalize !text-xl ${
-                showLoader && ''
-              }`}
+              className="w-auto md:w-auto !text-white top-0 !text-opacity-100 !capitalize !text-xl mt-4 md:mt-0"
             >
               Get OTP
             </Button>
           </div>
         )}
+
         {showInputs && (
-          <div className="relative">
-            <div className="text-center my-8">
-              <h1 className="text-[#CED5E5] text-center text-3xl not-italic font-bold">
-                One-Time-Password
-              </h1>
-              <p className="text-[#B2B2B2] font-medium text-sm">
-                Your OTP has been sent on your registered mobile number
-              </p>
-              <p className="text-white">
-                {' '}
-                [
-                {userCountryCode}
-                {' '}
-                *** ***
-                {userMobile.slice(-4)}
-                ]
-              </p>
-            </div>
-            <P className="mb-1 font-normal text-xs text-white">OTP</P>
-            <div className="flex flex-col sm:flex-row mt-2 gap-y-2">
-              <div>
-                {inputs.map((input, index) => (
-                  <input
-                    // eslint-disable-next-line react/no-array-index-key
-                    key={index}
-                    type="text"
-                    value={input}
-                    name={`otp${index}`}
-                    onChange={(e) => handleInputChange(e, index)}
-                    onKeyUp={(e) => handleKeyUp(e, index)}
-                    ref={inputRefs.current[index]}
-                    className={`w-12 h-12 text-lg bg-[#FFFFFF0A] bg-opacity-85 !text-[#B2B2B2] border !border-[#E1E1E140] text-center font-bold rounded-md overflow-ellipsis autofill:!bg-[#223544D9] focus:border-primary focus:outline-none rounded-xs mr-4 ${
-                      inputs[index] === '' && !otpError
+          <>
+            <button
+              type="button"
+              className={`${loginPage ? 'top-5' : 'top-1'
+              } z-[1] text-white flex items-center font-semibold`}
+              onClick={() => {
+                setShowInputs(false);
+                setUserMobile('');
+                setUserCountryCode('');
+                setShowOTP(false);
+              }}
+            >
+              <img src="/rolnew/global/icons/arrow-white.svg" alt="arrow-white" />
+              Back
+            </button>
+            <div className="">
+              <div className="text-center my-8">
+                <h1 className="text-[#CED5E5] text-center text-3xl not-italic font-bold">
+                  One-Time-Password
+                </h1>
+                <p className="text-[#B2B2B2] font-medium text-sm">
+                  Your OTP has been sent on your registered mobile number
+                </p>
+                <p className="text-white">
+                  {' '}
+                  [
+                  {userCountryCode}
+                  {' '}
+                  *** ***
+                  {userMobile.slice(-4)}
+                  ]
+                </p>
+              </div>
+              <P className="mb-1 font-normal text-xs text-white">OTP</P>
+              <div className="flex flex-col sm:flex-row mt-2 gap-y-2">
+                <div>
+                  {inputs.map((input, index) => (
+                    <input
+                      // eslint-disable-next-line react/no-array-index-key
+                      key={index}
+                      type="number"
+                      value={input}
+                      name={`otp${index}`}
+                      onChange={(e) => handleInputChange(e, index)}
+                      onKeyUp={(e) => handleKeyUp(e, index)}
+                      ref={inputRefs.current[index]}
+                      className={`w-12 h-12 text-lg bg-[#FFFFFF0A] bg-opacity-85 !text-[#B2B2B2] border !border-[#E1E1E140] text-center font-bold rounded-md overflow-ellipsis autofill:!bg-[#223544D9] focus:border-primary focus:outline-none rounded-xs mr-4 ${inputs[index] === '' && !otpError
                         ? ' border-red-500 border-2'
                         : ''
-                    }`}
-                  />
-                ))}
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+              <Button
+                type="submit"
+                kind="primary"
+                isLoading={showLoader}
+                className={`w-full mt-4 ${showLoader && ''}`}
+              >
+                Proceed
+              </Button>
+
+              <div className="text-white mt-8 text-center">
+                {seconds > 0 && (
+                  <P>
+                    {seconds}
+                    {' '}
+                    Seconds remaining
+                  </P>
+                )}
+                {!seconds && (
+                  <div onClick={resendOTP}>
+                    <P className="font-medium text-[#CED5E5] text-lg text-center">
+                      Didn’t receive OTP?
+                      <span className="cursor-pointer text-[#FDE8E1]">
+                        Resend
+                      </span>
+                    </P>
+                  </div>
+                )}
               </div>
             </div>
-            <Button
-              type="submit"
-              kind="primary"
-              isLoading={showLoader}
-              className={`w-full mt-4 ${showLoader && ''}`}
-            >
-              Proceed
-            </Button>
-
-            <div className="text-white mt-8 text-center">
-              {seconds > 0 && (
-              <P>
-                {seconds}
-                {' '}
-                Seconds remaining
-              </P>
-              )}
-              {!seconds && (
-                <div onClick={resendOTP}>
-                  <P className="font-medium text-[#CED5E5] text-lg text-center">
-                    Didn’t receive OTP?
-                    <span className="cursor-pointer text-[#FDE8E1]">
-                      Resend
-                    </span>
-                  </P>
-                </div>
-              )}
-            </div>
-          </div>
+          </>
         )}
       </div>
     </form>

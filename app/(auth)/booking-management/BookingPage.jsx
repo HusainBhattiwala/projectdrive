@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import FullPage from 'components/BookingManagement/FullPage';
+// import FullPage2 from 'components/BookingManagement/FullPage2';
 import AuthWrap from '../AuthWrap';
 
 export const metadata = {
@@ -20,6 +21,10 @@ function BookingPage() {
         isShowNewBooking={showNewBooking}
         setNewBooking={setShowNewBooking}
       />
+      {/* <FullPage2
+        isShowNewBooking={showNewBooking}
+        setNewBooking={setShowNewBooking}
+      /> */}
     </AuthWrap>
   );
 }

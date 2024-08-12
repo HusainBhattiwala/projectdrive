@@ -21,7 +21,7 @@ const urls = [
   { priority: '0.9', route: 'hourly-chauffeur-service' },
   { priority: '0.9', route: 'chauffeur-service-in-london' },
   { priority: '0.9', route: 'event-chauffeur-service-in-london' },
-  { priority: '0.9', route: 'hire-a-driver-for-long-distance-uk' },
+  { priority: '0.9', route: 'long-distance-chauffeur-service-in-london' },
   { priority: '0.9', route: 'mercedes-sprinter-hire-in-london' },
   { priority: '0.9', route: 'mercedes-s-class-chauffeur-in-london' },
   { priority: '0.9', route: 'mercedes-v-class-london' },

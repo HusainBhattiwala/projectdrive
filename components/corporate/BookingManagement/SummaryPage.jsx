@@ -186,7 +186,7 @@ function SummaryPage() {
   }, [bookingList, newSocket, setBookingList]);
   // Auto update
   return (
-    <div className={`pb-2 md:pb-8 w-auto relative ${showNewBooking || showViewBooking ? 'w-full' : 'min-w-[1000px]'} `}>
+    <div className={`pb-2 md:pb-8 w-auto relative text-gray-700 ${showNewBooking || showViewBooking ? 'w-full' : 'min-w-[1000px]'} `}>
       {
         showNewBooking || showViewBooking
           ? showNewBooking ? <FullPage />

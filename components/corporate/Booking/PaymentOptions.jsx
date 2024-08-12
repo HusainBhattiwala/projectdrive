@@ -81,9 +81,9 @@ function PaymentOptions({
             optionRenderer={paymentOptionRenderer}
             options={paymentOptins || []}
             onChange={(item) => setPaymentType(item)}
-            className="!w-full"
+            className="!w-full !text-gray-700"
           >
-            {paymentType?.label}
+            <span className="!text-gray-700">{paymentType?.label}</span>
           </Dropdown>
         </div>
       </div>
@@ -109,7 +109,7 @@ function PaymentOptions({
                         type="radio"
                         name="cardtype"
                         value="token"
-                        className="radio radio-primary !w-[1.2rem] !h-[1.2rem]"
+                        className="radio radio-primary !w-[1.2rem] !h-[1.2rem] !text-gray-700"
                         checked={cardType === 'token'}
                         onChange={handleCardTypeChange}
                       />
@@ -129,7 +129,7 @@ function PaymentOptions({
                         type="radio"
                         name="cardtype"
                         value="new-card"
-                        className="radio radio-primary !w-[1.2rem] !h-[1.2rem]"
+                        className="radio radio-primary !w-[1.2rem] !h-[1.2rem] !text-gray-700"
                         checked={cardType === 'new-card'}
                         onChange={handleCardTypeChange}
                       />

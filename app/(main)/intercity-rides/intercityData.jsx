@@ -39,7 +39,15 @@ export const intercityData = {
       dropdown1: 'Choose Starting Location',
       dropdown2: 'Choose Destination',
     },
-    desc: "Our intercity transfer services provide seamless travel between cities, perfect for business or leisure. Whether you're attending a meeting or exploring a new city, we ensure a comfortable journey in luxurious vehicles, allowing you to relax or work while moving efficiently from one city to another.",
+    desc: (
+      <p>
+        Our intercity
+        {' '}
+        <a href="/long-distance-chauffeur-service-in-london" className="text-blue-400">long distance Chauffeur hire in London</a>
+        {' '}
+        transfer services provide seamless travel between cities, perfect for business or leisure. Whether you’re attending a meeting or exploring a new city, we ensure a comfortable journey in luxurious vehicles, allowing you to relax or work while moving efficiently from one city to another.
+      </p>
+    ),
     list: [
       {
         id: 1,

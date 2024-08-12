@@ -22,15 +22,15 @@ const filterList = [
 
 function FleetFilter({ filterFleet, isActive, removeFilter }) {
   return (
-    <div className="flex items-center pb-5 overflow-auto sm:justify-center sm:pb-0">
+    <div className="flex items-center pb-5 justify-center sm:pb-0">
       {filterList
         && filterList.map((filter) => (
           <Button
             key={filter.label}
             className={`${
               isActive === filter.label
-                ? 'btn-primary !rounded-full font-normal md:pl-8 md:pr-4 md:mr-5 mr-3'
-                : 'bg-[#223544] btn-outline !rounded-full font-semibold !text-black md:px-8 border-gray-300 border-1 mr-3 md:mr-5 hover:!text-white hover:!bg-[#223544] scale-95 hover:scale-100'
+                ? 'btn-primary !rounded-full font-normal md:pl-4 md:pr-4 md:mr-3 mr-1'
+                : 'bg-[#223544] btn-outline !rounded-full font-semibold !text-black md:px-8 border-gray-300 border-1 mr-1 md:mr-5 hover:!text-white hover:!bg-[#223544] scale-95 hover:scale-100'
             }`}
           >
             <span

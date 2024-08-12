@@ -33,7 +33,7 @@ function Datepicker({
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 rounded-t-xl sm:absolute z-[999999] !bg-[#223544] sm:-top-56 sm:left-auto sm:right-auto sm:rounded-md w-full min-w-[300px] md:max-w-[400px]">
+    <div className="fixed bottom-0 left-0 right-0 rounded-t-xl sm:absolute z-[99999] !bg-[#223544] sm:-top-56 sm:left-auto sm:right-auto sm:rounded-md w-full min-w-[300px] md:max-w-[400px]">
       <div className="relative shadow-lg shadow-[#223544D9] !font-manrope">
         <Calendar
           className="w-full rounded-t-md !border-0 !border-b !border-[#223544D9]"

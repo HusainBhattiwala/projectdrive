@@ -520,10 +520,10 @@ input[type="checkbox"] {
 .car-img {
   width: 264px;
   height: 102px;
-  padding: 28.6px 8.63px 0px 0px;
+  /* padding: 28.6px 8.63px 0px 0px; */
   gap: 0px;
   border-radius: 27.65px 27.65px 27.65px 230.45px;
-  opacity: 0px;
+  /* opacity: 0px; */
   background: #111e2866;
 }
 

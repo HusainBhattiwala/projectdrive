@@ -12,19 +12,21 @@ import Services from "rolnew/section/home/Services";
 import ServicesFaq from "rolnew/comp/ServicesFaq";
 import ServiceOfferings from "rolnew/comp/ServiceOfferings";
 import { airportData } from "./airportData";
-
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
 
 const airports = [
-  {"name" : "heathrow", "value" : "airport-transfer-heathrow"},
-  {"name" : "gatwick", "value" : "airport-transfer-gatwick"},
-  {"name" : "london-city", "value" : "airport-transfer-london-city"},
-  {"name" : "londonsouthend", "value" : "airport-transfer-london-southend"},
-  {"name" : "londonstansted", "value" : "airport-transfer-london-stansted"},
-  {"name" : "luton", "value" : "airport-transfer-luton"},
+  { "name": "heathrow", "value": "airport-transfer-heathrow", "meta": "heathrowTransfer" },
+  { "name": "gatwick", "value": "airport-transfer-gatwick", "meta": "gatwickTransfer" },
+  { "name": "londoncity", "value": "airport-transfer-london-city", "meta": "londonCityTransfer" },
+  { "name": "londonsouthend", "value": "airport-transfer-london-southend", "meta": "southendTransfer" },
+  { "name": "londonstansted", "value": "airport-transfer-london-stansted", "meta": "stanstedTransfer" },
+  { "name": "luton", "value": "airport-transfer-luton", "meta": "lutonTransfer" },
 ];
 
 function AirportPage() {
   const [pageData, setPageData] = useState({});
+  const [metaContent, setMetaContent] = useState({});
   const pathName = usePathname();
   const router = useRouter();
 
@@ -38,11 +40,13 @@ function AirportPage() {
     } else {
       console.log(airportData[url]);
       setPageData(airportData[airport.name]);
+      setMetaContent(metadataConfig[airport.meta]);
     }
     console.log(pageData);
   }, [pathName, router]);
   return (
     <>
+      <MetaTags metadata={metaContent} />
       <Banner pageData={pageData} />
       <AirportBookingFlow pageData={pageData} />
       <OurFeet showBooking pageData={pageData} />

@@ -18,9 +18,9 @@ function FAQ({ faq }) {
       <FleetFaqCat categorys={faq} setFaqCat={setFaqCat} />
       {selectedCat.length > 0 && <Collaspe list={selectedCat} />}
 
-      <button className="mt-10 text-[18px] font-medium text-[#828282] pop">
+      {/* <button className="mt-10 text-[18px] font-medium text-[#828282] pop">
         View All
-      </button>
+      </button> */}
     </Container>
   );
 }

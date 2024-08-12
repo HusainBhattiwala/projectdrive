@@ -90,26 +90,26 @@ function DropdownOption({ user }) {
   };
 
   return (
-    <div className="absolute right-0 p-4 overflow-hidden shadow-lg dropdown-content menu bg-base-100 rounded-box w-72">
+    <div className="absolute right-0 p-4 shadow-lg dropdown-content menu bg-base-100 rounded-box w-72">
       <div className="flex items-center gap-3 w-full">
         {/* <img
           src={user}
           className="w-10 h-10 rounded-full"
           alt="profile pic"
         /> */}
-        <div className="w-10 h-10 rounded-full bg-pry-600 text-white text-lg text-bold relative">
-          <p className="absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2">
+        <div className="w-10 h-10 rounded-full bg-pry-600 text-lg text-bold relative">
+          <p className="absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 !text-white">
             {user?.[0] || user?.userfname?.[0]}
           </p>
         </div>
-        <div className="">
+        <div className="!text-gray-800">
           {typeof user === 'string' ? user : user?.userfname}
-          <p className="max-w-max">{user?.email}</p>
+          <p className="max-w-max !text-gray-800">{user?.email}</p>
         </div>
       </div>
       <div className="flex items-center gap-3 w-full">
         <div className="p-2 ml-10">
-          <p className="">
+          <p className="!text-gray-800">
             <Link href="/corporate/corporate-profile">My Profile</Link>
           </p>
         </div>

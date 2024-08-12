@@ -1,12 +1,15 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import DownArrowBox from './DownArrowBox';
+// import { Montserrat } from 'next/font/google';  // Updated import
+// const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] });
 
 function ServicesBanner({
-  mainTitle,
   mainDescription,
   backgroundImage,
   title,
+  mainTitle,
   description,
   hideScrollDown,
 }) {
@@ -25,7 +28,8 @@ function ServicesBanner({
     };
   }, []);
   return (
-    <div className='relative mt-16 flex flex-col w-full 2xl:min-h-[90svh] xl:min-h-[560px] md:min-h-[500px] min-h-[500px] max-h-[700px]'>
+    // <div className='relative mt-16 flex flex-col w-full 2xl:min-h-[90svh] xl:min-h-[560px] md:min-h-[500px] min-h-[500px] max-h-[700px]'>
+      <div className='relative flex flex-col w-full 2xl:min-h-[90svh] xl:min-h-[560px] md:min-h-[500px] min-h-[500px] max-h-[700px]'>
       <div
         className='absolute w-full z-[5] flex flex-col justify-center items-center px-5 text-center'
         style={{
@@ -41,6 +45,7 @@ function ServicesBanner({
         <p className='sm:py-1 text-[#CED5E5] font-normal sm:text-sm text-xs leading-tight'>
           {description}
         </p>
+
         <div className='flex sm:flex-row flex-col items-center gap-x-4 sm:pt-0'>
           <p className='text-[#CED5E5] sm:text-sm text-xs'>Contact us now</p>
           <div className='flex sm:gap-x-[12px] gap-x-1.5 justify-between'>
@@ -64,7 +69,8 @@ function ServicesBanner({
 
       <div className='service-home-banner absolute sm:top-0 -top-6 left-0 right-0 h-auto sm:min-h-[240px] min-h-[328px] z-[2]' />
       <div className='sm:h-full h-full flex flex-col justify-center items-center sm:pt-[28px] pt-5'>
-        <div className='relative z-[5] sm:text-center text-left px-5'>
+        {/* <div className={`relative z-[5] sm:text-center text-left px-5 ${montserrat.className}`}> */}
+        <div className={`relative z-[5] sm:text-center text-left px-5`}>
           <h1 className='lg:text-5xl text-3xl leading-[1] font-semibold text-white drop-shadow-[25%]'>
             {mainTitle}
           </h1>
@@ -95,28 +101,12 @@ function ServicesBanner({
           />
         )}
       </div>
-      {!hideScrollDown && (
-        <div className='sm:w-[74px] sm:h-[74px] w-12 h-12 absolute sm:-bottom-[36px] -bottom-6 left-2/4 -translate-x-2/4 z-10 bg-[#2F4456] flex items-center justify-center flex-col p-4 border border-[#FFFFFF] border-opacity-20 rounded-lg cursor-pointer'>
-          <div className='animate-bounce'>
-            <img
-              alt='arrow-down'
-              className='w-8 h-8 sm:w-8 sm:h-8 sm:mt-4'
-              src='/rolnew/global/icons/arrow-down.svg'
-            />
-            <img
-              alt='arrow-down'
-              className='w-8 h-8 -mt-10 sm:w-8 sm:h-8 sm:-mt-5'
-              src='/rolnew/global/icons/arrow-down.svg'
-            />
-            <img
-              alt='arrow-down'
-              className='w-8 h-8 -mt-10 sm:w-8 sm:h-8 sm:-mt-5'
-              src='/rolnew/global/icons/arrow-down.svg'
-            />
-          </div>
-        </div>
-      )}
-    </div>
+      {
+        !hideScrollDown && (
+          <DownArrowBox />
+        )
+      }
+    </div >
   );
 }
 

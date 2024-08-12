@@ -192,7 +192,7 @@ function BookingCard({ item, sendMail, sendMailLoader }) {
   };
 
   return (
-    <div className={`divide-x divide-gray-200 flex justify-items-center w-full py-5 mb-3 ${getBackGround(item?.ride_status)} mt-1 border-[0.60px] rounded-lg lg:flex-row flex-nowrap overflow-hidden`} key={item?.booking_id}>
+    <div className={`divide-x divide-gray-200 flex justify-items-center w-full py-5 mb-3 ${getBackGround(item?.ride_status)} mt-1 border-[0.60px] rounded-lg lg:flex-row flex-nowrap overflow-hidden text-gray-700`} key={item?.booking_id}>
       <div className="basis-[20%] flex flex-col items-center justify-center relative box-border text-center px-2">
         <div className="text-neutral-700 ! font-bold py-2 underline text-xs">
           <Link href={`/trip-details?booking-id=${item?.booking_id}&activity=1`}>

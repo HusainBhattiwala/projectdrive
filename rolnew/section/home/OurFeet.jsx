@@ -77,7 +77,7 @@ import { FleetContext } from 'context/FleetContext';
 //   },
 // ];
 
-function OurFeet({ showBooking,pageData }) {
+function OurFeet({ showBooking, pageData }) {
   const { setCarDetails, carCatData, setCarCatData } = useContext(FleetContext);
 
   useEffect(() => {

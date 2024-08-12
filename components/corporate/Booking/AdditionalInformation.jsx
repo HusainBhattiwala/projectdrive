@@ -6,7 +6,7 @@ function AdditionalInformation({
   adultNo, setAdultNo, infantNo, setInfantNo, childNo, setChildNo, bagNo, setBagNo, adultRef, showAdultError, setShowAdultError,
 }) {
   return (
-    <div className="grid sm:grid-cols-7 grid-cols-1 py-2 sm:px-4 px-2 items-center">
+    <div className="grid sm:grid-cols-7 grid-cols-1 py-2 sm:px-4 px-2 items-center !text-gray-700">
       <div className="col-span-2">
         <P className="text-[#797979] !text-normal !text-sm pl-2 capitalize">
           Additional Information

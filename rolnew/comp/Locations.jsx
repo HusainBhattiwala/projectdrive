@@ -6,7 +6,7 @@ import Pic from 'rolnew/util/Pic';
 
 function Locations({ showPadding }) {
   return (
-    <Container className={`bg-[#223544] ${showPadding ? 'sm:py-[60px] py-8' : 'sm:pb-[110px] pb-8'}   text-center`}>
+    <Container className={`bg-[#223544] ${showPadding ? 'sm:py-[60px] py-8' : 'sm:pb-[110px] pt-8 pb-8'}   text-center`}>
       <div className="grid sm:grid-cols-5 grid-cols-1 gap-x-10 gap-y-6 items-center">
         <div className="sm:col-span-3 col-span-1">
           <h3 className="text-[#B2B2B2] text-2xl leading-7 sm:text-left text-center font-medium">Looking for more locations?</h3>

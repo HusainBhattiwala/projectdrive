@@ -8,6 +8,7 @@ import { toast, ToastContainer } from "react-toastify";
 import Button from "rolnew/ui/Button";
 import Input from "rolnew/ui/Input";
 import Pic from "rolnew/util/Pic";
+import SocialLinks from "./SocialLinks";
 
 function ContactDetails() {
   const [width, setWidth] = useState();
@@ -97,48 +98,7 @@ function ContactDetails() {
           </div>
           <div className="flex flex-col gap-y-2 items-start">
             <h4 className="text-2xl text-[#B2B2B2]">Connect with us</h4>
-            <div className="flex gap-x-4">
-              <a href="roldrive.com" className="w-6 h-6">
-                <Pic
-                  alt="location"
-                  className="mx-auto"
-                  src="/rolnew/global/icons/facebook.svg"
-                  objectFit="cover"
-                />
-              </a>
-              <a href="roldrive.com" className="w-6 h-6">
-                <Pic
-                  alt="location"
-                  className="mx-auto"
-                  src="/rolnew/global/icons/twitterx.svg"
-                  objectFit="cover"
-                />
-              </a>
-              <a href="roldrive.com" className="w-6 h-6">
-                <Pic
-                  alt="location"
-                  className="mx-auto"
-                  src="/rolnew/global/icons/instagram.svg"
-                  objectFit="cover"
-                />
-              </a>
-              <a href="roldrive.com" className="w-6 h-6">
-                <Pic
-                  alt="location"
-                  className="mx-auto"
-                  src="/rolnew/global/icons/pinterest.svg"
-                  objectFit="cover"
-                />
-              </a>
-              <a href="roldrive.com" className="w-6 h-6">
-                <Pic
-                  alt="location"
-                  className="mx-auto"
-                  src="/rolnew/global/icons/linkedin.svg"
-                  objectFit="cover"
-                />
-              </a>
-            </div>
+            <SocialLinks />
           </div>
         </div>
         <div className="col-span-1">

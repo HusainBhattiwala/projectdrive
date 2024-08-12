@@ -278,7 +278,7 @@ function Header() {
             || pathName === '/mercedes-v-class-london'
             || pathName === '/luxury-chauffeur-service-mayfair'
             || pathName === '/luxury-taxi-service-london'
-            || pathName === '/hire-a-driver-for-long-distance-uk'
+            || pathName === 'long-distance-chauffeur-service-in-london'
             || pathName === '/business-solution'
             || pathName === '/executive-chauffeur-service-london')
           && reachedTop
@@ -326,7 +326,7 @@ function Header() {
                       || pathName === '/mercedes-sprinter-hire-in-london'
                       || pathName === '/mercedes-s-class-chauffeur-in-london'
                       || pathName === '/luxury-taxi-service-london'
-                      || pathName === '/hire-a-driver-for-long-distance-uk'
+                      || pathName === '/long-distance-chauffeur-service-in-london'
                       || pathName === '/executive-chauffeur-service-london')
                     && reachedTop
                     && !showToggledNav
@@ -384,7 +384,7 @@ function Header() {
                             || pathName
                               === '/mercedes-s-class-chauffeur-in-london'
                             || pathName === '/luxury-taxi-service-london'
-                            || pathName === '/hire-a-driver-for-long-distance-uk'
+                            || pathName === '/long-distance-chauffeur-service-in-london'
                             || pathName
                               === '/executive-chauffeur-service-london')
                           && reachedTop
@@ -522,7 +522,7 @@ function Header() {
                       || pathName === '/mercedes-sprinter-hire-in-london'
                       || pathName === '/mercedes-s-class-chauffeur-in-london'
                       || pathName === '/luxury-taxi-service-london'
-                      || pathName === '/hire-a-driver-for-long-distance-uk'
+                      || pathName === '/long-distance-chauffeur-service-in-london'
                       || pathName === '/executive-chauffeur-service-london')
                     && reachedTop
                     && !showToggledNav
@@ -589,7 +589,7 @@ function Header() {
                           || pathName
                             === '/mercedes-s-class-chauffeur-in-london'
                           || pathName === '/luxury-taxi-service-london'
-                          || pathName === '/hire-a-driver-for-long-distance-uk'
+                          || pathName === '/long-distance-chauffeur-service-in-london'
                           || pathName === '/executive-chauffeur-service-london')
                         && reachedTop
                         ? '!text-white md:!font-[500]'
@@ -640,7 +640,7 @@ function Header() {
                           || pathName
                             === '/mercedes-s-class-chauffeur-in-london'
                           || pathName === '/luxury-taxi-service-london'
-                          || pathName === '/hire-a-driver-for-long-distance-uk'
+                          || pathName === '/long-distance-chauffeur-service-in-london'
                           || pathName === '/executive-chauffeur-service-london')
                         && reachedTop
                         ? '!text-white md:!font-[500]'
@@ -726,7 +726,7 @@ function Header() {
                           || pathName
                             === '/mercedes-s-class-chauffeur-in-london'
                           || pathName === '/luxury-taxi-service-london'
-                          || pathName === '/hire-a-driver-for-long-distance-uk'
+                          || pathName === 'long-distance-chauffeur-service-in-london'
                           || pathName === '/executive-chauffeur-service-london')
                         && reachedTop
                           ? '!text-white'

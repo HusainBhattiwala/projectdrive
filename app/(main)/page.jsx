@@ -11,18 +11,29 @@ import OurPresence from 'rolnew/section/home/OurPresence';
 import Services from 'rolnew/section/home/Services';
 import TrustedPartner from 'rolnew/section/home/TrustedPartner';
 import { homePageFaq } from 'static/faq';
+import BookModal from 'rolnew/comp/BookModal';
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
 import BookingBanner from './BookingBanner';
 
-export const metadata = {
-  title: 'Roldrive',
-  description: 'Welcome to roldrive :)',
-};
+const metadata = metadataConfig.home;
 
 const ourServicesData = {
   subTitle: 'Our Services',
   action: 'Book Now',
   mainTitle: 'Hire A Chauffeur Service For Your Every Need',
-  desc: 'Indulge in an unparalleled chauffeured luxury car rental service with our customised hire a chauffeur service designed to meet your unique requirements. Whether youre in pursuit of seamless airport transfers, corporate travel, or special events; our hourly chauffeur services are crafted to upgrade your journey. Embark on a journey with a full day chauffeur hire service where every detail is tailored to perfection. Browse our services now and experience the RolDrive difference with our executive chauffeur services.',
+  desc: (
+    <p>
+      Indulge in an unparalleled chauffeured luxury car rental service with our customised hire a chauffeur service designed to meet your unique requirements. Whether youre in pursuit of seamless airport transfers, corporate travel, or special events; our
+      <a href="/hourly-chauffeur-service" className="text-blue-400"> hourly chauffeur services </a>
+      are crafted to upgrade your journey. Embark on a journey with a
+      <a href="/full-day-chauffeur-hire" className="text-blue-400"> full day chauffeur hire </a>
+      service where every detail is tailored to perfection. Browse our services now or read our
+      <a href="https://blog.roldrive.com/" className="text-blue-400"> travel blogs </a>
+      and experience the RolDrive difference with our
+      <a href="/executive-chauffeur-service-london" className="text-blue-400"> executive chauffeur service in London.</a>
+    </p>
+  ),
   cardData: [
     {
       img: '/rolnew/global/card/home/Airport Transfer Home.jpg',
@@ -66,6 +77,7 @@ const ourServicesData = {
 export default function page() {
   return (
     <>
+      <MetaTags metadata={metadata} />
       <BookingBanner />
       <DownloadOurApp />
       <Counts />
@@ -79,6 +91,7 @@ export default function page() {
       <Destinations />
       <FAQ faq={homePageFaq} />
       <Contact />
+      <BookModal />
     </>
   );
 }

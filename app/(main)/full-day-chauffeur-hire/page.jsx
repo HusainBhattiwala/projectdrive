@@ -4,11 +4,17 @@ import Locations from 'rolnew/section/home/Locations';
 import Services from 'rolnew/section/home/Services';
 import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
+import BookModal from 'rolnew/comp/BookModal';
 import BookingBanner from '../BookingBanner';
 
-export const metadata = {
-  title: 'Roldrive',
-  description: 'Welcome to roldrive :)',
+const metadata = metadataConfig.fullDayChauffeurLondon;
+
+const banner = {
+  title: 'Full Day Chauffeur Hire',
+  bannerImage: '/rolnew/global/landing/full-day-chauffeur-hire.jpg',
+  isLandingPage: true,
 };
 
 const ServicesData = {
@@ -21,37 +27,37 @@ const ServicesData = {
       img: '/rolnew/global/card/home/Airport Transfer Home.jpg',
       title: 'Airport Transfers',
       cardDesc:
-                'Our airport transfers are smooth and effortless. Whether you need to be picked up from the hotel and dropped off at the airport or vice versa, our friendly and courteous professional chauffeurs will ensure your journey is comfortable and stress free.',
+        'Our airport transfers are smooth and effortless. Whether you need to be picked up from the hotel and dropped off at the airport or vice versa, our friendly and courteous professional chauffeurs will ensure your journey is comfortable and stress free.',
     },
     {
       img: '/rolnew/global/card/card-image2.jpg',
       title: 'Corporate Chauffeurs',
       cardDesc:
-                'With RolDrive, you’ll make a lasting impression from the moment you step out of our chauffeur driven vehicles. Let us help you make a statement and command the boardroom. Our corporate chauffeurs are dependable, efficient, and dedicated to exceeding your expectations.',
+        'With RolDrive, you’ll make a lasting impression from the moment you step out of our chauffeur driven vehicles. Let us help you make a statement and command the boardroom. Our corporate chauffeurs are dependable, efficient, and dedicated to exceeding your expectations.',
     },
     {
       img: '/rolnew/global/card/home/Wedding Transfer Home.jpg',
       title: 'Wedding Transfers',
       cardDesc:
-                'We understand the importance of making your special day flawless, which is why we offer a range of chauffeur driven vehicles to choose from, including luxury brands such as Rolls Royce, Maybach and Bentley. Our meticulously maintained vehicles add an extra touch of elegance to your celebration.',
+        'We understand the importance of making your special day flawless, which is why we offer a range of chauffeur driven vehicles to choose from, including luxury brands such as Rolls Royce, Maybach and Bentley. Our meticulously maintained vehicles add an extra touch of elegance to your celebration.',
     },
     {
       img: '/rolnew/global/card/home/Private Jet Transfer Home.jpg',
       title: 'Private Jet Transfers',
       cardDesc:
-                'Our experienced private jet chauffeur service will safely transport you to and from the tarmac of your private jet or helicopter driving you to your hotel or business meeting. Our fleet is equipped with complementary packages to ensure a comfortable and enjoyable experience.',
+        'Our experienced private jet chauffeur service will safely transport you to and from the tarmac of your private jet or helicopter driving you to your hotel or business meeting. Our fleet is equipped with complementary packages to ensure a comfortable and enjoyable experience.',
     },
     {
       img: '/rolnew/global/card/home/Event Transfer Home.jpg',
       title: 'Event Transfers',
       cardDesc:
-                'We provide transportation services for social, cultural and sports events in and around the city. Whether you’re attending a private party or a large scale gathering, our event transfer cars and stylish, sophisticated and comfortable, ensuring a safe and special experience.',
+        'We provide transportation services for social, cultural and sports events in and around the city. Whether you’re attending a private party or a large scale gathering, our event transfer cars and stylish, sophisticated and comfortable, ensuring a safe and special experience.',
     },
     {
       img: '/rolnew/global/card/home/Sightseeing Tours Home.jpg',
       title: 'Sightseeing Tours',
       cardDesc:
-                'With our hourly and full day chauffeur service, you can select from our extensive and diverse fleet of vehicles to ensure that your journey is comfortable and memorable. Experience the luxurious and stress free transportation solutions of RolDrive as our knowledgeable chauffeurs act as your guide on your trips.',
+        'With our hourly and full day chauffeur service, you can select from our extensive and diverse fleet of vehicles to ensure that your journey is comfortable and memorable. Experience the luxurious and stress free transportation solutions of RolDrive as our knowledgeable chauffeurs act as your guide on your trips.',
     },
   ],
 };
@@ -85,8 +91,7 @@ const faqData = {
       ans: (
         <p>
           For full day chauffeur hire, RolDrive offers a range of vehicles including luxury sedans, SUVs, and spacious vans to suit your needs. Visit RolDrive’s
-          <a href="/fleet" className="text-blue-500">fleet</a>
-          {' '}
+          <a href="/fleet" className="text-blue-500"> fleet </a>
           section for the complete list of vehicles available, ensuring comfort and style for your journey.
         </p>
       ),
@@ -97,8 +102,7 @@ const faqData = {
       ans: (
         <p>
           To book a chauffeur for the day service, visit the
-          <a href="/" className="text-blue-500">Book Now</a>
-          {' '}
+          <a href="/login" className="text-blue-500"> Book Now </a>
           section on our website or drop your email ID. We’ll promptly get in touch to arrange your booking. Enjoy a seamless and luxurious travel experience with us!
         </p>
       ),
@@ -135,10 +139,8 @@ const offeringData = {
       title: 'How can clients book a RolDrive full day chauffeur hire, and what is the booking process?',
       desc: (
         <p className="text-[#B2B2B2]">
-          Clients can book a RolDrive full day chauffeur hire by using our online booking engine, which allows you to select your vehicle and customise your itinerary. For a personalised experience,
-          {' '}
-          <a href="/contact-us" className="text-blue-500">contact us</a>
-          {' '}
+          Clients can book a RolDrive full day chauffeur hire by using our online booking engine, which allows you to select your vehicle and customise your itinerary. For a personalised experience
+          <a href="/contact-us" className="text-blue-500"> contact us </a>
           directly to receive a free tailored quote. For added convenience, download our app to manage bookings and access real-time updates. Our team is dedicated to ensuring a seamless booking process and providing exceptional service for your full day chauffeur needs.
         </p>
       ),
@@ -156,9 +158,7 @@ const offeringData = {
       desc: (
         <p className="text-[#B2B2B2]">
           Yes, RolDrive offers customisation options for your chauffeur service for the day. You can select from our extensive
-          {' '}
-          <a href="/" className="text-blue-500">fleet of vehicles</a>
-          {' '}
+          <a href="/fleet" className="text-blue-500"> fleet of vehicles </a>
           to match your preferences, including luxury cars, SUVs, and more. Additionally, we provide various special amenities to enhance your experience, such as personalised refreshments, in-car entertainment, and specific vehicle features. Whether you need a chauffeur for a special event, business meeting, or personal travel, RolDrive ensures that every detail is tailored to your needs. Contact us to discuss your requirements and customise your RolDrive chauffeur for the day to ensure a perfect and memorable journey.
         </p>
       ),
@@ -185,13 +185,15 @@ const offeringData = {
 export default function page() {
   return (
     <>
-      <BookingBanner />
+      <MetaTags metadata={metadata} />
+      <BookingBanner banner={banner} />
       <Services servicesData={ServicesData} />
       <Contact />
       <Locations />
       <ClientTestimonial />
       <ServicesFaq faqData={faqData} />
       <ServiceOfferings servicesData={offeringData} />
+      <BookModal />
     </>
   );
 }

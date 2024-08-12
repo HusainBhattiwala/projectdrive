@@ -16,19 +16,20 @@ import Landmark from "rolnew/section/cities/LandMark";
 import { cityData } from "./cityData";
 import BookModal from "rolnew/comp/BookModal";
 import ServiceOfferings from "rolnew/comp/ServiceOfferings";
-
-// const cities = ["chauffeur-service-in-london", "chauffeur-service-in-dubai", "chauffeur-service-in-new-york", "chauffeur-service-in-paris", "chauffeur-service-in-tokyo"];
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
 
 const cities = [
-  {"name" : "london", "value" : "chauffeur-service-in-london"},
-  {"name" : "dubai", "value" : "chauffeur-service-in-dubai"},
-  {"name" : "newyork", "value" : "chauffeur-service-in-new-york"},
-  {"name" : "paris", "value" : "chauffeur-service-in-paris"},
-  {"name" : "tokyo", "value" : "chauffeur-service-in-tokyo"},
+  { "name": "london", "value": "chauffeur-service-in-london", "meta": "londonChauffeur" },
+  { "name": "dubai", "value": "chauffeur-service-in-dubai", "meta": "dubaiChauffeur" },
+  { "name": "newyork", "value": "chauffeur-service-in-new-york", "meta": "newYorkChauffeur" },
+  { "name": "paris", "value": "chauffeur-service-in-paris", "meta": "parisChauffeur" },
+  { "name": "tokyo", "value": "chauffeur-service-in-tokyo", "meta": "tokyoChauffeur" },
 ];
 
 function CityPage() {
   const [pageData, setPageData] = useState({});
+  const [metaContent, setMetaContent] = useState({});
   const pathName = usePathname();
   const router = useRouter();
 
@@ -43,10 +44,12 @@ function CityPage() {
 
       console.log(cityData[url]);
       setPageData(cityData[city.name]);
+      setMetaContent(metadataConfig[city.meta]);
     }
   }, [pathName, router]);
   return (
     <>
+      <MetaTags metadata={metaContent} />
       <Banner pageData={pageData} />
       <div className="bg-[#11202D] py-12">
         <TrustedPartners
@@ -55,7 +58,7 @@ function CityPage() {
           showTitle={false}
         />
       </div>
-      <OurFeet showBooking />
+      <OurFeet showBooking pageData={pageData} />
       <Landmark pageData={pageData} />
       {/* <Airports airportsData={pageData?.airportsData} show={pageData?.airportsData?.show}/> */}
       <Locations showPadding />

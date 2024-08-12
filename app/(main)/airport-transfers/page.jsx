@@ -1,5 +1,7 @@
 'use client';
 
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
 import ServicesBanner from 'rolnew/comp/ServicesBanner';
 import TopPicks from 'rolnew/comp/TopPicks';
 import TrustedPartners from 'rolnew/comp/TrustedPartners';
@@ -18,6 +20,7 @@ import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
 export default function Page() {
   const [hideScrollDown, setHideScrollDown] = useState(false);
   const scrollRef = useRef(null);
+  const metadata = metadataConfig.airportTransfers;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -34,11 +37,11 @@ export default function Page() {
   const bannerData = {
     mainTitle: 'Best Airport Transfers',
     mainDescription:
-            'Your exclusive and dependable chauffeur service indulgence',
+      'Your exclusive and dependable chauffeur service indulgence',
     backgroundImage: '/rolnew/airports/airport-transfer-london.jpg',
     title: 'Do you want to customise your booking?',
     description:
-            'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
+      'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
   };
 
   const luxuriousServiceData = [
@@ -71,44 +74,6 @@ export default function Page() {
       dropdown1: 'Choose Your City',
       dropdown2: 'Choose Your Airport',
     },
-    // list: [
-    //   {
-    //     id: 1,
-    //     image: '/rolnew/global/country/Heathrow_Airport.jpg',
-    //     countryCode: 'GB',
-    //     cityName: 'Heathrow Airport',
-    //   },
-    //   {
-    //     id: 2,
-    //     image: '/rolnew/global/country/Gatwick_Airport.jpg',
-    //     countryCode: 'GB',
-    //     cityName: 'Gatwick Airport',
-    //   },
-    //   {
-    //     id: 3,
-    //     image: '/rolnew/global/country/London_City_Airport.jpg',
-    //     countryCode: 'GB',
-    //     cityName: 'London City Airport',
-    //   },
-    //   {
-    //     id: 4,
-    //     image: '/rolnew/global/country/London_Southend_Airport.jpg',
-    //     countryCode: 'GB',
-    //     cityName: 'London Southend Airport',
-    //   },
-    //   {
-    //     id: 5,
-    //     image: '/rolnew/global/country/London_Stansted_Airport.jpg',
-    //     countryCode: 'GB',
-    //     cityName: 'London Stansted Airport',
-    //   },
-    //   {
-    //     id: 6,
-    //     image: '/rolnew/global/country/Luton_Airport.jpg',
-    //     countryCode: 'GB',
-    //     cityName: 'Luton Airport',
-    //   },
-    // ],
     list: [
       {
         id: 1,
@@ -180,7 +145,7 @@ export default function Page() {
       {
         id: 6,
         question:
-                    'What information do I need to provide when booking an airport transfer?',
+          'What information do I need to provide when booking an airport transfer?',
         ans: "Typically, you'll need to provide your flight details, pickup/drop-off location, contact information, and the number of passengers. This information helps the transfer service coordinate your journey effectively.",
       },
       {
@@ -234,11 +199,11 @@ export default function Page() {
     data: [
       {
         title: 'What is an Airport Transfer Service?',
-        desc: "RolDriveâ€™s private Airport Transfer focuses on luxury, efficiency, and comfort, offering a premium travel solution for those arriving at or departing from the airport. Specialising in seamless airport journeys, RolDrive caters to individuals who prioritise punctuality, safety, and a touch of sophistication in their travel experience. With a fleet of high-end vehicles, passengers can enjoy a relaxing and stylish ride, complemented by professional chauffeurs who are knowledgeable about the best routes to ensure timely arrivals or departures. Amenities like flight tracking, Meet and Greet services, luggage assistance, complimentary water, Wi-Fi, and child seats upon request are standard, enhancing the journey's comfort and convenience. Whether for business or pleasure, RolDrive's Airport Transfer Service is designed to provide a hassle-free, comfortable, and luxurious start or end to your travel, reflecting the highest standards of hospitality and efficiency in ground transportation.",
+        desc: "RolDrive’s private Airport Transfer focuses on luxury, efficiency, and comfort, offering a premium travel solution for those arriving at or departing from the airport. Specialising in seamless airport journeys, RolDrive caters to individuals who prioritise punctuality, safety, and a touch of sophistication in their travel experience. With a fleet of high-end vehicles, passengers can enjoy a relaxing and stylish ride, complemented by professional chauffeurs who are knowledgeable about the best routes to ensure timely arrivals or departures. Amenities like flight tracking, Meet and Greet services, luggage assistance, complimentary water, Wi-Fi, and child seats upon request are standard, enhancing the journey's comfort and convenience. Whether for business or pleasure, RolDrive's Airport Transfer Service is designed to provide a hassle-free, comfortable, and luxurious start or end to your travel, reflecting the highest standards of hospitality and efficiency in ground transportation.",
       },
       {
         title:
-                    'Difference between a chauffeured airport transfer and hailing a cab to the airport.',
+          'Difference between a chauffeured airport transfer and hailing a cab to the airport.',
         desc: (
           <p className="text-[#B2B2B2]">
             A RolDrive chauffeured airport transfer and hailing a cab represent
@@ -310,7 +275,8 @@ export default function Page() {
 
   return (
     <>
-      {/* <BannerTitle mainTitle="Premium Chauffeur Service" description="Your exclusive and dependable chauffeur service indulgence." /> */}
+      <MetaTags metadata={metadata} />
+
       <ServicesBanner {...bannerData} hideScrollDown={hideScrollDown} />
 
       <LuxuriousServiceSearch luxuriousServiceData={luxuriousServiceData} />

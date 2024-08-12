@@ -186,7 +186,7 @@ function CardDetails({
               type="text"
               onChange={inputCharacterOnly}
               placeholder="Card holder name"
-              className="w-full input input-bordered focus:border-primary focus:outline-none text-sm"
+              className="w-full input input-bordered focus:border-primary !text-gray-700 focus:outline-none text-sm"
             />
             {errors.cardholdername && (
             <P className=" text-red-500 px-1 py-1 !text-xs  z-10">
@@ -216,7 +216,7 @@ function CardDetails({
               maxLength="23"
               placeholder="Card number"
               onChange={handleCardNumberChange}
-              className="w-full input input-bordered focus:border-primary focus:outline-none text-sm"
+              className="w-full input input-bordered focus:border-primary !text-gray-700 focus:outline-none text-sm"
             />
 
             {errors.cardnumber && (
@@ -244,7 +244,7 @@ function CardDetails({
                 autoComplete="cc-exp"
                 onInput={formatExpiryDate}
                 onKeyDown={checkEvent}
-                className="w-full !px-1 input input-bordered focus:border-primary focus:outline-none text-sm"
+                className="w-full !px-1 input input-bordered focus:border-primary !text-gray-700 focus:outline-none text-sm"
               />
 
             </div>
@@ -259,7 +259,7 @@ function CardDetails({
                 onInput={handleCvvInput}
                 type="number"
                 placeholder="XXX"
-                className="w-full !px-1 text-start input input-bordered focus:outline-none text-sm"
+                className="w-full !px-1 text-start input input-bordered !text-gray-700 focus:outline-none text-sm"
               />
 
             </div>

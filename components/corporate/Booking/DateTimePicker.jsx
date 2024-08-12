@@ -161,7 +161,7 @@ function DateTimePicker({
   /* Min Hour and min */
 
   return (
-    <div className="grid sm:grid-cols-7 grid-cols-1 py-2 sm:px-4 px-2 items-center">
+    <div className="grid sm:grid-cols-7 grid-cols-1 py-2 sm:px-4 px-2 items-center !text-gray-700">
       <div className="col-span-2">
         <P className="text-[#797979] !text-normal !text-sm pl-2">
           Ride Date & Time
@@ -174,7 +174,7 @@ function DateTimePicker({
           <div className="col-span-3 relative">
             <Input
               placeholder="Enter pickup date."
-              className="w-full !pr-6"
+              className="w-full !pr-6 !text-gray-700"
               value={selectedDateTime.selectedDate}
               onFocus={() => {
                 setShowCalender(true);

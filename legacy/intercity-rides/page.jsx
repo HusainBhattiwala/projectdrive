@@ -72,7 +72,7 @@ export default function Home() {
                     {' '}
                     <Link
                       className="text-primary hover:text-black"
-                      href="/hire-a-driver-for-long-distance-uk"
+                      href="/long-distance-chauffeur-service-in-london"
                     >
                       hire a driver for long distance travel in the UK
                     </Link>

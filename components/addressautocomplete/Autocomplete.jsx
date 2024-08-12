@@ -150,10 +150,10 @@ function Autocomplete(props) {
   }
 
   return (
-    <div className="relative w-full" ref={ref}>
+    <div className="relative w-full !text-gray-700" ref={ref}>
       {textvalue && (
         <div
-          className="absolute cursor-pointer !text-[14px] right-6 top-8 z-[10]"
+          className="absolute cursor-pointer !text-[14px] !text-gray-700 right-6 top-8 z-[10]"
           onClick={() => {
             setTextvalue('');
             setOpen(false);
@@ -162,12 +162,12 @@ function Autocomplete(props) {
           }}
         >
           {defaultValue && items.length === 0 && (
-            <P className="text-[#B2B2B2] mt-[0px] mr-2">
+            <P className="!text-gray-700 mt-[0px] mr-2">
               <CgClose />
             </P>
           )}
           {textvalue && items.length > 0 && (
-            <P className="text-[#B2B2B2] mt-[7px] z-10">
+            <P className="!text-gray-700 mt-[7px] z-10">
               <CgClose size={18} color="white" />
             </P>
           )}

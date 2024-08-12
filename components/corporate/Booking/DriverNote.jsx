@@ -18,7 +18,7 @@ function DriverNote({
     adjustTextareaHeight();
   };
   return (
-    <div className="bg-white rounded-md">
+    <div className="bg-white rounded-md !text-gray-700">
       <div className="grid sm:grid-cols-7 grid-cols-1 gap-y-3 items-start py-3 sm:px-6 px-2">
         <div className="col-span-2 flex gap-x-1">
           <div className="!w-3 relative">
@@ -35,7 +35,7 @@ function DriverNote({
             defaultValue={driverNote}
             ref={textareaRef}
             placeholder="Add driver note (if any)"
-            className="w-full input input-bordered focus:border-primary focus:outline-none overflow-y-hidden min-h-[6rem] py-1"
+            className="w-full !text-gray-700 input input-bordered focus:border-primary focus:outline-none overflow-y-hidden min-h-[6rem] py-1"
           />
         </div>
       </div>

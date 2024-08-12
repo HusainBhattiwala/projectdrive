@@ -19,14 +19,21 @@ import Sidebar from './Sidebar';
 
 function AuthWrap({
   children,
-  setShowNewBooking = () => {},
+  setShowNewBooking = () => { },
   showNewBooking = false,
+  sidebarVisible = true,
 }) {
   const { setShowLogin, userName, setUserName } = useContext(LoginContext);
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
 
   const { data: session, status, update } = useSession();
+
+  const [isOpend, setisOpend] = useState(false);
+  let sidebarClass = '';
+  if (sidebarVisible) {
+    sidebarClass = isOpend ? 'sm:ml-64' : 'sm:ml-16';
+  }
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
@@ -93,8 +100,6 @@ function AuthWrap({
   }, [router, session, setShowLogin, setUserName, status]);
   const [showSidebar, setShowSidebar] = useState(false);
 
-  const [isOpend, setisOpend] = useState(false);
-
   const logOut = () => {
     sessionStorage.clear();
     setShowLogin(false);
@@ -104,6 +109,7 @@ function AuthWrap({
       callbackUrl: '/login',
     });
   };
+
   const reachedBottom = usePageBottom();
   const handleSubmit = async (phone, phoneCountry) => {
     const response = await api.post('/auth/check', { mobile: phone });
@@ -139,18 +145,28 @@ function AuthWrap({
           style={{ height: reachedBottom ? 0 : '4.5rem' }}
           className="duration-150 ease-out transition-[height] fixed bottom-0 z-40 md:hidden"
         >
-          <BottomNav
-            setShowNewBooking={setShowNewBooking}
-            showNewBooking={showNewBooking}
-          />
+          {sidebarVisible === true
+            ? (
+              <BottomNav
+                setShowNewBooking={setShowNewBooking}
+                showNewBooking={showNewBooking}
+              />
+            )
+            : ''}
         </div>
-        <Sidebar
-          showSidebar={showSidebar}
-          setShowSidebar={setShowSidebar}
-          isOpend={isOpend}
-          setisOpend={setisOpend}
-        />
-        <div className={`${isOpend ? 'sm:ml-64' : 'sm:ml-16'}`}>
+
+        {sidebarVisible === true
+          ? (
+            <Sidebar
+              showSidebar={showSidebar}
+              setShowSidebar={setShowSidebar}
+              isOpend={isOpend}
+              setisOpend={setisOpend}
+            />
+          )
+          : ''}
+
+        <div className={sidebarClass}>
           <div className="sticky top-0 z-30 px-3 border navbar bg-base-100 sm:px-0">
             <div className="flex-1">
               <Link href="/" className="w-32 h-12 -mt-2 lg:w-36 md:h-12">
@@ -162,34 +178,34 @@ function AuthWrap({
                 <label tabIndex={0} className="cursor-pointer">
                   <div className="flex items-center text-[14px] text-black font-semibold uppercase">
                     {userName && (
-                    <div className="flex items-center justify-center w-[32px] h-[32px] font-medium text-white rounded-full bg-primary">
-                      {userName?.userfname?.[0]}
-                      {userName?.userlname?.[0]}
-                    </div>
+                      <div className="flex items-center justify-center w-[32px] h-[32px] font-medium text-white rounded-full bg-primary">
+                        {userName?.userfname?.[0]}
+                        {userName?.userlname?.[0]}
+                      </div>
                     )}
                   </div>
                 </label>
                 <ul
                   tabIndex={0}
-                  className="p-0 mt-3 shadow menu menu-compact dropdown-content bg-base-100 w-52"
+                  className="p-0 mt-0 shadow menu menu-compact dropdown-content bg-base-100 w-52"
                 >
-                  <li className="rounded-none">
+                  <li className="rounded-none !text-gray-700">
                     <Link
                       href="/booking-management"
-                      className="justify-between !rounded-none"
+                      className="justify-between !rounded-none !text-gray-700"
                     >
                       Bookings
                     </Link>
                   </li>
                   <li>
-                    <Link href="/profile-management" className="rounded-none">
+                    <Link href="/profile-management" className="rounded-none !text-gray-700">
                       My Account
                     </Link>
                   </li>
                   <li>
                     <button
                       type="button"
-                      className="rounded-none"
+                      className="rounded-none !text-gray-700"
                       onClick={() => {
                         logOut();
                       }}

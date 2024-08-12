@@ -106,7 +106,7 @@ export function Nav({ showSideBar, setShowSideBar }) {
           </div>
         </div>
       </nav>
-      <SideMenu className="text-gray-50" setShowSideBar={setShowSideBar} showSideBar={showSideBar} showNewBooking={showNewBooking} setShowNewBooking={setShowNewBooking} showViewBooking={showViewBooking} setShowViewBooking={setShowViewBooking} />
+      <SideMenu className="text-gray-700" setShowSideBar={setShowSideBar} showSideBar={showSideBar} showNewBooking={showNewBooking} setShowNewBooking={setShowNewBooking} showViewBooking={showViewBooking} setShowViewBooking={setShowViewBooking} />
     </>
   );
 }
@@ -231,7 +231,7 @@ function SideMenu({
           />
         </Link>
       </div>
-      <div className="mt-12" />
+      <div className="mt-12 text-primary" />
       {filteredSideBarMenu.map((menuItem) => (
         <li className="mb-2 tooltip custom-tooltip tooltip-right overflow-visible" key={menuItem.label} data-tip={`${menuItem?.label}`}>
           <Link
@@ -251,7 +251,7 @@ function SideMenu({
             {!showSideBar && (
               <p
                 className={`font-medium ml-1 ${
-                  pathName === menuItem.link && 'text-primary'
+                  pathName === menuItem.link ? 'text-primary' : '!text-gray-700'
                 }`}
               >
                 {menuItem.label}

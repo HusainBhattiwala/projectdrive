@@ -4,16 +4,22 @@ import Locations from 'rolnew/section/home/Locations';
 import Services from 'rolnew/section/home/Services';
 import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
+import BookModal from 'rolnew/comp/BookModal';
 import BookingBanner from '../BookingBanner';
 
-export const metadata = {
-  title: 'Roldrive',
-  description: 'Welcome to roldrive :)',
+const metadata = metadataConfig.mercedesSClassLondon;
+
+const banner = {
+  title: 'Mercedes S Class Chauffeur In London',
+  bannerImage: '/rolnew/global/landing/mercedes-s-class-chauffeur-hire.jpg',
+  isLandingPage: true,
 };
 
 const ServicesData = {
   subTitle: 'Our Services',
-  action: 'Browse Services',
+  action: 'Book Now',
   mainTitle: 'Tailored Mercedes S Class Chauffeur In London For Your Every Need',
   desc: 'Indulge in an unparalleled Mercedes S Class chauffeur London hire experience with our tailored services designed to meet your unique requirements. Whether you need seamless airport transfers, corporate travel, or transportation for special events, our chauffeur services are crafted to enhance your journey. Enjoy a ride where every detail is tailored to perfection. Browse our services now and upgrade your transportation experience with our exclusive Mercedes S Class chauffeur in London.',
   cardData: [
@@ -21,37 +27,37 @@ const ServicesData = {
       img: '/rolnew/global/card/home/Airport Transfer Home.jpg',
       title: 'Airport Transfers',
       cardDesc:
-                'Our airport transfers are seamless and effortless. Whether you need a hotel pickup or a drop-off at the airport, our friendly and professional chauffeurs ensure a comfortable, stress-free journey every time.',
+        'Our airport transfers are seamless and effortless. Whether you need a hotel pickup or a drop-off at the airport, our friendly and professional chauffeurs ensure a comfortable, stress-free journey every time.',
     },
     {
       img: '/rolnew/global/card/card-image2.jpg',
       title: 'Corporate Chauffeurs',
       cardDesc:
-                "With RolDrive, you'll make a lasting impression the moment you step out of our chauffeur-driven vehicles. Our dependable and efficient corporate chauffeurs ensure you command the boardroom, dedicated to exceeding your expectations and helping you make a powerful statement.",
+        "With RolDrive, you'll make a lasting impression the moment you step out of our chauffeur-driven vehicles. Our dependable and efficient corporate chauffeurs ensure you command the boardroom, dedicated to exceeding your expectations and helping you make a powerful statement.",
     },
     {
       img: '/rolnew/global/card/home/Wedding Transfer Home.jpg',
       title: 'Wedding Transfers',
       cardDesc:
-                'We understand the importance of a flawless special day, offering a range of chauffeur driven vehicles, including Rolls Royce, Maybach, and Bentley. Our meticulously maintained luxury cars add an elegant touch to your celebration, ensuring a memorable experience.',
+        'We understand the importance of a flawless special day, offering a range of chauffeur driven vehicles, including Rolls Royce, Maybach, and Bentley. Our meticulously maintained luxury cars add an elegant touch to your celebration, ensuring a memorable experience.',
     },
     {
       img: '/rolnew/global/card/home/Private Jet Transfer Home.jpg',
       title: 'Private Jet Transfers',
       cardDesc:
-                'Our experienced private jet chauffeur service ensures safe transportation to and from the tarmac of your private jet or helicopter, driving you to your hotel or business meeting. Our fleet offers complimentary packages, guaranteeing a comfortable and enjoyable experience throughout your journey.',
+        'Our experienced private jet chauffeur service ensures safe transportation to and from the tarmac of your private jet or helicopter, driving you to your hotel or business meeting. Our fleet offers complimentary packages, guaranteeing a comfortable and enjoyable experience throughout your journey.',
     },
     {
       img: '/rolnew/global/card/home/Event Transfer Home.jpg',
       title: 'Event Transfers',
       cardDesc:
-                'We offer transportation services for social, cultural, and sports events in and around the city. Whether attending a private party or a large gathering, our stylish and comfortable event transfer cars ensure a safe and special experience.',
+        'We offer transportation services for social, cultural, and sports events in and around the city. Whether attending a private party or a large gathering, our stylish and comfortable event transfer cars ensure a safe and special experience.',
     },
     {
       img: '/rolnew/global/card/home/Sightseeing Tours Home.jpg',
       title: 'Sightseeing Tours',
       cardDesc:
-                'With our hourly and full day chauffeur service, choose from our diverse fleet for a comfortable and memorable journey. Experience luxurious, stress-free transportation with RolDrive, as our knowledgeable chauffeurs guide you on your trips.',
+        'With our hourly and full day chauffeur service, choose from our diverse fleet for a comfortable and memorable journey. Experience luxurious, stress-free transportation with RolDrive, as our knowledgeable chauffeurs guide you on your trips.',
     },
   ],
 };
@@ -65,8 +71,7 @@ const faqData = {
       ans: (
         <p>
           To book RolDrive’s Mercedes S Class hire in London online, visit our website or navigate to the
-          <a href="/" className="text-blue-500">Book Now</a>
-          {' '}
+          <a href="/login" className="text-blue-500"> Book Now </a>
           section. Select the Mercedes S Class option, choose your desired date and time, and complete the reservation by providing necessary details. Enjoy seamless booking for luxurious chauffeur driven experiences in London.
         </p>
       ),
@@ -121,7 +126,7 @@ const faqData = {
 
 const offeringData = {
   heading: {
-    mainTitle: 'About S Class Mercedes Chauffeur Service',
+    mainTitle: 'About Mercedes S Class Chauffeur Service',
   },
   data: [
     {
@@ -137,9 +142,7 @@ const offeringData = {
       desc: (
         <p className="text-[#B2B2B2]">
           Clients can easily book RolDrive’s Mercedes S Class chauffeur in London through our user-friendly booking engine on our website or by
-          {' '}
-          <a href="/" className="text-blue-500">contacting us</a>
-          {' '}
+          <a href="/contact-us" className="text-blue-500"> contacting us </a>
           directly. For added convenience, you can also download the RolDrive app to manage your booking seamlessly. The typical booking process involves selecting your vehicle, specifying the date and time, and providing details about your journey. Once booked, you’ll receive a confirmation and can expect a luxurious and comfortable travel experience through our professional chauffeurs.
         </p>
       ),
@@ -174,13 +177,15 @@ const offeringData = {
 export default function page() {
   return (
     <>
-      <BookingBanner />
+      <MetaTags metadata={metadata} />
+      <BookingBanner banner={banner} />
       <Services servicesData={ServicesData} />
       <Contact />
       <Locations />
       <ClientTestimonial />
       <ServicesFaq faqData={faqData} />
       <ServiceOfferings servicesData={offeringData} />
+      <BookModal />
     </>
   );
 }

@@ -7,6 +7,10 @@ import AirportBookingFlow from 'rolnew/comp/AirportBookingFlow';
 import Services from 'rolnew/section/home/Services';
 import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
+
+const metadata = metadataConfig.airportTransferNewYork;
 
 const pageData = {
   banner: {
@@ -203,6 +207,7 @@ const pageData = {
 function NewyorkAirportPage() {
   return (
     <>
+      <MetaTags metadata={metadata} />
       <Banner pageData={pageData} />
       <AirportBookingFlow pageData={pageData} />
       <OurFeet showBooking pageData={pageData} />

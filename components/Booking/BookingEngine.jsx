@@ -150,8 +150,7 @@ function BookingEngine() {
       // setTotalDuration(distance.duration);
       const time = `${selectedDateTime.hour}:${selectedDateTime.minute}`;
 
-      let selectedDayTime = `${
-        selectedDateTime.selectedDate.getMonth() + 1
+      let selectedDayTime = `${selectedDateTime.selectedDate.getMonth() + 1
       }/${selectedDateTime.selectedDate.getDate()}/${selectedDateTime.selectedDate.getFullYear()} ${time}`;
 
       selectedDayTime = new Date(selectedDayTime);
@@ -472,7 +471,7 @@ function BookingEngine() {
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mx-auto lg:container">
-      <div className="relative flex flex-col items-center rounded-md">
+      <div className="relative flex flex-col items-center rounded-md text-gray-700">
         {showLocationError && (
           <ToastContainer
             limit={1}
@@ -488,7 +487,7 @@ function BookingEngine() {
           />
         )}
 
-        <div className="relative w-full pt-6 pb-6 my-8 bg-white rounded-md md:pt-14 sm:mb-2">
+        <div className="relative w-full pt-6 pb-6 my-8 bg-white rounded-md md:pt-14 sm:mb-2 text-gray-700">
           <div className="absolute flex items-start justify-between px-2 py-1 uppercase rounded-md bg-primary md:px-6 sm:px-4 -top-6 sm:flex-row md:items-center">
             {options.map((option, index) => (
               <div
@@ -515,10 +514,9 @@ function BookingEngine() {
           <div className="pr-4 mt-4 ml-5 md:mt-0">
             <div className="flex flex-wrap ">
               <div
-                className={`${
-                  bookingType === 'transfers'
-                    ? 'lg:basis-[30%]'
-                    : 'lg:basis-[38%]'
+                className={`${bookingType === 'transfers'
+                  ? 'lg:basis-[30%]'
+                  : 'lg:basis-[38%]'
                 }  sm:basis-[50%] basis-[100%] pr-3 sm:border-r border-b lg:border-b-0 min-h-[90px] sm:min-h-[70px]`}
               >
                 <div className="relative flex flex-col ml-5">
@@ -538,6 +536,7 @@ function BookingEngine() {
 
                   <div className="mt-2">
                     <CountriesAutocomplete
+                      className="text-gray-700"
                       placeholder="Pick-up address, airport, hotel..."
                       setUserPlace={(data) => { setUserPickupLocation(data); removeDateTime(); removeReturnDateTime(); }}
                       defaultValue={userPickupLocation?.address}
@@ -568,6 +567,7 @@ function BookingEngine() {
 
                     <div className="mt-2">
                       <CountriesAutocomplete
+                        className="text-gray-700"
                         placeholder="Drop-off address, airport, hotel..."
                         // setUserPlace={setUserDropLocation}
                         setUserPlace={(data) => { setUserDropLocation(data); removeReturnDateTime(); removeDateTime(); }}
@@ -624,10 +624,9 @@ function BookingEngine() {
               )}
 
               <div
-                className={`${
-                  bookingType === 'transfers'
-                    ? 'lg:basis-[22%] lg:min-h-[105px]'
-                    : 'lg:basis-[22%] lg:min-h-[105px]'
+                className={`${bookingType === 'transfers'
+                  ? 'lg:basis-[22%] lg:min-h-[105px]'
+                  : 'lg:basis-[22%] lg:min-h-[105px]'
                 } sm:basis-[50%] basis-[100%] sm:border-r relative lg:py-0 sm:pb-0 py-3 min-h-[116px] sm:min-h-[70px]`}
                 ref={userDatePicker}
               >
@@ -695,114 +694,113 @@ function BookingEngine() {
                 )}
 
                 {bookingType === 'transfers' && (
-                <div
-                  ref={userReturnDatePicker}
-                >
-                  <div className="cursor-pointer ">
-                    <div className="mx-5">
-                      {!showReturnDate && !selectedReturnDateTime.dateChanged && (
-                      <>
-                        <span
-                          className="mt-3 py-2 text-xs font-semibold text-center text-[#000] rounded-md flex items-center justify-center w-full !mr-4 h-full !bg-[#e5e7eb]"
-                          onClick={toggleShowReturnDate}
-                        >
-                          + Add Return
-                        </span>
-                        {showReturnDateLoader && (
-                        <div role="status" className="absolute right-0">
-                          <svg
-                            aria-hidden="true"
-                            className="inline !bg-white w-6 h-6 mr-2 text-gray-200 animate-spin fill-primary"
-                            viewBox="0 0 100 101"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-                              fill="currentFill"
-                            />
-                          </svg>
-                          <span className="sr-only">Loading...</span>
-                        </div>
-                        )}
-                      </>
-                      )}
-                      {(showReturnDate || selectedReturnDateTime.dateChanged) && (
-                      <>
-                        <div
-                          className="flex !items-center text-neutral pt-2 mt-4 sm:mt-1"
-                          onClick={toggleReturnDatePicker}
-                        >
-                          <div className="relative !w-3 sm:-mt-1 !h-3">
-                            <Pic
-                              src="/images/icons/calender_black.png"
-                              alt="calender_black"
-                              className="object-contain w-full h-auto"
-                            />
-                          </div>
-                          <H4 className="flex pl-2 text-base font-semibold">
-                            Return Date and Time
-                            {/* <FaAngleDown className="ml-1 text-lg text-primary" /> */}
-                          </H4>
-                        </div>
-                        {!selectedReturnDateTime.dateChanged && (
-                        <div
-                          className="text-[14px] pt-2"
-                          onClick={toggleReturnDatePicker}
-                        >
-                          Add date of return
-                        </div>
-                        )}
-                        {selectedReturnDateTime.dateChanged && (
-                        <div className="flex items-center justify-between">
-                          <div className="flex mt-3">
-                            <H4 className="!text-md mt-[3px] text-black">
-                              {`${returnSelectedDay}${nthNumber(
-                                returnSelectedDay,
-                              )}  ${returnMonthName}, ${returnSelectedYear}`}
-                            </H4>
-                            <span className="mx-2 -mt-1 text-black">|</span>
-                            <P
-                              className="!text-md text-black uppercase"
-                              onClick={toggleDatePicker}
+                  <div
+                    ref={userReturnDatePicker}
+                  >
+                    <div className="cursor-pointer ">
+                      <div className="mx-5">
+                        {!showReturnDate && !selectedReturnDateTime.dateChanged && (
+                          <>
+                            <span
+                              className="mt-3 py-2 text-xs font-semibold text-center text-[#000] rounded-md flex items-center justify-center w-full !mr-4 h-full !bg-[#e5e7eb]"
+                              onClick={toggleShowReturnDate}
                             >
-                              {`${getHour(returnHour)}:${returnMinute}`}
-                            </P>
-                          </div>
-                          <div>
-                            <P className="mt-3 -mr-2 text-black cursor-pointer">
-                              <CgClose onClick={changeDate} />
-                            </P>
-                          </div>
-                        </div>
+                              + Add Return
+                            </span>
+                            {showReturnDateLoader && (
+                              <div role="status" className="absolute right-0">
+                                <svg
+                                  aria-hidden="true"
+                                  className="inline !bg-white w-6 h-6 mr-2 text-gray-200 animate-spin fill-primary"
+                                  viewBox="0 0 100 101"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                                    fill="currentColor"
+                                  />
+                                  <path
+                                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                                    fill="currentFill"
+                                  />
+                                </svg>
+                                <span className="sr-only">Loading...</span>
+                              </div>
+                            )}
+                          </>
                         )}
-                      </>
-                      )}
+                        {(showReturnDate || selectedReturnDateTime.dateChanged) && (
+                          <>
+                            <div
+                              className="flex !items-center text-neutral pt-2 mt-4 sm:mt-1"
+                              onClick={toggleReturnDatePicker}
+                            >
+                              <div className="relative !w-3 sm:-mt-1 !h-3">
+                                <Pic
+                                  src="/images/icons/calender_black.png"
+                                  alt="calender_black"
+                                  className="object-contain w-full h-auto"
+                                />
+                              </div>
+                              <H4 className="flex pl-2 text-base font-semibold">
+                                Return Date and Time
+                                {/* <FaAngleDown className="ml-1 text-lg text-primary" /> */}
+                              </H4>
+                            </div>
+                            {!selectedReturnDateTime.dateChanged && (
+                              <div
+                                className="text-[14px] pt-2"
+                                onClick={toggleReturnDatePicker}
+                              >
+                                Add date of return
+                              </div>
+                            )}
+                            {selectedReturnDateTime.dateChanged && (
+                              <div className="flex items-center justify-between">
+                                <div className="flex mt-3">
+                                  <H4 className="!text-md mt-[3px] text-black">
+                                    {`${returnSelectedDay}${nthNumber(
+                                      returnSelectedDay,
+                                    )}  ${returnMonthName}, ${returnSelectedYear}`}
+                                  </H4>
+                                  <span className="mx-2 -mt-1 text-black">|</span>
+                                  <P
+                                    className="!text-md text-black uppercase"
+                                    onClick={toggleDatePicker}
+                                  >
+                                    {`${getHour(returnHour)}:${returnMinute}`}
+                                  </P>
+                                </div>
+                                <div>
+                                  <P className="mt-3 -mr-2 text-black cursor-pointer">
+                                    <CgClose onClick={changeDate} className="z-[1]" />
+                                  </P>
+                                </div>
+                              </div>
+                            )}
+                          </>
+                        )}
+                      </div>
                     </div>
+                    {showReturnDatepicker && minReturnDatetime != null && (
+                      <Datepicker
+                        minDate={minReturnDatetime.minDate}
+                        selectedDateTime={selectedReturnDateTime}
+                        minDatetime={minReturnDatetime}
+                        compareWith={selectedDateTime.date}
+                        setselectedDateTime={setSelectedReturnDateTime}
+                        setDateTime={setReturnDateTime}
+                        onChange={onReturnDateChange}
+                      />
+                    )}
                   </div>
-                  {showReturnDatepicker && minReturnDatetime != null && (
-                  <Datepicker
-                    minDate={minReturnDatetime.minDate}
-                    selectedDateTime={selectedReturnDateTime}
-                    minDatetime={minReturnDatetime}
-                    compareWith={selectedDateTime.date}
-                    setselectedDateTime={setSelectedReturnDateTime}
-                    setDateTime={setReturnDateTime}
-                    onChange={onReturnDateChange}
-                  />
-                  )}
-                </div>
                 )}
               </div>
               <div
-                className={` ${
-                  bookingType === 'transfers'
-                    ? 'lg:basis-[18%]'
-                    : 'lg:basis-[18%]'
+                className={` ${bookingType === 'transfers'
+                  ? 'lg:basis-[18%]'
+                  : 'lg:basis-[18%]'
                 } sm:basis-[50%] basis-[100%] relative border-t sm:border-t-0 lg:pt-0 pt-3 mb-8 sm:mb-0`}
                 ref={userPssengerPicker}
               >
@@ -869,7 +867,7 @@ function BookingEngine() {
                   {showPassengerPicker && (
                     <PassengerPickerModal
                       setPassenger={addPassengers}
-                      // adult={adult}
+                    // adult={adult}
                     />
                   )}
                 </div>

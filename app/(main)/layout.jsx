@@ -12,7 +12,7 @@ import TopWrapper from './TopWrapper';
 
 export default function layout({ children }) {
   return (
-    <div className="font-robo">
+    <div className="">
       <Toaster position="bottom-center" reverseOrder={false} />
       {/* <Nav /> */}
       <Navbar />

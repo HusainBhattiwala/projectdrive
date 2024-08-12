@@ -11,13 +11,18 @@ import Button from 'rolnew/ui/Button';
 import { ModalContext } from 'context/ModalContext';
 import { useContext } from 'react';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
 import { allServicesData } from './allServicesData';
+
+const metadata = metadataConfig.allServices;
 
 export default function Home() {
   const { openModal } = useContext(ModalContext);
   return (
     <>
-      <Container className="bg-[#223544] sm:py-8 py-6 text-center mt-16">
+      <MetaTags metadata={metadata} />
+      <Container className="bg-[#223544] sm:py-8 py-6 text-center">
         <h1 className="text-4xl leading-10 sm:block hidden">
           Enjoy Our Luxury Chauffeur Services
           <br />

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /rolnew/
+
+
+sitemap: https://www.roldrive.com/sitemap.xml

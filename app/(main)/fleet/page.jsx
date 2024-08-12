@@ -9,7 +9,12 @@ import CarClass from 'rolnew/comp/CarClass';
 import FleetBanner from 'rolnew/comp/FleetBanner';
 import { useEffect, useRef, useState } from 'react';
 import ServicesFaq from 'rolnew/comp/ServicesFaq';
+import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
 import { fleetData } from './fleetData';
+
+const metadata = metadataConfig.fleet;
 
 export default function Page() {
   const [hideArrow, setHideArrow] = useState(false);
@@ -30,7 +35,7 @@ export default function Page() {
 
   return (
     <>
-      {/* <BannerTitle mainTitle="Premium Chauffeur Service" description="Your exclusive and dependable chauffeur service indulgence." /> */}
+      <MetaTags metadata={metadata} />
       <FleetBanner {...fleetData.bannerData} hideArrow={hideArrow} />
       <div ref={carClassRef}>
         <CarClass hideArrow={hideArrow} />
@@ -41,6 +46,7 @@ export default function Page() {
       <ServicesFaq faqData={fleetData.faqData} />
       <Contact />
       <DownloadOurApp />
+      <ServiceOfferings servicesData={fleetData.offeringData} />
     </>
   );
 }

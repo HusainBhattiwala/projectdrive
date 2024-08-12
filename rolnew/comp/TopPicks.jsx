@@ -147,7 +147,7 @@ function TopPicks({ scrollRef, airportList, topPicksData, show = false, }) {
         />
 
         <Button
-          className='mt-14 w-full sm:w-[30%]'
+          className='mt-10 w-full sm:w-[30%]'
           cta
           onClick={() => openModal()}
         >

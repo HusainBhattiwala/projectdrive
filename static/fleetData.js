@@ -3,12 +3,12 @@ export const fleetData = [
     catName: 'Business',
     options: [
       {
-        name: 'Mercedes E-Class',
-        desc: 'The Mercedes E-Class is a great option for business because of its balance of luxury, performance, and technology. Mercedes Benz is known for their brilliant vehicles and truly stands by what they call its cars to be - \'The best or nothing\'. The car has a sleek, professional design and a spacious, comfortable interior that suits any businessman\'s needs. A Mercedes E Class hire is what most businessmen prefer for their travel needs.',
+        name: 'Mercedes Benz E Class',
+        desc: 'The Mercedes E Class is a great option for business because of its balance of luxury, performance, and technology. Mercedes Benz is known for their brilliant vehicles and truly stands by what they call its cars to be - \'The best or nothing\'. The car has a sleek, professional design and a spacious, comfortable interior that suits any businessman\'s needs. A Mercedes E Class hire is what most businessmen prefer for their travel needs.',
         img: '/rolnew/fleet/Buisness class/b2.png',
       },
       {
-        name: 'BMW 5 series',
+        name: 'BMW 5 Series',
         desc: 'The BMW 5 Series is a great option for business due to its combination of luxury, performance, and technology. As a direct competitor to the Mercedes Benz E-Class, it offers a spacious, comfortable interior and a sleek, professional design. The 5 series also offers a great balance of comfort and handling, making it a perfect car for long business trips. Overall, the BMW 5 Series is a perfect blend of luxury and functionality, making it a great choice for businesses. Try the BMW 5 series by searching for BMW 5 series rental UK.',
         img: '/rolnew/fleet/Buisness class/b3.png',
       },
@@ -23,12 +23,12 @@ export const fleetData = [
     catName: 'First',
     options: [
       {
-        name: 'Mercedes Benz S class',
-        desc: 'The Mercedes-Benz S-Class is a luxury sedan known for its advanced technology, refined design, and powerful engine. It offers a comfortable and very spacious interior. Packed with features such as advanced driver assistance systems and a high-end infotainment system. The S-Class is considered a flagship model for the Mercedes-Benz brand. Perfect for a first-class service the Mercedes Benz S Class caters to all requirements you might need on road.',
+        name: 'Mercedes Benz S Class',
+        desc: 'The Mercedes Benz S Class is a luxury sedan known for its advanced technology, refined design, and powerful engine. It offers a comfortable and very spacious interior. Packed with features such as advanced driver assistance systems and a high-end infotainment system. The S-Class is considered a flagship model for the Mercedes-Benz brand. Perfect for a first-class service the Mercedes Benz S Class caters to all requirements you might need on road.',
         img: '/rolnew/fleet/first class/fc1.png',
       },
       {
-        name: 'BMW 7 series',
+        name: 'BMW 7 Series',
         desc: 'The BMW 7 Series is a luxury sedan that combines power, technology, and comfort. It comes with a very powerful engine, advanced driver assistance systems, and a luxurious interior made of premium materials. The 7 Series also includes cutting-edge features like a touchscreen infotainment system and a panoramic sunroof. It is regarded as one of the best luxury vehicles in the first-class market. Simply book one by typing BMW 7 series London RolDrive!',
         img: '/rolnew/fleet/first class/fc2.png',
       },
@@ -113,12 +113,12 @@ export const fleetData = [
     catName: 'MPV',
     options: [
       {
-        name: 'Mercedes V Class',
+        name: 'Mercedes Benz V Class',
         desc: 'The Mercedes V Class is an excellent choice for group travel, accommodating up to 6 people comfortably. With its spacious and luxurious interior, it offers ample legroom and headroom for all passengers. The flexible seating configuration allows for easy access and ensures everyone can travel together in utmost comfort. The V Class also boasts a range of advanced features and amenities, including climate control, entertainment systems, and connectivity options, ensuring an enjoyable and convenient journey for all occupants. Its combination of style, comfort, and capacity makes it an ideal choice for group travel needs.',
         img: '/rolnew/fleet/mpv class/m1.png',
       },
       {
-        name: 'Mercedes Vito',
+        name: 'Mercedes Benz Vito',
         desc: 'The Mercedes Vito is an ideal choice for group travel, accommodating up to 8 people with its spacious seating arrangement. With its versatile seating options and ample legroom, it ensures comfort and convenience for all passengers. The Vito is designed with practicality in mind, offering easy access through its sliding doors and a generous amount of storage space for luggage. Equipped with modern features and a smooth driving experience, the Vito provides a reliable and comfortable solution for larger groups, making it an excellent choice for group outings, corporate events, or family trips.',
         img: '/rolnew/fleet/mpv class/m2.png',
       },
@@ -128,18 +128,21 @@ export const fleetData = [
     catName: 'Sprinter',
     options: [
       {
-        name: 'Sprinter 12 seater',
-        desc: 'The Mercedes 12 seater offered by RolDrive is an excellent choice for group travel. With its spacious interior and seating capacity for up to 12 passengers, it provides ample room for everyone to travel comfortably. The vehicle is designed with the utmost attention to passenger comfort, featuring plush seats, generous legroom, and climate control systems. The Mercedes 12 seater also offers advanced safety features, ensuring a secure and enjoyable journey for all passengers. Whether it\'s a family trip, corporate outing, or group excursion, the Mercedes 12 seater provides a convenient and luxurious transportation solution.',
+        name: (<p>Mercedes Benz Sprinter <br /> (12 Seater)</p>),
+        shortName: 'Mercedes Sprinter (12 Seater)',
+        desc: 'The Mercedes Sprinter 12 seater offered by RolDrive is an excellent choice for group travel. With its spacious interior and seating capacity for up to 12 passengers, it provides ample room for everyone to travel comfortably. The vehicle is designed with the utmost attention to passenger comfort, featuring plush seats, generous legroom, and climate control systems. The Mercedes 12 seater also offers advanced safety features, ensuring a secure and enjoyable journey for all passengers. Whether it\'s a family trip, corporate outing, or group excursion, the Mercedes 12 seater provides a convenient and luxurious transportation solution.',
         img: '/rolnew/fleet/sprinter class/spr1.png',
       },
       {
-        name: 'Sprinter 16 seater',
-        desc: 'The Mercedes 16 seater offered by RolDrive is an ideal choice for group travel. With its spacious design and seating capacity for up to 16 passengers, it can accommodate large groups comfortably. The vehicle is equipped with luxurious amenities, including comfortable seating, ample legroom, and climate control, ensuring a pleasant and enjoyable journey. The Mercedes 16 seater also boasts advanced safety features, providing passengers with peace of mind throughout their trip. Whether it\'s a corporate event, sightseeing tour, or airport transfer, the Mercedes 16 seater provides a stylish and convenient transportation solution for group travel.',
+        name: (<p>Mercedes Benz Sprinter <br /> (16 Seater)</p>),
+        shortName: 'Mercedes Sprinter (16 Seater)',
+        desc: 'The Mercedes Sprinter 16 seater offered by RolDrive is an ideal choice for group travel. With its spacious design and seating capacity for up to 16 passengers, it can accommodate large groups comfortably. The vehicle is equipped with luxurious amenities, including comfortable seating, ample legroom, and climate control, ensuring a pleasant and enjoyable journey. The Mercedes 16 seater also boasts advanced safety features, providing passengers with peace of mind throughout their trip. Whether it\'s a corporate event, sightseeing tour, or airport transfer, the Mercedes 16 seater provides a stylish and convenient transportation solution for group travel.',
         img: '/rolnew/fleet/sprinter class/spr2.png',
       },
       {
-        name: 'Sprinter 19 seater',
-        desc: 'The Mercedes 19 seater offered by RolDrive is an excellent choice for group travel. With its spacious interior and seating capacity for up to 19 passengers, it provides ample room for everyone to travel comfortably. The vehicle is equipped with comfortable seating, climate control, and modern amenities to enhance the travel experience. The Mercedes 19 seater combines luxury and functionality, making it an ideal option for corporate events, team outings, or group transfers. With its superior design and reliable performance, this vehicle ensures a smooth and enjoyable journey for larger groups.',
+        name: (<p>Mercedes Benz Sprinter <br /> (19 Seater)</p>),
+        shortName: 'Mercedes Sprinter (19 Seater)',
+        desc: 'The Mercedes Sprinter 19 seater offered by RolDrive is an excellent choice for group travel. With its spacious interior and seating capacity for up to 19 passengers, it provides ample room for everyone to travel comfortably. The vehicle is equipped with comfortable seating, climate control, and modern amenities to enhance the travel experience. The Mercedes 19 seater combines luxury and functionality, making it an ideal option for corporate events, team outings, or group transfers. With its superior design and reliable performance, this vehicle ensures a smooth and enjoyable journey for larger groups.',
         img: '/rolnew/fleet/sprinter class/spr4.png',
       },
     ],

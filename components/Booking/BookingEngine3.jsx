@@ -16,8 +16,11 @@ import Datepicker from 'components/shared/DatePicker';
 import TimePicker from 'components/shared/Timepicker';
 import Button from 'rolnew/ui/Button';
 import Select from 'components/FormInput/Select';
+// import { Montserrat } from 'next/font/google';
 import CountriesAutocomplete from '../addressautocomplete/CountriesAutocomplete';
 import api from '../utils/api';
+
+// const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] });
 
 const labels = ['transfers', 'hourly'].map((item) => ({
   id: item,
@@ -29,7 +32,7 @@ const labels = ['transfers', 'hourly'].map((item) => ({
   ),
 }));
 
-function BookingEngine3({ setFocus, width, height }) {
+function BookingEngine3({ setFocus, height }) {
   const {
     passengers,
     selectedDateTime,
@@ -95,14 +98,39 @@ function BookingEngine3({ setFocus, width, height }) {
     setShowDatepicker(!showDatepicker);
     setShowDateError(false);
   };
-  const setDateTime = () => {
-    setselectedDateTime((prev) => ({
-      ...prev,
-      dateChanged: true,
-    }));
-    setShowDatepicker(false);
-    setShowDateError(false);
-  };
+
+  // const toggleDatePicker = () => {
+  //   const isDatePickerOpen = !showDatepicker;
+
+  //   // Set date picker state to trigger re-render if needed
+  //   setShowDatepicker(isDatePickerOpen);
+
+  //   if (!isDatePickerOpen) {
+  //     setShowDateError(false);
+  //   }
+  // };
+
+
+  // const setDateTime = () => {
+  //   setselectedDateTime((prev) => ({
+  //     ...prev,
+  //     dateChanged: true,
+  //   }));
+  //   setShowDatepicker(false);
+  //   setShowDateError(false);
+  // };
+
+  const setDateTime = (newDate) => {
+      setselectedDateTime((prev) => ({
+        ...prev,
+        selectedDate: newDate,
+        dateChanged: true,
+      }));
+      setShowDatepicker(false);
+      setShowDateError(false);
+    };
+  
+
   const setTimeChange = () => {
     setselectedDateTime((prev) => ({
       ...prev,
@@ -111,6 +139,7 @@ function BookingEngine3({ setFocus, width, height }) {
     setShowTimepicker(false);
     setShowTimeError(false);
   };
+
   const removeDateTime = () => {
     setselectedDateTime((prev) => ({
       ...prev,
@@ -167,9 +196,8 @@ function BookingEngine3({ setFocus, width, height }) {
       setshowReturnDateLoader(true);
       const distance = await getDistance();
       const time = `${selectedDateTime.hour}:${selectedDateTime.minute}`;
-      let selectedDayTime = `${
-        selectedDateTime.selectedDate.getMonth() + 1
-      }/${selectedDateTime.selectedDate.getDate()}/${selectedDateTime.selectedDate.getFullYear()} ${time}`;
+      let selectedDayTime = `${selectedDateTime.selectedDate.getMonth() + 1
+        }/${selectedDateTime.selectedDate.getDate()}/${selectedDateTime.selectedDate.getFullYear()} ${time}`;
 
       selectedDayTime = new Date(selectedDayTime);
 
@@ -519,16 +547,23 @@ function BookingEngine3({ setFocus, width, height }) {
       label="Pick Up"
       placeholder="Enter pick up location"
       onFocus={() => {
-        if (width < 560) {
-          setFocus(true);
-          setIsFullScreen(true);
-        }
+        setFocus(false); // Ensure no full-screen behavior on focus
       }}
-      isFullScreen={fullScreen}
+      isFullScreen={false} // Disable full-screen mode
       closeFocus={() => {
         setFocus(false);
-        setIsFullScreen(false);
       }}
+      // onFocus={() => {
+      //   if (width < 560) {
+      //     setFocus(true);
+      //     setIsFullScreen(true);
+      //   }
+      // }}
+      // isFullScreen={fullScreen}
+      // closeFocus={() => {
+      //   setFocus(false);
+      //   setIsFullScreen(false);
+      // }}
       {...rest}
     />
   );
@@ -548,16 +583,23 @@ function BookingEngine3({ setFocus, width, height }) {
       label="Drop Off"
       placeholder="Enter drop off location"
       onFocus={() => {
-        if (width < 560) {
-          setFocus(true);
-          setIsFullScreenDrop(true);
-        }
+        setFocus(false); // Ensure no full-screen behavior on focus
       }}
+      isFullScreen={false} // Disable full-screen mode
       closeFocus={() => {
         setFocus(false);
-        setIsFullScreenDrop(false);
       }}
-      isFullScreen={fullScreenDrop}
+      // onFocus={() => {
+      //   if (width < 560) {
+      //     setFocus(true);
+      //     setIsFullScreenDrop(true);
+      //   }
+      // }}
+      // closeFocus={() => {
+      //   setFocus(false);
+      //   setIsFullScreenDrop(false);
+      // }}
+      // isFullScreen={fullScreenDrop}
       {...rest}
     />
   );
@@ -580,11 +622,10 @@ function BookingEngine3({ setFocus, width, height }) {
         {labels.map((item) => (
           <button
             type="button"
-            className={`rounded-full bg-[#223544] py-[10px] border border-[#fff] pop w-1/2 font-medium ${
-              bookingType !== item.id
-                ? 'opacity-40 border-opacity-30'
-                : 'border-opacity-40'
-            }`}
+            className={`rounded-full bg-[#223544] py-[10px] border border-[#fff] pop w-1/2 font-medium ${bookingType !== item.id
+              ? 'opacity-40 border-opacity-30'
+              : 'border-opacity-40'
+              }`}
             id={item.id}
             onClick={() => setBookingType(item.id)}
             key={item.id}
@@ -594,9 +635,8 @@ function BookingEngine3({ setFocus, width, height }) {
         ))}
       </div>
       <div
-        className={`flex flex-col  z-[50] ${
-          height > 600 ? 'pt-6 gap-y-6' : 'pt-4 gap-y-4'
-        } `}
+        className={`flex flex-col  z-[50] ${height > 600 ? 'pt-6 gap-y-6' : 'pt-4 gap-y-4'
+          } `}
         ref={addressPicker}
       >
         <CountriesAutocomplete
@@ -612,8 +652,8 @@ function BookingEngine3({ setFocus, width, height }) {
             setIsFullScreen(false);
           }}
           defaultValue={userPickupLocation?.address}
-          locationError={() => {}}
-          errorLabel={() => {}}
+          locationError={() => { }}
+          errorLabel={() => { }}
           name="pickuploaction"
           errors={showPickupError}
           setError={setShowPickupError}
@@ -632,26 +672,28 @@ function BookingEngine3({ setFocus, width, height }) {
           }}
           defaultValue={userDropLocation?.address}
           readOnly={false}
-          locationError={() => {}}
-          errorLabel={() => {}}
+          locationError={() => { }}
+          errorLabel={() => { }}
           name="droplocation"
           errors={showDropError}
           setError={setShowDropError}
         />
+        
         <div className="flex gap-x-4">
           <div className="relative sm:w-2/4 w-full" ref={userDatePicker}>
             <Input
-              leadingIcon="/rolnew/home/calender_icon.png"
+              leadingIcon="/rolnew/home/calendar.svg"
               label="Date"
               placeholder="Pick up date"
               className="cursor-pointer"
               readOnly
               showError={showDateError}
-              value={
-                selectedDateTime?.dateChanged
-                  ? formatDateTime(selectedDateTime?.selectedDate)
-                  : ''
-              }
+              // value={
+              //   selectedDateTime.dateChanged
+              //     ? formatDateTime(selectedDateTime?.selectedDate)
+              //     : ''
+              // }
+              value={formatDateTime(selectedDateTime?.selectedDate)}
               onClick={() => {
                 setShowDatepicker(true);
               }}
@@ -663,14 +705,16 @@ function BookingEngine3({ setFocus, width, height }) {
                 minDatetime={minDatetime}
                 compareWith={minDatetime?.minDate}
                 setselectedDateTime={setselectedDateTime}
-                setDateTime={setDateTime}
+                setDateTime={(newDate) => {
+                  setDateTime(newDate); // Pass the selected date
+                }}
                 onChange={changeDate}
               />
             )}
           </div>
           <div className="relative sm:w-2/4 w-full" ref={userTimePicker}>
             <Input
-              leadingIcon="/rolnew/home/clock.png"
+              leadingIcon="/rolnew/home/clock.svg"
               label="Time"
               showError={showTimeError}
               placeholder="Pick up time"
@@ -760,9 +804,9 @@ function BookingEngine3({ setFocus, width, height }) {
                   ref={userReturnDatePicker}
                 >
                   <Input
-                    leadingIcon="/rolnew/home/icon.png"
+                    leadingIcon="/rolnew/home/calendar.svg"
                     label="Return Date"
-                    placeholder="Pick up date"
+                    placeholder="Return date"
                     className="cursor-pointer"
                     readOnly
                     showError={showReturnDateError}
@@ -783,7 +827,7 @@ function BookingEngine3({ setFocus, width, height }) {
                       compareWith={selectedDateTime.date}
                       setselectedDateTime={setSelectedReturnDateTime}
                       setDateTime={setReturnDateTime}
-                      onChange={() => {}}
+                      onChange={() => { }}
                     />
                   )}
                 </div>
@@ -792,9 +836,9 @@ function BookingEngine3({ setFocus, width, height }) {
                   ref={userReturnTimePicker}
                 >
                   <Input
-                    leadingIcon="/rolnew/home/clock.png"
+                    leadingIcon="/rolnew/home/clock.svg"
                     label="Return Time"
-                    placeholder="Pick up time"
+                    placeholder="Return time"
                     className="cursor-pointer"
                     readOnly
                     showError={showReturnTimeError}
@@ -829,7 +873,7 @@ function BookingEngine3({ setFocus, width, height }) {
         {bookingType === 'hourly' && (
           <div className={`relative ${height > 600 ? 'pb-6' : 'pb-4'}`}>
             <Select
-              leadingIcon="/rolnew/home/clock.png"
+              leadingIcon="/rolnew/home/clock.svg"
               label="Duration"
               errors={errors}
               register={register}

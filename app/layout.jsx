@@ -14,6 +14,7 @@ import { UtilityProvider } from 'context/UtilityContext';
 // import Script from 'next/script';
 import Providers from './Providers';
 
+// No need to import Helvetica Neue as it's a system font
 const montserrat = Montserrat({
   subsets: ['latin'],
 });
@@ -58,39 +59,25 @@ export default function RootLayout({ children }) {
     <html
       lang="en-GB"
       className={`${montserrat.className} ${robo.variable} ${manrope.variable} ${lato.variable} ${gothic.variable} ${sans.variable}`}
+      style={{ fontFamily: 'Helvetica Neue, Arial, sans-serif', fontWeight: '400' }}
     >
-      {/* <Script id="tawk" strategy="lazyOnload">
-        {
-          `var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-          (function(){
-          var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-          s1.async=true;
-          s1.src='https://embed.tawk.to/657af4a607843602b801f828/1hhk4nas7';
-          s1.charset='UTF-8';
-          s1.setAttribute('crossorigin','*');
-          s0.parentNode.insertBefore(s1,s0);
-          })();`
-        }
-      </Script> */}
-      {/* <Script id="tawk" strategy="lazyOnload">
-        {`
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/657af4a607843602b801f828/1hhk4nas7';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-        `}
-      </Script> */}
-      <GoogleAnalytics
-        GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID}
-      />
+      <head>
+        <GoogleAnalytics
+          GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID}
+        />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11274527865" />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-11274527865');
+        `,
+        }}
+        />
+      </head>
       <body className="overflow-x-hidden">
         <noscript
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>`,

@@ -4,6 +4,7 @@ import Container from "rolnew/comp/Container";
 import Button from "rolnew/ui/Button";
 import Dropdown from "rolnew/ui/Dropdown";
 import Pic from "rolnew/util/Pic";
+import DownArrowBox from "./DownArrowBox";
 
 const items = [
   <a key="1" href="/about">
@@ -87,25 +88,29 @@ function LuxuriousServiceSearch({ luxuriousServiceData }) {
           ))}
         </div>
       </Container>
-      <div className="sm:w-[74px] sm:h-[74px] w-12 h-12 absolute sm:-bottom-[36px] -bottom-6 left-2/4 -translate-x-2/4 z-10 bg-[#2F4456] flex items-center justify-center flex-col p-4 border border-[#FFFFFF] border-opacity-20 rounded-lg cursor-pointer">
-        <div className="animate-bounce">
+      
+      <DownArrowBox />
+
+      {/* <div className='sm:w-[74px] sm:h-[74px] w-12 h-12 absolute sm:-bottom-[36px] -bottom-6 left-2/4 -translate-x-2/4 z-10 bg-[#2F4456] flex items-center justify-center flex-col p-4 border border-[#FFFFFF] border-opacity-20 rounded-lg cursor-pointer'>
+        <div className='animate-bounce'>
           <img
-            alt="arrow-down"
-            className="w-8 h-8"
-            src="/rolnew/global/icons/arrow-down.svg"
+            alt='arrow-down'
+            className='w-8 h-8 sm:w-8 sm:h-8 sm:mt-4'
+            src='/rolnew/global/icons/arrow-down.svg'
           />
           <img
-            alt="arrow-down"
-            className="w-8 h-8 -mt-5"
-            src="/rolnew/global/icons/arrow-down.svg"
+            alt='arrow-down'
+            className='w-8 h-8 -mt-10 sm:w-8 sm:h-8 sm:-mt-5'
+            src='/rolnew/global/icons/arrow-down.svg'
           />
           <img
-            alt="arrow-down"
-            className="w-8 h-8 -mt-5"
-            src="/rolnew/global/icons/arrow-down.svg"
+            alt='arrow-down'
+            className='w-8 h-8 -mt-10 sm:w-8 sm:h-8 sm:-mt-5'
+            src='/rolnew/global/icons/arrow-down.svg'
           />
         </div>
-      </div>
+      </div> */}
+
     </div>
   );
 }

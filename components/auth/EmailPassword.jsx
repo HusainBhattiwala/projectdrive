@@ -215,7 +215,7 @@ function EmailPassword({
         pauseOnHover
       />
       <FormProvider {...formMethods}>
-        <form onSubmit={handleSubmit(onSubmit)} className="text-left relative flex flex-col gap-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="text-left relative flex flex-col gap-y-4 w-auto">
           <div className=" relative w-full">
             {/* <input placeholder="Enter your email" {...register('email', { required: true, autoComplete: 'off' })} autoComplete="new-password" className="w-full input  focus:border-primary text-[#B2B2B2] text-sm font-medium bg-white bg-opacity-10 rounded-lg border border-neutral-200 border-opacity-25 focus:outline-none" onBlur={(e) => { checkEmail(e.target.value); }} /> */}
             <Input

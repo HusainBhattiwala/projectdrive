@@ -2,6 +2,9 @@ import React from "react";
 import Container from "rolnew/comp/Container";
 import Pic from "rolnew/util/Pic";
 import Title from "./Title";
+import { Montserrat } from 'next/font/google';  // Updated import
+
+const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] });
 
 const cityPairs = [
   { from: "London", to: "Manchester" },
@@ -19,7 +22,7 @@ function Destinations({ destinationData }) {
   const isFromTo = destinationData?.isFromTo || false;
 
   return (
-    <Container className="bg-[#223544] py-20 text-center">
+    <Container className={`bg-[#223544] py-20 text-center $`}>
       <Title
         subTitle={destinationData?.subTitle || "Popular Trips"}
         mainTitle={

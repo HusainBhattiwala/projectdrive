@@ -4,11 +4,17 @@ import Locations from 'rolnew/section/home/Locations';
 import Services from 'rolnew/section/home/Services';
 import ServicesFaq from 'rolnew/comp/ServicesFaq';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
+import BookModal from 'rolnew/comp/BookModal';
 import BookingBanner from '../BookingBanner';
 
-export const metadata = {
-  title: 'Roldrive',
-  description: 'Welcome to roldrive :)',
+const metadata = metadataConfig.personalChauffeurLondon;
+
+const banner = {
+  title: 'Hire A Personal Chauffeur In London',
+  bannerImage: '/rolnew/global/landing/hire-a-personal-chauffeur-in-london.jpg',
+  isLandingPage: true,
 };
 
 const ServicesData = {
@@ -65,10 +71,7 @@ const faqData = {
         'What steps are involved if I hire a personal driver in London with a vehicle?',
       ans: (
         <p>
-          To
-          <a href="/" className="text-blue-500"> hire a personal driver </a>
-          {' '}
-          in London, visit our website and complete the online booking form. Choose your preferred vehicle and service duration. Rest assured, our chauffeurs are thoroughly background-checked and vetted, ensuring a safe and reliable experience. Enjoy seamless, professional chauffeur services.
+          To hire a personal driver in London, visit our website and complete the online booking form. Choose your preferred vehicle and service duration. Rest assured, our chauffeurs are thoroughly background-checked and vetted, ensuring a safe and reliable experience. Enjoy seamless, professional chauffeur services.
         </p>
       ),
     },
@@ -93,6 +96,7 @@ const faqData = {
       ans: (
         <p>
           Yes, when you hire a personal chauffeur in London, you can choose from a range of vehicles including the Mercedes S Class, Mercedes V Class, Rolls Royce, and Bentley. Visit our
+          {' '}
           <a href="/fleet" className="text-blue-500">Fleet</a>
           {' '}
           section to learn more about our luxurious options.
@@ -120,6 +124,7 @@ const faqData = {
       ans: (
         <p>
           When you hire a personal chauffeur in London, you can cancel your service up to 12 hours before the booking time to receive a full refund. Cancellations made within 12 hours may incur charges or be non-refundable.
+          {' '}
           <a href="/contact-us" className="text-blue-500">Contact RolDrive</a>
           {' '}
           for further details on our cancellation policies.
@@ -189,13 +194,15 @@ const offeringData = {
 export default function page() {
   return (
     <>
-      <BookingBanner />
+      <MetaTags metadata={metadata} />
+      <BookingBanner banner={banner} />
       <Services servicesData={ServicesData} />
       <Contact />
       <Locations />
       <ClientTestimonial />
       <ServicesFaq faqData={faqData} />
       <ServiceOfferings servicesData={offeringData} />
+      <BookModal />
     </>
   );
 }

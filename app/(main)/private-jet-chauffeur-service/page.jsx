@@ -9,11 +9,16 @@ import LuxuriousServiceSearch from 'rolnew/comp/LuxuriousServiceSearch';
 import CarClass from 'rolnew/comp/CarClass';
 import ServiceOfferings from 'rolnew/comp/ServiceOfferings';
 import ServicesFaq from 'rolnew/comp/ServicesFaq';
+import metadataConfig from 'rolnew/meta/metadataConfig';
+import MetaTags from 'rolnew/meta/MetaTags';
 import { jetData } from './jetData';
+
+const metadata = metadataConfig.privateJetChauffeur;
 
 export default function Page() {
   return (
     <>
+      <MetaTags metadata={metadata} />
       <ServicesBanner {...jetData.bannerData} />
       <LuxuriousServiceSearch luxuriousServiceData={jetData.luxuriousServiceData} />
       <TopPicks topPicksData={jetData.topPicksData} />

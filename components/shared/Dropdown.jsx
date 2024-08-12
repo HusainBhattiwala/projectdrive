@@ -19,7 +19,7 @@ export default function Dropdown({
       <div
         className={`flex items-center gap-[6px] w-full justify-between ${
           !disabled && ''
-        } bg-white border border-solid border-neutral-200 h-[2.75rem] px-3 rounded-lg ${
+        } bg-white border border-solid border-neutral-200 !text-gray-700 h-[2.75rem] px-3 rounded-lg ${
           disabled ? 'cursor-not-allowed' : 'cursor-pointer'
         }`}
         onClick={() => {
@@ -45,12 +45,12 @@ export default function Dropdown({
           />
         </svg>
       </div>
-      <div className="absolute w-full z-50 mt-2 bg-white rounded-b-lg shadow-2xl top-10 max-h-[260px] overflow-y-auto  mb-10">
+      <div className="absolute w-full z-50 mt-2 bg-white !text-gray-700 rounded-b-lg shadow-2xl top-10 max-h-[260px] overflow-y-auto mb-10">
         {!disabled
           && isOpen
           && options.map((item, index) => (
             <div
-              className="py-2 px-2 hover:bg-slate-100 gap-[6px] flex cursor-pointer"
+              className="py-2 px-2 hover:bg-slate-100 !text-gray-700 gap-[6px] flex cursor-pointer"
               onClick={() => {
                 onChange(item);
                 setIsOpen(false);

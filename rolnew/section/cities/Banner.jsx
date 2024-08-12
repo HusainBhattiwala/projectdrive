@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState, useContext } from "react";
-
 import { ModalContext } from "context/ModalContext";
-
 import Button from "rolnew/ui/Button";
+import DownArrowBox from "rolnew/comp/DownArrowBox";
+// import { Montserrat } from 'next/font/google';
+
+// const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] });
 
 function Banner({ pageData }) {
   const [width, setWidth] = useState(1200);
@@ -26,8 +28,14 @@ function Banner({ pageData }) {
   }, []);
 
   return (
+    // <div
+    //   className="relative mt-[72px] w-full flex flex-col items-center md:min-h-[580px] lg:max-h-[90svh] 2xl:min-h-[92svh] max-h-fit bg-[#11202d] sm:bg-cover bg-contain sm:bg-no-repeat sm:bg-center bg-left sm:pt-12 pt-4 sm:min-h-[700px] min-h-[505px]"
+    //   style={{
+    //     backgroundImage: width > 640 && `url(${pageData?.banner?.bannerImage})`,
+    //   }}
+    // >
     <div
-      className="relative mt-[72px] w-full flex flex-col items-center md:min-h-[580px] lg:max-h-[90svh] 2xl:min-h-[92svh] max-h-fit bg-[#11202d] sm:bg-cover bg-contain sm:bg-no-repeat sm:bg-center bg-left sm:pt-12 pt-4 sm:min-h-[700px] min-h-[505px]"
+      className="relative w-full flex flex-col items-center md:min-h-[580px] lg:max-h-[90svh] 2xl:min-h-[92svh] max-h-fit bg-[#11202d] sm:bg-cover bg-contain sm:bg-no-repeat sm:bg-center bg-left sm:pt-12 pt-4 sm:min-h-[700px] min-h-[505px]"
       style={{
         backgroundImage: width > 640 && `url(${pageData?.banner?.bannerImage})`,
       }}
@@ -35,8 +43,8 @@ function Banner({ pageData }) {
       <div className="sm:city-banner-gradient city-banner-mobile-gradient sm:opacity-90 absolute top-0 left-0 right-0 h-[250px] xl:min-h-[400px] md:min-h-[420px] lg:min-h-[250px] z-[6]" />
 
       <div className="text-center flex flex-col h-full flex-grow w-full">
-        <div className="z-[7] px-4">
-          <h1 className="lg:text-5xl text-3xl font-semibold text-white drop-shadow-lg mt-3">
+        <div className={`z-[7] px-4`}>
+          <h1 h1 className="lg:text-5xl text-3xl font-semibold text-white drop-shadow-lg mt-3">
             {pageData?.banner?.title}
           </h1>
           <p className="sm:text-lg text-base font-medium text-[#E5EAFA] sm:mt-1 sm:leading-normal leading-tight">
@@ -45,7 +53,7 @@ function Banner({ pageData }) {
         </div>
         <div className="sm:pt-10 relative flex flex-col flex-grow sm:justify-start justify-end bg-cover">
           <div
-            className="h-full w-full bg-contain z-[1] absolute top-0 bg-contain bg-no-repeat"
+            className="h-full w-full z-[1] absolute top-0 bg-contain bg-no-repeat"
             style={{
               backgroundImage:
                 width <= 640 && `url(${pageData?.banner?.bannerImage})`,
@@ -98,38 +106,22 @@ function Banner({ pageData }) {
           </div>
         </div>
       </div>
-      {width >= 640 && (
-        <div
-          className="z-[2] sm:absolute flex items-center justify-center left-2/4 sm:-translate-x-2/4 sm:pb-0 pb-16"
-          style={{
-            top: `${height - 270}px`,
-          }}
-        >
-          <Button onClick={() => openModal()} className="!px-16 py-2">
-            Book Now
-          </Button>
-        </div>
-      )}
-      <div className='sm:w-[74px] sm:h-[74px] w-12 h-12 absolute sm:-bottom-[36px] -bottom-6 left-2/4 -translate-x-2/4 z-10 bg-[#2F4456] flex items-center justify-center flex-col p-4 border border-[#FFFFFF] border-opacity-20 rounded-lg cursor-pointer'>
-          <div className='animate-bounce'>
-            <img
-              alt='arrow-down'
-              className='w-8 h-8 sm:w-8 sm:h-8 sm:mt-4'
-              src='/rolnew/global/icons/arrow-down.svg'
-            />
-            <img
-              alt='arrow-down'
-              className='w-8 h-8 -mt-10 sm:w-8 sm:h-8 sm:-mt-5'
-              src='/rolnew/global/icons/arrow-down.svg'
-            />
-            <img
-              alt='arrow-down'
-              className='w-8 h-8 -mt-10 sm:w-8 sm:h-8 sm:-mt-5'
-              src='/rolnew/global/icons/arrow-down.svg'
-            />
+      {
+        width >= 640 && (
+          <div
+            className="z-[2] sm:absolute flex items-center justify-center left-2/4 sm:-translate-x-2/4 sm:pb-0 pb-16"
+            style={{
+              top: `${height - 270}px`,
+            }}
+          >
+            <Button onClick={() => openModal()} className="!px-16 py-2">
+              Book Now
+            </Button>
           </div>
-        </div>
-    </div>
+        )
+      }
+      <DownArrowBox />
+    </div >
   );
 }
 

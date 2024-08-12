@@ -448,9 +448,9 @@ function BookingEngine() {
   }, [addHours, setNewDate, userPickupLocation]);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto lg:container">
-      <div className="relative flex flex-col items-center rounded-md">
-        <div className="relative w-full bg-white sm:rounded-md sm:!rounded-tl-none shadow-md">
+    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto lg:container text-gray-700">
+      <div className="relative flex flex-col items-center rounded-md text-gray-700">
+        <div className="relative w-full bg-white sm:rounded-md sm:!rounded-tl-none shadow-md text-gray-700">
           <div className="absolute flex justify-between uppercase rounded-md sm:-top-10 -top-5 sm:flex-row md:items-center sm:left-0 sm:translate-x-0 left-2/4 -translate-x-2/4">
             <Button
               onClick={() => {
@@ -478,9 +478,9 @@ function BookingEngine() {
               Hourly
             </Button>
           </div>
-          <div className="p-3 pt-10 md:p-8">
-            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 relative gap-4 xl:w-[120%] lg:w-[110%]">
+          <div className="p-3 pt-10 md:p-8 text-gray-700">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-4 text-gray-700">
+              <div className="grid grid-cols-1 md:grid-cols-2 relative gap-4 xl:w-[120%] lg:w-[110%] text-gray-700">
                 <div
                   className={`${
                     bookingType === 'transfers' ? '' : ''
@@ -500,7 +500,7 @@ function BookingEngine() {
                       </H4>
                     </div>
 
-                    <div className="h-full mt-2">
+                    <div className="h-full mt-2 text-gray-700">
                       <CountriesAutocomplete
                         placeholder="Pick-up address, airport, hotel..."
                         setUserPlace={(data) => {
@@ -508,7 +508,7 @@ function BookingEngine() {
                           removeDateTime();
                           removeReturnDateTime();
                         }}
-                        className="text-gray-50"
+                        className="!text-gray-700"
                         defaultValue={userPickupLocation?.address}
                         locationError={() => {}}
                         errorLabel={() => {}}
@@ -520,14 +520,14 @@ function BookingEngine() {
                   </div>
                 </div>
                 {/* {bookingType === 'transfers' && ( */}
-                <div className="relative items-center justify-center p-1 border rounded-md shadow h-28">
+                <div className="relative items-center justify-center p-1 border rounded-md shadow h-28 text-gray-700">
                   <div
-                    className="btn btn-circle btn-xs z-20 shadow absolute text-[#797979] md:-left-[25px] left-[50%] md:!top-[34px] -translate-x-1/2 md:translate-x-0 !-top-[25px] md:rotate-0 rotate-90"
+                    className="btn btn-circle btn-xs z-20 shadow absolute text-gray-700 md:-left-[25px] left-[50%] md:!top-[34px] -translate-x-1/2 md:translate-x-0 !-top-[25px] md:rotate-0 rotate-90"
                     style={{ height: '2rem', width: '2rem' }}
                   >
                     <CgArrowsExchangeAlt size="1.5rem" onClick={swapPickDrop} />
                   </div>
-                  <div className="relative flex flex-col p-2">
+                  <div className="relative flex flex-col p-2 text-gray-700">
                     <div className="flex items-center">
                       <div className="md:h-[10px] md:w-[10px] h-[16px] w-[12px]">
                         <Pic
@@ -540,7 +540,7 @@ function BookingEngine() {
                       </H4>
                     </div>
 
-                    <div className="mt-">
+                    <div className="mt-2 text-gray-700">
                       <CountriesAutocomplete
                         placeholder="Drop-off address, airport, hotel..."
                         // setUserPlace={setUserDropLocation}
@@ -549,7 +549,7 @@ function BookingEngine() {
                           removeReturnDateTime();
                           removeDateTime();
                         }}
-                        className="text-gray-50"
+                        className="!text-gray-700"
                         defaultValue={userDropLocation?.address}
                         readOnly={false}
                         locationError={() => {}}
@@ -564,7 +564,7 @@ function BookingEngine() {
                 {/* )} */}
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-4 xl:w-[80%] lg:w-[90%] lg:ml-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-4 xl:w-[80%] lg:w-[90%] lg:ml-auto !text-gray-700">
                 {
                   selectedDateTime && (
                     <div
@@ -592,7 +592,7 @@ function BookingEngine() {
 
                           {!selectedDateTime.dateChanged && (
                           <div onClick={toggleDatePicker}>
-                            <P className="!text-[14px] pt-2 mt-1 text-[#929292] cursor-pointer">
+                            <P className="!text-[14px] !text-gray-500 pt-2 mt-1 cursor-pointer">
                               Add date of travel
                             </P>
                           </div>
@@ -645,7 +645,7 @@ function BookingEngine() {
                     <div className="flex flex-col justify-center p-2 text-neutral">
                       <div className="flex flex-col">
                         <div
-                          className="flex items-center text-[#797979] cursor-pointer"
+                          className="flex items-center text-gray-700 cursor-pointer"
                           onClick={toggleShowReturnDate}
                         >
                           <div className="md:h-[11px] md:w-[11px] h-[18px] w-[14px]">
@@ -654,7 +654,7 @@ function BookingEngine() {
                               alt="calender"
                             />
                           </div>
-                          <H4 className="flex items-center uppercase pl-2 !font-medium !text-[14px] !text-[#8B8585]">
+                          <H4 className="flex items-center uppercase pl-2 !font-medium !text-[14px] text-gray-700">
                             Return Journey
                           </H4>
                           <IoIosArrowDown className="ml-auto font-bold text-primary sm:ml-1 sm:font-normal" />
@@ -743,7 +743,7 @@ function BookingEngine() {
                   <div className="relative p-1 border rounded-md shadow h-28">
                     <div className="flex flex-col justify-center text-neutral">
                       <div className="flex flex-col mx-2">
-                        <div className="flex items-center !text-[#797979]">
+                        <div className="flex items-center !text-gray-700">
                           <FiClock />
                           <H4 className="flex items-center justify-center p-2 font-semibold uppercase text-md">
                             Duration
@@ -751,7 +751,7 @@ function BookingEngine() {
                         </div>
 
                         {showDurationError && (
-                          <P className="animate-bounce absolute right-0 bg-red-500 text-white px-1 py-1 !text-xs font-bold z-10">
+                          <P className="animate-bounce absolute right-0 bg-red-500 text-gray-700 px-1 py-1 !text-xs font-bold z-10">
                             Required
                           </P>
                         )}
@@ -765,7 +765,7 @@ function BookingEngine() {
                           options={bookingDuration}
                           onChange={onChange}
                           defaultValue={rideDuration}
-                          className="max-w-xs pl-1 text-[14px] border-transparent appearance-none select select-ghost focus:border-transparent focus:outline-0 focus:ring-transparent active:ring-transparent focus:border-none font-xs disabled:bg-white disabled:border-none max-w-32 -mt-[10px]"
+                          className="max-w-xs pl-1 text-[14px] border-transparent appearance-none select select-ghost focus:border-transparent focus:outline-0 focus:ring-transparent active:ring-transparent focus:border-none font-xs disabled:bg-white disabled:border-none -mt-[10px]"
                         />
                       </div>
                     </div>

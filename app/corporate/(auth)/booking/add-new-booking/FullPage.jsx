@@ -829,8 +829,8 @@ function FullPage() {
       {showModal && (
       // eslint-disable-next-line react/jsx-no-bind
       <Modal>
-        <div className="relative flex flex-col items-center justify-center py-10 bg-white rounded-lg shadow">
-          <div className="max-h-[60px] max-w-[60px]">
+        <div className="relative flex flex-col items-center justify-center py-10 bg-white !text-gray-700 rounded-lg shadow">
+          <div className="max-h-[60px] max-w-[60px] !text-gray-700">
             <Pic
               src="/images/icons/confirm.png"
               className="object-contain"
@@ -889,7 +889,7 @@ function FullPage() {
                   {' '}
                   <span className="text-red-500">*</span>
                 </P>
-                <div className="w-full">
+                <div className="w-full !text-gray-700">
                   <PassengerAutoComplete
                     setPassenger={setPassenger}
                     passenger={passenger}
@@ -1259,8 +1259,8 @@ function FullPage() {
           </div>
           )}
           {/* Two way journey */}
-          <div className="card w-full bg-white rounded-md mt-3">
-            <div className="card-body px-4 py-2">
+          <div className="card w-full bg-white rounded-md mt-3 !text-gray-700">
+            <div className="card-body px-4 py-2 !text-gray-700">
               <PaymentOptions setCardDetails={setCardDetails} submitCardDetails={submitCardDetails} setPaymentType={setPaymentType} setSelectedCard={setSelectedCard} selectedCard={selectedCard} setCardType={setCardType} cardType={cardType} paymentType={paymentType} setSubmitCardDetails={setSubmitCardDetails} getCardDetails={getCardDetails} cardList={cardList} loaded={isCardLoaded} />
             </div>
           </div>

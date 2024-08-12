@@ -171,7 +171,7 @@ function Tariff({
   }, [pickUpLocation, dropLocation, viaLocations, bookingHours, bookingType]);
 
   return (
-    <div className="relative" ref={vehicleRef}>
+    <div className="relative !text-gray-700" ref={vehicleRef}>
       {
         !pickUpVehicle && vehicleError && tariffList.length > 0 && (
           <P className="animate-bounce absolute -top-5 right-0 bg-red-500 text-white px-1 py-1 !text-xs font-bold z-10">
@@ -206,7 +206,7 @@ function Tariff({
               <div className="border-r w-1 absolute h-[95%] right-0 top-0" />
             </div>
             <div className="sm:col-span-4 col-span-5 pl-2 flex flex-col">
-              <p className="text-primary uppercase font-semibold text-sm">
+              <p className="text-primary uppercase font-semibold text-sm ">
                 {tariffData?.vehicle_cat_name}
                 {' '}
                 Class
@@ -215,12 +215,12 @@ function Tariff({
                 {tariffData?.vehicle_cat_desc}
                 .
               </p>
-              <div className="mt-auto mb-3">
+              <div className="mt-auto mb-3 !text-gray-700">
                 <div className="flex items-center gap-x-2">
                   <div className="w-[14px] h-[13px] relative">
                     <Image src="/images/icons/uers_primary.svg" fill className="object-fit h-auto w-auto" alt="uers" />
                   </div>
-                  <p className="text-xs">
+                  <p className="text-xs !text-gray-700">
                     max.
                     {' '}
                     {tariffData?.adult_seat_count}
@@ -230,7 +230,7 @@ function Tariff({
                   <div className="w-[12px] h-[16px] relative">
                     <Image src="/images/icons/luggage.svg" fill className="object-fit h-auto w-auto" alt="luggage" />
                   </div>
-                  <p className="text-xs pl-[2px]">
+                  <p className="text-xs pl-[2px] !text-gray-700">
                     max.
                     {' '}
                     {tariffData?.luggage_count}
@@ -271,7 +271,7 @@ function Tariff({
                 <div className="w-[14px] h-[13px] relative">
                   <Image src="/images/icons/uers_primary.svg" fill className="object-fit h-auto w-auto" alt="uers" />
                 </div>
-                <p className="text-xs">
+                <p className="text-xs !text-gray-700">
                   max.
                   {' '}
                   {pickUpVehicle?.adult_seat_count}
@@ -281,7 +281,7 @@ function Tariff({
                 <div className="w-[12px] h-[16px] relative">
                   <Image src="/images/icons/luggage.svg" fill className="object-fit h-auto w-auto" alt="luggage" />
                 </div>
-                <p className="text-xs pl-[2px]">
+                <p className="text-xs pl-[2px] !text-gray-700">
                   max.
                   {' '}
                   {pickUpVehicle?.luggage_count}

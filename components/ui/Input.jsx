@@ -21,7 +21,7 @@ export default function Input({
   const inputRef = useRef(null);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full !text-gray-700">
       {isError && (
         <P className="animate-bounce absolute right-0 bg-red-500 text-white px-1 py-1 !text-xs font-bold z-10">
           {errorMsg || 'Required'}
@@ -48,7 +48,7 @@ export default function Input({
           }}
           type={type || 'text'}
           placeholder={placeholder}
-          className={`w-full ${
+          className={`w-full !text-gray-700 ${
             !disabled && ''
           } focus:outline-none focus:border-primary h-[2.75rem] px-3 input bg-white border border-solid border-neutral-200 overflow-ellipsis ${
             inputIcon && 'pr-8'

@@ -11,7 +11,7 @@ export const jetData = {
 
   luxuriousServiceData: [
     {
-      img: '/rolnew/global/icons/jet/fbo-Pickup.png',
+      img: '/rolnew/global/icons/jet/fbo-pickup1.png',
       title: 'FBO Pickup',
       desc: 'We provide a Private Jet FBO Pickup service, ensuring a seamless and luxurious transition from your private jet right from the airport tarmac to your next destination.',
     },
@@ -44,35 +44,35 @@ export const jetData = {
       {
         id: 1,
         image: '/rolnew/services/jet/Private Jet Chauffeur London.jpg',
-        cityName: 'Private Jet Chauffeur',
+        cityName: 'Private Jet Chauffeur London',
         countryCode: 'GB',
         address: 'London',
       },
       {
         id: 2,
         image: '/rolnew/services/jet/Private Jet Chauffeur Dubai.jpg',
-        cityName: 'Private Jet Chauffeur',
+        cityName: 'Private Jet Chauffeur Dubai',
         countryCode: 'AE',
         address: 'Dubai',
       },
       {
         id: 3,
         image: '/rolnew/services/jet/Private Jet Chauffeur New York.jpg',
-        cityName: 'Private Jet Chauffeur',
+        cityName: 'Private Jet Chauffeur New York',
         countryCode: 'US',
         address: 'New York',
       },
       {
         id: 4,
         image: '/rolnew/services/jet/Private Jet Chauffeur Paris.jpg',
-        cityName: 'Private Jet Chauffeur',
+        cityName: 'Private Jet Chauffeur Paris',
         countryCode: 'FR',
         address: 'Paris',
       },
       {
         id: 5,
         image: '/rolnew/services/jet/Private Jet Chauffeur Tokyo.jpg',
-        cityName: 'Private Jet Chauffeur',
+        cityName: 'Private Jet Chauffeur Tokyo',
         countryCode: 'JP',
         address: 'Tokyo',
       },

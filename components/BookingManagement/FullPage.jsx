@@ -235,7 +235,7 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
         draggable
         pauseOnHover
       />
-      <div className="2xl:px-[120px] lg:px-4 xl:py-10 pt-8 pb-2 md:pb-8 w-auto relative bg-[#FEF8F4]">
+      <div className="2xl:px-[120px] lg:px-4 xl:py-10 pt-8 pb-2 md:pb-8 w-auto relative min-h-screen bg-[#FEF8F4] text-gray-700">
         <div className="mx-auto xl:container">
           <div className="mb-8">
             <H1 className="font-bold text-primary md:!text-[32px] tracking-tight sm:pl-0 pl-[14px]">
@@ -333,7 +333,7 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
                   </div>
                   {!filterBookings && !showLoader && (
                     <div className="text-center capitalize pt-[15%]">
-                      <H1>No Bookings to show</H1>
+                      <H1 className="!text-gray-700">No Bookings to show</H1>
                     </div>
                   )}
                   <div className="w-full overflow-x-auto flex-nowrap md:max-h-screen md:min-w-[950px]">
@@ -427,9 +427,9 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
             </div>
           )}
           {showNewBooking && (
-            <div className="relative px-6 py-4 pb-12 bg-[#1e1d1d] bg-opacity-20">
+            <div className="relative px-6 py-4 pb-12 bg-[#e8a579] rounded-sm bg-opacity-20">
               <div
-                className="absolute top-0 z-30 cursor-pointer right-3"
+                className="absolute top-0 z-0 cursor-pointer right-3"
                 onClick={removeQueryParam}
               >
                 <H1>

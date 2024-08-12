@@ -4,6 +4,10 @@ import React from "react";
 import Link from "next/link";
 import { Pic } from "components/ui/Pic";
 import Container from "./Container";
+//import { Montserrat } from 'next/font/google';  // Updated import
+import SocialLinks from "./SocialLinks";
+
+// const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] });
 
 function Footer() {
   const goTop = () => {
@@ -15,7 +19,7 @@ function Footer() {
   };
   return (
     <footer>
-      <Container className="bg-[#121212] sm:py-[73px] py-8 text-center">
+      <Container className={`bg-[#121212] sm:py-[73px] py-8 text-center z-[-1]`}>
         <div className="flex sm:flex-row flex-col lg:gap-x-[85px] sm:gap-x-[30px] gap-x-6 justify-between w-full mx-auto md:px-8">
           <div className="flex flex-col gap-y-6 text-left sm:max-w-[274px] w-full sm:pb-0 pb-6">
             <Link href="/rolnew" className="pop">
@@ -47,53 +51,12 @@ function Footer() {
                 booking@roldrive.com
               </a>
             </div>
-            <div className="flex gap-x-4">
-              <a href="roldrive.com" className="w-6 h-6 pop">
-                <Pic
-                  alt="location"
-                  className="mx-auto pop"
-                  src="/rolnew/global/icons/facebook.svg"
-                  objectFit="cover"
-                />
-              </a>
-              <a href="roldrive.com" className="w-6 h-6 pop">
-                <Pic
-                  alt="location"
-                  className="mx-auto pop"
-                  src="/rolnew/global/icons/twitterx.svg"
-                  objectFit="cover"
-                />
-              </a>
-              <a href="roldrive.com" className="w-6 h-6 pop">
-                <Pic
-                  alt="location"
-                  className="mx-auto pop"
-                  src="/rolnew/global/icons/instagram.svg"
-                  objectFit="cover"
-                />
-              </a>
-              <a href="roldrive.com" className="w-6 h-6 pop">
-                <Pic
-                  alt="location"
-                  className="mx-auto pop"
-                  src="/rolnew/global/icons/pinterest.svg"
-                  objectFit="cover"
-                />
-              </a>
-              <a href="roldrive.com" className="w-6 h-6 pop">
-                <Pic
-                  alt="location"
-                  className="mx-auto pop"
-                  src="/rolnew/global/icons/linkedin.svg"
-                  objectFit="cover"
-                />
-              </a>
-            </div>
+            <SocialLinks />
           </div>
           <div className="flex lg:gap-x-[85px] sm:gap-x-[30px] gap-x-6 sm:my-0 py-6 sm:border-none border-t border-[#FFFFFF] border-opacity-40">
             <div className="flex flex-col gap-y-5 items-start text-left sm:w-auto w-5/12">
               <Link href="/fleet" className="text-left text-base font-normal">
-                Fleet
+                <h2 className="text-2xl font-semibold">Fleet</h2>
               </Link>
               <Link href="/fleet" className="text-base font-light pop">
                 Business
@@ -122,7 +85,7 @@ function Footer() {
                 href="/all-services"
                 className="text-left text-base font-normal"
               >
-                Services
+                <h2 className="text-2xl font-semibold">Services</h2>
               </Link>
               <Link
                 href="/airport-transfers"
@@ -145,15 +108,25 @@ function Footer() {
               >
                 Event Transfers
               </Link>
-              {/* <Link href="/all-services" className="text-base font-light pop">
-                All Services
+
+              {/* <Link
+                href="#"
+                className="text-left text-base font-normal mt-2"
+              >
+                <h2 className="text-xl font-semibold">FAQ</h2>
               </Link> */}
+              <Link
+                href="https://blog.roldrive.com/"
+                className="text-left text-base font-normal mt-2"
+              >
+                <h2 className="text-xl font-semibold">Blogs</h2>
+              </Link>
             </div>
           </div>
           <div className="flex lg:gap-x-[85px] sm:gap-x-[30px] gap-x-6 sm:my-0 py-6 sm:border-none border-t border-[#FFFFFF] border-opacity-40">
             <div className="flex flex-col gap-y-5 items-start text-left sm:w-auto w-5/12">
               <h4 className="text-left text-base font-normal whitespace-nowrap">
-                Top Cities
+                <h2 className="text-2xl font-semibold">Top Cities</h2>
               </h4>
               <Link href="/chauffeur-service-in-london" className="text-base font-light pop">
                 London
@@ -172,54 +145,48 @@ function Footer() {
               </Link>
             </div>
             <div className="flex flex-col gap-y-5 items-start text-left">
+              <h4 className="text-left text-base font-normal whitespace-nowrap">
+                <h2 className="text-2xl font-semibold">Quick Links</h2>
+              </h4>
               <Link
-                href="#"
+                href="/about-us"
                 className="text-base pop"
-                onClick={(e) => e.preventDefault()}
-              >
-                FAQ
-              </Link>
-              <Link
-                href="#"
-                className="text-base pop"
-                onClick={(e) => e.preventDefault()}
-              >
-                Blogs
-              </Link>
-              {/* <Link
-                href="#"
-                className="text-base pop"
-                onClick={(e) => e.preventDefault()}
               >
                 About Us
-              </Link> */}
+              </Link>
               <Link
+                href="/contact-us"
+                className="text-base pop"
+              >
+                Contact Us
+              </Link>
+              {/* <Link
                 href="#"
                 className="text-base text-[#FDC65C] whitespace-nowrap pop"
                 onClick={(e) => e.preventDefault()}
               >
                 Become A Supplier
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
         <div className="flex gap-x-6 flex-wrap sm:justify-start justify-between py-6 border-opacity-40 relative border-b border-[#FFFFFF]">
           <div className="flex gap-x-6 sm:w-auto w-full">
             <Link
-              href="#"
+              href="/privacy-policy"
               className="sm:text-base text-sm text-[#FFFFFF] text-opacity-60 font-light text-left sm:w-auto w-2/4 pop"
             >
               Privacy policy
             </Link>
-            <Link
+            {/* <Link
               href="#"
               className="sm:text-base text-sm text-[#FFFFFF] text-opacity-60 font-light text-left pop"
             >
               GDPR policy
-            </Link>
+            </Link> */}
           </div>
           <Link
-            href="#"
+            href="/terms-and-conditions"
             className="sm:text-base text-sm text-[#FFFFFF] text-opacity-60 font-light pop"
           >
             Terms & Conditions
