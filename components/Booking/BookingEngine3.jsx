@@ -127,7 +127,6 @@ function BookingEngine3({ setFocus, height }) {
     }));
     setShowDatepicker(false);
     setShowDateError(false);
-    console.log("Pickup date after function call - " + selectedDate)
   };
 
   const setTimeChange = () => {
@@ -154,7 +153,6 @@ function BookingEngine3({ setFocus, height }) {
     }));
     setShowReturnDatepicker(false);
     setShowReturnDateError(false);
-    console.log("Return date after function call - " + selectedDate)
   };
   const setReturnTime = () => {
     setSelectedReturnDateTime((prev) => ({
@@ -189,7 +187,7 @@ function BookingEngine3({ setFocus, height }) {
       return;
     }
     if (
-      // selectedDateTime.dateChanged && 
+      // selectedDateTime.dateChanged &&
       selectedDateTime.timeChanged
       && userPickupLocation
       && userDropLocation
@@ -422,6 +420,97 @@ function BookingEngine3({ setFocus, height }) {
     }
   };
 
+  // const onSubmit = async () => {
+  //   if (userPickupLocation === null) {
+  //     setShowPickupError(true);
+  //     addressPicker.current.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'center',
+  //     });
+  //   } else if (
+  //     (!userDropLocation || !userDropLocation.address)
+  //     && bookingType === 'transfers'
+  //   ) {
+  //     setShowDropError(true);
+  //     addressPicker.current.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'center',
+  //     });
+  //   } else if (rideDuration === null && bookingType !== 'transfers') {
+  //     setshowDurationError(true);
+  //   }
+  //   // else if (!selectedDateTime.dateChanged) {
+  //   //   setShowDateError(true);
+  //   //   userDatePicker.current.scrollIntoView({
+  //   //     behavior: 'smooth',
+  //   //     block: 'center',
+  //   //   });
+  //   else if (!selectedDateTime.timeChanged) {
+  //     setShowTimeError(true);
+  //     userTimePicker.current.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'center',
+  //     });
+  //   }
+  //   // else if (showReturnDate && !selectedReturnDateTime.dateChanged) {
+  //   //   setShowReturnDateError(true);
+  //   //   userTimePicker.current.scrollIntoView({
+  //   //     behavior: 'smooth',
+  //   //     block: 'center',
+  //   //   });
+  //   // }
+
+  //   else if (showReturnDate && !selectedReturnDateTime.timeChanged) {
+  //     setShowReturnTimeError(true);
+  //     userTimePicker.current.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'center',
+  //     });
+  //   } else if (
+  //     userDropLocation?.latLng === userPickupLocation.latLng
+  //     && bookingType === 'transfers'
+  //   ) {
+  //     toast.error("Both the pickup and drop-off can't be the same.", {
+  //       autoClose: 3000,
+  //       theme: 'colored',
+  //     });
+  //     toast.clearWaitingQueue();
+  //     setShowBtnLoading(false);
+  //   } else {
+  //     setShowBtnLoading(true);
+  //     gtagReportConversion('conversion');
+  //     let distance;
+  //     if (userDropLocation && userDropLocation.address) {
+  //       distance = await getDistance();
+  //     }
+  //     if (bookingType === 'transfers') {
+  //       if (userDropLocation?.regionid === userPickupLocation.regionid) {
+  //         if (distance?.distance) {
+  //           goToFleetPage(distance);
+  //         } else {
+  //           toast.error('Distance not found.', {
+  //             autoClose: 3000,
+  //             theme: 'colored',
+  //           });
+  //           toast.clearWaitingQueue();
+  //         }
+  //       } else {
+  //         toast.error(
+  //           'Both the pickup and drop-off points must be in the same region.',
+  //           {
+  //             autoClose: 3000,
+  //             theme: 'colored',
+  //           },
+  //         );
+  //         toast.clearWaitingQueue();
+  //         setShowBtnLoading(false);
+  //       }
+  //     } else {
+  //       goToFleetPage(distance || null);
+  //     }
+  //   }
+  // };
+
   const onSubmit = async () => {
     if (userPickupLocation === null) {
       setShowPickupError(true);
@@ -440,28 +529,13 @@ function BookingEngine3({ setFocus, height }) {
       });
     } else if (rideDuration === null && bookingType !== 'transfers') {
       setshowDurationError(true);
-    }
-    // else if (!selectedDateTime.dateChanged) {
-    //   setShowDateError(true);
-    //   userDatePicker.current.scrollIntoView({
-    //     behavior: 'smooth',
-    //     block: 'center',
-    //   });
-    else if (!selectedDateTime.timeChanged) {
+    } else if (!selectedDateTime.timeChanged) {
       setShowTimeError(true);
       userTimePicker.current.scrollIntoView({
         behavior: 'smooth',
         block: 'center',
       });
-    } 
-    // else if (showReturnDate && !selectedReturnDateTime.dateChanged) {
-    //   setShowReturnDateError(true);
-    //   userTimePicker.current.scrollIntoView({
-    //     behavior: 'smooth',
-    //     block: 'center',
-    //   });
-    // } 
-    else if (showReturnDate && !selectedReturnDateTime.timeChanged) {
+    } else if (showReturnDate && !selectedReturnDateTime.timeChanged) {
       setShowReturnTimeError(true);
       userTimePicker.current.scrollIntoView({
         behavior: 'smooth',
