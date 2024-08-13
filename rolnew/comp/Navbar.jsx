@@ -320,6 +320,7 @@ function NavbarContent() {
                       <Button
                         type="button"
                         className="rounded-none text-left !bg-white !text-gray-700"
+                        href="/login"
                         onClick={handleLogout}
                       >
                         Logout
@@ -369,6 +370,7 @@ function NavbarContent() {
                       <Button
                         type="button"
                         className="rounded-none text-left !bg-white !text-gray-700"
+                        href="/login"
                         onClick={handleLogout}
                       >
                         Logout
@@ -549,21 +551,35 @@ function NavbarContent() {
 
             <div className="flex flex-col gap-3">
               <div className="text-left font-medium text-base leading-6 mt-4">
-                <Button
+                {/* <Button
                   type="button"
-                  className="rounded-none bg-white h-[16px] text-lg"
+                  className="h-[16px] text-lg"
                   onClick={handleLogout}
                 >
                   Logout
-                </Button>
+                </Button> */}
+                <Link
+                  className="text-[#E1E1E1] w-[176px] h-[36px] text-md font-boldtext-left items-center"
+                  href="/login"
+                  onClick={() => handleLogout()}
+                >
+                  Logout
+                </Link>
               </div>
               <div className="flex flex-col mt-4">
                 <p className="text-[#E5EAFA] text-sm">Get the App Now</p>
-                <img
-                  src="/images/navbar/download.png"
-                  className="w-[200px] h-[40px] mt-4"
-                  alt="download"
-                />
+
+                <Link
+                  className="text-[#E1E1E1] w-[176px] h-[36px] text-md font-boldtext-left items-center"
+                  href="https://apps.apple.com/us/app/roldrive/id6470998693"
+                >
+                  <img
+                    src="/images/navbar/download.png"
+                    className="w-[200px] h-[40px] mt-4"
+                    alt="download"
+                  />
+                </Link>
+
               </div>
             </div>
           </motion.div>

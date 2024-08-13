@@ -126,7 +126,7 @@ function Page() {
 
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-9 2xl:min-h-[90svh] bg-[#223544] relative mt-16"
+      className="grid grid-cols-1 md:grid-cols-9 2xl:min-h-[90svh] bg-[#223544] relative"
       ref={loginRef}
     >
       <MetaTags metadata={metadata} />
