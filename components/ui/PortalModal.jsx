@@ -26,7 +26,7 @@ function PortalModal({
             !noPadding && ' py-4'
           } shadow-2xl relative flex flex-col modalContent ${modalContentClasses}`}
         >
-          <h4 className="text-2xl font-bold text-primary absolute left-6 top-6">
+          <h4 className="text-2xl font-bold !text-[#061b2cd9] absolute left-6 top-6">
             {title}
           </h4>
           {showCloseIcon && (

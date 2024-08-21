@@ -41,7 +41,7 @@ function RangePicker({
       <DateRangePicker
         onChange={setDateRange}
         value={dateRange}
-        className="bg-white border border-solid border-neutral-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-7 p-2.5 z-10 !text-[13px]"
+        className="bg-white border border-solid border-neutral-200 !text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-7 p-2.5 z-10 !text-[13px]"
         calendarIcon={null}
         format="dd-MM-yy"
         rangeDivider="-"

@@ -337,7 +337,7 @@ function PassengerDetails({
                 onCountryChange={() => {
                   setValue('mobileno', '');
                 }}
-                inputClass="!bg-[#FFFFFF0A] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
+                inputClass="!bg-[#223544D9] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
               />
               {(errors.mobileno || mobileError) && (
                 <P className="text-red-500 px-1 py-1 !text-xs font-bold z-10">

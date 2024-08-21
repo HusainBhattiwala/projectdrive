@@ -11,6 +11,7 @@ import NewDropdown from "components/ui/NewDropdown";
 // import { Montserrat } from 'next/font/google';
 import { LoginContext } from 'context/LoginContext';
 import AuthWrap from "app/(auth)/AuthWrap";
+import AppDownloadLinks from "./AppDownloadLinks";
 
 // const montserrat = Montserrat({ subsets: ['latin'], weight: ['600', '800'] });
 
@@ -89,17 +90,8 @@ function NavbarContent() {
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
   const [openSubDropdownIndex, setOpenSubDropdownIndex] = useState(null);
   const pathname = usePathname();
-  const { userName, setShowLogin } = useContext(LoginContext); // Use context
+  const { userName, logout } = useContext(LoginContext); // Use context
 
-  const handleLogout = () => {
-    sessionStorage.clear();
-    setShowLogin(false);
-    Cookies.remove('searchdata');
-    Cookies.remove('fleetlist');
-    signOut({
-      callbackUrl: '/login',
-    })
-  };
 
 
   const handleMouseEnter = (index) => {
@@ -317,14 +309,13 @@ function NavbarContent() {
                       </Link>
                     </li>
                     <li>
-                      <Button
-                        type="button"
+                      <Link
                         className="rounded-none text-left !bg-white !text-gray-700"
                         href="/login"
-                        onClick={handleLogout}
+                        onClick={logout}
                       >
                         Logout
-                      </Button>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -367,14 +358,13 @@ function NavbarContent() {
                       </Link>
                     </li>
                     <li>
-                      <Button
-                        type="button"
+                      <Link
                         className="rounded-none text-left !bg-white !text-gray-700"
                         href="/login"
-                        onClick={handleLogout}
+                        onClick={logout}
                       >
                         Logout
-                      </Button>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -550,26 +540,23 @@ function NavbarContent() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <div className="text-left font-medium text-base leading-6 mt-4">
-                {/* <Button
-                  type="button"
-                  className="h-[16px] text-lg"
-                  onClick={handleLogout}
-                >
-                  Logout
-                </Button> */}
-                <Link
-                  className="text-[#E1E1E1] w-[176px] h-[36px] text-md font-boldtext-left items-center"
-                  href="/login"
-                  onClick={() => handleLogout()}
-                >
-                  Logout
-                </Link>
-              </div>
+              {userName &&
+                <div className="text-left font-medium text-base leading-6 mt-4">
+                  <Link
+                    className="text-[#E1E1E1] w-[176px] h-[36px] text-md font-boldtext-left items-center"
+                    href="/login"
+                    onClick={logout}
+                  >
+                    Logout
+                  </Link>
+                </div>
+              }
               <div className="flex flex-col mt-4">
                 <p className="text-[#E5EAFA] text-sm">Get the App Now</p>
 
-                <Link
+                <AppDownloadLinks />
+
+                {/* <Link
                   className="text-[#E1E1E1] w-[176px] h-[36px] text-md font-boldtext-left items-center"
                   href="https://apps.apple.com/us/app/roldrive/id6470998693"
                 >
@@ -578,7 +565,7 @@ function NavbarContent() {
                     className="w-[200px] h-[40px] mt-4"
                     alt="download"
                   />
-                </Link>
+                </Link> */}
 
               </div>
             </div>

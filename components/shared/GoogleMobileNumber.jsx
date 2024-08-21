@@ -60,19 +60,19 @@ function GoogleMobileNumber({ handleSubmit }) {
           checkMobileNumber(value, country);
         }}
         value={`${phone}`}
-        inputClass="w-full text-sm h-12 input !input-bordered focus:border-primary focus:outline-none !border-opacity-80 !border-[#c3c1c1] -mt-1"
+        inputClass="w-full text-sm h-12 input !input-bordered !bg-[#061b2cd9] text-[#B2B2B2] !text-white"
       />
       {errors?.phone && (
-      <P className="!text-red-500 !text-sm font-medium">
-        {errors?.phone}
-      </P>
+        <P className="!text-red-500 !text-sm font-medium">
+          {errors?.phone}
+        </P>
       )}
       {!errors && phoneError && (
-      <P className="!text-red-500 !text-sm font-medium">Required</P>
+        <P className="!text-red-500 !text-sm font-medium">Required</P>
       )}
       <Button
-        kind="primary"
-        className="w-full mt-auto inline-flex h-12 items-center justify-center gap-2.5 rounded-md bg-orange-600 px-7 py-3.5 hover:bg-primary text-white text-[14px] font-semibold mb-2 uppercase"
+        kind="dark"
+        className="w-full mt-auto inline-flex h-12 items-center justify-center gap-2.5 rounded-md !bg-[#061b2cd9] px-7 py-3.5 !hover:bg-[#121c24d9] border-[#061b2cd9] hover:border-[#121c24d9] text-white text-[14px] font-semibold mb-2 uppercase"
         onClick={() => {
           if (isValidated({
             phone,

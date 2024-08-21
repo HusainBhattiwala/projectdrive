@@ -62,7 +62,7 @@ function PassengerPicker({
           </div>
           <P className="text-bold w-[25px] text-center ">{passengers.children}</P>
           <div onClick={() => { increment('children'); setPassenger(); }}>
-            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center" disabled={passengers.children >= fleetDetails.children_count}>  + </button>
+            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center" disabled={passengers.children >= (fleetDetails.children_count || 2)}>  + </button>
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@ function PassengerPicker({
           </div>
           <P className="text-bold w-[25px] text-center ">{passengers.infant}</P>
           <div onClick={() => { increment('infant'); setPassenger(); }}>
-            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center" disabled={passengers.infant >= fleetDetails.infant_count}>
+            <button type="button" kind="primary" className="btn-primary !w-6 !h-6 rounded-md text-bold text-sm text-normal text-white flex items-center justify-center" disabled={passengers.infant >= (fleetDetails.infant_count || 1)}>
               +
             </button>
           </div>

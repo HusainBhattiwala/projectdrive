@@ -2,7 +2,7 @@
 
 import { createContext, useEffect, useState } from 'react';
 import { signOut } from 'next-auth/react';
-import { useRouter } from 'next/router'; // Import useRouter
+import Cookies from 'js-cookie';
 
 export const LoginContext = createContext();
 
@@ -24,27 +24,20 @@ export function LoginProvider({ children }) {
     }
   }, []);
 
-  const logOut = () => {
-    const router = useRouter(); // Initialize router
-    
+  const logout = () => {
     sessionStorage.clear();
     setShowLogin(false);
     Cookies.remove('searchdata');
     Cookies.remove('fleetlist');
     signOut({
       callbackUrl: '/login',
-    }).then(() => {
-      router.push('/login');
-    }).catch((error) => {
-      console.error('SignOut failed: ', error);
-      router.push('/login');
-    });
+    })
   };
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
     <LoginContext.Provider value={{
-      showLogin, setShowLogin, userName, setUserName, isNewUser, setIsNewUser, logOut
+      showLogin, setShowLogin, userName, setUserName, isNewUser, setIsNewUser, logout
     }}
     >
       {children}

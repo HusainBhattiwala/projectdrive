@@ -4,7 +4,7 @@
 
 import { useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { signOut, useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
 import { LoginContext } from 'context/LoginContext';
@@ -23,7 +23,9 @@ function AuthWrap({
   showNewBooking = false,
   sidebarVisible = true,
 }) {
-  const { setShowLogin, userName, setUserName } = useContext(LoginContext);
+  const {
+    setShowLogin, userName, setUserName, logout,
+  } = useContext(LoginContext);
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -37,6 +39,8 @@ function AuthWrap({
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
+    const hasShownModal = sessionStorage.getItem('hasShownModal'); // Check if the modal has been shown
+
     if (status === 'loading') return;
 
     if (!token || token === 'null' || token === 'undefined') {
@@ -59,8 +63,9 @@ function AuthWrap({
           userfname: session?.user?.name?.split(' ')?.[0],
           userlname: session?.user?.name?.split(' ')?.[1],
         });
-      } else if (session?.user?.email && !session?.user?.usermobileno) {
+      } else if (session?.user?.email && !session?.user?.usermobileno && sidebarVisible && !hasShownModal) {
         setModalOpen(true);
+        sessionStorage.setItem('hasShownModal', 'true');
       } else {
         router.push('');
       }
@@ -97,18 +102,8 @@ function AuthWrap({
     //   });
     // }
     router.refresh();
-  }, [router, session, setShowLogin, setUserName, status]);
+  }, [router, session, setShowLogin, setUserName, sidebarVisible, status]);
   const [showSidebar, setShowSidebar] = useState(false);
-
-  const logOut = () => {
-    sessionStorage.clear();
-    setShowLogin(false);
-    Cookies.remove('searchdata');
-    Cookies.remove('fleetlist');
-    signOut({
-      callbackUrl: '/login',
-    });
-  };
 
   const reachedBottom = usePageBottom();
   const handleSubmit = async (phone, phoneCountry) => {
@@ -133,7 +128,7 @@ function AuthWrap({
         onClose={() => {
           setModalOpen(false);
         }}
-        showCloseIcon={false}
+        showCloseIcon
         title="Add User Mobile Number"
       >
         <GoogleMobileNumber
@@ -203,15 +198,13 @@ function AuthWrap({
                     </Link>
                   </li>
                   <li>
-                    <button
-                      type="button"
+                    <Link
                       className="rounded-none !text-gray-700"
-                      onClick={() => {
-                        logOut();
-                      }}
+                      href="/login"
+                      onClick={logout}
                     >
                       Logout
-                    </button>
+                    </Link>
                   </li>
                 </ul>
               </div>

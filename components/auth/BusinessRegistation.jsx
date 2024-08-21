@@ -258,11 +258,11 @@ function BusinessRegistation({ loginPage }) {
 
           <div className="">
             {/* <div className="tracking-[-0.01em] mb-2 ml-1 font-medium">
-              <span className="text-[14px]">Company name</span>
+              <span className="text-[14px]">Company Name</span>
               <span className="text-red-500"> *</span>
             </div>
             <input
-              placeholder="Enter your company name"
+              placeholder="Enter your company Name"
               {...register('orgName', {
                 required: 'Organization name is required',
               })}
@@ -270,7 +270,7 @@ function BusinessRegistation({ loginPage }) {
             /> */}
             <Input
               {...register('orgName', {
-                required: { value: true, message: 'Company name is required' },
+                required: { value: true, message: 'Company Name is required' },
                 autoComplete: 'off',
               })}
               onChange={(e) => {
@@ -278,7 +278,7 @@ function BusinessRegistation({ loginPage }) {
                 clearErrors('orgName');
               }}
               // leadingIcon="/rolnew/global/icons/mail.svg"
-              label="Company name"
+              label="Company Name"
               placeholder="Enter company name"
               readOnly={showLoader}
             />
@@ -348,7 +348,7 @@ function BusinessRegistation({ loginPage }) {
                 onCountryChange={() => {
                   setUserPhone();
                 }}
-                inputClass="!bg-[#FFFFFF0A] w-full text-sm rounded-lg h-12 input  !input-bordered focus:border-primary focus:outline-none !border-opacity-80 !border-[#c3c1c1] "
+                inputClass="!bg-[#223544] !text-[#B2B2B2] w-full text-sm rounded-lg h-12 input  !input-bordered focus:border-primary focus:outline-none !border-opacity-80 !border-[#c3c1c1] "
                 inputStyle={{
                   borderRadius: '0.5rem',
                   borderStyle: 'solid',

@@ -535,7 +535,7 @@ input[type="checkbox"] {
 }
 .react-tel-input .selected-flag:hover,
 .react-tel-input .selected-flag:focus {
-  @apply !bg-[#223544D9] !bg-opacity-85 !text-[#B2B2B2];
+  @apply !bg-[#192d3dd9] !bg-opacity-85 !text-[#B2B2B2];
 }
 .react-tel-input .country-list,
 .react-tel-input .country-list .search {

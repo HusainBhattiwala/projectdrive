@@ -86,7 +86,7 @@ function Registation() {
         password: data.password,
       };
       const response = await api.post('/auth/email-signup', payload);
-      if (response.data.Authorization) {
+      if (response?.data?.Authorization) {
         sessionStorage.setItem(
           'user',
           JSON.stringify({
@@ -104,7 +104,7 @@ function Registation() {
         router.push('/booking-management');
         setShowLoader(false);
       } else {
-        toast.error(response.message, {
+        toast.error(response?.message, {
           autoClose: 3000,
           theme: 'colored',
         });
@@ -452,7 +452,7 @@ function Registation() {
               onCountryChange={() => {
                 setUserMobile();
               }}
-              inputClass="!bg-[#FFFFFF0A] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
+              inputClass="!bg-[#223544] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
             />
             {errors.companymobileno && (
               <P className="text-red-500 px-1 py-1 !text-xs font-bold z-10">

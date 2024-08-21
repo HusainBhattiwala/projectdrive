@@ -50,7 +50,7 @@ export default function BookingTop({
             <div className="relative">
               <Input
                 type="text"
-                className="bg-white border border-solid border-neutral-200 text-gray-900 text-sm rounded-lg block w-full pl-2 pr-8 p-2.5"
+                className="bg-white border border-solid border-neutral-200 !text-gray-900 text-sm rounded-lg block w-full pl-2 pr-8 p-2.5"
                 placeholder="Search by eg. booking ID, name, vehicle etc..."
                 value={bookingId}
                 onChange={(event) => {

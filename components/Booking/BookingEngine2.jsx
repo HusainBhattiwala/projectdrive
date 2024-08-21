@@ -84,9 +84,10 @@ function BookingEngine() {
     setShowDatepicker(!showDatepicker);
     setShowDateError(false);
   }
-  function setDateTime() {
+  function setDateTime(newDate) {
     setselectedDateTime((prev) => ({
       ...prev,
+      selectedDate: newDate,
       dateChanged: true,
     }));
     setShowDatepicker(false);
@@ -98,9 +99,10 @@ function BookingEngine() {
     }));
     setShowDatepicker(false);
   }
-  function setReturnDateTime() {
+  function setReturnDateTime(newDate) {
     setSelectedReturnDateTime((prev) => ({
       ...prev,
+      selectedDate: newDate,
       dateChanged: true,
     }));
     setShowReturnDatepicker(false);
@@ -119,11 +121,11 @@ function BookingEngine() {
   }
   const toggleShowReturnDate = async () => {
     if (
-      selectedDateTime.dateChanged
-      && userPickupLocation
+      // selectedDateTime.dateChanged &&
+      userPickupLocation
       && userDropLocation
     ) {
-      if (selectedReturnDateTime.dateChanged) {
+      if (selectedReturnDateTime.selectedDate) {
         toggleReturnDatePicker();
       } else {
         setshowReturnDateLoader(true);
@@ -131,8 +133,7 @@ function BookingEngine() {
         // setTotalDuration(distance.duration);
         const time = `${selectedDateTime.hour}:${selectedDateTime.minute}`;
 
-        let selectedDayTime = `${
-          selectedDateTime.selectedDate.getMonth() + 1
+        let selectedDayTime = `${selectedDateTime.selectedDate.getMonth() + 1
         }/${selectedDateTime.selectedDate.getDate()}/${selectedDateTime.selectedDate.getFullYear()} ${time}`;
 
         selectedDayTime = new Date(selectedDayTime);
@@ -376,8 +377,6 @@ function BookingEngine() {
       setShowDropError(true);
     } else if (rideDuration === null && bookingType !== 'transfers') {
       setshowDurationError(true);
-    } else if (!selectedDateTime.dateChanged) {
-      setShowDateError(true);
     } else if (
       userDropLocation?.latLng === userPickupLocation.latLng
       && bookingType === 'transfers'
@@ -426,6 +425,66 @@ function BookingEngine() {
     }
   };
 
+  // const onSubmit = async () => {
+  //   if (userPickupLocation === null) {
+  //     setShowPickupError(true);
+  //   } else if (
+  //     (!userDropLocation || !userDropLocation.address)
+  //     && bookingType === 'transfers'
+  //   ) {
+  //     setShowDropError(true);
+  //   } else if (rideDuration === null && bookingType !== 'transfers') {
+  //     setshowDurationError(true);
+  //   } else if (!selectedDateTime.dateChanged) {
+  //     setShowDateError(true);
+  //   } else if (
+  //     userDropLocation?.latLng === userPickupLocation.latLng
+  //     && bookingType === 'transfers'
+  //   ) {
+  //     toast.error("Both the pickup and drop-off can't be the same.", {
+  //       autoClose: 3000,
+  //       theme: 'colored',
+  //     });
+  //     toast.clearWaitingQueue();
+  //     setShowBtnLoading(false);
+  //   } else {
+  //     setShowBtnLoading(true);
+  //     gtagReportConversion('conversion');
+  //     let distance;
+  //     if (userDropLocation && userDropLocation.address) {
+  //       distance = await getDistance();
+  //     }
+  //     if (bookingType === 'transfers') {
+  //       if (userDropLocation?.regionid === userPickupLocation.regionid) {
+  //         if (distance?.distance) {
+  //           goToFleetPage(distance);
+  //         } else {
+  //           toast.error(
+  //             'Distance not found.',
+  //             {
+  //               autoClose: 3000,
+  //               theme: 'colored',
+  //             },
+  //           );
+  //           toast.clearWaitingQueue();
+  //         }
+  //       } else {
+  //         toast.error(
+  //           'Both the pickup and drop-off points must be in the same region.',
+  //           {
+  //             autoClose: 3000,
+  //             theme: 'colored',
+  //           },
+  //         );
+  //         toast.clearWaitingQueue();
+  //         setShowBtnLoading(false);
+  //       }
+  //     } else {
+  //       goToFleetPage(distance || null);
+  //     }
+  //   }
+  // };
+
   function changeDate() {
     setShowReturnDate(false);
     selectedReturnDateTime.dateChanged = false;
@@ -456,10 +515,9 @@ function BookingEngine() {
               onClick={() => {
                 setBookingType('transfers');
               }}
-              className={`${
-                bookingType === 'transfers'
-                  ? 'bg-white !text-primary hover:bg-white hover:text-primary'
-                  : 'bg-black text-white hover:bg-black'
+              className={`${bookingType === 'transfers'
+                ? 'bg-white !text-primary hover:bg-white hover:text-primary'
+                : 'bg-black text-white hover:bg-black'
               } rounded-l-lg sm:rounded-tl-md uppercase font-[600] sm:!text-[15px] !text-[14px] rounded-none sm:!rounded-bl-none sm:border-0 border-[#6b6b6b] w-[120px] h-[40px]`}
             >
               Transfers
@@ -469,10 +527,9 @@ function BookingEngine() {
                 setBookingType('hourly');
                 setShowDropError(false);
               }}
-              className={`${
-                bookingType === 'hourly'
-                  ? 'bg-white !text-primary hover:bg-white hover:text-primary'
-                  : 'bg-black text-white hover:bg-black'
+              className={`${bookingType === 'hourly'
+                ? 'bg-white !text-primary hover:bg-white hover:text-primary'
+                : 'bg-black text-white hover:bg-black'
               } rounded-r-lg sm:rounded-tr-md sm:!rounded-br-none uppercase font-[600] sm:!text-[15px] !text-[14px] rounded-none sm:border-0 border-[#6b6b6b] border-[0.5px] w-[120px] h-[40px]`}
             >
               Hourly
@@ -482,8 +539,7 @@ function BookingEngine() {
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-4 text-gray-700">
               <div className="grid grid-cols-1 md:grid-cols-2 relative gap-4 xl:w-[120%] lg:w-[110%] text-gray-700">
                 <div
-                  className={`${
-                    bookingType === 'transfers' ? '' : ''
+                  className={`${bookingType === 'transfers' ? '' : ''
                   }  border shadow h-28 rounded-md p-1`}
                 >
                   <div className="relative flex flex-col p-2">
@@ -510,8 +566,8 @@ function BookingEngine() {
                         }}
                         className="!text-gray-700"
                         defaultValue={userPickupLocation?.address}
-                        locationError={() => {}}
-                        errorLabel={() => {}}
+                        locationError={() => { }}
+                        errorLabel={() => { }}
                         name="pickuploaction"
                         errors={showPickupError}
                         setError={setShowPickupError}
@@ -552,8 +608,8 @@ function BookingEngine() {
                         className="!text-gray-700"
                         defaultValue={userDropLocation?.address}
                         readOnly={false}
-                        locationError={() => {}}
-                        errorLabel={() => {}}
+                        locationError={() => { }}
+                        errorLabel={() => { }}
                         name="droplocation"
                         errors={showDropError}
                         setError={setShowDropError}
@@ -590,48 +646,51 @@ function BookingEngine() {
                             <IoIosArrowDown className="ml-auto font-bold text-primary sm:ml-1 sm:font-normal" />
                           </div>
 
-                          {!selectedDateTime.dateChanged && (
-                          <div onClick={toggleDatePicker}>
-                            <P className="!text-[14px] !text-gray-500 pt-2 mt-1 cursor-pointer">
-                              Add date of travel
-                            </P>
-                          </div>
+                          {!selectedDateTime.selectedDate && (
+                            <div onClick={toggleDatePicker}>
+                              <P className="!text-[14px] !text-gray-500 pt-2 mt-1 cursor-pointer">
+                                Add date of travel
+                              </P>
+                            </div>
                           )}
                           {showDateError && (
-                          <P className="animate-bounce absolute right-0 bg-red-500 text-white px-1 py-1 !text-xs font-bold z-10">
-                            Required
-                          </P>
+                            <P className="animate-bounce absolute right-0 bg-red-500 text-white px-1 py-1 !text-xs font-bold z-10">
+                              Required
+                            </P>
                           )}
 
-                          {selectedDateTime.dateChanged && (
-                          <div className="flex mt-3" onClick={toggleDatePicker}>
-                            <H4 className="flex justify-start mt-1 !text-[14px] text-black">
-                              {`${selectedDay}${nthNumber(
-                                selectedDay,
-                              )}  ${monthName}, ${selectedYear}`}
-                            </H4>
-                            <span className="-mt-[2px] mx-2 text-black">|</span>
-                            <P
-                              className="!text-[14px] uppercase text-black"
-                              onClick={toggleDatePicker}
-                            >
-                              {' '}
-                              {`${getHour(hour)}:${minute}`}
-                            </P>
-                          </div>
+                          {selectedDateTime.selectedDate && (
+                            <div className="flex mt-3" onClick={toggleDatePicker}>
+                              <H4 className="flex justify-start mt-1 !text-[14px] !text-black">
+                                {`${selectedDay}${nthNumber(
+                                  selectedDay,
+                                )}  ${monthName}, ${selectedYear}`}
+                              </H4>
+                              <span className="-mt-[2px] mx-2 text-black">|</span>
+                              <P
+                                className="!text-[14px] uppercase text-black"
+                                onClick={toggleDatePicker}
+                              >
+                                {' '}
+                                {`${getHour(hour)}:${minute}`}
+                              </P>
+                            </div>
                           )}
                         </div>
                       </div>
                       {showDatepicker && minDatetime && (
-                      <Datepicker
-                        minDate={minDatetime.minDate}
-                        selectedDateTime={selectedDateTime}
-                        minDatetime={minDatetime}
-                        compareWith={minDatetime.minDate}
-                        setselectedDateTime={setselectedDateTime}
-                        setDateTime={setDateTime}
-                        onChange={changeDate}
-                      />
+                        <Datepicker
+                          minDate={minDatetime.minDate}
+                          selectedDateTime={selectedDateTime}
+                          minDatetime={minDatetime}
+                          compareWith={minDatetime.minDate}
+                          setselectedDateTime={setselectedDateTime}
+                          // setDateTime={setDateTime}
+                          setDateTime={(newDate) => {
+                            setDateTime(newDate); // Pass the selected date
+                          }}
+                          onChange={changeDate}
+                        />
                       )}
                     </div>
                   )
@@ -654,17 +713,17 @@ function BookingEngine() {
                               alt="calender"
                             />
                           </div>
-                          <H4 className="flex items-center uppercase pl-2 !font-medium !text-[14px] text-gray-700">
+                          <H4 className="flex items-center uppercase pl-2 !font-medium !text-[14px] !text-[#8B8585]">
                             Return Journey
                           </H4>
                           <IoIosArrowDown className="ml-auto font-bold text-primary sm:ml-1 sm:font-normal" />
                         </div>
 
-                        {!selectedReturnDateTime.dateChanged && (
+                        {!selectedReturnDateTime.selectedDate && (
                           <>
                             <div className="relative py-2 rounded-md cursor-pointer top-2 hover:bg-gray-200">
                               <span
-                                className="text-xs text-center text-primary rounded-md flex items-center justify-center w-9/12 min-w-max mx-auto h-full !font-semibold"
+                                className="text-xs text-center !text-[#8B8585] rounded-md flex items-center justify-center w-9/12 min-w-max mx-auto h-full !font-semibold"
                                 onClick={toggleShowReturnDate}
                               >
                                 + Add Return
@@ -694,34 +753,34 @@ function BookingEngine() {
                           </>
                         )}
                         {(showReturnDate
-                          || selectedReturnDateTime.dateChanged) && (
-                          // eslint-disable-next-line react/jsx-no-useless-fragment
-                          <>
-                            {selectedReturnDateTime.dateChanged && (
-                              <div className="flex items-center justify-between mt-3">
-                                <div className="flex">
-                                  <H4 className="flex justify-start mt-1 !text-[14px] text-black">
-                                    {`${returnSelectedDay}${nthNumber(
-                                      returnSelectedDay,
-                                    )}  ${returnMonthName}, ${returnSelectedYear}`}
-                                  </H4>
-                                  <span className="-mt-[2px] mx-2 text-black">
-                                    |
-                                  </span>
-                                  <P
-                                    className="!text-[14px] uppercase text-black"
-                                    onClick={toggleShowReturnDate}
-                                  >
-                                    {' '}
-                                    {`${getHour(returnHour)}:${returnMinute}`}
+                          || selectedReturnDateTime.selectedDate) && (
+                            // eslint-disable-next-line react/jsx-no-useless-fragment
+                            <>
+                              {selectedReturnDateTime.selectedDate && (
+                                <div className="flex items-center justify-between mt-3">
+                                  <div className="flex">
+                                    <H4 className="flex justify-start mt-1 !text-[14px] text-black">
+                                      {`${returnSelectedDay}${nthNumber(
+                                        returnSelectedDay,
+                                      )}  ${returnMonthName}, ${returnSelectedYear}`}
+                                    </H4>
+                                    <span className="-mt-[2px] mx-2 text-black">
+                                      |
+                                    </span>
+                                    <P
+                                      className="!text-[14px] uppercase text-black"
+                                      onClick={toggleShowReturnDate}
+                                    >
+                                      {' '}
+                                      {`${getHour(returnHour)}:${returnMinute}`}
+                                    </P>
+                                  </div>
+                                  <P className="!-mr-1 text-black cursor-pointer">
+                                    <CgClose onClick={changeDate} />
                                   </P>
                                 </div>
-                                <P className="!-mr-1 text-black cursor-pointer">
-                                  <CgClose onClick={changeDate} />
-                                </P>
-                              </div>
-                            )}
-                          </>
+                              )}
+                            </>
                         )}
                       </div>
                     </div>
@@ -732,8 +791,11 @@ function BookingEngine() {
                         minDatetime={minReturnDatetime}
                         compareWith={selectedDateTime.date}
                         setselectedDateTime={setSelectedReturnDateTime}
-                        setDateTime={setReturnDateTime}
-                        onChange={() => {}}
+                        // setDateTime={setReturnDateTime}
+                        setDateTime={(newDate) => {
+                          setReturnDateTime(newDate); // Pass the selected return date
+                        }}
+                        onChange={() => { }}
                       />
                     )}
                   </div>
@@ -745,7 +807,7 @@ function BookingEngine() {
                       <div className="flex flex-col mx-2">
                         <div className="flex items-center !text-gray-700">
                           <FiClock />
-                          <H4 className="flex items-center justify-center p-2 font-semibold uppercase text-md">
+                          <H4 className="flex items-center justify-center p-2 font-medium !text-[#8B8585] uppercase text-md">
                             Duration
                           </H4>
                         </div>
@@ -765,7 +827,7 @@ function BookingEngine() {
                           options={bookingDuration}
                           onChange={onChange}
                           defaultValue={rideDuration}
-                          className="max-w-xs pl-1 text-[14px] border-transparent appearance-none select select-ghost focus:border-transparent focus:outline-0 focus:ring-transparent active:ring-transparent focus:border-none font-xs disabled:bg-white disabled:border-none -mt-[10px]"
+                          className="max-w-xs pl-1 text-[14px] !text-[#8B8585] border-transparent appearance-none select select-ghost focus:border-transparent focus:outline-0 focus:ring-transparent active:ring-transparent focus:border-none font-xs disabled:bg-white disabled:border-none -mt-[10px]"
                         />
                       </div>
                     </div>

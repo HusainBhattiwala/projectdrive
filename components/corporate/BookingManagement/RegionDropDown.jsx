@@ -36,7 +36,7 @@ function RegionDropDown({ userCountry, setUserCountry }) {
 
   return (
     <NewDropdown
-      className="bg-white border border-solid border-neutral-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 appearance-none block w-auto pl-1 p-0.5"
+      className="bg-white border border-solid border-neutral-200 !text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 appearance-none block w-auto pl-1 p-0.5"
       label={`${userCountry.region_short_name}`}
       imageSrc="/images/icons/location2.svg"
     >

@@ -30,7 +30,7 @@ export default function VehicleModalBody({
             setFirstUpdate(() => false);
           }}
         >
-          <div className="mx-auto relative col-span-2 w-[12rem] h-full">
+          <div className="mx-auto relative col-span-2 sm:w-[12rem] w-[10rem] h-full">
             <Image
               src={item?.vehicle_imge_url || '/images/trip-details/car.png'}
               alt=""
@@ -44,7 +44,7 @@ export default function VehicleModalBody({
             </P>
             <P className="mt-1 text-gray-700">{item?.vehicle_cat_desc}</P>
             <div className="flex flex-col gap-4 mt-5 sm:flex-row sm:justify-between">
-              <div className="">
+              <div className="px-4">
                 <div className="flex items-baseline gap-2">
                   <img src="/images/trip-details/people.svg" alt="persons" />
                   <P className="text-sm text-gray-700">

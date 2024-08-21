@@ -132,6 +132,20 @@ function OTP({
           authtype: 'OTP',
           usertype: 'PRIVATE_CLIENT',
         });
+
+        // Wrong OTP error message
+        if (response?.message === 'Wrong code provided') {
+          toast.success(
+            'Entered OTP is not valid',
+            {
+              autoClose: 3000,
+              theme: 'colored',
+            },
+          );
+          toast.clearWaitingQueue();
+          return;
+        }
+
         if (response.status !== 500) {
           if (response.data.Authorization) {
             if (loginPage) {
@@ -226,7 +240,7 @@ function OTP({
         }
         if (loginPage) {
           const phoneExists = await api.post('/auth/check', obj);
-          if (!phoneExists.data.exists) {
+          if (!phoneExists?.data?.exists) {
             setShowLoader(false);
             toast.error('Phone number does not exist. Please sign-up', {
               autoClose: 3000,
@@ -364,8 +378,7 @@ function OTP({
           <>
             <button
               type="button"
-              className={`${loginPage ? 'top-5' : 'top-1'
-              } z-[1] text-white flex items-center font-semibold`}
+              className={`${loginPage ? 'top-5' : 'top-1'} z-[1] text-white flex items-center font-semibold`}
               onClick={() => {
                 setShowInputs(false);
                 setUserMobile('');
@@ -387,10 +400,14 @@ function OTP({
                 <p className="text-white">
                   {' '}
                   [
+                  {/* {userCountryCode}  */}
+                  {/* {' '}
+                  *** ***
+                  {userMobile.slice(-4)} */}
+
                   {userCountryCode}
                   {' '}
-                  *** ***
-                  {userMobile.slice(-4)}
+                  {userMobile.slice(-10)}
                   ]
                 </p>
               </div>
@@ -409,8 +426,7 @@ function OTP({
                       ref={inputRefs.current[index]}
                       className={`w-12 h-12 text-lg bg-[#FFFFFF0A] bg-opacity-85 !text-[#B2B2B2] border !border-[#E1E1E140] text-center font-bold rounded-md overflow-ellipsis autofill:!bg-[#223544D9] focus:border-primary focus:outline-none rounded-xs mr-4 ${inputs[index] === '' && !otpError
                         ? ' border-red-500 border-2'
-                        : ''
-                      }`}
+                        : ''}`}
                     />
                   ))}
                 </div>

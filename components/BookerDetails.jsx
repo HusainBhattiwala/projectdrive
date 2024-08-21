@@ -142,7 +142,7 @@ export default function BookerDetails({
             autoFocus: true,
             autoComplete: 'off',
           }}
-          inputClass="!bg-[#FFFFFF0A] ! !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
+          inputClass="!bg-[#223544D9] ! !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
           disabled={!!userDetails?.usermobileno && showBooker}
           countryCodeEditable={false}
           value={getPhoneNumber()}

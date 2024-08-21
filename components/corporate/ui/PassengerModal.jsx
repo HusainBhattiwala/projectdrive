@@ -9,6 +9,7 @@ import P from 'components/typography/P';
 import Input from 'components/ui/Input';
 import CountriesAutocomplete from 'components/addressautocomplete/CountriesAutocomplete';
 import api from 'components/utils/api';
+import 'react-phone-input-2/lib/style.css';
 
 export default function PassengerModal({
   isOpen,
@@ -455,7 +456,7 @@ export default function PassengerModal({
                         clearErrors('invalidMobile');
                         checkMobileNumber(value, country);
                       }}
-                      inputClass="input input-bordered focus:border-primary focus:outline-none !text-gray-700"
+                      inputClass="input input-bordered focus:border-primary !bg-[#e7e8ead9] !text-black !font-bold"
                     />
                     {errors.passengerMobile && (
                       <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">

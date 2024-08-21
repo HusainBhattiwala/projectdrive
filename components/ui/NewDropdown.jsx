@@ -29,7 +29,7 @@ function NewDropdown({
   return (
     <div
       className={`relative transition-all duration-300 ${className} ${
-        disable ? 'pointer-events-none !bg-gray-100' : ''
+        disable ? 'pointer-events-none !text-gray-900' : ''
       }`}
       ref={outSideClickRef}
       onClick={toggleDropdown}
@@ -44,11 +44,11 @@ function NewDropdown({
           </div>
         )}
         {imageSrc ? (
-          <span className="text-white pl-4 text-sm font-medium capitalize tracking-tight">
+          <span className="!text-gray-900 pl-4 text-sm font-medium capitalize tracking-tight">
             {label}
           </span>
         ) : (
-          <span className="text-white text-sm font-medium capitalize tracking-tight">
+          <span className="!text-gray-900 text-sm font-medium capitalize tracking-tight">
             {label}
           </span>
         )}
@@ -85,7 +85,7 @@ function NewDropdown({
         <div
           className={`absolute z-50 left-0 w-full bg-white rounded-none shadow-lg menu !p-0 py-2 ${dropDownClass}`}
         >
-          <ul className="lg:text-[14px] md:text-[12px]">{children}</ul>
+          <ul className="lg:text-[14px] md:text-[12px] !text-gray-900">{children}</ul>
         </div>
       )}
     </div>
