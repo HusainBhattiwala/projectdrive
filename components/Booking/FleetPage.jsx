@@ -1271,7 +1271,7 @@ function FleetPage() {
                         />
                       </div>
                       <P className="pl-1 font-medium text-[#F7BC3A]">
-                        FREE Cancellation Upto 24 hours
+                        FREE Cancellation Upto 12 hours
                       </P>
                     </div>
                     <div className="flex items-start mt-4 gap-x-2">

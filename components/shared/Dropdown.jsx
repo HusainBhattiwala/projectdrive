@@ -17,7 +17,7 @@ export default function Dropdown({
   return (
     <div className={`relative w-full ${className}`} ref={outSideClickRef}>
       <div
-        className={`flex items-center gap-[6px] w-full justify-between ${
+        className={`flex items-center gap-[6px] w-full justify-between !text-gray-700 ${
           !disabled && ''
         } bg-white border border-solid border-neutral-200 !text-gray-700 h-[2.75rem] px-3 rounded-lg ${
           disabled ? 'cursor-not-allowed' : 'cursor-pointer'
@@ -50,7 +50,7 @@ export default function Dropdown({
           && isOpen
           && options.map((item, index) => (
             <div
-              className="py-2 px-2 hover:bg-slate-100 !text-gray-700 gap-[6px] flex cursor-pointer"
+              className="py-2 px-2 !text-gray-700 gap-[6px] flex cursor-pointer"
               onClick={() => {
                 onChange(item);
                 setIsOpen(false);

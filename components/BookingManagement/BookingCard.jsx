@@ -201,7 +201,7 @@ function BookingCard({ item, sendMail, sendMailLoader }) {
           </Link>
         </div>
         <div className="text-center py-2 leading-none">
-          <div className={`${item?.booking_type === 'TRANSFERS' ? '!bg-primary !text-primary !bg-opacity-20' : '!bg-[#DFE2F4] !text-[#232C68] !bg-opacity-60'} w-auto px-2 py-1 justify-center items-center gap-2.5`}>
+          <div className={`${item?.booking_type === 'TRANSFERS' ? '!bg-primary !text-white' : '!bg-[#232C68] !text-white '} w-auto px-2 py-1 justify-center items-center gap-2.5`}>
             <P className="!text-xs font-semibold">{item?.booking_type}</P>
           </div>
         </div>

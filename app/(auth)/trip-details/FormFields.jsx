@@ -26,7 +26,7 @@ import VehicleModalBody from './VehicleModalBody';
 const rideCategories = ['Transfers', 'Hourly'];
 
 const optionRenderer = (item) => (
-  <P className="font-medium whitespace-nowrap">{item}</P>
+  <P className="font-medium whitespace-nowrap !text-gray-700">{item}</P>
 );
 export default function FormFields({
   selectedVehicle,
@@ -419,7 +419,7 @@ export default function FormFields({
               onChange={(item) => { onRideTypeChange(item); setRideCategory(item.toLowerCase()); setFirstUpdate(() => false); }}
               disabled={!isAllowedEdit}
             >
-              <span className="font-medium capitalize">{rideCategory}</span>
+              <span className="font-medium capitalize !text-gray-700">{rideCategory}</span>
             </Dropdown>
           </div>
         </div>

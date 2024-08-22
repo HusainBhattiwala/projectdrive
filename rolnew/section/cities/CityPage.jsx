@@ -49,6 +49,7 @@ function CityPage() {
 
   useEffect(() => {
     console.log("Meta content loaded:", metaContent);
+    setMetaContent(metaContent)
   }, [metaContent]);
 
   if (isLoading || !pageData) {
