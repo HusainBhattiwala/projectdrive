@@ -8,6 +8,7 @@ import { LoginProvider } from 'context/LoginContext';
 import { UtilityProvider } from 'context/UtilityContext';
 import { FleetProvider } from 'context/FleetContext';
 import { ModalProvider } from 'context/ModalContext';
+import CookieConsent from 'rolnew/comp/CookieConsent';
 import TopWrapper from './TopWrapper';
 
 export default function layout({ children }) {
@@ -16,6 +17,8 @@ export default function layout({ children }) {
       <Toaster position="bottom-center" reverseOrder={false} />
       {/* <Nav /> */}
       <Navbar />
+
+      <CookieConsent />
 
       <TopWrapper>
         <Providers>

@@ -131,6 +131,7 @@ function FleetPage() {
   const [passwordExists, setPasswordExists] = useState(true);
   const [authType, setAuthType] = useState(null);
   const { setShowLogin, setUserName, isNewUser } = useContext(LoginContext);
+  const [partialBookingId, setPartialBookingId] = useState(null);
 
   const [userDetails, setUserDetails] = useState(null);
   const [passengerMobileError, setPassengerMobileError] = useState(false);
@@ -166,6 +167,56 @@ function FleetPage() {
   });
 
   useEffect(() => {
+    // Extract the query parameter
+    const searchParams = new URLSearchParams(window.location.search);
+    const partialId = searchParams.get('partial_id');
+
+    if (partialId) {
+      // Call the API with the partial_id
+      const getPartialBookingData = async () => {
+        setPartialBookingId(partialId)
+        try {
+          const response = await api.get(`/auth/booking/partial?partial_id=${partialId}`);
+          console.log(response.data);
+          await setAllSessionData(response.data)
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      getPartialBookingData();
+    }
+  }, []);
+
+  const setAllSessionData = async (data) => {
+    const auth_data = data.auth;
+    const booking_data = data.partialBooking.booking_data
+
+    sessionStorage.setItem('passengerDetails', JSON.stringify(booking_data?.passengerDetails));
+    sessionStorage.setItem('user', JSON.stringify(booking_data?.user));
+    sessionStorage.setItem('selectedfleet', JSON.stringify(booking_data?.selectedFleet));
+    sessionStorage.setItem('isCarSelected', booking_data?.isCarSelected);
+    sessionStorage.setItem('fleetlist', JSON.stringify(booking_data?.fleetList));
+    sessionStorage.setItem('storesearchdata', JSON.stringify(booking_data?.storeSearchData));
+
+    sessionStorage.setItem('token', auth_data?.Authorization);
+    if (auth_data?.Authorization) {
+      update({
+        ...session,
+        rolDriveToken: auth_data?.Authorization,
+        isNewUser: false,
+        mobile: payload.booker_mobile_no,
+      });
+      setShowLogin(true);
+      setAuthType('BASIC');
+      Cookies.set('authtype', 'BASIC');
+      sessionStorage.setItem('token', auth_data?.Authorization);
+      setShowAuth(true);
+      router.refresh();
+      setShowToken(true);
+    }
+  }
+
+  useEffect(() => {
     reset();
   }, [reset, showBooker]);
 
@@ -192,6 +243,40 @@ function FleetPage() {
       inline: 'end',
     });
   }, [showEmailLogin]);
+
+  // Sending Partial booking details to backend through api
+  const sendPayloadToAPI = async (booking_step) => {
+    const payload = {
+      journey: returndate && bookingtype === 'transfers' ? 'Round Trip' :
+        !returndate && bookingtype !== 'hourly' ? 'One-Way journey' : 'Hourly trip;',
+      date: pickupdate,
+      time: pickuptime,
+      pickup: pickupaddress,
+      dropOff: dropaddress,
+      distance: distance,
+      duration: duration,
+      user: JSON.parse(sessionStorage.getItem('user')),
+      storedData: JSON.parse(Cookies.get('searchdata')),
+      storeSearchData: JSON.parse(sessionStorage.getItem('storesearchdata')),
+      fleetList: JSON.parse(sessionStorage.getItem('fleetlist')),
+      selectedFleet: JSON.parse(sessionStorage.getItem('selectedfleet')),
+      passengerDetails: JSON.parse(sessionStorage.getItem('passengerDetails')),
+      isCarSelected: sessionStorage.getItem('isCarSelected'),
+      url: window.location.href,
+      booking_step: booking_step,
+      partial_id: partialBookingId ? partialBookingId : null
+    };
+
+    try {
+      const response = await api.post('/client-booking/partial', payload);
+      if (response?.data?.partialId !== null) {
+        setPartialBookingId(response?.data?.partialId);
+      }
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   useEffect(() => {
     // Clear the session storage key after 30 minute
@@ -233,6 +318,10 @@ function FleetPage() {
       }
     };
     getData();
+
+    // calling API to save progress of booking
+    //if (partialBookingId === null) { sendPayloadToAPI(1); }
+
   }, [router]);
 
   async function checkPassengerMobileNumber(value, countryData) {
@@ -371,6 +460,8 @@ function FleetPage() {
       block: 'start',
       inline: 'end',
     });
+
+    sendPayloadToAPI(2)
   }
   useEffect(() => {
     async function getToken() {
@@ -484,6 +575,8 @@ function FleetPage() {
       sessionStorage.setItem('passengerDetails', JSON.stringify(passengerData));
       sessionStorage.setItem('user', JSON.stringify(user));
       setShowPayment(true);
+      sendPayloadToAPI(3);
+
     } else {
       setShowPassengerError(true);
       formRef?.current?.scrollIntoView({
@@ -506,7 +599,7 @@ function FleetPage() {
       pickup_location_id: pickuplocationid || null,
       drop_location_id: droplocationid || null,
       pickup_loc_coord: `POINT(${pickuplatlng.split(',')[1]} ${pickuplatlng.split(',')[0]
-      })`,
+        })`,
       travel_date: pickUpdateTime.trim(),
       preferred_vehicle: selectedCarDetails.vehicle_cat_id,
       passenger_adult_cnt: Number(passengers.adult),
@@ -631,7 +724,7 @@ function FleetPage() {
       payload.drop_location = dropaddress;
       payload.drop_postcode = droppostalcode;
       payload.drop_loc_coord = `POINT(${droplatlng.split(',')[1]} ${droplatlng.split(',')[0]
-      })`;
+        })`;
       payload.drop_location_type = droplocationtype;
     }
 
@@ -778,16 +871,20 @@ function FleetPage() {
   // Check if payment session ID exists or not
   // const tempBookingId = searchParams.get('temp_booking_id');
 
+
+
   useEffect(() => {
+    let hasSentEmail = false; // Flag to track if the email has been sent
+    let timeoutId = null; // To hold the timeout ID for the 60-second timer
+
     const sendAnalyticsData = async () => {
+      if (hasSentEmail) return; // Prevent multiple triggers
+
       const userInfo = JSON.parse(sessionStorage.getItem('user'));
-      // console.log('user journey', userJourneyDetails);
-      // console.log('user info:', userInfo);
 
       const { useremailid, usermobileno, usercountrycode } = userInfo;
 
       let journey = null;
-
       if (returndate && bookingtype === 'transfers') journey = 'Round Trip';
       if (!returndate && bookingtype !== 'hourly') journey = 'one-way journey';
       if (bookingtype === 'hourly') journey = 'Hourly trip;';
@@ -802,31 +899,56 @@ function FleetPage() {
         duration,
       };
 
-      const queryParams = `?email=${useremailid || null}&phoneNo=${usermobileno || null
-      }&countryCode=${usercountrycode || null}`;
+      const queryParams = `?email=${useremailid || null}&phoneNo=${usermobileno || null}&countryCode=${usercountrycode || null}`;
 
-      const response = await api.post(
-        `/users/reminder${queryParams}`,
-        payloadData,
-      );
+      const response = await api.post(`/users/reminder${queryParams}`, payloadData);
       sessionStorage.removeItem('passengerDetails');
       console.log('reminder', response);
+
+      hasSentEmail = true; // Mark email as sent
     };
 
+    const resetTimer = () => {
+      // Clear the previous timer
+      if (timeoutId) clearTimeout(timeoutId);
+
+      // Set a new timer for 60 seconds
+      timeoutId = setTimeout(async () => {
+        await sendAnalyticsData();
+      }, 60000); // 60 seconds
+    };
+
+    // Set up event listeners for user activity
+    const handleUserAction = () => {
+      resetTimer(); // Reset the timer when user performs an action
+    };
+
+    // Function to handle beforeunload event
     const handleBeforeUnload = async () => {
       await sendAnalyticsData();
     };
+
+    // Add event listeners for user actions
+    window.addEventListener('mousemove', handleUserAction);
+    window.addEventListener('keypress', handleUserAction);
+    window.addEventListener('click', handleUserAction);
     window.addEventListener('beforeunload', handleBeforeUnload);
+
+    // Start the timer on component mount
+    resetTimer();
+
     return async () => {
+      // Clean up event listeners and timer when component unmounts
+      window.removeEventListener('mousemove', handleUserAction);
+      window.removeEventListener('keypress', handleUserAction);
+      window.removeEventListener('click', handleUserAction);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+
+      if (timeoutId) clearTimeout(timeoutId); // Clear the timeout on unmount
+
       const token = sessionStorage.getItem('token');
       const carsExists = sessionStorage.getItem('selectedfleet');
-      if (
-        token
-        && token !== 'null'
-        && token !== 'undefined'
-        && !bookingRef
-        && carsExists
-      ) {
+      if (token && token !== 'null' && token !== 'undefined' && !bookingRef && carsExists) {
         await sendAnalyticsData();
       }
     };
@@ -949,7 +1071,7 @@ function FleetPage() {
             <div className="xl:container mx-auto py-12">
               <div
                 className={`mx-auto lg:container flex items-center ${!isCarSelected && ' justify-between'
-                }`}
+                  }`}
               >
                 <div
                   className="flex items-center text-primary text-sm font-bold cursor-pointer mb-2 sm:mb-0 2xl:basis-[35%] lg:basis-[387px]"
@@ -998,7 +1120,7 @@ function FleetPage() {
                           className={`rounded-full transition duration-500 ease-in-out sm:w-10 sm:h-10 w-8 h-8 flex items-center justify-center font-semibold ${showPayment
                             ? 'bg-success bg-opacity-90 text-success text-xl'
                             : 'bg-[#223544] text-primary border border-[#fff] border-opacity-40'
-                          }`}
+                            }`}
                         >
                           {showPayment && (
                             <FiCheck className="text-[#96fe96] sm:text-sm text-xs" />
@@ -1009,7 +1131,7 @@ function FleetPage() {
                         <div className="sm:px-3 px-1 w-24 sm:w-auto text-center">
                           <P
                             className={`font-semibold uppercase sm:text-sm !text-xs text-center pt-1 ${showPayment ? 'text-success' : ' text-[#F7BC3A]'
-                            }`}
+                              }`}
                           >
                             Passenger Details
                           </P>
@@ -1027,7 +1149,7 @@ function FleetPage() {
                         <div className="sm:px-3 px-1 w-24 sm:w-auto">
                           <P
                             className={`font-semibold uppercase sm:text-sm !text-xs text-center pt-1 ${showPayment ? ' text-[#F7BC3A]' : ''
-                            }`}
+                              }`}
                           >
                             PAYMENT
                           </P>
@@ -1042,7 +1164,7 @@ function FleetPage() {
                   className={`2xl:basis-[45%] lg:basis-[400px] lg:sticky fixed h-5/6  md:h-[85%] left-0 right-0 lg:top-24 lg:mt-0 lg:order-1 order-2 lg:z-auto z-50 transition-transform duration-150 ease-in-out delay-500 lg:bg-[#223544] bg-[#11202D] lg:px-0 px-4 lg:py-0 py-2 ${showTransfer
                     ? 'top-auto bottom-0 mt-0 overflow-y-auto bg-[#223544]'
                     : 'top-full -mt-12'
-                  }`}
+                    }`}
                 >
                   <div className="relative text-left">
                     <div

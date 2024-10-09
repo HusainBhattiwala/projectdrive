@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 
 export default function BottomNav({ setShowNewBooking, showNewBooking }) {
   const router = useRouter();
+
   return (
     <div
       className="w-screen px-0 py-3 bg-white sm:px-8"
@@ -35,10 +36,8 @@ export default function BottomNav({ setShowNewBooking, showNewBooking }) {
             Account
           </p>
         </div>
-        <div
-          className="flex flex-col w-1/4 gap-2 cursor-pointer"
-          onClick={() => router.push('/booking-management')}
-        >
+
+        <a href="/booking-management" className="flex flex-col w-1/4 gap-2 cursor-pointer">
           <img
             src="/images/global/booking.svg"
             className="flex-none mx-auto -mb-1 w-7 h-7"
@@ -47,7 +46,8 @@ export default function BottomNav({ setShowNewBooking, showNewBooking }) {
           <p className="text-xs font-semibold text-center text-gray-700 leading-[0.85rem] sm:text-sm">
             Bookings
           </p>
-        </div>
+        </a>
+
         <div
           className="flex flex-col w-1/4 gap-2 cursor-pointer"
           onClick={() => {

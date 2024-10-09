@@ -1,5 +1,4 @@
 import CityPage from 'rolnew/section/cities/CityPage';
-import { cityData } from 'rolnew/section/cities/cityData';
 import MetaTags from 'rolnew/meta/MetaTags';
 import metadataConfig from 'rolnew/meta/metadataConfig';
 
@@ -32,22 +31,19 @@ const cities = [
 ];
 
 // This function gets metadata based on the dynamic slug
-export function generateMetadataCity({ params }) {
+export function generateMetadataCity(params) {
   const { slug } = params; // Access the slug parameter
-  const city = cities.find((city) => city.value === slug); // Match the slug with the city value
+  const city = cities.find((c) => c.value === slug); // Match the slug with the city value
 
   if (!city) return {};
 
-  const fetchedData = cityData[city.name];
-  const metadata = fetchedData?.metaContent;
-
-  // console.log("from page.tsx: ", metadata);
-
-  return { metadata };
+  const metadata = metadataConfig[city.meta];
+  console.log(metadata);
+  return metadata || {};
 }
 
 export default function Cities({ params }) {
-  const { metadata } = generateMetadataCity({ params });
+  const metadata = generateMetadataCity(params); // Pass params directly
 
   return (
     <>

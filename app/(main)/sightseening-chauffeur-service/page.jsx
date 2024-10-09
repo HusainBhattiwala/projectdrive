@@ -19,7 +19,7 @@ export default function Page() {
   return (
     <>
       <MetaTags metadata={metadata} />
-      <ServicesBanner {...sightseeingData.bannerData} />
+      <ServicesBanner banner={sightseeingData.bannerData} />
       <LuxuriousServiceSearch luxuriousServiceData={sightseeingData.luxuriousServiceData} />
       <TopPicks topPicksData={sightseeingData.topPicksData} />
       <TrustedPartners trustedPartnersData={sightseeingData.trustedPartnersData} />

@@ -77,9 +77,15 @@ function OTP({
       return;
     }
 
-    const newInputs = [...inputs];
-    newInputs[index] = e.target.value;
-    setInputs(newInputs);
+    if (/^\d*$/.test(e.target.value)) {
+      const newInputs = [...inputs];
+      newInputs[index] = e.target.value;
+      setInputs(newInputs);
+      // Automatically focus next input if current input is not empty
+      // if (e.target.value && index <= inputs.length - 1) {
+      //   inputRefs.current[index + 1].current.focus();
+      // }
+    }
   };
 
   const handleKeyUp = (e, index) => {
@@ -100,6 +106,7 @@ function OTP({
       }
     }
   };
+
   const onSubmit = async () => {
     if (showInputs) {
       const status = inputs.every((i) => i !== '');
@@ -135,7 +142,8 @@ function OTP({
 
         // Wrong OTP error message
         if (response?.message === 'Wrong code provided') {
-          toast.success(
+          setShowLoader(false);
+          toast.error(
             'Entered OTP is not valid',
             {
               autoClose: 3000,
@@ -285,10 +293,20 @@ function OTP({
     });
   }
 
+  // function checkMobileNumber(value, countryData) {
+  //   if (value) {
+  //     const newNumber = getMobileNumber(value, countryData.dialCode);
+  //     if (isValidNumber(newNumber, countryData.countryCode.toUpperCase())) {
+  //       setIsValidMobileNumber(false);
+  //     } else {
+  //       setIsValidMobileNumber(true);
+  //     }
+  //   }
+  // }
   function checkMobileNumber(value, countryData) {
-    if (value) {
-      const newNumber = getMobileNumber(value, countryData.dialCode);
-      if (isValidNumber(newNumber, countryData.countryCode.toUpperCase())) {
+    if (value && countryData.dialCode) {
+      const formattedNumber = value.replace(`+${countryData.dialCode}`, '');
+      if (isValidNumber(formattedNumber, countryData.countryCode.toUpperCase())) {
         setIsValidMobileNumber(false);
       } else {
         setIsValidMobileNumber(true);
@@ -324,9 +342,9 @@ function OTP({
         )}
 
         {!showInputs && (
-          <div className="flex flex-col md:flex-row items-center md:items-end gap-y-4 md:gap-x-4">
+          <div className="flex flex-col md:flex-row items-center md:items-center gap-y-4 md:gap-x-4">
             <div className="w-full md:w-full">
-              <P className="mb-1 font-normal text-xs text-white">
+              <P className="mb-1 font-normal text-sm text-white">
                 Mobile Number
               </P>
 
@@ -342,15 +360,24 @@ function OTP({
                 }}
                 countryCodeEditable={false}
                 country="gb"
-                onChange={(_, country, event) => {
+                // onChange={(_, country, event) => {
+                //   setUserCountryCode(country.dialCode);
+                //   setUserMobile(event.target.value);
+                //   checkMobileNumber(event.target.value, country);
+                // }}
+                // onCountryChange={() => {
+                //   setUserMobile();
+                // }}
+                onChange={(value, country) => {
                   setUserCountryCode(country.dialCode);
-                  setUserMobile(event.target.value);
-                  checkMobileNumber(event.target.value, country);
+                  setUserMobile(value);
+                  checkMobileNumber(value, country);
                 }}
-                onCountryChange={() => {
-                  setUserMobile();
+                onCountryChange={(value, country) => {
+                  setUserCountryCode(country.dialCode);
+                  checkMobileNumber(userMobile, country);
                 }}
-                inputClass="!bg-[#223544] !text-[#B2B2B2] !border-0.4 !border-[#828282] focus:outline-none"
+                inputClass="!bg-[#223544] !text-[#B2B2B2] !text-lg sm:text-sm !border-0.4 !border-[#828282] focus:outline-none"
                 dropdownStyle={{ zIndex: 1000 }} // Ensure dropdown has a high z-index
               />
               {isValidMobileNumber && (
@@ -367,7 +394,7 @@ function OTP({
               type="submit"
               kind="primary"
               isLoading={showLoader}
-              className="w-full md:w-auto !text-white top-0 !text-opacity-100 !capitalize !text-xl mt-4 md:mt-0"
+              className="w-full md:w-auto !text-white top-0 !text-opacity-100 !capitalize !text-xl mt-4 md:mt-4"
             >
               Get OTP
             </Button>
@@ -434,8 +461,8 @@ function OTP({
               <Button
                 type="submit"
                 kind="primary"
-                isLoading={showLoader}
-                className={`w-full mt-4 ${showLoader && ''}`}
+                isLoading={seconds > 0 ? showLoader : false}
+                className="w-full mt-4"
               >
                 Proceed
               </Button>

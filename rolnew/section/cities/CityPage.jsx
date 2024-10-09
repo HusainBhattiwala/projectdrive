@@ -14,6 +14,7 @@ import Landmark from "rolnew/section/cities/LandMark";
 import { cityData } from "./cityData";
 import BookModal from "rolnew/comp/BookModal";
 import ServiceOfferings from "rolnew/comp/ServiceOfferings";
+import BookingBanner from "app/(main)/BookingBanner";
 
 const cities = [
   {
@@ -69,8 +70,10 @@ function CityPage() {
 
   return (
     <>
-      <Banner pageData={pageData} />
-      <div className="bg-[#11202D] py-12">
+      {/* <Banner pageData={pageData} /> */}
+
+      <BookingBanner banner={pageData.banner} />
+      <div className="bg-[#11202D] py-6">
         <TrustedPartners
           img={pageData?.trustedPartnersData?.img}
           trustedPartnersData={pageData?.trustedPartnersData?.data}

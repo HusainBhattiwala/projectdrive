@@ -7,7 +7,7 @@ function Title({ subTitle, mainTitle, description, descClass }) {
       <h4 className='sm:text-lg text-base font-normal leading-7 text-[#B2B2B2] font-robo'>
         {subTitle}
       </h4>
-      <div className='flex flex-col sm:gap-y-3 gap-y-1'>
+      <div className='flex flex-col sm:gap-y-3 gap-y-3'>
         <h2 className='sm:text-3xl text-2xl font-medium sm:leading-9 leading-tight text-[#B2B2B2] capitalize'>
           {mainTitle}
         </h2>

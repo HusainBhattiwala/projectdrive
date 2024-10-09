@@ -13,9 +13,7 @@ import P from 'components/typography/P';
 import Button from 'components/ui/Button';
 import Input from 'components/ui/Input';
 import ModalV2 from 'components/ui/ModalV2';
-
 import 'react-phone-input-2/lib/plain.css';
-
 import { toast } from 'react-toastify';
 import BookingSummary from './BookingSummary';
 import LabeledInput from './LabeledInput';
@@ -416,7 +414,7 @@ export default function FormFields({
             <Dropdown
               optionRenderer={optionRenderer}
               options={rideCategories}
-              onChange={(item) => { onRideTypeChange(item); setRideCategory(item.toLowerCase()); setFirstUpdate(() => false); }}
+              onChange={(item) => { onRideTypeChange(item); setRideCategory(item.toLowerCase()); setFirstUpdate(() => false); setSelectedVehicle(null); }}
               disabled={!isAllowedEdit}
             >
               <span className="font-medium capitalize !text-gray-700">{rideCategory}</span>
@@ -457,10 +455,11 @@ export default function FormFields({
               name="pickuplocation"
               errors={showPickupError}
               setError={setShowPickupError}
+              disabled={!isAllowedEdit}
               isEdit
             />
             {
-              userPickLocation?.address && (
+              userPickLocation?.address && isAllowedEdit && (
                 <P className="absolute text-black right-2 top-2/4 -translate-y-2/4 cursor-pointer">
                   <CgClose onClick={() => {
                     setUserPickLocation((prev) => ({
@@ -496,10 +495,11 @@ export default function FormFields({
                 name="droplocation"
                 errors={showDropError}
                 setError={setShowDropError}
+                disabled={!isAllowedEdit}
                 isEdit
               />
               {
-              userDropLocation?.address && (
+              userDropLocation?.address && isAllowedEdit && (
                 <P className="absolute text-black right-2 top-2/4 -translate-y-2/4 cursor-pointer">
                   <CgClose onClick={() => {
                     setUserDropLocation((prev) => ({
@@ -631,7 +631,8 @@ export default function FormFields({
             </P>
             <div className="relative w-full">
               <Input
-                value={selectedVehicle?.vehicle_cat_name}
+                key={selectedVehicle?.vehicle_cat_name || 'empty'}
+                value={selectedVehicle?.vehicle_cat_name || 'Select Vehicle'}
                 className={`pr-8 cursor-pointer ${!isSubmissionAllowed && 'border border-primary'} `}
                 onClick={() => {
                   setVehicleModal(() => ({
@@ -652,6 +653,7 @@ export default function FormFields({
                     selectedVehicle,
                   }));
                 }}
+                readOnly // Prevents keyboard from opening on mobile devices
                 disabled={!isAllowedEdit}
               />
               <svg

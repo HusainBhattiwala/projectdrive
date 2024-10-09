@@ -3,7 +3,8 @@ export const cityData = {
     banner: {
       title: "Chauffeur Service In London",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
-      bannerImage: "/images/city/london/banner/london_city.png",
+      bannerImage: "/images/city/london/banner/london-city.jpg",
+      mobileBannerImage : "/images/city/london/banner/mobile-london-city.jpg",
     },
 
     trustedPartnersData: {
@@ -345,46 +346,14 @@ export const cityData = {
         },
       ],
     },
-
-    metaContent: {
-      title: "Luxury Chauffeur Service in London with Comfort Ride | Rol Drive",
-      description: "Enjoy unparalleled comfort with Rol Drive's Luxury Chauffeur Service in London. Experience a smooth, elegant ride tailored to your needs.",
-      robots: "index, follow",
-      revisitAfter: "3 days",
-      canonical: "https://www.roldrive.com/chauffeur-service-in-london",
-      ogLocale: "en_GB",
-      ogType: "website",
-      ogTitle: "Rol Drive: Redefining Luxury Chauffeur Services in London",
-      ogDescription: "Indulge in Rol Drive's Luxury Chauffeur Service in London. Enjoy a premium, comfortable ride with top-notch service and elegance.",
-      ogUrl: "https://www.roldrive.com/chauffeur-service-in-london",
-      ogSiteName: "RolDrive",
-      domainVerify: "5a85a1e146fef31be71b80439f963cde",
-      twitterCard: "summary_large_image",
-      twitterDescription: "Indulge in Rol Drive's Luxury Chauffeur Service in London. Enjoy a premium, comfortable ride with top-notch service and elegance.",
-      twitterTitle: "Rol Drive: Redefining Luxury Chauffeur Services in London",
-      twitterSite: "https://www.roldrive.com/chauffeur-service-in-london",
-      twitterCreator: "@Rol_Drive",
-      schema: `<script type="application/ld+json">
-          {
-            "@context": "https://schema.org/",
-            "@type": "WebSite",
-            "name": "chauffeur service in london",
-            "url": "https://www.roldrive.com/chauffeur-service-in-london",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://www.roldrive.com/{search_term_string}chauffeur-service-in-london",
-              "query-input": "required name=search_term_string"
-            }
-          }
-          </script>`
-    },
   },
 
   dubai: {
     banner: {
       title: "Chauffeur Service In Dubai",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
-      bannerImage: "/images/city/dubai/banner/dubai_city.png",
+      bannerImage: "/images/city/dubai/banner/dubai-city.jpg",
+      mobileBannerImage : "/images/city/dubai/banner/mobile-dubai-city.jpg",
     },
     servicesData: {
       img: "/rolnew/cities/trust-banner.svg",
@@ -687,46 +656,14 @@ export const cityData = {
         },
       ],
     },
-
-    metaContent: {
-      title: "Premium Chauffeur Service in Dubai | Rol Drive",
-      description: "Experience excellence with Rol Drive's premium chauffeur service in Dubai. Enjoy luxury travel with professional drivers and top-notch vehicles.",
-      robots: "index, follow",
-      revisitAfter: "3 days",
-      canonical: "https://www.roldrive.com/chauffeur-service-in-dubai",
-      ogLocale: "en_GB",
-      ogType: "website",
-      ogTitle: "Discover Luxury: Premium Chauffeur Service in Dubai by Rol Drive",
-      ogDescription: "Experience unparalleled luxury with Rol Drive's premium chauffeur service in Dubai. Exceptional service and exclusive vehicles for a memorable journey.",
-      ogUrl: "https://www.roldrive.com/chauffeur-service-in-dubai",
-      ogSiteName: "RolDrive",
-      domainVerify: "5a85a1e146fef31be71b80439f963cde",
-      twitterCard: "summary_large_image",
-      twitterDescription: "Experience unparalleled luxury with Rol Drive's premium chauffeur service in Dubai. Exceptional service and exclusive vehicles for a memorable journey.",
-      twitterTitle: "Discover Luxury: Premium Chauffeur Service in Dubai by Rol Drive",
-      twitterSite: "https://www.roldrive.com/chauffeur-service-in-dubai",
-      twitterCreator: "@Rol_Drive",
-      schema: `<script type="application/ld+json">
-          {
-            "@context": "https://schema.org/",
-            "@type": "WebSite",
-            "name": "chauffeur service in dubai",
-            "url": "https://www.roldrive.com/chauffeur-service-in-dubai",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://www.roldrive.com/{search_term_string}chauffeur-service-in-dubai",
-              "query-input": "required name=search_term_string"
-            }
-          }
-          </script>`
-    },
   },
 
   newyork: {
     banner: {
       title: "Chauffeur Service In New York",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
-      bannerImage: "/images/city/new-york/banner/newyork_city.png",
+      bannerImage: "/images/city/new-york/banner/new-york-city.jpg",
+      mobileBannerImage : "/images/city/new-york/banner/mobile-new-york-city.jpg",
     },
     trustedPartnersData: {
       img: "/rolnew/cities/trust/trust-newyork.jpg",
@@ -1047,46 +984,14 @@ export const cityData = {
         },
       ],
     },
-
-    metaContent: {
-      title: "Best Chauffeur Service in New York | Rol Drive",
-      description: "Experience the epitome of luxury and reliability with Rol Drive's best chauffeur service in New York. Enjoy comfort and style throughout your journey.",
-      robots: "index, follow",
-      revisitAfter: "3 days",
-      canonical: "https://www.roldrive.com/chauffeur-service-in-new-york",
-      ogLocale: "en_GB",
-      ogType: "website",
-      ogTitle: "Experience Superiority: Best Chauffeur Service New York - Rol Drive",
-      ogDescription: "Experience unparalleled luxury with Rol Drive's best chauffeur service in New York. Exceptional service and exclusive vehicles for a memorable journey.",
-      ogUrl: "https://www.roldrive.com/chauffeur-service-in-new-york",
-      ogSiteName: "RolDrive",
-      domainVerify: "5a85a1e146fef31be71b80439f963cde",
-      twitterCard: "summary_large_image",
-      twitterDescription: "Experience unparalleled luxury with Rol Drive's best chauffeur service in New York. Exceptional service and exclusive vehicles for a memorable journey.",
-      twitterTitle: "Experience Superiority: Best Chauffeur Service New York - Rol Drive",
-      twitterSite: "https://www.roldrive.com/chauffeur-service-in-new-york",
-      twitterCreator: "@Rol_Drive",
-      schema: `<script type="application/ld+json">
-          {
-            "@context": "https://schema.org/",
-            "@type": "WebSite",
-            "name": "chauffeur service in new-york",
-            "url": "https://www.roldrive.com/chauffeur-service-in-new-york",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://www.roldrive.com/{search_term_string}chauffeur-service-in-new-york",
-              "query-input": "required name=search_term_string"
-            }
-          }
-          </script>`
-    },
   },
 
   paris: {
     banner: {
       title: "Chauffeur Service In Paris",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
-      bannerImage: "/images/city/paris/banner/paris_city.png",
+      bannerImage: "/images/city/paris/banner/paris-city.jpg",
+      mobileBannerImage : "/images/city/paris/banner/mobile-paris-city.jpg",
     },
 
     trustedPartnersData: {
@@ -1411,45 +1316,14 @@ export const cityData = {
       ],
     },
 
-    metaContent: {
-      title: "Luxury Chauffeur Service in Paris | Rol Drive",
-      description: "Experience luxury with Rol Drive's chauffeur service in Paris. Enjoy impeccable service and prestigious vehicles for an elegant travel experience.",
-      robots: "index, follow",
-      revisitAfter: "3 days",
-      canonical: "https://www.roldrive.com/chauffeur-service-in-paris",
-      ogLocale: "en_GB",
-      ogType: "website",
-      ogTitle: "Luxury Redefined: Rol Drive's Chauffeur Service in Paris",
-      ogDescription: "Indulge in luxury with Rol Drive's chauffeur service in Paris. Enjoy impeccable service and prestigious vehicles for a sophisticated travel experience.",
-      ogUrl: "https://www.roldrive.com/chauffeur-service-in-paris",
-      ogSiteName: "RolDrive",
-      domainVerify: "5a85a1e146fef31be71b80439f963cde",
-      twitterCard: "summary_large_image",
-      twitterDescription: "Indulge in luxury with Rol Drive's chauffeur service in Paris. Enjoy impeccable service and prestigious vehicles for a sophisticated travel experience.",
-      twitterTitle: "Luxury Redefined: Rol Drive's Chauffeur Service in Paris",
-      twitterSite: "https://www.roldrive.com/chauffeur-service-in-paris",
-      twitterCreator: "@Rol_Drive",
-      schema: `<script type="application/ld+json">
-          {
-            "@context": "https://schema.org/",
-            "@type": "WebSite",
-            "name": "chauffeur service in paris",
-            "url": "https://www.roldrive.com/chauffeur-service-in-paris",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://www.roldrive.com/{search_term_string}chauffeur-service-in-paris",
-              "query-input": "required name=search_term_string"
-            }
-          }
-          </script>`
-    },
   },
 
   tokyo: {
     banner: {
       title: "Chauffeur Service In Tokyo",
       subTitle: "Your exclusive and dependable chauffeur service indulgence",
-      bannerImage: "/images/city/tokyo/banner/tokyo_city.png",
+      bannerImage: "/images/city/tokyo/banner/tokyo-city.jpg",
+      mobileBannerImage : "/images/city/tokyo/banner/mobile-tokyo-city.jpg",
     },
     trustedPartnersData: {
       img: "/rolnew/cities/trust/trust-tokyo.jpg",
@@ -1753,39 +1627,6 @@ export const cityData = {
           ),
         },
       ],
-    },
-
-    metaContent: {
-      title: "Private Chauffeur Service in Tokyo | Rol Drive",
-      description: "Enjoy exclusive travel with Rol Drive's private chauffeur service in Tokyo. Experience luxury, comfort, and personalized attention throughout your journey.",
-      robots: "index, follow",
-      revisitAfter: "3 days",
-      canonical: "https://www.roldrive.com/chauffeur-service-in-tokyo",
-      ogLocale: "en_GB",
-      ogType: "website",
-      ogTitle: "Premium Comfort: Rol Drive's Private Chauffeur Service in Tokyo",
-      ogDescription: "Enjoy exclusive comfort and privacy with Rol Drive's private chauffeur service in Tokyo. Premium vehicles and personalized attention for a luxurious journey.",
-      ogUrl: "https://www.roldrive.com/chauffeur-service-in-tokyo",
-      ogSiteName: "RolDrive",
-      domainVerify: "5a85a1e146fef31be71b80439f963cde",
-      twitterCard: "summary_large_image",
-      twitterDescription: "Enjoy exclusive comfort and privacy with Rol Drive's private chauffeur service in Tokyo. Premium vehicles and personalized attention for a luxurious journey.",
-      twitterTitle: "Premium Comfort: Rol Drive's Private Chauffeur Service in Tokyo",
-      twitterSite: "https://www.roldrive.com/chauffeur-service-in-tokyo",
-      twitterCreator: "@Rol_Drive",
-      schema: `<script type="application/ld+json">
-          {
-            "@context": "https://schema.org/",
-            "@type": "WebSite",
-            "name": "chauffeur service in tokyo",
-            "url": "https://www.roldrive.com/chauffeur-service-in-tokyo",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://www.roldrive.com/{search_term_string}chauffeur-service-in-tokyo",
-              "query-input": "required name=search_term_string"
-            }
-          }
-          </script>`
     },
   },
 };

@@ -4,6 +4,8 @@ import { useEffect, useState, useContext } from "react";
 import { ModalContext } from "context/ModalContext";
 import Button from "rolnew/ui/Button";
 import DownArrowBox from "rolnew/comp/DownArrowBox";
+import ContactUsDiv from "rolnew/comp/ContactUsDiv";
+
 // import { Montserrat } from 'next/font/google';
 
 // const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] });
@@ -66,39 +68,11 @@ function Banner({ pageData }) {
               backgroundImage: 'url("/rolnew/cities/mobile-gradient.svg")',
             }}
           />
-          <div className="z-[7]">
-            <h2 className="text-[#CED5E5] sm:text-xl text-base leading-tight z-[2]">
-              Do you want to customise your booking?
-            </h2>
-            <p className="sm:py-1 text-[#CED5E5] font-normal sm:text-sm text-xs leading-tight w-full px-4 z-[2]">
-              We offer customised bookings for any location, from bulk or
-              intercity trips to monthly packages.
-            </p>
-            <div className="flex md:flex-row flex-col items-center gap-x-4 sm:pt-0 pt-4 gap-y-2 flex-wrap justify-center z-[2]">
-              <p className="text-[#CED5E5] sm:text-sm text-xs">
-                Contact us now
-              </p>
-              <div className="flex sm:flex-row flex-col sm:gap-x-4 gap-x-1.5 justify-between gap-y-1.5 sm:pb-0 pb-4">
-                <div className="flex items-center sm:gap-x-2 gap-x-1 text-[#FDC65C] lg:text-base text-xs font-medium flex-nowrap pop">
-                  <img
-                    className="sm:w-5 w-3"
-                    src="/rolnew/global/icons/phone-primary-gold.svg"
-                    alt="phone-primary-gold"
-                  />
-                  <a href="tel:+442045920966">+44 204 592 0966</a>
-                </div>
-                <div className="flex items-center sm:gap-x-2 gap-x-1 text-[#FDC65C] lg:text-base text-xs font-medium pop">
-                  <img
-                    className="sm:w-5 w-3"
-                    src="/rolnew/global/icons/mail-primary-gold.svg"
-                    alt="phone-primary-gold"
-                  />
-                  <a href="mailto:booking@roldrive.com">booking@roldrive.com</a>
-                </div>
-              </div>
-            </div>
+          <div className="z-[7] relative flex flex-col">
 
-            <div className="z-[2] sm:hidden flex items-center justify-center sm:pb-0 pb-12">
+            <ContactUsDiv />
+
+            <div className="z-[2] sm:hidden flex items-center justify-center sm:pb-0 pb-4 sm:pt-0 pt-2">
               <Button onClick={() => openModal()} className="w-7/12">
                 Book Now
               </Button>
@@ -108,19 +82,24 @@ function Banner({ pageData }) {
       </div>
       {
         width >= 640 && (
-          <div
-            className="z-[2] sm:absolute flex items-center justify-center left-2/4 sm:-translate-x-2/4 sm:pb-0 pb-16"
-            style={{
-              top: `${height - 270}px`,
-            }}
-          >
-            <Button onClick={() => openModal()} className="!px-16 py-2">
-              Book Now
-            </Button>
-          </div>
+          <>
+            <div
+              className="z-[2] sm:absolute flex items-center justify-center left-2/4 sm:-translate-x-2/4 sm:pb-0 pb-16"
+              style={{
+                top: `${height - 270}px`,
+              }}
+            >
+              <Button onClick={() => openModal()} className="!px-16 py-2">
+                Book Now
+              </Button>
+            </div>
+
+            <DownArrowBox />
+          </>
+
         )
       }
-      <DownArrowBox />
+
     </div >
   );
 }

@@ -63,7 +63,7 @@ function TopDestination({ data, bg }) {
       </div>
       <Container className={`${bg} sm:py-16 py-8 text-center`}>
         <Title subTitle='Top Destinations' mainTitle={data?.title} />
-        <CountryList countryList={data?.list} bg={bg} />
+        <CountryList countryList={data?.list} bg={bg} showAddress={false} />
 
         <Button
           className='mt-14 w-full sm:w-[30%]'

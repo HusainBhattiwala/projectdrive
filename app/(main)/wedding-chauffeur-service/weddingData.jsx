@@ -1,12 +1,9 @@
 export const weddingData = {
   bannerData: {
-    mainTitle: 'Wedding Chauffeur Service',
-    mainDescription:
-      'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/banners/wedding T.jpg',
-    title: 'Do you want to customise your booking?',
-    description:
-      'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
+    title: 'Wedding Chauffeur Service',
+    subTitle: 'Your exclusive and dependable chauffeur service indulgence.',
+    bannerImage: '/rolnew/services/banners/wedding-2.jpg',
+    mobileBannerImage: '/rolnew/services/banners/mobile-wedding-transfer.jpg',
   },
 
   luxuriousServiceData: [

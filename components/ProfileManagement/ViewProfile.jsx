@@ -20,19 +20,26 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
   const cancelledConfirmModalBody = () => <CancelledConfirmModal />;
   const [cancelleConfirmdModal, setCancelleConfirmdModal] = useState();
 
+  console.log(userDetails);
+
   const divRef = useRef(null);
   const [preview, setPreview] = useState(null);
   const [addCardModal, setAddCardModal] = useState();
   const [cardDetails, setCardDetails] = useState(null);
 
-  useEffect(() => {
-    async function getCards() {
-      const response = await api.get('/card-details');
-      if (response.data) {
-        setCardDetails(response.data);
-      }
+  async function getCards() {
+    const response = await api.get('/card-details');
+    if (response?.data) {
+      setCardDetails(response?.data);
     }
-    getCards();
+    return response;
+  }
+
+  useEffect(() => {
+    const response = getCards();
+    if (response.data) {
+      setCardDetails(response.data);
+    }
   }, [setCardDetails]);
 
   async function confirmDelete(card) {
@@ -44,9 +51,9 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
     console.log(deleted);
 
     if (deleted.data.status === 1) {
-      const response = await api.get('/card-details');
+      const response = getCards();
       if (response.data) {
-        setCardDetails(() => response.data);
+        if (response.message === 'Card not found' || response.data === '') { setCardDetails(null); } else { setCardDetails(() => response.data); }
       }
       toast.success(deleted.message, {
         autoClose: 3000,
@@ -140,9 +147,7 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
       enabled: false,
     }));
 
-    const response = await api.get(
-      'https://api-dev.roldrive.com/api/v1/corporate/passengers',
-    );
+    const response = getCards();
     if (response.data) {
       setCardDetails(response.data);
       console.log(cardDetails);
@@ -151,7 +156,7 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
 
   // eslint-disable-next-line max-len
   const addCardModalBody = () => (
-    <AddnewCard email={userDetails?.user_email_id} handleClose={handleClose} />
+    <AddnewCard email={userDetails?.user_email_id} handleClose={handleClose} getCards={getCards} />
   );
 
   function openNewCardModal() {
@@ -192,7 +197,7 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
       )}
 
       <div
-        className="xl:px-[102px] lg:px-12 px-2 xl:py-[80px] py-8 bg-white"
+        className="xl:px-[70px] lg:px-12 px-4 xl:py-[40px] py-8 !text-black bg-white rounded-3xl"
         ref={divRef}
       >
         <div className="flex items-center flex-col sm:flex-row">
@@ -252,9 +257,9 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
               </div>
               <H4 className="pl-1 font-bold text-black text-[16px]">Address</H4>
             </div>
-            <P className="mt-1 md:max-w-[80%] pl-5">
+            <P className="mt-1 md:max-w-[80%] pl-5 !text-black">
               {(userDetails.address_line_1 || userDetails.address_line_2)
-                && (userDetails.address_line_1, userDetails.address_line_2)}
+                && (`${userDetails.address_line_1}, ${userDetails.address_line_2}`)}
             </P>
           </div>
           <div className="col-span-4 md:col-span-2 lg:col-span-1 lg:mt-0 mt-4">
@@ -264,7 +269,7 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
               </div>
               <H4 className="pl-1 font-bold text-black text-[16px]">Mobile</H4>
             </div>
-            <P className="mt-1 pl-5">
+            <P className="mt-1 pl-5 !text-black">
               {userDetails.user_country_code}
               {' '}
               {userDetails.user_mobile_no}
@@ -279,7 +284,7 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
                 Telephone
               </H4>
             </div>
-            <P className="mt-1 pl-5">{userDetails.telephone}</P>
+            <P className="mt-1 pl-5 !text-black">{userDetails.telephone}</P>
           </div>
           <div className="lg:col-span-2 col-span-4 sm:mt-10">
             <div className="grid grid-cols-3">
@@ -295,7 +300,7 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
                     City
                   </H4>
                 </div>
-                <P className="mt-1 pl-5">{userDetails.city}</P>
+                <P className="mt-1 pl-5 !text-black">{userDetails.city}</P>
               </div>
               <div className="sm:col-span-1 col-span-2 sm:mt-0 mt-4">
                 <div className="flex items-center">
@@ -309,7 +314,7 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
                     State
                   </H4>
                 </div>
-                <P className="mt-1 pl-5">{userDetails.city_state}</P>
+                <P className="mt-1 pl-5 !text-black">{userDetails.city_state}</P>
               </div>
               <div className="sm:col-span-1 col-span-2 sm:mt-0 mt-4">
                 <div className="flex items-center">
@@ -321,7 +326,7 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
                   </div>
                   <H4 className="pl-1 font-bold text-black text-[16px]">Zip</H4>
                 </div>
-                <P className="mt-1 pl-5">{userDetails.zip_code}</P>
+                <P className="mt-1 pl-5 !text-black">{userDetails.zip_code}</P>
               </div>
             </div>
           </div>
@@ -334,7 +339,7 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
                 Email Address
               </H4>
             </div>
-            <P className="mt-1 pl-5 break-words pr-2">
+            <P className="mt-1 pl-5 break-words pr-2 !text-black">
               {userDetails.user_email_id}
             </P>
           </div>
@@ -348,7 +353,7 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
               </H4>
             </div>
             <div className="flex items-center">
-              <P className="mt-1 pl-5">xxxxxxxxxx</P>
+              <P className="mt-1 pl-5 !text-black">xxxxxxxxxx</P>
             </div>
           </div>
           <div className="col-span-4 sm:mt-20 mt-8 justify-center sm:justify-end flex">
@@ -369,10 +374,10 @@ function ViewProfile({ showEditProfile, userDetails, changePassword }) {
           </div>
         </div>
       </div>
-      <H1 className="py-6 leading-none font-bold text-primary md:!text-[32px] tracking-tight sm:pl-0 pl-[14px]">
+      <H1 className="py-6 leading-none font-bold text-white md:!text-[32px] tracking-tight sm:pl-0 pl-[14px]">
         Saved Cards
       </H1>
-      <div className="xl:px-[30px] lg:px-6 px-2 xl:py-[40px] py-8 bg-white">
+      <div className="xl:px-[30px] lg:px-6 px-2 xl:py-[40px] py-8 bg-white rounded-3xl">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8">
           {cardDetails
             && cardDetails.map((card) => (

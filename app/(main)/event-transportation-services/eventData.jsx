@@ -1,12 +1,9 @@
 export const eventData = {
   bannerData: {
-    mainTitle: 'Event Transportation',
-    mainDescription:
-      'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/banners/event.jpg',
-    title: 'Do you want to customise your booking?',
-    description:
-      'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
+    title: 'Event Transportation',
+    subTitle: 'Your exclusive and dependable chauffeur service indulgence.',
+    bannerImage: '/rolnew/services/banners/event.jpg',
+    mobileBannerImage: '/rolnew/services/banners/mobile-event-transfer.jpg',
   },
 
   luxuriousServiceData: [

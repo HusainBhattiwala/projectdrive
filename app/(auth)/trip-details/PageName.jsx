@@ -10,7 +10,7 @@ function PageName() {
       <Link className="flex items-center text-primary text-sm font-bold cursor-pointer" href="/booking-management">
         <MdArrowBack className="sm:text-3xl text-2xl border border-primary rounded-full py-1 px-1 shadow-red-600 hover:bg-primary hover:text-white" />
       </Link>
-      <H1 className="font-bold sm:!text-[32px] tracking-tight text-black sm:ml-5 ml-1">
+      <H1 className="font-bold sm:!text-[32px] tracking-tight !text-white sm:ml-5 ml-1">
         Your Trip Details
       </H1>
     </div>

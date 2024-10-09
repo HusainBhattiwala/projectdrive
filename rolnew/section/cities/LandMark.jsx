@@ -7,15 +7,15 @@ export default function Landmark({ pageData }) {
   return (
     <div>
       {pageData && (
-        <Container className='bg-[#223544] text-white py-[80px] text-center'>
+        <Container className='bg-[#223544] text-white sm:py-[80px] py-[40px] text-center'>
           <Title
             subTitle={pageData?.title1?.subTitle}
             mainTitle={pageData?.title1?.mainTitle}
             description={pageData?.title1?.description}
-            descClass='text-center py-11'
+            descClass='text-center sm:py-11 py-2'
           />
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-x-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-x-4 gap-y-4'>
             {pageData?.landMarks &&
               pageData?.landMarks?.map((item) => (
                 <div className='col-span-1 rounded-b-xl rounded-t-xl h-full bg-[#E5EAFA] bg-opacity-10'>
@@ -45,7 +45,7 @@ export default function Landmark({ pageData }) {
             />
           </div>
 
-          <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 py-6 px-[40px] gap-x-4 gap-y-6'>
+          <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 py-6 sm:px-[40px] px-[10px] gap-x-4 gap-y-6'>
             {pageData?.touristAttraction?.list &&
               pageData?.touristAttraction?.list.map((item) => (
                 <div
@@ -60,7 +60,7 @@ export default function Landmark({ pageData }) {
                       className='rounded-lg'
                     />
                   </div>
-                  <div className='py-3 px-4 text-left'>
+                  <div className='pl-4 text-left'>
                     <h3 className='text-[#BBBCC0] font-medium text-xl'>
                       {item.title}
                     </h3>

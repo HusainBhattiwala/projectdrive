@@ -45,76 +45,87 @@ export default function FareSummary({
 
       <div className="max-w-[26rem] mx-auto mt-6">
         {
-         Number(distance) > 0
+          Number(distance) > 0
           && (
-          <>
-            <div className="flex flex-col gap-2 min-w-max mo:mb-5 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
-              <P className="flex-none w-full sm:max-w-[12rem] font-bold text-gray-800">
-                Travel Distance
-              </P>
-              <P className="text-gray-600">
-                {distance ? Number(distance)?.toFixed(2) : 0}
-                {' '}
-                miles
-              </P>
-            </div>
-            <div className="flex flex-col gap-2 mo:mb-5 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
-              <P className="flex-none w-full sm:max-w-[12rem] font-bold text-gray-800">
-                Estimated Travel Time
-              </P>
-              <P className="text-gray-600">
-                {duration}
-                {' '}
-                mins
-              </P>
-            </div>
-          </>
+            <>
+              <div className="flex flex-col gap-2 min-w-max mo:mb-5 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
+                <P className="flex-none w-full sm:max-w-[12rem] font-bold text-gray-800">
+                  Travel Distance
+                </P>
+                <P className="text-gray-600">
+                  {distance ? Number(distance)?.toFixed(2) : 0}
+                  {' '}
+                  miles
+                </P>
+              </div>
+              <div className="flex flex-col gap-2 mo:mb-5 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
+                <P className="flex-none w-full sm:max-w-[12rem] font-bold text-gray-800">
+                  Estimated Travel Time
+                </P>
+                <P className="text-gray-600">
+                  {duration}
+                  {' '}
+                  mins
+                </P>
+              </div>
+            </>
           )
         }
-        <div className="flex flex-col gap-2 mo:mb-5 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
-          <P className="flex-none w-full sm:max-w-[12rem] font-bold text-gray-800">
-            Your Ride
-          </P>
-          <P className="text-gray-600">{selectedVehicle?.vehicle_cat_name}</P>
-        </div>
 
-        <div className="w-[18rem] mx-auto my-10 h-44">
-          <img
-            src={selectedVehicle?.vehicle_imge_url || '/images/trip-details/car.png'}
-            alt=""
-            className="object-contain w-full h-full"
-          />
-        </div>
+        {selectedVehicle?.vehicle_cat_name
+          ? (
+            <div>
+              <div className="flex flex-col gap-2 mo:mb-5 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
+                <P className="flex-none w-full sm:max-w-[12rem] font-bold text-gray-800">
+                  Your Ride
+                </P>
+                <P className="text-gray-600">{selectedVehicle?.vehicle_cat_name}</P>
+              </div>
 
-        <P className="w-full sm:max-w-[12rem] font-bold text-gray-800">
-          Estimated Tariff
-          {' '}
-        </P>
-        <div className="flex flex-col gap-2 mo:mb-5 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
-          <P className="flex-none w-full sm:max-w-[12rem] text-gray-800">
-            Price
-          </P>
-          <P className="text-gray-600">
-            {
-             selectedVehicle?.tariff && formatPrice(selectedVehicle.tariff, userCurrency || 'GBP')
-            }
-          </P>
-        </div>
-        {/* <div className="flex flex-col gap-2 mo:mb-4 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
+              {selectedVehicle?.vehicle_imge_url
+              && (
+              <div className="w-[18rem] mx-auto my-10 h-44">
+                <img
+                  src={selectedVehicle?.vehicle_imge_url || '/images/trip-details/car.png'}
+                  alt=""
+                  className="object-contain w-full h-full"
+                />
+              </div>
+              )}
+
+              <P className="w-full sm:max-w-[12rem] font-bold text-gray-800">
+                Estimated Tariff
+                {' '}
+              </P>
+              <div className="flex flex-col gap-2 mo:mb-5 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
+                <P className="flex-none w-full sm:max-w-[12rem] text-gray-800">
+                  Price
+                </P>
+                <P className="text-gray-600">
+                  {
+                  selectedVehicle?.tariff && formatPrice(selectedVehicle.tariff, userCurrency || 'GBP')
+                }
+                </P>
+              </div>
+              {/* <div className="flex flex-col gap-2 mo:mb-4 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
           <P className="flex-none w-full sm:max-w-[12rem] text-gray-800">
             High Demand Rate
           </P>
           <P className="text-gray-600">50 GBP</P>
         </div> */}
-        <hr className="border border-gray-300 mo:my-4" />
-        <div className="flex flex-col gap-2 mo:mb-2 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
-          <P className="flex-none w-full sm:max-w-[12rem] text-gray-800">
-            Estimated Total
-          </P>
-          <P className="text-gray-600">
-            { selectedVehicle?.tariff && formatPrice(selectedVehicle.tariff, userCurrency || 'GBP')}
-          </P>
-        </div>
+              <hr className="border border-gray-300 mo:my-4" />
+              <div className="flex flex-col gap-2 mo:mb-2 sm:my-3 sm:items-center sm:gap-5 sm:flex-row">
+                <P className="flex-none w-full sm:max-w-[12rem] text-gray-800">
+                  Estimated Total
+                </P>
+                <P className="text-gray-600">
+                  {selectedVehicle?.tariff && formatPrice(selectedVehicle.tariff, userCurrency || 'GBP')}
+                </P>
+              </div>
+            </div>
+          )
+          : <p className="bg-red-500 text-white mt-8 p-2 text-center">Select Vehicle Class</p>}
+
       </div>
 
       <hr className="my-10 border border-gray-300" />

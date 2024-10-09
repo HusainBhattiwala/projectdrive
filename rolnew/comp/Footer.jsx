@@ -20,7 +20,7 @@ function Footer() {
   return (
     <footer>
       <Container className={`bg-[#121212] sm:py-[73px] py-8 text-center z-[-1]`}>
-        <div className="flex sm:flex-row flex-col lg:gap-x-[85px] sm:gap-x-[30px] gap-x-6 justify-between w-full mx-auto md:px-8">
+        <div className="flex sm:flex-row flex-col lg:gap-x-[65px] sm:gap-x-[30px] gap-x-6 justify-between w-full md:px-8">
           <div className="flex flex-col gap-y-6 text-left sm:max-w-[274px] w-full sm:pb-0 pb-6">
             <Link href="/rolnew" className="pop">
               <img
@@ -53,60 +53,76 @@ function Footer() {
             </div>
             <SocialLinks />
           </div>
-          <div className="flex lg:gap-x-[85px] sm:gap-x-[30px] gap-x-6 sm:my-0 py-6 sm:border-none border-t border-[#FFFFFF] border-opacity-40">
-            <div className="flex flex-col gap-y-5 items-start text-left sm:w-auto w-5/12">
-              <Link href="/fleet" className="text-left text-base font-normal">
+          <div className="flex lg:gap-x-[65px] sm:gap-x-[30px] gap-x-6 sm:my-0 py-6 sm:border-none border-t border-[#FFFFFF] border-opacity-40">
+            {/* <div className="flex flex-col gap-y-5 items-start text-left sm:w-auto w-5/12">
+            <h4 className="text-left text-base font-normal whitespace-nowrap">
                 <h2 className="text-2xl font-semibold">Fleet</h2>
-              </Link>
-              <Link href="/fleet" className="text-base font-light pop">
+              </h4>
+              <Link href="/fleet" className="text-md pop">
                 Business
               </Link>
-              <Link href="/fleet" className="text-base font-light pop">
+              <Link href="/fleet" className="text-md pop">
                 First
               </Link>
-              <Link href="/fleet" className="text-base font-light pop">
+              <Link href="/fleet" className="text-md pop">
                 Luxury
               </Link>
-              <Link href="/fleet" className="text-base font-light pop">
+              <Link href="/fleet" className="text-md pop">
                 Electric
               </Link>
-              <Link href="/fleet" className="text-base font-light pop">
+              <Link href="/fleet" className="text-md pop">
                 SUV
               </Link>
-              <Link href="/fleet" className="text-base font-light pop">
+              <Link href="/fleet" className="text-md pop">
                 MVP
               </Link>
-              <Link href="/fleet" className="text-base font-light pop">
+              <Link href="/fleet" className="text-md pop">
                 Sprinter
               </Link>
-            </div>
-            <div className="flex flex-col gap-y-5 items-start text-left">
-              <Link
-                href="/all-services"
-                className="text-left text-base font-normal"
-              >
+            </div> */}
+            <div className="flex flex-col gap-y-5 items-center text-left">
+              <h4 className="text-left text-base font-normal whitespace-nowrap">
                 <h2 className="text-2xl font-semibold">Services</h2>
-              </Link>
-              <Link
-                href="/airport-transfers"
-                className="text-base font-light pop"
-              >
-                Airport Transfers
-              </Link>
-              <Link href="/road-shows" className="text-base font-light pop">
-                Road Shows
+              </h4>
+              <Link href="/road-shows"
+                className="text-md pop">
+                Roadshow Transfers
               </Link>
               <Link
                 href="/intercity-rides"
-                className="text-base font-light pop"
+                className="text-md pop"
               >
                 Intercity Transfers
               </Link>
               <Link
                 href="/event-transportation-services"
-                className="text-base font-light pop"
+                className="text-md pop"
               >
                 Event Transfers
+              </Link>
+              <Link
+                href="/wedding-chauffeur-service"
+                className="text-md pop"
+              >
+                Wedding Transfers
+              </Link>
+              <Link
+                href="/corporate-chauffeur-service-london"
+                className="text-md pop"
+              >
+                Corporate Transfers
+              </Link>
+              <Link
+                href="/sightseening-chauffeur-service"
+                className="text-md pop"
+              >
+                Cities Sightseeing
+              </Link>
+              <Link
+                href="/private-jet-chauffeur-service"
+                className="text-md pop"
+              >
+                Private Jet Transfers
               </Link>
 
               {/* <Link
@@ -115,39 +131,67 @@ function Footer() {
               >
                 <h2 className="text-xl font-semibold">FAQ</h2>
               </Link> */}
+
+            </div>
+
+            <div className="flex flex-col gap-y-5 items-center text-left">
+              <h4 className="text-left text-base font-normal whitespace-nowrap">
+                <h2 className="text-2xl font-semibold">Airport Transfer</h2>
+              </h4>
               <Link
-                href="https://blog.roldrive.com/"
-                className="text-left text-base font-normal mt-2"
+                href="/airport-transfers/airport-transfer-london"
+                className="text-md pop"
               >
-                <h2 className="text-xl font-semibold">Blogs</h2>
+                London
+              </Link>
+              <Link href="/airport-transfers/airport-transfer-dubai">
+                Dubai
+              </Link>
+              <Link
+                href="/airport-transfers/airport-transfer-new-york"
+                className="text-md pop"
+              >
+                New York
               </Link>
             </div>
           </div>
-          <div className="flex lg:gap-x-[85px] sm:gap-x-[30px] gap-x-6 sm:my-0 py-6 sm:border-none border-t border-[#FFFFFF] border-opacity-40">
-            <div className="flex flex-col gap-y-5 items-start text-left sm:w-auto w-5/12">
+          <div className="flex lg:gap-x-[65px] sm:gap-x-[30px] gap-x-6 sm:my-0 py-6 sm:border-none border-t border-[#FFFFFF] border-opacity-40">
+            <div className="flex flex-col gap-y-5 items-center text-left sm:w-auto w-5/12">
               <h4 className="text-left text-base font-normal whitespace-nowrap">
                 <h2 className="text-2xl font-semibold">Top Cities</h2>
               </h4>
-              <Link href="/chauffeur-service-in-london" className="text-base font-light pop">
+              <Link href="/chauffeur-service-in-london" className="text-md pop">
                 London
               </Link>
-              <Link href="/chauffeur-service-in-paris" className="text-base font-light pop">
-                Paris
-              </Link>
-              <Link href="/chauffeur-service-in-new-york" className="text-base font-light pop">
-                New York
-              </Link>
-              <Link href="/chauffeur-service-in-dubai" className="text-base font-light pop">
+              <Link href="/chauffeur-service-in-dubai" className="text-md pop">
                 Dubai
               </Link>
-              <Link href="/chauffeur-service-in-tokyo" className="text-base font-light pop">
+              <Link href="/chauffeur-service-in-new-york" className="text-md pop">
+                New York
+              </Link>
+              <Link href="/chauffeur-service-in-paris" className="text-md pop">
+                Paris
+              </Link>
+              <Link href="/chauffeur-service-in-tokyo" className="text-md pop">
                 Tokyo
               </Link>
             </div>
-            <div className="flex flex-col gap-y-5 items-start text-left">
+            <div className="flex flex-col gap-y-5 items-center text-left">
               <h4 className="text-left text-base font-normal whitespace-nowrap">
                 <h2 className="text-2xl font-semibold">Quick Links</h2>
               </h4>
+              <Link
+                href="/fleet"
+                className="text-base pop"
+              >
+                Fleet
+              </Link>
+              <Link
+                href="/all-services"
+                className="text-base pop"
+              >
+                All Services
+              </Link>
               <Link
                 href="/about-us"
                 className="text-base pop"
@@ -159,6 +203,12 @@ function Footer() {
                 className="text-base pop"
               >
                 Contact Us
+              </Link>
+              <Link
+                href="https://blog.roldrive.com/"
+                className="text-left text-base font-normal"
+              >
+                <h2 className="text-xl font-semibold">Blogs</h2>
               </Link>
               {/* <Link
                 href="#"

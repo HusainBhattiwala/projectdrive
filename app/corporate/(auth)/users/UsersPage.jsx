@@ -129,6 +129,7 @@ function UsersPage() {
   };
 
   const handleDelete = async (id) => {
+    // const userConfirmation = confirm('Are you sure you want to delete user');
     try {
       const userDeleteResponse = await api.delete(`/corporate/users/${id}`);
       console.log('userDeleteResponse', userDeleteResponse);
@@ -356,10 +357,9 @@ function UsersPage() {
                     <div className="col-span-2 whitespace-normal">
                       <button
                         type="button"
-                        className={`${
-                          item.usertype === 'CORPORATE_ADMIN'
-                            ? 'bg-cyan-500 text-cyan-500'
-                            : 'bg-yellow-500 text-yellow-500'
+                        className={`${item.usertype === 'CORPORATE_ADMIN'
+                          ? 'bg-cyan-500 text-cyan-500'
+                          : 'bg-yellow-500 text-yellow-500'
                         } !text-xs bg-opacity-20 !py-1 !h-auto rounded hover:bg-opacity-30 w-[60%]`}
                       >
                         {item.usertype === 'CORPORATE_ADMIN'
@@ -417,10 +417,9 @@ function UsersPage() {
               <div className="flex justify-between gap-2 sm:gap-16 text-sm py-2">
                 <div className="boxes w-full">
                   <span
-                    className={`p-1.5 text-xs tracking-wider rounded-md ${
-                      item?.usertype === 'CORPORATE_ADMIN'
-                        ? 'bg-cyan-500 text-cyan-700'
-                        : 'bg-yellow-500 text-yellow-500'
+                    className={`p-1.5 text-xs tracking-wider rounded-md ${item?.usertype === 'CORPORATE_ADMIN'
+                      ? 'bg-cyan-500 text-cyan-700'
+                      : 'bg-yellow-500 text-yellow-500'
                     } bg-opacity-20 px-3 font-semibold text-center !text-[12px] leading-normal`}
                   >
                     {item?.usertype === 'CORPORATE_ADMIN' ? 'Admin' : 'Manager'}

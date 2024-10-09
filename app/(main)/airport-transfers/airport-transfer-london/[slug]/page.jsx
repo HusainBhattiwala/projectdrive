@@ -33,7 +33,7 @@ const airports = [
 
 export function generateMetadataAirport({ params }) {
   const { slug } = params; // Access the slug parameter
-  const airport = airports.find((airport) => airport.value === slug); // Match the slug with the airport value
+  const airport = airports.find((air) => air.value === slug); // Match the slug with the airport value
 
   if (!airport) return {};
 

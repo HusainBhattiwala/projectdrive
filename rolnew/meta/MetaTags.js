@@ -5,7 +5,6 @@ const MetaTags = ({ metadata }) => {
         metadata && (
             <head>
                 <title>{metadata.title}</title>
-                <meta name="title" content={metadata.title} />
                 <meta name="description" content={metadata.description} />
                 <meta name="robots" content={metadata.robots} />
                 <meta name="revisit-after" content={metadata.revisitAfter} />

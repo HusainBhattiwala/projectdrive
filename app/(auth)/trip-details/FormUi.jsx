@@ -1037,7 +1037,7 @@ function FormUiWithoutSuspense() {
               <Activity activity={bookingActivity} />
             )}
             {activeTab === 0 && isAllowedEdit && (
-              <div className="flex justify-end gap-4 mt-6">
+              <div className="flex justify-end gap-4 mt-[-16px] rounded-xl bg-custom-lightGray p-[14px] pb-10">
                 <Button
                   className="btn-primary btn-outline"
                   disabled={!isAllowedEdit}

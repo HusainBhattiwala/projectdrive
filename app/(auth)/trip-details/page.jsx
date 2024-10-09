@@ -15,18 +15,18 @@ export default function TripDetails() {
   return (
     <div className="mx-auto max-w-7xl">
       <div className="container px-4 mx-auto">
-        <div className="mb-8">
-          <Breadcrumbs>
-            <li>
+        <div className="mb-8 !text-white">
+          <Breadcrumbs className="!text-white">
+            <li className="!text-white">
               <Link href="/">Home</Link>
             </li>
-            <li className="flex-none">
+            <li className="flex-none !text-white">
               <Link href="/booking-management">
                 <span className="px-1">/</span>
                 Upcoming Bookings
               </Link>
             </li>
-            <li className="flex-none">
+            <li className="flex-none !text-white">
               <Link href="/trip-details">
                 <span className="px-1 text-right">/</span>
                 Your Trip Details

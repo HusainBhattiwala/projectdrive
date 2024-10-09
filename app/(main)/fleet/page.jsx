@@ -27,7 +27,7 @@ export default function Page() {
         carClassRef.current.scrollIntoView({ behavior: 'smooth' });
         setHideArrow(true);
       }
-    }, 5000);
+    }, 3000);
 
     // Cleanup timer on component unmount
     return () => clearTimeout(timer);

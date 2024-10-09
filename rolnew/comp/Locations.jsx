@@ -10,8 +10,8 @@ function Locations({ showPadding }) {
       <div className="grid sm:grid-cols-5 grid-cols-1 gap-x-10 gap-y-6 items-center">
         <div className="sm:col-span-3 col-span-1">
           <h3 className="text-[#B2B2B2] text-2xl leading-7 sm:text-left text-center font-medium">Looking for more locations?</h3>
-          <p className="text-[#B2B2B2] text-sm font-normal leading-5 sm:text-left text-center sm:mt-5 sm:max-w-[80%]">Explore our expanding locations and book your customized trip, from bulk bookings to monthly plans. Contact us now!</p>
-          <div className="sm:mt-5 flex flex-nowrap sm:justify-start justify-center sm:gap-x-3 gap-x-1 text-[#FDC65C]">
+          <p className="text-[#B2B2B2] text-sm font-normal leading-5 sm:text-left text-center sm:mt-5 sm:max-w-[80%] sm:pt-0 pt-4">Explore our expanding locations and book your customized trip, from bulk bookings to monthly plans. Contact us now!</p>
+          <div className="sm:mt-5 flex flex-nowrap sm:justify-start justify-center sm:gap-x-3 gap-x-3 text-[#FDC65C] sm:pt-0 pt-4">
             <a href="tel:+4402045920966" className="flex sm:gap-x-2 gap-x-1 items-center sm:text-base text-sm sm:font-light pop font-medium text-[#FDC65C]">
               {' '}
               <FiPhone className="sm:text-xl text-base" />
@@ -19,7 +19,7 @@ function Locations({ showPadding }) {
               <a href="tel:+442045920966">+44 204 592 0966</a>
             </a>
             <span className="text-[#B2B2B2]">|</span>
-            <a href="mailto:booking@roldrive.com" className="flex sm:gap-x-2 gap-x-1 items-center sm:text-base text-sm sm:font-light pop font-medium text-[#FDC65C]">
+            <a href="mailto:booking@roldrive.com" className="flex sm:gap-x-2 gap-x-1 items-center sm:text-base text-sm sm:font-light pop font-medium text-[#FDC65C] ">
               {' '}
               <MdOutlineMailOutline className="sm:text-xl text-base" />
               {' '}

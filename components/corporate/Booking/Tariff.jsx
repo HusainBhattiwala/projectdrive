@@ -192,7 +192,7 @@ function Tariff({
               <div className="relative w-12 h-12">
                 <Image src="/images/icons/no-car.png" alt="no-car" fill />
               </div>
-              <P className="!text-lg">No vehilce to show</P>
+              <P className="!text-lg !text-black">No vehilce to show</P>
             </div>
           )
         }

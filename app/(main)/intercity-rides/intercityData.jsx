@@ -1,12 +1,11 @@
 export const intercityData = {
   bannerData: {
-    mainTitle: 'Intercity Chauffeur Service',
-    mainDescription:
+    title: 'Intercity Chauffeur Service',
+    subTitle:
       'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/banners/intercity.jpg',
-    title: 'Do you want to customise your booking?',
-    description:
-      'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
+    bannerImage: '/rolnew/services/banners/intercity.jpg',
+    mobileBannerImage: '/rolnew/services/banners/mobile-intercity-transfer.jpg',
+
   },
 
   luxuriousServiceData: [

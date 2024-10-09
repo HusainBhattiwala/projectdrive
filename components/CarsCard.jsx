@@ -77,7 +77,7 @@ function CarsCard({
         </div>
       </div>
       <div className="sm:absolute relative sm:right-[35px] sm:top-2/4 sm:-translate-y-2/4 sm:w-auto w-full sm:mt-0 mt-5">
-        <div className="flex flex-col sm:items-start items-center">
+        <div className="flex flex-col sm:items-end items-center">
           <H4 className="text-white font-medium !text-2xl">
             {formatPrice(fleetDetails?.tariff, fleetDetails?.currency_text)}
           </H4>

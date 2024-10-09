@@ -12,7 +12,7 @@ export default function VehicleModalBody({
 }) {
   const { formatPrice } = useContext(UtilityContext);
   return (
-    <div className="">
+    <div className="z-">
       {availableVehicles.length === 0 && (
         <P className="text-center text-gray-700 !text-lg">
           No matching vehicles found

@@ -12,7 +12,7 @@ import BookingBanner from '../BookingBanner';
 const metadata = metadataConfig.mercedesSprinterHireLondon;
 
 const banner = {
-  title: 'Mercedes Sprinter Hire In London',
+  title: 'Mercedes Sprinter Chauffeur Service in London',
   bannerImage: '/rolnew/global/landing/mercedes-sprinter-chauffeur-hire.jpg',
   isLandingPage: true,
 };
@@ -20,7 +20,7 @@ const banner = {
 const ServicesData = {
   subTitle: 'Our Services',
   action: 'Book Now',
-  mainTitle: 'Tailored Mercedes Sprinter Hire In London For Your Every Need',
+  mainTitle: 'Tailored Mercedes Sprinter Chauffeur Service In London For Your Every Need',
   desc: 'Indulge in an unparalleled Mercedes Sprinter hire in London with tailored services designed to meet your unique needs. Whether for seamless airport transfers, corporate travel, or special events, our chauffeur services upgrade your journey. Experience perfection in every detail. Browse our services now and upgrade your transportation experience with our exclusive Mercedes Sprinter hire in London.',
   cardData: [
     {
@@ -63,7 +63,7 @@ const ServicesData = {
 };
 
 const faqData = {
-  title: 'Frequently Asked Questions For Mercedes Sprinter Hire In London',
+  title: 'Frequently Asked Questions For Mercedes Sprinter Chauffeur Service In London',
   data: [
     {
       id: 0,

@@ -18,7 +18,7 @@ const inputCharacterOnly = (event) => {
   event.target.value = sanitizedValue;
 };
 
-export default function AddnewCard({ email, handleClose }) {
+export default function AddnewCard({ email, handleClose, getCards }) {
   const {
     register,
     handleSubmit,
@@ -44,6 +44,9 @@ export default function AddnewCard({ email, handleClose }) {
     });
     setCardValidationLoader(false);
     if (response.data.status === 1) {
+      // GET AVAILABLE CARD DETAILS AND SET TO UPDATE THE CURRENT STATE OF CARDS
+      getCards();
+
       toast.success(
         response.message,
         {
@@ -66,7 +69,7 @@ export default function AddnewCard({ email, handleClose }) {
 
   function handleCardNumberChange(event) {
     const { value } = event.target;
-    if (value.length === 23) {
+    if (value.length === 24) {
       // expiryInputRef.current.focus();
       setFocus('expiry');
     }
@@ -152,7 +155,7 @@ export default function AddnewCard({ email, handleClose }) {
                 type="text"
                 onChange={inputCharacterOnly}
                 placeholder="Card holder name"
-                className="w-full input input-bordered focus:border-primary focus:outline-none sm:pl-14 pl-8 text-sm sm:text-[1rem]"
+                className="w-full !text-black input input-bordered focus:border-primary focus:outline-none sm:pl-14 pl-8 text-sm sm:text-[1rem]"
               />
             </div>
             {errors && errors.cardholdername && (
@@ -182,14 +185,14 @@ export default function AddnewCard({ email, handleClose }) {
                       },
                     })}
                     type="tel"
-                    maxLength="23"
+                    maxLength="24"
                     placeholder="Card number"
                     onChange={handleCardNumberChange}
-                    className="w-full input focus:outline-none sm:pl-14 pl-8 text-sm sm:text-[1rem]"
+                    className="w-full !text-black input focus:outline-none sm:pl-14 pl-8 text-sm sm:text-[1rem]"
                   />
 
                   {errors.cardNumber && (
-                  <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">{errors.cardNumber.message}</P>
+                    <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">{errors.cardNumber.message}</P>
                   )}
                 </div>
               </div>
@@ -209,7 +212,7 @@ export default function AddnewCard({ email, handleClose }) {
                   maxLength="7"
                   autoComplete="cc-exp"
                   onInput={formatExpiryDate}
-                  className="w-full border input-bordered input focus:outline-none pr-0 pl-5  text-sm"
+                  className="w-full !text-black border input-bordered input focus:outline-none pr-0 pl-5  text-sm"
                 />
                 {errors.expiry && (
                   <span className="error">{errors.expiry.message}</span>
@@ -224,7 +227,7 @@ export default function AddnewCard({ email, handleClose }) {
                   maxLength="4"
                   onInput={handleCvvInput}
                   type="number"
-                  className="w-full text-start input input-bordered focus:outline-none pr-0 text-sm sm:text-[1rem]"
+                  className="w-full !text-black text-start input input-bordered focus:outline-none pr-0 text-sm sm:text-[1rem]"
                 />
                 {errors.cvv && (
                   <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">{errors.cvv.message}</P>

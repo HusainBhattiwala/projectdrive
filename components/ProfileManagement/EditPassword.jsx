@@ -99,7 +99,7 @@ function EditPassword({ cancelEdit }) {
         draggable
         pauseOnHover
       />
-      <div className="xl:px-[82px] lg:px-12 px-6 xl:py-[80px] py-8 bg-white">
+      <div className="xl:px-[82px] lg:px-12 px-6 xl:py-[80px] py-8 bg-white rounded-3xl">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-1 ">
             <div className="col-span-4 sm:col-span-2">

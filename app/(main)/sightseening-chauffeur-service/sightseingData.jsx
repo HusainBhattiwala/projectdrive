@@ -1,12 +1,10 @@
 export const sightseeingData = {
   bannerData: {
-    mainTitle: 'City Sightseeing',
-    mainDescription:
+    title: 'City Sightseeing',
+    subTitle:
       'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/banners/Sightseeing.jpg',
-    title: 'Do you want to customise your booking?',
-    description:
-      'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
+    bannerImage: '/rolnew/services/banners/Sightseeing.jpg',
+    mobileBannerImage: '/rolnew/services/banners/mobile-city-sightseeing.jpg',
   },
 
   luxuriousServiceData: [

@@ -55,7 +55,7 @@ export default function BookingCardMobile({ bookings }) {
   const router = useRouter();
   return (
     <div
-      className="p-2 my-3 bg-white shadow cursor-pointer sm:p-4 rounded-xl text-gray-700"
+      className="p-2 my-3 bg-white shadow cursor-pointer sm:p-4 rounded-xl !text-gray-700"
       onClick={() => router.push(`/trip-details?booking-id=${bookings.booking_id}`)}
     >
       <div className="flex items-center justify-between gap-4">
@@ -66,7 +66,7 @@ export default function BookingCardMobile({ bookings }) {
         >
           {bookings.booking_type}
         </p>
-        <p className="text-sm font-medium">
+        <p className="text-sm font-medium !text-black">
           #
           {bookings?.booking_ref_no}
         </p>

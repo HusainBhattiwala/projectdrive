@@ -1,12 +1,11 @@
 export const corporateData = {
   bannerData: {
-    mainTitle: 'Corporate Chauffeur Service',
-    mainDescription:
+    title: 'Corporate Chauffeur Service',
+    subTitle:
       'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/banners/Corporate.jpg',
-    title: 'Do you want to customise your booking?',
-    description:
-      'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
+    bannerImage: '/rolnew/services/banners/Corporate.jpg',
+    mobileBannerImage: '/rolnew/services/banners/mobile-corporate-transfer.jpg',
+
   },
 
   luxuriousServiceData: [

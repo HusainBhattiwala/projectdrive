@@ -28,10 +28,10 @@ function FullPage() {
     getUserProfile();
   }, [router, showEditProfile]);
   return (
-    <div className="bg-[#FEF8F4] min-h-[90vh] 2xl:px-[120px] lg:px-4 px-[14px] xl:py-10 pt-8 pb-2 md:pb-8 w-auto relative">
+    <div className="!bg-[#233b4d] min-h-[90vh] 2xl:px-[120px] lg:px-4 px-[14px] xl:py-10 pt-8 pb-2 md:pb-8 w-auto relative">
       <div className="lg:container mx-auto">
         <div className="mb-8">
-          <H1 className="lg:text-4xl md:text-3xl sm:text-2xl text-xl leading-none font-bold text-primary md:!text-[32px] tracking-tight sm:pl-0 pl-[14px]">
+          <H1 className="lg:text-4xl md:text-3xl sm:text-2xl text-xl leading-none font-bold text-white md:!text-[32px] tracking-tight sm:pl-0 pl-[14px]">
             {
                   !showProfile && showEditProfile && !showEditPassword && 'Edit Profile'
                 }

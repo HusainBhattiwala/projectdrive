@@ -8,7 +8,7 @@ import { useSession } from 'next-auth/react';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
 import { LoginContext } from 'context/LoginContext';
-import { Pic } from 'components/ui/Pic';
+// import { Pic } from 'components/ui/Pic';
 import usePageBottom from 'hooks/usePageBottom';
 import BottomNav from 'components/BookingManagement/BottomNav';
 import PortalModal from 'components/ui/PortalModal';
@@ -162,10 +162,15 @@ function AuthWrap({
           : ''}
 
         <div className={sidebarClass}>
-          <div className="sticky top-0 z-30 px-3 border navbar bg-base-100 sm:px-0">
+          <div className="sticky top-0 z-30 px-3 navbar shadow-lg sm:px-0 !bg-[#223544]">
             <div className="flex-1">
-              <Link href="/" className="w-32 h-12 -mt-2 lg:w-36 md:h-12">
-                <Pic src="/images/logo.png" alt="RolDrive logo" />
+              <Link href="/" className="w-32 h-12 -mt-2 ml-8 lg:w-36 md:h-12">
+                <img
+                  className="h-[50px] w-[155px]"
+                  src="/rolnew/global/logo.svg"
+                  alt="logo"
+                />
+                {/* <Pic src="/images/logo.png" alt="RolDrive logo" /> */}
               </Link>
             </div>
             <div className="flex-none">

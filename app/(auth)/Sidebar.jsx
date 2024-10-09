@@ -13,8 +13,7 @@ function Sidebar({
   return (
     <aside
       id="default-sidebar"
-      className={`fixed top-0 left-0 z-40 ${
-        isOpend || showSidebar ? 'w-64' : 'w-16'
+      className={`fixed top-0 left-0 z-40 bg-[#223544] ${isOpend || showSidebar ? 'w-64' : 'w-16'
       }  h-screen transition-transform translate-x-0 z-50 hidden sm:block`}
       aria-label="Sidebar"
       onMouseEnter={() => {
@@ -28,9 +27,9 @@ function Sidebar({
         }
       }}
     >
-      <div className="h-full overflow-y-auto bg-gray-50">
+      <div className="h-full overflow-y-auto !text-black !bg-[#223544]">
         <Button
-          className=" btn-ghost !text-black text-2xl mt-6 p-1 ml-3"
+          className="btn-ghost text-2xl mt-6 p-1 ml-3"
           onClick={() => {
             setisOpend(!isOpend);
           }}
@@ -41,22 +40,28 @@ function Sidebar({
           <li>
             <Link
               href="/booking-management"
-              className={`flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200 ${pathName === '/booking-management' && 'bg-gray-200'}`}
+              className={`flex items-center p-2 rounded-lg  hover:bg-primary  ${pathName === '/booking-management'
+                ? 'bg-primary !text-white'
+                : 'text-white'
+              }`}
             >
-              <FaBusinessTime className="w-6 h-6 text-primary" />
+              <FaBusinessTime className="w-6 h-6 text-dark" />
               {(isOpend || showSidebar) && (
-                <span className="ml-3 !text-gray-700">Bookings</span>
+                <p className="ml-3 text-dark">Bookings</p>
               )}
             </Link>
           </li>
           <li>
             <Link
               href="/profile-management"
-              className={`flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200 ${pathName === '/profile-management' && 'bg-gray-200'}`}
+              className={`flex items-center p-2 rounded-lg hover:bg-primary ${pathName === '/profile-management'
+                ? 'bg-primary !text-white'
+                : 'text-white'
+              }`}
             >
-              <FaUserEdit className="w-6 h-6 text-primary" />
+              <FaUserEdit className="w-6 h-6 text-dark" />
               {(isOpend || showSidebar) && (
-                <span className="ml-3 !text-gray-700">My Account</span>
+                <span className="ml-3">My Account</span>
               )}
             </Link>
           </li>

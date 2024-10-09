@@ -13,7 +13,8 @@ import H1 from 'components/typography/H1';
 import { BookingProvider } from 'context/BookingContext';
 import Button from 'components/ui/Button';
 import useRetryUntilResolved from 'hooks/useRetryUntilResolved';
-import BookingEngine2 from '../Booking/BookingEngine2';
+import BookingEngine3 from 'components/Booking/BookingEngine3';
+// import Image from 'next/image';
 import Loader from '../shared/Loader';
 import api from '../utils/api';
 import BookingCardMobile from './BookingCardMobile';
@@ -28,6 +29,23 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
   const [filterBookings, setFilterBooking] = useState(null);
   const [showLoader, setShowLoader] = useState(true);
   const [finishedBooking, setFinishedBooking] = useState(false);
+  const [noBookingMessage, setNoBookingMessage] = useState(null);
+
+  const [width, setWidth] = useState(1200);
+  const [height, setHeight] = useState(1000);
+  const [focus, setFocus] = useState(false);
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
+    }
+    window.addEventListener('resize', handleResize);
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const isTokenResolved = useRetryUntilResolved(() => {
     if (typeof window === 'undefined') return;
@@ -100,13 +118,17 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
   }, [isTokenResolved]);
 
   async function getSearchDataUsingDate(searchdate) {
+    console.log(`serach Date = ${searchdate}`);
     const isoTime = new Date(searchdate).toDateString();
     // const date = `${isoTime.split('T')[0]}T00:00:00.000Z`;
+
     let url;
+    // if (finishedBooking) { url = `/booking?travel_date=${isoTime}&ride_status=f`; }
+    // else { url = `/booking?travel_date=${isoTime}&ride_status=u`; }
     if (finishedBooking) {
-      url = `/booking?travel_date=${isoTime}&ride_status=f`;
+      url = `/booking?to_date=${isoTime}&from_date=${isoTime}&ride_status=f`;
     } else {
-      url = `/booking?travel_date=${isoTime}&ride_status=u`;
+      url = `/booking?to_date=${isoTime}&from_date=${isoTime}&ride_status=u`;
     }
     const response = await api.get(url);
     if (response.data.length > 0) {
@@ -115,6 +137,7 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
     } else {
       setUserBooking(null);
       setFilterBooking(null);
+      if (!finishedBooking) setNoBookingMessage(`No Bookings on - ${new Date(searchdate).toDateString()}`);
     }
   }
 
@@ -135,7 +158,7 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
       'ride_status',
     ];
 
-    const filteredUsers = userBookings.filter((user) => keysToSearchIn.some((key) => user[key]?.toLowerCase().includes(searchText.toLowerCase())));
+    const filteredUsers = userBookings?.filter((user) => keysToSearchIn.some((key) => user[key]?.toLowerCase().includes(searchText.toLowerCase())));
     setFilterBooking(filteredUsers);
     setShowLoader(false);
   }
@@ -151,6 +174,7 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
       setFilterBooking(null);
     }
     setShowLoader(false);
+    setNoBookingMessage('No Finished Bookings to show');
   }
 
   function filterByDate(filter) {
@@ -178,6 +202,7 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
     } else {
       setUserBooking(null);
       setFilterBooking(null);
+      setNoBookingMessage('No Upcoming Bookings to show');
     }
     setShowLoader(false);
   }
@@ -235,10 +260,15 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
         draggable
         pauseOnHover
       />
-      <div className="2xl:px-[120px] lg:px-4 xl:py-10 pt-8 pb-2 md:pb-8 w-auto relative bg-[#2a3945] min-h-screen text-white">
+      <div className="2xl:px-[100px] lg:px-4 xl:py-10 pt-8 pb-2 md:pb-8 w-auto relative !bg-[#233b4d] min-h-screen text-white">
         <div className="mx-auto xl:container h-100 min-h-full">
-          <div className="mb-8">
-            <H1 className="font-bold text-white md:!text-[32px] tracking-tight sm:pl-0 pl-[14px]">
+          <div className="mb-4">
+            <H1 className="font-bold md:!text-[32px] tracking-tight sm:pl-0 pl-[14px]">
+              {/* <span className='bg-[#bdbcbc] text-black px-3 py-3 rounded-lg text-center'>
+              {finishedBooking && !showNewBooking && 'Finished Bookings'}
+              {!finishedBooking && !showNewBooking && 'Upcoming Bookings'}
+              {showNewBooking && 'Add New Bookings'}
+              </span> */}
               {finishedBooking && !showNewBooking && 'Finished Bookings'}
               {!finishedBooking && !showNewBooking && 'Upcoming Bookings'}
               {showNewBooking && 'Add New Bookings'}
@@ -249,16 +279,14 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
               <div className="hidden tabs-container md:block">
                 <div className="tabs">
                   <div
-                    className={`tab tab-lifted text-white font-semibold ${
-                      !finishedBooking && 'tab-active !bg-gray-800 text-white '
+                    className={`tab tab-lifted text-white font-semibold ${!finishedBooking && 'tab-active !bg-primary text-white '
                     } !h-12 mr-2`}
                     onClick={showUpcomingBooking}
                   >
                     Upcoming Bookings
                   </div>
                   <div
-                    className={`tab tab-lifted text-white font-semibold ${
-                      finishedBooking && 'tab-active !bg-gray-800 text-white '
+                    className={`tab tab-lifted text-white font-semibold ${finishedBooking && 'tab-active !bg-primary text-white '
                     } !h-12 mr-2`}
                     onClick={showFinishedBooking}
                   >
@@ -268,20 +296,18 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
               </div>
               <div className="flex mb-4 overflow-hidden rounded-md md:hidden mr-[15px] ml-[15px]">
                 <div
-                  className={`text-white !text-base sm:!text-lg cursor-pointer px-4 py-4 text-center font-semibold w-1/2 ${
-                    !finishedBooking
-                      ? '!bg-primary text-white'
-                      : '!bg-[#E4E4E4] text-primary'
+                  className={`text-black !text-base sm:!text-lg cursor-pointer px-4 py-4 text-center font-semibold w-1/2 ${!finishedBooking
+                    ? '!bg-black text-white'
+                    : '!bg-[#E4E4E4] text-black'
                   }`}
                   onClick={showUpcomingBooking}
                 >
                   Upcoming
                 </div>
                 <div
-                  className={`text-black !text-base sm:!text-lg cursor-pointer px-4 py-4 text-center font-semibold w-1/2 ${
-                    finishedBooking
-                      ? '!bg-primary text-white'
-                      : '!bg-[#E4E4E4] text-primary'
+                  className={`text-black !text-base sm:!text-lg cursor-pointer px-4 py-4 text-center font-semibold w-1/2 ${finishedBooking
+                    ? '!bg-black text-white'
+                    : '!bg-[#E4E4E4] text-black'
                   }`}
                   onClick={showFinishedBooking}
                 >
@@ -292,7 +318,7 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
           )}
 
           {!showNewBooking && (
-            <div className="px-[15px] pt-[10px] pb-4 md:pb-0 rounded-lg flex items-center flex-col relative sm:bg-white min-h-[400px] flex-nowrap overflow-x-auto w-full">
+            <div className="px-[15px] pt-[10px] pb-4 md:pb-0 rounded-b-lg flex items-center flex-col relative sm:bg-white min-h-[400px] flex-nowrap overflow-x-auto w-full">
               {showLoader && <Loader />}
 
               {!showLoader && (
@@ -323,7 +349,7 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
                       </div>
                     </div>
                     <Button
-                      className="p-4 py-2 capitalize border btn-block border-gray-800 bg-[#EAEAEA] hover:bg-gray-900 hover:!text-white !text-primary !text-[16px]"
+                      className="p-4 py-2 capitalize border btn-block border-gray-800 bg-[#EAEAEA] hover:bg-gray-900 hover:!text-white !text-black !text-[16px]"
                       onClick={() => {
                         setShowNewBooking(true);
                       }}
@@ -331,75 +357,43 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
                       add new Booking +
                     </Button>
                   </div>
-                  {!filterBookings && !showLoader && (
+                  {/* {!filterBookings && !showLoader && (
                     <div className="text-center capitalize pt-[15%]">
-                      <H1>No Bookings to show</H1>
+                      <div className="w-28 h-38 relative">
+                        <Image src="/images/global/empty-box.png" fill alt="empty-box" />
+                      </div>
+                      <h1 className='text-lg !text-black'>{noBookingMessage ? noBookingMessage : "No Bookings to show"}</h1>
+                    </div>
+                  )} */}
+                  {!filterBookings && !showLoader && (
+                    <div className="flex flex-col items-center justify-center text-center py-16">
+
+                      <h1 className="text-xl font-semibold sm:text-gray-700 text-white">
+                        {noBookingMessage || 'No Bookings to show'}
+                      </h1>
+
+                      {noBookingMessage
+                        && (
+                        <p className="text-sm sm:text-gray-500 text-white mt-2">
+                          It looks like you don’t have any bookings yet. You can add a new booking or check back later.
+                        </p>
+                        )}
                     </div>
                   )}
+
                   <div className="w-full overflow-x-auto flex-nowrap md:max-h-screen md:min-w-[950px]">
                     {filterBookings && filterBookings.length > 0 ? (
                       <div className="h-12 w-full lg:flex-row justify-between items-center mt-3 uppercase shrink-0 min-w-[900px] overflow-x-auto sticky top-0 z-20 bg-[#F6F6F6] hidden md:flex">
                         {HeaderValues.map((item) => (
                           <div className={`basis-[${item.width}] justify-center box-border text-center px-2`} key={item.label}>
                             <header>
-                              <h6 className="text-xs uppercase text-[#797979] font-medium">
+                              <h6 className="text-xs uppercase text-[#797979] font-medium ">
                                 {item.label}
                               </h6>
                             </header>
                           </div>
                         ))}
                       </div>
-                    // <div className="h-12 w-full lg:flex-row justify-between items-center mt-3 uppercase shrink-0 min-w-[900px] overflow-x-auto sticky top-0 z-20 bg-[#F6F6F6] hidden md:flex">
-                    //   <div className="basis-[12%] items-center justify-center box-border px-3 text-center">
-                    //     <header>
-                    //       <h6 className="text-sm font-bold text-black uppercase ">
-                    //         Job id &amp; Type
-                    //       </h6>
-                    //     </header>
-                    //   </div>
-                    //   <div className="basis-[18%] items-center justify-center box-border px-3 text-center">
-                    //     <header>
-                    //       <h6 className="text-sm font-bold text-black uppercase">
-                    //         Date &amp; Time
-                    //       </h6>
-                    //     </header>
-                    //   </div>
-                    //   <div className="basis-[12%] items-center justify-center box-border px-3 text-center">
-                    //     <header>
-                    //       <h6 className="text-sm font-bold text-black uppercase">
-                    //         Details
-                    //       </h6>
-                    //     </header>
-                    //   </div>
-                    //   <div className="basis-[18%] items-center justify-center box-border px-3 text-center">
-                    //     <header>
-                    //       <h6 className="text-sm font-bold text-black uppercase">
-                    //         Pick-Up &amp; Drop
-                    //       </h6>
-                    //     </header>
-                    //   </div>
-                    //   <div className="basis-[16%] items-center justify-center box-border px-3 text-center">
-                    //     <header>
-                    //       <h6 className="text-sm font-bold text-black uppercase">
-                    //         Vehicle
-                    //       </h6>
-                    //     </header>
-                    //   </div>
-                    //   <div className="basis-[12%] items-center justify-center box-border px-3 text-center">
-                    //     <header>
-                    //       <h6 className="text-sm font-bold text-black uppercase">
-                    //         Cost
-                    //       </h6>
-                    //     </header>
-                    //   </div>
-                    //   <div className="basis-[12%] items-center justify-center box-border px-3 text-center">
-                    //     <header>
-                    //       <h6 className="text-sm font-bold text-black uppercase">
-                    //         {finishedBooking ? 'status' : 'status'}
-                    //       </h6>
-                    //     </header>
-                    //   </div>
-                    // </div>
                     ) : (
                       <div className="text-center capitalize">
                         {/* <H1>No Bookings to show</H1> */}
@@ -427,18 +421,36 @@ function FullPage({ isShowNewBooking, setNewBooking }) {
             </div>
           )}
           {showNewBooking && (
-            <div className="relative px-6 py-4 pb-12 bg-[#e8a579] rounded-sm bg-opacity-20">
+            <div className="relative w-full sm:w-[610px] md:w-[700px] lg:w-[900px] xl:w-[1100px] px-6 py-4 pb-12 bg-[#15222c] rounded-3xl mx-auto">
               <div
-                className="absolute top-0 z-0 cursor-pointer right-3"
+                className="absolute top-3 z-0 cursor-pointer right-3"
                 onClick={removeQueryParam}
               >
                 <H1>
                   <IoMdClose />
                 </H1>
               </div>
-              <div className="relative z-10 mt-12">
+
+              {/* <div
+                className="absolute top-3 z-0 left-3 flex items-center text-primary text-sm font-bold cursor-pointer mb-2 sm:mb-0 2xl:basis-[35%] lg:basis-[387px]"
+                onClick={() => { setShowNewBooking(false) }}
+              >
+                <img
+                  src="/rolnew/global/icons/arrow-sm-left.svg"
+                  alt="go back"
+                  height={20}
+                  width={40}
+                />
+              </div> */}
+
+              <div className={`relative z-10 mt-16 mx-auto ${focus && 'z-50'}`}>
                 <BookingProvider>
-                  <BookingEngine2 />
+                  <BookingEngine3
+                    setFocus={setFocus}
+                    width={width}
+                    height={height}
+                    parentDivWidth={900}
+                  />
                 </BookingProvider>
               </div>
             </div>

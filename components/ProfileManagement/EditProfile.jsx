@@ -59,6 +59,7 @@ function EditProfile({ cancelEdit, userDetails }) {
       fname: data.fname,
       lname: data.lname,
       usermobileno: mobile,
+      useremailid: data.email,
       usercountrycode: countryCode,
       address_line_1: data.address1,
       address_line_2: data.address2,
@@ -130,7 +131,7 @@ function EditProfile({ cancelEdit, userDetails }) {
         pauseOnHover
       />
       <div
-        className="xl:px-[82px] lg:px-12 px-6 xl:py-[80px] py-8 bg-white"
+        className="xl:px-[82px] lg:px-12 px-6 xl:py-[60px] py-8 bg-white rounded-3xl"
         ref={divRef}
       >
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -150,15 +151,15 @@ function EditProfile({ cancelEdit, userDetails }) {
                   {...register('fname', { required: 'First name is required' })}
                   defaultValue={userDetails.user_fname}
                   placeholder="Your first name"
-                  className="w-full input input-bordered focus:border-primary focus:outline-none text-black"
+                  className="w-full input input-bordered focus:border-gray-500 focus:outline-none !bg-[#e7e8ead9] text-black"
                   onChange={inputCharacterOnly}
                 />
               </div>
 
               {errors && errors.fname && (
-              <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.fname.message}
-              </P>
+                <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.fname.message}
+                </P>
               )}
             </div>
 
@@ -177,14 +178,14 @@ function EditProfile({ cancelEdit, userDetails }) {
                   {...register('lname', { required: 'Last name is required' })}
                   defaultValue={userDetails.user_lname}
                   placeholder="Your first name"
-                  className="w-full input input-bordered focus:border-primary focus:outline-none text-black"
+                  className="w-full input input-bordered focus:border-gray-500 focus:outline-none !bg-[#e7e8ead9] text-black"
                   onChange={inputCharacterOnly}
                 />
               </div>
               {errors && errors.lname && (
-              <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.lname.message}
-              </P>
+                <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.lname.message}
+                </P>
               )}
             </div>
             <div className="col-span-4">
@@ -202,7 +203,7 @@ function EditProfile({ cancelEdit, userDetails }) {
                   {...register('address1')}
                   defaultValue={userDetails.address_line_1}
                   placeholder="Address Line 1"
-                  className="w-full input input-bordered focus:border-primary focus:outline-none text-black"
+                  className="w-full input input-bordered focus:border-gray-500 focus:outline-none !bg-[#e7e8ead9] text-black"
                 />
               </div>
             </div>
@@ -222,7 +223,7 @@ function EditProfile({ cancelEdit, userDetails }) {
                   {...register('address2')}
                   defaultValue={userDetails.address_line_2}
                   placeholder="Address Line 2"
-                  className="w-full input input-bordered focus:border-primary focus:outline-none text-black"
+                  className="w-full input input-bordered focus:border-gray-500 focus:outline-none !bg-[#e7e8ead9] text-black"
                 />
               </div>
             </div>
@@ -243,7 +244,7 @@ function EditProfile({ cancelEdit, userDetails }) {
                       {...register('city')}
                       defaultValue={userDetails.city}
                       placeholder="User city"
-                      className="w-full input input-bordered focus:border-primary focus:outline-none text-black"
+                      className="w-full input input-bordered focus:border-gray-500 focus:outline-none !bg-[#e7e8ead9] text-black"
                     />
                   </div>
                 </div>
@@ -262,7 +263,7 @@ function EditProfile({ cancelEdit, userDetails }) {
                       {...register('state')}
                       defaultValue={userDetails.city_state}
                       placeholder="User state"
-                      className="w-full input input-bordered focus:border-primary focus:outline-none text-black"
+                      className="w-full input input-bordered focus:border-gray-500 focus:outline-none !bg-[#e7e8ead9] text-black"
                     />
                   </div>
                 </div>
@@ -275,11 +276,11 @@ function EditProfile({ cancelEdit, userDetails }) {
                   </div>
                   <div className="relative block mt-3 text-gray-400 focus-within:text-gray-600">
                     <input
-                      type="text"
+                      type="number"
                       {...register('zip')}
                       defaultValue={userDetails.zip_code}
                       placeholder="User zip"
-                      className="w-full input input-bordered focus:border-primary focus:outline-none text-black"
+                      className="w-full input input-bordered focus:border-gray-500 focus:outline-none !bg-[#e7e8ead9] text-black"
                     />
                   </div>
                 </div>
@@ -301,13 +302,13 @@ function EditProfile({ cancelEdit, userDetails }) {
                   {...register('email', { required: 'Email is required' })}
                   defaultValue={userDetails.user_email_id}
                   placeholder="Your email address"
-                  className="block w-full px-4 py-2 text-gray-500 placeholder-gray-400 bg-gray-100 border appearance-none form-input focus:outline-none"
+                  className="w-full input input-bordered focus:border-gray-500 focus:outline-none !bg-[#c8caced9] text-black"
                 />
               </div>
               {errors && errors.email && (
-              <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.email.message}
-              </P>
+                <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.email.message}
+                </P>
               )}
             </div>
             <div className="col-span-4 lg:col-span-2">
@@ -348,17 +349,17 @@ function EditProfile({ cancelEdit, userDetails }) {
                   clearErrors('invalidMobile');
                   checkMobileNumber(event.target.value, country);
                 }}
-                inputClass="focus:border-primary focus:outline-none"
+                inputClass="w-full text-sm h-12 input !input-bordered !bg-[#e7e8ead9] !text-black"
               />
               {errors.mobileno && (
-              <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                {errors.mobileno.message}
-              </P>
+                <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  {errors.mobileno.message}
+                </P>
               )}
               {errors.invalidMobile && (
-              <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                Invalid mobile number
-              </P>
+                <P className=" text-red-500 px-1 py-1 !text-xs font-bold z-10">
+                  Invalid mobile number
+                </P>
               )}
               {/* <PhoneWithCountry
       register={register}
@@ -384,16 +385,22 @@ function EditProfile({ cancelEdit, userDetails }) {
               </div>
               <div className="relative block mt-3 text-gray-400 focus-within:text-gray-600">
                 <input
-                  type="text"
+                  type="number"
+                  maxLength={10}
                   {...register('telephone')}
                   defaultValue={userDetails.telephone}
                   placeholder="Your telephone number"
-                  className="w-full input input-bordered focus:border-primary focus:outline-none text-black"
+                  onInput={(e) => {
+                    if (e.target.value.length > 12) {
+                      e.target.value = e.target.value.slice(0, 12);
+                    }
+                  }}
+                  className="w-full input input-bordered focus:border-gray-500 focus:outline-none !bg-[#e7e8ead9] text-black"
                 />
               </div>
             </div>
 
-            <div className="col-span-4 mt-10 md:mt-20">
+            <div className="col-span-4 mt-6 md:mt-8">
               <div className="justify-end sm:flex">
                 <Button
                   type="button"

@@ -107,7 +107,7 @@ function ContactDetails() {
               name="name"
               label="Full Name"
               placeholder="Enter full name"
-              labelClass="!text-xs !text-[#B2B2B2]"
+              labelClass="!text-sm !text-[#B2B2B2]"
               value={formData.name}
               onChange={handleChange}
             />
@@ -115,7 +115,7 @@ function ContactDetails() {
               name="email"
               label="Email"
               placeholder="Enter email address"
-              labelClass="!text-xs !text-[#B2B2B2]"
+              labelClass="!text-sm !text-[#B2B2B2]"
               value={formData.email}
               onChange={handleChange}
             />

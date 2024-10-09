@@ -21,7 +21,7 @@ function InputJSX({
       </P>
       <input
         type="text"
-        className="block w-full rounded-lg border border-solid border-[#c3c1c1] bg-white p-2.5 pl-4 text-sm h-12 text-gray-900 focus:border-pry-500 focus:ring-pry-500"
+        className="block w-full rounded-lg border border-solid border-[#c3c1c1] !bg-[#e7e8ead9] p-2.5 pl-4 text-sm h-12 text-gray-900"
         placeholder={placeholder}
         value={value}
         onChange={(ev) => {
@@ -170,7 +170,8 @@ export default function UserModalBody({ user, handleSubmit, availableRoles }) {
                     checkMobileNumber(value, country);
                   }}
                   value={`${phone}`}
-                  inputClass="w-full text-sm h-12 input !input-bordered focus:border-primary focus:outline-none !border-opacity-80 !border-[#c3c1c1] -mt-1"
+                  inputClass="input input-bordered focus:border-primary !bg-[#e7e8ead9] !text-black !font-bold"
+                  // inputClass="w-full text-sm h-12 input !input-bordered focus:border-primary focus:outline-none !border-opacity-80 !border-[#c3c1c1] -mt-1"
                 />
                 {/* <PhoneInput
                   enableSearch

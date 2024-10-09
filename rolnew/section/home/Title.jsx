@@ -10,7 +10,7 @@ function Title({ subTitle, mainTitle, description, descClass }) {
         <h2 className='sm:text-3xl text-2xl font-medium sm:leading-9 leading-tight text-[#B2B2B2] capitalize'>
           {mainTitle}
         </h2>
-        <div className='w-20 md:h-[2px] h-[1px] mx-auto mb-2'>
+        <div className='w-20 md:h-[2px] h-[1px] mx-auto mb-2 mt-4'>
           <Pic
             src='/rolnew/global/underline.svg'
             alt='underline'

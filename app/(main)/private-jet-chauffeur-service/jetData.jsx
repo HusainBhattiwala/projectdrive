@@ -1,12 +1,9 @@
 export const jetData = {
   bannerData: {
-    mainTitle: 'Private Jet Chauffeur',
-    mainDescription:
-      'Your exclusive and dependable chauffeur service indulgence.',
-    backgroundImage: '/rolnew/services/banners/private-jet-chauffeur.jpg',
-    title: 'Do you want to customise your booking?',
-    description:
-      'We offer customised bookings for any location, from bulk or intercity trips to monthly packages.',
+    title: 'Private Jet Chauffeur',
+    subTitle: 'Your exclusive and dependable chauffeur service indulgence.',
+    bannerImage: '/rolnew/services/banners/private-jet-chauffeur.jpg',
+    mobileBannerImage: '/rolnew/services/banners/mobile-private-jet-transfer.jpg',
   },
 
   luxuriousServiceData: [

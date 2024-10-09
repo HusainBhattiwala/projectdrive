@@ -10,12 +10,12 @@ export const fleetData = [
       {
         name: 'BMW 5 Series',
         desc: 'The BMW 5 Series is a great option for business due to its combination of luxury, performance, and technology. As a direct competitor to the Mercedes Benz E-Class, it offers a spacious, comfortable interior and a sleek, professional design. The 5 series also offers a great balance of comfort and handling, making it a perfect car for long business trips. Overall, the BMW 5 Series is a perfect blend of luxury and functionality, making it a great choice for businesses. Try the BMW 5 series by searching for BMW 5 series rental UK.',
-        img: '/rolnew/fleet/Buisness class/b3.png',
+        img: '/rolnew/fleet/Buisness class/BMW5.png',
       },
       {
         name: 'Audi A6',
         desc: 'The Audi A6 is a great option for business travel due to its luxurious and comfortable interior, sleek design, and advanced technology. It offers a spacious and comfortable cabin, with a range of features that can help increase productivity on the road. All of these features make the A6 series a perfect option for business travel, as it offers a great balance of luxury and functionality. You can find our chauffeur-driven services by simply typing Audi A6 London for hire.',
-        img: '/rolnew/fleet/Buisness class/b4.png',
+        img: '/rolnew/fleet/Buisness class/Audi_A6.png',
       },
     ],
   },
@@ -25,7 +25,7 @@ export const fleetData = [
       {
         name: 'Mercedes Benz S Class',
         desc: 'The Mercedes Benz S Class is a luxury sedan known for its advanced technology, refined design, and powerful engine. It offers a comfortable and very spacious interior. Packed with features such as advanced driver assistance systems and a high-end infotainment system. The S-Class is considered a flagship model for the Mercedes-Benz brand. Perfect for a first-class service the Mercedes Benz S Class caters to all requirements you might need on road.',
-        img: '/rolnew/fleet/first class/fc1.png',
+        img: '/rolnew/fleet/first class/benz_s.png',
       },
       {
         name: 'BMW 7 Series',
@@ -90,22 +90,22 @@ export const fleetData = [
       {
         name: 'Range Rover Defender',
         desc: 'The Range Rover Defender is an iconic SUV that combines ruggedness with refinement, making it the perfect companion for both on-road and off-road adventures. With its distinctive design, advanced technology, and robust capabilities, the Range Rover Defender delivers unmatched performance and versatility. Whether navigating urban streets or conquering challenging terrains, the Range Rover Defender offers a thrilling driving experience while providing comfort and luxury to its occupants. It is a true embodiment of power, style, and adventure.',
-        img: '/rolnew/fleet/suv class/s1.png',
+        img: '/rolnew/fleet/suv class/Defender1.png',
       },
       {
         name: 'Land Rover Discovery',
         desc: 'The Land Rover Discovery is a versatile SUV that excels in both city travel and intercity journeys. With its refined design and luxurious interior, it offers a comfortable and stylish ride for urban commuting. At the same time, the Land Rover Discovery\'s robust off-road capabilities and spacious cabin make it an ideal choice for intercity travel, allowing passengers to experience a smooth and enjoyable journey no matter the destination. Its combination of elegance and ruggedness makes it a reliable and adaptable vehicle for any adventure.',
-        img: '/rolnew/fleet/suv class/s2.png',
+        img: '/rolnew/fleet/suv class/Discovery1.png',
       },
       {
         name: 'Range Rover Sport',
         desc: 'The Range Rover Sport is a dynamic and powerful SUV that combines luxury and performance seamlessly. Its sleek and athletic design exudes sophistication, while its advanced technology and cutting-edge features provide a thrilling driving experience. With its responsive handling and impressive off-road capabilities, the Range Rover Sport is equally at home on city streets as it is on intercity terrains. Whether you\'re navigating urban roads or exploring the great outdoors, the Range Rover Sport offers comfort, versatility, and an unforgettable experience.',
-        img: '/rolnew/fleet/suv class/s3.png',
+        img: '/rolnew/fleet/suv class/Sport1.png',
       },
       {
         name: 'Land Rover Range Rover',
         desc: 'The Land Rover Range Rover is a luxurious SUV that excels in both city travel and intercity journeys. Its refined design and advanced features make it a perfect companion for navigating urban streets with ease, while its powerful performance ensures a smooth and comfortable ride on long intercity drives. The Range Rover\'s spacious cabin provides ample legroom for passengers, allowing them to relax and enjoy the journey in utmost comfort. Whether you\'re cruising through the city or embarking on a road trip, the Land Rover Range Rover delivers a premium driving experience with its blend of style, versatility, and generous legroom.',
-        img: '/rolnew/fleet/suv class/s4.png',
+        img: '/rolnew/fleet/suv class/Land1.png',
       },
     ],
   },

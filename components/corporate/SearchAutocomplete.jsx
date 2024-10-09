@@ -97,7 +97,7 @@ function SearchAutocomplete({
             // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
             <li
               key={suggestion.passengerId}
-              className="px-4 py-2 cursor-pointer hover:bg-gray-100 w-full"
+              className="px-4 py-2 cursor-pointer hover:bg-gray-100 !text-black w-full"
               onClick={() => {
                 selectPassenger(suggestion);
               }}
@@ -106,7 +106,7 @@ function SearchAutocomplete({
               {
                 suggestion.passengerLname
                 && (
-                  <span>
+                  <span className="!text-black">
                     {' '}
                     {suggestion.passengerLname}
                   </span>
@@ -115,7 +115,7 @@ function SearchAutocomplete({
               {
                 suggestion.passengerEmail
                 && (
-                  <span>
+                  <span className="!text-black">
                     {' '}
                     /
                     {' '}
@@ -126,7 +126,7 @@ function SearchAutocomplete({
               {
                 suggestion.passengerMobile
                 && (
-                  <span>
+                  <span className="!text-black">
                     {' '}
                     /
                     {' '}

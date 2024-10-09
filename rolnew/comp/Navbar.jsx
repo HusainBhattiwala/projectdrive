@@ -410,7 +410,7 @@ function NavbarContent() {
               <hr className="w-full border-[0.5px] border-[#E1E1E1]/20 mt-8" />
             </div>
 
-            <div className="flex flex-col gap-4 mt-5">
+            {/* <div className="flex flex-col gap-4 mt-5">
               {navLinks.map((item, index) => (
                 <div key={item.route}>
                   <div
@@ -420,6 +420,7 @@ function NavbarContent() {
                     <Link href={item.route} className="block w-full h-full" onClick={() => setIsSidebarOpen(false)}>
                       {item.label}
                     </Link>
+                    
                     {item.subLinks && (
                       <img
                         alt='arrow-down'
@@ -429,6 +430,7 @@ function NavbarContent() {
                       />
                     )}
                   </div>
+                  
                   {item?.subLinks && openDropdownIndex === index && (
                     <div className="ml-4 space-y-1 flex flex-col mt-2 p-2 rounded">
                       {item.subLinks.map((subLink, subIndex) => (
@@ -466,16 +468,102 @@ function NavbarContent() {
                       ))}
                     </div>
                   )}
+                  <hr className="w-full border-[0.5px] border-[#E1E1E1]/20 mt-2" />
                 </div>
               ))}
               <hr className="w-full border-[0.5px] border-[#E1E1E1]/20" />
+            </div> */}
+
+            <div className="flex flex-col gap-3 mt-5">
+              {navLinks.map((item, index) => (
+                <div key={item.route}>
+                  <div
+                    className={`${pathname === item.route
+                        ? "font-semibold text-white bg-[#1A2B36]"
+                        : "text-[#E1E1E1] font-medium"
+                      } px-4 py-3 rounded-lg cursor-pointer flex justify-between items-center transition-all duration-200 ease-in-out`}
+                  >
+                    <Link
+                      href={item.route}
+                      className="block w-full h-full"
+                      onClick={() => setIsSidebarOpen(false)} // Close the sidebar when a link is clicked
+                    >
+                      {item.label}
+                    </Link>
+                    {item.subLinks && (
+                      <img
+                        alt="arrow-down"
+                        className={`w-6 h-6 transition-transform duration-300 ${openDropdownIndex === index ? "transform rotate-180" : ""
+                          }`}
+                        src="/rolnew/global/icons/arrow-down.svg"
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevent link click event from firing
+                          toggleDropdown(index); // Toggle the dropdown
+                        }}
+                      />
+                    )}
+                  </div>
+
+                  {item?.subLinks && openDropdownIndex === index && (
+                    <div className="ml-2 flex flex-col mt-2 space-y-1 transition-all duration-200 ease-in-out">
+                      {item.subLinks.map((subLink, subIndex) => (
+                        <div key={subLink.route}>
+                          <div
+                            className="flex justify-between text-[#C1C1C1] text-sm leading-5 items-center py-2 pl-4 rounded-md bg-[#1B2F3A] cursor-pointer"
+                          >
+                            <Link
+                              href={subLink.route}
+                              className="block w-full h-full"
+                              onClick={() => setIsSidebarOpen(false)} // Close the sidebar when a sublink is clicked
+                            >
+                              {subLink.label}
+                            </Link>
+                            {subLink.subLinks && (
+                              <img
+                                alt="arrow-down"
+                                className={`w-6 h-6 transition-transform duration-300 ${openSubDropdownIndex === subIndex
+                                    ? "transform rotate-180"
+                                    : ""
+                                  }`}
+                                src="/rolnew/global/icons/arrow-down.svg"
+                                onClick={(e) => {
+                                  e.stopPropagation(); // Prevent link click event from firing
+                                  toggleSubDropdown(subIndex); // Toggle the nested dropdown
+                                }}
+                              />
+                            )}
+                          </div>
+                          {openSubDropdownIndex === subIndex && subLink.subLinks && (
+                            <div className="ml-2 flex flex-col mt-2 space-y-1 transition-all duration-200 ease-in-out bg-[#203945] p-2 rounded-lg">
+                              {subLink.subLinks.map((nestedSubLink) => (
+                                <Link
+                                  key={nestedSubLink.route}
+                                  className="text-[#B1B1B1] text-sm pl-6 py-2 rounded-md bg-[#1A2B36] cursor-pointer"
+                                  href={nestedSubLink.route}
+                                  onClick={() => setIsSidebarOpen(false)} // Close the sidebar when a nested sublink is clicked
+                                >
+                                  {nestedSubLink.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <hr className="w-full border-[0.5px] border-[#E1E1E1]/20 mt-2" />
+                </div>
+              ))}
             </div>
 
+
+
+
             <div className="flex flex-col flex-start gap-4 mt-4">
-              <NewDropdown
+              {/* <NewDropdown
                 className="w-full border-[1px] rounded-lg border-[#828282] bg-[#223544] text-white"
                 label="Eng"
-              />
+              /> */}
 
               <a
                 href="https://wa.me/442045920966 "
@@ -511,7 +599,7 @@ function NavbarContent() {
                   <img
                     src="/rolnew/home/call.svg"
                     alt="call icon"
-                    className="h-[20px] w-[210px]"
+                    className="h-[30px] w-[380px]"
                   />
                 </button>
               </a>
@@ -531,7 +619,7 @@ function NavbarContent() {
                   <img
                     src="/rolnew/home/email.svg"
                     alt="email icon"
-                    className="h-[20px] w-[210px]"
+                    className="h-[30px] w-[380px]"
                   />
                 </button>
               </a>

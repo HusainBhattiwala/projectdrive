@@ -348,15 +348,15 @@ function PassengerDetails({
               )}
               {errors.mobilenoerror && (
                 <P className="text-red-500 px-1 py-1 !text-xs font-bold z-10">
-                  {errors.mobilenoerror.message}
+                  {errors.mobileno.message}
                 </P>
               )}
             </div>
             <div className="col-span-2 md:col-span-1">
               <div className="relative">
-                <div className="absolute inset-y-0 top-0 flex items-center h-12 pl-3 font-extrabold text-gray-400 pointer-events-none left-3 text-opacity-60">
+                {/* <div className="absolute inset-y-0 top-0 flex items-center h-12 pl-3 font-extrabold text-gray-400 pointer-events-none left-3 text-opacity-60">
                   <img src="/rolnew/global/icons/mail.svg" alt="mail" />
-                </div>
+                </div> */}
                 <input
                   {...register('email', {
                     required: 'Email is required',
@@ -365,7 +365,7 @@ function PassengerDetails({
                   autoComplete="new-password"
                   type="email"
                   placeholder="Email address"
-                  className={`w-full pl-12 input bg-[#223544D9]  text-[#B2B2B2] border border-[#828282] focus:outline-none ${
+                  className={`w-full input bg-[#223544D9]  text-[#B2B2B2] border border-[#828282] focus:outline-none ${
                     userDetails?.useremailid
                     && !showBooker
                     && 'pointer-events-none'
