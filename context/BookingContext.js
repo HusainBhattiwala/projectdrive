@@ -4,8 +4,7 @@
 /* eslint-disable no-lone-blocks */
 
 "use client";
-
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useRef, useEffect } from "react";
 import api from "components/utils/api";
 
 const BookingContext = createContext();
@@ -89,6 +88,9 @@ export function BookingProvider({ children }) {
 
   const [userPickupLocation, setUserPickupLocation] = useState(null);
   const [userDropLocation, setUserDropLocation] = useState(null);
+  const [viaLocations, setViaLocations] = useState([]);
+  const [viaLocationsError, setViaLocationsError] = useState([]);
+  const viaLocationRefs = useRef([]);
   const [distanceBetween, setDistanceBetween] = useState(null);
 
   function decrement(target, isAdult = false) {
@@ -185,6 +187,30 @@ export function BookingProvider({ children }) {
     return null;
   }
 
+  async function getDistanceBetweenLocation() {
+    if (userDropLocation !== null && userPickupLocation !== null) {
+      const viaLocationArray = JSON.parse(sessionStorage.getItem("viaLocationArray"));
+
+      if (viaLocationArray) {
+        const viaLocCoordsMultiple = viaLocationArray.map(item => item.via_loc_coord);
+        const payload = {
+          from_place_point: userPickupLocation.latLng || null,
+          to_place_point: userDropLocation.latLng || null,
+          way_place_point: viaLocCoordsMultiple || null,
+        };
+        try {
+          const response = await api.post(`/misc-address/admin/get-distance`, payload);
+          setDistanceBetween(response.data);
+          return response.data;
+        } catch (error) {
+          console.error("Error getting distance:", error);
+        }
+      }
+      else return null
+    }
+    return null;
+  }
+
   /** ****** User Data ****** */
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState({});
@@ -221,6 +247,11 @@ export function BookingProvider({ children }) {
         setUserPickupLocation,
         userDropLocation,
         setUserDropLocation,
+        viaLocations,
+        setViaLocations,
+        viaLocationRefs,
+        viaLocationsError,
+        setViaLocationsError,
         getUserData,
         loading,
         data,
@@ -239,6 +270,7 @@ export function BookingProvider({ children }) {
         getDistance,
         distanceBetween,
         setDistanceBetween,
+        getDistanceBetweenLocation,
 
         // minutes
         setMinute,

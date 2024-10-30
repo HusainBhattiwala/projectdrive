@@ -23,9 +23,10 @@ function AuthWrap({
   showNewBooking = false,
   sidebarVisible = true,
 }) {
+  const loginContext = useContext(LoginContext);
   const {
     setShowLogin, userName, setUserName, logout,
-  } = useContext(LoginContext);
+  } = loginContext;
   const router = useRouter();
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -38,14 +39,21 @@ function AuthWrap({
   }
 
   useEffect(() => {
+    if (!loginContext) {
+      console.error('LoginContext is not available. Make sure AuthWrap is used within LoginContextProvider.');
+    }
+  }, []);
+
+  useEffect(() => {
     const token = sessionStorage.getItem('token');
     const hasShownModal = sessionStorage.getItem('hasShownModal'); // Check if the modal has been shown
 
     if (status === 'loading') return;
 
     if (!token || token === 'null' || token === 'undefined') {
-      console.log(session);
-      if (session?.user?.email && session?.user?.mobile) {
+      console.log(`session Booking-Management == ${session?.user?.name}`);
+      // if (session?.user?.email && session?.user?.mobile) {
+      if (session?.user?.email) {
         sessionStorage.setItem(
           'user',
           JSON.stringify({
@@ -57,6 +65,7 @@ function AuthWrap({
           }),
         );
         sessionStorage.setItem('token', session?.user?.rolDriveToken);
+
         Cookies.set('authtype', 'GOOGLE');
         setShowLogin(!!session?.user?.rolDriveToken);
         setUserName({
@@ -72,8 +81,8 @@ function AuthWrap({
     } else {
       const user = JSON.parse(sessionStorage.getItem('user'));
       setUserName({
-        userfname: user.userfname,
-        userlname: user.userlname,
+        userfname: user?.userfname,
+        userlname: user?.userlname,
       });
     }
     // else if (session?.user?.email && token) {

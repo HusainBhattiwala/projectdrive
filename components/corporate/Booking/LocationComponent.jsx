@@ -22,7 +22,7 @@ function addHours(getDate, hours) {
 
 function LocationComponent({
   pickUpLocation,
-  setPickLocation,
+  setPickUpLocation,
   dropLocation,
   setDropLocation,
   viaLocations,
@@ -268,7 +268,7 @@ function LocationComponent({
               }`}
               placeholder="Search for pick up address"
               setUserPlace={async (valFn) => {
-                setPickLocation(valFn);
+                setPickUpLocation(valFn);
               }}
               defaultValue={pickUpLocation?.address || ''}
               readOnly={false}
@@ -282,7 +282,7 @@ function LocationComponent({
               <P className="absolute text-black right-2 top-2/4 -translate-y-2/4 cursor-pointer">
                 <CgClose
                   onClick={() => {
-                    setPickLocation(null);
+                    setPickUpLocation(null);
                   }}
                 />
               </P>

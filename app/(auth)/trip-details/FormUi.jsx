@@ -89,11 +89,13 @@ function FormUiWithoutSuspense() {
   const [hoursOfTrip, setHoursOfTrip] = useState(4);
   const [userPickLocation, setUserPickLocation] = useState('');
   const [userDropLocation, setUserDropLocation] = useState('');
+  const [viaLocations, setViaLocations] = useState([]);
   const [flightNo, setFlightNo] = useState('');
   const [date, setNewDate] = useState(addHours(new Date(), 2));
   const [timeZone, setTimeZone] = useState('Europe/London');
 
   const [distance, setDistance] = useState('');
+  const [distanceUnit, setDistanceUnit] = useState('');
   const [duration, setDuration] = useState('');
   const [riderDateTime, setRiderDateTime] = useState(false);
   const [cardModal, setCardModal] = useState();
@@ -134,7 +136,11 @@ function FormUiWithoutSuspense() {
   const [discountAmt, setDiscountAmt] = useState('');
   const [baseTariff, setBaseTariff] = useState('');
 
+  const [viaLocationsError, setViaLocationsError] = useState([]);
+  const viaLocationRefs = useRef([]);
+
   const vehicleRef = useRef(null);
+  console.log(distanceUnit);
 
   const isTokenResolved = useRetryUntilResolved(() => {
     if (typeof window === 'undefined') return;
@@ -246,8 +252,25 @@ function FormUiWithoutSuspense() {
       setUserCurrency(tripDetails?.invoice_currency || 'GBP');
       setShowFlight(
         tripDetails.pickup_location_type === 'airport'
-          || tripDetails.drop_location_type === 'airport',
+        || tripDetails.drop_location_type === 'airport',
       );
+      if (tripDetails?.booking_via.length > 0) {
+        const viaLocation = tripDetails?.booking_via.map((via) => {
+          const viaCoordinates = via?.via_loc_coord.match(/-?\d+\.\d+/g);
+          const reversedCoordinatesVia = `${viaCoordinates[1]},${viaCoordinates[0]}`;
+          return {
+            address: via?.via_location,
+            latLng: reversedCoordinatesVia,
+            isAirport: via?.via_loc_type === 'airport',
+            locationid: '',
+            postal_code: via?.via_postcode,
+            regionid: tripDetails?.region_id,
+            locationtype: via?.via_loc_type,
+            placeid: '',
+          };
+        });
+        setViaLocations(viaLocation);
+      }
       setBookingActivity(activity?.data);
       setUserTripDetails(tripDetails);
       setIsFinished(tripDetails?.ride_status);
@@ -381,7 +404,54 @@ function FormUiWithoutSuspense() {
     fetchTripDetails();
   }, [bookingId, isTokenResolved, router, tempBookingId]);
 
+  const getViaLocationArray = () => {
+    let pickUpVia = [];
+    if (viaLocations?.length > 0) {
+      pickUpVia = viaLocations?.map((location) => {
+        if (location !== null) {
+          const {
+            // eslint-disable-next-line camelcase
+            address, postal_code, latLng, locationtype,
+          } = location;
+          return {
+            via_location: address,
+            // eslint-disable-next-line camelcase
+            via_postcode: postal_code,
+            via_loc_coord: {
+              lat: parseFloat(latLng.split(',')[0]),
+              lng: parseFloat(latLng.split(',')[1]),
+            },
+            via_loc_type: locationtype,
+          };
+        }
+        // Return null if location is null
+        return null;
+      })
+        .filter(Boolean); // Remove null values from the array
+    }
+    return pickUpVia;
+  };
+
+  // const getCovertedDistanceForRegion = () => {
+  //   let convertedDistanceForRegion;
+  //   if (distanceUnit) {
+  //     const distanceKM = distance ? distance?.distance?.split(' ')[0] : '0';
+  //     const distanceInNumber = parseFloat(distanceKM?.replace(/,/g, ''));
+  //     convertedDistanceForRegion = distanceInNumber;
+
+  //     if (distanceUnit === 'mile') {
+  //       const factor = 0.621371;
+  //       convertedDistanceForRegion = Math.round(distanceInNumber * factor);
+  //     }
+  //     return convertedDistanceForRegion;
+  //   }
+  //   return convertedDistanceForRegion;
+  // };
+
   useEffect(() => {
+    const pickUpVia = getViaLocationArray();
+    console.log(pickUpVia);
+
     const checkTariff = async () => {
       const hourlyPayload = {
         from_location: userPickLocation?.locationid || null,
@@ -393,7 +463,7 @@ function FormUiWithoutSuspense() {
         user_currency: userCurrency || 'GBP',
         destination_zone_id: userDropLocation?.zoneId,
         source_zone_id: userPickLocation?.zoneId,
-        way_location: [],
+        way_location: pickUpVia,
         user_type: 'C',
         region_id: userPickLocation?.regionid,
       };
@@ -403,11 +473,11 @@ function FormUiWithoutSuspense() {
         adult_seat_count: debouncedAdultNo,
         luggage_count: debouncedBagNo || 0,
         user_currency: userCurrency || 'GBP',
-        distance: Math.round(Number(distance)),
+        distance: distance ? Math.round(Number(distance)) : 0,
         round_trip: addedReturn,
         destination_zone_id: userDropLocation?.zoneId,
         source_zone_id: userPickLocation?.zoneId,
-        way_location: [],
+        way_location: pickUpVia,
         user_type: 'C',
         region_id: userPickLocation?.regionid,
       };
@@ -442,14 +512,13 @@ function FormUiWithoutSuspense() {
           setBaseTariff(tariff[0]?.base_rate);
           if (rideCategory === 'hourly') {
             setSelectedVehicle((prev) => ({
+              ...prev,
               min_booking_hour: tariff[0]?.min_hour,
               booking_hourly_rate: tariff[0]?.hrly_rate,
               booking_miles_included: tariff[0]?.miles_included,
               addl_hour_rate: tariff[0]?.addl_hour_rate,
               addl_miles_hour: tariff[0]?.addl_miles_hourly,
               extra_mileage_charge: tariff[0]?.extra_mile_charge,
-              // tariff: tariff[0]?.tariff,
-              ...prev,
             }));
           } else {
             setSelectedVehicle((prev) => ({
@@ -466,6 +535,7 @@ function FormUiWithoutSuspense() {
           setBaseTariff(tariff[0]?.base_rate);
           if (rideCategory === 'hourly') {
             setSelectedVehicle((prev) => ({
+              ...prev,
               min_booking_hour: tariff[0]?.min_hour,
               booking_hourly_rate: tariff[0]?.hrly_rate,
               booking_miles_included: tariff[0]?.miles_included,
@@ -473,7 +543,6 @@ function FormUiWithoutSuspense() {
               addl_miles_hour: tariff[0]?.addl_miles_hourly,
               extra_mileage_charge: tariff[0]?.extra_mile_charge,
               tariff: tariff[0]?.tariff,
-              ...prev,
             }));
           } else {
             setSelectedVehicle((prev) => ({
@@ -505,6 +574,7 @@ function FormUiWithoutSuspense() {
             setSurcharge(isIncludingSelected[0]?.surcharge || 0);
             if (rideCategory === 'hourly') {
               setSelectedVehicle((prev) => ({
+                ...prev,
                 min_booking_hour: isIncludingSelected[0]?.min_hour,
                 booking_hourly_rate: isIncludingSelected[0]?.hrly_rate,
                 booking_miles_included: isIncludingSelected[0]?.miles_included,
@@ -512,7 +582,6 @@ function FormUiWithoutSuspense() {
                 addl_miles_hour: isIncludingSelected[0]?.addl_miles_hourly,
                 extra_mileage_charge: isIncludingSelected[0]?.extra_mile_charge,
                 tariff: isIncludingSelected[0]?.tariff,
-                ...prev,
               }));
             } else {
               setBaseTariff(isIncludingSelected[0]?.base_rate);
@@ -539,6 +608,7 @@ function FormUiWithoutSuspense() {
     userCurrency,
     userDropLocation?.locationid,
     userPickLocation?.locationid,
+    viaLocations,
     addedReturn,
   ]);
 
@@ -551,13 +621,29 @@ function FormUiWithoutSuspense() {
       Date.UTC(2000, riderReturnDateTime.selectedDate.getMonth(), 1),
     ).toLocaleString('default', { month: 'short' });
 
-    const formatTravelDate = `${riderDateTime.selectedDate.getDate()} ${monthName} ${riderDateTime.selectedDate.getFullYear()} ${
-      riderDateTime.hour
+    const formatTravelDate = `${riderDateTime.selectedDate.getDate()} ${monthName} ${riderDateTime.selectedDate.getFullYear()} ${riderDateTime.hour
     }:${riderDateTime.minute}`;
 
-    const formatReturnDate = `${riderReturnDateTime.selectedDate.getDate()} ${returnMonthName} ${riderReturnDateTime.selectedDate.getFullYear()} ${
-      riderReturnDateTime.hour
+    const formatReturnDate = `${riderReturnDateTime.selectedDate.getDate()} ${returnMonthName} ${riderReturnDateTime.selectedDate.getFullYear()} ${riderReturnDateTime.hour
     }:${riderReturnDateTime.minute}`;
+
+    // const viaLocatioObject = JSON.parse(sessionStorage.getItem("via_Dashboard_Full"));
+    let transformedLocations = [];
+    function transformLocations(locations) {
+      return locations.map((location) => ({
+        address: location.address,
+        latLng: location.latLng,
+        via_location: location.address,
+        via_postcode: location.postal_code,
+        via_loc_coord: `POINT(${location.latLng.split(',').reverse().join(' ')})`,
+        via_loc_type: location.locationtype,
+        via_location_id: location.locationid,
+        lat: location.latLng.split(',')[0],
+        lng: location.latLng.split(',')[1],
+        via_location_region_id: location.regionid,
+      }));
+    }
+    if (viaLocations.length > 0) transformedLocations = transformLocations(viaLocations);
 
     const payload = {
       region_id: allTripDetails?.region_id,
@@ -631,8 +717,10 @@ function FormUiWithoutSuspense() {
       board_name: nameOnBoard,
       distance: distance ? Number(distance) * 1.60934 : null,
       duration: duration ? Number(duration) : null,
+      via: transformedLocations,
     };
 
+    const pickUpVia = getViaLocationArray();
     const hourlyPayload = {
       from_location: userPickLocation?.locationid || null,
       to_location: userDropLocation?.locationid || null,
@@ -643,7 +731,7 @@ function FormUiWithoutSuspense() {
       user_currency: userCurrency || 'GBP',
       destination_zone_id: userDropLocation?.zoneId,
       source_zone_id: userPickLocation?.zoneId,
-      way_location: [],
+      way_location: pickUpVia,
       user_type: 'C',
       region_id: userPickLocation?.regionid,
       veh_cat_id: selectedVehicle?.vehicle_cat_id,
@@ -654,11 +742,10 @@ function FormUiWithoutSuspense() {
       adult_seat_count: debouncedAdultNo,
       luggage_count: debouncedBagNo || 0,
       user_currency: userCurrency || 'GBP',
-      distance: Math.round(Number(distance)),
+      distance: distance ? Math.round(Number(distance)) : 0,
       round_trip: addedReturn,
       destination_zone_id: userDropLocation?.zoneId,
       source_zone_id: userPickLocation?.zoneId,
-      way_location: [],
       user_type: 'C',
       region_id: userPickLocation?.regionid,
       veh_cat_id: selectedVehicle?.vehicle_cat_id,
@@ -814,6 +901,9 @@ function FormUiWithoutSuspense() {
   useEffect(() => {
     const getUserCurrency = async (regionid) => {
       const response = await api.get(`/regions?region_id=${regionid}`);
+      if (response?.data?.distance_unit) {
+        setDistanceUnit(response?.data?.distance_unit);
+      }
       if (response?.data?.region_currency_text) {
         setUserCurrency(response?.data?.region_currency_text);
         let regionDate = new Date().toLocaleString('en-US', {
@@ -825,6 +915,7 @@ function FormUiWithoutSuspense() {
         setNewDate(newDate);
       }
     };
+
     if (allTripDetails?.region_id) {
       getUserCurrency(allTripDetails?.region_id);
     }
@@ -918,6 +1009,8 @@ function FormUiWithoutSuspense() {
                     setUserPickLocation={setUserPickLocation}
                     userDropLocation={userDropLocation}
                     setUserDropLocation={setUserDropLocation}
+                    viaLocations={viaLocations}
+                    setViaLocations={setViaLocations}
                     flightNo={flightNo}
                     setFlightNo={setFlightNo}
                     riderDateTime={riderDateTime}
@@ -933,9 +1026,9 @@ function FormUiWithoutSuspense() {
                     setAddedReturn={setAddedReturn}
                     riderReturnDateTime={riderReturnDateTime}
                     setRiderReturnDateTime={setRiderReturnDateTime}
-                    userCurrency={userCurrency}
                     setFirstUpdate={setFirstUpdate}
                     duration={duration}
+                    setDuration={setDuration}
                     setisAllowedCancel={setisAllowedCancel}
                     passengerMobileError={passengerMobileError}
                     setPassengerMobileError={setPassengerMobileError}
@@ -947,6 +1040,15 @@ function FormUiWithoutSuspense() {
                     showFlight={showFlight}
                     minDate={date}
                     timeZone={timeZone}
+                    userCurrency={userCurrency}
+                    setUserCurrency={setUserCurrency}
+                    viaLocationsError={viaLocationsError}
+                    setViaLocationsError={setViaLocationsError}
+                    viaLocationRefs={viaLocationRefs}
+                    setNewDate={setNewDate}
+                    addHours={addHours}
+                    setDistance={setDistance}
+                    setDistanceUnit={setDistanceUnit}
                   />
                 ) : (
                   <DisplayFields

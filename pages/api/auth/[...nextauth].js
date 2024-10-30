@@ -50,7 +50,8 @@ export const authOptions = {
         return token;
       }
 
-      if (trigger === 'update' && session?.usermobileno && session?.usercountrycode) {
+      // if (trigger === 'update' && session?.usermobileno && session?.usercountrycode) {
+      if (trigger === 'update') {
         token.mobile = session?.usermobileno;
         token.countryCode = session?.usercountrycode;
 
@@ -65,6 +66,7 @@ export const authOptions = {
         };
         const response = await api.post('/auth/social', socialAuthPayload);
         token.rolDriveToken = response?.data?.Authorization;
+        sessionStorage.setItem('token', token.rolDriveToken);
         return token;
       }
       if (account) {

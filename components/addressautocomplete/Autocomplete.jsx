@@ -46,6 +46,13 @@ function Autocomplete(props) {
   const [open, setOpen] = useState(false);
   const [showError, setShowError] = useState(false);
   const [textvalue, setTextvalue] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  useEffect(() => {
+    if (isFocused && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isFocused, textvalue]);
 
   useEffect(() => {
     setTextvalue(defaultValue || '');
@@ -202,7 +209,7 @@ function Autocomplete(props) {
       )}
 
       <SelectedComponent
-        autoComplete="false"
+        autoComplete="off"
         id={`text${name}`}
         value={textvalue}
         className={`${
@@ -217,14 +224,17 @@ function Autocomplete(props) {
         }}
         onFocus={() => {
           // eslint-disable-next-line no-unused-expressions
-          setFocus;
+          setIsFocused(true);
+          setFocus && setFocus();
         }}
         onBlur={() => {
+          setIsFocused(false);
           removeValue();
         }}
         placeholder={placeholder}
         readOnly={readOnly}
         name={name}
+        ref={inputRef}
       />
 
       <div

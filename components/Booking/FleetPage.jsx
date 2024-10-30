@@ -32,6 +32,7 @@ import PayWithStripe from 'components/PayWithStripe';
 import Container from 'rolnew/comp/Container';
 import Modal from '../ui/Modal';
 import 'react-toastify/dist/ReactToastify.css';
+import { UtilityContext } from 'context/UtilityContext';
 
 const allCards = ['visa', 'mastercard', 'maestro', 'amex'];
 
@@ -48,6 +49,7 @@ function TempBookingComponent({
   setShowModal,
   setShowBtnLoading,
   setShowPayment,
+  setShowPaymentDone,
 }) {
   const searchParams = useSearchParams();
   const tempBookingId = searchParams.get('temp_booking_id');
@@ -55,11 +57,16 @@ function TempBookingComponent({
     // if (!tempBookingId) return;
     const fetchData = async () => {
       try {
-        const response = await api.put(`/client-booking/${tempBookingId}`, {});
+        const partialId = JSON.parse(sessionStorage.getItem('partial_booking_id'));
+        const payload = {
+          partial_id: partialId,
+        };
+        const response = await api.put(`/client-booking/${tempBookingId}`, payload);
         if (response.data && response.data.status === 1) {
           setBookingRef(response.data.booking_ref);
           setShowAuth(true);
           setShowModal(true);
+          setShowPaymentDone(true);
           const user = JSON.parse(sessionStorage.getItem('passengerDetails'));
           if (user) {
             sessionStorage.setItem(
@@ -76,6 +83,7 @@ function TempBookingComponent({
           sessionStorage.removeItem('isCarSelected');
           sessionStorage.removeItem('selectedfleet');
           sessionStorage.removeItem('passengerDetails');
+          sessionStorage.removeItem('partial_booking_id');
           Cookies.remove('searchdata');
           Cookies.remove('fleetlist');
           if (response.data.Authorization) {
@@ -113,11 +121,13 @@ function FleetPage() {
   const router = useRouter();
   // const searchParams = useSearchParams();
   const [searchData, setSearchData] = useState({});
+  const [viaLocationdata, setViaLocationData] = useState([]);
   const [fleetList, setFleetList] = useState([]);
   const [filterFleetList, setFilterFleetList] = useState([]);
   const [showTransfer, setShowTransfer] = useState(false);
   const [isCarSelected, setCarSelected] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
+  const [showPaymentDone, setShowPaymentDone] = useState(false);
   const [showAuth, setShowAuth] = useState(false);
   const [showEmailLogin, setshowEmailLogin] = useState(true);
   const [passengersDetails, setPassengersDetails] = useState(null);
@@ -166,55 +176,111 @@ function FleetPage() {
     keepErrorsOnSubmit: true,
   });
 
-  useEffect(() => {
-    // Extract the query parameter
-    const searchParams = new URLSearchParams(window.location.search);
-    const partialId = searchParams.get('partial_id');
-
-    if (partialId) {
-      // Call the API with the partial_id
-      const getPartialBookingData = async () => {
-        setPartialBookingId(partialId)
-        try {
-          const response = await api.get(`/auth/booking/partial?partial_id=${partialId}`);
-          console.log(response.data);
-          await setAllSessionData(response.data)
-        } catch (error) {
-          console.error(error);
-        }
-      }
-      getPartialBookingData();
-    }
-  }, []);
+  const { eclipseText } = useContext(UtilityContext);
 
   const setAllSessionData = async (data) => {
-    const auth_data = data.auth;
-    const booking_data = data.partialBooking.booking_data
+    const authData = data.auth;
+    const bookingData = data.partialBooking[0].booking_data;
 
-    sessionStorage.setItem('passengerDetails', JSON.stringify(booking_data?.passengerDetails));
-    sessionStorage.setItem('user', JSON.stringify(booking_data?.user));
-    sessionStorage.setItem('selectedfleet', JSON.stringify(booking_data?.selectedFleet));
-    sessionStorage.setItem('isCarSelected', booking_data?.isCarSelected);
-    sessionStorage.setItem('fleetlist', JSON.stringify(booking_data?.fleetList));
-    sessionStorage.setItem('storesearchdata', JSON.stringify(booking_data?.storeSearchData));
+    const { partialIdForBooking } = data.partialBooking[0].partial_booking_id;
+    sessionStorage.setItem('partial_booking_id', JSON.stringify(partialIdForBooking));
 
-    sessionStorage.setItem('token', auth_data?.Authorization);
-    if (auth_data?.Authorization) {
+    sessionStorage.setItem('passengerDetails', JSON.stringify(bookingData?.passengerDetails));
+    sessionStorage.setItem('user', JSON.stringify(bookingData?.user));
+    sessionStorage.setItem('selectedfleet', JSON.stringify(bookingData?.selectedFleet));
+    sessionStorage.setItem('isCarSelected', bookingData?.isCarSelected);
+    sessionStorage.setItem('fleetlist', JSON.stringify(bookingData?.fleetList));
+    sessionStorage.setItem('storesearchdata', JSON.stringify(bookingData?.storeSearchData));
+    Cookies.set('searchdata', JSON.stringify(bookingData?.storedData));
+
+    sessionStorage.setItem('token', authData?.Authorization);
+    if (authData?.Authorization) {
       update({
         ...session,
-        rolDriveToken: auth_data?.Authorization,
+        rolDriveToken: authData?.Authorization,
         isNewUser: false,
-        mobile: payload.booker_mobile_no,
+        mobile: bookingData?.passengerDetails?.booker_mobile_no,
       });
       setShowLogin(true);
       setAuthType('BASIC');
       Cookies.set('authtype', 'BASIC');
-      sessionStorage.setItem('token', auth_data?.Authorization);
+      sessionStorage.setItem('token', authData?.Authorization);
       setShowAuth(true);
       router.refresh();
       setShowToken(true);
     }
-  }
+  };
+
+  const getSessionData = async () => {
+    const storedData = Cookies.get('searchdata');
+    const storesearchdata = sessionStorage.getItem('storesearchdata');
+    const viaLocationArray = sessionStorage.getItem('viaLocationArray');
+    let listOfFleet = sessionStorage.getItem('fleetlist');
+    console.log(`storesearchdata - ${storesearchdata}`);
+    console.log(`listOfFleet - ${listOfFleet}`);
+    const getAuthType = Cookies.get('authtype');
+    setAuthType(getAuthType);
+    if (!storedData || !listOfFleet || !storesearchdata) {
+      // router.push('/rolnew');
+    }
+    if (storesearchdata && listOfFleet) {
+      listOfFleet = JSON.parse(listOfFleet);
+      setSearchData(JSON.parse(storesearchdata));
+      setViaLocationData(JSON.parse(viaLocationArray));
+      setFilterFleetList([...listOfFleet]);
+      setFleetList([...listOfFleet]);
+      setShowLoader(false);
+    }
+    const carsExists = sessionStorage.getItem('selectedfleet');
+    setCarSelected(!!carsExists);
+    setSelectedCarDetails(JSON.parse(carsExists));
+    const userExists = !!sessionStorage.getItem('passengerDetails');
+    if (userExists) {
+      setShowPayment(true);
+    }
+  };
+
+  /* eslint-disable react-hooks/exhaustive-deps */
+  useEffect(() => {
+    const getPartialBookingData = async () => {
+      const searchParams = new URLSearchParams(window.location.search);
+      const partialId = searchParams.get('partial_id');
+      const tempBookingId = searchParams.get('temp_booking_id');
+
+      if (partialId && !tempBookingId) {
+        setPartialBookingId(partialId);
+        try {
+          console.log('Fetching partial booking data for ID:', partialId);
+          const response = await api.get(`/auth/booking/partial?partial_id=${partialId}`);
+          console.log('API response:', response);
+
+          // if (response.data && response.data.partialBooking && response.data.partialBooking[0].booking_id !== null) {
+          //   toast.error('Booking Already Completed Scucessfully!', {
+          //     autoClose: 3000,
+          //     theme: 'colored',
+          //   });
+          //   toast.clearWaitingQueue();
+          //   setShowBtnLoading(false);
+          // }
+
+          if (response.data && response.data.partialBooking && response.data.partialBooking.length > 0) {
+            console.log('Calling setAllSessionData with response data');
+            setAllSessionData(response.data);
+
+            getSessionData();
+          } else {
+            console.error('No valid partial booking data received from API');
+          }
+        } catch (error) {
+          console.error('Error fetching partial booking data:', error);
+        }
+      } else {
+        console.log('No partial_id found in URL');
+      }
+    };
+    getPartialBookingData();
+  }, []);
+  /* eslint-enable react-hooks/exhaustive-deps */
 
   useEffect(() => {
     reset();
@@ -244,17 +310,64 @@ function FleetPage() {
     });
   }, [showEmailLogin]);
 
+  const {
+    // eslint-disable-next-line max-len
+    pickupaddress,
+    pickuplatlng,
+    dropaddress,
+    droplatlng,
+    pickupdate,
+    pickuptime,
+    distance,
+    duration,
+    rideduration,
+    pickupairport,
+    dropairport,
+    bookingtype,
+    returndate,
+    returntime,
+    pickuppostalcode,
+    droppostalcode,
+    regionId,
+    droplocationtype,
+    pickuplocationtype,
+    pickuplocationid,
+    droplocationid,
+    dropzone,
+    pickupzone,
+  } = searchData;
+
+  function getDurationInHour(minutes) {
+    const hours = Math.floor(minutes / 60);
+    const remainingMinutes = minutes % 60;
+    return `${hours} h ${remainingMinutes} m`;
+  }
+
+  function convertKmToMile(distanceKM) {
+    const factor = 0.621371;
+    return Math.round(distanceKM * factor);
+  }
+
   // Sending Partial booking details to backend through api
-  const sendPayloadToAPI = async (booking_step) => {
+  const sendPayloadToAPI = async (bookingStep) => {
+    let journey = null;
+    if (returndate && bookingtype === 'transfers') journey = 'Round Trip';
+    if (!returndate && bookingtype !== 'hourly') journey = 'one-way journey';
+    if (bookingtype === 'hourly') journey = 'Hourly trip;';
+
+    const distanceInKmAndMiles = `${distance} km /${convertKmToMile(distance)} miles`;
+    const durationInHoursAndMinutes = getDurationInHour(duration);
+
     const payload = {
-      journey: returndate && bookingtype === 'transfers' ? 'Round Trip' :
-        !returndate && bookingtype !== 'hourly' ? 'One-Way journey' : 'Hourly trip;',
+      journey,
       date: pickupdate,
       time: pickuptime,
       pickup: pickupaddress,
       dropOff: dropaddress,
-      distance: distance,
-      duration: duration,
+      distance,
+      distanceInKmAndMiles,
+      duration,
+      durationInHoursAndMinutes,
       user: JSON.parse(sessionStorage.getItem('user')),
       storedData: JSON.parse(Cookies.get('searchdata')),
       storeSearchData: JSON.parse(sessionStorage.getItem('storesearchdata')),
@@ -263,20 +376,21 @@ function FleetPage() {
       passengerDetails: JSON.parse(sessionStorage.getItem('passengerDetails')),
       isCarSelected: sessionStorage.getItem('isCarSelected'),
       url: window.location.href,
-      booking_step: booking_step,
-      partial_id: partialBookingId ? partialBookingId : null
+      bookingStep,
+      partial_id: partialBookingId,
     };
 
     try {
       const response = await api.post('/client-booking/partial', payload);
-      if (response?.data?.partialId !== null) {
+      if (response?.data?.partialId !== null && partialBookingId === null) {
         setPartialBookingId(response?.data?.partialId);
+        sessionStorage.setItem('partial_booking_id', JSON.stringify(response?.data?.partialId));
       }
       console.log(response.data);
     } catch (error) {
       console.error(error);
     }
-  }
+  };
 
   useEffect(() => {
     // Clear the session storage key after 30 minute
@@ -293,36 +407,18 @@ function FleetPage() {
   }, [router]);
 
   useEffect(() => {
-    const getData = async () => {
-      const storedData = Cookies.get('searchdata');
-      const storesearchdata = sessionStorage.getItem('storesearchdata');
-      let listOfFleet = sessionStorage.getItem('fleetlist');
-      const getAuthType = Cookies.get('authtype');
-      setAuthType(getAuthType);
-      if (!storedData || !listOfFleet || !storesearchdata) {
-        // router.push('/rolnew');
-      }
-      if (storedData && listOfFleet) {
-        listOfFleet = JSON.parse(listOfFleet);
-        setSearchData(JSON.parse(storedData));
-        setFilterFleetList([...listOfFleet]);
-        setFleetList([...listOfFleet]);
-        setShowLoader(false);
-      }
-      const carsExists = sessionStorage.getItem('selectedfleet');
-      setCarSelected(!!carsExists);
-      setSelectedCarDetails(JSON.parse(carsExists));
-      const userExists = !!sessionStorage.getItem('passengerDetails');
-      if (userExists) {
-        setShowPayment(true);
-      }
-    };
-    getData();
-
-    // calling API to save progress of booking
-    //if (partialBookingId === null) { sendPayloadToAPI(1); }
-
+    getSessionData();
   }, [router]);
+
+  /* eslint-disable react-hooks/exhaustive-deps */
+  // useEffect(() => {
+  //   const searchParams = new URLSearchParams(window.location.search);
+  //   let tempBookingId = null;
+  //   tempBookingId = searchParams.get('temp_booking_id');
+
+  //   if (partialBookingId === null && (tempBookingId === null || tempBookingId === undefined)) sendPayloadToAPI(1);
+  // }, [partialBookingId]);
+  /* eslint-enable react-hooks/exhaustive-deps */
 
   async function checkPassengerMobileNumber(value, countryData) {
     if (value) {
@@ -418,33 +514,6 @@ function FleetPage() {
     }
   }
 
-  const {
-    // eslint-disable-next-line max-len
-    pickupaddress,
-    pickuplatlng,
-    dropaddress,
-    droplatlng,
-    pickupdate,
-    pickuptime,
-    distance,
-    duration,
-    rideduration,
-    pickupairport,
-    dropairport,
-    bookingtype,
-    returndate,
-    returntime,
-    pickuppostalcode,
-    droppostalcode,
-    regionId,
-    droplocationtype,
-    pickuplocationtype,
-    pickuplocationid,
-    droplocationid,
-    dropzone,
-    pickupzone,
-  } = searchData;
-
   const [showBtnLoading, setShowBtnLoading] = useState(false);
   const [bookingRef, setBookingRef] = useState('');
 
@@ -461,12 +530,12 @@ function FleetPage() {
       inline: 'end',
     });
 
-    sendPayloadToAPI(2)
+    sendPayloadToAPI(2);
   }
   useEffect(() => {
     async function getToken() {
       const token = sessionStorage.getItem('token');
-      if (token && token !== 'null' && token !== 'undefined') {
+      if ((token && token !== 'null' && token !== 'undefined') || session) {
         setShowAuth(true);
       }
     }
@@ -485,33 +554,33 @@ function FleetPage() {
         showBooker,
       };
       sessionStorage.removeItem('user');
-      sessionStorage.removeItem('passengerDetails');
+      // sessionStorage.removeItem('passengerDetails');
       const user = {};
       if (showBooker) {
-        payload.passenger_fname = data.fname;
-        payload.passenger_lname = data.lname;
-        payload.passenger_country_code = `+${data.countrycode}`;
+        payload.passenger_fname = data?.fname;
+        payload.passenger_lname = data?.lname;
+        payload.passenger_country_code = `+${data?.countrycode}`;
         payload.passenger_mobile_no = getMobileNumber(
-          data.mobileno,
-          data.countrycode,
+          data?.mobileno,
+          data?.countrycode,
         );
-        payload.passenger_email = data.email;
-        payload.booker_fname = data.bookerfname;
-        payload.booker_lname = data.bookerlname;
-        payload.booker_country_code = `+${data.bookercountrycode}`;
+        payload.passenger_email = data?.email;
+        payload.booker_fname = data?.bookerfname;
+        payload.booker_lname = data?.bookerlname;
+        payload.booker_country_code = `+${data?.bookercountrycode}`;
         payload.booker_mobile_no = getMobileNumber(
-          data.bookermobileno,
-          data.bookercountrycode,
+          data?.bookermobileno,
+          data?.bookercountrycode,
         );
-        payload.booker_email = data.bookeremail;
+        payload.booker_email = data?.bookeremail;
         // Set user
-        user.userfname = data.bookerfname;
-        user.userlname = data.bookerlname;
-        user.useremailid = data.bookeremail;
-        user.usercountrycode = `+${data.bookercountrycode}`;
+        user.userfname = data?.bookerfname;
+        user.userlname = data?.bookerlname;
+        user.useremailid = data?.bookeremail;
+        user.usercountrycode = `+${data?.bookercountrycode}`;
         user.usermobileno = getMobileNumber(
-          data.bookermobileno,
-          data.bookercountrycode,
+          data?.bookermobileno,
+          data?.bookercountrycode,
         );
       } else {
         payload.passenger_fname = '';
@@ -519,21 +588,21 @@ function FleetPage() {
         payload.passenger_country_code = '+44';
         payload.passenger_mobile_no = '';
         payload.passenger_email = '';
-        payload.booker_fname = data.fname;
-        payload.booker_lname = data.lname;
-        payload.booker_country_code = `+${data.countrycode}`;
+        payload.booker_fname = data?.fname;
+        payload.booker_lname = data?.lname;
+        payload.booker_country_code = `+${data?.countrycode}`;
         payload.booker_mobile_no = getMobileNumber(
-          data.mobileno,
-          data.countrycode,
+          data?.mobileno,
+          data?.countrycode,
         );
-        payload.booker_email = data.email;
+        payload.booker_email = data?.email;
 
         // Set user
-        user.userfname = data.fname;
-        user.userlname = data.lname;
-        user.useremailid = data.email;
-        user.usercountrycode = `+${data.countrycode}`;
-        user.usermobileno = getMobileNumber(data.mobileno, data.countrycode);
+        user.userfname = data?.fname;
+        user.userlname = data?.lname;
+        user.useremailid = data?.email;
+        user.usercountrycode = `+${data?.countrycode}`;
+        user.usermobileno = getMobileNumber(data?.mobileno, data?.countrycode);
       }
       console.log(isNewUser, session?.user);
       if (isNewUser || session?.user?.isNewUser) {
@@ -576,7 +645,6 @@ function FleetPage() {
       sessionStorage.setItem('user', JSON.stringify(user));
       setShowPayment(true);
       sendPayloadToAPI(3);
-
     } else {
       setShowPassengerError(true);
       formRef?.current?.scrollIntoView({
@@ -599,7 +667,7 @@ function FleetPage() {
       pickup_location_id: pickuplocationid || null,
       drop_location_id: droplocationid || null,
       pickup_loc_coord: `POINT(${pickuplatlng.split(',')[1]} ${pickuplatlng.split(',')[0]
-        })`,
+      })`,
       travel_date: pickUpdateTime.trim(),
       preferred_vehicle: selectedCarDetails.vehicle_cat_id,
       passenger_adult_cnt: Number(passengers.adult),
@@ -635,6 +703,7 @@ function FleetPage() {
       discount_pct: 0,
       surcharge: 0,
       discount_amt: 0,
+      via: [],
     };
 
     if (!showToken) {
@@ -645,7 +714,9 @@ function FleetPage() {
 
     // New tariff details for stripe payment
 
-    const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+    // const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+    const currentUrl = typeof window !== 'undefined' ? window.location.origin + window.location.pathname : '';
+
     const distanceInNumber = parseFloat(distance || 0);
     const factor = 0.621371;
     const distanceInMiles = Math.round(distanceInNumber * factor);
@@ -724,11 +795,33 @@ function FleetPage() {
       payload.drop_location = dropaddress;
       payload.drop_postcode = droppostalcode;
       payload.drop_loc_coord = `POINT(${droplatlng.split(',')[1]} ${droplatlng.split(',')[0]
-        })`;
+      })`;
       payload.drop_location_type = droplocationtype;
     }
 
+    function transformLocations(locations) {
+      return locations.map((location) => ({
+        address: location.address,
+        latLng: location.latLng,
+        via_location: location.address,
+        via_postcode: location.postal_code,
+        via_loc_coord: `POINT(${location.latLng.split(',').reverse().join(' ')})`,
+        via_loc_type: location.locationtype,
+        via_location_id: location.locationid,
+        lat: location.latLng.split(',')[0],
+        lng: location.latLng.split(',')[1],
+        via_location_region_id: location.regionid,
+      }));
+    }
+
     if (bookingtype === 'hourly') {
+      const viaLocatioObject = JSON.parse(sessionStorage.getItem('viaLocatioObject'));
+
+      let transformedLocations = [];
+      if (viaLocatioObject) { transformedLocations = transformLocations(viaLocatioObject); }
+
+      payload.via = transformedLocations || [];
+
       payload.booking_duration = Number(rideduration.split(' ')[0]);
       const extraHour = Number(rideduration.split(' ')[0])
         - Number(selectedCarDetails.min_hour);
@@ -775,16 +868,6 @@ function FleetPage() {
     confirmBooking().catch(console.error);
   };
 
-  function getDurationInHour(minutes) {
-    const hours = Math.floor(minutes / 60);
-    const remainingMinutes = minutes % 60;
-    return `${hours} h ${remainingMinutes} m`;
-  }
-
-  function convertKmToMile(distanceKM) {
-    const factor = 0.621371;
-    return Math.round(distanceKM * factor);
-  }
   function goToConfromBooking() {
     sessionStorage.removeItem('storesearchdata');
     sessionStorage.removeItem('passengerDetails');
@@ -871,98 +954,95 @@ function FleetPage() {
   // Check if payment session ID exists or not
   // const tempBookingId = searchParams.get('temp_booking_id');
 
+  // useEffect(() => {
+  //   let hasSentEmail = false; // Flag to track if the email has been sent
+  //   let timeoutId = null; // To hold the timeout ID for the 60-second timer
 
+  //   const sendAnalyticsData = async () => {
+  //     if (hasSentEmail) return; // Prevent multiple triggers
 
-  useEffect(() => {
-    let hasSentEmail = false; // Flag to track if the email has been sent
-    let timeoutId = null; // To hold the timeout ID for the 60-second timer
+  //     const userInfo = JSON.parse(sessionStorage.getItem('user'));
+  //     const { useremailid, usermobileno, usercountrycode } = userInfo;
 
-    const sendAnalyticsData = async () => {
-      if (hasSentEmail) return; // Prevent multiple triggers
+  //     let journey = null;
+  //     if (returndate && bookingtype === 'transfers') journey = 'Round Trip';
+  //     if (!returndate && bookingtype !== 'hourly') journey = 'one-way journey';
+  //     if (bookingtype === 'hourly') journey = 'Hourly trip;';
 
-      const userInfo = JSON.parse(sessionStorage.getItem('user'));
+  //     const payloadData = {
+  //       journey,
+  //       date: pickupdate,
+  //       time: pickuptime,
+  //       pickup: pickupaddress,
+  //       dropOff: dropaddress,
+  //       distance,
+  //       duration,
+  //     };
 
-      const { useremailid, usermobileno, usercountrycode } = userInfo;
+  //     const queryParams = `?email=${useremailid || null}&phoneNo=${usermobileno || null}&countryCode=${usercountrycode || null}`;
 
-      let journey = null;
-      if (returndate && bookingtype === 'transfers') journey = 'Round Trip';
-      if (!returndate && bookingtype !== 'hourly') journey = 'one-way journey';
-      if (bookingtype === 'hourly') journey = 'Hourly trip;';
+  //     const response = await api.post(`/users/reminder${queryParams}`, payloadData);
+  //     sessionStorage.removeItem('passengerDetails');
+  //     console.log('reminder', response);
 
-      const payloadData = {
-        journey,
-        date: pickupdate,
-        time: pickuptime,
-        pickup: pickupaddress,
-        dropOff: dropaddress,
-        distance,
-        duration,
-      };
+  //     hasSentEmail = true; // Mark email as sent
+  //   };
 
-      const queryParams = `?email=${useremailid || null}&phoneNo=${usermobileno || null}&countryCode=${usercountrycode || null}`;
+  //   const resetTimer = () => {
+  //     // Clear the previous timer
+  //     if (timeoutId) clearTimeout(timeoutId);
 
-      const response = await api.post(`/users/reminder${queryParams}`, payloadData);
-      sessionStorage.removeItem('passengerDetails');
-      console.log('reminder', response);
+  //     // Set a new timer for 60 seconds
+  //     timeoutId = setTimeout(async () => {
+  //       await sendAnalyticsData();
+  //     }, 60000); // 60 seconds
+  //   };
 
-      hasSentEmail = true; // Mark email as sent
-    };
+  //   // Set up event listeners for user activity
+  //   const handleUserAction = () => {
+  //     resetTimer(); // Reset the timer when user performs an action
+  //   };
 
-    const resetTimer = () => {
-      // Clear the previous timer
-      if (timeoutId) clearTimeout(timeoutId);
+  //   // Function to handle beforeunload event
+  //   const handleBeforeUnload = async () => {
+  //     await sendAnalyticsData();
+  //   };
 
-      // Set a new timer for 60 seconds
-      timeoutId = setTimeout(async () => {
-        await sendAnalyticsData();
-      }, 60000); // 60 seconds
-    };
+  //   // Add event listeners for user actions
+  //   window.addEventListener('mousemove', handleUserAction);
+  //   window.addEventListener('keypress', handleUserAction);
+  //   window.addEventListener('click', handleUserAction);
+  //   window.addEventListener('beforeunload', handleBeforeUnload);
 
-    // Set up event listeners for user activity
-    const handleUserAction = () => {
-      resetTimer(); // Reset the timer when user performs an action
-    };
+  //   // Start the timer on component mount
+  //   resetTimer();
 
-    // Function to handle beforeunload event
-    const handleBeforeUnload = async () => {
-      await sendAnalyticsData();
-    };
+  //   return async () => {
+  //     // Clean up event listeners and timer when component unmounts
+  //     window.removeEventListener('mousemove', handleUserAction);
+  //     window.removeEventListener('keypress', handleUserAction);
+  //     window.removeEventListener('click', handleUserAction);
+  //     window.removeEventListener('beforeunload', handleBeforeUnload);
 
-    // Add event listeners for user actions
-    window.addEventListener('mousemove', handleUserAction);
-    window.addEventListener('keypress', handleUserAction);
-    window.addEventListener('click', handleUserAction);
-    window.addEventListener('beforeunload', handleBeforeUnload);
+  //     if (timeoutId) clearTimeout(timeoutId); // Clear the timeout on unmount
 
-    // Start the timer on component mount
-    resetTimer();
-
-    return async () => {
-      // Clean up event listeners and timer when component unmounts
-      window.removeEventListener('mousemove', handleUserAction);
-      window.removeEventListener('keypress', handleUserAction);
-      window.removeEventListener('click', handleUserAction);
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-
-      if (timeoutId) clearTimeout(timeoutId); // Clear the timeout on unmount
-
-      const token = sessionStorage.getItem('token');
-      const carsExists = sessionStorage.getItem('selectedfleet');
-      if (token && token !== 'null' && token !== 'undefined' && !bookingRef && carsExists) {
-        await sendAnalyticsData();
-      }
-    };
-  }, [
-    bookingRef,
-    bookingtype,
-    distance,
-    dropaddress,
-    duration,
-    pickuptime,
-    pickupdate,
-    pickupaddress,
-    returndate,
-  ]);
+  //     const token = sessionStorage.getItem('token');
+  //     const carsExists = sessionStorage.getItem('selectedfleet');
+  //     if (token && token !== 'null' && token !== 'undefined' && !bookingRef && carsExists) {
+  //       await sendAnalyticsData();
+  //     }
+  //   };
+  // }, [
+  //   bookingRef,
+  //   bookingtype,
+  //   distance,
+  //   dropaddress,
+  //   duration,
+  //   pickuptime,
+  //   pickupdate,
+  //   pickupaddress,
+  //   returndate,
+  // ]);
 
   return (
     <>
@@ -973,6 +1053,7 @@ function FleetPage() {
           setShowModal={setShowModal}
           setShowBtnLoading={setShowBtnLoading}
           setShowPayment={setShowPayment}
+          setShowPaymentDone={setShowPaymentDone}
         />
       </Suspense>
       <div className="relative" ref={pageRef}>
@@ -1071,7 +1152,7 @@ function FleetPage() {
             <div className="xl:container mx-auto py-12">
               <div
                 className={`mx-auto lg:container flex items-center ${!isCarSelected && ' justify-between'
-                  }`}
+                }`}
               >
                 <div
                   className="flex items-center text-primary text-sm font-bold cursor-pointer mb-2 sm:mb-0 2xl:basis-[35%] lg:basis-[387px]"
@@ -1120,7 +1201,7 @@ function FleetPage() {
                           className={`rounded-full transition duration-500 ease-in-out sm:w-10 sm:h-10 w-8 h-8 flex items-center justify-center font-semibold ${showPayment
                             ? 'bg-success bg-opacity-90 text-success text-xl'
                             : 'bg-[#223544] text-primary border border-[#fff] border-opacity-40'
-                            }`}
+                          }`}
                         >
                           {showPayment && (
                             <FiCheck className="text-[#96fe96] sm:text-sm text-xs" />
@@ -1131,25 +1212,33 @@ function FleetPage() {
                         <div className="sm:px-3 px-1 w-24 sm:w-auto text-center">
                           <P
                             className={`font-semibold uppercase sm:text-sm !text-xs text-center pt-1 ${showPayment ? 'text-success' : ' text-[#F7BC3A]'
-                              }`}
+                            }`}
                           >
                             Passenger Details
                           </P>
                         </div>
                       </div>
                       <div className="flex-auto sm:mr-3 transition duration-500 ease-in-out border-t border-[#fff] border-opacity-20" />
-                      <div className="relative flex flex-col items-center text-gray-500 sm:flex-row">
-                        <div className="flex items-center justify-center sm:w-10 sm:h-10 w-8 h-8 font-semibold transition duration-500 ease-in-out bg-[#223544] rounded-full border border-[#fff] border-opacity-40">
-                          <P
-                            className={` ${showPayment ? 'text-primary' : ''}`}
-                          >
-                            3
-                          </P>
+                      <div
+                        className="relative flex flex-col items-center cursor-pointer sm:flex-row text-primary"
+                        onClick={() => {
+                          setShowPaymentDone(false);
+                        }}
+                      >
+                        <div className={`rounded-full transition duration-500 ease-in-out sm:w-10 sm:h-10 w-8 h-8 flex items-center justify-center font-semibold ${showPaymentDone
+                          ? 'bg-success bg-opacity-90 text-success text-xl'
+                          : 'bg-[#223544] text-primary border border-[#fff] border-opacity-40'}`}
+                        >
+                          {showPaymentDone && (
+                            <FiCheck className="text-[#96fe96] sm:text-sm text-xs" />
+                          )}
+
+                          {!showPaymentDone && <P>3</P>}
                         </div>
                         <div className="sm:px-3 px-1 w-24 sm:w-auto">
                           <P
-                            className={`font-semibold uppercase sm:text-sm !text-xs text-center pt-1 ${showPayment ? ' text-[#F7BC3A]' : ''
-                              }`}
+                            className={`font-semibold uppercase sm:text-sm !text-xs text-center pt-1 ${showPaymentDone ? 'text-success' : ''
+                            }`}
                           >
                             PAYMENT
                           </P>
@@ -1164,7 +1253,7 @@ function FleetPage() {
                   className={`2xl:basis-[45%] lg:basis-[400px] lg:sticky fixed h-5/6  md:h-[85%] left-0 right-0 lg:top-24 lg:mt-0 lg:order-1 order-2 lg:z-auto z-50 transition-transform duration-150 ease-in-out delay-500 lg:bg-[#223544] bg-[#11202D] lg:px-0 px-4 lg:py-0 py-2 ${showTransfer
                     ? 'top-auto bottom-0 mt-0 overflow-y-auto bg-[#223544]'
                     : 'top-full -mt-12'
-                    }`}
+                  }`}
                 >
                   <div className="relative text-left">
                     <div
@@ -1208,8 +1297,8 @@ function FleetPage() {
                         )}
                       </div>
                       <div className="flex flex-col">
-                        <div className="relative h-fit pb-6">
-                          <div className="flex">
+                        <div className="relative h-fit">
+                          <div className="flex pb-4">
                             <div className="w-5 h-7 flex-none">
                               <Pic
                                 src="/rolnew/global/icons/location-marker.svg"
@@ -1220,12 +1309,50 @@ function FleetPage() {
                               {pickupaddress}
                             </P>
                           </div>
+
+                          {viaLocationdata && (
+                            // <div className="connecting-list">
+                            <div>
+                              {viaLocationdata.map((via, i) => (
+                                <li
+                                  // eslint-disable-next-line react/no-array-index-key
+                                  key={`${via?.via_location}`}
+                                  className={`text-left text-xs relative leading-tight ml-2 pb-3 ${viaLocationdata.length === 1 ? 'single-child' : ''}`}
+                                  style={{ listStyleType: 'none' }}
+                                >
+
+                                  <div
+                                    className="list-content tooltip-top custom-tooltip cursor-pointer relative overflow-visible"
+                                    data-tip={`${via?.via_location}`}
+                                    style={{ zIndex: 9999 }}
+                                  >
+                                    <div className="!flex items-start">
+                                      <div className="relative !w-[17px] !h-[17px] bg-white border border-[#000] rounded-full -ml-2 z-[9] flex-none">
+                                        <p className="absolute left-2/4 -translate-x-2/4 top-2/4 -translate-y-2/4 text-[10px] font-semibold text-[#000]">
+                                          {i + 1}
+                                        </p>
+                                      </div>
+                                      <P
+                                        className="overflow-visible font-normal !text-[#CED5E5] tooltip tooltip-top custom-tooltip tooltip-info cursor-pointer text-left pl-8"
+                                        data-tip={`${via?.via_location}`}
+                                        style={{ zIndex: 9999 }}
+                                      >
+                                        {eclipseText(via?.via_location, 80)}
+                                      </P>
+                                    </div>
+                                  </div>
+                                </li>
+                              ))}
+                            </div>
+                          )}
+
                           {dropaddress && (
-                            <div className="border-r w-1 border-[#FDC65C] min-h-[10px] h-4/6 absolute left-1.5 -bottom-0" />
+                            <div className="border-r w-1 border-[#FDC65C] min-h-[10px] h-full absolute left-1.5 -bottom-0 top-3" />
                           )}
                         </div>
+
                         {dropaddress && (
-                          <div className="flex">
+                          <div className="flex pt-2">
                             <div className="w-5 h-7 flex-none">
                               <Pic
                                 src="/rolnew/global/icons/location-marker.svg"

@@ -216,8 +216,7 @@ function ViewFullPage() {
       let rearrangedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
       rearrangedDate = new Date(rearrangedDate);
       const time = `${selectedDateTime.hour}:${selectedDateTime.minute}`;
-      let selectedDayTime = `${
-        rearrangedDate.getMonth() + 1
+      let selectedDayTime = `${rearrangedDate.getMonth() + 1
       }/${rearrangedDate.getDate()}/${rearrangedDate.getFullYear()} ${time}`;
       selectedDayTime = new Date(selectedDayTime);
       selectedDayTime.setMinutes(selectedDayTime.getMinutes() + (duration?.inMinute || 0));
@@ -907,6 +906,7 @@ function ViewFullPage() {
       });
       setIsLoaded(true);
     };
+    fetchTripDetails();
     if (allPassenger.length > 0 && initialTariff.length > 0 && !isLoaded) {
       fetchTripDetails();
     }
@@ -988,272 +988,272 @@ function ViewFullPage() {
       {
         isLoaded
         && (
-        <>
-          <PassengerModal
-            isOpen={modalOpen}
-            onRequestClose={closeModal}
-            onCreate={handleCreate}
-            passenger={[]}
-          />
-          {showModal && (
-          // eslint-disable-next-line react/jsx-no-bind
-          <Modal>
-            <div className="relative flex flex-col items-center justify-center py-10 bg-white rounded-lg shadow">
-              <div className="max-h-[60px] max-w-[60px]">
-                <Pic
-                  src="/images/icons/confirm.png"
-                  className="object-contain"
-                  alt="confirm_icon"
-                />
-              </div>
-              <div>
-                <div className="py-4 text-center">
-                  <H2 className="font-bold text-black ">
-                    Booking Updated Successfully
-                  </H2>
-                  <P className="text-[#4a4a4a]">
-                    Your booking has been updated.
-                  </P>
-                  <P className="text-[#4a4a4a]">
-                    Your booking reference no is
-                    {' '}
-                    <b className="underline">
-                      #
-                      {bookingRef}
-                    </b>
-                  </P>
-                </div>
-              </div>
-              <div className="py-4 text-center">
-                <Button
-                  type="button"
-                  className="btn btn-primary text-white"
-                  onClick={() => { setShowViewBooking(false); }}
-                >
-                  Go to Bookings
-                </Button>
-              </div>
-            </div>
-          </Modal>
-          )}
-          {tariffShowModal && (
-          // eslint-disable-next-line react/jsx-no-bind
-          <Modal>
-            <div className="relative flex flex-col items-center justify-center py-10 bg-white rounded-lg shadow">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.5}
-                className="p-2 rounded-full cursor-pointer w-9 h-9 hover:bg-red-100 absolute right-1 top-2"
-                onClick={() => { setTariffShowModal(false); }}
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-              <div className="max-h-[60px] max-w-[60px]">
-                <Pic
-                  src="/images/icons/confirm.png"
-                  className="object-contain"
-                  alt="confirm_icon"
-                />
-              </div>
-              <div>
-                <div className="py-4 text-center">
-                  <H2 className="font-bold text-center text-[#59981A]">
-                    Tariff has been updated!
-                  </H2>
-                  <H3 className="!text-md text-center mt-3 mb-1 text-gray-700">
-                    Previous booking amount
-                    {' '}
-                    {' '}
-                    <b className="text-gray-600 uppercase">
-                      {formatPrice(allTripDetails.tariff, userCurrency || 'GBP')}
-                    </b>
-                  </H3>
-
-                  <H3 className="!text-md text-center mt-3 mb-1 text-gray-700">
-                    New booking amount
-                    {' '}
-                    {' '}
-                    <b className="text-primary uppercase">
-                      {formatPrice(pickUpVehicle?.tariff, userCurrency || 'GBP')}
-                    </b>
-                  </H3>
-                  <div className="mb-8">
-                    <h3 className="!text-md text-center mt-3 mb-4 text-gray-700">
-                      <b className="uppercase">
-                        {formatPrice(getRemainAmount().amount, userCurrency || 'GBP')}
-                      </b>
-                      {getRemainAmount().isGreter ? ' will be charged. ' : ' will be refunded to you at the earliest. '}
-                    </h3>
+          <>
+            <PassengerModal
+              isOpen={modalOpen}
+              onRequestClose={closeModal}
+              onCreate={handleCreate}
+              passenger={[]}
+            />
+            {showModal && (
+              // eslint-disable-next-line react/jsx-no-bind
+              <Modal>
+                <div className="relative flex flex-col items-center justify-center py-10 bg-white rounded-lg shadow">
+                  <div className="max-h-[60px] max-w-[60px]">
+                    <Pic
+                      src="/images/icons/confirm.png"
+                      className="object-contain"
+                      alt="confirm_icon"
+                    />
+                  </div>
+                  <div>
+                    <div className="py-4 text-center">
+                      <H2 className="font-bold text-black ">
+                        Booking Updated Successfully
+                      </H2>
+                      <P className="text-[#4a4a4a]">
+                        Your booking has been updated.
+                      </P>
+                      <P className="text-[#4a4a4a]">
+                        Your booking reference no is
+                        {' '}
+                        <b className="underline">
+                          #
+                          {bookingRef}
+                        </b>
+                      </P>
+                    </div>
+                  </div>
+                  <div className="py-4 text-center">
+                    <Button
+                      type="button"
+                      className="btn btn-primary text-white"
+                      onClick={() => { setShowViewBooking(false); }}
+                    >
+                      Go to Bookings
+                    </Button>
                   </div>
                 </div>
-              </div>
-              <div className="py-4 text-center">
-                <Button
-                  type="button"
-                  className="btn btn-primary text-white"
-                  onClick={updateBooking}
-                >
-                  Confirm Update
-                </Button>
-              </div>
-            </div>
-          </Modal>
-          )}
-          <div className="grid lg:grid-cols-5 grid-cols-1 mx-auto gap-x-3 mb-5">
-            <div className="lg:col-span-3 col-span-5">
-              <TabsUi activeTab={activeTab} onChange={setActiveTab} />
-            </div>
+              </Modal>
+            )}
+            {tariffShowModal && (
+              // eslint-disable-next-line react/jsx-no-bind
+              <Modal>
+                <div className="relative flex flex-col items-center justify-center py-10 bg-white rounded-lg shadow">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    className="p-2 rounded-full cursor-pointer w-9 h-9 hover:bg-red-100 absolute right-1 top-2"
+                    onClick={() => { setTariffShowModal(false); }}
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                  <div className="max-h-[60px] max-w-[60px]">
+                    <Pic
+                      src="/images/icons/confirm.png"
+                      className="object-contain"
+                      alt="confirm_icon"
+                    />
+                  </div>
+                  <div>
+                    <div className="py-4 text-center">
+                      <H2 className="font-bold text-center text-[#59981A]">
+                        Tariff has been updated!
+                      </H2>
+                      <H3 className="!text-md text-center mt-3 mb-1 text-gray-700">
+                        Previous booking amount
+                        {' '}
+                        {' '}
+                        <b className="text-gray-600 uppercase">
+                          {formatPrice(allTripDetails.tariff, userCurrency || 'GBP')}
+                        </b>
+                      </H3>
 
-            <div className="lg:col-span-3 col-span-5">
-              <RideRef tripDetails={allTripDetails} />
-            </div>
-
-            {activeTab === 0 ? (
-              <>
-                <div className="lg:col-span-3 col-span-5">
-                  {/* Passenger Autocomplete */}
-                  <div className="card w-full bg-white rounded-md">
-                    <div className="card-body sm:px-4 px-2 py-2">
-                      <div className="card-title flex justify-between border-b border-[#DFDFDF] sm:px-4 px-2 py-2 flex-wrap">
-                        <P className="!text-[#3B3B3B]">PASSENGERS / EMPLOYEE</P>
-                        <button
-                          type="button"
-                          className="text-primary text-sm flex items-center gap-x-2"
-                          onClick={() => openModal({})}
-                        >
-                          <img src="/images/icons/plus_primary.svg" alt="plus_primary" />
-                          Add new passenger
-                        </button>
+                      <H3 className="!text-md text-center mt-3 mb-1 text-gray-700">
+                        New booking amount
+                        {' '}
+                        {' '}
+                        <b className="text-primary uppercase">
+                          {formatPrice(pickUpVehicle?.tariff, userCurrency || 'GBP')}
+                        </b>
+                      </H3>
+                      <div className="mb-8">
+                        <h3 className="!text-md text-center mt-3 mb-4 text-gray-700">
+                          <b className="uppercase">
+                            {formatPrice(getRemainAmount().amount, userCurrency || 'GBP')}
+                          </b>
+                          {getRemainAmount().isGreter ? ' will be charged. ' : ' will be refunded to you at the earliest. '}
+                        </h3>
                       </div>
-                      <div className="py-4 sm:px-4 px-2 flex sm:flex-row flex-col gap-x-2 w-full items-center">
-                        <P className="text-[#797979] !text-normal text-left sm:w-auto w-full whitespace-pre">
-                          Passenger
-                          {' '}
-                          <span className="text-red-500">*</span>
-                        </P>
-                        <div className="w-full">
-                          <PassengerAutoComplete
-                            setPassenger={setPassenger}
-                            passenger={passenger}
-                            openModal={openModal}
-                            allPassenger={allPassenger}
-                            passengerRef={passengerRef}
-                            showUserList={showUserList}
-                            setShowUserList={setShowUserList}
+                    </div>
+                  </div>
+                  <div className="py-4 text-center">
+                    <Button
+                      type="button"
+                      className="btn btn-primary text-white"
+                      onClick={updateBooking}
+                    >
+                      Confirm Update
+                    </Button>
+                  </div>
+                </div>
+              </Modal>
+            )}
+            <div className="grid lg:grid-cols-5 grid-cols-1 mx-auto gap-x-3 mb-5">
+              <div className="lg:col-span-3 col-span-5">
+                <TabsUi activeTab={activeTab} onChange={setActiveTab} />
+              </div>
+
+              <div className="lg:col-span-3 col-span-5">
+                <RideRef tripDetails={allTripDetails} />
+              </div>
+
+              {activeTab === 0 ? (
+                <>
+                  <div className="lg:col-span-3 col-span-5">
+                    {/* Passenger Autocomplete */}
+                    <div className="card w-full bg-white rounded-md">
+                      <div className="card-body sm:px-4 px-2 py-2">
+                        <div className="card-title flex justify-between border-b border-[#DFDFDF] sm:px-4 px-2 py-2 flex-wrap">
+                          <P className="!text-[#3B3B3B]">PASSENGERS / EMPLOYEE</P>
+                          <button
+                            type="button"
+                            className="text-primary text-sm flex items-center gap-x-2"
+                            onClick={() => openModal({})}
+                          >
+                            <img src="/images/icons/plus_primary.svg" alt="plus_primary" />
+                            Add new passenger
+                          </button>
+                        </div>
+                        <div className="py-4 sm:px-4 px-2 flex sm:flex-row flex-col gap-x-2 w-full items-center">
+                          <P className="text-[#797979] !text-normal text-left sm:w-auto w-full whitespace-pre">
+                            Passenger
+                            {' '}
+                            <span className="text-red-500">*</span>
+                          </P>
+                          <div className="w-full">
+                            <PassengerAutoComplete
+                              setPassenger={setPassenger}
+                              passenger={passenger}
+                              openModal={openModal}
+                              allPassenger={allPassenger}
+                              passengerRef={passengerRef}
+                              showUserList={showUserList}
+                              setShowUserList={setShowUserList}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Passenger Autocomplete */}
+                    <div className="card w-full bg-white rounded-md my-2">
+                      <div className="card-body sm:px-4 px-2 py-2">
+                        <div className="card-title flex flex-wrap gap-x-4 border-[#DFDFDF] sm:px-4 px-2 py-2">
+                          <div
+                            className={`form-control cursor-pointer ${selectedBookingType === 'TRANSFERS' ? 'active' : ''}`}
+                            onClick={() => handleFormControlClick('TRANSFERS')}
+                          >
+                            <label className="label" htmlFor="bookingtype">
+                              <input
+                                type="radio"
+                                name="bookingtype"
+                                value="TRANSFERS"
+                                className="radio radio-primary !w-[1.2rem] !h-[1.2rem]"
+                                checked={selectedBookingType === 'TRANSFERS'}
+                                onChange={handleBookingTypeChange}
+                              />
+                              <span className="label-text text-primary pl-2 cursor-pointer">
+                                TRANSFERS
+                              </span>
+                            </label>
+                          </div>
+                          <div
+                            className={`form-control cursor-pointer sm:pl-2 ${selectedBookingType === 'HOURLY' ? 'active' : ''}`}
+                            onClick={() => handleFormControlClick('HOURLY')}
+                          >
+                            <label className="label" htmlFor="bookingtype">
+                              <input
+                                type="radio"
+                                name="bookingtype"
+                                value="HOURLY"
+                                className="radio radio-primary !w-[1.2rem] !h-[1.2rem]"
+                                checked={selectedBookingType === 'HOURLY'}
+                                onChange={handleBookingTypeChange}
+                              />
+                              <span className="label-text text-primary pl-4 cursor-pointer">
+                                HOURLY
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                        {/* One way journey */}
+                        {/* Pickup Location */}
+                        <div ref={locationRef}>
+                          <LocationComponent
+                            pickUpLocation={userPickLocation}
+                            setPickUpLocation={setUserPickLocation}
+                            dropLocation={userDropLocation}
+                            setDropLocation={setUserDropLocation}
+                            viaLocations={pickUpViaLocations}
+                            setViaLocations={setPickUpViaLocations}
+                            showPickupError={showPickupError}
+                            setShowPickupError={setShowPickupError}
+                            pickUpFlight={pickUpFlight}
+                            setPickUpFlight={setPickUpFlight}
+                            dropFlight={dropFlight}
+                            setDropUpFlight={setDropUpFlight}
+                            bookingType={selectedBookingType}
+                            hourDuration={hourDuration}
+                            setHourDuration={setHourDuration}
+                            setUserCurrency={setUserCurrency}
+                            pickUpLocationRef={pickUpLocationRef}
+                            showDropError={showDropError}
+                            setShowDropError={setShowDropError}
+                            viaLocationsError={viaLocationsError}
+                            setViaLocationsError={setViaLocationsError}
+                            viaLocationRefs={viaLocationRefs}
+                            dropOffLocationRef={dropOffLocationRef}
+                            setNewDate={setNewDate}
                           />
                         </div>
+                        {/* Drop location */}
                       </div>
-                    </div>
-                  </div>
-                  {/* Passenger Autocomplete */}
-                  <div className="card w-full bg-white rounded-md my-2">
-                    <div className="card-body sm:px-4 px-2 py-2">
-                      <div className="card-title flex flex-wrap gap-x-4 border-[#DFDFDF] sm:px-4 px-2 py-2">
-                        <div
-                          className={`form-control cursor-pointer ${selectedBookingType === 'TRANSFERS' ? 'active' : ''}`}
-                          onClick={() => handleFormControlClick('TRANSFERS')}
-                        >
-                          <label className="label" htmlFor="bookingtype">
-                            <input
-                              type="radio"
-                              name="bookingtype"
-                              value="TRANSFERS"
-                              className="radio radio-primary !w-[1.2rem] !h-[1.2rem]"
-                              checked={selectedBookingType === 'TRANSFERS'}
-                              onChange={handleBookingTypeChange}
-                            />
-                            <span className="label-text text-primary pl-2 cursor-pointer">
-                              TRANSFERS
-                            </span>
-                          </label>
-                        </div>
-                        <div
-                          className={`form-control cursor-pointer sm:pl-2 ${selectedBookingType === 'HOURLY' ? 'active' : ''}`}
-                          onClick={() => handleFormControlClick('HOURLY')}
-                        >
-                          <label className="label" htmlFor="bookingtype">
-                            <input
-                              type="radio"
-                              name="bookingtype"
-                              value="HOURLY"
-                              className="radio radio-primary !w-[1.2rem] !h-[1.2rem]"
-                              checked={selectedBookingType === 'HOURLY'}
-                              onChange={handleBookingTypeChange}
-                            />
-                            <span className="label-text text-primary pl-4 cursor-pointer">
-                              HOURLY
-                            </span>
-                          </label>
-                        </div>
-                      </div>
-                      {/* One way journey */}
-                      {/* Pickup Location */}
-                      <div ref={locationRef}>
-                        <LocationComponent
-                          pickUpLocation={userPickLocation}
-                          setPickLocation={setUserPickLocation}
-                          dropLocation={userDropLocation}
-                          setDropLocation={setUserDropLocation}
-                          viaLocations={pickUpViaLocations}
-                          setViaLocations={setPickUpViaLocations}
-                          showPickupError={showPickupError}
-                          setShowPickupError={setShowPickupError}
-                          pickUpFlight={pickUpFlight}
-                          setPickUpFlight={setPickUpFlight}
-                          dropFlight={dropFlight}
-                          setDropUpFlight={setDropUpFlight}
-                          bookingType={selectedBookingType}
-                          hourDuration={hourDuration}
-                          setHourDuration={setHourDuration}
-                          setUserCurrency={setUserCurrency}
-                          pickUpLocationRef={pickUpLocationRef}
-                          showDropError={showDropError}
-                          setShowDropError={setShowDropError}
-                          viaLocationsError={viaLocationsError}
-                          setViaLocationsError={setViaLocationsError}
-                          viaLocationRefs={viaLocationRefs}
-                          dropOffLocationRef={dropOffLocationRef}
-                          setNewDate={setNewDate}
-                        />
-                      </div>
-                      {/* Drop location */}
-                    </div>
-                    {/* Ride date time */}
-                    {
-                      minDatetime?.minDate && selectedDateTime
-                    && <DateTimePicker setShowCalender={setShowPickUpDateCalender} showCalender={showPickUpDateCalender} selectedDateTime={selectedDateTime} setSelectedDateTime={setSelectedDateTime} minDatetime={minDatetime} setMinDatetime={setMinDatetime} formatDate={formatDate} setMinute={setMinute} compareWith={minDatetime.minDate} addHours={addHours} date={date} />
-}
+                      {/* Ride date time */}
+                      {
+                        minDatetime?.minDate && selectedDateTime
+                        && <DateTimePicker setShowCalender={setShowPickUpDateCalender} showCalender={showPickUpDateCalender} selectedDateTime={selectedDateTime} setSelectedDateTime={setSelectedDateTime} minDatetime={minDatetime} setMinDatetime={setMinDatetime} formatDate={formatDate} setMinute={setMinute} compareWith={minDatetime.minDate} addHours={addHours} date={date} />
+                      }
 
-                    {/* Ride date time */}
-                    {/* Additional Information */}
-                    <AdditionalInformation adultNo={adultNo} setAdultNo={setAdultNo} infantNo={infantNo} setInfantNo={setInfantNo} childNo={childNo} setChildNo={setChildNo} bagNo={bagNo} setBagNo={setBagNo} adultRef={adultRef} showAdultError={showAdultError} setShowAdultError={setShowAdultError} />
-                    {/* Additional Information */}
-                    {/* Cost Center */}
-                    <div className="grid sm:grid-cols-7 grid-cols-1 items-center py-2 sm:px-5 px-2">
-                      <div className="col-span-2">
-                        <P className="!text-[#797979] !text-normal !text-sm capitalize">
-                          Cost center
-                        </P>
+                      {/* Ride date time */}
+                      {/* Additional Information */}
+                      <AdditionalInformation adultNo={adultNo} setAdultNo={setAdultNo} infantNo={infantNo} setInfantNo={setInfantNo} childNo={childNo} setChildNo={setChildNo} bagNo={bagNo} setBagNo={setBagNo} adultRef={adultRef} showAdultError={showAdultError} setShowAdultError={setShowAdultError} />
+                      {/* Additional Information */}
+                      {/* Cost Center */}
+                      <div className="grid sm:grid-cols-7 grid-cols-1 items-center py-2 sm:px-5 px-2">
+                        <div className="col-span-2">
+                          <P className="!text-[#797979] !text-normal !text-sm capitalize">
+                            Cost center
+                          </P>
+                        </div>
+                        <div className="col-span-5">
+                          <Input onChange={(e) => { setCostCenter(e?.target?.value); }} value={costCenter} placeholder="Cost center" />
+                        </div>
                       </div>
-                      <div className="col-span-5">
-                        <Input onChange={(e) => { setCostCenter(e?.target?.value); }} value={costCenter} placeholder="Cost center" />
-                      </div>
-                    </div>
-                    {/* Cost Center */}
-                    {/* Add Retun */}
-                    {
-              !addReturnJourney && selectedBookingType === 'TRANSFERS'
-            && (
-            <div className="grid sm:grid-cols-7 grid-cols-1 sm:px-4 px-2 pb-3">
-              {/* <div className="col-span-7 py-2 flex items-end justify-start">
+                      {/* Cost Center */}
+                      {/* Add Retun */}
+                      {
+                        !addReturnJourney && selectedBookingType === 'TRANSFERS'
+                        && (
+                          <div className="grid sm:grid-cols-7 grid-cols-1 sm:px-4 px-2 pb-3">
+                            {/* <div className="col-span-7 py-2 flex items-end justify-start">
                 <button
                   type="button"
                   className="text-primary text-sm flex items-center gap-x-2 font-semibold"
@@ -1263,543 +1263,543 @@ function ViewFullPage() {
                   Add return journey
                 </button>
               </div> */}
-            </div>
-            )
-            }
-                    {/* Add Retun */}
-                  </div>
-                  {/* Driver Note */}
-                  <div className="my-3">
-                    <DriverNote driverNote={driverNote} setDriverNote={setDriverNote} nameBoard={nameBoard} setNameBoard={setNameBoard} />
-                  </div>
-                  {/* Driver Note */}
-                  {/* One way journey */}
-                  {/* Two way journey */}
-                  {addReturnJourney
-            && (
-              <>
-                <div className="card w-full bg-white rounded-md my-2">
-                  <div className="card-body px-4 py-2">
-                    <div className="card-title flex justify-between gap-x-4 border-[#DFDFDF] sm:px-4 px-2 py-2 flex-wrap">
-                      <P className="text-primary font-bold text-sm uppercase">RETURN JOURNEY</P>
-                      <button
-                        type="button"
-                        className="text-primary text-sm flex items-center gap-x-2 font-semibold"
-                        onClick={() => { setAddReturnJourney(!addReturnJourney); removeSwapJourny(); }}
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
-                          <path d="M1 1H11" stroke="#EC5C29" strokeWidth="1.6" strokeLinecap="round" />
-                        </svg>
-                        Remove return journey
-                      </button>
+                          </div>
+                        )
+                      }
+                      {/* Add Retun */}
                     </div>
-                    {/* Pickup Location */}
-                    <LocationComponent
-                      pickUpLocation={returnUserPickLocation}
-                      setPickLocation={setReturnUserPickLocation}
-                      dropLocation={returnUserDropLocation}
-                      setDropLocation={setReturnUserDropLocation}
-                      viaLocations={returnPickUpViaLocations}
-                      setViaLocations={setReturnPickUpViaLocations}
-                      showPickupError={returnShowPickupError}
-                      setShowPickupError={setReturnShowPickupError}
-                      pickUpFlight={returnPickUpFlight}
-                      setPickUpFlight={setReturnPickUpFlight}
-                      dropFlight={returnDropFlight}
-                      setDropUpFlight={setReturnDropUpFlight}
-                      bookingType={selectedBookingType}
-                      hourDuration={returnHourDuration}
-                      setHourDuration={setReturnHourDuration}
-                      setUserCurrency={setReturnUserCurrency}
-                      pickUpLocationRef={returnPickUpLocationRef}
-                      showDropError={returnShowDropError}
-                      setShowDropError={setReturnShowDropError}
-                      viaLocationsError={returnViaLocationsError}
-                      setViaLocationsError={setReturnViaLocationsError}
-                      viaLocationRefs={returnViaLocationRefs}
-                      dropOffLocationRef={returnDropOffLocationRef}
-                      setNewDate={setNewDate}
-                    />
-                    {/* Drop location */}
-                  </div>
-                  {/* Ride date time */}
-                  {
-                    returnMinDatetime.minDate && returnSelectedDateTime
-                  && <DateTimePicker setShowCalender={setReturnShowPickUpDateCalenger} showCalender={returnShowPickUpDateCalenger} selectedDateTime={returnSelectedDateTime} setSelectedDateTime={setReturnSelectedDateTime} minDatetime={returnMinDatetime} setMinDatetime={setReturnMinDatetime} formatDate={formatDate} setMinute={setMinute} compareWith={returnMinDatetime.minDate} addHours={addHours} date={date} />
-                }
-                  {/* Ride date time */}
-                  {/* Additional Information */}
-                  <AdditionalInformation adultNo={returnAdultNo} setAdultNo={setReturnAdultNo} infantNo={returnInfantNo} setInfantNo={setReturnInfantNo} childNo={returnChildNo} setChildNo={setReturnChildNo} bagNo={returnBagNo} setBagNo={setReturnBagNo} adultRef={returnAdultRef} showAdultError={returnShowAdultError} setShowAdultError={setReturnShowAdultError} />
-                  {/* Additional Information */}
-                  {/* Cost Center */}
-                  <div className="grid sm:grid-cols-7 grid-cols-1 items-center py-2 sm:px-4 px-2">
-                    <div className="col-span-2">
-                      <P className="!text-[#797979] !text-normal !text-sm capitalize">
-                        Cost center
-                      </P>
+                    {/* Driver Note */}
+                    <div className="my-3">
+                      <DriverNote driverNote={driverNote} setDriverNote={setDriverNote} nameBoard={nameBoard} setNameBoard={setNameBoard} />
                     </div>
-                    <div className="col-span-5">
-                      <Input onChange={(e) => { setReturnCostCenter(e?.target?.value); }} value={returnCostCenter} placeholder="Cost center" />
-                    </div>
-                  </div>
-                  {/* Cost Center */}
-                </div>
-                {/* Driver Note */}
-                <div className="collapse collapse-arrow my-3 bg-white !rounded-md">
-                  <input type="checkbox" />
-                  <div className="collapse-title text-sm font-medium text-[#3B3B3B] text-bold uppercase">
-                    Return Driver Notes & Return Name Board
-                  </div>
-                  <div className="collapse-content">
-                    <DriverNote driverNote={returnDriverNote} setDriverNote={setReturnDriverNote} nameBoard={returnNameBoard} setNameBoard={setReturnNameBoard} />
-                  </div>
-                </div>
-                {/* Driver Note */}
-
-                {/* Two way journey */}
-              </>
-            )}
-                </div>
-                {/* col-span-3 */}
-                <div className="lg:col-span-2 col-span-5 lg:-mt-24 mt-5">
-                  {/* One way journey */}
-                  <div className="h-80">
-                    <MapDirection
-                      origin={userPickLocation?.latLng}
-                      destination={destination}
-                      viaLocations={wayLocations}
-                      setDistance={setDistance}
-                      setDuration={setDuration}
-                    />
-                  </div>
-                  <div className="grid grid-cols-2 bg-white py-4 px-2 my-4">
-                    <div className="col-span-1 text-center">
-                      <p className="text-[#606060] text-sm font-normal">Travel Distance</p>
-                      <p className="text-[#606060] text-sm font-semibold">
-                        {distance?.inKm || 0}
-                        {' '}
-                        kms/
-                        {' '}
-                        {distance?.inMiles || 0}
-                        {' '}
-                        miles
-                      </p>
-                    </div>
-                    <div className="col-span-1 text-center">
-                      <p className="text-[#606060] text-sm font-normal">Travel Time</p>
-                      <p className="text-[#606060] text-sm font-semibold">{duration?.formattedHour || '0hr 0min'}</p>
-                    </div>
-                  </div>
-                  {/* One way journey */}
-                  {/* Two way journey */}
-                  {addReturnJourney && (
-                  <>
+                    {/* Driver Note */}
+                    {/* One way journey */}
                     {/* Two way journey */}
+                    {addReturnJourney
+                      && (
+                        <>
+                          <div className="card w-full bg-white rounded-md my-2">
+                            <div className="card-body px-4 py-2">
+                              <div className="card-title flex justify-between gap-x-4 border-[#DFDFDF] sm:px-4 px-2 py-2 flex-wrap">
+                                <P className="text-primary font-bold text-sm uppercase">RETURN JOURNEY</P>
+                                <button
+                                  type="button"
+                                  className="text-primary text-sm flex items-center gap-x-2 font-semibold"
+                                  onClick={() => { setAddReturnJourney(!addReturnJourney); removeSwapJourny(); }}
+                                >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+                                    <path d="M1 1H11" stroke="#EC5C29" strokeWidth="1.6" strokeLinecap="round" />
+                                  </svg>
+                                  Remove return journey
+                                </button>
+                              </div>
+                              {/* Pickup Location */}
+                              <LocationComponent
+                                pickUpLocation={returnUserPickLocation}
+                                setPickLocation={setReturnUserPickLocation}
+                                dropLocation={returnUserDropLocation}
+                                setDropLocation={setReturnUserDropLocation}
+                                viaLocations={returnPickUpViaLocations}
+                                setViaLocations={setReturnPickUpViaLocations}
+                                showPickupError={returnShowPickupError}
+                                setShowPickupError={setReturnShowPickupError}
+                                pickUpFlight={returnPickUpFlight}
+                                setPickUpFlight={setReturnPickUpFlight}
+                                dropFlight={returnDropFlight}
+                                setDropUpFlight={setReturnDropUpFlight}
+                                bookingType={selectedBookingType}
+                                hourDuration={returnHourDuration}
+                                setHourDuration={setReturnHourDuration}
+                                setUserCurrency={setReturnUserCurrency}
+                                pickUpLocationRef={returnPickUpLocationRef}
+                                showDropError={returnShowDropError}
+                                setShowDropError={setReturnShowDropError}
+                                viaLocationsError={returnViaLocationsError}
+                                setViaLocationsError={setReturnViaLocationsError}
+                                viaLocationRefs={returnViaLocationRefs}
+                                dropOffLocationRef={returnDropOffLocationRef}
+                                setNewDate={setNewDate}
+                              />
+                              {/* Drop location */}
+                            </div>
+                            {/* Ride date time */}
+                            {
+                              returnMinDatetime.minDate && returnSelectedDateTime
+                              && <DateTimePicker setShowCalender={setReturnShowPickUpDateCalenger} showCalender={returnShowPickUpDateCalenger} selectedDateTime={returnSelectedDateTime} setSelectedDateTime={setReturnSelectedDateTime} minDatetime={returnMinDatetime} setMinDatetime={setReturnMinDatetime} formatDate={formatDate} setMinute={setMinute} compareWith={returnMinDatetime.minDate} addHours={addHours} date={date} />
+                            }
+                            {/* Ride date time */}
+                            {/* Additional Information */}
+                            <AdditionalInformation adultNo={returnAdultNo} setAdultNo={setReturnAdultNo} infantNo={returnInfantNo} setInfantNo={setReturnInfantNo} childNo={returnChildNo} setChildNo={setReturnChildNo} bagNo={returnBagNo} setBagNo={setReturnBagNo} adultRef={returnAdultRef} showAdultError={returnShowAdultError} setShowAdultError={setReturnShowAdultError} />
+                            {/* Additional Information */}
+                            {/* Cost Center */}
+                            <div className="grid sm:grid-cols-7 grid-cols-1 items-center py-2 sm:px-4 px-2">
+                              <div className="col-span-2">
+                                <P className="!text-[#797979] !text-normal !text-sm capitalize">
+                                  Cost center
+                                </P>
+                              </div>
+                              <div className="col-span-5">
+                                <Input onChange={(e) => { setReturnCostCenter(e?.target?.value); }} value={returnCostCenter} placeholder="Cost center" />
+                              </div>
+                            </div>
+                            {/* Cost Center */}
+                          </div>
+                          {/* Driver Note */}
+                          <div className="collapse collapse-arrow my-3 bg-white !rounded-md">
+                            <input type="checkbox" />
+                            <div className="collapse-title text-sm font-medium text-[#3B3B3B] text-bold uppercase">
+                              Return Driver Notes & Return Name Board
+                            </div>
+                            <div className="collapse-content">
+                              <DriverNote driverNote={returnDriverNote} setDriverNote={setReturnDriverNote} nameBoard={returnNameBoard} setNameBoard={setReturnNameBoard} />
+                            </div>
+                          </div>
+                          {/* Driver Note */}
+
+                          {/* Two way journey */}
+                        </>
+                      )}
+                  </div>
+                  {/* col-span-3 */}
+                  <div className="lg:col-span-2 col-span-5 lg:-mt-24 mt-5">
+                    {/* One way journey */}
                     <div className="h-80">
                       <MapDirection
-                        origin={returnUserPickLocation?.latLng}
-                        destination={returnDestination}
-                        viaLocations={returnWayLocations}
+                        origin={userPickLocation?.latLng}
+                        destination={destination}
+                        viaLocations={wayLocations}
+                        setDistance={setDistance}
+                        setDuration={setDuration}
                       />
                     </div>
                     <div className="grid grid-cols-2 bg-white py-4 px-2 my-4">
                       <div className="col-span-1 text-center">
                         <p className="text-[#606060] text-sm font-normal">Travel Distance</p>
                         <p className="text-[#606060] text-sm font-semibold">
-                          {returnDistance?.inKm || 0}
+                          {distance?.inKm || 0}
                           {' '}
                           kms/
                           {' '}
-                          {returnDistance?.inMiles || 0}
+                          {distance?.inMiles || 0}
                           {' '}
                           miles
                         </p>
                       </div>
                       <div className="col-span-1 text-center">
                         <p className="text-[#606060] text-sm font-normal">Travel Time</p>
-                        <p className="text-[#606060] text-sm font-semibold">{returnDuration?.formattedHour || '0hr 0min'}</p>
+                        <p className="text-[#606060] text-sm font-semibold">{duration?.formattedHour || '0hr 0min'}</p>
                       </div>
                     </div>
+                    {/* One way journey */}
                     {/* Two way journey */}
-                  </>
-                  )}
-                  {/* Two way journey */}
+                    {addReturnJourney && (
+                      <>
+                        {/* Two way journey */}
+                        <div className="h-80">
+                          <MapDirection
+                            origin={returnUserPickLocation?.latLng}
+                            destination={returnDestination}
+                            viaLocations={returnWayLocations}
+                          />
+                        </div>
+                        <div className="grid grid-cols-2 bg-white py-4 px-2 my-4">
+                          <div className="col-span-1 text-center">
+                            <p className="text-[#606060] text-sm font-normal">Travel Distance</p>
+                            <p className="text-[#606060] text-sm font-semibold">
+                              {returnDistance?.inKm || 0}
+                              {' '}
+                              kms/
+                              {' '}
+                              {returnDistance?.inMiles || 0}
+                              {' '}
+                              miles
+                            </p>
+                          </div>
+                          <div className="col-span-1 text-center">
+                            <p className="text-[#606060] text-sm font-normal">Travel Time</p>
+                            <p className="text-[#606060] text-sm font-semibold">{returnDuration?.formattedHour || '0hr 0min'}</p>
+                          </div>
+                        </div>
+                        {/* Two way journey */}
+                      </>
+                    )}
+                    {/* Two way journey */}
 
-                  {/* One way journey */}
-                  <Tariff
-                    pickUpLocation={userPickLocation}
-                    dropLocation={userDropLocation}
-                    viaLocations={pickUpViaLocations}
-                    setPickUpVehicle={setPickUpVehicle}
-                    pickUpVehicle={pickUpVehicle}
-                    setDistance={setDistance}
-                    setDuration={setDuration}
-                    setDestination={setDestination}
-                    setWayLocations={setWayLocations}
-                    bookingHours={hourDuration?.value}
-                    bookingType={selectedBookingType}
-                    returnJourney={addReturnJourney}
-                    label="PICKUP VEHICLE"
-                    userCurrency={userCurrency}
-                    isShowOpenTariff={false}
-                    initialTariff={initialTariff}
-                    vehicleError={showPickUpVehicleError}
-                    vehicleRef={vehicleRef}
-                  />
-                  {/* One way journey */}
-                  {/* Two way journey */}
-                  {addReturnJourney && (
-                  <div className="mt-5">
+                    {/* One way journey */}
                     <Tariff
-                      pickUpLocation={returnUserPickLocation}
-                      dropLocation={returnUserDropLocation}
-                      viaLocations={returnPickUpViaLocations}
-                      setPickUpVehicle={setReturnPickUpVehicle}
-                      pickUpVehicle={returnPickUpVehicle}
-                      setDistance={setReturnDistance}
-                      setDuration={setReturnDuration}
-                      setDestination={setReturnDestination}
-                      setWayLocations={setReturnWayLocations}
-                      bookingHours={returnHourDuration?.value}
+                      pickUpLocation={userPickLocation}
+                      dropLocation={userDropLocation}
+                      viaLocations={pickUpViaLocations}
+                      setPickUpVehicle={setPickUpVehicle}
+                      pickUpVehicle={pickUpVehicle}
+                      setDistance={setDistance}
+                      setDuration={setDuration}
+                      setDestination={setDestination}
+                      setWayLocations={setWayLocations}
+                      bookingHours={hourDuration?.value}
                       bookingType={selectedBookingType}
                       returnJourney={addReturnJourney}
-                      label="RETURN VEHICLE"
-                      userCurrency={returnUserCurrency}
+                      label="PICKUP VEHICLE"
+                      userCurrency={userCurrency}
+                      isShowOpenTariff={false}
                       initialTariff={initialTariff}
-                      vehicleError={returnShowPickUpVehicleError}
-                      vehicleRef={returnVehicleRef}
+                      vehicleError={showPickUpVehicleError}
+                      vehicleRef={vehicleRef}
                     />
-                  </div>
-                  )}
-                  {/* Two way journey */}
-                  <div className="card w-full bg-white rounded-md mt-3">
-                    <div className="card-body px-4 py-2">
-                      <PaymentOptions setCardDetails={setCardDetails} submitCardDetails={submitCardDetails} setPaymentType={setPaymentType} setSelectedCard={setSelectedCard} selectedCard={selectedCard} setCardType={setCardType} cardType={cardType} paymentType={paymentType} setSubmitCardDetails={setSubmitCardDetails} getCardDetails={getCardDetails} cardList={cardList} loaded={isCardLoaded} />
+                    {/* One way journey */}
+                    {/* Two way journey */}
+                    {addReturnJourney && (
+                      <div className="mt-5">
+                        <Tariff
+                          pickUpLocation={returnUserPickLocation}
+                          dropLocation={returnUserDropLocation}
+                          viaLocations={returnPickUpViaLocations}
+                          setPickUpVehicle={setReturnPickUpVehicle}
+                          pickUpVehicle={returnPickUpVehicle}
+                          setDistance={setReturnDistance}
+                          setDuration={setReturnDuration}
+                          setDestination={setReturnDestination}
+                          setWayLocations={setReturnWayLocations}
+                          bookingHours={returnHourDuration?.value}
+                          bookingType={selectedBookingType}
+                          returnJourney={addReturnJourney}
+                          label="RETURN VEHICLE"
+                          userCurrency={returnUserCurrency}
+                          initialTariff={initialTariff}
+                          vehicleError={returnShowPickUpVehicleError}
+                          vehicleRef={returnVehicleRef}
+                        />
+                      </div>
+                    )}
+                    {/* Two way journey */}
+                    <div className="card w-full bg-white rounded-md mt-3">
+                      <div className="card-body px-4 py-2">
+                        <PaymentOptions setCardDetails={setCardDetails} submitCardDetails={submitCardDetails} setPaymentType={setPaymentType} setSelectedCard={setSelectedCard} selectedCard={selectedCard} setCardType={setCardType} cardType={cardType} paymentType={paymentType} setSubmitCardDetails={setSubmitCardDetails} getCardDetails={getCardDetails} cardList={cardList} loaded={isCardLoaded} />
+                      </div>
+                    </div>
+                    <div className="lg:flex items-end md:flex-row flex-col gap-3 md:w-auto w-full hidden mt-5">
+                      <Button
+                        className="btn btn-outline btn-primary uppercase !h-12 !text-xs px-8 sm:w-auto w-full hover:!text-white"
+                        isLoading={isCancelLoading}
+                        onClick={() => {
+                          setShowAlert(true);
+                          setOnConfirm(() => confirmCancel);
+                          setConfrimLabel('Do you want to cancel the booking?');
+                        }}
+                      >
+                        Cancel Booking
+                      </Button>
+                      <Button className="btn btn-primary uppercase !h-12 !text-xs px-8 sm:w-auto w-full" isLoading={isLoading} disabled={isLoading} onClick={() => { checkTariff(); }}>Upadate Booking</Button>
                     </div>
                   </div>
-                  <div className="lg:flex items-end md:flex-row flex-col gap-3 md:w-auto w-full hidden mt-5">
-                    <Button
-                      className="btn btn-outline btn-primary uppercase !h-12 !text-xs px-8 sm:w-auto w-full hover:!text-white"
-                      isLoading={isCancelLoading}
-                      onClick={() => {
-                        setShowAlert(true);
-                        setOnConfirm(() => confirmCancel);
-                        setConfrimLabel('Do you want to cancel the booking?');
-                      }}
-                    >
-                      Cancel Booking
-                    </Button>
-                    <Button className="btn btn-primary uppercase !h-12 !text-xs px-8 sm:w-auto w-full" isLoading={isLoading} disabled={isLoading} onClick={() => { checkTariff(); }}>Upadate Booking</Button>
-                  </div>
-                </div>
-              </>
-            )
-              : (
-                <>
-                  <div className="lg:col-span-3 col-span-5 -mt-3">
-                    <div className="bg-[#FFFFFF] px-6 py-3 mt-5 rounded-md">
-                      <P className="font-semibold py-3 text-[#000] text-[15px] text-left"> Employee/Passenger: </P>
-                      <div className="flex flex-col sm:flex-row justify-start gap-x-3 sm:gap-y-0 gap-y-3">
-                        <div className="flex gap-x-2 justify-start items-center sm:border-r border-[#ddd] pr-4">
-                          <img src="/images/global/user_primary.svg" alt="user_primary" />
-                          <P className="text-sm font-medium">
-                            {passenger?.passengerFname}
-                            {' '}
-                            {passenger?.passengerLname}
-                          </P>
-                        </div>
-                        <div className="flex gap-x-2 justify-start items-center">
-                          <img src="/images/global/mobile_primary.svg" alt="mobile_primary" />
-                          <P className="text-sm font-medium">
+                </>
+              )
+                : (
+                  <>
+                    <div className="lg:col-span-3 col-span-5 -mt-3">
+                      <div className="bg-[#FFFFFF] px-6 py-3 mt-5 rounded-md">
+                        <P className="font-semibold py-3 text-[#000] text-[15px] text-left"> Employee/Passenger: </P>
+                        <div className="flex flex-col sm:flex-row justify-start gap-x-3 sm:gap-y-0 gap-y-3">
+                          <div className="flex gap-x-2 justify-start items-center sm:border-r border-[#ddd] pr-4">
+                            <img src="/images/global/user_primary.svg" alt="user_primary" />
+                            <P className="text-sm font-medium">
+                              {passenger?.passengerFname}
+                              {' '}
+                              {passenger?.passengerLname}
+                            </P>
+                          </div>
+                          <div className="flex gap-x-2 justify-start items-center">
+                            <img src="/images/global/mobile_primary.svg" alt="mobile_primary" />
+                            <P className="text-sm font-medium">
+                              {
+                                passenger?.passengerMobile ? (
+                                  <>
+                                    {passenger?.passengerMobileCntrycd}
+                                    {passenger?.passengerMobile}
+                                  </>
+                                )
+                                  : <>NA</>
+
+                              }
+                            </P>
+                          </div>
+                          <div className="flex gap-x-2 justify-start items-center sm:border-l border-[#ddd] sm:pl-4">
                             {
-                              passenger?.passengerMobile ? (
+                              passenger?.passengerEmail
+                              && (
                                 <>
-                                  {passenger?.passengerMobileCntrycd}
-                                  {passenger?.passengerMobile}
+                                  <img src="/images/global/email_primary.svg" alt="email_primary" />
+                                  <P className="text-sm font-medium">
+                                    {passenger?.passengerEmail}
+                                  </P>
                                 </>
                               )
-                                : <>NA</>
-
                             }
-                          </P>
-                        </div>
-                        <div className="flex gap-x-2 justify-start items-center sm:border-l border-[#ddd] sm:pl-4">
-                          {
-                            passenger?.passengerEmail
-                            && (
-                            <>
-                              <img src="/images/global/email_primary.svg" alt="email_primary" />
-                              <P className="text-sm font-medium">
-                                {passenger?.passengerEmail}
-                              </P>
-                            </>
-                            )
-                          }
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    {/* Location details */}
-                    <div className="bg-[#FFFFFF] px-6 py-6 mt-5 mb-5">
-                      <div className="grid sm:grid-cols-4 grid-cols-5 gap-y-4">
-                        <div className="sm:col-span-1 col-span-2">
-                          <div className="flex gap-x-2 items-center">
-                            <img src="/images/global/arrow_primary.svg" alt="arrow_primary" />
-                            <P className="!text-[#797979] text-sm">Category:</P>
+                      {/* Location details */}
+                      <div className="bg-[#FFFFFF] px-6 py-6 mt-5 mb-5">
+                        <div className="grid sm:grid-cols-4 grid-cols-5 gap-y-4">
+                          <div className="sm:col-span-1 col-span-2">
+                            <div className="flex gap-x-2 items-center">
+                              <img src="/images/global/arrow_primary.svg" alt="arrow_primary" />
+                              <P className="!text-[#797979] text-sm">Category:</P>
+                            </div>
                           </div>
-                        </div>
-                        <div className="col-span-3">
-                          <P className="!text-[#282828]">
-                            {selectedBookingType}
-                          </P>
-                        </div>
-                        <div className="sm:col-span-1 col-span-2">
-                          <div className="flex gap-x-2 items-center">
-                            <img src="/images/global/calendar_primary.svg" alt="calendar_primary.svg" />
-                            <P className="!text-[#797979] text-sm">Date &amp; Time:</P>
+                          <div className="col-span-3">
+                            <P className="!text-[#282828]">
+                              {selectedBookingType}
+                            </P>
                           </div>
-                        </div>
-                        <div className="col-span-3">
-                          <P className="!text-[#282828]">
-                            {getDate(allTripDetails?.travel_date)}
-                            ,
-                            {' '}
-                            {getTime(allTripDetails?.travel_date)}
-                          </P>
-                        </div>
-                        <div className="sm:col-span-1 col-span-2">
-                          <div className="flex gap-x-2 items-center">
-                            <img src="/images/global/location_outline_primary.svg" alt="location_outline_primary" />
-                            <p className="!text-[#797979] text-sm">Pickup:</p>
+                          <div className="sm:col-span-1 col-span-2">
+                            <div className="flex gap-x-2 items-center">
+                              <img src="/images/global/calendar_primary.svg" alt="calendar_primary.svg" />
+                              <P className="!text-[#797979] text-sm">Date &amp; Time:</P>
+                            </div>
                           </div>
-                        </div>
-                        <div className="col-span-3">
-                          <P className="!text-[#282828]">
-                            {userPickLocation?.address}
-                          </P>
-                          {
+                          <div className="col-span-3">
+                            <P className="!text-[#282828]">
+                              {getDate(allTripDetails?.travel_date)}
+                              ,
+                              {' '}
+                              {getTime(allTripDetails?.travel_date)}
+                            </P>
+                          </div>
+                          <div className="sm:col-span-1 col-span-2">
+                            <div className="flex gap-x-2 items-center">
+                              <img src="/images/global/location_outline_primary.svg" alt="location_outline_primary" />
+                              <p className="!text-[#797979] text-sm">Pickup:</p>
+                            </div>
+                          </div>
+                          <div className="col-span-3">
+                            <P className="!text-[#282828]">
+                              {userPickLocation?.address}
+                            </P>
+                            {
                               allTripDetails?.passenger_flight_no
-                            && (
-                            <div className="flex items-center pt-2 gap-x-1 pl-5">
-                              <MdOutlineFlightLand className="h-6 w-6" />
-                              <P className="leading-[14px] w-full text-left !text-xs  text-neutral-700 font-semibold -mt-1">{allTripDetails?.passenger_flight_no}</P>
-                            </div>
+                              && (
+                                <div className="flex items-center pt-2 gap-x-1 pl-5">
+                                  <MdOutlineFlightLand className="h-6 w-6" />
+                                  <P className="leading-[14px] w-full text-left !text-xs  text-neutral-700 font-semibold -mt-1">{allTripDetails?.passenger_flight_no}</P>
+                                </div>
+                              )
+                            }
+                          </div>
+                          {
+                            pickUpViaLocations.length > 0 && pickUpViaLocations.map((via, index) => (
+                              <>
+                                <div className="sm:col-span-1 col-span-2">
+                                  <div className="flex gap-x-2 items-center">
+                                    <div className="relative">
+                                      <img src="/images/global/ring_primary.svg" alt="location_outline_primary" className="w-[16px]" />
+                                      <span className="absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4 text-primary text-[10px] font-semibold">1</span>
+                                    </div>
+                                    <P className="!text-[#797979] text-sm">
+                                      {' '}
+                                      Via Point
+                                      {' '}
+                                      {index + 1}
+                                      {' '}
+                                      :
+                                      {' '}
+                                    </P>
+                                  </div>
+                                </div>
+                                <div className="col-span-3 ">
+                                  <p className="!text-[#282828]">{via?.address}</p>
+                                </div>
+                              </>
+                            ))
+                          }
+
+                          {
+                            userDropLocation?.address && (
+                              <>
+                                <div className="sm:col-span-1 col-span-2">
+                                  <div className="flex gap-x-2 items-center">
+                                    <img src="/images/global/destination_primary.svg" alt="destination_primary" />
+                                    <p className="!text-[#797979] text-sm">Drop-off:</p>
+                                  </div>
+                                </div>
+                                <div className="col-span-3">
+                                  <P className="!text-[#282828]">
+                                    {userDropLocation?.address}
+                                  </P>
+                                  {
+                                    allTripDetails?.passenger_drop_flight_no
+                                    && (
+                                      <div className="flex items-center gap-x-1 pl-5">
+                                        <MdOutlineFlightTakeoff className="h-6 w-6" />
+                                        <P className="leading-[14px] w-full text-left !text-xs  text-neutral-700 font-semibold -mt-1">{allTripDetails?.passenger_drop_flight_no}</P>
+                                      </div>
+                                    )
+                                  }
+                                </div>
+                              </>
                             )
                           }
-                        </div>
-                        {
-                         pickUpViaLocations.length > 0 && pickUpViaLocations.map((via, index) => (
-                           <>
-                             <div className="sm:col-span-1 col-span-2">
-                               <div className="flex gap-x-2 items-center">
-                                 <div className="relative">
-                                   <img src="/images/global/ring_primary.svg" alt="location_outline_primary" className="w-[16px]" />
-                                   <span className="absolute top-2/4 -translate-y-2/4 left-2/4 -translate-x-2/4 text-primary text-[10px] font-semibold">1</span>
-                                 </div>
-                                 <P className="!text-[#797979] text-sm">
-                                   {' '}
-                                   Via Point
-                                   {' '}
-                                   {index + 1}
-                                   {' '}
-                                   :
-                                   {' '}
-                                 </P>
-                               </div>
-                             </div>
-                             <div className="col-span-3 ">
-                               <p className="!text-[#282828]">{via?.address}</p>
-                             </div>
-                           </>
-                         ))
-                        }
-
-                        {
-                          userDropLocation?.address && (
-                            <>
-                              <div className="sm:col-span-1 col-span-2">
-                                <div className="flex gap-x-2 items-center">
-                                  <img src="/images/global/destination_primary.svg" alt="destination_primary" />
-                                  <p className="!text-[#797979] text-sm">Drop-off:</p>
-                                </div>
-                              </div>
-                              <div className="col-span-3">
-                                <P className="!text-[#282828]">
-                                  {userDropLocation?.address}
+                          <div className="sm:col-span-1 col-span-2">
+                            <div className="flex gap-x-1 items-center">
+                              <img src="/images/global/vehicle_primary.svg" alt="destination_primary" className="w-[16px]" />
+                              <P className="!text-[#797979] text-sm">Vehicle :</P>
+                            </div>
+                          </div>
+                          <div className="col-span-3"><P className="!text-[#282828]">{allTripDetails?.preferred_veh_cat_desc || 'Not assigned yet'}</P></div>
+                          <div className="col-span-3"><P className="!text-[#797979] text-sm"> Additional Information: </P></div>
+                          <div className="col-span-4 -mt-6 flex sm:flex-row flex-col items-start">
+                            <div className="flex flex-wrap py-4 w-[250px] justify-between items-center">
+                              <div className="w-1/2 flex items-center justify-start gap-x-1 text-[13px] font-medium">
+                                <img src="/images/global/user_primary.svg" alt="user_primary" className="w-[14px] h-[14px]" />
+                                <P>
+                                  {adultNo}
+                                  {' '}
+                                  Adults
                                 </P>
-                                {
-                                  allTripDetails?.passenger_drop_flight_no
-                                  && (
-                                  <div className="flex items-center gap-x-1 pl-5">
-                                    <MdOutlineFlightTakeoff className="h-6 w-6" />
-                                    <P className="leading-[14px] w-full text-left !text-xs  text-neutral-700 font-semibold -mt-1">{allTripDetails?.passenger_drop_flight_no}</P>
-                                  </div>
-                                  )
-                                }
                               </div>
-                            </>
-                          )
-                        }
-                        <div className="sm:col-span-1 col-span-2">
-                          <div className="flex gap-x-1 items-center">
-                            <img src="/images/global/vehicle_primary.svg" alt="destination_primary" className="w-[16px]" />
-                            <P className="!text-[#797979] text-sm">Vehicle :</P>
-                          </div>
-                        </div>
-                        <div className="col-span-3"><P className="!text-[#282828]">{allTripDetails?.preferred_veh_cat_desc || 'Not assigned yet'}</P></div>
-                        <div className="col-span-3"><P className="!text-[#797979] text-sm"> Additional Information: </P></div>
-                        <div className="col-span-4 -mt-6 flex sm:flex-row flex-col items-start">
-                          <div className="flex flex-wrap py-4 w-[250px] justify-between items-center">
-                            <div className="w-1/2 flex items-center justify-start gap-x-1 text-[13px] font-medium">
-                              <img src="/images/global/user_primary.svg" alt="user_primary" className="w-[14px] h-[14px]" />
-                              <P>
-                                {adultNo}
-                                {' '}
-                                Adults
-                              </P>
-                            </div>
-                            <div className="w-1/2 flex gap-x-1 text-[13px] font-medium items-center justify-start">
-                              <img src="/images/global/luggage_primary.svg" alt="luggage_primary" className="w-[14px] h-[14px]" />
-                              <P>
-                                {bagNo}
-                                {' '}
-                                Luggage
-                              </P>
-                            </div>
-                            <div className="w-full flex gap-x-1 text-[13px] font-medium items-center justify-start mt-1 pt-1 border-t border-[#ddd]">
-                              <img src="/images/global/child_seat_primary.svg" alt="child_seat_primary" className="w-[17px] h-[17px]" />
-                              <P className="rotate-45">+</P>
-                              <P>
-                                {childNo + infantNo}
-                                {' '}
-                                Child seat requested
-                                {' '}
-                              </P>
-                            </div>
-                          </div>
-                          <div className="sm:ml-10 sm:-mt-3">
-                            <P className="!text-[#797979] text-sm">Cost Center:</P>
-                            <div className="flex items-center gap-x-2">
-                              <div className="relative w-4 h-4">
-                                <Image fill src="/images/global/cost_center_primary.svg" alt="cost_center_primary" />
+                              <div className="w-1/2 flex gap-x-1 text-[13px] font-medium items-center justify-start">
+                                <img src="/images/global/luggage_primary.svg" alt="luggage_primary" className="w-[14px] h-[14px]" />
+                                <P>
+                                  {bagNo}
+                                  {' '}
+                                  Luggage
+                                </P>
                               </div>
-                              <P className="!text-[#282828]">{costCenter || 'Not specified'}</P>
+                              <div className="w-full flex gap-x-1 text-[13px] font-medium items-center justify-start mt-1 pt-1 border-t border-[#ddd]">
+                                <img src="/images/global/child_seat_primary.svg" alt="child_seat_primary" className="w-[17px] h-[17px]" />
+                                <P className="rotate-45">+</P>
+                                <P>
+                                  {childNo + infantNo}
+                                  {' '}
+                                  Child seat requested
+                                  {' '}
+                                </P>
+                              </div>
+                            </div>
+                            <div className="sm:ml-10 sm:-mt-3">
+                              <P className="!text-[#797979] text-sm">Cost Center:</P>
+                              <div className="flex items-center gap-x-2">
+                                <div className="relative w-4 h-4">
+                                  <Image fill src="/images/global/cost_center_primary.svg" alt="cost_center_primary" />
+                                </div>
+                                <P className="!text-[#282828]">{costCenter || 'Not specified'}</P>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    {/* Location details */}
-                    {/* Driver details */}
-                    {
-                      allTripDetails?.driver_fname ? (
-                        <div className="bg-[#FFFFFF] px-6 py-6 mt-5 ">
-                          <div className="flex flex-col sm:flex-row justify-start gap-x-3 sm:gap-y-0 gap-y-3 mt-2">
-                            <div className="flex gap-x-2 justify-start items-center">
-                              <img src="/images/global/driver_primary.svg" alt="driver_primary" />
-                              <P className="text-sm font-medium !text-[#797979] min-w-[60px]">Driver:</P>
-                            </div>
-                            <div className="flex gap-x-2 justify-start items-center">
-                              <img src="/images/global/user_primary.svg" alt="user_primary" />
-                              <P className="text-sm font-medium">
-                                {allTripDetails?.driver_fname}
-                                {' '}
-                                {allTripDetails?.driver_lname}
-                              </P>
-                            </div>
-                            <div className="flex gap-x-2 justify-start items-center sm:border-l border-[#ddd] sm:pl-4">
-                              <img src="/images/global/mobile_primary.svg" alt="mobile_primary" />
-                              <P className="text-sm font-medium">
-                                {allTripDetails?.driver_mobile}
-                              </P>
-                            </div>
-                          </div>
-                        </div>
-                      )
-                        : (
-                          <div className="bg-[#FFFFFF] px-8 py-6 mt-5 ">
+                      {/* Location details */}
+                      {/* Driver details */}
+                      {
+                        allTripDetails?.driver_fname ? (
+                          <div className="bg-[#FFFFFF] px-6 py-6 mt-5 ">
                             <div className="flex flex-col sm:flex-row justify-start gap-x-3 sm:gap-y-0 gap-y-3 mt-2">
                               <div className="flex gap-x-2 justify-start items-center">
                                 <img src="/images/global/driver_primary.svg" alt="driver_primary" />
                                 <P className="text-sm font-medium !text-[#797979] min-w-[60px]">Driver:</P>
                               </div>
                               <div className="flex gap-x-2 justify-start items-center">
+                                <img src="/images/global/user_primary.svg" alt="user_primary" />
                                 <P className="text-sm font-medium">
-                                  Not assigned yet
+                                  {allTripDetails?.driver_fname}
+                                  {' '}
+                                  {allTripDetails?.driver_lname}
+                                </P>
+                              </div>
+                              <div className="flex gap-x-2 justify-start items-center sm:border-l border-[#ddd] sm:pl-4">
+                                <img src="/images/global/mobile_primary.svg" alt="mobile_primary" />
+                                <P className="text-sm font-medium">
+                                  {allTripDetails?.driver_mobile}
                                 </P>
                               </div>
                             </div>
                           </div>
                         )
-                    }
-                    {/* Driver details */}
-                    {/* Driver note */}
-                    <div className="bg-[#FFFFFF] px-6 pt-2 pb-1 mt-5">
-                      <div className="grid sm:grid-cols-4 grid-cols-1 py-3">
-                        <div className="col-span-1">
-                          <P className="flex font-medium gap-x-2 rounded-t-lg !text-[#797979] text-left">
-                            <img src="/images/global/note_primary.svg" alt="note_primary" />
-                            {' '}
-                            Driver Notes:
-                          </P>
-                        </div>
-                        <div className="col-span-3">
-                          {
-                            renderWithNewlines(driverNote)
-                          }
+                          : (
+                            <div className="bg-[#FFFFFF] px-8 py-6 mt-5 ">
+                              <div className="flex flex-col sm:flex-row justify-start gap-x-3 sm:gap-y-0 gap-y-3 mt-2">
+                                <div className="flex gap-x-2 justify-start items-center">
+                                  <img src="/images/global/driver_primary.svg" alt="driver_primary" />
+                                  <P className="text-sm font-medium !text-[#797979] min-w-[60px]">Driver:</P>
+                                </div>
+                                <div className="flex gap-x-2 justify-start items-center">
+                                  <P className="text-sm font-medium">
+                                    Not assigned yet
+                                  </P>
+                                </div>
+                              </div>
+                            </div>
+                          )
+                      }
+                      {/* Driver details */}
+                      {/* Driver note */}
+                      <div className="bg-[#FFFFFF] px-6 pt-2 pb-1 mt-5">
+                        <div className="grid sm:grid-cols-4 grid-cols-1 py-3">
+                          <div className="col-span-1">
+                            <P className="flex font-medium gap-x-2 rounded-t-lg !text-[#797979] text-left">
+                              <img src="/images/global/note_primary.svg" alt="note_primary" />
+                              {' '}
+                              Driver Notes:
+                            </P>
+                          </div>
+                          <div className="col-span-3">
+                            {
+                              renderWithNewlines(driverNote)
+                            }
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div className="bg-[#FFFFFF] px-6 pt-2 pb-1 mt-5">
-                      <div className="grid sm:grid-cols-4 grid-cols-1 items-start py-3">
-                        <div className="col-span-1">
-                          <P className="flex font-medium gap-x-2 rounded-t-lg !text-[#797979] text-left">
-                            <img src="/images/global/name_board_primary.svg" alt="name_board_primary" />
-                            {' '}
-                            Name Board:
-                          </P>
-                        </div>
-                        <div className="col-span-3">
-                          {nameBoard}
+                      <div className="bg-[#FFFFFF] px-6 pt-2 pb-1 mt-5">
+                        <div className="grid sm:grid-cols-4 grid-cols-1 items-start py-3">
+                          <div className="col-span-1">
+                            <P className="flex font-medium gap-x-2 rounded-t-lg !text-[#797979] text-left">
+                              <img src="/images/global/name_board_primary.svg" alt="name_board_primary" />
+                              {' '}
+                              Name Board:
+                            </P>
+                          </div>
+                          <div className="col-span-3">
+                            {nameBoard}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    {/* Driver note */}
+                      {/* Driver note */}
 
-                  </div>
-                  <div className="lg:col-span-2 col-span-5 lg:-mt-24 mt-4">
-                    <Activity activity={bookingActivity} />
-                  </div>
-                </>
-              )}
-            <div className={`col-span-5 flex gap-y-4 flex-wrap items-center my-10 ${activeTab === 1 ? 'justify-end' : 'justify-between'}`}>
-              <Button className="btn btn-outline btn-primary uppercase !h-10 !text-xs md:w-auto w-full hover:!text-white" onClick={() => { setShowViewBooking(false); }}>
-                Go Back
-              </Button>
-              {
-                (activeTab === 0 && allTripDetails?.ride_status !== 'CANCELLED')
-              && (
-              <div className="flex items-end md:flex-row flex-col gap-3 md:w-auto w-full lg:hidden">
-                <Button
-                  className="btn btn-outline btn-primary uppercase !h-12 !text-xs px-8 md:w-auto w-full hover:!text-white"
-                  isLoading={isCancelLoading}
-                  onClick={() => {
-                    setShowAlert(true);
-                    setOnConfirm(() => confirmCancel);
-                    setConfrimLabel('Do you want to cancel the booking?');
-                  }}
-                >
-                  Cancel Booking
+                    </div>
+                    <div className="lg:col-span-2 col-span-5 lg:-mt-24 mt-4">
+                      <Activity activity={bookingActivity} />
+                    </div>
+                  </>
+                )}
+              <div className={`col-span-5 flex gap-y-4 flex-wrap items-center my-10 ${activeTab === 1 ? 'justify-end' : 'justify-between'}`}>
+                <Button className="btn btn-outline btn-primary uppercase !h-10 !text-xs md:w-auto w-full hover:!text-white" onClick={() => { setShowViewBooking(false); }}>
+                  Go Back
                 </Button>
-                <Button className="btn btn-primary uppercase !h-12 !text-xs px-8 md:w-auto w-full" isLoading={isLoading} disabled={isLoading} onClick={() => { checkTariff(); }}>Upadate Booking</Button>
+                {
+                  (activeTab === 0 && allTripDetails?.ride_status !== 'CANCELLED')
+                  && (
+                    <div className="flex items-end md:flex-row flex-col gap-3 md:w-auto w-full lg:hidden">
+                      <Button
+                        className="btn btn-outline btn-primary uppercase !h-12 !text-xs px-8 md:w-auto w-full hover:!text-white"
+                        isLoading={isCancelLoading}
+                        onClick={() => {
+                          setShowAlert(true);
+                          setOnConfirm(() => confirmCancel);
+                          setConfrimLabel('Do you want to cancel the booking?');
+                        }}
+                      >
+                        Cancel Booking
+                      </Button>
+                      <Button className="btn btn-primary uppercase !h-12 !text-xs px-8 md:w-auto w-full" isLoading={isLoading} disabled={isLoading} onClick={() => { checkTariff(); }}>Upadate Booking</Button>
+                    </div>
+                  )
+                }
               </div>
-              )
-              }
             </div>
-          </div>
-        </>
+          </>
         )
-    }
+      }
     </div>
   );
 }

@@ -237,52 +237,52 @@ function BookingCard({
           {
             item?.passenger_adult_cnt !== 0
             && (
-            <div className="flex flex-row justify-center w-1/2 pr-1">
-              <div className="relative w-3">
-                <Image src="/images/global/User.svg" fill alt="User" />
+              <div className="flex flex-row justify-center w-1/2 pr-1">
+                <div className="relative w-3">
+                  <Image src="/images/global/User.svg" fill alt="User" />
+                </div>
+                <span className="-rotate-45 text-zinc-800 text-xs font-medium mt-1 px-1">+</span>
+                <P className="text-zinc-800 text-xs font-medium leading-tight mt-1">{item?.passenger_adult_cnt}</P>
               </div>
-              <span className="-rotate-45 text-zinc-800 text-xs font-medium mt-1 px-1">+</span>
-              <P className="text-zinc-800 text-xs font-medium leading-tight mt-1">{item?.passenger_adult_cnt}</P>
-            </div>
             )
           }
           {
             item?.passenger_luggage_count !== 0
             && (
 
-            <div className="flex flex-row justify-center w-1/2">
-              <div className="relative w-3">
-                <Image src="/images/global/luggage.svg" fill alt="luggage" />
+              <div className="flex flex-row justify-center w-1/2">
+                <div className="relative w-3">
+                  <Image src="/images/global/luggage.svg" fill alt="luggage" />
+                </div>
+                <span className="-rotate-45 text-zinc-800 text-xs font-medium mt-1 px-1">+</span>
+                <P className="text-zinc-800 text-xs font-medium leading-tight mt-1">{item?.passenger_luggage_count}</P>
               </div>
-              <span className="-rotate-45 text-zinc-800 text-xs font-medium mt-1 px-1">+</span>
-              <P className="text-zinc-800 text-xs font-medium leading-tight mt-1">{item?.passenger_luggage_count}</P>
-            </div>
             )
           }
           {
             item?.passenger_child_cnt !== 0
             && (
 
-            <div className="flex flex-row justify-center w-1/2 pr-1">
-              <div className="relative w-3.5">
-                <Image src="/images/global/child_primary.svg" fill alt="child_primary" />
+              <div className="flex flex-row justify-center w-1/2 pr-1">
+                <div className="relative w-3.5">
+                  <Image src="/images/global/child_primary.svg" fill alt="child_primary" />
+                </div>
+                <span className="-rotate-45 text-zinc-800 text-xs font-medium mt-1 px-1">+</span>
+                <P className="text-zinc-800 text-xs font-medium leading-tight mt-1">{item?.passenger_child_cnt}</P>
               </div>
-              <span className="-rotate-45 text-zinc-800 text-xs font-medium mt-1 px-1">+</span>
-              <P className="text-zinc-800 text-xs font-medium leading-tight mt-1">{item?.passenger_child_cnt}</P>
-            </div>
             )
           }
           {
             item?.passenger_infant_cnt !== 0
             && (
 
-            <div className="flex flex-row justify-center w-1/2">
-              <div className="relative w-4">
-                <Image src="/images/global/infant_primary.svg" fill alt="infant_primary" />
+              <div className="flex flex-row justify-center w-1/2">
+                <div className="relative w-4">
+                  <Image src="/images/global/infant_primary.svg" fill alt="infant_primary" />
+                </div>
+                <span className="-rotate-45 text-zinc-800 text-xs font-medium mt-1 px-1">+</span>
+                <P className="text-zinc-800 text-xs font-medium leading-tight mt-1">{item?.passenger_infant_cnt}</P>
               </div>
-              <span className="-rotate-45 text-zinc-800 text-xs font-medium mt-1 px-1">+</span>
-              <P className="text-zinc-800 text-xs font-medium leading-tight mt-1">{item?.passenger_infant_cnt}</P>
-            </div>
             )
           }
         </div>
@@ -291,13 +291,13 @@ function BookingCard({
         {
           item?.booking_duration > 0 && item?.booking_type === 'HOURLY'
           && (
-          <div className="!bg-[#881B92] !text-[#881B92] !bg-opacity-20 !font-bold w-auto px-6 py-1 justify-center items-center gap-2.5 mb-2 text-center rounded-sm">
-            <P className="!text-xs font-semibold">
-              {item?.booking_duration}
-              {' '}
-              Hours
-            </P>
-          </div>
+            <div className="!bg-[#881B92] !text-[#881B92] !bg-opacity-20 !font-bold w-auto px-6 py-1 justify-center items-center gap-2.5 mb-2 text-center rounded-sm">
+              <P className="!text-xs font-semibold">
+                {item?.booking_duration}
+                {' '}
+                Hours
+              </P>
+            </div>
           )
         }
         <ol className={`relative w-full ${item?.drop_location || item?.via_details ? 'connecting-list' : ''}`}>
@@ -314,84 +314,84 @@ function BookingCard({
               </div>
               {
                 item?.passenger_flight_no
-              && (
-              <div className="flex items-center pt-2 gap-x-1 pl-5">
-                <MdOutlineFlightLand className="h-6 w-6" />
-                <P className="leading-[14px] w-full text-left !text-xs  text-neutral-700 font-semibold -mt-1">{item?.passenger_flight_no}</P>
-              </div>
-              )
+                && (
+                  <div className="flex items-center pt-2 gap-x-1 pl-5">
+                    <MdOutlineFlightLand className="h-6 w-6" />
+                    <P className="leading-[14px] w-full text-left !text-xs  text-neutral-700 font-semibold -mt-1">{item?.passenger_flight_no}</P>
+                  </div>
+                )
               }
             </div>
             {item?.via_details && (
-            <button type="button" className="!bg-[#000] text-white uppercase w-auto px-2 py-1 !text-xs font-normal ml-2.5 mt-3 flex items-center gap-x-3 rounded-sm max-w-[95px]" onClick={() => { showVia(item?.booking_id); }}>
-              {item?.via_details.length}
-              {' '}
-              stops
-              {item?.booking_id !== showViaId
+              <button type="button" className="!bg-[#000] text-white uppercase w-auto px-2 py-1 !text-xs font-normal ml-2.5 mt-3 flex items-center gap-x-3 rounded-sm max-w-[95px]" onClick={() => { showVia(item?.booking_id); }}>
+                {item?.via_details.length}
+                {' '}
+                stops
+                {item?.booking_id !== showViaId
                   && <FiChevronDown />}
-              {item?.booking_id === showViaId
+                {item?.booking_id === showViaId
                   && <FiChevronUp />}
-            </button>
+              </button>
             )}
           </li>
           {/* Pick up Location */}
           {/* Via Location */}
           {item?.via_details && (
-          <div className="connecting-list">
-            <div className={`${item?.booking_id === showViaId ? 'block' : 'hidden'}`}>
-              {item?.via_details.map((via, i) => (
-                <li
+            <div className="connecting-list">
+              <div className={`${item?.booking_id === showViaId ? 'block' : 'hidden'}`}>
+                {item?.via_details.map((via, i) => (
+                  <li
                     // eslint-disable-next-line react/no-array-index-key
-                  key={`${item?.booking_id}-${via?.via_location}`}
-                  className={`text-left text-xs relative leading-tight ml-2 pb-3 ${item?.via_details.length === 1 ? 'single-child' : ''}`}
-                >
-                  <div className="list-content tooltip tooltip-right custom-tooltip cursor-pointer relative overflow-visible" data-tip={`${via?.via_location}`}>
-                    <div className="!flex items-start">
-                      <div className="relative !w-[15px] !h-[15px] bg-white border border-[#000] rounded-full -ml-2 z-[9] mt-[3px] flex-none">
-                        <p className="absolute left-2/4 -translate-x-2/4 top-2/4 -translate-y-2/4 text-[10px] font-semibold text-[#000]">
-                          {i + 1}
-                        </p>
+                    key={`${item?.booking_id}-${via?.via_location}`}
+                    className={`text-left text-xs relative leading-tight ml-2 pb-3 ${item?.via_details.length === 1 ? 'single-child' : ''}`}
+                  >
+                    <div className="list-content tooltip tooltip-right custom-tooltip cursor-pointer relative overflow-visible" data-tip={`${via?.via_location}`}>
+                      <div className="!flex items-start">
+                        <div className="relative !w-[15px] !h-[15px] bg-white border border-[#000] rounded-full -ml-2 z-[9] mt-[3px] flex-none">
+                          <p className="absolute left-2/4 -translate-x-2/4 top-2/4 -translate-y-2/4 text-[10px] font-semibold text-[#000]">
+                            {i + 1}
+                          </p>
+                        </div>
+                        <P className="overflow-visible text-black tooltip tooltip-right custom-tooltip tooltip-info cursor-pointer text-left !text-xs pl-2" data-tip={`${via?.via_location}`}>
+                          {eclipseText(via?.via_location, 50)}
+                        </P>
                       </div>
-                      <P className="overflow-visible text-black tooltip tooltip-right custom-tooltip tooltip-info cursor-pointer text-left !text-xs pl-2" data-tip={`${via?.via_location}`}>
-                        {eclipseText(via?.via_location, 50)}
-                      </P>
                     </div>
-                  </div>
-                </li>
-              ))}
+                  </li>
+                ))}
+              </div>
             </div>
-          </div>
           )}
           {/* Via Location */}
           {/* Drop Location */}
           {item?.drop_location && (
-          <li className={`text-left text-xs relative leading-tight ml-2 drop-location ${item?.drop_location ? 'border-dotted z-1' : ''}`}>
-            <div className="list-content tooltip tooltip-right custom-tooltip cursor-pointer relative overflow-visible" data-tip={`${item?.drop_location}`}>
-              <div className="!flex !gap-x-2 items-start">
-                <div className="relative w-5 h-5 -ml-2.5 z-[9] flex-none">
-                  <Image src="/images/global/destination_icon.svg" fill alt="dropoff" />
-                </div>
-                <P className="overflow-visible text-black text-left !text-xs">
-                  {eclipseText(item?.drop_location, 30)}
-                </P>
-              </div>
-              {
-                item?.drop_flight_no
-                && (
-                  <div className="flex items-center gap-x-1 pl-5 mt-2">
-                    <MdOutlineFlightTakeoff className="h-6 w-6" />
-                    <P className="leading-[14px] w-full text-left !text-xs  text-neutral-700 font-semibold -mt-1">{item?.drop_flight_no}</P>
+            <li className={`text-left text-xs relative leading-tight ml-2 drop-location ${item?.drop_location ? 'border-dotted z-1' : ''}`}>
+              <div className="list-content tooltip tooltip-right custom-tooltip cursor-pointer relative overflow-visible" data-tip={`${item?.drop_location}`}>
+                <div className="!flex !gap-x-2 items-start">
+                  <div className="relative w-5 h-5 -ml-2.5 z-[9] flex-none">
+                    <Image src="/images/global/destination_icon.svg" fill alt="dropoff" />
                   </div>
-                )
-              }
-            </div>
-          </li>
+                  <P className="overflow-visible text-black text-left !text-xs">
+                    {eclipseText(item?.drop_location, 30)}
+                  </P>
+                </div>
+                {
+                  item?.drop_flight_no
+                  && (
+                    <div className="flex items-center gap-x-1 pl-5 mt-2">
+                      <MdOutlineFlightTakeoff className="h-6 w-6" />
+                      <P className="leading-[14px] w-full text-left !text-xs  text-neutral-700 font-semibold -mt-1">{item?.drop_flight_no}</P>
+                    </div>
+                  )
+                }
+              </div>
+            </li>
           )}
           {/* Drop Location */}
         </ol>
         {
-              item?.driver_notes
-            && (
+          item?.driver_notes
+          && (
             <div className="relative w-full">
               <div className="collapse collapse-arrow !rounded-md">
                 <input type="checkbox" className="min-h-[0px]" />
@@ -405,30 +405,30 @@ function BookingCard({
                 </div>
               </div>
             </div>
-            )
-            }
+          )
+        }
       </div>
       <div className="basis-[20%] flex justify-center items-center flex-col px-2">
         <div className="w-full h-auto px-2 py-1 bg-blue-900 bg-opacity-20 justify-center items-center gap-2.5 mb-1 text-center">
           <P className="!text-xs font-semibold text-blue-950">{item?.preferred_vehicle}</P>
         </div>
         {
-              item?.provided_vehicle
-              && (
-              <div className="w-full text-center">
-                {
-                  item?.vehicle_make
-                  && <span className="text-neutral-500 text-xs font-normal leading-none">{item?.vehicle_make}</span>
-                }
-                {
-                  item?.vehicle_model && <span className="text-neutral-700 text-xs leading-none pl-1">{item?.vehicle_model}</span>
-                }
-                {
-                  item?.vehicle_registration_no && <P className="text-neutral-700 text-xs font-medium leading-none">{item?.vehicle_registration_no}</P>
-                }
-              </div>
-              )
-            }
+          item?.provided_vehicle
+          && (
+            <div className="w-full text-center">
+              {
+                item?.vehicle_make
+                && <span className="text-neutral-500 text-xs font-normal leading-none">{item?.vehicle_make}</span>
+              }
+              {
+                item?.vehicle_model && <span className="text-neutral-700 text-xs leading-none pl-1">{item?.vehicle_model}</span>
+              }
+              {
+                item?.vehicle_registration_no && <P className="text-neutral-700 text-xs font-medium leading-none">{item?.vehicle_registration_no}</P>
+              }
+            </div>
+          )
+        }
 
         <div className="min-w-[8rem] h-[5rem] relative mx-auto">
           <Image fill src={item?.preferred_vehicle_image || '/images/carimages/economy.png'} className="object-contain h-auto w-auto" alt={item?.preferred_vehicle} />
@@ -438,14 +438,14 @@ function BookingCard({
           <Image src={item?.preferred_vehicle_image || '/images/carimages/economy.png'} fill alt={item?.preferred_vehicle} />
         </div> */}
         {
-              item?.driver_name
-            && (
+          item?.driver_name
+          && (
             <div className="w-full flex flex-col justify-between gap-1.5 text-center">
               <span className="text-neutral-700 text-xs font-semibold leading-none">{item?.driver_name}</span>
               <span className="text-orange-600 text-xs font-semibold underline leading-none">{item?.driver_mobile}</span>
             </div>
-            )
-            }
+          )
+        }
       </div>
       <div className="basis-[20%] flex justify-center items-center flex-col px-2">
         <P className="text-center text-zinc-600 text-xs font-semibold mb-1">{formatPrice(item?.tariff, item?.region_currency || 'GBP')}</P>
@@ -466,17 +466,17 @@ function BookingCard({
           </button>
           <div className="w-[18px] h-[14.625px] relative">
             {
-             sendMailLoader && sendMailLoader === item?.booking_id
-               ? (
-                 <div role="status">
-                   <svg aria-hidden="true" className="w-4 h-4 text-gray-200 animate-spin dark:text-gray-600 fill-primary" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor" />
-                     <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill" />
-                   </svg>
-                   <span className="sr-only">Loading...</span>
-                 </div>
-               )
-               : <Image src="/images/icons/email.svg" alt="email" className="cursor-pointer" fill onClick={() => { sendMail(item?.booking_id, item?.region_id); }} />
+              sendMailLoader && sendMailLoader === item?.booking_id
+                ? (
+                  <div role="status">
+                    <svg aria-hidden="true" className="w-4 h-4 text-gray-200 animate-spin dark:text-gray-600 fill-primary" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor" />
+                      <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill" />
+                    </svg>
+                    <span className="sr-only">Loading...</span>
+                  </div>
+                )
+                : <Image src="/images/icons/email.svg" alt="email" className="cursor-pointer" fill onClick={() => { sendMail(item?.booking_id, item?.region_id); }} />
             }
           </div>
           <button type="button" onClick={() => { setViewBookingId(item?.booking_id); setBookingActivity(1); setNewBookingId(item.booking_ref_no); setShowViewBooking(true); }} className="w-[20px] h-[16px] relative">
