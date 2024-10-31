@@ -120,28 +120,31 @@ export default function FormFields({
   };
 
   const setViaLocationObject = async (updatedArray) => {
+    // sessionStorage.setItem('via_Dashboard_Object', JSON.stringify(updatedArray));
     setViaLocations(updatedArray);
     setFirstUpdate(() => false);
 
-    if (updatedArray?.length > 0) {
-      const viaLocationArray = updatedArray.map((location) => {
-        if (location !== null) {
-          const {
-            // eslint-disable-next-line camelcase
-            address, postal_code, latLng, locationtype,
-          } = location;
-          return {
-            via_location: address,
-            // eslint-disable-next-line camelcase
-            via_postcode: postal_code,
-            via_loc_coord: {
-              lat: parseFloat(latLng.split(',')[0]),
-              lng: parseFloat(latLng.split(',')[1]),
-            },
-            via_loc_type: locationtype,
-          };
-        }
-        return null; // Explicitly return null for null locations
+    const arrayWithoutNull = updatedArray.filter(Boolean);
+
+    if (arrayWithoutNull?.length > 0) {
+      const viaLocationArray = arrayWithoutNull.map((location) => {
+        const {
+          // eslint-disable-next-line camelcase
+          address, postal_code, latLng, locationtype,
+        } = location;
+
+        if (latLng === undefined || latLng === null) return [];
+
+        return {
+          via_location: address,
+          // eslint-disable-next-line camelcase
+          via_postcode: postal_code,
+          via_loc_coord: {
+            lat: parseFloat(latLng.split(',')[0]),
+            lng: parseFloat(latLng.split(',')[1]),
+          },
+          via_loc_type: locationtype,
+        };
       });
       sessionStorage.setItem('via_Dashboard_Array', JSON.stringify(viaLocationArray));
     } else { sessionStorage.removeItem('via_Dashboard_Array'); }
@@ -310,51 +313,27 @@ export default function FormFields({
       }
     }
 
-    // const getViaLocationArray = () => {
-    //   let pickUpVia = [];
-    //   if (viaLocations?.length > 0) {
-    //     pickUpVia = viaLocations.map((location) => {
-    //       if (location !== null) {
-    //         const {
-    //           // eslint-disable-next-line camelcase
-    //           address, postal_code, latLng, locationtype,
-    //         } = location;
-    //         return {
-    //           via_location: address,
-    //           // eslint-disable-next-line camelcase
-    //           via_postcode: postal_code,
-    //           via_loc_coord: {
-    //             lat: parseFloat(latLng.split(',')[0]),
-    //             lng: parseFloat(latLng.split(',')[1]),
-    //           },
-    //           via_loc_type: locationtype,
-    //         };
-    //       }
-    //       return pickUpVia;
-    //     }).filter(Boolean); // Remove null values from the array
-    //   }
-    //   return pickUpVia;
-    // };
-
     const getViaLocationArray = () => {
-      if (!viaLocations || viaLocations.length === 0) return [];
-      if (viaLocations.length === 1 && viaLocations[0] === null) return null;
+      // if (!viaLocations || viaLocations.length === 0) return [];
+      if ((viaLocations?.length === 1 && viaLocations[0] === null)) return null;
+
+      // const viaLocationsWithoutNull = viaLocations.filter(Boolean);
 
       return viaLocations?.map((location) => {
         if (location === null) return null;
-
         const {
           // eslint-disable-next-line camelcase
           address, postal_code, latLng, locationtype,
         } = location;
 
+        if (latLng === undefined || latLng === null) return null;
         return {
           via_location: address,
           // eslint-disable-next-line camelcase
           via_postcode: postal_code,
           via_loc_coord: {
-            lat: parseFloat(latLng.split(',')[0]),
-            lng: parseFloat(latLng.split(',')[1]),
+            lat: parseFloat(latLng?.split(',')[0]),
+            lng: parseFloat(latLng?.split(',')[1]),
           },
           via_loc_type: locationtype,
         };
@@ -364,7 +343,7 @@ export default function FormFields({
 
     async function getDistanceBetweenLocation() {
       if (userDropLocation !== null && userPickLocation !== null) {
-        // const viaLocationArray = JSON.parse(sessionStorage.getItem('via_Dashboard_Array'));
+        // let response = JSON.parse(sessionStorage.getItem('via_Dashboard_Array'));
         const viaLocationArray = getViaLocationArray();
 
         // Check if viaLocationArray contains any null values

@@ -46,13 +46,6 @@ function Autocomplete(props) {
   const [open, setOpen] = useState(false);
   const [showError, setShowError] = useState(false);
   const [textvalue, setTextvalue] = useState('');
-  const [isFocused, setIsFocused] = useState(false);
-
-  useEffect(() => {
-    if (isFocused && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [isFocused, textvalue]);
 
   useEffect(() => {
     setTextvalue(defaultValue || '');
@@ -224,17 +217,14 @@ function Autocomplete(props) {
         }}
         onFocus={() => {
           // eslint-disable-next-line no-unused-expressions
-          setIsFocused(true);
-          setFocus && setFocus();
+          setFocus;
         }}
         onBlur={() => {
-          setIsFocused(false);
           removeValue();
         }}
         placeholder={placeholder}
         readOnly={readOnly}
         name={name}
-        ref={inputRef}
       />
 
       <div

@@ -59,7 +59,7 @@ function TempBookingComponent({
       try {
         const partialId = JSON.parse(sessionStorage.getItem('partial_booking_id'));
         const payload = {
-          partial_id: partialId,
+          partial_id: partialId || null,
         };
         const response = await api.put(`/client-booking/${tempBookingId}`, payload);
         if (response.data && response.data.status === 1) {
@@ -382,7 +382,7 @@ function FleetPage() {
 
     try {
       const response = await api.post('/client-booking/partial', payload);
-      if (response?.data?.partialId !== null && partialBookingId === null) {
+      if (response?.data?.partialId !== null) {
         setPartialBookingId(response?.data?.partialId);
         sessionStorage.setItem('partial_booking_id', JSON.stringify(response?.data?.partialId));
       }

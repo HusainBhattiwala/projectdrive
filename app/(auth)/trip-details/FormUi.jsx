@@ -405,51 +405,32 @@ function FormUiWithoutSuspense() {
   }, [bookingId, isTokenResolved, router, tempBookingId]);
 
   const getViaLocationArray = () => {
-    let pickUpVia = [];
-    if (viaLocations?.length > 0) {
-      pickUpVia = viaLocations?.map((location) => {
-        if (location !== null) {
-          const {
-            // eslint-disable-next-line camelcase
-            address, postal_code, latLng, locationtype,
-          } = location;
-          return {
-            via_location: address,
-            // eslint-disable-next-line camelcase
-            via_postcode: postal_code,
-            via_loc_coord: {
-              lat: parseFloat(latLng.split(',')[0]),
-              lng: parseFloat(latLng.split(',')[1]),
-            },
-            via_loc_type: locationtype,
-          };
-        }
-        // Return null if location is null
-        return null;
-      })
-        .filter(Boolean); // Remove null values from the array
-    }
-    return pickUpVia;
+    if (!viaLocations || viaLocations.length === 0) return [];
+    const viaLocationsWithoutNull = viaLocations.filter(Boolean);
+
+    return viaLocationsWithoutNull?.map((location) => {
+      const {
+        // eslint-disable-next-line camelcase
+        address, postal_code, latLng, locationtype,
+      } = location;
+
+      if (latLng === undefined || latLng === null) return [];
+      return {
+        via_location: address,
+        // eslint-disable-next-line camelcase
+        via_postcode: postal_code,
+        via_loc_coord: {
+          lat: parseFloat(latLng?.split(',')[0]),
+          lng: parseFloat(latLng?.split(',')[1]),
+        },
+        via_loc_type: locationtype,
+      };
+    });
   };
 
-  // const getCovertedDistanceForRegion = () => {
-  //   let convertedDistanceForRegion;
-  //   if (distanceUnit) {
-  //     const distanceKM = distance ? distance?.distance?.split(' ')[0] : '0';
-  //     const distanceInNumber = parseFloat(distanceKM?.replace(/,/g, ''));
-  //     convertedDistanceForRegion = distanceInNumber;
-
-  //     if (distanceUnit === 'mile') {
-  //       const factor = 0.621371;
-  //       convertedDistanceForRegion = Math.round(distanceInNumber * factor);
-  //     }
-  //     return convertedDistanceForRegion;
-  //   }
-  //   return convertedDistanceForRegion;
-  // };
-
   useEffect(() => {
-    const pickUpVia = getViaLocationArray();
+    const viaArray = getViaLocationArray();
+    const pickUpVia = viaArray.filter(Boolean);
     console.log(pickUpVia);
 
     const checkTariff = async () => {
@@ -720,7 +701,8 @@ function FormUiWithoutSuspense() {
       via: transformedLocations,
     };
 
-    const pickUpVia = getViaLocationArray();
+    const viaArray = getViaLocationArray();
+    const pickUpVia = viaArray.filter(Boolean);
     const hourlyPayload = {
       from_location: userPickLocation?.locationid || null,
       to_location: userDropLocation?.locationid || null,

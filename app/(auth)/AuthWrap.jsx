@@ -38,11 +38,11 @@ function AuthWrap({
     sidebarClass = isOpend ? 'sm:ml-64' : 'sm:ml-16';
   }
 
-  useEffect(() => {
-    if (!loginContext) {
-      console.error('LoginContext is not available. Make sure AuthWrap is used within LoginContextProvider.');
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!loginContext) {
+  //     console.error('LoginContext is not available. Make sure AuthWrap is used within LoginContextProvider.');
+  //   }
+  // }, []);
 
   useEffect(() => {
     const token = sessionStorage.getItem('token');
@@ -52,8 +52,9 @@ function AuthWrap({
 
     if (!token || token === 'null' || token === 'undefined') {
       console.log(`session Booking-Management == ${session?.user?.name}`);
-      // if (session?.user?.email && session?.user?.mobile) {
-      if (session?.user?.email) {
+      if (session?.user?.email && session?.user?.mobile) {
+      // if (session?.user?.email) {
+        alert(`session set called${session?.user?.email}`);
         sessionStorage.setItem(
           'user',
           JSON.stringify({
@@ -65,7 +66,6 @@ function AuthWrap({
           }),
         );
         sessionStorage.setItem('token', session?.user?.rolDriveToken);
-
         Cookies.set('authtype', 'GOOGLE');
         setShowLogin(!!session?.user?.rolDriveToken);
         setUserName({

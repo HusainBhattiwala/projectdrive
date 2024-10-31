@@ -103,6 +103,15 @@ function EmailPassword({
               },
             );
             toast.clearWaitingQueue();
+          } else {
+            toast.success(
+              'Please wait while we login your Account.',
+              {
+                autoClose: 3000,
+                theme: 'colored',
+              },
+            );
+            toast.clearWaitingQueue();
           }
           const {
             user_fname: userfname, user_lname: userlname, useremailid, usermobileno, usercountrycode,
@@ -124,7 +133,7 @@ function EmailPassword({
           if (loginPage) {
             router.refresh();
             router.push('/booking-management');
-          }
+          } else window.location.reload();
         } else {
           toast.error(
             response.message,

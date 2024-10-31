@@ -101,33 +101,38 @@ function BookingEngine3({ setFocus, height, parentDivWidth = 450 }) {
 
   const setViaLocationObject = (updatedArray) => {
     setViaLocations(updatedArray);
-    
-    if (updatedArray?.length > 0) {
-      const viaLocationArray = updatedArray?.map((location) => {
-        if (location !== null) {
-          const {
-            // eslint-disable-next-line camelcase
-            address, postal_code, latLng, locationtype,
-          } = location;
-          return {
-            via_location: address,
-            // eslint-disable-next-line camelcase
-            via_postcode: postal_code,
-            via_loc_coord: {
-              lat: parseFloat(latLng.split(',')[0]),
-              lng: parseFloat(latLng.split(',')[1]),
-            },
-            via_loc_type: locationtype,
-          };
-        }
+    const arrayWithoutNull = updatedArray.filter(Boolean);
+
+    if (arrayWithoutNull?.length > 0) {
+      const viaLocationArray = arrayWithoutNull?.map((location) => {
+        // if (location !== null) {
+        const {
+          // eslint-disable-next-line camelcase
+          address, postal_code, latLng, locationtype,
+        } = location;
+
+        if (latLng === undefined || latLng === null) return [];
+
+        return {
+          via_location: address,
+          // eslint-disable-next-line camelcase
+          via_postcode: postal_code,
+          via_loc_coord: {
+            lat: parseFloat(latLng.split(',')[0]),
+            lng: parseFloat(latLng.split(',')[1]),
+          },
+          via_loc_type: locationtype,
+        };
+        // }
+        // return viaLocationArray;
       });
       sessionStorage.setItem('viaLocatioObject', JSON.stringify(updatedArray));
       sessionStorage.setItem('viaLocationArray', JSON.stringify(viaLocationArray));
-    }
-    else {
+    } else {
       sessionStorage.removeItem('viaLocationArray');
       sessionStorage.removeItem('viaLocatioObject');
     }
+    return updatedArray;
   };
 
   const updateUserViaLocations = (newValueFn, index) => {
@@ -417,8 +422,7 @@ function BookingEngine3({ setFocus, height, parentDivWidth = 450 }) {
       const distanceDuration = await fetchDistance();
 
       const time = `${selectedDateTime.hour}:${selectedDateTime.minute}`;
-      let selectedDayTime = `${selectedDateTime.selectedDate.getMonth() + 1
-        }/${selectedDateTime.selectedDate.getDate()}/${selectedDateTime.selectedDate.getFullYear()} ${time}`;
+      let selectedDayTime = `${selectedDateTime.selectedDate.getMonth() + 1}/${selectedDateTime.selectedDate.getDate()}/${selectedDateTime.selectedDate.getFullYear()} ${time}`;
 
       selectedDayTime = new Date(selectedDayTime);
       selectedDayTime.setMinutes(
@@ -874,7 +878,7 @@ function BookingEngine3({ setFocus, height, parentDivWidth = 450 }) {
             className={`rounded-full bg-[#223544] py-[10px] border border-[#fff] pop w-1/2 font-medium ${bookingType !== item.id
               ? 'opacity-40 border-opacity-30'
               : 'border-opacity-40'
-              }`}
+            }`}
             id={item.id}
             onClick={() => setBookingType(item.id)}
             key={item.id}
@@ -885,7 +889,7 @@ function BookingEngine3({ setFocus, height, parentDivWidth = 450 }) {
       </div>
       <div
         className={`flex flex-col  z-[50] ${height > 600 ? 'pt-6 gap-y-6' : 'pt-4 gap-y-4'
-          } `}
+        } `}
         ref={addressPicker}
       >
         {/* Pickup and Dropoff */}
@@ -946,9 +950,10 @@ function BookingEngine3({ setFocus, height, parentDivWidth = 450 }) {
                       setClearViaLocationPosition(null);
                       updateUserViaLocations(valueFn, index);
                       setViaLocationObject(updatedArray);
-                      setFocus(true);
+                      setFocus(false);
+                      setIsFullScreen(false);
                     }}
-                    defaultValue={location?.address || ''}
+                    defaultValue={location?.address}
                     readOnly={false}
                     locationError={(_locationError) => console.log('locationError', _locationError)}
                     errorLabel={(val) => console.log('val', val)}
